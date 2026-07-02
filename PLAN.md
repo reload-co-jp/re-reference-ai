@@ -2,26 +2,34 @@
 
 # Re Reference AI (RRA)
 
-## Architecture
+## アーキテクチャ
 
+```
 Crawler
 → Normalizer
 → PostgreSQL
 → FastAPI
 → Next.js
 → User
+```
 
-## Data Sources
+- **Crawler** — 外部データソースから情報を収集する
+- **Normalizer** — 収集した生データを正規化・構造化する
+- **PostgreSQL** — 正規化済みデータの永続化層
+- **FastAPI** — バックエンドAPI層。PostgreSQLのデータをNext.jsへ提供する
+- **Next.js** — フロントエンド。ユーザーへ画面を提供する（静的エクスポート構成、現状唯一実装済み）
 
-### Official
+## データソース
 
-- Documentation
-- Specifications
-- Changelogs
+### Official（公式情報）
+
+- ドキュメント
+- 仕様書
+- Changelog
 
 ### GitHub
 
-Collect:
+収集項目:
 
 - Stars
 - Forks
@@ -30,99 +38,99 @@ Collect:
 - License
 - Last Commit
 
-### Research
+### Research（研究情報）
 
 - arXiv
 - OpenReview
 - ACL Anthology
 
-### Community
+### Community（コミュニティ情報）
 
-- Blogs
-- Release Notes
+- ブログ
+- リリースノート
 - RSS
 
-## Database
+## データベース
 
-Main entities
+主要エンティティ:
 
-- Term
-- Category
-- Tag
-- Repository
-- Organization
-- Specification
-- Paper
-- Timeline
-- Comparison
+- Term（用語）
+- Category（カテゴリ）
+- Tag（タグ）
+- Repository（GitHubリポジトリ）
+- Organization（組織）
+- Specification（仕様書）
+- Paper（論文）
+- Timeline（タイムライン）
+- Comparison（比較）
 - FAQ
 
-## Search
+## 検索
 
-Phase 1
+**Phase 1**
 
-- PostgreSQL Full Text Search
+- PostgreSQL全文検索
 
-Phase 2
+**Phase 2**
 
-- Meilisearch
+- Meilisearchへ移行
 
-## Scheduler
+## スケジューラ
 
-Daily
+**日次**
 
-- GitHub
-- RSS
+- GitHub同期
+- RSS取得
 
-Weekly
+**週次**
 
-- Documentation
-- Papers
+- ドキュメント同期
+- 論文取得
 
-## API
+## API（FastAPI）
 
-- GET /terms
-- GET /terms/{slug}
-- GET /compare
-- GET /timeline
-- GET /search
+- `GET /terms`
+- `GET /terms/{slug}`
+- `GET /compare`
+- `GET /timeline`
+- `GET /search`
 
-## Roadmap
+## ロードマップ
 
 ### Phase 1
 
 - MVP
-- Search
-- Categories
-- Term pages
+- 検索
+- カテゴリ
+- Termページ
 
 ### Phase 2
 
-- GitHub synchronization
-- Timeline
-- History
+- GitHub連携同期
+- タイムライン
+- 履歴機能
 
 ### Phase 3
 
-- Comparison pages
-- Papers
-- Specifications
+- 比較ページ
+- 論文対応
+- 仕様書対応
 
 ### Phase 4
 
-- AI-assisted authoring
-- Knowledge Graph
-- Public API
+- AI支援執筆
+- ナレッジグラフ
+- 公開API
 
-## Quality Policy
+## 品質ポリシー
 
-Reference priority:
+一次情報源の優先順位:
 
-1. Official specifications
-2. Official documentation
-3. Official GitHub repositories
-4. Academic papers
-5. Organization blogs
-6. Conference presentations
+1. 公式仕様
+2. 公式ドキュメント
+3. 公式GitHubリポジトリ
+4. 学術論文
+5. 組織ブログ
+6. カンファレンス発表
 
-All articles should include links to primary sources whenever possible.
+全記事は可能な限り一次情報源へのリンクを含めること。

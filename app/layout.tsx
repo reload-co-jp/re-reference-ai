@@ -1,9 +1,10 @@
+import Link from "next/link"
 import { Title } from "components/elements/layout"
 import "./reset.css"
 
 export const metadata = {
-  title: "Page title",
-  description: "Page description",
+  title: "Re Reference AI (RRA)",
+  description: "The AI Technical Reference",
 }
 
 const RootLayout = ({ children }: { children: React.ReactNode }) => {
@@ -18,7 +19,9 @@ const RootLayout = ({ children }: { children: React.ReactNode }) => {
             position: "relative",
           }}
         >
-          <Title>Page title</Title>
+          <Link href="/" style={{ color: "inherit", textDecoration: "none" }}>
+            <Title>Re Reference AI</Title>
+          </Link>
         </header>
         <main
           style={{
