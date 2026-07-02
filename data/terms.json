@@ -1,8 +1,11 @@
 [
   {
     "slug": "large-language-model",
-    "name": "大規模言語モデル",
-    "shortName": "LLM",
+    "name": "LLM",
+    "aliases": [
+      "大規模言語モデル",
+      "Large Language Model"
+    ],
     "tagline": "大量のテキストコーパスで学習し、言語を予測・生成するニューラルネットワーク",
     "category": "モデル",
     "tags": [
@@ -132,8 +135,11 @@
   },
   {
     "slug": "retrieval-augmented-generation",
-    "name": "検索拡張生成",
-    "shortName": "RAG",
+    "name": "RAG",
+    "aliases": [
+      "検索拡張生成",
+      "Retrieval-Augmented Generation"
+    ],
     "tagline": "検索(Retrieval)と生成モデルを組み合わせ、外部知識に基づいて出力を根拠づける手法",
     "category": "技術",
     "tags": [

@@ -1,6 +1,18 @@
+import { Inter, Playfair_Display } from "next/font/google"
 import Link from "next/link"
 import { Title } from "components/elements/layout"
 import "./reset.css"
+
+const display = Playfair_Display({
+  subsets: ["latin"],
+  variable: "--font-display",
+  weight: ["500", "600"],
+})
+
+const body = Inter({
+  subsets: ["latin"],
+  variable: "--font-body",
+})
 
 export const metadata = {
   title: "Re Reference AI (RRA)",
@@ -9,13 +21,13 @@ export const metadata = {
 
 const RootLayout = ({ children }: { children: React.ReactNode }) => {
   return (
-    <html lang="ja">
+    <html className={`${display.variable} ${body.variable}`} lang="ja">
       <body>
         <header
           style={{
-            backgroundColor: "#333",
-            boxShadow: "0 4px 6px rgba(0, 0, 0, 0.1)",
-            padding: ".5rem 1rem",
+            background: "var(--color-bg-elevated)",
+            borderBottom: "1px solid var(--color-border)",
+            padding: "1rem 1.5rem",
             position: "relative",
           }}
         >
@@ -25,8 +37,8 @@ const RootLayout = ({ children }: { children: React.ReactNode }) => {
         </header>
         <main
           style={{
-            background: "#222",
-            minHeight: "calc(100dvh - 5.625rem)",
+            background: "var(--color-bg)",
+            minHeight: "calc(100dvh - 7.5rem)",
             padding: "1rem",
           }}
         >
@@ -34,10 +46,12 @@ const RootLayout = ({ children }: { children: React.ReactNode }) => {
         </main>
         <footer
           style={{
-            backgroundColor: "#333",
-            boxShadow: "0 -4px 6px rgba(0, 0, 0, 0.1)",
+            background: "var(--color-bg-elevated)",
+            borderTop: "1px solid var(--color-border)",
+            color: "var(--color-text-muted)",
             fontSize: ".75rem",
-            padding: "1rem",
+            letterSpacing: "0.02em",
+            padding: "1.25rem 1.5rem",
           }}
         >
           <p>&copy; Reload</p>

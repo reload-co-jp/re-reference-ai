@@ -1,11 +1,61 @@
 * {
   box-sizing: border-box;
-  font-family: sans-serif;
   margin: 0;
 }
 
 :root {
-  background: #333;
-  color: #f0f0f0;
+  --color-bg: #0a0f0c;
+  --color-bg-elevated: #0e1512;
+  --color-surface: #121a16;
+  --color-surface-hover: #16201a;
+  --color-border: #223028;
+  --color-border-strong: #2f4438;
+  --color-text: #e8ebe4;
+  --color-text-muted: #93a397;
+  --color-accent: #4f9d74;
+  --color-accent-bright: #7fd4a4;
+  --color-accent-dim: rgba(79, 157, 116, 0.14);
+
+  background: var(--color-bg);
+  color: var(--color-text);
   color-scheme: dark;
+  font-family: var(--font-body), sans-serif;
+}
+
+body {
+  line-height: 1.7;
+}
+
+h1,
+h2,
+h3 {
+  font-family: var(--font-display), serif;
+  font-weight: 500;
+  letter-spacing: 0.01em;
+}
+
+a {
+  color: inherit;
+}
+
+::selection {
+  background: var(--color-accent-dim);
+  color: var(--color-accent-bright);
+}
+
+.term-card-link {
+  display: block;
+}
+
+.term-card-link:hover .term-card {
+  border-color: var(--color-accent);
+  transform: translateY(-2px);
+}
+
+.search-button {
+  transition: background-color 0.2s ease;
+}
+
+.search-button:hover {
+  background: var(--color-accent-bright);
 }

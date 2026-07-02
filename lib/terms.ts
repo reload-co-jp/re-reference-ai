@@ -33,7 +33,7 @@ export type Comparison = {
 export type Term = {
   slug: string
   name: string
-  shortName?: string
+  aliases?: string[]
   tagline: string
   category: string
   tags: string[]

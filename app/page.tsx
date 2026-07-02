@@ -8,43 +8,64 @@ const Page: FC = () => {
     <Container>
       <Section
         style={{
-          padding: "3rem 0",
+          borderBottom: "1px solid var(--color-border)",
+          padding: "4.5rem 0 3.5rem",
           textAlign: "center",
         }}
       >
-        <h1 style={{ fontSize: "2rem", marginBottom: ".5rem" }}>Re Reference AI</h1>
-        <p style={{ color: "#bbb", fontSize: "1.1rem", marginBottom: "2rem" }}>
-          AI技術リファレンス
+        <p
+          style={{
+            color: "var(--color-accent-bright)",
+            fontSize: ".75rem",
+            letterSpacing: "0.25em",
+            marginBottom: "1rem",
+            textTransform: "uppercase",
+          }}
+        >
+          The AI Technical Reference
+        </p>
+        <h1 style={{ fontSize: "2.5rem", marginBottom: "1rem" }}>Re Reference AI</h1>
+        <p
+          style={{
+            color: "var(--color-text-muted)",
+            fontSize: "1.05rem",
+            margin: "0 auto 2.5rem",
+            maxWidth: "32rem",
+          }}
+        >
+          AI・LLM・機械学習領域の一次情報を集約した技術リファレンス
         </p>
         <form
           role="search"
-          style={{ display: "flex", gap: ".5rem", justifyContent: "center" }}
+          style={{ display: "flex", gap: ".75rem", justifyContent: "center" }}
         >
           <input
             aria-label="用語を検索"
             name="q"
             placeholder="用語を検索（例: LLM, RAG, Transformer）"
             style={{
-              background: "#2a2a2a",
-              border: "1px solid #3a3a3a",
-              borderRadius: ".375rem",
-              color: "#f0f0f0",
+              background: "var(--color-surface)",
+              border: "1px solid var(--color-border-strong)",
+              borderRadius: "2px",
+              color: "var(--color-text)",
               flex: 1,
               fontSize: "1rem",
               maxWidth: "28rem",
-              padding: ".625rem .75rem",
+              padding: ".75rem 1rem",
             }}
             type="search"
           />
           <button
+            className="search-button"
             style={{
-              background: "#4f9dff",
+              background: "var(--color-accent)",
               border: "none",
-              borderRadius: ".375rem",
-              color: "#111",
+              borderRadius: "2px",
+              color: "#0a0f0c",
               cursor: "pointer",
               fontWeight: 600,
-              padding: ".625rem 1.25rem",
+              letterSpacing: "0.03em",
+              padding: ".75rem 1.5rem",
             }}
             type="submit"
           >
@@ -53,11 +74,11 @@ const Page: FC = () => {
         </form>
       </Section>
 
-      <Section>
+      <Section style={{ paddingTop: "3.5rem" }}>
         <SectionTitle>カテゴリ</SectionTitle>
         <div style={{ display: "flex", flexWrap: "wrap", gap: ".5rem" }}>
           {categories.map((category) => (
-            <Badge key={category} style={{ fontSize: ".85rem", padding: ".375rem .75rem" }}>
+            <Badge key={category} style={{ fontSize: ".85rem", padding: ".4rem .9rem" }}>
               {category}
             </Badge>
           ))}
@@ -69,7 +90,7 @@ const Page: FC = () => {
         <div
           style={{
             display: "grid",
-            gap: "1rem",
+            gap: "1.25rem",
             gridTemplateColumns: "repeat(auto-fill, minmax(15rem, 1fr))",
           }}
         >
