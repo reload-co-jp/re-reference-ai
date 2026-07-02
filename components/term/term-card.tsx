@@ -10,12 +10,18 @@ export const TermCard: FC<{ term: Term }> = ({ term }) => (
     style={{ color: "inherit", textDecoration: "none" }}
   >
     <Card className="term-card" style={{ height: "100%" }}>
-      <div style={{ alignItems: "baseline", display: "flex", gap: ".5rem" }}>
+      <div>
         <h3 style={{ fontSize: "1.05rem", margin: 0 }}>{term.name}</h3>
         {term.aliases && term.aliases.length > 0 && (
-          <span style={{ color: "var(--color-text-muted)", fontSize: ".8rem" }}>
+          <p
+            style={{
+              color: "var(--color-text-muted)",
+              fontSize: ".8rem",
+              margin: ".25rem 0 0",
+            }}
+          >
             {term.aliases.join(" / ")}
-          </span>
+          </p>
         )}
       </div>
       <p

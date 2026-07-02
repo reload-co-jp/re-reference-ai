@@ -126,20 +126,18 @@ const TermPage: FC<Props> = async ({ params }) => {
         }}
       >
         <Badge style={{ marginBottom: "1rem" }}>{term.category}</Badge>
-        <h1 style={{ fontSize: "2.25rem", margin: 0 }}>
-          {term.name}
-          {term.aliases && term.aliases.length > 0 && (
-            <span
-              style={{
-                color: "var(--color-text-muted)",
-                fontSize: "1.25rem",
-                marginLeft: ".625rem",
-              }}
-            >
-              ({term.aliases.join(" / ")})
-            </span>
-          )}
-        </h1>
+        <h1 style={{ fontSize: "2.25rem", margin: 0 }}>{term.name}</h1>
+        {term.aliases && term.aliases.length > 0 && (
+          <p
+            style={{
+              color: "var(--color-text-muted)",
+              fontSize: "1.25rem",
+              margin: ".5rem 0 0",
+            }}
+          >
+            {term.aliases.join(" / ")}
+          </p>
+        )}
         <p
           style={{
             color: "var(--color-text-muted)",
