@@ -48,7 +48,8 @@
     "relatedTerms": [
       "transformer",
       "retrieval-augmented-generation",
-      "fine-tuning"
+      "fine-tuning",
+      "neural-network"
     ],
     "faq": [
       {
@@ -108,11 +109,16 @@
       {
         "slug": "large-language-model",
         "note": "LLMはTransformerアーキテクチャを大規模に応用したもの"
+      },
+      {
+        "slug": "neural-network",
+        "note": "Transformerはニューラルネットワークの一種で、自己注意機構に特化したアーキテクチャ"
       }
     ],
     "relatedTerms": [
       "large-language-model",
-      "fine-tuning"
+      "fine-tuning",
+      "neural-network"
     ],
     "faq": [
       {
@@ -248,6 +254,65 @@
         "type": "GitHub",
         "label": "Hugging Face PEFT",
         "url": "https://github.com/huggingface/peft"
+      }
+    ]
+  },
+  {
+    "slug": "neural-network",
+    "name": "ニューラルネットワーク",
+    "aliases": [
+      "Neural Network",
+      "NN"
+    ],
+    "tagline": "生物の神経回路を模した数理モデルで、層状に接続したノード間の重み付き信号伝播により学習する",
+    "category": "アーキテクチャ",
+    "tags": [
+      "深層学習",
+      "機械学習"
+    ],
+    "summary": "ニューラルネットワークは、生物の脳内にあるニューロン(神経細胞)の結合構造を数理的に模した機械学習モデル。入力層・隠れ層・出力層からなるノード(ユニット)の集合が重み付きの接続でつながり、各ノードは入力の重み付き和に非線形の活性化関数を適用して出力する。層を重ねる(=深くする)ことで複雑な非線形関数を近似できるようになり、この多層構造を用いた学習手法は「深層学習(Deep Learning)」と呼ばれる。画像認識・音声認識・自然言語処理など幅広い分野で中核技術として使われている。",
+    "background": "単純な線形モデルでは表現できない複雑なパターン(画像・音声・言語など)を学習するため、生物の神経系にヒントを得た多層構造のモデルが考案された。層を重ねることで、入力データから段階的に抽象度の高い特徴表現を自動的に獲得できる点が、人手で特徴量を設計する従来の手法との大きな違い。",
+    "history": "1958年: Rosenblattがパーセプトロンを提案しニューラルネットワークの原型となる。1986年: 誤差逆伝播法(Backpropagation)が普及し多層ネットワークの学習が実用化。2012年: AlexNetが画像認識コンペで従来手法を圧倒し深層学習ブームが本格化。2017年以降: Transformerが主要アーキテクチャとして台頭。",
+    "architecture": "入力層・1つ以上の隠れ層・出力層で構成される。各層のノードは前層の出力を重み付き和し、活性化関数(ReLU・シグモイド等)を通して非線形変換する。層の接続形態により全結合層(MLP)・畳み込み層(CNN)・再帰層(RNN)・注意機構(Transformer)など多様な派生アーキテクチャが存在する。",
+    "workflow": "入力データをネットワークに通し出力を得る(順伝播) → 正解データとの誤差を計算 → 誤差を逆伝播させ各重みの勾配を求める → 勾配降下法で重みを更新 → 収束するまで繰り返す。",
+    "codeExamples": [
+      {
+        "title": "最小構成の全結合層(PyTorch)",
+        "language": "python",
+        "code": "import torch.nn as nn\n\nmodel = nn.Sequential(\n    nn.Linear(784, 128),\n    nn.ReLU(),\n    nn.Linear(128, 10),\n)"
+      }
+    ],
+    "advantages": [
+      "複雑な非線形関係を近似できる高い表現力",
+      "生データから自動的に特徴量を学習できる",
+      "画像・音声・テキストなど多様なデータ形式に適用できる汎用性"
+    ],
+    "disadvantages": [
+      "大量の学習データと計算資源を要する",
+      "内部の判断根拠が解釈しにくい(ブラックボックス性)",
+      "過学習しやすく、正則化やデータ拡張などの対策が必要"
+    ],
+    "comparisons": [
+      {
+        "slug": "transformer",
+        "note": "Transformerはニューラルネットワークの一種で、自己注意機構に特化したアーキテクチャ"
+      }
+    ],
+    "relatedTerms": [
+      "transformer",
+      "large-language-model"
+    ],
+    "faq": [
+      {
+        "question": "ニューラルネットワークと深層学習の違いは？",
+        "answer": "ニューラルネットワークはモデルの構造そのもの。深層学習は、多数の層を持つニューラルネットワークを用いた学習手法全般を指す。"
+      }
+    ],
+    "references": [
+      {
+        "type": "Documentation",
+        "label": "PyTorch: Neural Networks",
+        "url": "https://pytorch.org/tutorials/beginner/blitz/neural_networks_tutorial.html"
       }
     ]
   }
