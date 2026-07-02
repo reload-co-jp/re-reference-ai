@@ -43,38 +43,38 @@ const TermPage: FC<{ params: Promise<{ slug: string }> }> = async ({ params }) =
 
       {/* Summary */}
       <Section>
-        <SectionTitle>Summary</SectionTitle>
+        <SectionTitle>概要</SectionTitle>
         <p>{term.summary}</p>
       </Section>
 
       {/* Background */}
       <Section>
-        <SectionTitle>Background</SectionTitle>
+        <SectionTitle>背景</SectionTitle>
         <p>{term.background}</p>
       </Section>
 
       {/* History */}
       <Section>
-        <SectionTitle>History</SectionTitle>
+        <SectionTitle>歴史</SectionTitle>
         <p>{term.history}</p>
       </Section>
 
       {/* Architecture */}
       <Section>
-        <SectionTitle>Architecture</SectionTitle>
+        <SectionTitle>アーキテクチャ</SectionTitle>
         <p>{term.architecture}</p>
       </Section>
 
       {/* Workflow */}
       <Section>
-        <SectionTitle>Workflow</SectionTitle>
+        <SectionTitle>ワークフロー</SectionTitle>
         <p>{term.workflow}</p>
       </Section>
 
       {/* Code Examples */}
       {term.codeExamples.length > 0 && (
         <Section>
-          <SectionTitle>Code Examples</SectionTitle>
+          <SectionTitle>コード例</SectionTitle>
           {term.codeExamples.map((example) => (
             <div key={example.title} style={{ marginBottom: "1rem" }}>
               <p style={{ color: "#bbb", fontSize: ".85rem", marginBottom: ".375rem" }}>
@@ -98,7 +98,7 @@ const TermPage: FC<{ params: Promise<{ slug: string }> }> = async ({ params }) =
 
       {/* Advantages */}
       <Section>
-        <SectionTitle>Advantages</SectionTitle>
+        <SectionTitle>利点</SectionTitle>
         <ul style={{ paddingLeft: "1.25rem" }}>
           {term.advantages.map((advantage) => (
             <li key={advantage}>{advantage}</li>
@@ -108,7 +108,7 @@ const TermPage: FC<{ params: Promise<{ slug: string }> }> = async ({ params }) =
 
       {/* Disadvantages */}
       <Section>
-        <SectionTitle>Disadvantages</SectionTitle>
+        <SectionTitle>欠点</SectionTitle>
         <ul style={{ paddingLeft: "1.25rem" }}>
           {term.disadvantages.map((disadvantage) => (
             <li key={disadvantage}>{disadvantage}</li>
@@ -119,7 +119,7 @@ const TermPage: FC<{ params: Promise<{ slug: string }> }> = async ({ params }) =
       {/* Comparisons */}
       {term.comparisons.length > 0 && (
         <Section>
-          <SectionTitle>Comparisons</SectionTitle>
+          <SectionTitle>比較</SectionTitle>
           <ul style={{ listStyle: "none", padding: 0 }}>
             {term.comparisons.map((comparison) => {
               const target = getTermBySlug(comparison.slug)
@@ -140,7 +140,7 @@ const TermPage: FC<{ params: Promise<{ slug: string }> }> = async ({ params }) =
       {/* Related Terms */}
       {relatedTerms.length > 0 && (
         <Section>
-          <SectionTitle>Related Terms</SectionTitle>
+          <SectionTitle>関連用語</SectionTitle>
           <div style={{ display: "flex", flexWrap: "wrap", gap: ".5rem" }}>
             {relatedTerms.map((related) => (
               <Link
@@ -160,7 +160,7 @@ const TermPage: FC<{ params: Promise<{ slug: string }> }> = async ({ params }) =
       {/* FAQ */}
       {term.faq.length > 0 && (
         <Section>
-          <SectionTitle>FAQ</SectionTitle>
+          <SectionTitle>よくある質問</SectionTitle>
           {term.faq.map((item) => (
             <div key={item.question} style={{ marginBottom: "1rem" }}>
               <p style={{ fontWeight: 600, marginBottom: ".25rem" }}>{item.question}</p>
@@ -172,7 +172,7 @@ const TermPage: FC<{ params: Promise<{ slug: string }> }> = async ({ params }) =
 
       {/* References */}
       <Section>
-        <SectionTitle>References</SectionTitle>
+        <SectionTitle>参考文献</SectionTitle>
         <ul style={{ paddingLeft: "1.25rem" }}>
           {term.references.map((reference) => (
             <li key={reference.url} style={{ marginBottom: ".375rem" }}>

@@ -1,45 +1,45 @@
 [
   {
     "slug": "large-language-model",
-    "name": "Large Language Model",
+    "name": "大規模言語モデル",
     "shortName": "LLM",
-    "tagline": "Neural network trained on massive text corpora to predict and generate language",
-    "category": "Models",
+    "tagline": "大量のテキストコーパスで学習し、言語を予測・生成するニューラルネットワーク",
+    "category": "モデル",
     "tags": [
       "NLP",
       "Transformer",
-      "Deep Learning"
+      "深層学習"
     ],
-    "summary": "A Large Language Model (LLM) is a neural network, typically based on the Transformer architecture, trained on large-scale text data to model the statistical structure of language and perform a wide range of generation and understanding tasks.",
-    "background": "LLMs emerged from advances in deep learning for NLP, scaling both model parameters and training data to unlock emergent capabilities such as few-shot reasoning and instruction following.",
-    "history": "2018: GPT and BERT introduce large-scale pretraining. 2020: GPT-3 demonstrates few-shot learning at 175B parameters. 2022: ChatGPT popularizes instruction-tuned LLMs. 2023-2024: Open-weight models (Llama, Mistral) and multimodal LLMs proliferate.",
-    "architecture": "Most LLMs use a decoder-only Transformer stack with self-attention layers, positional encodings, and feed-forward blocks, trained with next-token prediction.",
-    "workflow": "Pretraining on large text corpora → instruction tuning → alignment (RLHF/DPO) → deployment behind an inference API or local runtime.",
+    "summary": "大規模言語モデル(LLM)は、一般にTransformerアーキテクチャに基づき大規模テキストデータで学習されたニューラルネットワーク。言語の統計的構造をモデル化し、幅広い生成・理解タスクを実行する。",
+    "background": "LLMはNLP向け深層学習の発展から生まれた。モデルパラメータ数と学習データ量を同時にスケールさせることで、few-shot推論や指示追従といった創発的能力を引き出す。",
+    "history": "2018年: GPTとBERTが大規模事前学習を導入。2020年: GPT-3が1750億パラメータでfew-shot学習を実証。2022年: ChatGPTが指示チューニング済みLLMを普及。2023-2024年: オープンウェイトモデル(Llama, Mistral)とマルチモーダルLLMが増加。",
+    "architecture": "多くのLLMはデコーダのみのTransformerスタックを使用。自己注意層、位置エンコーディング、フィードフォワード層で構成され、次トークン予測で学習する。",
+    "workflow": "大規模テキストコーパスでの事前学習 → 指示チューニング → アライメント(RLHF/DPO) → 推論APIまたはローカルランタイムでのデプロイ。",
     "codeExamples": [
       {
-        "title": "Basic completion request",
+        "title": "基本的な補完リクエスト",
         "language": "python",
         "code": "from openai import OpenAI\n\nclient = OpenAI()\nresponse = client.chat.completions.create(\n    model=\"gpt-4\",\n    messages=[{\"role\": \"user\", \"content\": \"Explain LLMs in one sentence.\"}],\n)\nprint(response.choices[0].message.content)"
       }
     ],
     "advantages": [
-      "Generalizes across many NLP tasks without task-specific training",
-      "Strong few-shot and zero-shot performance",
-      "Rapid ecosystem growth (tooling, fine-tuning, agents)"
+      "タスク固有の学習なしに多くのNLPタスクへ汎化できる",
+      "few-shot・zero-shotで高い性能を発揮",
+      "ツール・ファインチューニング・エージェントなどエコシステムの急速な拡大"
     ],
     "disadvantages": [
-      "High compute and energy cost for training and inference",
-      "Prone to hallucination and factual errors",
-      "Limited context window relative to full corpora"
+      "学習・推論の計算コストとエネルギーコストが高い",
+      "ハルシネーション(事実誤認)を起こしやすい",
+      "コーパス全体に比べコンテキストウィンドウが限られる"
     ],
     "comparisons": [
       {
         "slug": "transformer",
-        "note": "LLMs are typically built on the Transformer architecture"
+        "note": "LLMは一般にTransformerアーキテクチャの上に構築される"
       },
       {
         "slug": "retrieval-augmented-generation",
-        "note": "RAG augments LLMs with external knowledge retrieval"
+        "note": "RAGは外部知識検索によりLLMを拡張する"
       }
     ],
     "relatedTerms": [
@@ -49,12 +49,12 @@
     ],
     "faq": [
       {
-        "question": "What is the difference between an LLM and a chatbot?",
-        "answer": "An LLM is the underlying model; a chatbot is an application built on top of an LLM with additional prompting, memory, and UI."
+        "question": "LLMとチャットボットの違いは？",
+        "answer": "LLMは基盤となるモデルそのもの。チャットボットはLLMの上にプロンプト設計・メモリ・UIを追加したアプリケーション。"
       },
       {
-        "question": "How large is a typical LLM?",
-        "answer": "Parameter counts range from a few billion to over a trillion, depending on the model family."
+        "question": "LLMの規模はどれくらい？",
+        "answer": "モデルファミリーによって数十億から数兆パラメータまで幅がある。"
       }
     ],
     "references": [
@@ -73,38 +73,38 @@
   {
     "slug": "transformer",
     "name": "Transformer",
-    "tagline": "Attention-based neural network architecture for sequence modeling",
-    "category": "Architecture",
+    "tagline": "注意機構(Attention)ベースの系列モデリング用ニューラルネットワークアーキテクチャ",
+    "category": "アーキテクチャ",
     "tags": [
-      "Deep Learning",
+      "深層学習",
       "Attention",
       "NLP"
     ],
-    "summary": "The Transformer is a neural network architecture that relies entirely on self-attention mechanisms to model relationships between tokens in a sequence, replacing recurrence and convolution.",
-    "background": "Introduced to overcome the sequential bottleneck of RNNs, enabling parallel training and better long-range dependency modeling.",
-    "history": "2017: Vaswani et al. publish 'Attention Is All You Need'. 2018-2019: BERT and GPT apply Transformers to pretraining. 2020s: Transformer becomes the dominant architecture across NLP, vision, and audio.",
-    "architecture": "Encoder-decoder (or decoder-only) stack of multi-head self-attention and position-wise feed-forward layers, with residual connections and layer normalization.",
-    "workflow": "Input tokens → embeddings + positional encoding → stacked attention/FFN blocks → output projection (e.g. next-token logits).",
+    "summary": "Transformerは、系列中のトークン間の関係を自己注意機構のみでモデル化するニューラルネットワークアーキテクチャ。再帰(RNN)や畳み込み(CNN)を置き換える。",
+    "background": "RNNの逐次処理によるボトルネックを解消するために考案された。並列学習を可能にし、長距離依存関係のモデリング性能を向上させる。",
+    "history": "2017年: Vaswani らが「Attention Is All You Need」を発表。2018-2019年: BERTとGPTがTransformerを事前学習へ応用。2020年代: NLP・画像・音声を横断する支配的アーキテクチャに。",
+    "architecture": "エンコーダ・デコーダ(またはデコーダのみ)構成。マルチヘッド自己注意層と位置ごとのフィードフォワード層を、残差接続と層正規化とともに積み重ねる。",
+    "workflow": "入力トークン → 埋め込み+位置エンコーディング → 注意機構/FFNブロックの積み重ね → 出力射影(例: 次トークンのロジット)。",
     "codeExamples": [
       {
-        "title": "Minimal self-attention (PyTorch)",
+        "title": "最小構成の自己注意機構(PyTorch)",
         "language": "python",
         "code": "import torch.nn.functional as F\n\ndef self_attention(q, k, v):\n    scores = q @ k.transpose(-2, -1) / (q.size(-1) ** 0.5)\n    weights = F.softmax(scores, dim=-1)\n    return weights @ v"
       }
     ],
     "advantages": [
-      "Highly parallelizable training compared to RNNs",
-      "Captures long-range dependencies via attention",
-      "Scales predictably with data and compute"
+      "RNNと比較して学習の並列化が容易",
+      "注意機構により長距離依存関係を捉えられる",
+      "データと計算量に対して性能が予測可能にスケールする"
     ],
     "disadvantages": [
-      "Quadratic complexity in sequence length",
-      "Requires large amounts of training data to generalize well"
+      "系列長に対して計算量が2乗で増加する",
+      "汎化には大量の学習データを要する"
     ],
     "comparisons": [
       {
         "slug": "large-language-model",
-        "note": "LLMs are large-scale applications of the Transformer architecture"
+        "note": "LLMはTransformerアーキテクチャを大規模に応用したもの"
       }
     ],
     "relatedTerms": [
@@ -113,8 +113,8 @@
     ],
     "faq": [
       {
-        "question": "Is the Transformer only used for text?",
-        "answer": "No, Transformers are also used for vision (ViT), audio, and multimodal tasks."
+        "question": "Transformerはテキスト専用？",
+        "answer": "いいえ。画像(ViT)、音声、マルチモーダルタスクにも使われる。"
       }
     ],
     "references": [
@@ -132,40 +132,40 @@
   },
   {
     "slug": "retrieval-augmented-generation",
-    "name": "Retrieval-Augmented Generation",
+    "name": "検索拡張生成",
     "shortName": "RAG",
-    "tagline": "Combines a retriever with a generative model to ground outputs in external knowledge",
-    "category": "Techniques",
+    "tagline": "検索(Retrieval)と生成モデルを組み合わせ、外部知識に基づいて出力を根拠づける手法",
+    "category": "技術",
     "tags": [
       "NLP",
-      "Search",
+      "検索",
       "LLM"
     ],
-    "summary": "Retrieval-Augmented Generation (RAG) is a technique that retrieves relevant documents from an external knowledge source and conditions an LLM's generation on that retrieved context, improving factual grounding.",
-    "background": "RAG addresses the static-knowledge and hallucination limitations of LLMs by letting the model consult up-to-date or domain-specific external data at inference time.",
-    "history": "2020: Lewis et al. introduce RAG for knowledge-intensive NLP tasks. 2023-2024: RAG becomes the default pattern for enterprise LLM applications via vector databases.",
-    "architecture": "Query encoder → vector similarity search over an indexed document store → retrieved passages injected into the LLM prompt → generation.",
-    "workflow": "Ingest documents → chunk and embed → store in a vector index → at query time, retrieve top-k chunks → generate answer conditioned on retrieved context.",
+    "summary": "検索拡張生成(RAG)は、外部知識源から関連文書を検索し、その検索結果をコンテキストとしてLLMの生成に反映させる手法。事実的根拠を強化する。",
+    "background": "RAGはLLMが持つ静的な知識とハルシネーションの限界に対処する。推論時に最新または領域固有の外部データを参照させることで解決する。",
+    "history": "2020年: Lewis らが知識集約型NLPタスク向けにRAGを提案。2023-2024年: ベクトルデータベースを介したRAGがエンタープライズLLMアプリの標準パターンに。",
+    "architecture": "クエリエンコーダ → インデックス化された文書ストアに対するベクトル類似度検索 → 検索されたパッセージをLLMプロンプトへ挿入 → 生成。",
+    "workflow": "文書の取り込み → チャンク分割と埋め込み → ベクトルインデックスへの格納 → クエリ時にtop-kチャンクを検索 → 検索結果を条件として回答生成。",
     "codeExamples": [
       {
-        "title": "Basic RAG retrieval step",
+        "title": "基本的なRAG検索ステップ",
         "language": "python",
         "code": "results = vector_store.similarity_search(query, k=4)\ncontext = \"\\n\".join(r.page_content for r in results)\nprompt = f\"Answer using this context:\\n{context}\\n\\nQuestion: {query}\""
       }
     ],
     "advantages": [
-      "Reduces hallucination by grounding answers in retrieved evidence",
-      "Allows knowledge updates without retraining the model",
-      "Supports citing sources"
+      "検索した根拠に基づくことでハルシネーションを低減",
+      "モデルを再学習せずに知識を更新できる",
+      "出典の提示に対応できる"
     ],
     "disadvantages": [
-      "Retrieval quality bottlenecks overall answer quality",
-      "Adds latency and infrastructure complexity (vector DB, indexing pipeline)"
+      "検索精度が回答品質全体のボトルネックになる",
+      "ベクトルDB・インデックス構築など追加のインフラと遅延が発生する"
     ],
     "comparisons": [
       {
         "slug": "fine-tuning",
-        "note": "RAG injects knowledge at inference time; fine-tuning bakes it into model weights"
+        "note": "RAGは推論時に知識を注入する。ファインチューニングは知識をモデル重みに焼き込む"
       }
     ],
     "relatedTerms": [
@@ -174,8 +174,8 @@
     ],
     "faq": [
       {
-        "question": "Does RAG require fine-tuning the model?",
-        "answer": "No. RAG typically works with a frozen, off-the-shelf LLM plus a retrieval pipeline."
+        "question": "RAGにはファインチューニングが必要？",
+        "answer": "不要。一般に、既製の凍結されたLLMと検索パイプラインの組み合わせで機能する。"
       }
     ],
     "references": [
@@ -188,37 +188,37 @@
   },
   {
     "slug": "fine-tuning",
-    "name": "Fine-Tuning",
-    "tagline": "Adapting a pretrained model to a specific task or domain via further training",
-    "category": "Techniques",
+    "name": "ファインチューニング",
+    "tagline": "事前学習済みモデルを追加学習し、特定タスクやドメインへ適応させる手法",
+    "category": "技術",
     "tags": [
-      "Training",
-      "Transfer Learning"
+      "学習",
+      "転移学習"
     ],
-    "summary": "Fine-tuning continues training a pretrained model on a smaller, task- or domain-specific dataset, adjusting its weights to specialize its behavior while retaining general knowledge from pretraining.",
-    "background": "Fine-tuning leverages transfer learning: rather than training from scratch, a general-purpose pretrained model is adapted at a fraction of the cost.",
-    "history": "2018: ULMFiT and BERT popularize pretrain-then-finetune for NLP. 2021-2022: Parameter-efficient methods (LoRA, adapters) reduce fine-tuning cost. 2023+: Instruction fine-tuning and RLHF become standard for aligning LLMs.",
-    "architecture": "Same base model architecture as pretraining; only the training objective, dataset, and optionally a subset of parameters (e.g. LoRA adapters) change.",
-    "workflow": "Select base model → prepare labeled/instruction dataset → train (full or parameter-efficient) → evaluate → deploy specialized model.",
+    "summary": "ファインチューニングは、事前学習済みモデルをより小規模なタスク・ドメイン固有のデータセットで追加学習する手法。事前学習で得た一般知識を保ちつつ、重みを調整して挙動を特化させる。",
+    "background": "転移学習を活用する手法。ゼロから学習する代わりに、汎用の事前学習済みモデルをわずかなコストで適応させる。",
+    "history": "2018年: ULMFiTとBERTがNLPにおける事前学習→ファインチューニングの流れを普及。2021-2022年: LoRAやアダプタなどパラメータ効率的手法がコストを削減。2023年以降: 指示チューニングとRLHFがLLMのアライメント手法として標準化。",
+    "architecture": "事前学習時と同一のベースアーキテクチャを使用。学習目的・データセット・場合によっては一部パラメータ(LoRAアダプタ等)のみが変わる。",
+    "workflow": "ベースモデル選定 → ラベル付き/指示データセット準備 → 学習(フルまたはパラメータ効率的) → 評価 → 特化モデルのデプロイ。",
     "codeExamples": [
       {
-        "title": "LoRA fine-tuning setup (conceptual)",
+        "title": "LoRAファインチューニング設定(概念例)",
         "language": "python",
         "code": "from peft import LoraConfig, get_peft_model\n\nconfig = LoraConfig(r=8, lora_alpha=16, target_modules=[\"q_proj\", \"v_proj\"])\nmodel = get_peft_model(base_model, config)"
       }
     ],
     "advantages": [
-      "Improves performance on narrow, domain-specific tasks",
-      "Parameter-efficient methods make it accessible with limited compute"
+      "狭いドメイン固有タスクでの性能を向上させる",
+      "パラメータ効率的手法により限られた計算資源でも利用しやすい"
     ],
     "disadvantages": [
-      "Risk of catastrophic forgetting of general capabilities",
-      "Requires curated, task-specific training data"
+      "汎用能力を失う破滅的忘却のリスクがある",
+      "タスク固有の厳選された学習データが必要"
     ],
     "comparisons": [
       {
         "slug": "retrieval-augmented-generation",
-        "note": "Fine-tuning bakes knowledge into weights; RAG retrieves it at inference time"
+        "note": "ファインチューニングは知識を重みに焼き込む。RAGは推論時に検索する"
       }
     ],
     "relatedTerms": [
@@ -228,8 +228,8 @@
     ],
     "faq": [
       {
-        "question": "When should I fine-tune instead of using RAG?",
-        "answer": "Fine-tune when you need to change model behavior or style consistently; use RAG when you need up-to-date or large external knowledge."
+        "question": "RAGではなくファインチューニングを選ぶべき場面は？",
+        "answer": "モデルの挙動やスタイルを一貫して変えたい場合はファインチューニング。最新または大規模な外部知識が必要な場合はRAGが適する。"
       }
     ],
     "references": [

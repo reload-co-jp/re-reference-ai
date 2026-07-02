@@ -14,16 +14,16 @@ const Page: FC = () => {
       >
         <h1 style={{ fontSize: "2rem", marginBottom: ".5rem" }}>Re Reference AI</h1>
         <p style={{ color: "#bbb", fontSize: "1.1rem", marginBottom: "2rem" }}>
-          The AI Technical Reference
+          AI技術リファレンス
         </p>
         <form
           role="search"
           style={{ display: "flex", gap: ".5rem", justifyContent: "center" }}
         >
           <input
-            aria-label="Search terms"
+            aria-label="用語を検索"
             name="q"
-            placeholder="Search terms, e.g. LLM, RAG, Transformer..."
+            placeholder="用語を検索（例: LLM, RAG, Transformer）"
             style={{
               background: "#2a2a2a",
               border: "1px solid #3a3a3a",
@@ -48,13 +48,13 @@ const Page: FC = () => {
             }}
             type="submit"
           >
-            Search
+            検索
           </button>
         </form>
       </Section>
 
       <Section>
-        <SectionTitle>Categories</SectionTitle>
+        <SectionTitle>カテゴリ</SectionTitle>
         <div style={{ display: "flex", flexWrap: "wrap", gap: ".5rem" }}>
           {categories.map((category) => (
             <Badge key={category} style={{ fontSize: ".85rem", padding: ".375rem .75rem" }}>
@@ -65,7 +65,7 @@ const Page: FC = () => {
       </Section>
 
       <Section>
-        <SectionTitle>Terms</SectionTitle>
+        <SectionTitle>用語</SectionTitle>
         <div
           style={{
             display: "grid",

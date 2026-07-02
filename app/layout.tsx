@@ -4,7 +4,7 @@ import "./reset.css"
 
 export const metadata = {
   title: "Re Reference AI (RRA)",
-  description: "The AI Technical Reference",
+  description: "AI技術リファレンス",
 }
 
 const RootLayout = ({ children }: { children: React.ReactNode }) => {
@@ -40,7 +40,7 @@ const RootLayout = ({ children }: { children: React.ReactNode }) => {
             padding: "1rem",
           }}
         >
-          <p>&copy; My organization</p>
+          <p>&copy; Reload</p>
         </footer>
       </body>
     </html>
