@@ -47,6 +47,10 @@
       {
         "slug": "nlp",
         "note": "LLMは現在のNLPタスクの多くを単一モデルで解ける汎用アプローチとして主流になっている"
+      },
+      {
+        "slug": "gpu",
+        "note": "LLMの大規模な事前学習は、多数のGPUを用いた分散学習によって支えられている"
       }
     ],
     "relatedTerms": [
@@ -55,7 +59,8 @@
       "fine-tuning",
       "neural-network",
       "corpus",
-      "nlp"
+      "nlp",
+      "gpu"
     ],
     "faq": [
       {
@@ -123,13 +128,18 @@
       {
         "slug": "recurrent-neural-network",
         "note": "TransformerはRNNの逐次処理によるボトルネックを解消し、並列学習を可能にしたアーキテクチャ"
+      },
+      {
+        "slug": "attention",
+        "note": "TransformerはAttention機構(特に自己注意)のみで構成されたアーキテクチャ"
       }
     ],
     "relatedTerms": [
       "large-language-model",
       "fine-tuning",
       "neural-network",
-      "recurrent-neural-network"
+      "recurrent-neural-network",
+      "attention"
     ],
     "faq": [
       {
@@ -315,13 +325,18 @@
       {
         "slug": "deep-learning",
         "note": "深層学習はニューラルネットワークを多層化して用いる学習手法。ニューラルネットワークはそのモデル構造自体を指す"
+      },
+      {
+        "slug": "gpu",
+        "note": "GPUの並列演算能力がニューラルネットワークの大規模な行列演算の学習を実用的にした"
       }
     ],
     "relatedTerms": [
       "transformer",
       "large-language-model",
       "recurrent-neural-network",
-      "deep-learning"
+      "deep-learning",
+      "gpu"
     ],
     "faq": [
       {
@@ -438,11 +453,16 @@
       {
         "slug": "neural-network",
         "note": "RNNはニューラルネットワークの一種で、系列データの処理に特化した再帰構造を持つ"
+      },
+      {
+        "slug": "attention",
+        "note": "AttentionはRNNが抱える長距離依存の情報損失を補うために導入された"
       }
     ],
     "relatedTerms": [
       "transformer",
-      "neural-network"
+      "neural-network",
+      "attention"
     ],
     "faq": [
       {
@@ -557,12 +577,17 @@
       {
         "slug": "neural-network",
         "note": "深層学習はニューラルネットワークを多層化して用いる学習手法。ニューラルネットワークはそのモデル構造自体を指す"
+      },
+      {
+        "slug": "gpu",
+        "note": "GPUの並列計算能力が、深層学習における大規模な多層ネットワークの学習を実用的にした"
       }
     ],
     "relatedTerms": [
       "neural-network",
       "transformer",
-      "recurrent-neural-network"
+      "recurrent-neural-network",
+      "gpu"
     ],
     "faq": [
       {
@@ -575,6 +600,143 @@
         "type": "Official Website",
         "label": "Deep Learning (Goodfellow, Bengio, Courville)",
         "url": "https://www.deeplearningbook.org/"
+      }
+    ]
+  },
+  {
+    "slug": "attention",
+    "name": "Attention",
+    "aliases": [
+      "注意機構",
+      "Attention Mechanism"
+    ],
+    "tagline": "入力系列の各要素に動的な重みを割り当て、関連度の高い部分に着目して処理するニューラルネットワークの機構",
+    "category": "アーキテクチャ",
+    "tags": [
+      "深層学習",
+      "Transformer"
+    ],
+    "summary": "Attention(注意機構)は、ニューラルネットワークが入力系列の各要素に対して動的に重要度(重み)を計算し、関連性の高い部分に着目しながら出力を生成する仕組み。人間が文章を読む際に重要な単語へ注意を向けるのと同様に、モデルが入力全体を均等に扱うのではなく、タスクに応じて特定の部分へ重みを重点的に割り当てる。Query・Key・Valueの3つのベクトルを用いてスコアを計算する「Scaled Dot-Product Attention」が代表的な実装であり、Transformerの中核メカニズムとして自己注意(Self-Attention)の形で採用されている。",
+    "background": "RNNベースの系列モデルでは、長い入力を固定長のベクトルに圧縮する際に情報が失われやすく、特に長距離の依存関係を捉えるのが難しいという課題があった。Attentionは、出力の各ステップで入力系列全体を直接参照できるようにすることで、この情報のボトルネックを解消するために考案された。",
+    "history": "2014年: Bahdanauらがニューラル機械翻訳においてAttention機構を導入し、RNNの性能を大幅に向上。2015年: Luongらがより単純化されたAttentionのバリエーションを提案。2017年: Vaswaniらが再帰構造を排除し自己注意機構のみでモデルを構成するTransformerを発表、Attentionが深層学習の中心的な機構となる。",
+    "architecture": "Query(検索したい情報)・Key(参照される情報のラベル)・Value(実際の情報)の3つのベクトルを用いる。QueryとKeyの内積によって各要素との関連度スコアを計算し、softmaxで正規化した重みをValueに掛けて加重和を取ることで出力を得る。複数のAttentionヘッドを並列に用いるMulti-Head Attentionにより、異なる観点からの関連性を同時に捉えられる。",
+    "workflow": "入力を埋め込みベクトルに変換 → 各要素をQuery・Key・Valueベクトルに射影 → QueryとKeyの内積でスコアを計算 → softmaxで正規化し重みを得る → 重みをValueに適用し加重和を出力とする。",
+    "codeExamples": [
+      {
+        "title": "Query/Key/Valueを用いたAttention層(PyTorch)",
+        "language": "python",
+        "code": "import torch.nn as nn\nimport torch.nn.functional as F\n\nclass Attention(nn.Module):\n    def __init__(self, dim):\n        super().__init__()\n        self.q = nn.Linear(dim, dim)\n        self.k = nn.Linear(dim, dim)\n        self.v = nn.Linear(dim, dim)\n\n    def forward(self, x):\n        q, k, v = self.q(x), self.k(x), self.v(x)\n        scores = q @ k.transpose(-2, -1) / (q.size(-1) ** 0.5)\n        weights = F.softmax(scores, dim=-1)\n        return weights @ v"
+      }
+    ],
+    "advantages": [
+      "長距離の依存関係を直接モデル化でき、情報のボトルネックが少ない",
+      "計算を系列方向に並列化できる",
+      "重みを可視化することでモデルの着目箇所を解釈しやすい"
+    ],
+    "disadvantages": [
+      "系列長に対して計算量・メモリ使用量が2乗で増加する",
+      "長い系列では計算コストが大きな制約になる"
+    ],
+    "comparisons": [
+      {
+        "slug": "transformer",
+        "note": "TransformerはAttention機構(特に自己注意)のみで構成されたアーキテクチャ"
+      },
+      {
+        "slug": "recurrent-neural-network",
+        "note": "AttentionはRNNが抱える長距離依存の情報損失を補うために導入された"
+      }
+    ],
+    "relatedTerms": [
+      "transformer",
+      "neural-network",
+      "recurrent-neural-network"
+    ],
+    "faq": [
+      {
+        "question": "Self-AttentionとAttentionの違いは？",
+        "answer": "Attentionは入力と出力(または別の系列)の間の関連度を計算する一般的な仕組み。Self-Attentionは、その中でも同じ系列内の要素同士の関連度を計算する特殊なケースを指す。"
+      }
+    ],
+    "references": [
+      {
+        "type": "Research Paper",
+        "label": "Neural Machine Translation by Jointly Learning to Align and Translate",
+        "url": "https://arxiv.org/abs/1409.0473"
+      },
+      {
+        "type": "Research Paper",
+        "label": "Attention Is All You Need",
+        "url": "https://arxiv.org/abs/1706.03762"
+      }
+    ]
+  },
+  {
+    "slug": "gpu",
+    "name": "GPU",
+    "aliases": [
+      "Graphics Processing Unit",
+      "グラフィックス処理装置"
+    ],
+    "tagline": "大量の演算を並列処理できる専用プロセッサで、深層学習の学習・推論を支える計算基盤",
+    "category": "インフラ",
+    "tags": [
+      "ハードウェア",
+      "並列計算"
+    ],
+    "summary": "GPU(Graphics Processing Unit)は、元々3Dグラフィックスのレンダリング用に設計された、数千個の小さな演算コアを持つプロセッサ。CPUが少数の高性能コアで逐次処理を得意とするのに対し、GPUは多数のコアで同じ演算を大量のデータに並列適用するのを得意とする。ニューラルネットワークの学習・推論は行列演算(積和演算)の繰り返しであり、この特性がGPUの並列処理能力と非常に相性が良いため、深層学習の実用化を支える計算基盤として不可欠な存在になっている。NVIDIAのCUDAのようなGPU向け並列計算プラットフォームの普及も、機械学習フレームワークの発展を後押しした。",
+    "background": "ニューラルネットワークの学習は膨大な行列積・畳み込み演算を伴い、CPUのみでは現実的な時間で処理できない規模になった。もともと画像処理向けに並列演算性能を追求してきたGPUが、この行列演算のニーズと合致し、汎用計算(GPGPU)に転用されるようになった。",
+    "history": "2006年: NVIDIAがGPU上で汎用計算を行うためのCUDAを発表。2012年: AlexNetがGPUを用いてImageNetコンペで圧勝し、深層学習とGPUの組み合わせが注目される契機に。2016年以降: NVIDIAが深層学習向けTensorコアを搭載したGPU(Volta世代以降)を展開し、大規模モデルの学習を加速。2020年代: LLMの学習・推論需要の急増によりGPUの供給がAI開発のボトルネックとなる場面も発生。",
+    "architecture": "少数のコアで複雑な逐次処理を行うCPUと異なり、GPUは多数の単純な演算コア(ストリーミングマルチプロセッサ)を持ち、同一の命令を大量のデータに同時適用するSIMD/SIMT方式で並列演算を行う。深層学習向けGPUには、行列積演算に特化したTensorコアが搭載されることも多い。",
+    "workflow": "モデルとデータをGPUメモリに転送 → 行列演算(順伝播・逆伝播)をGPU上で並列実行 → 勾配を用いてパラメータを更新 → 必要に応じて複数GPU間で勾配や重みを同期(分散学習)。",
+    "codeExamples": [
+      {
+        "title": "PyTorchでGPUを使う基本例",
+        "language": "python",
+        "code": "import torch\n\ndevice = \"cuda\" if torch.cuda.is_available() else \"cpu\"\nmodel = model.to(device)\ninputs = inputs.to(device)"
+      }
+    ],
+    "advantages": [
+      "行列演算・畳み込み演算を高度に並列化でき、学習・推論を大幅に高速化する",
+      "CUDA等のエコシステムが整備され、主要な機械学習フレームワークが標準対応",
+      "複数GPUを連携させることで、より大規模なモデル・データセットを扱える"
+    ],
+    "disadvantages": [
+      "高性能GPUは高価で、大規模学習には多数のGPUを要するため導入・運用コストが高い",
+      "消費電力・発熱が大きく、データセンターの電力コストや冷却負荷が課題になる",
+      "需要急増時にはGPUの供給不足が発生し、入手性がボトルネックになることがある"
+    ],
+    "comparisons": [
+      {
+        "slug": "neural-network",
+        "note": "GPUの並列演算能力がニューラルネットワークの大規模な行列演算の学習を実用的にした"
+      },
+      {
+        "slug": "large-language-model",
+        "note": "LLMの大規模な事前学習は、多数のGPUを用いた分散学習によって支えられている"
+      }
+    ],
+    "relatedTerms": [
+      "neural-network",
+      "large-language-model",
+      "deep-learning"
+    ],
+    "faq": [
+      {
+        "question": "GPUとTPUの違いは？",
+        "answer": "GPUは元々グラフィックス処理向けの汎用並列プロセッサ。TPU(Tensor Processing Unit)はGoogleが機械学習の行列演算に特化して設計した専用チップで、特定の演算パターンにおいてGPUより高い効率を発揮する場合がある。"
+      }
+    ],
+    "references": [
+      {
+        "type": "Official Website",
+        "label": "NVIDIA CUDA",
+        "url": "https://developer.nvidia.com/cuda-zone"
+      },
+      {
+        "type": "Documentation",
+        "label": "PyTorch: CUDA Semantics",
+        "url": "https://pytorch.org/docs/stable/notes/cuda.html"
       }
     ]
   }
