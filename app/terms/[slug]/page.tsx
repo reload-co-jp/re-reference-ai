@@ -1,14 +1,104 @@
+import { Metadata } from "next"
 import { FC } from "react"
 import Link from "next/link"
 import { notFound } from "next/navigation"
 import { Badge, Container, Section, SectionTitle } from "components/elements/layout"
-import { getRelatedTerms, getTermBySlug, terms } from "lib/terms"
+import { toJsonLd } from "lib/json-ld"
+import { SITE_NAME, SITE_URL } from "lib/site"
+import { getRelatedTerms, getTermBySlug, Term, terms } from "lib/terms"
 
 export const dynamicParams = false
 
 export const generateStaticParams = () => terms.map((term) => ({ slug: term.slug }))
 
-const TermPage: FC<{ params: Promise<{ slug: string }> }> = async ({ params }) => {
+type Props = { params: Promise<{ slug: string }> }
+
+export const generateMetadata = async ({ params }: Props): Promise<Metadata> => {
+  const { slug } = await params
+  const term = getTermBySlug(slug)
+
+  if (!term) {
+    return {}
+  }
+
+  const title = term.name
+  const description = term.summary ?? term.tagline
+  const url = `${SITE_URL}/terms/${term.slug}/`
+
+  return {
+    title,
+    description,
+    alternates: { canonical: url },
+    openGraph: { title, description, type: "article", url },
+    twitter: { title, description },
+  }
+}
+
+const buildJsonLd = (term: Term, relatedTerms: Term[]) => {
+  const url = `${SITE_URL}/terms/${term.slug}/`
+  const description = term.summary ?? term.tagline
+
+  const definedTerm = {
+    "@context": "https://schema.org",
+    "@type": "DefinedTerm",
+    name: term.name,
+    alternateName: term.aliases,
+    description,
+    url,
+    inDefinedTermSet: `${SITE_URL}/`,
+    termCode: term.category,
+  }
+
+  const techArticle = {
+    "@context": "https://schema.org",
+    "@type": "TechArticle",
+    headline: term.name,
+    description,
+    url,
+    about: term.name,
+    keywords: term.tags?.join(", "),
+    isPartOf: {
+      "@type": "WebSite",
+      name: SITE_NAME,
+      url: `${SITE_URL}/`,
+    },
+    ...(relatedTerms.length > 0 && {
+      mentions: relatedTerms.map((related) => ({
+        "@type": "DefinedTerm",
+        name: related.name,
+        url: `${SITE_URL}/terms/${related.slug}/`,
+      })),
+    }),
+  }
+
+  const breadcrumbList = {
+    "@context": "https://schema.org",
+    "@type": "BreadcrumbList",
+    itemListElement: [
+      { "@type": "ListItem", position: 1, name: SITE_NAME, item: `${SITE_URL}/` },
+      { "@type": "ListItem", position: 2, name: term.category, item: `${SITE_URL}/#${term.category}` },
+      { "@type": "ListItem", position: 3, name: term.name, item: url },
+    ],
+  }
+
+  const faqPage = term.faq &&
+    term.faq.length > 0 && {
+      "@context": "https://schema.org",
+      "@type": "FAQPage",
+      mainEntity: term.faq.map((item) => ({
+        "@type": "Question",
+        name: item.question,
+        acceptedAnswer: {
+          "@type": "Answer",
+          text: item.answer,
+        },
+      })),
+    }
+
+  return [definedTerm, techArticle, breadcrumbList, faqPage].filter(Boolean)
+}
+
+const TermPage: FC<Props> = async ({ params }) => {
   const { slug } = await params
   const term = getTermBySlug(slug)
 
@@ -17,9 +107,17 @@ const TermPage: FC<{ params: Promise<{ slug: string }> }> = async ({ params }) =
   }
 
   const relatedTerms = getRelatedTerms(term)
+  const jsonLdBlocks = buildJsonLd(term, relatedTerms)
 
   return (
     <Container>
+      {jsonLdBlocks.map((block) => (
+        <script
+          key={(block as { "@type": string })["@type"]}
+          dangerouslySetInnerHTML={{ __html: toJsonLd(block) }}
+          type="application/ld+json"
+        />
+      ))}
       {/* Hero */}
       <Section
         style={{

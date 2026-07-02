@@ -1,6 +1,9 @@
+import { Metadata } from "next"
 import { Inter, Playfair_Display } from "next/font/google"
 import Link from "next/link"
 import { Title } from "components/elements/layout"
+import { toJsonLd } from "lib/json-ld"
+import { SITE_DESCRIPTION, SITE_NAME, SITE_TAGLINE, SITE_URL } from "lib/site"
 import "./reset.css"
 
 const display = Playfair_Display({
@@ -14,15 +17,53 @@ const body = Inter({
   variable: "--font-body",
 })
 
-export const metadata = {
-  title: "Re Reference AI (RRA)",
-  description: "AI技術リファレンス",
+export const metadata: Metadata = {
+  metadataBase: new URL(SITE_URL),
+  title: {
+    default: `${SITE_NAME} (RRA) — ${SITE_TAGLINE}`,
+    template: `%s | ${SITE_NAME}`,
+  },
+  description: SITE_DESCRIPTION,
+  openGraph: {
+    type: "website",
+    locale: "ja_JP",
+    siteName: SITE_NAME,
+    title: `${SITE_NAME} — ${SITE_TAGLINE}`,
+    description: SITE_DESCRIPTION,
+    url: SITE_URL,
+  },
+  twitter: {
+    card: "summary_large_image",
+    title: `${SITE_NAME} — ${SITE_TAGLINE}`,
+    description: SITE_DESCRIPTION,
+  },
+  alternates: {
+    canonical: SITE_URL,
+  },
+}
+
+const websiteJsonLd = {
+  "@context": "https://schema.org",
+  "@type": "WebSite",
+  name: SITE_NAME,
+  alternateName: "RRA",
+  description: SITE_DESCRIPTION,
+  url: SITE_URL,
+  potentialAction: {
+    "@type": "SearchAction",
+    target: `${SITE_URL}/?q={search_term_string}`,
+    "query-input": "required name=search_term_string",
+  },
 }
 
 const RootLayout = ({ children }: { children: React.ReactNode }) => {
   return (
     <html className={`${display.variable} ${body.variable}`} lang="ja">
       <body>
+        <script
+          dangerouslySetInnerHTML={{ __html: toJsonLd(websiteJsonLd) }}
+          type="application/ld+json"
+        />
         <header
           style={{
             background: "var(--color-bg-elevated)",

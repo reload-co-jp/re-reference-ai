@@ -1,7 +1,15 @@
+import { Metadata } from "next"
 import { FC } from "react"
 import { Badge, Container, Section, SectionTitle } from "components/elements/layout"
 import { TermCard } from "components/term/term-card"
+import { SITE_URL } from "lib/site"
 import { categories, terms } from "lib/terms"
+
+export const metadata: Metadata = {
+  alternates: {
+    canonical: SITE_URL,
+  },
+}
 
 const Page: FC = () => {
   return (
