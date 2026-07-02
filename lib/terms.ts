@@ -37,18 +37,18 @@ export type Term = {
   tagline: string
   category: string
   tags: string[]
-  summary: string
-  background: string
-  history: string
-  architecture: string
-  workflow: string
-  codeExamples: CodeExample[]
-  advantages: string[]
-  disadvantages: string[]
-  comparisons: Comparison[]
-  relatedTerms: string[]
-  faq: FaqItem[]
-  references: Reference[]
+  summary?: string
+  background?: string
+  history?: string
+  architecture?: string
+  workflow?: string
+  codeExamples?: CodeExample[]
+  advantages?: string[]
+  disadvantages?: string[]
+  comparisons?: Comparison[]
+  relatedTerms?: string[]
+  faq?: FaqItem[]
+  references?: Reference[]
 }
 
 import categoriesData from "data/categories.json"
@@ -65,6 +65,6 @@ export const getTermsByCategory = (category: string): Term[] =>
   terms.filter((term) => term.category === category)
 
 export const getRelatedTerms = (term: Term): Term[] =>
-  term.relatedTerms
+  (term.relatedTerms ?? [])
     .map((slug) => getTermBySlug(slug))
     .filter((t): t is Term => Boolean(t))

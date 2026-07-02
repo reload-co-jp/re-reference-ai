@@ -59,37 +59,47 @@ const TermPage: FC<{ params: Promise<{ slug: string }> }> = async ({ params }) =
       </Section>
 
       {/* Summary */}
-      <Section style={{ marginTop: "3rem" }}>
-        <SectionTitle>概要</SectionTitle>
-        <p>{term.summary}</p>
-      </Section>
+      {term.summary && (
+        <Section style={{ marginTop: "3rem" }}>
+          <SectionTitle>概要</SectionTitle>
+          <p>{term.summary}</p>
+        </Section>
+      )}
 
       {/* Background */}
-      <Section>
-        <SectionTitle>背景</SectionTitle>
-        <p>{term.background}</p>
-      </Section>
+      {term.background && (
+        <Section>
+          <SectionTitle>背景</SectionTitle>
+          <p>{term.background}</p>
+        </Section>
+      )}
 
       {/* History */}
-      <Section>
-        <SectionTitle>歴史</SectionTitle>
-        <p>{term.history}</p>
-      </Section>
+      {term.history && (
+        <Section>
+          <SectionTitle>歴史</SectionTitle>
+          <p>{term.history}</p>
+        </Section>
+      )}
 
       {/* Architecture */}
-      <Section>
-        <SectionTitle>アーキテクチャ</SectionTitle>
-        <p>{term.architecture}</p>
-      </Section>
+      {term.architecture && (
+        <Section>
+          <SectionTitle>アーキテクチャ</SectionTitle>
+          <p>{term.architecture}</p>
+        </Section>
+      )}
 
       {/* Workflow */}
-      <Section>
-        <SectionTitle>ワークフロー</SectionTitle>
-        <p>{term.workflow}</p>
-      </Section>
+      {term.workflow && (
+        <Section>
+          <SectionTitle>ワークフロー</SectionTitle>
+          <p>{term.workflow}</p>
+        </Section>
+      )}
 
       {/* Code Examples */}
-      {term.codeExamples.length > 0 && (
+      {term.codeExamples && term.codeExamples.length > 0 && (
         <Section>
           <SectionTitle>コード例</SectionTitle>
           {term.codeExamples.map((example) => (
@@ -120,31 +130,35 @@ const TermPage: FC<{ params: Promise<{ slug: string }> }> = async ({ params }) =
       )}
 
       {/* Advantages */}
-      <Section>
-        <SectionTitle>利点</SectionTitle>
-        <ul style={{ paddingLeft: "1.25rem" }}>
-          {term.advantages.map((advantage) => (
-            <li key={advantage} style={{ marginBottom: ".375rem" }}>
-              {advantage}
-            </li>
-          ))}
-        </ul>
-      </Section>
+      {term.advantages && term.advantages.length > 0 && (
+        <Section>
+          <SectionTitle>利点</SectionTitle>
+          <ul style={{ paddingLeft: "1.25rem" }}>
+            {term.advantages.map((advantage) => (
+              <li key={advantage} style={{ marginBottom: ".375rem" }}>
+                {advantage}
+              </li>
+            ))}
+          </ul>
+        </Section>
+      )}
 
       {/* Disadvantages */}
-      <Section>
-        <SectionTitle>欠点</SectionTitle>
-        <ul style={{ paddingLeft: "1.25rem" }}>
-          {term.disadvantages.map((disadvantage) => (
-            <li key={disadvantage} style={{ marginBottom: ".375rem" }}>
-              {disadvantage}
-            </li>
-          ))}
-        </ul>
-      </Section>
+      {term.disadvantages && term.disadvantages.length > 0 && (
+        <Section>
+          <SectionTitle>欠点</SectionTitle>
+          <ul style={{ paddingLeft: "1.25rem" }}>
+            {term.disadvantages.map((disadvantage) => (
+              <li key={disadvantage} style={{ marginBottom: ".375rem" }}>
+                {disadvantage}
+              </li>
+            ))}
+          </ul>
+        </Section>
+      )}
 
       {/* Comparisons */}
-      {term.comparisons.length > 0 && (
+      {term.comparisons && term.comparisons.length > 0 && (
         <Section>
           <SectionTitle>比較</SectionTitle>
           <ul style={{ listStyle: "none", padding: 0 }}>
@@ -185,7 +199,7 @@ const TermPage: FC<{ params: Promise<{ slug: string }> }> = async ({ params }) =
       )}
 
       {/* FAQ */}
-      {term.faq.length > 0 && (
+      {term.faq && term.faq.length > 0 && (
         <Section>
           <SectionTitle>よくある質問</SectionTitle>
           {term.faq.map((item) => (
@@ -198,24 +212,26 @@ const TermPage: FC<{ params: Promise<{ slug: string }> }> = async ({ params }) =
       )}
 
       {/* References */}
-      <Section>
-        <SectionTitle>参考文献</SectionTitle>
-        <ul style={{ paddingLeft: "1.25rem" }}>
-          {term.references.map((reference) => (
-            <li key={reference.url} style={{ marginBottom: ".5rem" }}>
-              <Badge style={{ marginRight: ".625rem" }}>{reference.type}</Badge>
-              <a
-                href={reference.url}
-                rel="noreferrer"
-                style={{ color: "var(--color-accent-bright)" }}
-                target="_blank"
-              >
-                {reference.label}
-              </a>
-            </li>
-          ))}
-        </ul>
-      </Section>
+      {term.references && term.references.length > 0 && (
+        <Section>
+          <SectionTitle>参考文献</SectionTitle>
+          <ul style={{ paddingLeft: "1.25rem" }}>
+            {term.references.map((reference) => (
+              <li key={reference.url} style={{ marginBottom: ".5rem" }}>
+                <Badge style={{ marginRight: ".625rem" }}>{reference.type}</Badge>
+                <a
+                  href={reference.url}
+                  rel="noreferrer"
+                  style={{ color: "var(--color-accent-bright)" }}
+                  target="_blank"
+                >
+                  {reference.label}
+                </a>
+              </li>
+            ))}
+          </ul>
+        </Section>
+      )}
     </Container>
   )
 }
