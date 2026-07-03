@@ -358,7 +358,8 @@
       "metadata-filter",
       "agent-memory",
       "langchain",
-      "haystack"
+      "haystack",
+      "llmo"
     ],
     "faq": [
       {
@@ -1168,7 +1169,8 @@
     ],
     "relatedTerms": [
       "large-language-model",
-      "retrieval-augmented-generation"
+      "retrieval-augmented-generation",
+      "llmo"
     ],
     "faq": [
       {
@@ -3540,6 +3542,10 @@
       {
         "slug": "prompt-injection",
         "note": "AIエージェントが外部データを処理する場合、間接プロンプトインジェクションの攻撃経路が生まれる"
+      },
+      {
+        "slug": "agentcore",
+        "note": "AgentCoreは、AIエージェントを本番環境で安全かつスケーラブルに運用するためのAWSのマネージドサービス群"
       }
     ],
     "relatedTerms": [
@@ -3552,7 +3558,8 @@
       "crewai",
       "autogen",
       "swe-bench",
-      "prompt-injection"
+      "prompt-injection",
+      "agentcore"
     ],
     "faq": [
       {
@@ -3788,6 +3795,10 @@
       {
         "slug": "claude",
         "note": "MCPは、Claudeの開発元であるAnthropicが公開したツール連携プロトコル"
+      },
+      {
+        "slug": "agentcore",
+        "note": "AWSのAgentCoreは、Gatewayコンポーネントを通じて既存APIをMCP互換のツールへ変換する機能を提供する"
       }
     ],
     "relatedTerms": [
@@ -3795,7 +3806,8 @@
       "a2a",
       "ai-agent",
       "function-calling",
-      "claude"
+      "claude",
+      "agentcore"
     ],
     "faq": [
       {
@@ -4094,13 +4106,18 @@
       {
         "slug": "vector-database",
         "note": "長期記憶は、埋め込みベクトルとしてベクトルデータベースに保存されることが多い"
+      },
+      {
+        "slug": "agentcore",
+        "note": "AWSのAgentCoreは、エージェントの短期記憶・長期記憶をマネージドサービスとして提供するMemoryコンポーネントを持つ"
       }
     ],
     "relatedTerms": [
       "context-window",
       "retrieval-augmented-generation",
       "vector-database",
-      "ai-agent"
+      "ai-agent",
+      "agentcore"
     ],
     "faq": [
       {
@@ -4852,13 +4869,18 @@
       {
         "slug": "mcp",
         "note": "MCPは、Claudeの開発元であるAnthropicが公開したツール連携プロトコル"
+      },
+      {
+        "slug": "bedrock",
+        "note": "ClaudeはAnthropicが自社APIとして提供するほか、AWSのBedrock経由でも利用できる"
       }
     ],
     "relatedTerms": [
       "gpt",
       "gemini",
       "alignment",
-      "mcp"
+      "mcp",
+      "bedrock"
     ],
     "faq": [
       {
@@ -7263,6 +7285,200 @@
         "type": "Blog",
         "label": "OpenAI: Red Teaming Network",
         "url": "https://openai.com/index/red-teaming-network/"
+      }
+    ]
+  },
+  {
+    "slug": "llmo",
+    "name": "LLMO",
+    "aliases": [
+      "LLM Optimization",
+      "大規模言語モデル最適化"
+    ],
+    "tagline": "ChatGPTやPerplexity等のLLMベースの検索・応答サービスに自社コンテンツが引用・言及されやすくなるよう最適化する取り組み",
+    "category": "技術",
+    "tags": [
+      "マーケティング",
+      "コンテンツ最適化"
+    ],
+    "summary": "LLMO(LLM Optimization、大規模言語モデル最適化)とは、ChatGPT・Perplexity・Google AI Overviews等、LLMを用いた検索・応答サービスが情報源としてWebコンテンツを引用・言及しやすくなるよう、コンテンツの構成や記述方法を最適化する取り組み。\n従来のSEO(検索エンジン最適化)がGoogle等の検索結果ページで上位表示されることを目的とするのに対し、LLMOはLLMが回答を生成する際に参照する情報源として自社コンテンツが選ばれ、生成された回答の中で正確に引用・言及されることを目的とする点が異なる。\n質問に対する明確な答えを冒頭に示す、出典や一次情報を明記する、構造化データ(schema.org等)でコンテンツの意味を機械可読な形で示す、といった施策が代表的に挙げられる。\n生成エンジン最適化(GEO: Generative Engine Optimization)やAEO(Answer Engine Optimization)といった類似の呼称も使われており、呼び方や具体的な評価指標はまだ業界内で統一されていない発展途上の分野。",
+    "background": "ユーザーがWeb検索の代わりにChatGPTやPerplexity等のAIチャットサービスへ直接質問し、その回答だけを見て情報収集を完結させる行動が広がってきたことが、LLMOが注目される背景にある。\n検索結果ページ経由のクリックが減少する一方、LLMの回答内で自社の名前や情報が引用されるかどうかが、ブランド認知やサイト流入に影響する新たな接点として意識されるようになった。",
+    "history": "LLMOという呼称は、ChatGPTの普及によりユーザーが検索エンジンではなくAIチャットサービスへ直接質問する行動が広がった2023年前後から、SEOに代わる新たな最適化領域としてマーケティング業界で使われ始めた。学術分野でも同時期に「生成エンジン最適化(GEO)」という呼称で類似の概念が研究されている。",
+    "advantages": [
+      "LLMベースの検索・チャット経由でのブランド認知・流入という、従来のSEOでは捉えきれない新たな接点を獲得できる",
+      "一次情報や具体的な数値を明記する等、コンテンツの質を高める施策が中心のため、結果的に人間の読者にとっても分かりやすいコンテンツになりやすい"
+    ],
+    "disadvantages": [
+      "LLMがどのような基準でコンテンツを引用するかは各サービスで非公開かつ変動するため、SEOのように確立された指標やベストプラクティスがまだ乏しい",
+      "生成された回答内での言及やクリックを直接計測する標準的な手法が確立されておらず、施策の効果測定が難しい"
+    ],
+    "relatedTerms": [
+      "retrieval-augmented-generation",
+      "hallucination",
+      "aio"
+    ],
+    "faq": [
+      {
+        "question": "SEOとLLMOは何が違う？",
+        "answer": "SEOは検索エンジンの結果ページで自社サイトを上位表示させることを目的とするのに対し、LLMOはLLMが生成する回答そのものの中で自社コンテンツが引用・言及されることを目的とする。ユーザーが検索結果一覧を見ずに回答だけを受け取る点が、従来のSEOと異なる前提になる。"
+      },
+      {
+        "question": "LLMOの効果はどう測定する？",
+        "answer": "各LLMサービスへ想定される質問を入力し、自社サイトや商品名が回答内に言及される頻度を手動または専用ツールで定期的にモニタリングする方法が主に取られるが、SEOのアクセス解析のような標準化された計測基盤はまだ整っていない。"
+      }
+    ],
+    "comparisons": [
+      {
+        "slug": "aio",
+        "note": "LLMOはLLMチャットサービスの回答内での引用に焦点を当てた取り組みであり、AIOはAI検索や音声アシスタントも含めたより広い括りとして位置づけられることが多い"
+      }
+    ]
+  },
+  {
+    "slug": "aio",
+    "name": "AIO",
+    "aliases": [
+      "AI Optimization",
+      "AI最適化"
+    ],
+    "tagline": "検索エンジンに限らず、AIが介在する様々な情報接点で自社コンテンツが見つかりやすく・使われやすくなるよう最適化する取り組みの総称",
+    "category": "技術",
+    "tags": [
+      "マーケティング",
+      "コンテンツ最適化"
+    ],
+    "summary": "AIO(AI Optimization、AI最適化)とは、AIが仲介する様々な情報接点で自社のコンテンツや製品情報が正しく認識され参照・言及されやすくなるよう最適化する取り組みの総称。対象となる情報接点には、LLMチャットサービスの回答、AI検索の要約、音声アシスタントの応答などが含まれる。\nLLMの回答内での引用を主な対象とするLLMO(LLM Optimization)や、学術的にはGEO(Generative Engine Optimization)と呼ばれる取り組みも、AIOという広い括りの中に含まれる関連概念として扱われることが多い。\nただしAIO・LLMO・GEO・AEOといった呼称の間に厳密な業界標準の定義があるわけではなく、論者やサービス提供者によって指す範囲が異なる、発展途上の用語群。\n実務上は、構造化データの整備、明確な一次情報の提示、FAQ形式のコンテンツ作成など、AIが内容を正確に解釈しやすい形でコンテンツを整備する点で、各アプローチは共通した方向性を持つ。",
+    "background": "検索エンジンの結果ページを介さずAIが直接回答を返す利用形態が増えるにつれて、Webサイト運営者にとって最適化すべき対象が検索順位からAIに正しく理解・引用されるコンテンツへと広がりつつある。\nAIOは、この変化を特定のサービスに限定せず包括的に指す言葉として使われている。",
+    "history": "AIOという呼称は、LLMOやGEOと同様、ChatGPT等の生成AIサービスの普及が進んだ2023年以降、既存のSEOという言葉が持つ「検索エンジン」という限定を外し、AI全般への最適化を指す包括的な用語としてマーケティング業界で使われ始めたとされる。",
+    "advantages": [
+      "LLMの回答だけでなく、AI検索の要約や音声アシスタントの応答など、複数のAI接点をまとめて意識した施策設計ができる",
+      "個別サービスの仕様変更に振り回されにくい、構造化・一次情報の明記といった普遍的なコンテンツ品質向上に焦点を当てやすい"
+    ],
+    "disadvantages": [
+      "対象範囲が広い分、LLMO・GEO等の個別分野と比べて施策が抽象的になりやすく、具体的な実行計画に落とし込みにくい",
+      "用語の定義が論者によって異なるため、社内外でのコミュニケーション時に指す範囲の認識合わせが必要になる"
+    ],
+    "comparisons": [
+      {
+        "slug": "llmo",
+        "note": "AIOはAI全般への最適化を指す包括的な言葉であり、LLMOはその中でもLLMチャットサービスの回答内での引用に焦点を当てた取り組みとして位置づけられることが多い"
+      }
+    ],
+    "relatedTerms": [
+      "llmo",
+      "retrieval-augmented-generation"
+    ],
+    "faq": [
+      {
+        "question": "AIOとLLMOはどう違う？",
+        "answer": "明確に区別されているわけではないが、AIOはAI全般(LLMチャット・AI検索・音声アシスタント等)への最適化を指す広い言葉として使われることが多く、LLMOはその中でも特にLLMチャットサービスの回答内で引用されることに焦点を当てた言葉として使われる傾向がある。"
+      }
+    ]
+  },
+  {
+    "slug": "agentcore",
+    "name": "AgentCore",
+    "aliases": [
+      "Amazon Bedrock AgentCore"
+    ],
+    "tagline": "AWSが提供する、AIエージェントをフレームワーク・モデルを問わず安全かつスケーラブルに構築・運用するためのマネージドサービス群",
+    "category": "エージェント",
+    "tags": [
+      "AWS",
+      "エージェント基盤",
+      "マネージドサービス"
+    ],
+    "summary": "AgentCore(Amazon Bedrock AgentCore)とは、AWSが提供する、AIエージェントの構築・デプロイ・運用を支援するマネージドサービス群。\nLangGraph・CrewAI・Strands Agents等、特定のフレームワークやモデルに縛られない設計(フレームワーク非依存・モデル非依存)を特徴とし、Amazon Bedrock以外のLLMを使うエージェントも運用対象にできる。\nセッションを分離したサーバーレス実行環境を提供するRuntime、エージェントの認証・認可を管理するIdentity、短期・長期の記憶を保持するMemory、既存のAPIやLambda関数をMCP互換のツールへ変換するGatewayといった複数のコンポーネントから構成される。Webサイト操作用のマネージドブラウザやコード実行用のサンドボックス、実行トレースを可視化するObservabilityも提供される。\nプロトタイプとして作ったエージェントを、認証・スケーリング・監視といった本番運用に必要な機能を個別に実装せずそのまま本番環境へ載せられる点を主な狙いとしている。",
+    "background": "AIエージェントの開発自体はLangChainやCrewAI等のオープンソースフレームワークで比較的容易になった一方、本番環境で運用するにはセッション管理・認証・長期記憶・監視といったインフラ面の実装が別途必要になり、この部分が多くの開発チームにとっての負担になっていた。\nAgentCoreは、この「プロトタイプから本番運用への橋渡し」を担うマネージドサービスとして位置づけられている。",
+    "history": "AgentCoreは、2025年7月開催のAWS Summit New Yorkでプレビュー版として発表された。",
+    "advantages": [
+      "セッション管理・認証・長期記憶・監視といった、AIエージェントを本番運用する上で必須となるインフラ機能をマネージドサービスとして提供し、個別実装の手間を省ける",
+      "特定のエージェントフレームワークやLLMベンダーに縛られず、既存のエージェント実装を活かしたまま導入できる"
+    ],
+    "disadvantages": [
+      "AWSのマネージドサービスであるため、AWS以外のクラウド環境や完全なセルフホスト運用を志向するチームには導入しにくい",
+      "登場から日が浅く、機能やAPIは今後変更される可能性がある。"
+    ],
+    "comparisons": [
+      {
+        "slug": "mcp",
+        "note": "AgentCoreのGatewayコンポーネントは、既存のAPIやLambda関数をMCP互換のツールへ変換する機能を持ち、MCPを活用した連携方法を提供する"
+      },
+      {
+        "slug": "ai-agent",
+        "note": "AgentCoreは、AIエージェント自体を作るフレームワークではなく、既存のフレームワークで作られたエージェントを本番運用するためのインフラを提供する"
+      },
+      {
+        "slug": "agent-memory",
+        "note": "AgentCoreのMemoryコンポーネントは、エージェントの短期記憶・長期記憶をマネージドサービスとして提供する"
+      },
+      {
+        "slug": "bedrock",
+        "note": "AgentCoreは、Amazon Bedrockが提供するエージェント関連機能をさらに拡張した専用のマネージドサービス群"
+      }
+    ],
+    "relatedTerms": [
+      "mcp",
+      "ai-agent",
+      "agent-memory",
+      "multi-agent",
+      "bedrock"
+    ],
+    "faq": [
+      {
+        "question": "AgentCoreを使うにはAmazon Bedrockのモデルを使う必要がある？",
+        "answer": "いいえ。AgentCoreはモデル非依存を掲げており、Bedrock経由のモデルに限らず、他社のLLM APIを呼び出すエージェントも実行・運用の対象にできる。"
+      }
+    ]
+  },
+  {
+    "slug": "bedrock",
+    "name": "Bedrock",
+    "aliases": [
+      "Amazon Bedrock"
+    ],
+    "tagline": "AWSが提供する、複数のAIプロバイダの基盤モデルを単一APIで呼び出せるフルマネージドサービス",
+    "category": "インフラ",
+    "tags": [
+      "AWS",
+      "マネージドサービス",
+      "API"
+    ],
+    "summary": "Amazon Bedrock(Bedrock)とは、AWSが提供する、複数のAIプロバイダの基盤モデル(Foundation Model)を単一のAPIを通じて呼び出せるフルマネージドサービス。\nAnthropic Claude・Meta Llama・Mistral・Amazon Nova・Cohere・AI21 Labs等、複数ベンダーのモデルを、モデルごとに異なるSDKやインフラを構築せず統一されたインターフェースから利用できる。\nモデルの呼び出しだけでなく、自社データを使ったファインチューニング、社内文書を検索対象に加えるKnowledge Bases(RAGの実装)、有害な入力・出力を検知・遮断するGuardrails、AIエージェントを構築するAgentsといった周辺機能も提供する。\nAWSの他サービス(IAM・VPC・CloudWatch等)とシームレスに統合できる点が、既存のAWS環境で生成AI機能を組み込む際の主な採用理由の1つになっている。",
+    "background": "複数のAIプロバイダのモデルを併用するには、本来プロバイダごとに異なるAPI仕様・認証方式・SDKへ個別に対応する必要がある。Bedrockは、この差異を単一のAPIの背後に隠蔽することで、モデルの切り替えや比較検証を容易にする狙いを持つ。",
+    "history": "Amazon Bedrockは2023年4月にプレビューとして発表され、同年9月に一般提供(GA)を開始した。",
+    "advantages": [
+      "モデルプロバイダごとに異なるAPIを個別に実装する必要がなく、統一されたインターフェースで複数モデルを比較・切り替えられる",
+      "IAMによるアクセス制御やVPC経由の接続等、既存のAWSインフラのセキュリティ・ガバナンス体系をそのまま生成AI機能に適用できる"
+    ],
+    "disadvantages": [
+      "利用できるモデルはBedrock対応のプロバイダ・モデルに限られ、対応していないモデルは別途自前で用意する必要がある",
+      "AWS特有のサービス構成やIAM権限設計の理解が求められ、AWSに不慣れなチームには学習コストがかかる"
+    ],
+    "comparisons": [
+      {
+        "slug": "claude",
+        "note": "BedrockはClaude等複数プロバイダのモデルを単一APIで提供する基盤サービスであり、Claudeはその中で利用できるモデルの1つ"
+      },
+      {
+        "slug": "agentcore",
+        "note": "AgentCore(Amazon Bedrock AgentCore)は、Bedrockが提供するエージェント関連機能をさらに拡張した、AIエージェント専用のマネージドサービス群"
+      },
+      {
+        "slug": "vllm",
+        "note": "vLLMはセルフホスト型のOSS推論エンジンであるのに対し、BedrockはAWSが運用を担うフルマネージド型のサービス"
+      }
+    ],
+    "relatedTerms": [
+      "agentcore",
+      "claude",
+      "retrieval-augmented-generation",
+      "guardrails"
+    ],
+    "faq": [
+      {
+        "question": "BedrockでClaudeを使うのと、Anthropic APIを直接使うのとの違いは？",
+        "answer": "モデル自体は同じだが、Bedrock経由ではAWSの請求・IAM権限管理・VPC接続等、既存のAWSインフラとの統合を活かせる点が異なる。Anthropic APIを直接利用する場合は、AWS環境に依存せず最新機能へいち早くアクセスしたい場合に向く。"
       }
     ]
   }
