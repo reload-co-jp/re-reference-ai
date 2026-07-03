@@ -51,6 +51,10 @@
       {
         "slug": "gpu",
         "note": "LLMの大規模な事前学習は、多数のGPUを用いた分散学習によって支えられている"
+      },
+      {
+        "slug": "hallucination",
+        "note": "LLMは事実に基づかない内容をもっともらしく生成するハルシネーションを起こすことがある"
       }
     ],
     "relatedTerms": [
@@ -60,7 +64,8 @@
       "neural-network",
       "corpus",
       "nlp",
-      "gpu"
+      "gpu",
+      "hallucination"
     ],
     "faq": [
       {
@@ -199,11 +204,16 @@
       {
         "slug": "fine-tuning",
         "note": "RAGは推論時に知識を注入する。ファインチューニングは知識をモデル重みに焼き込む"
+      },
+      {
+        "slug": "hallucination",
+        "note": "RAGは検索結果に基づいて回答を根拠づけることで、ハルシネーションを低減する手法として使われる"
       }
     ],
     "relatedTerms": [
       "large-language-model",
-      "fine-tuning"
+      "fine-tuning",
+      "hallucination"
     ],
     "faq": [
       {
@@ -714,12 +724,17 @@
       {
         "slug": "large-language-model",
         "note": "LLMの大規模な事前学習は、多数のGPUを用いた分散学習によって支えられている"
+      },
+      {
+        "slug": "cuda",
+        "note": "CUDAはNVIDIA製GPU上で汎用計算を行うための標準的なプラットフォームであり、GPGPU活用の基盤となっている"
       }
     ],
     "relatedTerms": [
       "neural-network",
       "large-language-model",
-      "deep-learning"
+      "deep-learning",
+      "cuda"
     ],
     "faq": [
       {
@@ -737,6 +752,141 @@
         "type": "Documentation",
         "label": "PyTorch: CUDA Semantics",
         "url": "https://pytorch.org/docs/stable/notes/cuda.html"
+      }
+    ]
+  },
+  {
+    "slug": "cuda",
+    "name": "CUDA",
+    "aliases": [
+      "Compute Unified Device Architecture"
+    ],
+    "tagline": "NVIDIA製GPU上で汎用並列計算を行うための並列計算プラットフォーム・プログラミングモデル",
+    "category": "インフラ",
+    "tags": ["並列計算", "NVIDIA"],
+    "summary": "CUDA(Compute Unified Device Architecture)は、NVIDIAが提供するGPU向けの並列計算プラットフォーム兼プログラミングモデル。C/C++に近い記法でGPU上の数千コアを直接制御するプログラム(カーネル)を書けるようにし、グラフィックス処理に限らない汎用計算(GPGPU)をGPU上で実行できるようにした。PyTorchやTensorFlowなど主要な機械学習フレームワークは内部でCUDAを介してGPU上の行列演算を実行しており、深層学習の学習・推論を支える基盤ソフトウェアとなっている。",
+    "background": "GPUは元々グラフィックスのレンダリング専用に設計されており、グラフィックスAPI経由でしか演算資源を利用できなかった。NVIDIAはGPUの持つ大規模並列演算能力をグラフィックス以外の汎用計算にも活用できるようにするため、GPU上で直接動作する並列プログラムを書くための開発環境としてCUDAを開発した。",
+    "history": "2006年: NVIDIAがCUDAを発表し、GPU上で汎用計算を行うプログラミングモデルを提供開始。2009年以降: cuDNNなど深層学習向けライブラリが整備され、機械学習フレームワークのGPU対応が加速。2012年: AlexNetの学習にCUDA対応GPUが用いられ、深層学習ブームの技術的基盤の一つとなる。以降、主要な機械学習フレームワークが標準でCUDAバックエンドをサポートするようになった。",
+    "architecture": "CPU(ホスト)側で実行を制御しつつ、GPU(デバイス)側に大量の軽量スレッドからなる並列処理(カーネル)を投入するホスト・デバイスモデルを採る。スレッドはグリッド・ブロック・スレッドという階層構造で管理され、同一の命令を大量のデータに適用するSIMT方式でGPUの演算コアを活用する。",
+    "workflow": "ホスト(CPU)からデバイス(GPU)へデータを転送 → GPU上でカーネル(並列処理)を実行 → 結果をホストに転送、またはGPUメモリ上で後続処理に利用。機械学習フレームワークではこの一連の流れがライブラリ内部に隠蔽され、開発者は`.to(\"cuda\")`のような高レベルAPIで利用する。",
+    "codeExamples": [
+      {
+        "title": "PyTorchでのCUDAデバイス指定",
+        "language": "python",
+        "code": "import torch\n\nif torch.cuda.is_available():\n    device = torch.device(\"cuda\")\n    print(torch.cuda.get_device_name(0))"
+      }
+    ],
+    "advantages": [
+      "NVIDIA GPUの並列演算能力を汎用計算に活用でき、機械学習・科学技術計算を大幅に高速化する",
+      "cuDNNやcuBLASなど深層学習向けに最適化されたライブラリ群が整備されている",
+      "主要な機械学習フレームワークが標準対応しており、エコシステムが成熟している"
+    ],
+    "disadvantages": [
+      "NVIDIA製GPUに依存しており、他社製GPUでは利用できない(ベンダーロックインの一因)",
+      "GPUドライバやCUDAバージョンとフレームワークのバージョン間の互換性管理が煩雑になりやすい"
+    ],
+    "comparisons": [
+      {
+        "slug": "gpu",
+        "note": "GPUがハードウェア基盤であるのに対し、CUDAはそのGPU上で汎用計算を行うためのソフトウェアプラットフォーム"
+      },
+      {
+        "slug": "pytorch",
+        "note": "PyTorchはCUDAをバックエンドとして呼び出すことで、GPU上のテンソル演算を高レベルAPIから実行できる"
+      }
+    ],
+    "relatedTerms": ["gpu", "deep-learning", "neural-network", "pytorch"],
+    "references": [
+      {
+        "type": "Official Website",
+        "label": "NVIDIA CUDA Zone",
+        "url": "https://developer.nvidia.com/cuda-zone"
+      },
+      {
+        "type": "Documentation",
+        "label": "CUDA C++ Programming Guide",
+        "url": "https://docs.nvidia.com/cuda/cuda-c-programming-guide/"
+      }
+    ]
+  },
+  {
+    "slug": "pytorch",
+    "name": "PyTorch",
+    "tagline": "動的計算グラフとPython親和性の高いAPIを特徴とする、オープンソースの機械学習フレームワーク",
+    "category": "技術",
+    "tags": ["フレームワーク", "Python"],
+    "summary": "PyTorchは、Meta(旧Facebook)のAI研究部門が開発したオープンソースの機械学習フレームワーク。テンソル演算とGPUアクセラレーションを提供する基盤ライブラリの上に、ニューラルネットワークの構築・学習を支援する高レベルAPIを備える。計算グラフを実行時に動的に構築するdefine-by-run方式を採用しており、Pythonの制御構文をそのままモデル定義に使える柔軟さから、研究分野を中心に広く採用されている。内部ではCUDAを介してGPU上のテンソル演算を実行する。",
+    "background": "深層学習モデルの研究では、モデル構造を試行錯誤しながら素早く実装・検証するニーズが強い。従来の静的計算グラフ方式のフレームワークはグラフ定義と実行が分離されデバッグが難しかったため、Python本来の制御フローと自然に統合できる動的計算グラフ方式のフレームワークとしてPyTorchが開発された。",
+    "history": "2016年: FacebookのAI研究部門(FAIR)がPyTorchを公開。2018年: Caffe2の機能を統合。2022年: プロジェクトの中立性を高めるためLinux Foundation傘下のPyTorch Foundationに移管。研究コミュニティでの採用が広がり、TensorFlowと並ぶ主要な深層学習フレームワークの一つとなった。",
+    "architecture": "多次元配列を扱うTensorクラスを中核とし、GPU上での演算はCUDAバックエンドに委譲される。`autograd`機構が演算履歴を動的に記録し、逆伝播時に自動微分で勾配を計算する。`nn.Module`によってレイヤーやモデルをオブジェクト指向的に定義・合成できる。",
+    "workflow": "モデルを`nn.Module`のサブクラスとして定義 → 入力データをTensorとしてモデルに渡し順伝播 → 損失関数で誤差を計算 → `backward()`で自動微分により勾配を計算 → オプティマイザでパラメータを更新、を反復する。",
+    "codeExamples": [
+      {
+        "title": "PyTorchでの学習ループの基本形",
+        "language": "python",
+        "code": "import torch\nimport torch.nn as nn\n\nmodel = nn.Linear(10, 1)\noptimizer = torch.optim.Adam(model.parameters())\nloss_fn = nn.MSELoss()\n\nfor inputs, targets in dataloader:\n    optimizer.zero_grad()\n    outputs = model(inputs)\n    loss = loss_fn(outputs, targets)\n    loss.backward()\n    optimizer.step()"
+      }
+    ],
+    "advantages": [
+      "動的計算グラフによりPythonの制御構文をそのまま使え、デバッグ・試行錯誤がしやすい",
+      "研究コミュニティでの採用が広く、最新の論文実装が公開されやすい",
+      "CUDAとの統合が整備されており、GPU学習への切り替えが容易"
+    ],
+    "disadvantages": [
+      "動的グラフゆえに、静的グラフ方式に比べて実行前の最適化がしにくい場面がある",
+      "本番環境へのデプロイには`TorchScript`やONNX変換など追加の変換ステップが必要になることがある"
+    ],
+    "comparisons": [
+      {
+        "slug": "cuda",
+        "note": "PyTorchはCUDAをバックエンドとして利用し、GPU上のテンソル演算を高レベルAPIから実行する"
+      }
+    ],
+    "relatedTerms": ["cuda", "gpu", "deep-learning", "neural-network"],
+    "references": [
+      {
+        "type": "Official Website",
+        "label": "PyTorch",
+        "url": "https://pytorch.org/"
+      },
+      {
+        "type": "Documentation",
+        "label": "PyTorch Documentation",
+        "url": "https://pytorch.org/docs/stable/index.html"
+      }
+    ]
+  },
+  {
+    "slug": "hallucination",
+    "name": "ハルシネーション",
+    "aliases": [
+      "Hallucination"
+    ],
+    "tagline": "LLMが事実に基づかない内容を、もっともらしく生成してしまう現象",
+    "category": "技術",
+    "tags": ["LLM", "信頼性"],
+    "summary": "ハルシネーションとは、大規模言語モデル(LLM)が学習データや与えられたコンテキストに存在しない事実を、あたかも正しい情報であるかのように流暢な文章で生成してしまう現象。LLMは次に来るトークンを確率的に予測して文章を生成する仕組み上、事実の正誤を検証する機構を持たず、文法的・文脈的にもっともらしい文が必ずしも事実と一致するとは限らない。存在しない文献の引用、誤った日付や数値、実在しない人物・製品の紹介などの形で現れることが多く、企業向けアプリケーションや医療・法律など正確性が求められる領域での実運用における主要な課題の一つになっている。",
+    "background": "LLMは次トークン予測という統計的な言語モデリングを学習目標としており、出力する内容が事実かどうかを直接検証する仕組みを持たない。学習データに含まれない、または曖昧な知識を問われた際に、確率的にもっともらしい(しかし誤った)文を生成してしまうことがある。",
+    "disadvantages": [
+      "誤情報を自信ありげに提示するため、利用者が誤りに気づきにくい",
+      "医療・法律・金融など正確性が求められる領域での実運用リスクになる",
+      "検証コストが発生し、人間によるファクトチェックが別途必要になる場合がある"
+    ],
+    "comparisons": [
+      {
+        "slug": "retrieval-augmented-generation",
+        "note": "RAGは検索結果に回答を根拠づけることで、ハルシネーションを低減する代表的な対策手法"
+      },
+      {
+        "slug": "large-language-model",
+        "note": "ハルシネーションはLLMの生成メカニズムに起因する代表的な限界の一つ"
+      }
+    ],
+    "relatedTerms": ["large-language-model", "retrieval-augmented-generation"],
+    "faq": [
+      {
+        "question": "ハルシネーションは完全になくせる？",
+        "answer": "現時点の技術では完全な排除は難しいとされる。RAGによる根拠づけ、出典提示、事実確認のためのファインチューニングなどにより低減を図るのが一般的なアプローチ。"
       }
     ]
   }
