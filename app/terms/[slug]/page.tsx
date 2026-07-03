@@ -158,7 +158,7 @@ const TermPage: FC<Props> = async ({ params }) => {
       {term.summary && (
         <Section style={{ marginTop: "3rem" }}>
           <SectionTitle>概要</SectionTitle>
-          <p>{term.summary}</p>
+          <p style={{ whiteSpace: "pre-line" }}>{term.summary}</p>
         </Section>
       )}
 
@@ -166,7 +166,7 @@ const TermPage: FC<Props> = async ({ params }) => {
       {term.background && (
         <Section>
           <SectionTitle>背景</SectionTitle>
-          <p>{term.background}</p>
+          <p style={{ whiteSpace: "pre-line" }}>{term.background}</p>
         </Section>
       )}
 
@@ -174,7 +174,7 @@ const TermPage: FC<Props> = async ({ params }) => {
       {term.history && (
         <Section>
           <SectionTitle>歴史</SectionTitle>
-          <p>{term.history}</p>
+          <p style={{ whiteSpace: "pre-line" }}>{term.history}</p>
         </Section>
       )}
 
@@ -182,7 +182,7 @@ const TermPage: FC<Props> = async ({ params }) => {
       {term.architecture && (
         <Section>
           <SectionTitle>アーキテクチャ</SectionTitle>
-          <p>{term.architecture}</p>
+          <p style={{ whiteSpace: "pre-line" }}>{term.architecture}</p>
         </Section>
       )}
 
@@ -190,7 +190,7 @@ const TermPage: FC<Props> = async ({ params }) => {
       {term.workflow && (
         <Section>
           <SectionTitle>ワークフロー</SectionTitle>
-          <p>{term.workflow}</p>
+          <p style={{ whiteSpace: "pre-line" }}>{term.workflow}</p>
         </Section>
       )}
 
@@ -301,7 +301,7 @@ const TermPage: FC<Props> = async ({ params }) => {
           {term.faq.map((item) => (
             <div key={item.question} style={{ marginBottom: "1.25rem" }}>
               <p style={{ fontWeight: 600, marginBottom: ".375rem" }}>{item.question}</p>
-              <p style={{ color: "var(--color-text-muted)" }}>{item.answer}</p>
+              <p style={{ color: "var(--color-text-muted)", whiteSpace: "pre-line" }}>{item.answer}</p>
             </div>
           ))}
         </Section>
