@@ -1,7 +1,7 @@
 import { Metadata } from "next"
 import { FC } from "react"
-import { Badge, Container, Section, SectionTitle } from "components/elements/layout"
-import { TermCard } from "components/term/term-card"
+import { Container, Section } from "components/elements/layout"
+import { TermExplorer } from "components/term/term-explorer"
 import { SITE_URL } from "lib/site"
 import { categories, terms } from "lib/terms"
 
@@ -43,70 +43,9 @@ const Page: FC = () => {
         >
           AI・LLM・機械学習領域の一次情報を集約した技術リファレンス
         </p>
-        <form
-          role="search"
-          style={{ display: "flex", gap: ".75rem", justifyContent: "center" }}
-        >
-          <input
-            aria-label="用語を検索"
-            name="q"
-            placeholder="用語を検索（例: LLM, RAG, Transformer）"
-            style={{
-              background: "var(--color-surface)",
-              border: "1px solid var(--color-border-strong)",
-              borderRadius: "2px",
-              color: "var(--color-text)",
-              flex: 1,
-              fontSize: "1rem",
-              maxWidth: "28rem",
-              padding: ".75rem 1rem",
-            }}
-            type="search"
-          />
-          <button
-            className="search-button"
-            style={{
-              background: "var(--color-accent)",
-              border: "none",
-              borderRadius: "2px",
-              color: "#0a0f0c",
-              cursor: "pointer",
-              fontWeight: 600,
-              letterSpacing: "0.03em",
-              padding: ".75rem 1.5rem",
-            }}
-            type="submit"
-          >
-            検索
-          </button>
-        </form>
       </Section>
 
-      <Section style={{ paddingTop: "3.5rem" }}>
-        <SectionTitle>カテゴリ</SectionTitle>
-        <div style={{ display: "flex", flexWrap: "wrap", gap: ".5rem" }}>
-          {categories.map((category) => (
-            <Badge key={category} style={{ fontSize: ".85rem", padding: ".4rem .9rem" }}>
-              {category}
-            </Badge>
-          ))}
-        </div>
-      </Section>
-
-      <Section>
-        <SectionTitle>用語</SectionTitle>
-        <div
-          style={{
-            display: "grid",
-            gap: "1.25rem",
-            gridTemplateColumns: "repeat(auto-fill, minmax(15rem, 1fr))",
-          }}
-        >
-          {terms.map((term) => (
-            <TermCard key={term.slug} term={term} />
-          ))}
-        </div>
-      </Section>
+      <TermExplorer categories={categories} terms={terms} />
     </Container>
   )
 }
