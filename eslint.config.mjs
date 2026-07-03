@@ -4,6 +4,7 @@ import pluginReact from "eslint-plugin-react"
 import pluginReactHooks from "eslint-plugin-react-hooks"
 import jsxA11y from "eslint-plugin-jsx-a11y"
 import { fixupConfigRules } from "@eslint/compat"
+import globals from "globals"
 
 export default [
   { files: ["**/*.{js,mjs,cjs,ts,jsx,tsx}"] },
@@ -12,6 +13,12 @@ export default [
   ...tseslint.configs.recommended,
   ...fixupConfigRules(pluginReact.configs.flat.recommended),
   ...fixupConfigRules(jsxA11y.flatConfigs.recommended),
+  {
+    files: ["scripts/**/*.mjs"],
+    languageOptions: {
+      globals: globals.node,
+    },
+  },
   {
     plugins: {
       "react-hooks": pluginReactHooks,

@@ -1,0 +1,13 @@
+{
+  "rules": {
+    "preset-ja-technical-writing": {
+      "ja-no-mixed-period": false,
+      "no-exclamation-question-mark": false,
+      "max-kanji-continuous-len": false,
+      "sentence-length": {
+        "max": 150
+      }
+    },
+    "@textlint-ja/preset-ai-writing": true
+  }
+}

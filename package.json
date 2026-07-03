@@ -7,6 +7,7 @@
   "scripts": {
     "dev": "next dev",
     "lint": "eslint",
+    "lint:text": "node scripts/lint-terms-text.mjs",
     "build": "next build",
     "start": "next start",
     "format": "prettier --write .",
@@ -24,6 +25,7 @@
   "devDependencies": {
     "@eslint/compat": "^2.1.0",
     "@eslint/js": "^10.0.1",
+    "@textlint-ja/textlint-rule-preset-ai-writing": "^1.7.0",
     "@types/node": "^26.1.0",
     "@types/react": "^19.2.17",
     "eslint": "^10.6.0",
@@ -31,7 +33,10 @@
     "eslint-plugin-jsx-a11y": "^6.10.2",
     "eslint-plugin-react": "^7.37.5",
     "eslint-plugin-react-hooks": "^7.1.1",
+    "globals": "^17.7.0",
     "prettier": "^3.9.4",
+    "textlint": "^15.7.1",
+    "textlint-rule-preset-ja-technical-writing": "^12.0.2",
     "typescript": "^6.0.3",
     "typescript-eslint": "^8.62.1"
   }
