@@ -55,6 +55,14 @@
       {
         "slug": "hallucination",
         "note": "LLMは事実に基づかない内容をもっともらしく生成するハルシネーションを起こすことがある"
+      },
+      {
+        "slug": "token",
+        "note": "LLMは入出力をトークン列として扱い、次トークン予測を通じて学習される"
+      },
+      {
+        "slug": "bert",
+        "note": "BERTは双方向エンコーダによる言語理解に特化したモデルで、生成に強い自己回帰型LLMと対比される"
       }
     ],
     "relatedTerms": [
@@ -65,7 +73,9 @@
       "corpus",
       "nlp",
       "gpu",
-      "hallucination"
+      "hallucination",
+      "token",
+      "bert"
     ],
     "faq": [
       {
@@ -137,6 +147,10 @@
       {
         "slug": "attention",
         "note": "TransformerはAttention機構(特に自己注意)のみで構成されたアーキテクチャ"
+      },
+      {
+        "slug": "bert",
+        "note": "BERTはTransformerのエンコーダ部分のみを用いた双方向の事前学習済み言語モデル"
       }
     ],
     "relatedTerms": [
@@ -144,7 +158,8 @@
       "fine-tuning",
       "neural-network",
       "recurrent-neural-network",
-      "attention"
+      "attention",
+      "bert"
     ],
     "faq": [
       {
@@ -262,12 +277,17 @@
       {
         "slug": "retrieval-augmented-generation",
         "note": "ファインチューニングは知識を重みに焼き込む。RAGは推論時に検索する"
+      },
+      {
+        "slug": "lora",
+        "note": "LoRAはフルファインチューニングよりパラメータ効率的な代替手法として広く使われる"
       }
     ],
     "relatedTerms": [
       "large-language-model",
       "transformer",
-      "retrieval-augmented-generation"
+      "retrieval-augmented-generation",
+      "lora"
     ],
     "faq": [
       {
@@ -339,6 +359,10 @@
       {
         "slug": "gpu",
         "note": "GPUの並列演算能力がニューラルネットワークの大規模な行列演算の学習を実用的にした"
+      },
+      {
+        "slug": "convolutional-neural-network",
+        "note": "CNNは画像などグリッド状データの処理に特化したニューラルネットワークの一種"
       }
     ],
     "relatedTerms": [
@@ -346,7 +370,8 @@
       "large-language-model",
       "recurrent-neural-network",
       "deep-learning",
-      "gpu"
+      "gpu",
+      "convolutional-neural-network"
     ],
     "faq": [
       {
@@ -400,11 +425,16 @@
       {
         "slug": "large-language-model",
         "note": "コーパスはLLMの事前学習に使われる元データ"
+      },
+      {
+        "slug": "token",
+        "note": "コーパスはトークナイゼーションによりトークン列へ変換され学習に使われる"
       }
     ],
     "relatedTerms": [
       "large-language-model",
-      "fine-tuning"
+      "fine-tuning",
+      "token"
     ],
     "faq": [
       {
@@ -467,12 +497,17 @@
       {
         "slug": "attention",
         "note": "AttentionはRNNが抱える長距離依存の情報損失を補うために導入された"
+      },
+      {
+        "slug": "long-short-term-memory",
+        "note": "LSTMはRNNにゲート機構とセル状態を追加し、長期依存の学習困難を緩和したアーキテクチャ"
       }
     ],
     "relatedTerms": [
       "transformer",
       "neural-network",
-      "attention"
+      "attention",
+      "long-short-term-memory"
     ],
     "faq": [
       {
@@ -909,6 +944,404 @@
       {
         "question": "ハルシネーションは完全になくせる？",
         "answer": "現時点の技術では完全な排除は難しいとされる。\nRAGによる根拠づけ、出典提示、事実確認のためのファインチューニングなどにより低減を図るのが一般的なアプローチ。"
+      }
+    ]
+  },
+  {
+    "slug": "token",
+    "name": "トークン",
+    "aliases": [
+      "Token"
+    ],
+    "tagline": "LLMなど自然言語処理モデルがテキストを入出力する際に扱う最小の処理単位",
+    "category": "技術",
+    "tags": [
+      "NLP",
+      "トークナイゼーション",
+      "LLM"
+    ],
+    "summary": "トークンとは、LLMをはじめとする自然言語処理モデルがテキストを入力・出力する際に扱う最小の単位。\n単語ひとつがそのまま1トークンになる場合もあれば、単語の一部(サブワード)や1文字が1トークンになる場合もある。\n生のテキストをトークン列に変換する処理をトークナイゼーション(トークン化)と呼び、代表的な手法にBPE(Byte Pair Encoding)・WordPiece・SentencePieceなどがある。\nLLMは有限個のトークンIDからなる語彙(vocabulary)を通じてテキストを扱い、モデルの入力・出力の長さ、APIの課金、コンテキストウィンドウの上限は全てトークン数で計測される。",
+    "background": "単語単位(Word-level)で語彙を構成すると語彙サイズが膨大になり、学習データに現れない未知語(OOV)に弱いという課題があった。\nサブワード単位のトークナイゼーションは、頻出する文字列の組み合わせを1トークンとして扱うことで語彙サイズを抑えつつ、未知語も既知のサブワードの組み合わせとして表現できるようにするために考案された。",
+    "architecture": "トークナイザは学習済みの語彙表とマージルール(またはユニグラム統計)を持ち、入力テキストを頻度統計や最長一致に基づいてサブワード単位に分割し、それぞれを整数のトークンIDへ変換する。\nLLM内部では各トークンIDが埋め込みベクトルに変換されてTransformerへ入力される。\n日本語のように単語間にスペースがない言語では、形態素解析を経ずにバイト列やサブワード単位から直接トークン化する手法(SentencePieceのByte-fallbackなど)が広く使われる。",
+    "workflow": "生テキスト入力 → トークナイザによるサブワード分割 → トークンID列への変換 → 埋め込み層でベクトル化 → モデルへ入力。\n生成時はこの逆に、モデルが出力したトークンID列を1つずつテキストへデコードする。",
+    "codeExamples": [
+      {
+        "title": "tiktokenによるトークン数のカウント",
+        "language": "python",
+        "code": "import tiktoken\n\nenc = tiktoken.encoding_for_model(\"gpt-4\")\ntokens = enc.encode(\"トークンとは何か？\")\nprint(len(tokens), tokens)"
+      }
+    ],
+    "advantages": [
+      "語彙サイズを抑えつつ未知語への対応力を確保できる",
+      "モデルの入出力量・APIの課金・コンテキストウィンドウを共通の単位で計測できる",
+      "言語やドメインを問わず同じ枠組みでテキストを扱える"
+    ],
+    "disadvantages": [
+      "同じ内容でも言語やトークナイザによってトークン数が大きく変わる(日本語は英語よりトークン数が多くなりやすい)",
+      "数値の桁や綴りなど文字単位の情報がトークン境界で失われやすい",
+      "コンテキストウィンドウの上限がトークン数で決まるため、長文処理の制約になる"
+    ],
+    "comparisons": [
+      {
+        "slug": "large-language-model",
+        "note": "LLMはテキストをトークン列として処理し、次トークンの予測を学習目標とする"
+      },
+      {
+        "slug": "transformer",
+        "note": "Transformerへの入力は、トークンIDを埋め込みベクトル化したもの"
+      },
+      {
+        "slug": "corpus",
+        "note": "コーパスは生テキストの集合であり、トークンはそれをモデルが処理できる単位に分割したもの"
+      }
+    ],
+    "relatedTerms": [
+      "large-language-model",
+      "transformer",
+      "corpus",
+      "nlp"
+    ],
+    "faq": [
+      {
+        "question": "トークンと単語は同じもの？",
+        "answer": "必ずしも同じではない。\n頻出する単語は1トークンになることが多いが、まれな単語や複雑な日本語の表現は複数のトークンに分割されることがある。"
+      },
+      {
+        "question": "日本語はなぜ英語よりトークン数が多くなりやすい？",
+        "answer": "主要なLLMの語彙は英語中心のコーパスから学習されており、日本語の文字・表現に対する割り当てが英語ほど効率化されていないため、同じ内容でもトークン数が多くなりやすい。"
+      }
+    ],
+    "references": [
+      {
+        "type": "GitHub",
+        "label": "openai/tiktoken",
+        "url": "https://github.com/openai/tiktoken"
+      },
+      {
+        "type": "GitHub",
+        "label": "google/sentencepiece",
+        "url": "https://github.com/google/sentencepiece"
+      },
+      {
+        "type": "Documentation",
+        "label": "OpenAI Tokenizer",
+        "url": "https://platform.openai.com/tokenizer"
+      }
+    ]
+  },
+  {
+    "slug": "convolutional-neural-network",
+    "name": "CNN",
+    "aliases": [
+      "Convolutional Neural Network",
+      "畳み込みニューラルネットワーク"
+    ],
+    "tagline": "畳み込み演算により画像などグリッド状データの局所的な特徴を検出するニューラルネットワーク",
+    "category": "アーキテクチャ",
+    "tags": [
+      "深層学習",
+      "画像認識"
+    ],
+    "summary": "CNNは、画像などグリッド状のデータから局所的な特徴を検出するために設計されたニューラルネットワーク。\n畳み込み層で入力上をスライドさせるフィルタ(カーネル)を用いてエッジやテクスチャなどの局所パターンを検出し、層を重ねるごとに形状や物体といったより抽象的な特徴を学習する。\nプーリング層による空間サイズの縮小と組み合わせることで、画像内の位置変化にある程度頑健な特徴表現を獲得できる。\n画像分類・物体検出・セグメンテーションなど、コンピュータビジョンタスクの標準的なアーキテクチャとして長年利用されてきた。",
+    "background": "全結合層のみのネットワークは、画像のような高次元入力に対してパラメータ数が爆発し、空間的な位置関係も考慮できないという課題があった。\nCNNは局所受容野と重み共有により、少ないパラメータで画像の局所的な特徴を効率よく学習できるように設計された。",
+    "history": "1980年代: Fukushimaのネオコグニトロンなど、畳み込み構造の原型が提案される。\n1998年: LeCunらがLeNet-5を発表し、手書き文字認識に応用。\n2012年: AlexNetがImageNet画像分類コンペティションで圧勝し、深層学習ブームの契機となる。\n2014-2015年: VGG・GoogLeNet・ResNetなど、より深いCNNアーキテクチャが登場。\n2020年代: Vision Transformer(ViT)の台頭により、一部の画像タスクではTransformer系アーキテクチャへの置き換えが進む。",
+    "architecture": "畳み込み層(Convolution)・プーリング層(Pooling)・全結合層を組み合わせて構成される。\n畳み込み層は学習可能な小さいフィルタを入力上でスライドさせながら内積を計算し、特徴マップを生成する。\nプーリング層は特徴マップの空間サイズを縮小し、位置ずれに対する頑健性と計算量の削減を図る。\n層を重ねるごとに受容野が広がり、低レベルのエッジから高レベルの物体概念まで階層的に特徴を学習する。",
+    "workflow": "画像入力 → 畳み込み層で局所特徴を抽出 → 活性化関数(ReLU等)を適用 → プーリング層で空間サイズを縮小 → 畳み込み・プーリングを複数回繰り返す → 全結合層で特徴を統合 → 出力層(分類等)。",
+    "codeExamples": [
+      {
+        "title": "PyTorchでの基本的なCNN層",
+        "language": "python",
+        "code": "import torch.nn as nn\n\nclass SimpleCNN(nn.Module):\n    def __init__(self):\n        super().__init__()\n        self.conv1 = nn.Conv2d(3, 16, kernel_size=3, padding=1)\n        self.pool = nn.MaxPool2d(2)\n\n    def forward(self, x):\n        return self.pool(torch.relu(self.conv1(x)))"
+      }
+    ],
+    "advantages": [
+      "重み共有と局所受容野により、全結合層よりパラメータ数を大幅に削減できる",
+      "画像内の位置変化にある程度頑健な特徴を学習できる",
+      "層を重ねることで低レベルから高レベルまで階層的な特徴表現を獲得できる"
+    ],
+    "disadvantages": [
+      "局所的な畳み込みのみでは、画像全体の大域的な依存関係を捉えにくい",
+      "回転やスケール変化には頑健ではなく、データ拡張などの工夫が必要になる",
+      "大規模データセットではVision Transformerなど代替アーキテクチャに性能で劣る場合がある"
+    ],
+    "comparisons": [
+      {
+        "slug": "neural-network",
+        "note": "CNNはニューラルネットワークの一種で、画像などグリッド状データの処理に特化したアーキテクチャ"
+      },
+      {
+        "slug": "recurrent-neural-network",
+        "note": "CNNは空間的な局所パターンを、RNNは時間的な系列パターンを扱うのに適している"
+      },
+      {
+        "slug": "transformer",
+        "note": "Vision Transformerは、CNNの畳み込みに代わり自己注意機構で画像を扱うアーキテクチャ"
+      }
+    ],
+    "relatedTerms": [
+      "neural-network",
+      "recurrent-neural-network",
+      "transformer",
+      "deep-learning"
+    ],
+    "faq": [
+      {
+        "question": "CNNと全結合ネットワークの違いは？",
+        "answer": "全結合層は各出力が入力全体と結合するのに対し、CNNは局所領域のみを見るフィルタを画像全体で共有することで、パラメータ数を抑えつつ位置変化に頑健な特徴を学習する。"
+      },
+      {
+        "question": "CNNは今も使われている？",
+        "answer": "Vision Transformerなど新しいアーキテクチャの台頭はあるが、計算コストの低さや画像に適した帰納バイアスの強さから、リアルタイム処理や小規模データセットでは今も広く使われている。"
+      }
+    ],
+    "references": [
+      {
+        "type": "Research Paper",
+        "label": "ImageNet Classification with Deep Convolutional Neural Networks",
+        "url": "https://papers.nips.cc/paper_files/paper/2012/hash/c399862d3b9d6b76c8436e924a68c45b-Abstract.html"
+      },
+      {
+        "type": "Documentation",
+        "label": "PyTorch: torch.nn.Conv2d",
+        "url": "https://pytorch.org/docs/stable/generated/torch.nn.Conv2d.html"
+      }
+    ]
+  },
+  {
+    "slug": "long-short-term-memory",
+    "name": "LSTM",
+    "aliases": [
+      "Long Short-Term Memory",
+      "長短期記憶"
+    ],
+    "tagline": "ゲート機構とセル状態により長期依存の学習を改善したゲート付き再帰型ニューラルネットワーク",
+    "category": "アーキテクチャ",
+    "tags": [
+      "深層学習",
+      "系列モデリング"
+    ],
+    "summary": "LSTMは、単純なRNNが抱える長期依存の学習困難(勾配消失・爆発)を緩和するために考案されたゲート付き再帰型ニューラルネットワーク。\n入力ゲート・忘却ゲート・出力ゲートという3つのゲート機構と、情報を長期間保持するセル状態(cell state)を導入することで、必要な情報を保持しつつ不要な情報を選択的に忘れることができる。\nこれにより、単純なRNNでは困難だった、系列内の遠く離れた要素間の依存関係も学習しやすくなる。\n機械翻訳・音声認識・時系列予測など、Transformer登場以前の系列モデリングタスクで広く使われた代表的なアーキテクチャ。",
+    "background": "単純なRNNは、誤差逆伝播(BPTT)の際に勾配がタイムステップを経るごとに指数的に減衰・増大する勾配消失・爆発問題を抱え、長い系列の学習が困難だった。\nLSTMは、勾配が減衰しにくい経路であるセル状態と、情報の出入りを制御するゲート機構を導入することで、この問題を緩和するために考案された。",
+    "history": "1997年: HochreiterとSchmidhuberがLSTMを提案。\n2000年代: 忘却ゲートの追加など構造の改良が進む。\n2014年: LSTMを簡略化したGRU(Gated Recurrent Unit)が提案される。\n2014-2016年頃: 機械翻訳・音声認識でLSTMベースのSeq2Seqモデルが主流になる。\n2017年以降: Transformerの登場により、多くのNLPタスクでLSTMからの置き換えが進む。",
+    "architecture": "各タイムステップで、忘却ゲートがセル状態から不要な情報を削除する割合を決定し、入力ゲートが新しい情報をどれだけセル状態に加えるかを決定する。\nこれらによって更新されたセル状態と出力ゲートを組み合わせて、そのタイムステップの隠れ状態(出力)を生成する。\n各ゲートはシグモイド関数で0〜1の値を出力し、情報の通過量を連続的に制御する。",
+    "workflow": "系列データを1タイムステップずつ入力 → 忘却ゲート・入力ゲートでセル状態を更新 → 出力ゲートで隠れ状態を計算 → 次のタイムステップへセル状態と隠れ状態を伝播 → BPTT(Backpropagation Through Time)により誤差を逆伝播して重みを更新。",
+    "codeExamples": [
+      {
+        "title": "PyTorchでの基本的なLSTM層",
+        "language": "python",
+        "code": "import torch.nn as nn\n\nlstm = nn.LSTM(input_size=10, hidden_size=20, batch_first=True)\noutput, (hidden, cell) = lstm(input_sequence)"
+      }
+    ],
+    "advantages": [
+      "ゲート機構により、単純なRNNより長期の依存関係を学習しやすい",
+      "忘却ゲートで不要な情報を選択的に破棄でき、勾配消失を緩和できる",
+      "可変長の系列データを扱える"
+    ],
+    "disadvantages": [
+      "単純なRNNよりゲートの分だけパラメータ数・計算量が増える",
+      "逐次処理のため、学習・推論をTransformerほど並列化できない",
+      "非常に長い系列では、依然として長距離依存の学習が難しい場合がある"
+    ],
+    "comparisons": [
+      {
+        "slug": "recurrent-neural-network",
+        "note": "LSTMはRNNの一種で、ゲート機構とセル状態により長期依存の学習を改善したアーキテクチャ"
+      },
+      {
+        "slug": "transformer",
+        "note": "TransformerはLSTMの逐次処理によるボトルネックを解消し、並列学習を可能にしたアーキテクチャ"
+      },
+      {
+        "slug": "neural-network",
+        "note": "LSTMはニューラルネットワークの一種で、系列データの長期依存を扱うためにゲート機構を追加したもの"
+      }
+    ],
+    "relatedTerms": [
+      "recurrent-neural-network",
+      "transformer",
+      "neural-network"
+    ],
+    "faq": [
+      {
+        "question": "LSTMとRNNの違いは？",
+        "answer": "LSTMは単純なRNNにゲート機構とセル状態を追加した拡張版。\n長期依存の学習困難(勾配消失)を緩和するよう設計されている。"
+      },
+      {
+        "question": "LSTMは今も使われている？",
+        "answer": "Transformerの登場以降、主要タスクでの採用は減ったが、計算資源が限られる環境や、逐次的なオンライン推論が必要な時系列予測などでは今も使われている。"
+      }
+    ],
+    "references": [
+      {
+        "type": "Research Paper",
+        "label": "Long Short-Term Memory (Hochreiter & Schmidhuber, 1997)",
+        "url": "https://www.bioinf.jku.at/publications/older/2604.pdf"
+      },
+      {
+        "type": "Documentation",
+        "label": "PyTorch: torch.nn.LSTM",
+        "url": "https://pytorch.org/docs/stable/generated/torch.nn.LSTM.html"
+      }
+    ]
+  },
+  {
+    "slug": "lora",
+    "name": "LoRA",
+    "aliases": [
+      "Low-Rank Adaptation"
+    ],
+    "tagline": "低ランク行列の追加学習により、事前学習済みモデルを効率的にファインチューニングする手法",
+    "category": "技術",
+    "tags": [
+      "ファインチューニング",
+      "PEFT"
+    ],
+    "summary": "LoRA(Low-Rank Adaptation)は、大規模言語モデルなど事前学習済みモデルを効率的にファインチューニングするためのパラメータ効率的手法(PEFT)。\n元の重み行列を凍結したまま、各層に小さな低ランク行列のペア(A・B)を追加し、その差分のみを学習することで、フルファインチューニングよりはるかに少ないパラメータ数・GPUメモリで特定タスクへの適応を実現する。\n学習後は低ランク行列の積を元の重みに加算するだけでよく、推論時に追加の遅延を発生させずに元のモデルへマージできる。\n複数のLoRAアダプタを用途ごとに用意し、必要に応じて切り替えて使う運用も可能。",
+    "background": "フルファインチューニングは、モデルの全パラメータを更新するため、大規模モデルほど必要なGPUメモリと計算コストが増大するという課題があった。\nLoRAは、ファインチューニングによる重みの変化が本質的に低いランクで近似できるという仮定に基づき、更新分を低ランク行列で表現することでパラメータ数を大幅に削減するために考案された。",
+    "history": "2021年: Microsoftの研究チームがLoRAを提案する論文を発表。\n2022-2023年: Hugging Face PEFTライブラリなどを通じ、LLMのファインチューニング手法として急速に普及。\n2023年: 量子化と組み合わせたQLoRAが提案され、さらに少ないGPUメモリで大規模モデルのファインチューニングが可能に。",
+    "architecture": "事前学習済みの重み行列W(d×k)を凍結し、その更新分ΔWを、より低い次元rを持つ2つの行列A(r×k)とB(d×r)の積BAとして近似する。\n学習可能なパラメータはA・Bのみで、rはハイパーパラメータ(ランク)として数〜数十程度に設定されることが多い。\n順伝播時の出力はWx + BAxとして計算される。",
+    "workflow": "ベースモデルの重みを凍結 → 対象層(Attentionのquery/value射影等)にLoRAアダプタ(A・B行列)を追加 → タスク固有データでA・Bのみを学習 → 学習後、必要に応じてBAを元の重みWにマージするか、アダプタとして分離したまま保持。",
+    "codeExamples": [
+      {
+        "title": "PEFTライブラリでのLoRA適用",
+        "language": "python",
+        "code": "from peft import LoraConfig, get_peft_model\n\nconfig = LoraConfig(r=8, lora_alpha=16, target_modules=[\"q_proj\", \"v_proj\"])\nmodel = get_peft_model(base_model, config)\nmodel.print_trainable_parameters()"
+      }
+    ],
+    "advantages": [
+      "フルファインチューニングと比べ、学習対象パラメータ数とGPUメモリ使用量を大幅に削減できる",
+      "元の重みを凍結するため、複数タスク向けのLoRAアダプタを軽量に切り替えて運用できる",
+      "推論時には差分を元の重みにマージでき、追加の遅延を発生させない"
+    ],
+    "disadvantages": [
+      "ランクrの設定が性能とパラメータ効率のトレードオフに影響し、タスクに応じた調整が必要",
+      "低ランク近似のため、フルファインチューニングと比べて表現力が制限される場合がある",
+      "大きなドメインシフトを伴うタスクでは、フルファインチューニングに性能面で劣ることがある"
+    ],
+    "comparisons": [
+      {
+        "slug": "fine-tuning",
+        "note": "LoRAはフルファインチューニングよりパラメータ効率的な代替手法の代表例"
+      },
+      {
+        "slug": "large-language-model",
+        "note": "LoRAは主にLLMを少ない計算資源で特定タスクへ適応させるために使われる"
+      }
+    ],
+    "relatedTerms": [
+      "fine-tuning",
+      "large-language-model",
+      "transformer"
+    ],
+    "faq": [
+      {
+        "question": "LoRAとフルファインチューニングの違いは？",
+        "answer": "フルファインチューニングは全パラメータを更新するのに対し、LoRAは元の重みを凍結し、追加した低ランク行列のみを学習する。\n学習パラメータ数とGPUメモリを大幅に削減できる一方、表現力はやや制限される。"
+      },
+      {
+        "question": "QLoRAとは？",
+        "answer": "モデルの重みを4bit等に量子化した状態でLoRAによる学習を行う手法。\nGPUメモリ使用量をさらに削減し、単一GPUでも大規模モデルのファインチューニングを可能にする。"
+      }
+    ],
+    "references": [
+      {
+        "type": "Research Paper",
+        "label": "LoRA: Low-Rank Adaptation of Large Language Models",
+        "url": "https://arxiv.org/abs/2106.09685"
+      },
+      {
+        "type": "GitHub",
+        "label": "microsoft/LoRA",
+        "url": "https://github.com/microsoft/LoRA"
+      },
+      {
+        "type": "GitHub",
+        "label": "Hugging Face PEFT",
+        "url": "https://github.com/huggingface/peft"
+      }
+    ]
+  },
+  {
+    "slug": "bert",
+    "name": "BERT",
+    "aliases": [
+      "Bidirectional Encoder Representations from Transformers"
+    ],
+    "tagline": "文中の前後の文脈を双方向に参照して単語表現を学習する、Transformerエンコーダベースの事前学習済み言語モデル",
+    "category": "モデル",
+    "tags": [
+      "NLP",
+      "Transformer",
+      "事前学習"
+    ],
+    "summary": "BERTは、Googleが開発したTransformerのエンコーダ部分のみを用いた事前学習済み言語モデル。\n文中の各単語を、その前後(双方向)の文脈を同時に参照して表現する点が特徴で、左から右へ一方向に処理する従来の言語モデルと異なり、文全体の文脈を踏まえた単語表現を獲得できる。\nマスク化言語モデル(Masked Language Model, MLM)と次文予測(Next Sentence Prediction, NSP)という2つの事前学習タスクにより、大規模な生テキストコーパスからラベルなしで汎用的な言語表現を学習し、その後分類・固有表現認識・質問応答など個々のタスクへファインチューニングして利用する。\nGPTなど自己回帰型のデコーダモデルとは異なり、テキスト生成ではなく文の理解(自然言語理解, NLU)タスクに強みを持つ。",
+    "background": "従来の単語埋め込み(word2vec等)は文脈に依存しない固定表現しか持たず、ELMoなどの文脈依存表現も片方向または浅い双方向処理に留まっていた。\nBERTは、Transformerの自己注意機構を用いることで、文中の全単語を同時に双方向に参照した文脈依存表現を、大規模な事前学習によって獲得できるように設計された。",
+    "history": "2018年: Googleの研究チームがBERTを発表し、複数のNLPベンチマーク(GLUE等)で当時の最高性能を達成。\n2019年: RoBERTa・ALBERT・DistilBERTなど、学習方法や構造を改良した派生モデルが多数登場。\n2019-2020年代: 検索エンジンのクエリ理解などプロダクション用途にも導入される。\n2020年代以降: GPT系の生成モデルの台頭により注目度は相対的に下がったが、分類・検索・埋め込み生成など理解系タスクの基盤モデルとして今も広く使われる。",
+    "architecture": "Transformerのエンコーダ層のみを積み重ねた構造。\n入力トークン列の埋め込みに位置埋め込みとセグメント埋め込みを加えたものを入力とし、複数層の自己注意機構とフィードフォワード層を通じて各トークンの文脈依存表現を計算する。\n事前学習では、入力トークンの一部をランダムにマスクしてその単語を予測するMLMと、2文が連続するかを判定するNSPを学習目標とする。",
+    "workflow": "大規模テキストコーパスでMLM・NSPにより事前学習 → 分類・固有表現認識・質問応答等のラベル付きデータでタスク固有の出力層を追加してファインチューニング → 推論。",
+    "codeExamples": [
+      {
+        "title": "Hugging Face transformersでのBERT分類",
+        "language": "python",
+        "code": "from transformers import AutoTokenizer, AutoModelForSequenceClassification\n\ntokenizer = AutoTokenizer.from_pretrained(\"bert-base-uncased\")\nmodel = AutoModelForSequenceClassification.from_pretrained(\"bert-base-uncased\")\ninputs = tokenizer(\"BERT understands context.\", return_tensors=\"pt\")\noutputs = model(**inputs)"
+      }
+    ],
+    "advantages": [
+      "双方向の文脈を同時に参照するため、文の意味理解を要するタスクで高い性能を発揮する",
+      "事前学習済みモデルをファインチューニングするだけで、多様なNLUタスクに転用できる",
+      "ラベルなしの大規模テキストから汎用的な言語表現を学習できる"
+    ],
+    "disadvantages": [
+      "エンコーダのみの構造のため、自己回帰的な文章生成タスクには向かない",
+      "入力系列長(通常512トークン程度)に制約があり、長文の処理には工夫が必要",
+      "大規模モデルでは推論時の計算コストが高い"
+    ],
+    "comparisons": [
+      {
+        "slug": "large-language-model",
+        "note": "BERTは双方向エンコーダによる言語理解に特化し、GPT系の自己回帰型LLMは生成に強みを持つ"
+      },
+      {
+        "slug": "transformer",
+        "note": "BERTはTransformerのエンコーダ部分のみを積み重ねたアーキテクチャ"
+      },
+      {
+        "slug": "fine-tuning",
+        "note": "BERTは事前学習後、タスク固有データでファインチューニングして使うのが基本的な利用形態"
+      }
+    ],
+    "relatedTerms": [
+      "transformer",
+      "large-language-model",
+      "fine-tuning",
+      "attention",
+      "nlp"
+    ],
+    "faq": [
+      {
+        "question": "BERTとGPTの違いは？",
+        "answer": "BERTはTransformerのエンコーダのみを使い、双方向文脈を参照して文の理解に強みを持つ。\nGPTはデコーダのみを使い、左から右への自己回帰生成に強みを持つ。\n用途に応じて使い分けられる。"
+      },
+      {
+        "question": "BERTは今も使われている？",
+        "answer": "生成タスクでは自己回帰型LLMが主流だが、テキスト分類・検索用の埋め込み生成・固有表現認識など理解系タスクの基盤モデルとして、軽量な派生モデル(DistilBERT等)も含め今も広く使われている。"
+      }
+    ],
+    "references": [
+      {
+        "type": "Research Paper",
+        "label": "BERT: Pre-training of Deep Bidirectional Transformers for Language Understanding",
+        "url": "https://arxiv.org/abs/1810.04805"
+      },
+      {
+        "type": "GitHub",
+        "label": "google-research/bert",
+        "url": "https://github.com/google-research/bert"
+      },
+      {
+        "type": "Documentation",
+        "label": "Hugging Face: BERT",
+        "url": "https://huggingface.co/docs/transformers/model_doc/bert"
       }
     ]
   }
