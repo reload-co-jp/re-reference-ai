@@ -64,6 +64,21 @@ export const getTermBySlug = (slug: string): Term | undefined =>
 export const getTermsByCategory = (category: string): Term[] =>
   terms.filter((term) => term.category === category)
 
+const CATEGORY_SLUGS: Record<string, string> = {
+  モデル: "models",
+  アーキテクチャ: "architectures",
+  技術: "techniques",
+  エージェント: "agents",
+  インフラ: "infrastructure",
+  評価: "evaluation",
+}
+
+export const getCategorySlug = (category: string): string =>
+  CATEGORY_SLUGS[category] ?? category
+
+export const getCategoryBySlug = (slug: string): string | undefined =>
+  categories.find((category) => getCategorySlug(category) === slug)
+
 export const getRelatedTerms = (term: Term): Term[] =>
   (term.relatedTerms ?? [])
     .map((slug) => getTermBySlug(slug))

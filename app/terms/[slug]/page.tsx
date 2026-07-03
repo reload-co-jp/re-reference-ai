@@ -2,10 +2,11 @@ import { Metadata } from "next"
 import { FC } from "react"
 import Link from "next/link"
 import { notFound } from "next/navigation"
+import { Breadcrumb } from "components/elements/breadcrumb"
 import { Badge, Container, Section, SectionTitle } from "components/elements/layout"
 import { toJsonLd } from "lib/json-ld"
-import { SITE_NAME, SITE_URL } from "lib/site"
-import { getRelatedTerms, getTermBySlug, Term, terms } from "lib/terms"
+import { SITE_NAME, SITE_OG_IMAGE_URL, SITE_URL } from "lib/site"
+import { getCategorySlug, getRelatedTerms, getTermBySlug, Term, terms } from "lib/terms"
 
 export const dynamicParams = false
 
@@ -29,13 +30,14 @@ export const generateMetadata = async ({ params }: Props): Promise<Metadata> => 
     title,
     description,
     alternates: { canonical: url },
-    openGraph: { title, description, type: "article", url },
-    twitter: { title, description },
+    openGraph: { title, description, type: "article", url, images: [SITE_OG_IMAGE_URL] },
+    twitter: { title, description, images: [SITE_OG_IMAGE_URL] },
   }
 }
 
 const buildJsonLd = (term: Term, relatedTerms: Term[]) => {
   const url = `${SITE_URL}/terms/${term.slug}/`
+  const categoryUrl = `${SITE_URL}/categories/${getCategorySlug(term.category)}/`
   const description = term.summary ?? term.tagline
 
   const definedTerm = {
@@ -76,7 +78,7 @@ const buildJsonLd = (term: Term, relatedTerms: Term[]) => {
     "@type": "BreadcrumbList",
     itemListElement: [
       { "@type": "ListItem", position: 1, name: SITE_NAME, item: `${SITE_URL}/` },
-      { "@type": "ListItem", position: 2, name: term.category, item: `${SITE_URL}/#${term.category}` },
+      { "@type": "ListItem", position: 2, name: term.category, item: categoryUrl },
       { "@type": "ListItem", position: 3, name: term.name, item: url },
     ],
   }
@@ -118,6 +120,13 @@ const TermPage: FC<Props> = async ({ params }) => {
           type="application/ld+json"
         />
       ))}
+      <Breadcrumb
+        items={[
+          { href: "/", name: SITE_NAME },
+          { href: `/categories/${getCategorySlug(term.category)}/`, name: term.category },
+          { name: term.name },
+        ]}
+      />
       {/* Hero */}
       <Section
         style={{

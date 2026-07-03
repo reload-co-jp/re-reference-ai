@@ -1,11 +1,11 @@
 import { ComponentProps, FC } from "react"
 
-export const Title: FC<ComponentProps<"h1">> = ({
+export const Title: FC<ComponentProps<"p">> = ({
   style,
   children,
   ...props
 }) => (
-  <h1
+  <p
     style={{
       fontSize: "1.125rem",
       letterSpacing: "0.04em",
@@ -15,7 +15,7 @@ export const Title: FC<ComponentProps<"h1">> = ({
     {...props}
   >
     {children}
-  </h1>
+  </p>
 )
 
 export const Container: FC<ComponentProps<"div">> = ({
