@@ -30,7 +30,7 @@ export const generateMetadata = async ({ params }: Props): Promise<Metadata> => 
     jaAlias && term.name.length + jaAlias.length <= 22
       ? `${term.name}（${jaAlias}）とは？意味・仕組みを解説`
       : `${term.name}とは？意味・仕組みを解説`
-  const description = truncate(term.summary ?? term.tagline, 120)
+  const description = truncate(term.plainSummary ?? term.summary ?? term.tagline, 120)
   const url = `${SITE_URL}/terms/${term.slug}/`
 
   return {
@@ -45,7 +45,7 @@ export const generateMetadata = async ({ params }: Props): Promise<Metadata> => 
 const buildJsonLd = (term: Term, relatedTerms: Term[]) => {
   const url = `${SITE_URL}/terms/${term.slug}/`
   const categoryUrl = `${SITE_URL}/categories/${getCategorySlug(term.category)}/`
-  const description = term.summary ?? term.tagline
+  const description = term.plainSummary ?? term.summary ?? term.tagline
 
   const definedTerm = {
     "@context": "https://schema.org",
@@ -175,6 +175,14 @@ const TermPage: FC<Props> = async ({ params }) => {
           ))}
         </div>
       </Section>
+
+      {/* Plain summary */}
+      {term.plainSummary && (
+        <Section style={{ marginTop: "3rem" }}>
+          <SectionTitle>ひとことで言うと</SectionTitle>
+          <p style={{ whiteSpace: "pre-line" }}>{term.plainSummary}</p>
+        </Section>
+      )}
 
       {/* Summary */}
       {term.summary && (

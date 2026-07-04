@@ -37,6 +37,7 @@ export type Term = {
   tagline: string
   category: string
   tags: string[]
+  plainSummary?: string
   summary?: string
   background?: string
   history?: string
