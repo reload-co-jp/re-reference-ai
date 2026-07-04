@@ -4,7 +4,7 @@ import Link from "next/link"
 import { GoogleAnalytics } from "components/analytics/google-analytics"
 import { Title } from "components/elements/layout"
 import { toJsonLd } from "lib/json-ld"
-import { SITE_DESCRIPTION, SITE_NAME, SITE_TAGLINE, SITE_URL } from "lib/site"
+import { SITE_DESCRIPTION, SITE_NAME, SITE_TAGLINE_JA, SITE_URL } from "lib/site"
 import "./reset.css"
 
 const display = Playfair_Display({
@@ -21,7 +21,7 @@ const body = Inter({
 export const metadata: Metadata = {
   metadataBase: new URL(SITE_URL),
   title: {
-    default: `${SITE_NAME} (RRA) — ${SITE_TAGLINE}`,
+    default: `${SITE_NAME} (RRA) — ${SITE_TAGLINE_JA}・技術リファレンス`,
     template: `%s | ${SITE_NAME}`,
   },
   description: SITE_DESCRIPTION,
@@ -29,13 +29,13 @@ export const metadata: Metadata = {
     type: "website",
     locale: "ja_JP",
     siteName: SITE_NAME,
-    title: `${SITE_NAME} — ${SITE_TAGLINE}`,
+    title: `${SITE_NAME} — ${SITE_TAGLINE_JA}`,
     description: SITE_DESCRIPTION,
     url: SITE_URL,
   },
   twitter: {
     card: "summary_large_image",
-    title: `${SITE_NAME} — ${SITE_TAGLINE}`,
+    title: `${SITE_NAME} — ${SITE_TAGLINE_JA}`,
     description: SITE_DESCRIPTION,
   },
   alternates: {

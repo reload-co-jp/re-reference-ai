@@ -23,8 +23,14 @@ export const generateMetadata = async ({ params }: Props): Promise<Metadata> => 
     return {}
   }
 
-  const title = term.name
-  const description = truncate(term.summary ?? term.tagline)
+  const jaAlias = term.aliases?.find(
+    (alias) => alias !== term.name && /[ぁ-んァ-ヶ一-龠]/.test(alias),
+  )
+  const title =
+    jaAlias && term.name.length + jaAlias.length <= 22
+      ? `${term.name}（${jaAlias}）とは？意味・仕組みを解説`
+      : `${term.name}とは？意味・仕組みを解説`
+  const description = truncate(term.summary ?? term.tagline, 120)
   const url = `${SITE_URL}/terms/${term.slug}/`
 
   return {
@@ -136,7 +142,7 @@ const TermPage: FC<Props> = async ({ params }) => {
         }}
       >
         <Badge style={{ marginBottom: "1rem" }}>{term.category}</Badge>
-        <h1 style={{ fontSize: "2.25rem", margin: 0 }}>{term.name}</h1>
+        <h1 style={{ fontSize: "2.25rem", margin: 0 }}>{term.name}とは</h1>
         {term.aliases && term.aliases.length > 0 && (
           <p
             style={{
