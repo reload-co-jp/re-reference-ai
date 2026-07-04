@@ -1,6 +1,7 @@
 import { Metadata } from "next"
 import { Inter, Playfair_Display } from "next/font/google"
 import Link from "next/link"
+import { GoogleAnalytics } from "components/analytics/google-analytics"
 import { Title } from "components/elements/layout"
 import { toJsonLd } from "lib/json-ld"
 import { SITE_DESCRIPTION, SITE_NAME, SITE_TAGLINE, SITE_URL } from "lib/site"
@@ -60,6 +61,7 @@ const RootLayout = ({ children }: { children: React.ReactNode }) => {
   return (
     <html className={`${display.variable} ${body.variable}`} lang="ja">
       <body>
+        <GoogleAnalytics />
         <script
           dangerouslySetInnerHTML={{ __html: toJsonLd(websiteJsonLd) }}
           type="application/ld+json"
