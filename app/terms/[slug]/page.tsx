@@ -6,7 +6,8 @@ import { Breadcrumb } from "components/elements/breadcrumb"
 import { Badge, Container, Section, SectionTitle } from "components/elements/layout"
 import { toJsonLd } from "lib/json-ld"
 import { SITE_NAME, SITE_OG_IMAGE_URL, SITE_URL } from "lib/site"
-import { getCategorySlug, getRelatedTerms, getTermBySlug, Term, terms } from "lib/terms"
+import { getCategorySlug, getRelatedTerms, getTagSlug, getTermBySlug, Term, terms } from "lib/terms"
+import { truncate } from "lib/text"
 
 export const dynamicParams = false
 
@@ -23,7 +24,7 @@ export const generateMetadata = async ({ params }: Props): Promise<Metadata> => 
   }
 
   const title = term.name
-  const description = term.summary ?? term.tagline
+  const description = truncate(term.summary ?? term.tagline)
   const url = `${SITE_URL}/terms/${term.slug}/`
 
   return {
@@ -158,7 +159,13 @@ const TermPage: FC<Props> = async ({ params }) => {
         </p>
         <div style={{ display: "flex", flexWrap: "wrap", gap: ".375rem", marginTop: "1.25rem" }}>
           {term.tags.map((tag) => (
-            <Badge key={tag}>{tag}</Badge>
+            <Link
+              key={tag}
+              href={`/tags/${getTagSlug(tag)}/`}
+              style={{ color: "inherit", textDecoration: "none" }}
+            >
+              <Badge>{tag}</Badge>
+            </Link>
           ))}
         </div>
       </Section>
