@@ -53,6 +53,7 @@ export type Term = {
 }
 
 import categoriesData from "data/categories.json"
+import tagDescriptionsData from "data/tag-descriptions.json"
 import termsData from "data/terms.json"
 
 export const categories = categoriesData as string[]
@@ -191,3 +192,8 @@ export const getTagBySlug = (slug: string): string | undefined =>
 
 export const getTermsByTag = (tag: string): Term[] =>
   terms.filter((term) => term.tags.includes(tag))
+
+const tagDescriptions = tagDescriptionsData as Record<string, string>
+
+export const getTagDescription = (tag: string): string | undefined =>
+  tagDescriptions[tag]

@@ -6,7 +6,7 @@ import { Container, Section, SectionTitle } from "components/elements/layout"
 import { TermCard } from "components/term/term-card"
 import { toJsonLd } from "lib/json-ld"
 import { SITE_NAME, SITE_OG_IMAGE_URL, SITE_URL } from "lib/site"
-import { getAllTags, getTagBySlug, getTagSlug, getTermsByTag } from "lib/terms"
+import { getAllTags, getTagBySlug, getTagDescription, getTagSlug, getTermsByTag } from "lib/terms"
 
 const MIN_TERMS_FOR_INDEX = 3
 
@@ -27,7 +27,9 @@ export const generateMetadata = async ({ params }: Props): Promise<Metadata> => 
 
   const termCount = getTermsByTag(tag).length
   const title = `${tag}の用語一覧`
-  const description = `${tag}に関連するAI・機械学習用語の一覧。${SITE_NAME}が提供する技術リファレンス。`
+  const description =
+    getTagDescription(tag) ??
+    `${tag}に関連するAI・機械学習用語の一覧。${SITE_NAME}が提供する技術リファレンス。`
   const url = `${SITE_URL}/tags/${slug}/`
 
   return {
@@ -49,6 +51,7 @@ const TagPage: FC<Props> = async ({ params }) => {
   }
 
   const matchedTerms = getTermsByTag(tag)
+  const tagDescription = getTagDescription(tag)
   const url = `${SITE_URL}/tags/${slug}/`
 
   const breadcrumbList = {
@@ -72,6 +75,9 @@ const TagPage: FC<Props> = async ({ params }) => {
         <p style={{ color: "var(--color-text-muted)", fontSize: "1.1rem", marginTop: ".75rem" }}>
           {tag}に関連する用語（{matchedTerms.length}件）
         </p>
+        {tagDescription && (
+          <p style={{ fontSize: "1rem", lineHeight: 1.8, marginTop: "1rem" }}>{tagDescription}</p>
+        )}
       </Section>
 
       <Section>
