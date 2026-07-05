@@ -5,7 +5,7 @@ import { notFound } from "next/navigation"
 import { Breadcrumb } from "components/elements/breadcrumb"
 import { Badge, Container, Section, SectionTitle } from "components/elements/layout"
 import { toJsonLd } from "lib/json-ld"
-import { SITE_NAME, SITE_OG_IMAGE_URL, SITE_URL } from "lib/site"
+import { SITE_NAME, SITE_URL } from "lib/site"
 import { getCategorySlug, getRelatedTerms, getTagSlug, getTermBySlug, Term, terms } from "lib/terms"
 import { truncate } from "lib/text"
 
@@ -32,13 +32,14 @@ export const generateMetadata = async ({ params }: Props): Promise<Metadata> => 
       : `${term.name}とは？意味・仕組みを解説`
   const description = truncate(term.plainSummary ?? term.summary ?? term.tagline, 120)
   const url = `${SITE_URL}/terms/${term.slug}/`
+  const image = `${SITE_URL}/terms/${term.slug}/opengraph-image`
 
   return {
     title,
     description,
     alternates: { canonical: url },
-    openGraph: { title, description, type: "article", url, images: [SITE_OG_IMAGE_URL] },
-    twitter: { title, description, images: [SITE_OG_IMAGE_URL] },
+    openGraph: { title, description, type: "article", url, images: [image] },
+    twitter: { title, description, images: [image] },
   }
 }
 
