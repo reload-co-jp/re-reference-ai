@@ -257,7 +257,12 @@
       "seq2seq",
       "rotary-position-embedding",
       "residual-connection",
-      "layer-normalization"
+      "layer-normalization",
+      "flash-attention",
+      "grouped-query-attention",
+      "multi-query-attention",
+      "sliding-window-attention",
+      "mixture-of-depths"
     ],
     "faq": [
       {
@@ -375,7 +380,8 @@
       "haystack",
       "llmo",
       "graphrag",
-      "agentic-rag"
+      "agentic-rag",
+      "retrieval-augmented-fine-tuning"
     ],
     "faq": [
       {
@@ -473,7 +479,8 @@
       "data-poisoning",
       "instruction-tuning",
       "dpo",
-      "catastrophic-forgetting"
+      "catastrophic-forgetting",
+      "retrieval-augmented-fine-tuning"
     ],
     "faq": [
       {
@@ -1233,7 +1240,8 @@
       "large-language-model",
       "retrieval-augmented-generation",
       "llmo",
-      "llm-as-a-judge"
+      "llm-as-a-judge",
+      "truthfulqa"
     ],
     "faq": [
       {
@@ -1485,7 +1493,8 @@
       "transformer",
       "neural-network",
       "gru",
-      "bptt"
+      "bptt",
+      "vanishing-gradient"
     ],
     "faq": [
       {
@@ -2000,7 +2009,8 @@
       "retrieval-augmented-generation",
       "large-language-model",
       "transformer",
-      "word2vec"
+      "word2vec",
+      "cosine-similarity"
     ],
     "faq": [
       {
@@ -2256,7 +2266,9 @@
       "reflection",
       "few-shot",
       "react-prompting",
-      "emergent-abilities"
+      "emergent-abilities",
+      "self-consistency",
+      "tree-of-thought"
     ],
     "faq": [
       {
@@ -2330,7 +2342,9 @@
       "large-language-model",
       "reflection",
       "deepseek",
-      "search-tree"
+      "search-tree",
+      "self-consistency",
+      "tree-of-thought"
     ],
     "faq": [
       {
@@ -2702,7 +2716,8 @@
       "large-language-model",
       "dpo",
       "constitutional-ai",
-      "instruction-tuning"
+      "instruction-tuning",
+      "q-learning"
     ],
     "faq": [
       {
@@ -2779,7 +2794,8 @@
       "quantization",
       "large-language-model",
       "phi",
-      "edge-ai"
+      "edge-ai",
+      "model-extraction"
     ],
     "faq": [
       {
@@ -2975,7 +2991,8 @@
       "large-language-model",
       "mistral",
       "deepseek",
-      "llama"
+      "llama",
+      "mixture-of-depths"
     ],
     "faq": [
       {
@@ -3071,7 +3088,10 @@
       "speculative-decoding",
       "batch-inference",
       "vllm",
-      "prompt-caching"
+      "prompt-caching",
+      "grouped-query-attention",
+      "multi-query-attention",
+      "flash-attention"
     ],
     "faq": [
       {
@@ -3148,7 +3168,10 @@
       "embedding-model",
       "hybrid-search",
       "agent-memory",
-      "graphrag"
+      "graphrag",
+      "hnsw",
+      "faiss",
+      "cosine-similarity"
     ],
     "faq": [
       {
@@ -3213,7 +3236,9 @@
       "vector-database",
       "bert",
       "retrieval-augmented-generation",
-      "word2vec"
+      "word2vec",
+      "faiss",
+      "cosine-similarity"
     ],
     "faq": [
       {
@@ -3392,7 +3417,9 @@
       "embedding",
       "vector-database",
       "retrieval-augmented-generation",
-      "tf-idf"
+      "tf-idf",
+      "hnsw",
+      "cosine-similarity"
     ],
     "faq": [
       {
@@ -3734,7 +3761,10 @@
       "react-prompting",
       "computer-use",
       "human-in-the-loop",
-      "orchestrator"
+      "orchestrator",
+      "sandboxing",
+      "code-interpreter",
+      "browser-use"
     ],
     "faq": [
       {
@@ -3859,7 +3889,9 @@
       "mcp",
       "react-prompting",
       "computer-use",
-      "structured-output"
+      "structured-output",
+      "code-interpreter",
+      "browser-use"
     ],
     "faq": [
       {
@@ -4422,7 +4454,8 @@
     "relatedTerms": [
       "ai-agent",
       "autonomous-agent",
-      "tool-calling"
+      "tool-calling",
+      "prompt-chaining"
     ],
     "faq": [
       {
@@ -5028,7 +5061,12 @@
       "large-language-model",
       "claude",
       "gemini",
-      "reasoning-model"
+      "reasoning-model",
+      "grok",
+      "cohere",
+      "stable-diffusion",
+      "whisper",
+      "clip"
     ],
     "faq": [
       {
@@ -5097,7 +5135,9 @@
       "mcp",
       "bedrock",
       "constitutional-ai",
-      "computer-use"
+      "computer-use",
+      "grok",
+      "cohere"
     ],
     "faq": [
       {
@@ -5170,7 +5210,9 @@
       "context-window",
       "gemma",
       "palm",
-      "multimodal"
+      "multimodal",
+      "grok",
+      "cohere"
     ],
     "faq": [
       {
@@ -5835,7 +5877,8 @@
       "langgraph",
       "haystack",
       "retrieval-augmented-generation",
-      "ai-agent"
+      "ai-agent",
+      "prompt-chaining"
     ],
     "faq": [
       {
@@ -6756,7 +6799,10 @@
       "large-language-model",
       "arena",
       "llm-as-a-judge",
-      "gsm8k"
+      "gsm8k",
+      "truthfulqa",
+      "hellaswag",
+      "mt-bench"
     ],
     "faq": [
       {
@@ -6929,7 +6975,9 @@
     "relatedTerms": [
       "mmlu",
       "large-language-model",
-      "llm-as-a-judge"
+      "llm-as-a-judge",
+      "mt-bench",
+      "elo-rating"
     ],
     "faq": [
       {
@@ -7373,7 +7421,9 @@
     "relatedTerms": [
       "fine-tuning",
       "corpus",
-      "alignment"
+      "alignment",
+      "backdoor-attack",
+      "model-extraction"
     ],
     "faq": [
       {
@@ -7432,7 +7482,9 @@
       "alignment",
       "pii",
       "human-in-the-loop",
-      "constitutional-ai"
+      "constitutional-ai",
+      "watermarking",
+      "sandboxing"
     ],
     "faq": [
       {
@@ -7545,7 +7597,10 @@
     "relatedTerms": [
       "jailbreak",
       "alignment",
-      "guardrails"
+      "guardrails",
+      "model-extraction",
+      "backdoor-attack",
+      "watermarking"
     ],
     "faq": [
       {
@@ -7955,7 +8010,9 @@
       "prompt-engineering",
       "chain-of-thought",
       "fine-tuning",
-      "context-window"
+      "context-window",
+      "zero-shot",
+      "self-consistency"
     ],
     "references": [
       {
@@ -8722,7 +8779,11 @@
     "relatedTerms": [
       "attention",
       "transformer",
-      "rotary-position-embedding"
+      "rotary-position-embedding",
+      "flash-attention",
+      "grouped-query-attention",
+      "multi-query-attention",
+      "sliding-window-attention"
     ]
   },
   {
@@ -9070,7 +9131,8 @@
       }
     ],
     "relatedTerms": [
-      "search-tree"
+      "search-tree",
+      "q-learning"
     ]
   },
   {
@@ -9103,7 +9165,10 @@
     ],
     "relatedTerms": [
       "gemini",
-      "large-language-model"
+      "large-language-model",
+      "whisper",
+      "clip",
+      "grok"
     ]
   },
   {
@@ -9197,7 +9262,9 @@
       "neural-network",
       "deep-learning",
       "loss-function",
-      "bptt"
+      "bptt",
+      "vanishing-gradient",
+      "adam-optimizer"
     ],
     "faq": [
       {
@@ -9263,7 +9330,9 @@
       "loss-function",
       "learning-rate",
       "deep-learning",
-      "neural-network"
+      "neural-network",
+      "adam-optimizer",
+      "vanishing-gradient"
     ],
     "faq": [
       {
@@ -9390,7 +9459,8 @@
       "overfitting",
       "neural-network",
       "deep-learning",
-      "ensemble-learning"
+      "ensemble-learning",
+      "batch-normalization"
     ],
     "faq": [
       {
@@ -10000,7 +10070,8 @@
     "relatedTerms": [
       "gan",
       "variational-autoencoder",
-      "multimodal"
+      "multimodal",
+      "stable-diffusion"
     ],
     "faq": [
       {
@@ -10130,7 +10201,8 @@
     "relatedTerms": [
       "autoencoder",
       "gan",
-      "diffusion-model"
+      "diffusion-model",
+      "stable-diffusion"
     ],
     "faq": [
       {
@@ -10328,7 +10400,8 @@
       "transformer",
       "layer-normalization",
       "convolutional-neural-network",
-      "deep-learning"
+      "deep-learning",
+      "vanishing-gradient"
     ],
     "faq": [
       {
@@ -10393,7 +10466,8 @@
     "relatedTerms": [
       "transformer",
       "residual-connection",
-      "deep-learning"
+      "deep-learning",
+      "batch-normalization"
     ],
     "faq": [
       {
@@ -10652,7 +10726,9 @@
       "fine-tuning",
       "rlhf",
       "dpo",
-      "few-shot"
+      "few-shot",
+      "self-instruct",
+      "zero-shot"
     ],
     "faq": [
       {
@@ -10923,7 +10999,8 @@
     "relatedTerms": [
       "instruction-tuning",
       "knowledge-distillation",
-      "fine-tuning"
+      "fine-tuning",
+      "self-instruct"
     ],
     "faq": [
       {
@@ -10982,7 +11059,8 @@
       "chain-of-thought",
       "ai-agent",
       "tool-calling",
-      "reasoning-model"
+      "reasoning-model",
+      "code-interpreter"
     ],
     "faq": [
       {
@@ -11047,7 +11125,8 @@
       "tool-calling",
       "ai-agent",
       "human-in-the-loop",
-      "claude"
+      "claude",
+      "browser-use"
     ],
     "faq": [
       {
@@ -11112,7 +11191,9 @@
       "autonomous-agent",
       "guardrails",
       "ai-agent",
-      "computer-use"
+      "computer-use",
+      "sandboxing",
+      "browser-use"
     ],
     "faq": [
       {
@@ -11229,7 +11310,10 @@
       "arena",
       "bleu",
       "rouge",
-      "humaneval"
+      "humaneval",
+      "mt-bench",
+      "elo-rating",
+      "truthfulqa"
     ],
     "faq": [
       {
@@ -11349,7 +11433,8 @@
     "relatedTerms": [
       "chain-of-thought",
       "mmlu",
-      "reasoning-model"
+      "reasoning-model",
+      "hellaswag"
     ],
     "faq": [
       {
@@ -11693,6 +11778,2083 @@
         "type": "GitHub",
         "label": "BerriAI/litellm",
         "url": "https://github.com/BerriAI/litellm"
+      }
+    ]
+  },
+  {
+    "slug": "flash-attention",
+    "name": "FlashAttention",
+    "aliases": [],
+    "tagline": "GPUのメモリ階層を意識した計算順序により、通常のAttentionと同じ結果を高速かつ省メモリに計算するアルゴリズム",
+    "category": "アーキテクチャ",
+    "tags": [
+      "Transformer",
+      "推論最適化"
+    ],
+    "plainSummary": "AIの内部計算のやり方だけ工夫して、Attention計算を同じ結果のまま速く軽くする技術。",
+    "summary": "FlashAttentionは、Self-Attentionの計算結果自体は変えずに、GPU内の高速だが容量の小さいメモリ(SRAM)と低速で容量の大きいメモリ(HBM)の間のデータ転送量を減らす計算順序を工夫することで、Attentionの計算を高速化しGPUメモリ使用量も削減するアルゴリズム。\n通常のAttention実装は、系列長の2乗サイズの巨大な中間行列をHBMへ何度も書き出し・読み込みする必要があり、この転送がボトルネックになっていた。\nFlashAttentionは、入力をタイル状の小さなブロックへ分割し、各ブロックの計算をSRAM上だけで完結させ、HBMとのやり取りを最小限に抑える。近似ではなく、数学的に厳密な計算を保ったまま高速化を実現する。\nPyTorchやTransformersなど主要なライブラリに組み込まれており、長いコンテキストを扱うLLMの学習・推論の両方で標準的に使われる最適化技術になっている。",
+    "background": "Self-Attentionの計算量とメモリ使用量は系列長の2乗に比例して増加し、特に長いコンテキストを扱う際にGPUメモリの帯域幅がボトルネックになっていた。\nFlashAttentionは、演算量自体は変えずメモリアクセスパターンを最適化することで、この帯域幅のボトルネックを解消する目的で考案された。",
+    "history": "2022年: DaoらがFlashAttentionを提案する論文「FlashAttention: Fast and Memory-Efficient Exact Attention with IO-Awareness」を発表。\n2023年: 並列化とワークロード分割をさらに改善したFlashAttention-2が発表され、GPU利用効率が向上。\n2024年: FlashAttention-3が発表され、最新世代GPUの性能をさらに引き出す改良が加えられる。",
+    "architecture": "入力のクエリ・キー・バリューを、GPUのSRAMに収まる大きさのブロックへ分割する。\n各ブロックの組み合わせについてAttentionスコアと出力を逐次的に計算し、オンライン方式のソフトマックス正規化を用いて最終的な出力を段階的に積み上げていく。\nこの過程で系列長の2乗サイズの巨大な中間行列をHBMへ書き出す必要がなくなり、メモリ転送量が大きく削減される。",
+    "advantages": [
+      "通常のAttentionと数学的に同一の結果を保ちながら、計算速度とメモリ効率を高められる",
+      "長いコンテキストウィンドウを扱う際のGPUメモリ使用量を抑えられる",
+      "主要な深層学習フレームワークに組み込まれており、モデル側の変更なしに利用できることが多い"
+    ],
+    "disadvantages": [
+      "特定のGPUアーキテクチャ向けに最適化された実装であり、対応ハードウェアの範囲が限られる",
+      "実装が低レベルなカーネル最適化に依存しており、内部の挙動を独自にカスタマイズする難易度は高い",
+      "非常に短い系列では、通常のAttention実装と比べた優位性が小さくなりやすい"
+    ],
+    "comparisons": [
+      {
+        "slug": "self-attention",
+        "note": "FlashAttentionはSelf-Attentionの計算結果を変えず、計算順序とメモリアクセスだけを最適化する実装手法"
+      },
+      {
+        "slug": "kv-cache",
+        "note": "FlashAttentionが計算そのものを高速化するのに対し、KVキャッシュは過去の計算結果を再利用して生成を高速化する"
+      },
+      {
+        "slug": "vllm",
+        "note": "vLLMなどの推論エンジンは、FlashAttentionのようなカーネル最適化を内部で組み合わせて高速な推論を実現する"
+      }
+    ],
+    "relatedTerms": [
+      "self-attention",
+      "transformer",
+      "kv-cache",
+      "vllm"
+    ],
+    "faq": [
+      {
+        "question": "FlashAttentionは精度に影響する？",
+        "answer": "計算順序を変えるだけで、数学的には通常のAttentionと同一の結果を出すよう設計されている。近似手法ではないため、精度への悪影響は基本的にない。"
+      },
+      {
+        "question": "FlashAttentionはどこで使われている？",
+        "answer": "PyTorchの標準Attention実装やHugging Face Transformers、vLLMなど多くのLLM学習・推論フレームワークに組み込まれ、標準的な最適化技術として広く使われている。"
+      }
+    ],
+    "references": [
+      {
+        "type": "Research Paper",
+        "label": "FlashAttention: Fast and Memory-Efficient Exact Attention with IO-Awareness",
+        "url": "https://arxiv.org/abs/2205.14135"
+      },
+      {
+        "type": "GitHub",
+        "label": "Dao-AILab/flash-attention",
+        "url": "https://github.com/Dao-AILab/flash-attention"
+      }
+    ]
+  },
+  {
+    "slug": "grouped-query-attention",
+    "name": "GQA",
+    "aliases": [
+      "Grouped-Query Attention"
+    ],
+    "tagline": "複数のクエリヘッドをいくつかのグループに分け、グループ内でキー・バリューヘッドを共有するAttentionの構造",
+    "category": "アーキテクチャ",
+    "tags": [
+      "Transformer",
+      "推論最適化"
+    ],
+    "plainSummary": "質問役は大勢のまま、参照するメモ(キー・バリュー)役を少人数に共有させて、推論を軽くする工夫。",
+    "summary": "GQA(Grouped-Query Attention)は、Multi-Head Attentionにおいて各クエリヘッドが個別のキー・バリューヘッドを持つ代わりに、複数のクエリヘッドをいくつかのグループへ分けるAttentionの設計。\n同じグループ内のクエリヘッドは、キー・バリューヘッドを共有する。\n通常のMulti-Head Attentionはクエリヘッドと同数のキー・バリューヘッドを保持するため、生成時に保持するKVキャッシュのサイズがヘッド数に比例して大きくなるが、GQAはキー・バリューヘッドの数をグループ数まで減らすことでKVキャッシュのメモリ使用量を削減する。\n全クエリヘッドが単一のキー・バリューヘッドを共有するMulti-Query Attention(MQA)ほど大胆な共有ではないため、MQAで見られがちな精度低下を抑えつつ、通常のMulti-Head Attentionに近いKVキャッシュ削減効果を得られる。\nLlama 2の70Bモデルをはじめ、多くの大規模モデルで推論効率と精度のバランスを取る設計として採用されている。",
+    "background": "LLMの生成時には各トークンのキー・バリューをKVキャッシュとしてGPUメモリに保持する必要があり、クエリヘッドの数が多いほどこのメモリ消費が増大する。\nGQAは、精度への影響を抑えつつキー・バリューヘッドの数だけを減らすことで、KVキャッシュのメモリ消費と生成速度のトレードオフを改善する目的で考案された。",
+    "history": "2023年: AinslieらがGQAを提案する論文「GQA: Training Generalized Multi-Query Transformer Models from Multi-Head Checkpoints」を発表。\n2023年: Llama 2の70Bモデルなど大規模モデルの推論効率化手法として採用。\n2024年以降: Llama 3やMistralなど多くの主要オープンウェイトモデルで標準的な構成として定着。",
+    "architecture": "H個のクエリヘッドをG個のグループへ均等に分割し、各グループが1組のキー・バリューヘッドを共有する。\nG=1のとき全クエリヘッドが単一のキー・バリューヘッドを共有するMQAと一致し、G=Hのとき各クエリヘッドが個別のキー・バリューヘッドを持つ通常のMulti-Head Attentionと一致する。\nこの中間的なグループ数Gを調整することで、精度とKVキャッシュ削減効果のバランスを取る。",
+    "advantages": [
+      "通常のMulti-Head Attentionと比べ、KVキャッシュのメモリ使用量を大きく削減できる",
+      "MQAほど極端な共有ではないため、精度低下を抑えながらメモリ効率を改善できる",
+      "既存のMulti-Head Attentionで学習済みのモデルを、比較的少ない追加学習でGQA構成へ変換できる"
+    ],
+    "disadvantages": [
+      "グループ数Gの設計次第で精度とメモリ効率のバランスが変わり、タスクに応じた調整が必要になる",
+      "通常のMulti-Head Attentionと比べると、キー・バリューの表現力そのものは制限される",
+      "アーキテクチャの変更を伴うため、既存モデルへ適用するには追加の学習コストがかかる"
+    ],
+    "comparisons": [
+      {
+        "slug": "multi-query-attention",
+        "note": "MQAは全クエリヘッドが単一のキー・バリューヘッドを共有する極端な形で、GQAはその中間的な構成にあたる"
+      },
+      {
+        "slug": "self-attention",
+        "note": "GQAは通常のMulti-Head Self-Attentionのキー・バリューヘッド構成を変更した効率化手法"
+      },
+      {
+        "slug": "kv-cache",
+        "note": "GQAはキー・バリューヘッドの数を減らすことで、KVキャッシュのメモリ使用量を直接削減する"
+      }
+    ],
+    "relatedTerms": [
+      "multi-query-attention",
+      "self-attention",
+      "kv-cache",
+      "llama"
+    ],
+    "faq": [
+      {
+        "question": "GQAとMQAの違いは？",
+        "answer": "MQAは全クエリヘッドが単一のキー・バリューヘッドを共有するのに対し、GQAはクエリヘッドをいくつかのグループへ分け、グループごとにキー・バリューヘッドを共有する。GQAはMQAより精度を保ちやすい。"
+      },
+      {
+        "question": "GQAはなぜKVキャッシュを削減できる？",
+        "answer": "生成時に保持するキー・バリューの数はヘッド数に比例するため、クエリヘッドと同数だったキー・バリューヘッドをグループ数まで減らすことで、保持すべきKVキャッシュのサイズを直接削減できる。"
+      }
+    ],
+    "references": [
+      {
+        "type": "Research Paper",
+        "label": "GQA: Training Generalized Multi-Query Transformer Models from Multi-Head Checkpoints",
+        "url": "https://arxiv.org/abs/2305.13245"
+      }
+    ]
+  },
+  {
+    "slug": "multi-query-attention",
+    "name": "MQA",
+    "aliases": [
+      "Multi-Query Attention"
+    ],
+    "tagline": "全てのクエリヘッドが単一のキー・バリューヘッドを共有し、KVキャッシュを最小限に抑えるAttentionの構造",
+    "category": "アーキテクチャ",
+    "tags": [
+      "Transformer",
+      "推論最適化"
+    ],
+    "plainSummary": "質問役は複数いても、参照するメモ(キー・バリュー)役は1人だけにして、推論をとても軽くする工夫。",
+    "summary": "MQA(Multi-Query Attention)は、Multi-Head Attentionの各クエリヘッドがそれぞれ専用のキー・バリューヘッドを持つ代わりに、全てのクエリヘッドが単一の共有されたキー・バリューヘッドを参照するように設計されたAttentionの構造。\nキー・バリューヘッドを1組だけに減らすことで、生成時にGPUメモリへ保持しておくKVキャッシュのサイズをヘッド数分の1まで削減でき、特にメモリ帯域幅がボトルネックになりやすい自己回帰生成のスループットを改善できる。\n一方で、複数のクエリヘッドが単一のキー・バリューヘッドしか参照できないため、通常のMulti-Head Attentionと比べてモデルの表現力がやや制限され、タスクによっては精度がわずかに低下することが報告されている。\nこの精度低下を緩和しつつメモリ削減効果もある程度保つ折衷案として、後にGrouped-Query Attention(GQA)が提案された。近年の大規模モデルでは、このGQAを採用することが多い。",
+    "background": "自己回帰的なテキスト生成では、トークンを1つ生成するたびに過去のキー・バリューをGPUメモリから読み込む必要があり、このメモリ帯域幅の制約が生成速度のボトルネックになりやすい。\nMQAは、キー・バリューヘッドの数を極限まで減らすことで、このメモリ帯域幅のボトルネックを解消する目的で考案された。",
+    "history": "2019年: ShazeerがMQAを提案する論文「Fast Transformer Decoding: One Write-Head is All You Need」を発表。\n2020年代前半: PaLMなど一部の大規模モデルが、生成速度を優先してMQAを採用。\n2023年以降: 精度と効率のバランスに優れたGQAへ主流が移行。",
+    "architecture": "H個のクエリヘッドはそれぞれ独立して学習されるが、キーとバリューの射影行列は全ヘッドで共通の1組のみを使う。\n各クエリヘッドは、この共有されたキー・バリューに対してAttentionスコアを計算し、それぞれ異なる出力を得る。\n生成時にキャッシュすべきキー・バリューは1組分のみとなり、ヘッド数分のキャッシュを持つ通常のMulti-Head Attentionと比べてメモリ使用量が大きく減る。",
+    "advantages": [
+      "KVキャッシュのメモリ使用量をヘッド数分の1まで削減でき、生成のスループットを大きく向上できる",
+      "メモリ帯域幅がボトルネックになりやすい自己回帰生成において、特に効果が大きい",
+      "実装がシンプルで、既存のMulti-Head Attention構造から比較的容易に変更できる"
+    ],
+    "disadvantages": [
+      "キー・バリューの表現力が1組に制限されるため、通常のMulti-Head Attentionと比べて精度が下がりやすい",
+      "モデルの規模やタスクによっては、精度低下が無視できない水準になる場合がある",
+      "現在は精度と効率のバランスに優れたGQAが採用される傾向にあり、新規設計での採用例は減っている"
+    ],
+    "comparisons": [
+      {
+        "slug": "grouped-query-attention",
+        "note": "GQAはMQAとMulti-Head Attentionの中間的な構成で、精度低下を抑えつつメモリ削減効果を得る折衷案として提案された"
+      },
+      {
+        "slug": "self-attention",
+        "note": "MQAは通常のMulti-Head Self-Attentionのキー・バリューヘッドを1組に絞った効率化手法"
+      },
+      {
+        "slug": "kv-cache",
+        "note": "MQAはキー・バリューヘッドを1組に減らすことで、KVキャッシュのメモリ使用量を最大限に削減する"
+      }
+    ],
+    "relatedTerms": [
+      "grouped-query-attention",
+      "self-attention",
+      "kv-cache"
+    ],
+    "faq": [
+      {
+        "question": "MQAで精度が下がりやすいのはなぜ？",
+        "answer": "複数のクエリヘッドが単一のキー・バリューヘッドしか参照できないため、通常のMulti-Head Attentionと比べて表現できるパターンの多様性が制限されるため。"
+      },
+      {
+        "question": "MQAは現在も使われている？",
+        "answer": "生成速度を最優先する一部の用途では使われるが、多くの新しいモデルは精度低下を抑えられるGQAを採用する傾向にある。"
+      }
+    ],
+    "references": [
+      {
+        "type": "Research Paper",
+        "label": "Fast Transformer Decoding: One Write-Head is All You Need",
+        "url": "https://arxiv.org/abs/1911.02150"
+      }
+    ]
+  },
+  {
+    "slug": "sliding-window-attention",
+    "name": "Sliding Window Attention",
+    "aliases": [
+      "スライディングウィンドウAttention"
+    ],
+    "tagline": "各トークンが固定サイズの近傍ウィンドウ内のみを参照することで、計算量を系列長に対して線形に抑えるAttentionの手法",
+    "category": "アーキテクチャ",
+    "tags": [
+      "Transformer",
+      "推論最適化"
+    ],
+    "plainSummary": "文章の全部を見るのではなく、自分の近く一定範囲だけを見て処理を軽くするAttentionの工夫。",
+    "summary": "Sliding Window Attentionは、通常のSelf-Attentionが系列内の全トークンペアの関連度を計算するのに対し、各トークンがあらかじめ定めた固定サイズのウィンドウ内にある近傍のトークンとだけAttentionを計算するようにした手法。\n通常のSelf-Attentionの計算量が系列長の2乗に比例して増加するのに対し、Sliding Window Attentionはウィンドウサイズを固定するため、計算量とメモリ使用量を系列長に対して線形に抑えられる。\n直接参照できる範囲は固定ウィンドウ内に限られるが、Transformerの層を重ねるごとに間接的な参照範囲(受容野)が広がっていくため、層数が十分あれば実質的に遠い位置の情報もある程度反映できる。\nMistral 7Bなど一部のオープンウェイトモデルが、長いコンテキストを効率的に扱う手段としてこの手法を採用している。",
+    "background": "長いコンテキストウィンドウを扱うモデルでは、通常のSelf-Attentionの2乗の計算量がGPUメモリと計算コストの両面でボトルネックになりやすい。\nSliding Window Attentionは、各トークンが参照する範囲を近傍に限定することで、この計算量の問題を軽減する目的で導入された。",
+    "history": "2020年: BeltagyらがLongformerでSliding Window Attentionに相当する局所Attentionの手法を提案。\n2023年: Mistral AIがMistral 7Bにこの手法を採用し、オープンウェイトLLMでの実用例として広く知られるようになる。",
+    "architecture": "各トークンの位置 i に対し、Attentionの計算対象を位置 i を中心とした固定サイズ w のウィンドウ内のトークンだけに制限する。\nこの制限により、各層のAttention計算量はO(系列長×w)となり、通常のO(系列長の2乗)よりはるかに小さく抑えられる。\n層を重ねるにつれ、ある位置の情報が伝わる実質的な範囲(受容野)は層数×ウィンドウサイズの分だけ広がっていく。",
+    "advantages": [
+      "計算量とメモリ使用量を系列長に対して線形に抑えられ、長いコンテキストを効率的に処理できる",
+      "層を重ねることで、固定ウィンドウの制約を超えた実質的な受容野の拡大が期待できる",
+      "既存のTransformer構造への変更が比較的小さく、実装・導入がしやすい"
+    ],
+    "disadvantages": [
+      "各層で直接参照できる範囲がウィンドウ内に限られ、非常に離れた位置の情報を直接的には扱えない",
+      "ウィンドウサイズの設定は、タスクや求めるコンテキスト長に応じて調整すべき項目となる",
+      "全域を直接参照する通常のSelf-Attentionと比べ、特定のタスクでは精度が劣ることもある"
+    ],
+    "comparisons": [
+      {
+        "slug": "self-attention",
+        "note": "Sliding Window Attentionは通常のSelf-Attentionの参照範囲を近傍ウィンドウへ制限した効率化手法"
+      },
+      {
+        "slug": "state-space-model",
+        "note": "State Space Modelも系列長に対して線形の計算量を実現する手法だが、Attentionとは異なる数理的枠組みに基づく"
+      },
+      {
+        "slug": "context-window",
+        "note": "Sliding Window Attentionは、長いコンテキストウィンドウを効率的に扱うためのアーキテクチャ上の工夫の1つ"
+      }
+    ],
+    "relatedTerms": [
+      "self-attention",
+      "transformer",
+      "context-window",
+      "state-space-model"
+    ],
+    "faq": [
+      {
+        "question": "Sliding Window Attentionで遠い位置の情報は扱えない？",
+        "answer": "1つの層では直接扱えないが、層を重ねるごとに間接的な参照範囲が広がるため、十分な層数があれば遠い位置の情報もある程度反映できる。"
+      },
+      {
+        "question": "どのモデルがこの手法を使っている？",
+        "answer": "Mistral 7BやLongformerなど、長い系列を効率的に扱いたいモデルで採用されている。"
+      }
+    ],
+    "references": [
+      {
+        "type": "Research Paper",
+        "label": "Longformer: The Long-Document Transformer",
+        "url": "https://arxiv.org/abs/2004.05150"
+      }
+    ]
+  },
+  {
+    "slug": "mixture-of-depths",
+    "name": "Mixture-of-Depths",
+    "aliases": [
+      "MoD"
+    ],
+    "tagline": "各トークンごとに処理へ使う層の数を動的に決め、計算量を必要最小限に絞るTransformerの設計",
+    "category": "アーキテクチャ",
+    "tags": [
+      "Transformer",
+      "推論最適化"
+    ],
+    "plainSummary": "簡単な単語は少ない処理で済ませ、難しい単語だけじっくり計算する、計算配分を賢くする仕組み。",
+    "summary": "Mixture-of-Depths(MoD)は、Transformerの全トークンへ同じ数の層を一律適用するのではなく、各トークンごとにその層をスキップするか処理するかを動的に判断するルーティング機構を導入し、モデル全体の計算量を必要最小限に絞るアーキテクチャ。\n全てのトークンが同じ計算コストを必要とするわけではなく、単純なトークンは少ない層の処理で十分な一方、文脈的に重要なトークンにはより多くの層の処理を割り当てる方が効率的だという発想に基づく。\n各層の入り口でルーターが各トークンに対しその層を通すかスキップするかを判定し、あらかじめ定めた計算予算(1層あたり処理するトークンの割合)の範囲内で計算資源を動的に配分する。\nMixture-of-Experts(MoE)が「どの専門家を使うか」を動的に選ぶのに対し、Mixture-of-Depthsは「どれだけの深さ(層数)を使うか」を動的に選ぶ点が特徴で、両者を組み合わせる研究も進んでいる。",
+    "background": "標準的なTransformerは全トークンに同じ数の層を適用するため、単純な処理で済むトークンにも一律に高い計算コストがかかっていた。\nMixture-of-Depthsは、トークンごとに必要な計算量が異なるという直感に基づき、計算資源をより効率的に配分する目的で考案された。",
+    "history": "2024年: Google DeepMindのRaposoらが論文「Mixture-of-Depths: Dynamically allocating compute in transformer-based language models」を発表。",
+    "workflow": "各層の入り口で、軽量なルーターが各トークンの表現からその層を通すべきかスキップすべきかを判定する。\nあらかじめ定めた計算予算の範囲内で、重要度の高いトークンだけをその層で処理し、それ以外のトークンは残差接続を通じてそのまま次の層へ渡す。\nこれを各層で繰り返すことで、トークンごとに実質的な処理の深さが変化する。",
+    "advantages": [
+      "全トークンに一律の計算コストをかける必要がなく、モデル全体の計算量を削減できる",
+      "重要なトークンにより多くの計算資源を割り当てられ、同じ計算予算でも精度を高めやすい",
+      "既存のTransformer構造に軽量なルーティング機構を追加するだけで導入できる"
+    ],
+    "disadvantages": [
+      "ルーターの判定精度がモデル全体の性能に影響し、学習の難易度が上がる",
+      "動的なルーティングにより、ハードウェア上での並列処理の効率がやや複雑になる",
+      "比較的新しい技術であり、大規模モデルでの実運用の知見がまだ少ない"
+    ],
+    "comparisons": [
+      {
+        "slug": "mixture-of-experts",
+        "note": "MoEが使う専門家サブネットワークを動的に選ぶのに対し、Mixture-of-Depthsは処理に使う層の数を動的に選ぶ"
+      },
+      {
+        "slug": "transformer",
+        "note": "Mixture-of-Depthsは標準的なTransformerに計算量を動的配分するルーティング機構を追加した設計"
+      },
+      {
+        "slug": "residual-connection",
+        "note": "スキップされたトークンは残差接続を通じてそのまま次の層へ渡される"
+      }
+    ],
+    "relatedTerms": [
+      "mixture-of-experts",
+      "transformer",
+      "residual-connection"
+    ],
+    "faq": [
+      {
+        "question": "Mixture-of-DepthsとMixture-of-Expertsの違いは？",
+        "answer": "MoEは各トークンに対しどの専門家サブネットワークを使うかを動的に選ぶのに対し、Mixture-of-Depthsはどれだけの層(深さ)を使って処理するかを動的に選ぶ。両者は組み合わせて使うこともできる。"
+      },
+      {
+        "question": "スキップされたトークンはどうなる？",
+        "answer": "その層の処理を受けず、残差接続を通じてそのままの表現が次の層へ渡される。重要度が低いと判定されたトークンの計算コストを節約できる。"
+      }
+    ],
+    "references": [
+      {
+        "type": "Research Paper",
+        "label": "Mixture-of-Depths: Dynamically allocating compute in transformer-based language models",
+        "url": "https://arxiv.org/abs/2404.02258"
+      }
+    ]
+  },
+  {
+    "slug": "zero-shot",
+    "name": "Zero-shot",
+    "aliases": [
+      "ゼロショット"
+    ],
+    "tagline": "タスクの例を1つも示さず、指示文だけでLLMに未知のタスクをこなさせる手法",
+    "category": "技術",
+    "tags": [
+      "プロンプトエンジニアリング",
+      "LLM"
+    ],
+    "plainSummary": "お手本を1つも見せずに、説明だけでAIにタスクをやらせること。",
+    "summary": "Zero-shotは、プロンプト内に解答例を1つも含めず、タスクの指示文だけをLLMへ与えてそのタスクをこなさせる手法。\n事前学習・指示チューニングを通じて幅広い知識とタスク遂行パターンを獲得したLLMは、具体例を見なくても指示文の意味を理解し、妥当な出力を生成できることが多い。\n例をいくつか含めるFew-shotと対比され、プロンプトが短く済むため入力トークン数を抑えられる一方、タスクの形式や期待する出力の書式が複雑な場合は、例を示さないと意図通りの出力が得られにくいこともある。\nモデルの汎用的な指示追従能力を測る基準としても使われ、Zero-shotでの性能が高いほど、そのモデルが幅広い未知タスクに柔軟に対応できることを示す。",
+    "background": "従来の機械学習モデルは、タスクごとに学習データで訓練し直す必要があった。\nLLMは大規模な事前学習と指示チューニングにより、例を示さなくても指示文の意図を汲んで新しいタスクをこなす能力を獲得しており、Zero-shotはこの能力を引き出すプロンプトの与え方として整理された。",
+    "history": "2020年: GPT-3の論文がFew-shot・One-shot・Zero-shotという3つの設定での性能比較を提示し、Zero-shot性能が広く注目されるきっかけに。\n2021-2022年: 指示チューニングの普及により、Zero-shotでの指示追従性能が大きく向上。",
+    "advantages": [
+      "プロンプトに例を含める必要がなく、入力トークン数を抑えられる",
+      "新しいタスクに対しても、都度サンプルを用意せずすぐに試せる",
+      "モデルの汎用的な指示理解力を測る基準として活用できる"
+    ],
+    "disadvantages": [
+      "出力の形式やニュアンスが複雑なタスクでは、例がないと意図通りの出力を得にくい場合がある",
+      "モデルの指示チューニングの質によって、Zero-shotでの性能に差が出やすい",
+      "Few-shotと比べて、期待する出力の細かいスタイルを伝えにくい"
+    ],
+    "comparisons": [
+      {
+        "slug": "few-shot",
+        "note": "Few-shotが例を示して望む出力形式を伝えるのに対し、Zero-shotは指示文だけでタスクをこなさせる"
+      },
+      {
+        "slug": "prompt-engineering",
+        "note": "Zero-shotで望む結果が得られない場合、プロンプトエンジニアリングにより指示文自体を工夫する対応が取られる"
+      },
+      {
+        "slug": "instruction-tuning",
+        "note": "指示チューニングを経たモデルほど、Zero-shotでの指示追従性能は高くなりやすい"
+      }
+    ],
+    "relatedTerms": [
+      "few-shot",
+      "prompt-engineering",
+      "instruction-tuning"
+    ],
+    "faq": [
+      {
+        "question": "Zero-shotが向いているのはどんな場面？",
+        "answer": "定型的でモデルが理解しやすいタスクや、都度サンプルを用意する余裕がない場面に向いている。出力形式が複雑な場合はFew-shotの方が安定しやすい。"
+      },
+      {
+        "question": "Zero-shotの性能を上げるには？",
+        "answer": "指示文をより具体的かつ明確に書く、出力形式を明示するなどのプロンプトエンジニアリングの工夫に加え、指示チューニング済みのモデルを使うことが有効。"
+      }
+    ],
+    "references": [
+      {
+        "type": "Research Paper",
+        "label": "Language Models are Few-Shot Learners",
+        "url": "https://arxiv.org/abs/2005.14165"
+      }
+    ]
+  },
+  {
+    "slug": "self-consistency",
+    "name": "Self-Consistency",
+    "aliases": [
+      "自己整合性"
+    ],
+    "tagline": "同じ問題に対する複数の推論過程をサンプリングし、多数決で最終的な答えを決めるプロンプティング手法",
+    "category": "技術",
+    "tags": [
+      "プロンプトエンジニアリング",
+      "推論"
+    ],
+    "plainSummary": "同じ問題を何度も考えさせて、一番多かった答えを採用することで正答率を上げる方法。",
+    "summary": "Self-Consistencyは、Chain-of-Thoughtプロンプティングと組み合わせて使われる手法で、同じ問題に対してTemperatureを上げるなどしてモデルに複数の異なる推論過程をサンプリングさせ、それぞれの推論過程が導いた最終的な答えの中で最も頻度の高いものを採用する。\n1回だけの推論では、たまたま誤った推論経路をたどって間違った答えに至ることがある。\n複数の独立した推論経路を試して多数決を取ることで、個々の推論のばらつきを平均化し、より安定して正しい答えへたどり着きやすくなる。\n特に算数の文章題や論理パズルなど、複数の妥当な解き方が存在し得るタスクで効果を発揮しやすく、GSM8Kなどの推論ベンチマークにおいてChain-of-Thought単体より高い正答率を示すことが報告されている。\n複数回の推論を必要とするため、単純な1回の生成と比べて計算コストとレイテンシが増加するというトレードオフを伴う。",
+    "background": "Chain-of-Thoughtプロンプティングは推論の精度を高めるが、1回の推論結果は依然としてサンプリングのばらつきの影響を受け、必ずしも毎回同じ答えにたどり着けるとは限らない。\nSelf-Consistencyは、複数の推論経路の結果を集約することで、この1回きりのサンプリングが持つ不安定さを緩和する目的で考案された。",
+    "history": "2022年: WangらがSelf-Consistencyを提案する論文「Self-Consistency Improves Chain of Thought Reasoning in Language Models」を発表。",
+    "workflow": "同じプロンプトに対し、Temperatureを上げた設定で複数回モデルに推論させ、それぞれ異なるChain-of-Thoughtの推論過程と最終的な答えを生成させる。\n得られた複数の最終的な答えを集計し、最も出現頻度の高い答えを最終出力として選ぶ。",
+    "advantages": [
+      "1回の推論だけに頼らず、複数経路の結果を集約するため正答率が安定しやすい",
+      "算数の文章題や論理パズルなど、複数の妥当な解き方があるタスクで特に効果を発揮する",
+      "既存のChain-of-Thoughtプロンプトに追加の学習なしで適用できる"
+    ],
+    "disadvantages": [
+      "同じ問題に対して複数回モデルを呼び出す必要があり、計算コストとレイテンシが増加する",
+      "サンプリングする推論経路の数を増やすほど精度は安定するが、コストも比例して増える",
+      "推論経路にかかわらず同じ誤りを繰り返すタイプの間違いには効果が薄い"
+    ],
+    "comparisons": [
+      {
+        "slug": "chain-of-thought",
+        "note": "Self-ConsistencyはChain-of-Thoughtを複数回サンプリングし、多数決で精度を高める拡張手法"
+      },
+      {
+        "slug": "tree-of-thought",
+        "note": "Tree of Thoughtが推論の途中経過を分岐・評価しながら探索するのに対し、Self-Consistencyは独立した推論経路を並列に試して集約する"
+      },
+      {
+        "slug": "temperature",
+        "note": "Self-Consistencyでは、多様な推論経路を得るためにTemperatureを高めに設定することが多い"
+      }
+    ],
+    "relatedTerms": [
+      "chain-of-thought",
+      "tree-of-thought",
+      "temperature",
+      "reasoning-model"
+    ],
+    "faq": [
+      {
+        "question": "Self-Consistencyは何回サンプリングすればよい？",
+        "answer": "タスクやコスト許容量によるが、研究では5〜40回程度サンプリングして多数決を取る設定がよく使われる。サンプル数を増やすほど精度は安定するがコストも増える。"
+      },
+      {
+        "question": "Self-ConsistencyとTree of Thoughtの違いは？",
+        "answer": "Self-Consistencyは独立した推論経路を複数生成し最後に多数決するのに対し、Tree of Thoughtは推論の途中経過を分岐させ、都度評価しながら有望な経路を探索する点が異なる。"
+      }
+    ],
+    "references": [
+      {
+        "type": "Research Paper",
+        "label": "Self-Consistency Improves Chain of Thought Reasoning in Language Models",
+        "url": "https://arxiv.org/abs/2203.11171"
+      }
+    ]
+  },
+  {
+    "slug": "tree-of-thought",
+    "name": "Tree of Thought",
+    "aliases": [
+      "ToT",
+      "思考の木"
+    ],
+    "tagline": "推論の途中経過を木構造の分岐として展開し、評価しながら有望な経路を探索するプロンプティング手法",
+    "category": "技術",
+    "tags": [
+      "プロンプトエンジニアリング",
+      "推論"
+    ],
+    "plainSummary": "考え方をいくつも枝分かれさせ、良さそうな枝だけ選んで進める、AIの考える力を高める方法。",
+    "summary": "Tree of Thought(ToT)は、Chain-of-Thoughtが1本の連続した推論過程しか生成しないのに対し、各推論ステップの時点で複数の異なる思考(次の一手)を分岐として生成するプロンプティング手法。\nそれぞれの分岐の有望さをモデル自身に評価させながら、探索木を辿って最終的な解にたどり着く。\n各ノードでの評価結果に基づき、有望でない分岐を打ち切り(枝刈り)、有望な分岐を優先的に深く探索するといった、幅優先探索や深さ優先探索に類似した探索戦略を組み合わせられる。\n途中で行き詰まった場合に別の分岐へ戻ってやり直す(バックトラック)ことができるため、Chain-of-Thoughtのように1本道の推論で誤った方向へ進んでしまうと後戻りできない弱点を補える。\nパズルや創作的な文章生成など、複数の候補を比較しながら試行錯誤する必要があるタスクで、Chain-of-Thoughtより高い成功率を示すことが報告されている。",
+    "background": "Chain-of-Thoughtは推論過程を言語化させることで精度を高めるが、1本道の推論であるため、途中で誤った方向へ進んでしまうと軌道修正が難しいという弱点があった。\nTree of Thoughtは、複数の思考の分岐を保持して評価・探索し、より柔軟に誤りを修正しながら解へたどり着けるようにする目的で考案された。",
+    "history": "2023年: Yaoらが論文「Tree of Thoughts: Deliberate Problem Solving with Large Language Models」を発表し、パズル的なタスクでの有効性を示す。",
+    "workflow": "現在の思考状態から、モデルに次に取り得る複数の思考(分岐)を生成させる。\n各分岐の有望さをモデル自身、またはルールベースの評価関数で採点する。\n評価の低い分岐を打ち切り、有望な分岐を優先的に探索し、必要なら行き詰まった分岐から別の分岐へ戻りながら、最終的な解が見つかるまで繰り返す。",
+    "advantages": [
+      "複数の候補を比較・評価しながら探索するため、1本道の推論より柔軟に誤りを修正できる",
+      "行き詰まった場合に別の分岐へ戻れるため、複雑な探索を要するタスクへの対応力が高い",
+      "パズルや創作的な生成タスクなど、複数の妥当な解法があるタスクで高い成功率を示す"
+    ],
+    "disadvantages": [
+      "複数の分岐を生成・評価するため、Chain-of-Thoughtや単純な1回推論よりモデル呼び出し回数がずっと多くなる",
+      "分岐の評価基準の設計次第で探索の質が左右され、チューニングの手間がかかる",
+      "単純なタスクでは、探索のオーバーヘッドに見合う精度向上を得にくい"
+    ],
+    "comparisons": [
+      {
+        "slug": "chain-of-thought",
+        "note": "Tree of Thoughtは、Chain-of-Thoughtの1本道の推論を複数分岐の探索木へ拡張した手法"
+      },
+      {
+        "slug": "self-consistency",
+        "note": "Self-Consistencyが独立した推論経路の多数決で答えを決めるのに対し、Tree of Thoughtは分岐を評価しながら探索する"
+      },
+      {
+        "slug": "search-tree",
+        "note": "Tree of Thoughtは、探索木の考え方をLLMの推論プロセスへ応用したもの"
+      }
+    ],
+    "relatedTerms": [
+      "chain-of-thought",
+      "self-consistency",
+      "search-tree",
+      "monte-carlo-tree-search"
+    ],
+    "faq": [
+      {
+        "question": "Tree of ThoughtとChain-of-Thoughtの違いは？",
+        "answer": "Chain-of-Thoughtは1本道の推論過程を生成するのに対し、Tree of Thoughtは各ステップで複数の思考を分岐させ、評価しながら有望な経路を探索する。バックトラックにより誤りの修正もしやすい。"
+      },
+      {
+        "question": "Tree of Thoughtはどんなタスクに向いている？",
+        "answer": "パズルのように複数の手順を試行錯誤する必要があるタスクや、創作的な文章生成のように複数の候補を比較したいタスクに向いている。単純な質問応答ではオーバーヘッドに見合わないことが多い。"
+      }
+    ],
+    "references": [
+      {
+        "type": "Research Paper",
+        "label": "Tree of Thoughts: Deliberate Problem Solving with Large Language Models",
+        "url": "https://arxiv.org/abs/2305.10601"
+      }
+    ]
+  },
+  {
+    "slug": "self-instruct",
+    "name": "Self-Instruct",
+    "aliases": [],
+    "tagline": "LLM自身に指示・応答のペアを生成させ、指示チューニング用データセットを合成する手法",
+    "category": "技術",
+    "tags": [
+      "合成データ",
+      "ファインチューニング"
+    ],
+    "plainSummary": "AI自身に練習問題と模範解答を作らせて、そのデータで別のAIを指示に従いやすく育てる方法。",
+    "summary": "Self-Instructは、少数の人手で作成した指示・応答の例をシード(種)として、既存のLLMにそれらを参考にした新しい指示文と対応する応答を大量に生成させ、生成された指示・応答ペアを指示チューニング用の学習データとして利用する手法。\n生成された指示の中には質が低いものや重複したものも含まれるため、類似度によるフィルタリングや簡易的な品質チェックを経て、実際に学習へ使うデータを絞り込む工程が組み込まれる。\n人手による指示・応答データの収集は時間とコストがかかるため、Self-Instructはこの工程を既存のLLMを使って自動化し、少ないシードデータから大規模な指示チューニング用データセットを合成できるようにする。\nAlpacaなど、この手法を使って合成したデータセットで既存モデルを指示チューニングした派生モデルが数多く登場し、合成データによる指示チューニングの実用性を広めるきっかけになった。",
+    "background": "指示チューニングには多様な指示・応答ペアのデータセットが必要だが、人手だけで大量かつ多様なデータを作成するにはコストと時間がかかっていた。\nSelf-Instructは、既存のLLM自身にデータ生成を担わせることで、この人手によるデータ収集のボトルネックを解消する目的で考案された。",
+    "history": "2022年: Wangらが論文「Self-Instruct: Aligning Language Models with Self-Generated Instructions」を発表。\n2023年: Alpacaが、この手法を応用して生成したデータセットでLlamaを指示チューニングし、公開されたことで手法の実用性が広く知られるようになる。",
+    "workflow": "人手で作成した少数の指示・応答の例をシードデータとして用意する。\nシードデータを参考にしつつ、既存のLLMへ新しい指示文とそれに対応する応答を大量に生成させる。\n生成された指示・応答ペアを、類似度チェックや簡易的な品質フィルタで絞り込み、指示チューニング用の学習データセットとして整備する。",
+    "advantages": [
+      "少数の人手データから、大規模な指示チューニング用データセットを低コストで合成できる",
+      "生成する指示のカテゴリや分布を、シードデータの設計によってある程度制御できる",
+      "既存の強力なLLMがあれば、追加の人手アノテーションなしにデータ生成を進められる"
+    ],
+    "disadvantages": [
+      "生成に使ったLLM自身の誤りやバイアスが、合成データを通じて後続モデルに引き継がれる",
+      "生成された指示・応答の質にばらつきがあり、フィルタリング工程の設計が結果を左右する",
+      "合成データに偏りすぎると、実世界の指示の多様性を十分にカバーできないことがある"
+    ],
+    "comparisons": [
+      {
+        "slug": "synthetic-data",
+        "note": "Self-Instructは、指示チューニング用の合成データを生成する代表的な具体的手法の1つ"
+      },
+      {
+        "slug": "instruction-tuning",
+        "note": "Self-Instructで生成したデータセットは、後続モデルの指示チューニングにそのまま利用される"
+      },
+      {
+        "slug": "knowledge-distillation",
+        "note": "強力なモデルの出力を別モデルの学習に使う点で、Self-Instructは知識蒸留と似た構造を持つ"
+      }
+    ],
+    "relatedTerms": [
+      "synthetic-data",
+      "instruction-tuning",
+      "knowledge-distillation",
+      "few-shot"
+    ],
+    "faq": [
+      {
+        "question": "Self-Instructとknowledge distillationの違いは？",
+        "answer": "知識蒸留は既存モデルの出力そのものを教師データとして使うのに対し、Self-Instructは既存モデルに新しい指示文と応答のペアを生成させ、指示チューニング用のデータセットを合成する点に重点がある。"
+      },
+      {
+        "question": "Self-Instructで生成したデータの質はどう担保する？",
+        "answer": "生成された指示・応答ペアに対し、既存データとの類似度によるフィルタリングや簡易的なルールベースの品質チェックを行い、質の低いものや重複したものを除外する工程が組み込まれる。"
+      }
+    ],
+    "references": [
+      {
+        "type": "Research Paper",
+        "label": "Self-Instruct: Aligning Language Models with Self-Generated Instructions",
+        "url": "https://arxiv.org/abs/2212.10560"
+      }
+    ]
+  },
+  {
+    "slug": "prompt-chaining",
+    "name": "プロンプトチェイニング",
+    "aliases": [
+      "Prompt Chaining"
+    ],
+    "tagline": "1つの複雑なタスクを複数のプロンプトに分割し、前段の出力を次段の入力として順につなげていく手法",
+    "category": "技術",
+    "tags": [
+      "プロンプトエンジニアリング",
+      "ワークフロー"
+    ],
+    "plainSummary": "大きな仕事を小さな質問に分けて、前の答えを次の質問の材料にしながら順番にAIへ渡していくやり方。",
+    "summary": "プロンプトチェイニングは、1つの複雑なタスクを単一の巨大なプロンプトで一度に処理させるのではなく、複数の小さなサブタスクへ分割する手法。\nあるプロンプトの出力を次のプロンプトの入力として順につなげていくことで、段階的にタスク全体を完成させる。\n例えば長文の要約から質問応答を行うタスクであれば、まず長文を要約するプロンプト、次にその要約をもとに質問へ答えるプロンプトというように、工程ごとにプロンプトを分けて実行する。\n各段階の出力を人間やプログラムが検証・修正してから次の段階へ渡すことも可能で、単一プロンプトでは制御しにくい複雑なタスクを、扱いやすい単位に分解して精度を高められる。\nLangChainなどのフレームワークが提供する「チェーン」の概念は、このプロンプトチェイニングの考え方をプログラム上で体系的に実装したものにあたる。",
+    "background": "複雑なタスクを1つの巨大なプロンプトに詰め込むと、モデルが途中の指示を見落としたり、出力形式が安定しなかったりすることがある。\nプロンプトチェイニングは、タスクを扱いやすい単位に分割し、各段階の出力を検証しながら進められるようにすることで、この不安定さを軽減する目的で使われる。",
+    "workflow": "解決したいタスクを、順序立てて実行できる複数のサブタスクへ分解する。\n最初のサブタスクに対応するプロンプトをLLMへ入力し、その出力を得る。\n得られた出力を次のサブタスクのプロンプトへ組み込んで入力し、これを最後のサブタスクまで繰り返して最終的な結果を得る。",
+    "advantages": [
+      "複雑なタスクを扱いやすい単位に分解でき、各段階の出力を検証・修正しやすい",
+      "工程ごとに異なるプロンプトやモデルを使い分けるなど、柔軟な設計がしやすい",
+      "単一の巨大なプロンプトと比べ、途中の指示が見落とされにくく出力も安定しやすい"
+    ],
+    "disadvantages": [
+      "モデル呼び出しの回数が増えるため、単一プロンプトと比べてレイテンシとコストが増加する",
+      "前段の出力に誤りがあると、後段の処理にそのまま誤りが引き継がれてしまう",
+      "工程の分割方法や各段階のプロンプト設計に、ある程度の試行錯誤が必要になる"
+    ],
+    "comparisons": [
+      {
+        "slug": "workflow",
+        "note": "プロンプトチェイニングは、定型的な処理の流れを複数のプロンプトの連鎖として組み立てるワークフローの一形態"
+      },
+      {
+        "slug": "langchain",
+        "note": "LangChainの「チェーン」は、プロンプトチェイニングの考え方をプログラム上で体系的に扱うための仕組み"
+      },
+      {
+        "slug": "react-prompting",
+        "note": "ReActが思考と行動を交互に繰り返すのに対し、プロンプトチェイニングはあらかじめ決めた工程の順序に沿って進む"
+      }
+    ],
+    "relatedTerms": [
+      "workflow",
+      "langchain",
+      "prompt-engineering"
+    ],
+    "faq": [
+      {
+        "question": "プロンプトチェイニングとReActの違いは？",
+        "answer": "プロンプトチェイニングはあらかじめ決めた固定的な工程の順序に沿ってプロンプトをつなげるのに対し、ReActはモデル自身がその都度次に何をすべきかを判断しながら思考と行動を繰り返す点が異なる。"
+      },
+      {
+        "question": "どんなタスクにプロンプトチェイニングが向いている？",
+        "answer": "要約してから質問に答える、翻訳してから校正するなど、明確な順序を持つ複数工程のタスクに向いている。各工程の出力を個別に検証したい場合にも有効。"
+      }
+    ],
+    "references": []
+  },
+  {
+    "slug": "retrieval-augmented-fine-tuning",
+    "name": "RAFT",
+    "aliases": [
+      "Retrieval-Augmented Fine-Tuning"
+    ],
+    "tagline": "検索した正解文書と無関係な文書(ディストラクタ)を含めてファインチューニングし、RAG利用時の頑健性を高める手法",
+    "category": "技術",
+    "tags": [
+      "RAG",
+      "ファインチューニング"
+    ],
+    "plainSummary": "本番のRAGと同じように、正しい資料とまぎらわしい資料を混ぜた状態で練習させ、実運用に強くするやり方。",
+    "summary": "RAFT(Retrieval-Augmented Fine-Tuning)は、RAGシステムで実際に想定される状況を学習データとして再現するファインチューニング手法。\n検索結果に質問の答えを含む正解文書と、答えに関係のない紛らわしい文書(ディストラクタ)が混在した状態を再現し、その中から正解文書の内容を根拠に正しく回答するようモデルを学習させる。\n通常のファインチューニングや、検索なしで質問と正解だけを学習させる方法では、実際の検索結果に含まれるノイズ(無関係な文書)への耐性が身につきにくい。\nRAFTはあえてディストラクタを混ぜた状態で学習させ、本番運用時に近い条件での頑健性を高める。\n正解文書がどれかを明示せず、モデル自身に文書群の中から根拠となる箇所を見極めさせながら回答を組み立てる訓練をするため、単純に検索結果を鵜呑みにするのではなく関連性を選別する能力も同時に養われる。\n特定ドメイン(社内文書や専門分野の資料など)向けにRAGシステムを構築する際、汎用の埋め込みモデルやLLMだけでは対応しきれない、そのドメイン特有の文書の書き方や紛らわしい表現への適応策として提案された。",
+    "background": "通常のRAGはLLM自体を追加学習せず、検索した文書をプロンプトに含めるだけで回答させるため、ドメイン特有の紛らわしい文書や表現への対応力は事前学習・指示チューニングの範囲に依存していた。\nRAFTは、実際の検索結果に近いノイズ混じりの状況を学習データとして与えることで、特定ドメインのRAGシステムにおける回答の頑健性を高める目的で考案された。",
+    "history": "2024年: ZhangらがRAFTを提案する論文「RAFT: Adapting Language Model to Domain Specific RAG」を発表。",
+    "workflow": "質問に対して、正解の根拠となる文書とともに、関係のない複数のディストラクタ文書を用意する。\nこれらの文書群と質問をまとめてモデルへ入力し、正解文書の内容を根拠にした回答を生成するよう教師あり学習する。\n学習後のモデルは、実際のRAG運用時に検索結果へノイズが混じっていても、根拠となる文書を選別しながら回答できるようになる。",
+    "advantages": [
+      "本番のRAG運用に近い、ノイズを含む検索結果への耐性を学習時から養える",
+      "特定ドメインの文書の書き方や紛らわしい表現に対し、汎用モデルより高い回答精度が期待できる",
+      "検索結果を鵜呑みにせず、根拠となる文書を選別する能力も同時に学習できる"
+    ],
+    "disadvantages": [
+      "正解文書とディストラクタを組み合わせた学習データの準備に手間がかかる",
+      "通常のファインチューニングと同様、追加の学習コストと計算資源が必要になる",
+      "特定ドメインに特化して学習させるため、他ドメインへの汎用性はやや低下する可能性がある"
+    ],
+    "comparisons": [
+      {
+        "slug": "retrieval-augmented-generation",
+        "note": "RAFTは通常のRAGにファインチューニングを組み合わせ、ノイズを含む検索結果への頑健性を高めた発展形"
+      },
+      {
+        "slug": "fine-tuning",
+        "note": "RAFTは検索結果を模したノイズ入りの文書群を使う点が、通常のファインチューニングと異なる"
+      },
+      {
+        "slug": "instruction-tuning",
+        "note": "RAFTは指示チューニング済みモデルに対して、RAG向けの追加適応として行われることが多い"
+      }
+    ],
+    "relatedTerms": [
+      "retrieval-augmented-generation",
+      "fine-tuning",
+      "instruction-tuning"
+    ],
+    "faq": [
+      {
+        "question": "RAFTと通常のRAGの違いは？",
+        "answer": "通常のRAGはLLM自体を追加学習せず検索結果をプロンプトに含めるだけだが、RAFTはノイズを含む検索結果を模した状況でモデル自体をファインチューニングし、特定ドメインでの頑健性を高める。"
+      },
+      {
+        "question": "ディストラクタ文書とは？",
+        "answer": "質問の答えとは関係のない、検索結果に紛れ込みうる文書のこと。RAFTでは学習データにあえてディストラクタを含め、モデルが正解文書を見極める能力を養う。"
+      }
+    ],
+    "references": [
+      {
+        "type": "Research Paper",
+        "label": "RAFT: Adapting Language Model to Domain Specific RAG",
+        "url": "https://arxiv.org/abs/2403.10131"
+      }
+    ]
+  },
+  {
+    "slug": "hnsw",
+    "name": "HNSW",
+    "aliases": [
+      "Hierarchical Navigable Small World"
+    ],
+    "tagline": "階層構造を持つグラフを辿ることで、高次元ベクトルの近似最近傍探索を高速に行うアルゴリズム",
+    "category": "技術",
+    "tags": [
+      "ベクトル検索",
+      "アルゴリズム"
+    ],
+    "plainSummary": "似ているデータ同士をグラフでつなぎ、階段を降りるように辿って近いものを高速に見つけるアルゴリズム。",
+    "summary": "HNSW(Hierarchical Navigable Small World)は、高次元ベクトルの集合に対して、厳密な最近傍探索の代わりに高速かつ高精度な近似最近傍探索(ANN)を実現するグラフベースのアルゴリズム。\n各データ点をノードとし、似たベクトル同士を辺でつないだグラフを、疎な上位層から密な下位層まで複数階層に分けて構築する。\n検索時は、まず疎な上位層で大まかに目的のベクトルに近い領域まで移動し、階層を降りるごとにより密なグラフの中で探索範囲を絞り込んでいくことで、全データ点との総当たり比較を避けながら少ない計算量で近い点を見つけ出す。\nFaiss、Milvus、Qdrant、Weaviateなど主要なベクトルデータベース・ライブラリの多くが、標準的な近似最近傍探索アルゴリズムとしてHNSWを採用している。",
+    "background": "埋め込みベクトルの次元数とデータ量が増えるほど、全件を総当たりで比較する厳密な最近傍探索は計算コストが膨大になる。\nHNSWは、多少の精度の低下と引き換えに検索速度を高める近似最近傍探索の一手法として、グラフ構造を活用した探索方法を提供するために考案された。",
+    "history": "2016年: MalkovとYashuninがHNSWを提案する論文「Efficient and robust approximate nearest neighbor search using Hierarchical Navigable Small World graphs」を発表。\n2018年以降: FaissやElasticsearch、Milvus、Qdrantなど主要なベクトル検索エンジンが相次いでHNSWを実装に採用。",
+    "architecture": "各データ点をノードとする多層のグラフを構築し、上位層ほどノード数が少なく疎な構造、下位層ほどノード数が多く密な構造を持つ。\n各ノードは、自身と似たベクトルを持つ少数の近傍ノードとのみ辺で接続される。\n検索は最上位層のランダムな入口ノードから始め、各層でクエリベクトルに最も近いノードへ貪欲に移動し、下位層へ降りるごとに探索範囲をより細かく絞り込んでいく。",
+    "advantages": [
+      "データ量が多くても、全件比較よりはるかに高速に近似最近傍を検索できる",
+      "階層構造により、大まかな絞り込みから精密な絞り込みまで段階的に検索を進められる",
+      "多くのベクトルデータベース・ライブラリに実装があり、比較的導入しやすい"
+    ],
+    "disadvantages": [
+      "近似アルゴリズムであるため、厳密な最近傍探索と比べて精度がわずかに落ちやすい",
+      "グラフ構造をメモリ上に保持する必要があり、データ量に応じたメモリ消費が発生する",
+      "グラフ構築時のパラメータ(接続数や階層数など)の調整が、検索精度と速度のバランスに影響する"
+    ],
+    "comparisons": [
+      {
+        "slug": "vector-database",
+        "note": "HNSWは、多くのベクトルデータベースが内部で使う近似最近傍探索アルゴリズムの1つ"
+      },
+      {
+        "slug": "faiss",
+        "note": "FaissはHNSWを含む複数の近似最近傍探索アルゴリズムを実装した検索ライブラリ"
+      },
+      {
+        "slug": "cosine-similarity",
+        "note": "HNSWによる探索では、ノード間の近さを測る距離指標としてコサイン類似度がよく使われる"
+      }
+    ],
+    "relatedTerms": [
+      "vector-database",
+      "faiss",
+      "cosine-similarity",
+      "semantic-search"
+    ],
+    "faq": [
+      {
+        "question": "HNSWは厳密な最近傍探索と何が違う？",
+        "answer": "厳密な最近傍探索は全データ点と比較して正確な最近傍を求めるが、計算コストが高い。HNSWはグラフを辿って近似的に近傍を求め、わずかな精度低下と引き換えに検索速度を高める。"
+      },
+      {
+        "question": "HNSWはどこで使われている？",
+        "answer": "Faiss、Milvus、Qdrant、Weaviateなど主要なベクトルデータベース・検索ライブラリの多くが、標準的な近似最近傍探索アルゴリズムとして採用している。"
+      }
+    ],
+    "references": [
+      {
+        "type": "Research Paper",
+        "label": "Efficient and robust approximate nearest neighbor search using Hierarchical Navigable Small World graphs",
+        "url": "https://arxiv.org/abs/1603.09320"
+      }
+    ]
+  },
+  {
+    "slug": "faiss",
+    "name": "Faiss",
+    "aliases": [
+      "Facebook AI Similarity Search"
+    ],
+    "tagline": "Meta(旧Facebook)が開発した、高次元ベクトルの類似検索・クラスタリング向けオープンソースライブラリ",
+    "category": "インフラ",
+    "tags": [
+      "ベクトル検索",
+      "ライブラリ"
+    ],
+    "plainSummary": "大量のベクトルの中から似たものを高速に探し出せる、Meta製の検索ツール。",
+    "summary": "Faissは、Meta AI Researchが開発したオープンソースのライブラリ。\n数百万〜数十億件規模の高次元ベクトルに対する類似検索やクラスタリングを、CPU・GPUの両方で高速に実行できる。\nHNSWやIVF(転置ファイルインデックス)、積み量子化(Product Quantization)など、精度・速度・メモリ使用量のトレードオフが異なる複数の近似最近傍探索アルゴリズムを実装しており、データ規模や要件に応じて使い分けられる。\nPythonとC++の両方からAPIを利用でき、埋め込みモデルが出力したベクトルをそのままFaissのインデックスへ登録し、類似度検索するという使い方が一般的。\n独立したライブラリとして直接組み込む形で使われるほか、Milvusなど一部のベクトルデータベース製品が内部の検索エンジンとしてFaissを利用している。",
+    "background": "埋め込みベクトルを使った類似検索の需要が増える中、大規模なベクトル集合に対して実用的な速度で検索できる、信頼性の高いオープンソースの実装が求められていた。\nFaissは、Meta社内での大規模な画像・テキスト検索の実運用経験をもとに、研究から実運用まで幅広く使える汎用的なベクトル検索ライブラリとして公開された。",
+    "history": "2017年: Facebook AI Researchがオープンソースライブラリとしてfaissを公開。\n2019年: GPU対応の実装が強化され、大規模データセットでの高速な検索が可能に。\n2020年代: 多くのRAGシステムやベクトルデータベース製品の内部コンポーネントとして採用が拡大。",
+    "advantages": [
+      "複数の近似最近傍探索アルゴリズムを備え、データ規模や精度要件に応じて使い分けられる",
+      "GPU対応により、非常に大規模なベクトル集合でも高速な検索が可能",
+      "オープンソースかつ実績が豊富で、多くのプロジェクトやベクトルデータベースの内部で採用されている"
+    ],
+    "disadvantages": [
+      "ライブラリ単体では永続化やスケールアウトなどの運用機能を持たず、本格的なサービング基盤には別途構築が必要になる",
+      "アルゴリズムやパラメータの選択肢が多く、最適な設定を見極めるには一定の知識が必要",
+      "GPU版を活用するにはCUDA環境の整備など、追加のインフラ構築が求められる"
+    ],
+    "comparisons": [
+      {
+        "slug": "hnsw",
+        "note": "FaissはHNSWを含む複数の近似最近傍探索アルゴリズムを実装した検索ライブラリ"
+      },
+      {
+        "slug": "vector-database",
+        "note": "Faissは検索アルゴリズムのライブラリであり、永続化やAPIサーバー機能まで含む専用のベクトルデータベースとは役割が異なる"
+      },
+      {
+        "slug": "embedding-model",
+        "note": "Faissは、埋め込みモデルが出力したベクトルを登録・検索する用途で使われることが多い"
+      }
+    ],
+    "relatedTerms": [
+      "hnsw",
+      "vector-database",
+      "embedding-model",
+      "semantic-search"
+    ],
+    "faq": [
+      {
+        "question": "Faissとベクトルデータベースの違いは？",
+        "answer": "Faissは類似検索アルゴリズムを実装したライブラリで、永続化やAPIサーバー機能は含まない。Milvusなどのベクトルデータベースは、Faissのような検索エンジンにデータ管理やAPIの機能を組み合わせた製品にあたる。"
+      },
+      {
+        "question": "FaissはGPUでも使える？",
+        "answer": "GPU対応の実装が用意されており、CPUだけの場合と比べて非常に大規模なベクトル集合でも高速に検索できる。"
+      }
+    ],
+    "references": [
+      {
+        "type": "GitHub",
+        "label": "facebookresearch/faiss",
+        "url": "https://github.com/facebookresearch/faiss"
+      }
+    ]
+  },
+  {
+    "slug": "cosine-similarity",
+    "name": "コサイン類似度",
+    "aliases": [
+      "Cosine Similarity"
+    ],
+    "tagline": "2つのベクトルがなす角度の近さから、意味的な類似度を測る指標",
+    "category": "技術",
+    "tags": [
+      "埋め込み",
+      "ベクトル検索"
+    ],
+    "plainSummary": "2つの意味ベクトルの「向き」がどれだけ近いかで、意味の近さを測るものさし。",
+    "summary": "コサイン類似度は、2つのベクトルの内積をそれぞれのベクトルの大きさ(ノルム)の積で割った指標。\n2つのベクトルがなす角度の余弦(コサイン)に相当し、ベクトルの向きがどれだけ近いかを-1から1の範囲で表す。\n値が1に近いほど2つのベクトルはほぼ同じ向き(意味的に近い)であることを示し、0に近いほど無関係、-1に近いほど反対の向きであることを示す。\nベクトルの大きさではなく向きだけに着目するため、埋め込みベクトルの大きさが文の長さなどによって変動しても意味の近さを一定の基準で比較でき、セマンティック検索や文書間の類似度計算で標準的に使われている。\nベクトルをあらかじめ大きさ1に正規化しておけば、コサイン類似度の計算は単純な内積の計算と等価になる。ベクトル検索エンジンの多くはこの性質を前提に実装している。",
+    "background": "埋め込みベクトル同士の類似度を測る際、単純なユークリッド距離はベクトルの大きさの違いに影響されやすく、文の長さなどが異なる文書同士の比較には不向きな場合がある。\nコサイン類似度は、ベクトルの向きだけに着目することでこの影響を受けにくくし、意味的な近さをより安定して比較できる指標として広く使われるようになった。",
+    "architecture": "2つのベクトル a と b に対し、コサイン類似度は内積 a・b を、それぞれのノルム|a|と|b|の積で割った値として計算される。\nこの値は、2つのベクトルがなす角度θの余弦cosθと数学的に一致し、角度が0度(同じ向き)のとき1、90度(直交)のとき0、180度(反対向き)のとき-1をとる。",
+    "advantages": [
+      "ベクトルの大きさに影響されず、向きの近さだけで意味的な類似度を比較できる",
+      "計算がシンプルで、正規化済みベクトルであれば内積の計算だけで済む",
+      "埋め込みベクトルを使う様々な検索・比較タスクで標準的に使われ、実装例やライブラリのサポートが豊富"
+    ],
+    "disadvantages": [
+      "ベクトルの大きさの情報を無視するため、大きさ自体に意味がある用途には向かない",
+      "埋め込み空間の学習のされ方によっては、コサイン類似度が必ずしも人間の感じる意味的な近さと一致しないことがある",
+      "非常に高次元な空間では、ランダムなベクトル同士でも類似度が特定の値へ偏りやすいという性質がある"
+    ],
+    "comparisons": [
+      {
+        "slug": "embedding",
+        "note": "コサイン類似度は、埋め込みベクトル同士の意味的な近さを測る際に最もよく使われる指標"
+      },
+      {
+        "slug": "semantic-search",
+        "note": "セマンティック検索では、クエリと文書の埋め込みベクトル間のコサイン類似度をスコアとして使うことが多い"
+      },
+      {
+        "slug": "hnsw",
+        "note": "HNSWなどの近似最近傍探索アルゴリズムは、コサイン類似度を距離指標として使うよう設定できる"
+      }
+    ],
+    "relatedTerms": [
+      "embedding",
+      "semantic-search",
+      "hnsw",
+      "vector-database"
+    ],
+    "faq": [
+      {
+        "question": "コサイン類似度とユークリッド距離の違いは？",
+        "answer": "ユークリッド距離はベクトル間の直線的な距離を測るのに対し、コサイン類似度はベクトルの向きの近さだけを測る。ベクトルの大きさが意味を持たない埋め込み同士の比較では、コサイン類似度がよく使われる。"
+      },
+      {
+        "question": "コサイン類似度の値はどう解釈する？",
+        "answer": "1に近いほど意味的に近く、0に近いほど無関係、負の値に近いほど反対の意味合いを持つ傾向がある。実務では0.7〜0.8以上を類似と判断する閾値に使うことが多いが、最適な閾値は埋め込みモデルごとに異なる。"
+      }
+    ],
+    "references": []
+  },
+  {
+    "slug": "grok",
+    "name": "Grok",
+    "aliases": [],
+    "tagline": "イーロン・マスク率いるxAIが開発する、X(旧Twitter)との統合を特徴とする大規模言語モデルファミリー",
+    "category": "モデル",
+    "tags": [
+      "LLM",
+      "マルチモーダル"
+    ],
+    "plainSummary": "イーロン・マスクのxAIが作るAIモデル。X(旧Twitter)の投稿をリアルタイムに参照できる点が特徴。",
+    "summary": "Grokは、イーロン・マスクの設立したxAIが開発する大規模言語モデルファミリー。\nX(旧Twitter)上のリアルタイムな投稿データへのアクセスを活かし、最新の出来事に関する話題にも対応できる点を特徴とする。\n他の主要な商用LLMと同様にチャット形式の対話・コード生成・画像生成などに対応するほか、Xのプラットフォーム上に統合され、ユーザーの投稿やトレンドを踏まえた応答を生成できるよう設計されている。\nやや砕けた口調やユーモアを交えた応答スタイルを打ち出す点が、他の主要モデルとの差別化要素として語られることが多い。\nバージョンを重ねるごとに推論能力やマルチモーダル対応が強化されており、xAIは大規模GPUクラスタを自社構築して学習基盤に投資している。",
+    "background": "既存の商用LLMの多くは学習データの収集時点までの知識に基づいて応答するため、リアルタイム性の高い話題への対応に制約があった。\nGrokは、X社の持つリアルタイムな投稿データを学習・検索に活用できる立場を生かし、最新の話題に強いLLMという差別化を狙って開発された。",
+    "history": "2023年: xAIが設立され、Grokの最初のバージョンを発表。\n2024年: Grok-1のモデル重みが一部オープンソースとして公開される。\n2024-2025年: Grok-2、Grok-3、Grok-4と改良が続き、推論能力とマルチモーダル対応が強化される。",
+    "advantages": [
+      "X上のリアルタイムな投稿データを踏まえ、最新の話題に関する応答を生成しやすい",
+      "Xのプラットフォームに統合されており、ユーザーが既存のアプリ内からシームレスに利用できる",
+      "大規模な計算基盤への継続投資により、モデルの改良サイクルが速い"
+    ],
+    "disadvantages": [
+      "他の主要な商用LLMと比べ、サードパーティのエコシステムやツール連携の実績はまだ少ない",
+      "X上のデータに強く依存する設計上、プラットフォーム外の情報源に対する強みは相対的に薄い",
+      "砕けた応答スタイルが、用途によっては企業向けの丁寧な応答を求める場面に合わないことがある"
+    ],
+    "comparisons": [
+      {
+        "slug": "gpt",
+        "note": "GPTが幅広い用途向けの汎用モデルとして展開されるのに対し、GrokはXとの統合とリアルタイム性を強みとする"
+      },
+      {
+        "slug": "claude",
+        "note": "Claudeが安全性とアライメントを重視するのに対し、Grokはリアルタイム情報へのアクセスと砕けた応答スタイルを特徴とする"
+      },
+      {
+        "slug": "gemini",
+        "note": "Geminiがマルチモーダル統合と検索連携を強みとするのに対し、GrokはX上のデータとの統合を強みとする"
+      }
+    ],
+    "relatedTerms": [
+      "gpt",
+      "claude",
+      "gemini",
+      "multimodal"
+    ],
+    "faq": [
+      {
+        "question": "GrokとほかのLLMの一番の違いは？",
+        "answer": "X(旧Twitter)上のリアルタイムな投稿データへアクセスでき、最新の出来事に関する話題に対応しやすい点が大きな特徴。プラットフォームとの統合も強みとされる。"
+      },
+      {
+        "question": "Grokは誰でも使える？",
+        "answer": "X Premiumなどのサブスクリプションを通じて利用できるほか、xAIのAPIを通じて開発者が自社アプリへ組み込むこともできる。"
+      }
+    ],
+    "references": [
+      {
+        "type": "Official Website",
+        "label": "xAI",
+        "url": "https://x.ai/"
+      }
+    ]
+  },
+  {
+    "slug": "cohere",
+    "name": "Cohere",
+    "aliases": [
+      "Command R"
+    ],
+    "tagline": "カナダのCohereが開発する、企業向けRAG・検索用途に強みを持つLLM・埋め込みモデルファミリー",
+    "category": "モデル",
+    "tags": [
+      "LLM",
+      "埋め込み"
+    ],
+    "plainSummary": "カナダのCohere社が作る、企業の検索・RAG用途に特化したAIモデルシリーズ。",
+    "summary": "Cohereは、Google Brain出身のメンバーが設立したカナダのAI企業で、同社が開発するCommand Rシリーズの大規模言語モデルと、Embedシリーズの埋め込みモデルを指すことも多い。\nCommand Rは、検索拡張生成(RAG)における文書引用や出典の明示、複数ステップにわたるツール利用など、企業の検索・エージェント用途を強く意識した機能を備えている点が特徴。\nEmbedシリーズの埋め込みモデルは、多言語対応や検索精度の高さで評価されており、独自の大規模言語モデルを持たない企業でも、検索・RAGシステムの構築にCohereの埋め込みモデルだけを組み込むといった使い方もされている。\n消費者向けチャットボットよりも、企業のデータ基盤やエンタープライズ向けAIアプリケーションへの組み込みを主軸に事業展開している点が、OpenAIやAnthropicなど他の主要プロバイダとの違いとして語られる。",
+    "background": "多くのLLMが汎用的なチャットボット用途を中心に開発される一方、企業内の検索・RAGシステムでは、出典の明示や複数文書にまたがる根拠づけなど、対話とは異なる要件が求められる。\nCohereは、この企業向け検索・RAG用途に特化したモデルとサービスを提供することで、差別化を図ってきた。",
+    "history": "2019年: Aidan GomezらGoogle Brain出身のメンバーによりCohereが設立される。\n2022年: 大規模言語モデルと埋め込みモデルのAPIを公開。\n2024年: 検索・ツール利用・引用機能を強化したCommand Rシリーズを発表し、企業向けRAG用途での採用を拡大。",
+    "advantages": [
+      "RAGにおける文書引用や出典の明示など、企業の検索用途に特化した機能を備える",
+      "多言語対応の埋め込みモデルの精度に定評があり、検索システムの基盤として単体でも利用しやすい",
+      "エンタープライズ向けのサポートやオンプレミス・プライベートクラウドでの提供にも対応している"
+    ],
+    "disadvantages": [
+      "一般消費者向けの知名度やエコシステムでは、OpenAIやGoogleなど大手プロバイダに比べて小さい",
+      "汎用的な創作・雑談用途では、他の主要モデルほど幅広い評価事例が蓄積されていない",
+      "企業向け機能に寄せた設計のため、個人開発者には同等の価格帯の汎用モデルの方が使いやすい場合も多い"
+    ],
+    "comparisons": [
+      {
+        "slug": "embedding-model",
+        "note": "CohereのEmbedシリーズは、多言語対応と検索精度に定評のある埋め込みモデルとして単体でも利用される"
+      },
+      {
+        "slug": "retrieval-augmented-generation",
+        "note": "Command Rは、RAGにおける文書引用や出典明示など、検索拡張生成の実務要件を強く意識して設計されている"
+      },
+      {
+        "slug": "bedrock",
+        "note": "CohereのモデルはAmazon Bedrockなど複数のクラウドプラットフォーム経由でも利用できる"
+      }
+    ],
+    "relatedTerms": [
+      "embedding-model",
+      "retrieval-augmented-generation",
+      "bedrock"
+    ],
+    "faq": [
+      {
+        "question": "CohereはOpenAIやAnthropicと何が違う？",
+        "answer": "消費者向けチャットボットよりも、企業の検索・RAG・エージェント用途に特化した機能(文書引用や出典明示など)を強みとしている点が異なる。"
+      },
+      {
+        "question": "Cohereの埋め込みモデルだけを使うこともできる？",
+        "answer": "できる。Command Rなどの大規模言語モデルを使わず、Embedシリーズの埋め込みモデルだけを検索システムに組み込む使い方も広く行われている。"
+      }
+    ],
+    "references": [
+      {
+        "type": "Official Website",
+        "label": "Cohere",
+        "url": "https://cohere.com/"
+      }
+    ]
+  },
+  {
+    "slug": "stable-diffusion",
+    "name": "Stable Diffusion",
+    "aliases": [],
+    "tagline": "Stability AIが公開した、オープンウェイトの拡散モデルベースによるテキストから画像を生成するモデル",
+    "category": "モデル",
+    "tags": [
+      "生成AI",
+      "画像生成"
+    ],
+    "plainSummary": "文章から画像を作る、誰でも重みをダウンロードして使えるオープンな画像生成AI。",
+    "summary": "Stable Diffusionは、Stability AIが中心となって開発・公開した、テキストの説明文から画像を生成する拡散モデルベースの画像生成AIで、モデルの重みが公開されているオープンウェイトモデルである点が大きな特徴。\n画素空間ではなく、より低次元に圧縮された潜在空間上でノイズ除去の拡散過程を進めるLatent Diffusion Modelという設計を採用しており、DALL-E 2など画素空間で直接拡散するモデルと比べて計算コストを抑えつつ高解像度の画像を生成できる。\nモデルの重みが公開されているため、個人のPCやオンプレミス環境で実行したり、独自のデータで追加学習(ファインチューニング)したりでき、多数の派生モデルやツール(ControlNet、LoRAアダプタなど)がコミュニティによって開発されている。\nテキストから画像だけでなく、画像から画像への変換(img2img)やインペインティング(部分修正)など、幅広い画像生成・編集用途に応用されている。",
+    "background": "DALL-E 2など初期の高品質な画像生成AIの多くはクローズドなAPI経由でのみ利用可能で、モデルの重みも非公開だった。\nStable Diffusionは、画像生成モデルの重みを公開することで、個人や企業が自由に実行・改変・商用利用できるオープンなエコシステムを作る目的で開発された。",
+    "history": "2022年: Stability AI、CompVis、Runwayの共同研究としてStable Diffusionが公開される。\n2022年: バージョン2系列が発表され、解像度と品質が向上。\n2023-2024年: SDXL、Stable Diffusion 3など、アーキテクチャを改良した後継モデルが登場。",
+    "architecture": "テキストエンコーダがプロンプトを埋め込みベクトルへ変換し、画像はVAE(変分オートエンコーダ)のエンコーダによって低次元の潜在空間へ圧縮される。\nこの潜在空間上でU-Net構造のネットワークが、テキスト埋め込みを条件としながらノイズ除去の拡散過程を繰り返し、画像の潜在表現を生成する。\n最終的に、VAEのデコーダが潜在表現を画素空間の画像へ変換して出力する。",
+    "advantages": [
+      "モデルの重みが公開されており、ローカル環境での実行や独自データでの追加学習が可能",
+      "潜在空間上で拡散過程を行うため、画素空間で直接処理するモデルより計算コストを抑えられる",
+      "ControlNetやLoRAなど、コミュニティによる拡張・派生ツールが豊富に存在する"
+    ],
+    "disadvantages": [
+      "モデルが公開されているため、著作権侵害や実在人物の偽画像など、有害な用途に悪用されるリスクがある",
+      "手や指など細部の描写が不自然になりやすいという、拡散モデル一般に共通する弱点を抱える",
+      "高品質な画像を生成するには、プロンプトの工夫や追加のファインチューニングなど、ある程度の習熟が必要になる"
+    ],
+    "comparisons": [
+      {
+        "slug": "diffusion-model",
+        "note": "Stable Diffusionは、潜在空間上で拡散過程を行うLatent Diffusion Modelを採用した代表的な拡散モデルの実装"
+      },
+      {
+        "slug": "variational-autoencoder",
+        "note": "Stable Diffusionは、画像を潜在空間へ圧縮・復元する部分にVAEを利用している"
+      },
+      {
+        "slug": "clip",
+        "note": "テキストプロンプトの理解には、CLIPに類似したテキストエンコーダの技術が活用されている"
+      }
+    ],
+    "relatedTerms": [
+      "diffusion-model",
+      "variational-autoencoder",
+      "clip"
+    ],
+    "faq": [
+      {
+        "question": "Stable DiffusionとDALL-Eの違いは？",
+        "answer": "DALL-EはOpenAIが提供するクローズドなAPI経由のサービスであるのに対し、Stable Diffusionはモデルの重みが公開されており、ローカル環境で実行・改変できる点が大きく異なる。"
+      },
+      {
+        "question": "Stable Diffusionは自分のPCで動かせる？",
+        "answer": "十分なVRAMを持つGPUがあれば、個人のPC上でも実行できる。モデルサイズやバージョンによって必要なGPUスペックは異なる。"
+      }
+    ],
+    "references": [
+      {
+        "type": "GitHub",
+        "label": "Stability-AI/stablediffusion",
+        "url": "https://github.com/Stability-AI/stablediffusion"
+      }
+    ]
+  },
+  {
+    "slug": "whisper",
+    "name": "Whisper",
+    "aliases": [],
+    "tagline": "OpenAIが公開した、多言語対応のオープンソース音声認識(ASR)モデル",
+    "category": "モデル",
+    "tags": [
+      "音声認識",
+      "マルチモーダル"
+    ],
+    "plainSummary": "話した言葉を文字に書き起こす、OpenAI製の無料で使える音声認識AI。",
+    "summary": "Whisperは、OpenAIが公開したオープンソースの自動音声認識(ASR)モデル。\nWeb上から収集した68万時間分という大規模かつ多言語・多様なノイズ環境の音声データで学習されており、単一言語のクリーンな音声だけでなく、雑音混じりの音声や多様なアクセントに対しても高い認識精度を発揮する。\nEncoder-DecoderのTransformerアーキテクチャを採用し、音声からテキストへの書き起こし(文字起こし)だけでなく、音声の言語検出や、他言語の音声を英語のテキストへ翻訳するタスクも同一モデルでこなせる。\nモデルの重みと推論コードがオープンソースとして公開されており、OpenAIのAPI経由だけでなく自前のサーバーやローカル環境でも実行できる。\n多くの文字起こしサービスや、音声を含むマルチモーダルAIアプリケーションの音声認識コンポーネントとして、業界標準的に広く採用されている。",
+    "background": "従来の音声認識モデルの多くは、特定の言語やクリーンな録音環境に最適化されており、雑音混じりの実環境や多様な言語への汎化性能に課題があった。\nWhisperは、Web上の大規模かつ多様な音声データで学習することで、実環境でも頑健に機能する汎用的な音声認識モデルを目指して開発された。",
+    "history": "2022年: OpenAIがWhisperを論文とともにオープンソースで公開。\n2023年: OpenAI APIを通じて音声認識サービスとしても提供開始。\n2023年以降: リアルタイム性を高めた派生実装(faster-whisper等)がコミュニティで広がる。",
+    "architecture": "音声入力は短い区間ごとにログメルスペクトログラムへ変換され、Transformerのエンコーダへ入力される。\nデコーダは、エンコーダが出力した音声の特徴表現を参照しながら、テキストのトークン列を自己回帰的に生成する。\n学習時に文字起こし・翻訳・言語識別など複数のタスクを同じフォーマットで扱えるようにすることで、単一モデルで複数の音声関連タスクをこなせるようにしている。",
+    "advantages": [
+      "多言語かつ雑音混じりの音声にも頑健で、実環境での認識精度が高い",
+      "文字起こしだけでなく、言語検出や音声翻訳も同一モデルでこなせる",
+      "オープンソースで公開されており、ローカル環境での実行やカスタマイズが可能"
+    ],
+    "disadvantages": [
+      "モデルサイズが大きいバージョンほど、リアルタイム処理には相応の計算資源が必要になる",
+      "専門用語や固有名詞が多い音声では、認識精度が下がりやすい",
+      "長時間の音声を処理する際、途中で文脈を見失い誤った書き起こしを続けてしまう現象が報告されている"
+    ],
+    "comparisons": [
+      {
+        "slug": "multimodal",
+        "note": "Whisperは音声とテキストを扱うモデルで、マルチモーダルAIの音声認識コンポーネントとして組み込まれることが多い"
+      },
+      {
+        "slug": "transformer",
+        "note": "WhisperはEncoder-DecoderのTransformerアーキテクチャを音声認識タスクに応用したモデル"
+      },
+      {
+        "slug": "seq2seq",
+        "note": "Whisperの音声からテキストへの変換は、Seq2Seqの枠組みに基づいている"
+      }
+    ],
+    "relatedTerms": [
+      "multimodal",
+      "transformer",
+      "seq2seq"
+    ],
+    "faq": [
+      {
+        "question": "Whisperは日本語も認識できる？",
+        "answer": "多言語対応のモデルとして学習されており、日本語を含む多数の言語の音声認識に対応している。言語ごとの学習データ量により精度には差がある。"
+      },
+      {
+        "question": "Whisperは無料で使える？",
+        "answer": "モデルの重みと推論コードがオープンソースで公開されており、自前の環境で実行する分には無料で利用できる。OpenAIのAPI経由で使う場合は利用量に応じた料金がかかる。"
+      }
+    ],
+    "references": [
+      {
+        "type": "GitHub",
+        "label": "openai/whisper",
+        "url": "https://github.com/openai/whisper"
+      }
+    ]
+  },
+  {
+    "slug": "clip",
+    "name": "CLIP",
+    "aliases": [
+      "Contrastive Language-Image Pre-training"
+    ],
+    "tagline": "画像とテキストを同じ埋め込み空間へ対応づけ、両者の意味的な近さを比較できるようにするOpenAIのマルチモーダルモデル",
+    "category": "モデル",
+    "tags": [
+      "マルチモーダル",
+      "埋め込み"
+    ],
+    "plainSummary": "画像と、それを説明する文章を同じ「意味の地図」の上に置いて、写真と言葉の近さを比べられるようにするAI。",
+    "summary": "CLIP(Contrastive Language-Image Pre-training)は、OpenAIが開発したマルチモーダルモデル。\n画像エンコーダとテキストエンコーダをそれぞれ用意し、対になる画像とキャプション(説明文)の埋め込みベクトルが近くなるよう、大量の画像・テキストペアを対照学習(コントラスティブラーニング)で学習する。\n学習後は、任意の画像とテキストをそれぞれのエンコーダへ入力し、得られた埋め込みベクトル同士のコサイン類似度を計算するだけで、画像とテキストの意味的な近さを定量的に比較できる。\nこの仕組みにより、あらかじめ定義されたクラスラベルなしで画像分類するゼロショット画像分類や、テキストによる画像検索が可能になり、ラベル付きデータでの追加学習を必要としない柔軟な応用範囲を持つ。\nCLIPが確立した画像とテキストの共通埋め込み空間という考え方は、Stable DiffusionやDALL-Eなどのテキストから画像を生成するモデルにおいて、プロンプトの意味を画像生成の条件として組み込む仕組みの基盤としても広く活用されている。",
+    "background": "従来の画像認識モデルは、あらかじめ定義された固定のクラスラベルの中でしか分類できず、新しいカテゴリへ対応するには再学習が必要だった。\nCLIPは、画像とテキストを共通の埋め込み空間で結びつけることで、自然言語による柔軟なラベル付けや検索を可能にする目的で開発された。",
+    "history": "2021年: OpenAIが論文「Learning Transferable Visual Models From Natural Language Supervision」でCLIPを発表。\n2021年以降: 画像生成モデルのテキスト条件付けや、画像検索システムの基盤技術として広く応用が進む。",
+    "architecture": "画像エンコーダ(CNNまたはVision Transformer)とテキストエンコーダ(Transformer)を用意し、それぞれ画像とテキストを固定長の埋め込みベクトルへ変換する。\n学習時は、同じミニバッチ内の対になる画像・テキストペアの埋め込み同士の類似度が高くなり、対にならない組み合わせの類似度が低くなるよう対照損失を最適化する。\nこの学習を経て、意味的に対応する画像とテキストの組は、埋め込み空間上で近い位置へ配置される。",
+    "advantages": [
+      "ラベル付きデータでの追加学習なしに、新しいカテゴリへのゼロショット画像分類ができる",
+      "画像とテキストを共通の空間で比較できるため、テキストによる柔軟な画像検索が可能になる",
+      "画像生成モデルのテキスト条件付けなど、他のマルチモーダル技術の基盤として幅広く応用されている"
+    ],
+    "disadvantages": [
+      "学習データに含まれる社会的バイアスが、画像とテキストの対応関係にも反映されることがある",
+      "細かい位置関係や数量など、画像の詳細な構造的理解を要するタスクは苦手とされる",
+      "学習に使われたインターネット由来の画像・テキストペアの質が、モデルの性能に大きく影響する"
+    ],
+    "comparisons": [
+      {
+        "slug": "embedding",
+        "note": "CLIPは、画像とテキストを同じ埋め込み空間へ対応づけるマルチモーダルな埋め込みモデルの代表例"
+      },
+      {
+        "slug": "stable-diffusion",
+        "note": "Stable Diffusionなどのテキストから画像を生成するモデルは、CLIPに類似した仕組みでプロンプトの意味を画像生成に反映させる"
+      },
+      {
+        "slug": "multimodal",
+        "note": "CLIPは、画像とテキストという異なるモダリティを統一的に扱うマルチモーダルAIの基礎技術の1つ"
+      }
+    ],
+    "relatedTerms": [
+      "embedding",
+      "stable-diffusion",
+      "multimodal",
+      "cosine-similarity"
+    ],
+    "faq": [
+      {
+        "question": "CLIPはどうやって画像分類に使う？",
+        "answer": "分類したいクラス名をテキストとしてエンコードし、対象画像の埋め込みとの類似度が最も高いクラスを選ぶことで、追加学習なしにゼロショットで画像分類ができる。"
+      },
+      {
+        "question": "CLIPは画像生成モデルとどう関係する？",
+        "answer": "Stable DiffusionやDALL-Eなど、テキストから画像を生成するモデルの多くが、CLIPと同様の仕組みでテキストプロンプトの意味を画像生成の条件として組み込んでいる。"
+      }
+    ],
+    "references": [
+      {
+        "type": "Research Paper",
+        "label": "Learning Transferable Visual Models From Natural Language Supervision",
+        "url": "https://arxiv.org/abs/2103.00020"
+      },
+      {
+        "type": "GitHub",
+        "label": "openai/CLIP",
+        "url": "https://github.com/openai/CLIP"
+      }
+    ]
+  },
+  {
+    "slug": "truthfulqa",
+    "name": "TruthfulQA",
+    "aliases": [],
+    "tagline": "誤った通説や俗説に迎合せず、真実に基づいた回答をLLMが返せるかを測るベンチマーク",
+    "category": "評価",
+    "tags": [
+      "ベンチマーク",
+      "安全性"
+    ],
+    "plainSummary": "「よくある勘違い」に釣られず、AIが正しいことを答えられるか試すテスト。",
+    "summary": "TruthfulQAは、人々の間で広く信じられているものの事実ではない俗説や誤解(健康・法律・陰謀論など)に関する質問を集めたベンチマークで、LLMが学習データ中に頻出する誤った通説へ迎合してもっともらしく答えてしまうか、それとも正確な事実に基づいて回答できるかを測定する。\n単に知識の量を測るのではなく、学習データに含まれる人間の誤解や偏見のパターンをそのまま繰り返してしまう傾向(模倣的誤り、imitative falsehoods)を検出することに主眼を置く。\nモデルが大規模かつ流暢になるほど、かえって誤った通説をもっともらしく述べてしまう場合があることを示す目的で設計されている。\n各質問には、真実に基づく回答例とよくある誤答例の両方が用意されている。\n人手による評価に加え、別のLLMを判定役に使う自動採点の枠組みも提供されている。\nLLMの知識量や流暢さだけでなく、事実に忠実であろうとする姿勢(truthfulness)を評価する指標として、モデルの安全性・信頼性を議論する際にしばしば参照される。",
+    "background": "LLMは学習データ中の統計的なパターンを学習するため、人々の間で広く信じられている誤った通説も、あたかも事実のごとく流暢に述べてしまうことがある。\nTruthfulQAは、この「もっともらしいが誤った回答」という問題を体系的に検出し、モデルの真実性を定量的に評価できるようにする目的で作成された。",
+    "history": "2021年: LinらがTruthfulQAを提案する論文「TruthfulQA: Measuring How Models Mimic Human Falsehoods」を発表。\n2022年以降: 主要なLLMのアライメント・安全性評価の一環として、TruthfulQAでのスコアが継続的に報告されるように。",
+    "advantages": [
+      "単なる知識量ではなく、誤った通説への迎合しやすさという特有のリスクを検出できる",
+      "モデルの規模が大きくなるほど性能が向上するとは限らないという、直感に反する結果を可視化できる",
+      "人手評価とLLMによる自動評価の両方の枠組みが用意されており、継続的な評価に組み込みやすい"
+    ],
+    "disadvantages": [
+      "何が「真実」であるかの判定基準には価値観が絡む分野(政治・倫理など)もあり、判定の客観性に議論の余地がある",
+      "質問数が限られており、対象領域(健康・法律・陰謀論など)に偏りがある",
+      "自動採点に使う判定役のLLM自体の判断精度に、評価結果が左右される"
+    ],
+    "comparisons": [
+      {
+        "slug": "hallucination",
+        "note": "TruthfulQAは、ハルシネーションのうち特に人間の誤った通説を模倣するタイプの誤りを検出するベンチマーク"
+      },
+      {
+        "slug": "mmlu",
+        "note": "MMLUが幅広い知識の正確さを問うのに対し、TruthfulQAは誤った通説への迎合しやすさに特化して問う"
+      },
+      {
+        "slug": "llm-as-a-judge",
+        "note": "TruthfulQAの自動採点では、別のLLMを判定役に使うLLM-as-a-Judgeの枠組みが使われる"
+      }
+    ],
+    "relatedTerms": [
+      "hallucination",
+      "mmlu",
+      "llm-as-a-judge",
+      "alignment"
+    ],
+    "faq": [
+      {
+        "question": "TruthfulQAで測る「真実性」とは？",
+        "answer": "単なる知識の正確さだけでなく、学習データ中に頻出する誤った通説や俗説に対し、迎合せず事実に基づいた回答を返せるかという性質を指す。"
+      },
+      {
+        "question": "モデルが大きいほどTruthfulQAのスコアは高い？",
+        "answer": "必ずしもそうではない。モデルが大規模かつ流暢になるほど、学習データ中の誤った通説をよりもっともらしく述べてしまうことがあると報告されている。"
+      }
+    ],
+    "references": [
+      {
+        "type": "Research Paper",
+        "label": "TruthfulQA: Measuring How Models Mimic Human Falsehoods",
+        "url": "https://arxiv.org/abs/2109.07958"
+      }
+    ]
+  },
+  {
+    "slug": "hellaswag",
+    "name": "HellaSwag",
+    "aliases": [],
+    "tagline": "状況説明に続く最も自然な文の続きを4択から選ばせ、常識的な推論力を測るベンチマーク",
+    "category": "評価",
+    "tags": [
+      "ベンチマーク",
+      "常識推論"
+    ],
+    "plainSummary": "ある場面の説明を読み、続きとして一番自然な文を4択から選ばせて常識力を測るテスト。",
+    "summary": "HellaSwagは、日常的な状況を説明する文章に続く「最も自然な続き」を4つの選択肢から選ばせることで、LLMの常識的推論力を測定するベンチマーク。\n選択肢のうち1つは人間が書いた正しい続きで、残り3つは敵対的フィルタリング(Adversarial Filtering)という手法を使い、当時の言語モデルが誤って選びやすい紛らわしい誤答として意図的に生成されている。\n人間にとっては簡単に正しい続きを見分けられる一方、当時の言語モデルの多くは表面的な単語の並びのもっともらしさに引きずられて誤答を選びやすく、人間とモデルの常識推論力の差を際立たせる設計になっている。\nGPT-3以降の大規模言語モデルの登場によりスコアが大きく向上し、現在では多くの強力なLLMが人間に近い、あるいはそれを上回る正答率を示すようになっている。",
+    "background": "従来の常識推論ベンチマークは、モデルの性能向上とともにすぐに高い正答率に達してしまい、識別力を失う課題があった。\nHellaSwagは、敵対的フィルタリングによって当時のモデルが誤りやすい選択肢を意図的に生成することで、より長く識別力を保てるベンチマークを目指して作成された。",
+    "history": "2019年: ZellersらがHellaSwagを提案する論文「HellaSwag: Can a Machine Really Finish Your Sentence?」を発表。\n2020年: GPT-3など大規模モデルの登場により、正答率が急速に向上し始める。\n2023年以降: 主要なLLMの多くが高い正答率に達し、識別力の低下が指摘されるように。",
+    "advantages": [
+      "敵対的フィルタリングにより、表面的な単語の並びだけでは解けない紛らわしい選択肢が用意されている",
+      "選択式で採点が明確なため、大規模な自動評価に向いている",
+      "常識的推論力という、知識量とは異なるモデルの能力を測る指標として活用できる"
+    ],
+    "disadvantages": [
+      "近年の強力なLLMでは正答率が飽和しつつあり、モデル間の性能差を識別しにくくなっている",
+      "選択肢が英語の日常的な状況記述に基づくため、文化的・言語的な偏りを含む可能性がある",
+      "選択式のタスクであるため、自由記述形式の常識推論力までを直接測れるわけではない"
+    ],
+    "comparisons": [
+      {
+        "slug": "mmlu",
+        "note": "MMLUが幅広い分野の知識を問うのに対し、HellaSwagは日常的な状況における常識推論力に特化している"
+      },
+      {
+        "slug": "gsm8k",
+        "note": "GSM8Kが多段階の数式的推論を測るのに対し、HellaSwagは常識的な状況判断力を測る"
+      },
+      {
+        "slug": "arena",
+        "note": "HellaSwagのような静的な選択式ベンチマークに対し、Chatbot Arenaは人間の実際の投票に基づく動的な評価をする"
+      }
+    ],
+    "relatedTerms": [
+      "mmlu",
+      "gsm8k",
+      "arena"
+    ],
+    "faq": [
+      {
+        "question": "敵対的フィルタリングとは？",
+        "answer": "当時の言語モデルが誤って高いスコアを与えやすい選択肢を、アルゴリズム的に選別・生成する手法。人間には簡単でもモデルには紛らわしい誤答を作ることで、ベンチマークの識別力を高める。"
+      },
+      {
+        "question": "HellaSwagは今も有効な指標？",
+        "answer": "近年の強力なLLMでは正答率が非常に高くなり、モデル間の差を見分ける力は弱まっている。他の新しいベンチマークと組み合わせて使われることが多い。"
+      }
+    ],
+    "references": [
+      {
+        "type": "Research Paper",
+        "label": "HellaSwag: Can a Machine Really Finish Your Sentence?",
+        "url": "https://arxiv.org/abs/1905.07830"
+      }
+    ]
+  },
+  {
+    "slug": "mt-bench",
+    "name": "MT-Bench",
+    "aliases": [
+      "Multi-Turn Bench"
+    ],
+    "tagline": "複数ターンにわたる会話でのLLMの応答品質を、強力な別のLLMに採点させて評価するベンチマーク",
+    "category": "評価",
+    "tags": [
+      "ベンチマーク",
+      "LLM-as-a-Judge"
+    ],
+    "plainSummary": "何回かやり取りする会話をAI同士でさせて、その会話の質を別のAIに採点させるテスト。",
+    "summary": "MT-Benchは、単発の質問応答ではなく、複数ターンにわたる対話形式のやり取りにおけるLLMの応答品質を評価するために設計されたベンチマーク。\n執筆・ロールプレイ・推論・数学・コーディングなど幅広いカテゴリの複数ターン会話に対する応答を、GPT-4など強力な別のLLMに採点させるLLM-as-a-Judgeの枠組みを採用している。\n1ターン目の質問への応答だけでなく、その応答を踏まえた2ターン目の追加質問への応答も評価対象に含めることで、文脈を維持しながら一貫した対話を続けられるかという、単発の質問応答ベンチマークでは測りにくい能力を評価できる。\n提案元の論文では、GPT-4を審査役に使った採点結果が、人間の評価者による採点結果と高い一致率を示すことが報告され、LLM-as-a-Judgeという評価手法自体の妥当性を検証する事例としても引用される。\nChatbot Arenaと同じ研究グループによって提案され、両者は人間の投票とLLMによる自動採点という異なる角度からLLMの対話品質を補完的に評価する枠組みとして併用されることが多い。",
+    "background": "従来のベンチマークの多くは単発の質問応答や選択式のタスクを扱っており、複数ターンにわたる自然な対話としての品質を評価する標準的な手法が不足していた。\nMT-Benchは、実際のチャットボット利用に近い複数ターンの対話シナリオを用意し、LLM-as-a-Judgeを使って効率的かつ大規模な評価を実現する目的で提案された。",
+    "history": "2023年: ZhengらがMT-BenchとChatbot Arenaを同じ論文「Judging LLM-as-a-Judge with MT-Bench and Chatbot Arena」で発表。\n2023年以降: 多くのLLM開発元が、新モデルの対話性能を示す指標としてMT-Benchのスコアを報告するように。",
+    "workflow": "執筆・推論・コーディングなど複数のカテゴリにわたる1ターン目の質問セットを用意する。\n評価対象のLLMに1ターン目の質問へ回答させ、その回答を踏まえた2ターン目の追加質問にも回答させる。\n両方のターンの応答を、GPT-4など審査役のLLMへ評価基準に沿って採点させ、平均スコアを算出する。",
+    "advantages": [
+      "複数ターンにわたる文脈維持能力など、単発の質問応答では測れない対話品質を評価できる",
+      "LLM-as-a-Judgeにより、人手評価と比べて低コストかつ高速にスコアを算出できる",
+      "審査役LLMの採点結果が人間の評価と高い一致率を示すことが報告されており、評価手法として一定の妥当性が確認されている"
+    ],
+    "disadvantages": [
+      "審査役に使うLLMの癖や偏りが、採点結果に影響する可能性がある",
+      "評価対象の応答が審査役LLMと同系統の場合、自己選好バイアスを起こしやすい",
+      "質問セットの内容やカテゴリの偏りが、評価結果の一般化可能性に影響する"
+    ],
+    "comparisons": [
+      {
+        "slug": "arena",
+        "note": "MT-BenchがLLMによる自動採点を使うのに対し、Chatbot Arenaは人間の実際の投票による評価をする"
+      },
+      {
+        "slug": "llm-as-a-judge",
+        "note": "MT-Benchは、LLM-as-a-Judgeという評価手法を複数ターン会話の評価に適用した代表的なベンチマーク"
+      },
+      {
+        "slug": "mmlu",
+        "note": "MMLUが選択式の知識問題を扱うのに対し、MT-Benchは自由記述形式の複数ターン対話を評価する"
+      }
+    ],
+    "relatedTerms": [
+      "llm-as-a-judge",
+      "arena",
+      "mmlu"
+    ],
+    "faq": [
+      {
+        "question": "MT-BenchとChatbot Arenaの違いは？",
+        "answer": "MT-Benchは複数ターンの会話に対しLLMを審査役として自動採点するのに対し、Chatbot Arenaは実際の人間ユーザーの投票によってモデル同士を比較する。同じ研究グループが提案し、補完的に使われることが多い。"
+      },
+      {
+        "question": "MT-Benchはなぜ複数ターンを評価する？",
+        "answer": "実際のチャットボット利用では複数回のやり取りが一般的なため、1ターン目の応答だけでなく、文脈を踏まえた2ターン目の応答品質まで評価することで、より実運用に近い対話能力を測るため。"
+      }
+    ],
+    "references": [
+      {
+        "type": "Research Paper",
+        "label": "Judging LLM-as-a-Judge with MT-Bench and Chatbot Arena",
+        "url": "https://arxiv.org/abs/2306.05685"
+      }
+    ]
+  },
+  {
+    "slug": "elo-rating",
+    "name": "Eloレーティング",
+    "aliases": [
+      "Elo Rating"
+    ],
+    "tagline": "対戦結果の勝敗から、相対的な強さを1つの数値で表すレーティングシステム",
+    "category": "評価",
+    "tags": [
+      "評価",
+      "ベンチマーク"
+    ],
+    "plainSummary": "チェスの強さを測る仕組みを応用し、AI同士の対戦成績から実力を数字で表す方法。",
+    "summary": "Eloレーティングは、元々チェスプレイヤーの相対的な実力を数値化するために考案されたレーティングシステムで、2者の対戦結果(勝ち・負け・引き分け)の積み重ねから、それぞれの相対的な強さを1つの数値として算出する。\n各対戦の前に両者のレーティング差から期待勝率を計算し、実際の対戦結果が期待勝率からどれだけ乖離したかに応じてレーティングを上下させる仕組みを持つ。\nこのため格上に勝てば大きくレーティングが上がり、格下に勝ってもわずかしか上がらない。\nこのように、対戦相手の強さを考慮した評価ができる。\nChatbot Arenaでは、人間の評価者が2つのLLMの応答を比較して好みを投票し、その大量の対戦結果からEloレーティングを算出することで、多数のLLM同士の相対的な性能を1つのランキングとして表現している。\n絶対的な正解が存在しない自由記述の応答品質を、人間同士の相対比較の積み重ねによって間接的にランキング化できる点が、選択式ベンチマークにはない特徴として評価されている。",
+    "background": "チェスのような対戦競技では、単純な勝率だけでは対戦相手の強さを考慮した実力比較ができない。\nEloレーティングは、対戦相手の強さを踏まえた期待勝率という考え方を導入することで、公平な相対的強さの指標を提供するために考案され、後にLLMの相対評価にも応用されるようになった。",
+    "history": "1960年代: Arpad EloがチェスプレイヤーのレーティングシステムとしてEloレーティングを考案。\n1970年: 国際チェス連盟(FIDE)が公式のレーティングシステムとして採用。\n2023年: Chatbot ArenaがLLM同士の相対評価にEloレーティングを応用し、LLM評価の分野で広く知られるようになる。",
+    "advantages": [
+      "対戦相手の強さを考慮した、公平感のある相対評価ができる",
+      "絶対的な正解が存在しない自由記述タスクでも、相対比較の積み重ねからランキングを構成できる",
+      "対戦データが増えるほどレーティングの精度が安定し、継続的な評価に向いている"
+    ],
+    "disadvantages": [
+      "十分な対戦数が集まらないと、レーティングの値が不安定になりやすい",
+      "評価者(投票者)の好みの偏りが、レーティングの結果に影響する",
+      "レーティングの数値だけでは、なぜその評価になったかという具体的な理由がわからない"
+    ],
+    "comparisons": [
+      {
+        "slug": "arena",
+        "note": "Chatbot Arenaは、人間の投票結果からEloレーティングを算出してLLMをランキングするプラットフォーム"
+      },
+      {
+        "slug": "llm-as-a-judge",
+        "note": "Eloレーティングが相対比較の積み重ねでランキングを作るのに対し、LLM-as-a-Judgeは個々の応答を直接採点する"
+      },
+      {
+        "slug": "mt-bench",
+        "note": "MT-BenchのLLMによる直接採点とは異なり、Eloレーティングは対戦・投票データを基にした間接的な評価方法"
+      }
+    ],
+    "relatedTerms": [
+      "arena",
+      "llm-as-a-judge",
+      "mt-bench"
+    ],
+    "faq": [
+      {
+        "question": "EloレーティングとLLM-as-a-Judgeの違いは？",
+        "answer": "LLM-as-a-Judgeは個々の応答に対し直接点数を付けたり優劣を判定したりするのに対し、Eloレーティングは大量の対戦(比較)結果を積み重ね、相対的な強さを1つの数値として算出する。"
+      },
+      {
+        "question": "なぜチェスのレーティングをLLM評価に使う？",
+        "answer": "絶対的な正解が存在しない自由記述の応答品質を、人間による相対比較の投票結果を積み重ねることで、公平感のあるランキングとして表現できるため。Chatbot Arenaがこの手法を採用している。"
+      }
+    ],
+    "references": []
+  },
+  {
+    "slug": "batch-normalization",
+    "name": "Batch Normalization",
+    "aliases": [
+      "バッチ正規化"
+    ],
+    "tagline": "ミニバッチ単位で各層の出力を平均0・分散1に正規化し、深層学習の学習を安定させる手法",
+    "category": "アーキテクチャ",
+    "tags": [
+      "ニューラルネットワーク",
+      "深層学習"
+    ],
+    "plainSummary": "AIの各層を通るデータのばらつきを、ミニバッチごとに整えて学習を安定させる工夫。",
+    "summary": "Batch Normalizationは、ニューラルネットワークのある層の出力を、同じミニバッチ内の全サンプルにわたって平均0・分散1になるよう正規化したうえで、学習可能なスケール・シフトパラメータで調整する手法。\n層を重ねるごとに各層への入力の分布が学習の進行とともに変化してしまう内部共変量シフト(Internal Covariate Shift)と呼ばれる現象を緩和し、より大きな学習率でも安定して学習を進められるようにする。\nCNNを中心とする画像認識モデルで特に効果を発揮し、学習の収束を速めるだけでなく、ある程度の正則化効果(過学習の抑制)も持つことが知られている。\n一方、ミニバッチ内の統計量に依存するため、バッチサイズが小さい場合や系列長が可変なRNN・Transformerでは不安定になりやすい。\nそうした場面ではLayer Normalizationを使うことが多い。",
+    "background": "深い層を持つニューラルネットワークでは、学習の進行に伴って各層への入力の分布が変化し続け、後続の層が常に変化する入力分布に適応し直す必要があるため、学習が不安定になりやすかった。\nBatch Normalizationは、各層の入力分布をミニバッチ単位で正規化することで、この分布の変化を抑え、学習を安定させる目的で考案された。",
+    "history": "2015年: IoffeとSzegedyが論文「Batch Normalization: Accelerating Deep Network Training by Reducing Internal Covariate Shift」を発表。\n2015年以降: 画像認識向けCNNの学習を高速化・安定化する標準的な手法として急速に普及。\n2020年代: 自然言語処理分野ではLayer Normalizationが主流になる一方、画像認識分野では引き続き広く使われている。",
+    "architecture": "ミニバッチ内の各特徴量について、そのミニバッチ全体での平均と分散を計算する。\n各サンプルの値から平均を引き標準偏差で割って正規化したのち、学習可能なスケールパラメータを掛け、シフトパラメータを加える。\n推論時には、学習中に蓄積した移動平均の平均・分散を使って正規化することで、バッチサイズに依存しない安定した推論を可能にする。",
+    "codeExamples": [
+      {
+        "title": "PyTorchでのBatch Normalization",
+        "language": "python",
+        "code": "import torch.nn as nn\n\nmodel = nn.Sequential(\n    nn.Conv2d(3, 64, kernel_size=3),\n    nn.BatchNorm2d(64),\n    nn.ReLU(),\n)"
+      }
+    ],
+    "advantages": [
+      "学習率を大きく設定しても学習が安定しやすく、収束までの速度を高められる",
+      "内部共変量シフトを緩和し、深いネットワークでも学習が崩れにくくなる",
+      "副次的な正則化効果があり、過学習の抑制にもある程度寄与する"
+    ],
+    "disadvantages": [
+      "ミニバッチ内の統計量に依存するため、バッチサイズが小さいと正規化が不安定になりやすい",
+      "系列長が可変なRNNやTransformerとは相性が悪く、その場合はLayer Normalizationを使うことが多い",
+      "学習時と推論時で異なる統計量(バッチ統計と移動平均統計)を使うため、実装や挙動の違いに注意が必要"
+    ],
+    "comparisons": [
+      {
+        "slug": "layer-normalization",
+        "note": "Batch Normalizationはバッチ方向に統計量を計算するのに対し、Layer Normalizationは特徴量方向に統計量を計算する"
+      },
+      {
+        "slug": "dropout",
+        "note": "Batch NormalizationとDropoutはいずれも学習の安定化・過学習抑制に使われるが、仕組みは異なる"
+      },
+      {
+        "slug": "convolutional-neural-network",
+        "note": "Batch Normalizationは、CNNを中心とする画像認識モデルの学習で特に広く使われている"
+      }
+    ],
+    "relatedTerms": [
+      "layer-normalization",
+      "dropout",
+      "convolutional-neural-network",
+      "vanishing-gradient"
+    ],
+    "faq": [
+      {
+        "question": "Batch NormalizationとLayer Normalizationの違いは？",
+        "answer": "Batch Normalizationはミニバッチ内の複数サンプルにまたがって統計量を計算するのに対し、Layer Normalizationは1サンプル内の特徴量方向で統計量を計算する。系列長が可変なTransformerではLayer Normalizationが主に使われる。"
+      },
+      {
+        "question": "推論時のBatch Normalizationはどう動作する？",
+        "answer": "推論時にはミニバッチが1件だけの場合もあるため、学習中に計算した移動平均の平均・分散を固定値として使い、バッチサイズに依存しない安定した正規化を行う。"
+      }
+    ],
+    "references": [
+      {
+        "type": "Research Paper",
+        "label": "Batch Normalization: Accelerating Deep Network Training by Reducing Internal Covariate Shift",
+        "url": "https://arxiv.org/abs/1502.03167"
+      }
+    ]
+  },
+  {
+    "slug": "vanishing-gradient",
+    "name": "勾配消失問題",
+    "aliases": [
+      "Vanishing Gradient Problem"
+    ],
+    "tagline": "深いニューラルネットワークで誤差逆伝播をする際、浅い層へ伝わる勾配が極端に小さくなり学習が進まなくなる問題",
+    "category": "技術",
+    "tags": [
+      "学習",
+      "深層学習"
+    ],
+    "plainSummary": "AIの層が深すぎると、後ろから伝える修正の指示がだんだん薄まって、前の方の層まで届かなくなる問題。",
+    "summary": "勾配消失問題は、誤差逆伝播法によって出力層から入力層に向かって勾配を伝播させる際、連鎖律により各層の勾配が繰り返し掛け合わされていく過程で、勾配の値が層をさかのぼるごとに指数的に小さくなっていき、浅い層(入力に近い層)のパラメータがほとんど更新されなくなってしまう現象。\nシグモイド関数やtanh関数のように、入力の絶対値が大きい領域で勾配がほぼ0になる活性化関数を多層に重ねて使うと、この問題が特に起こりやすい。\n勾配がほぼ0になった層は実質的に学習が停止した状態になり、ネットワーク全体としては深くしたはずの層を十分に活用できず、性能が頭打ちになったり、浅いネットワークと変わらない性能しか出せなくなったりする。\n対策として、勾配が消えにくいReLU系の活性化関数の採用、勾配を直接伝える経路を作る残差接続、各層の出力を安定させるBatch NormalizationやLayer Normalizationなどが広く使われている。",
+    "background": "多層のニューラルネットワークを学習させる際、誤差逆伝播法は連鎖律に基づいて勾配を計算するため、各層の勾配が掛け合わされていく過程で数値的な問題が生じやすい。\n勾配消失問題は、この掛け合わせによって勾配が指数的に減衰してしまうことに起因し、深いネットワークの学習を妨げる根本的な課題として認識されてきた。",
+    "history": "1991年: Hochreiterが深いネットワークにおける勾配消失・爆発の問題を指摘。\n1997年: LSTMが、ゲート機構によって勾配消失を緩和する再帰型ネットワークとして提案される。\n2015年: 残差接続を導入したResNetが、非常に深いネットワークでも勾配消失を抑えて学習できることを示す。",
+    "advantages": [],
+    "disadvantages": [
+      "浅い層のパラメータがほとんど更新されず、ネットワークの表現力を十分に引き出せなくなる",
+      "深いネットワークを設計しても、実際の性能が期待したほど向上しないことがある",
+      "問題の発生に気づきにくく、学習が進まない原因の切り分けに手間がかかりやすい"
+    ],
+    "comparisons": [
+      {
+        "slug": "residual-connection",
+        "note": "残差接続は、勾配を直接伝える経路を作ることで勾配消失問題を緩和する代表的な手法"
+      },
+      {
+        "slug": "long-short-term-memory",
+        "note": "LSTMはゲート機構により、RNNで起こりやすい勾配消失問題を緩和するよう設計されている"
+      },
+      {
+        "slug": "activation-function",
+        "note": "ReLUなど勾配が消えにくい活性化関数の採用は、勾配消失問題への代表的な対策の1つ"
+      }
+    ],
+    "relatedTerms": [
+      "residual-connection",
+      "long-short-term-memory",
+      "activation-function",
+      "backpropagation"
+    ],
+    "faq": [
+      {
+        "question": "勾配消失はなぜ起こる？",
+        "answer": "誤差逆伝播法では各層の勾配が連鎖律により掛け合わされていくため、1未満の値が何度も掛け合わされると、層をさかのぼるほど勾配が指数的に小さくなってしまうため。"
+      },
+      {
+        "question": "勾配消失を防ぐ代表的な方法は？",
+        "answer": "ReLU系の活性化関数の採用、勾配を直接伝える残差接続、各層の出力を安定させる正規化手法(Batch NormalizationやLayer Normalization)などが広く使われている。"
+      }
+    ],
+    "references": []
+  },
+  {
+    "slug": "adam-optimizer",
+    "name": "Adam",
+    "aliases": [
+      "Adam Optimizer",
+      "Adaptive Moment Estimation"
+    ],
+    "tagline": "勾配の1次・2次モーメントを推定し、パラメータごとに学習率を自動調整する適応的最適化アルゴリズム",
+    "category": "技術",
+    "tags": [
+      "学習",
+      "最適化"
+    ],
+    "plainSummary": "各パラメータごとに「どれくらいの歩幅で進めばいいか」を自動で調整してくれる、賢い学習の進め方。",
+    "summary": "Adam(Adaptive Moment Estimation)は、勾配降下法を拡張した適応的最適化アルゴリズム。\n各パラメータの勾配について、過去の勾配の指数移動平均(1次モーメント、モーメンタムに相当)と勾配の2乗の指数移動平均(2次モーメント、勾配のスケールに相当)の両方を推定する。\nこれらを組み合わせ、パラメータごとに実質的な学習率を自動調整しながら更新する。\n勾配が大きく変動しやすいパラメータには小さい実効学習率を、変動が少なく安定しているパラメータには相対的に大きい実効学習率を割り当てることができ、パラメータごとに手動でスケールを調整する手間を減らせる。\n学習初期にモーメント推定値が0に偏るバイアスを補正する項が組み込まれており、学習開始直後から安定した更新を行える。\nディープラーニングの多くの分野で標準的なデフォルトの最適化アルゴリズムとして扱われており、LLMの事前学習や指示チューニングでも、Adamやその改良版であるAdamWが広く使われている。",
+    "background": "通常の確率的勾配降下法(SGD)は全パラメータに同じ学習率を適用するため、パラメータごとに勾配のスケールが大きく異なる場合、収束が遅くなったり不安定になったりすることがあった。\nAdamは、勾配のモーメンタムと2次モーメントの両方を推定して活用することで、パラメータごとに適応的な学習率を実現し、幅広いタスクで安定した収束を得られるようにする目的で考案された。",
+    "history": "2014年: KingmaとBaが論文「Adam: A Method for Stochastic Optimization」を発表。\n2017年: 重み減衰の扱いを改善したAdamWが提案され、Transformerベースのモデル学習で広く採用される。\n2020年代: LLMの事前学習・指示チューニングにおける事実上標準的な最適化アルゴリズムとして定着。",
+    "architecture": "各パラメータについて、勾配の指数移動平均(1次モーメント m)と、勾配の2乗の指数移動平均(2次モーメント v)を、それぞれ異なる減衰率で更新する。\n学習初期のバイアスを補正したモーメント推定値を使い、パラメータの更新量を m を v の平方根で割った値に比例させることで、勾配のスケールに応じた実効的な学習率をパラメータごとに自動調整する。",
+    "codeExamples": [
+      {
+        "title": "PyTorchでのAdamオプティマイザ",
+        "language": "python",
+        "code": "import torch.optim as optim\n\noptimizer = optim.AdamW(model.parameters(), lr=1e-4, weight_decay=0.01)"
+      }
+    ],
+    "advantages": [
+      "パラメータごとに実質的な学習率が自動調整され、手動でのチューニング負担を減らせる",
+      "モーメンタムと適応的な学習率の両方を組み合わせ、多くのタスクで安定した収束を示す",
+      "学習初期のバイアス補正が組み込まれており、学習開始直後から安定して動作する"
+    ],
+    "disadvantages": [
+      "SGDと比べてパラメータごとに追加の統計量(m、v)を保持する必要があり、メモリ使用量が増える",
+      "タスクによっては、適切にチューニングされたSGDの方が最終的な汎化性能で上回ることがある",
+      "ハイパーパラメータ(学習率や減衰率)の初期値によって、収束の挙動は変わりやすい"
+    ],
+    "comparisons": [
+      {
+        "slug": "gradient-descent",
+        "note": "AdamはSGD(勾配降下法)にモーメンタムと適応的な学習率調整を組み合わせて拡張した最適化アルゴリズム"
+      },
+      {
+        "slug": "learning-rate",
+        "note": "Adamはパラメータごとに実効的な学習率を自動調整し、手動での学習率チューニングの手間を減らす"
+      },
+      {
+        "slug": "large-language-model",
+        "note": "AdamWは、多くのLLMの事前学習・指示チューニングで標準的に使われる最適化アルゴリズム"
+      }
+    ],
+    "relatedTerms": [
+      "gradient-descent",
+      "learning-rate",
+      "backpropagation"
+    ],
+    "faq": [
+      {
+        "question": "AdamとAdamWの違いは？",
+        "answer": "AdamWは、Adamにおける重み減衰(L2正則化に相当)の扱いを、勾配の更新式から切り離して直接パラメータへ適用するよう改良したもの。Transformerベースのモデル学習でより安定した結果を示すとされ、広く使われている。"
+      },
+      {
+        "question": "AdamはSGDより常に優れている？",
+        "answer": "多くの場合Adamは収束が速く扱いやすいが、画像認識など一部のタスクでは、適切にチューニングされたSGDの方が最終的な汎化性能で上回る場合があることも報告されている。"
+      }
+    ],
+    "references": [
+      {
+        "type": "Research Paper",
+        "label": "Adam: A Method for Stochastic Optimization",
+        "url": "https://arxiv.org/abs/1412.6980"
+      }
+    ]
+  },
+  {
+    "slug": "q-learning",
+    "name": "Q学習",
+    "aliases": [
+      "Q-Learning"
+    ],
+    "tagline": "状態と行動の組み合わせの価値(Q値)を試行錯誤を通じて学習する、強化学習の代表的な手法",
+    "category": "技術",
+    "tags": [
+      "強化学習",
+      "機械学習"
+    ],
+    "plainSummary": "「この状況でこの行動を取ると将来どれだけ得か」を、実際に試しながら学んでいく強化学習の手法。",
+    "summary": "Q学習は、エージェントがある状態である行動を取ったときに、その後得られる将来の報酬の合計をどれだけ期待できるかを表すQ値(状態行動価値関数)を、環境との試行錯誤を通じて反復的に学習する強化学習の手法。\n各時点でエージェントは現在の状態を観測し、行動を選択して実行し、環境から報酬と次の状態を受け取る。\nこの経験をもとに、実際に得られた報酬と次の状態での最良の行動のQ値を使って、現在のQ値の推定値を少しずつ真の値に近づけるよう更新していく。\n環境のモデル(状態遷移確率など)を事前に知らなくても学習できるモデルフリーな手法であり、あらかじめ最適な方策を決め打ちせず実際に行動しながら学習するオフポリシー型の手法としても知られる。",
+    "background": "強化学習では、エージェントが環境の完全なモデルを持たない状況でも、試行錯誤を通じて最適な行動を学習できる手法が求められていた。\nQ学習は、状態と行動の組み合わせごとの価値を直接推定し、環境のモデルを必要とせずに最適方策へ収束できる手法として考案された。",
+    "history": "1989年: Watkinsが博士論文でQ学習を提案。\n1992年: WatkinsとDayanがQ学習の収束性を理論的に証明する論文を発表。\n2013-2015年: DeepMindが、Q学習にニューラルネットワークを組み合わせたDQN(Deep Q-Network)でAtariゲームを人間並みにプレイできることを示し、深層強化学習の火付け役に。",
+    "workflow": "エージェントが現在の状態を観測する。\n現在のQ値の推定値をもとに行動を選択(探索と活用のバランスを取りながら)して実行し、環境から報酬と次の状態を受け取る。\n受け取った報酬と次の状態で得られる最良のQ値を使い、現在の状態行動ペアのQ値を更新する。\nこれを繰り返し、Q値が真の値に収束するまで学習を続ける。",
+    "advantages": [
+      "環境の遷移確率などのモデルを事前に知らなくても、試行錯誤だけで学習できる",
+      "オフポリシー型のため、探索のための行動と学習対象の方策を分けて設計しやすい",
+      "状態・行動空間が離散的で小規模な問題では、理論的な収束性が保証されている"
+    ],
+    "disadvantages": [
+      "状態・行動空間が大きくなると、全ての組み合わせのQ値を表で管理する方式では現実的に扱えなくなる",
+      "連続的な状態・行動空間をそのまま扱うことができず、関数近似(ニューラルネットワーク等)との組み合わせが必要になる",
+      "報酬がまばらにしか得られない環境では、学習が非常に遅くなることがある"
+    ],
+    "comparisons": [
+      {
+        "slug": "monte-carlo-tree-search",
+        "note": "Q学習が価値関数を学習して方策を導くのに対し、モンテカルロ木探索はシミュレーションによる探索で行動を選ぶ"
+      },
+      {
+        "slug": "machine-learning",
+        "note": "Q学習は強化学習に分類される手法で、教師あり学習とは異なり正解ラベルではなく報酬信号から学習する"
+      },
+      {
+        "slug": "rlhf",
+        "note": "RLHFはQ学習とは異なる強化学習アルゴリズム(PPO等)を用いるが、報酬信号から方策を学習する点は共通する"
+      }
+    ],
+    "relatedTerms": [
+      "machine-learning",
+      "monte-carlo-tree-search",
+      "rlhf"
+    ],
+    "faq": [
+      {
+        "question": "Q学習とDQNの違いは？",
+        "answer": "Q学習は本来、状態と行動の全組み合わせのQ値を表で管理する手法だが、状態空間が大きいと現実的に扱えない。DQNはこのQ値をニューラルネットワークで近似することで、画像のような高次元の状態でも扱えるようにした発展形。"
+      },
+      {
+        "question": "モデルフリーとは？",
+        "answer": "環境がどのような状態遷移や報酬の仕組みを持つかという事前知識(モデル)を必要とせず、実際の試行錯誤の経験だけから学習できる性質のこと。Q学習はこのモデルフリーな手法の代表例。"
+      }
+    ],
+    "references": []
+  },
+  {
+    "slug": "model-extraction",
+    "name": "モデル抽出攻撃",
+    "aliases": [
+      "Model Extraction Attack",
+      "Model Stealing"
+    ],
+    "tagline": "APIへの大量の問い合わせと応答の観察から、対象モデルの挙動を模倣する代替モデルを構築する攻撃",
+    "category": "技術",
+    "tags": [
+      "セキュリティ",
+      "LLM"
+    ],
+    "plainSummary": "AIに大量の質問を送って答えを集め、そのやり取りだけから似た性能のコピーAIを作ってしまう攻撃。",
+    "summary": "モデル抽出攻撃は、対象となるMLモデルの内部パラメータへ直接アクセスできない攻撃者が、公開APIへ大量の入力を送信しその応答を収集することで、元のモデルと似た挙動を再現する代替モデル(サロゲートモデル)を学習・構築する攻撃手法。\n攻撃者は入力と応答のペアだけを教師データとして扱い、知識蒸留に似た手順で自分のモデルを学習させることで、元のモデルの内部構造や学習データを直接知らなくても、類似した性能の複製モデルを作り出せる場合がある。\nAPI提供者にとっては、モデル自体の知的財産や競争優位性が損なわれるだけでなく、複製されたモデルを踏み台にして、さらに敵対的サンプルの生成や追加の攻撃手法の開発に悪用されるリスクもある。\n対策として、応答に含める情報量を絞る、APIの呼び出し回数やパターンを監視して異常なアクセスを検知する、出力に電子透かしを埋め込むといった手法が研究・実践されている。",
+    "background": "商用のMLモデルの多くは、パラメータや学習データを非公開にしたままAPI経由でのみ機能を提供しているが、入力と出力の組み合わせを大量に観察できれば、モデルの内部構造がブラックボックスのままでもその挙動を模倣できてしまう。\nモデル抽出攻撃は、この入出力の観察だけからモデルの機能的な複製を作れてしまうという、API提供型サービスに共通するリスクとして研究されてきた。",
+    "history": "2016年: Tramèrらが論文「Stealing Machine Learning Models via Prediction APIs」で、複数の商用MLサービスに対するモデル抽出攻撃の実証を発表。\n2020年代: LLMの普及に伴い、生成AIサービスに対する応答の模倣・複製リスクも議論の対象に。",
+    "advantages": [],
+    "disadvantages": [
+      "モデル提供者の知的財産や競争優位性が、API経由の観察だけで損なわれるリスクがある",
+      "複製されたモデルが、さらなる敵対的サンプルの生成など二次的な攻撃の踏み台に使われることがある",
+      "検知や対策(応答情報の制限、監視の強化)を導入すると、正規ユーザーの利便性が下がりやすい"
+    ],
+    "comparisons": [
+      {
+        "slug": "knowledge-distillation",
+        "note": "モデル抽出攻撃は、入出力ペアからモデルを学習させる点で知識蒸留と技術的に類似するが、正規の許諾なく行われる点が異なる"
+      },
+      {
+        "slug": "watermarking",
+        "note": "電子透かしは、モデル抽出攻撃で複製された出力の由来を後から追跡する対策の1つとして使われる"
+      },
+      {
+        "slug": "red-teaming",
+        "note": "モデル抽出攻撃への耐性は、レッドチーミングにおける検証項目の1つとして扱われることがある"
+      }
+    ],
+    "relatedTerms": [
+      "knowledge-distillation",
+      "watermarking",
+      "red-teaming",
+      "guardrails"
+    ],
+    "faq": [
+      {
+        "question": "モデル抽出攻撃はなぜ可能なのか？",
+        "answer": "モデルの内部パラメータを直接見なくても、大量の入力に対する出力の対応関係だけを教師データとして別のモデルを学習させれば、元のモデルに似た挙動を再現できてしまうため。"
+      },
+      {
+        "question": "モデル抽出攻撃への対策は？",
+        "answer": "応答に含める確率値などの情報量を絞る、APIの呼び出しパターンを監視して異常なアクセスを検知する、出力に電子透かしを埋め込んで複製の追跡を可能にするといった対策が組み合わされる。"
+      }
+    ],
+    "references": [
+      {
+        "type": "Research Paper",
+        "label": "Stealing Machine Learning Models via Prediction APIs",
+        "url": "https://arxiv.org/abs/1609.02943"
+      }
+    ]
+  },
+  {
+    "slug": "watermarking",
+    "name": "電子透かし",
+    "aliases": [
+      "Watermarking",
+      "AIウォーターマーク"
+    ],
+    "tagline": "生成テキストの単語選択に統計的な偏りを埋め込み、AI生成コンテンツかどうかを後から検出可能にする技術",
+    "category": "技術",
+    "tags": [
+      "セキュリティ",
+      "LLM"
+    ],
+    "plainSummary": "AIが書いた文章に人には気づかれない癖を仕込んでおき、後からAI製かどうかを判定できるようにする技術。",
+    "summary": "電子透かしは、LLMがテキストを生成する際、次のトークンを選ぶ確率分布に人間には気づかれない程度の統計的な偏りを組み込み、生成された文章全体としてはその偏りのパターンを検出することで、後からAIが生成したものかどうかを高い精度で判定できるようにする技術。\n代表的な方式では、直前のトークンをシードとして疑似乱数的に語彙を「緑リスト」と「赤リスト」に分割し、生成時に緑リストのトークンがわずかに選ばれやすくなるようロジットにバイアスを加える。\n人間が読む分には文章の自然さがほとんど損なわれない程度の偏りに抑えつつ、統計的に検定することで、その文章が透かし入りのモデルによって生成された確率を計算できる。\n生成AIによる誤情報の拡散や、教育現場でのAI使用の検出など、AI生成コンテンツの出所を判別する必要がある場面での活用が期待されている一方、言い換えや翻訳などの後処理によって透かしのパターンが壊されやすいという課題も指摘されている。",
+    "background": "生成AIの普及に伴い、AIが生成した文章と人間が書いた文章を見分けたいという需要が高まったが、文章の見た目だけから判別することは年々難しくなっている。\n電子透かしは、生成過程そのものに検出可能な痕跡を統計的に埋め込むことで、後から機械的に判定できるようにする目的で研究されている。",
+    "history": "2023年: Kirchenbauerらが論文「A Watermark for Large Language Models」で、緑リスト・赤リスト方式による実用的な透かし手法を提案。\n2023年以降: 主要なLLM提供元が、生成コンテンツの検出技術として電子透かしの研究・実装を進める。",
+    "workflow": "生成の各ステップで、直前のトークンをシードとして語彙を緑リストと赤リストに疑似乱数的に分割する。\n緑リストのトークンが選ばれやすくなるよう、ロジットにわずかなバイアスを加えたうえで次のトークンをサンプリングする。\n検証時には、対象の文章に含まれるトークンがどれだけ緑リストに偏っているかを統計的に検定し、透かし入りモデルによる生成である確率を算出する。",
+    "advantages": [
+      "人間の読みやすさをほとんど損なわずに、生成コンテンツへ検出可能な痕跡を埋め込める",
+      "統計的な検定に基づくため、検出結果の確信度を定量的に示せる",
+      "誤情報対策や教育現場でのAI利用検出など、コンテンツの出所判別が必要な場面で活用できる"
+    ],
+    "disadvantages": [
+      "言い換えや翻訳、部分的な編集などの後処理によって、透かしのパターンが壊れやすい",
+      "透かしを組み込んでいないモデルや、透かし機能のないオープンウェイトモデルで生成された文章には適用できない",
+      "検出アルゴリズムの詳細が広く知られると、透かしを回避する手法が開発されるいたちごっこになりうる"
+    ],
+    "comparisons": [
+      {
+        "slug": "hallucination",
+        "note": "電子透かしはハルシネーション自体を防ぐ技術ではなく、生成物がAI製かどうかを判別する技術"
+      },
+      {
+        "slug": "model-extraction",
+        "note": "電子透かしは、モデル抽出攻撃で複製されたモデルの出力を後から識別する手がかりとしても検討される"
+      },
+      {
+        "slug": "guardrails",
+        "note": "ガードレールが生成前後の内容を制御するのに対し、電子透かしは生成後のコンテンツの出所を判別する技術"
+      }
+    ],
+    "relatedTerms": [
+      "hallucination",
+      "model-extraction",
+      "guardrails"
+    ],
+    "faq": [
+      {
+        "question": "電子透かしは人間にわかる？",
+        "answer": "通常の読者が気づく程度の不自然さはほとんど生じないよう設計されている。専用の検出アルゴリズムを使って初めて、統計的な偏りとして検出できる。"
+      },
+      {
+        "question": "電子透かしはどんな弱点がある？",
+        "answer": "文章の言い換えや翻訳、部分的な書き換えなどの後処理によって、埋め込まれた統計的パターンが崩れ、検出精度が落ちやすいという課題がある。"
+      }
+    ],
+    "references": [
+      {
+        "type": "Research Paper",
+        "label": "A Watermark for Large Language Models",
+        "url": "https://arxiv.org/abs/2301.10226"
+      }
+    ]
+  },
+  {
+    "slug": "backdoor-attack",
+    "name": "バックドア攻撃",
+    "aliases": [
+      "Backdoor Attack",
+      "トロイの木馬攻撃"
+    ],
+    "tagline": "学習データに特定のトリガーを仕込み、そのトリガーが入力に含まれたときだけモデルに異常な挙動をさせる攻撃",
+    "category": "技術",
+    "tags": [
+      "セキュリティ",
+      "データポイズニング"
+    ],
+    "plainSummary": "学習データにこっそり「合言葉」を仕込んでおき、その合言葉が入力されたときだけAIに変な動きをさせる攻撃。",
+    "summary": "バックドア攻撃は、モデルの学習データに少数の汚染データを混入させる攻撃。\n特定のパターン(トリガー)を含む入力に対してだけ攻撃者が意図した異常な出力を返すよう仕組み、通常の入力には正常に動作しつつ、トリガーが含まれる入力にだけ隠れた異常動作を引き起こすようモデルを訓練する。\nトリガーを含まない通常のテストデータで評価する限りモデルは高い精度で正常に動作して見えるため、汚染されていることに気づきにくいという点が、他の攻撃手法と比べた特徴。\n画像分類であれば画像の隅に小さなパターンを付加する、テキスト生成であれば特定のフレーズをプロンプトに含めるといった形でトリガーを設計し、そのトリガーが検出されたときだけ誤分類や有害な出力、意図した情報の漏洩などを引き起こすよう仕込まれる。\nオープンソースで公開された事前学習済みモデルや、第三者に外部委託した学習パイプラインを利用する際、サプライチェーンを通じてバックドアの混入するリスクが特に懸念されている。",
+    "background": "モデルの学習を外部の事前学習済みモデルやデータセット、あるいは第三者への委託に依存するケースが増える中、学習過程のどこかに悪意ある改変が混入しても、通常のテストでは気づきにくいという構造的なリスクが存在する。\nバックドア攻撃は、このサプライチェーン上の信頼の連鎖を悪用し、見た目には正常なモデルに隠れた異常動作を仕込む攻撃として研究されている。",
+    "history": "2017年: Guらが論文「BadNets: Identifying Vulnerabilities in the Machine Learning Model Supply Chain」で、画像分類モデルへのバックドア攻撃を実証。\n2020年代: LLMの指示チューニングデータやプラグインエコシステムを狙った、より高度なバックドア攻撃の研究が進む。",
+    "advantages": [],
+    "disadvantages": [
+      "通常のテストデータでは検出されにくく、汚染に気づかないまま本番環境で運用されるリスクがある",
+      "外部の事前学習済みモデルやデータセット、委託先の学習パイプラインを経由して、サプライチェーン全体に影響が広がりうる",
+      "検出には専用の異常検知手法や、モデル内部の挙動を精査する追加の検証コストが必要になる"
+    ],
+    "comparisons": [
+      {
+        "slug": "data-poisoning",
+        "note": "バックドア攻撃は、特定のトリガーに反応する異常動作を仕込む点で、より広い概念であるデータポイズニングの一種にあたる"
+      },
+      {
+        "slug": "prompt-injection",
+        "note": "プロンプトインジェクションが実行時の入力を悪用するのに対し、バックドア攻撃は学習段階でモデル自体に異常動作を仕込む"
+      },
+      {
+        "slug": "red-teaming",
+        "note": "バックドアの有無を検証することは、レッドチーミングにおけるモデル監査の重要な観点の1つ"
+      }
+    ],
+    "relatedTerms": [
+      "data-poisoning",
+      "prompt-injection",
+      "red-teaming"
+    ],
+    "faq": [
+      {
+        "question": "バックドア攻撃はなぜ気づきにくい？",
+        "answer": "トリガーを含まない通常の入力に対してはモデルが正常に動作するため、一般的なテストや評価指標では汚染の有無を見分けにくい。トリガーを知らない限り、異常動作を再現することも難しい。"
+      },
+      {
+        "question": "バックドア攻撃への対策は？",
+        "answer": "学習データの出所を信頼できる形で管理する、モデルの異常な挙動パターンを検出する専用の検査手法を使う、外部から取得したモデルやデータセットを本番投入前に監査するといった対策が取られる。"
+      }
+    ],
+    "references": [
+      {
+        "type": "Research Paper",
+        "label": "BadNets: Identifying Vulnerabilities in the Machine Learning Model Supply Chain",
+        "url": "https://arxiv.org/abs/1708.06733"
+      }
+    ]
+  },
+  {
+    "slug": "sandboxing",
+    "name": "サンドボックス化",
+    "aliases": [
+      "Sandboxing"
+    ],
+    "tagline": "AIエージェントのコード実行やツール利用を、隔離された安全な環境内に限定する仕組み",
+    "category": "エージェント",
+    "tags": [
+      "エージェント",
+      "安全性"
+    ],
+    "plainSummary": "AIにコードを実行させるとき、影響が外に漏れない専用の隔離部屋の中だけで動かす仕組み。",
+    "summary": "サンドボックス化は、AIエージェントが生成・実行するコードやツール呼び出しを、ホストシステムや本番環境から隔離された制限付きの実行環境(サンドボックス)の中でのみ動作させることで、意図しない挙動やバグ、悪意あるコードがシステム全体に影響を及ぼすことを防ぐ仕組み。\nコンテナや仮想マシン、専用の実行時制限機構などを使い、ファイルシステムへのアクセス範囲、ネットワーク通信の可否、実行時間やメモリ使用量の上限といった項目を細かく制御することで、エージェントが実行するコードの影響範囲を限定する。\nLLMが生成するコードには、意図しない無限ループや、誤ってシステムファイルを削除するような操作、外部への予期しない通信などが含まれるリスクがある。サンドボックス化は、こうしたリスクが実害となる前に食い止める最後の防衛線として機能する。\nCode InterpreterやAIエージェントのコード実行機能の多くは、内部でこのサンドボックス化された実行環境を利用しており、AIエージェントを安全に運用するための基盤技術の1つになっている。",
+    "background": "AIエージェントにコードの生成・実行を任せる用途が広がる一方、生成されたコードが意図通りに安全であるとは限らず、バグや誤動作、悪意ある入力による不正なコード実行のリスクが常に存在する。\nサンドボックス化は、コードの実行環境自体を隔離することで、たとえコードに問題があってもその影響を限定された範囲内にとどめる目的で導入されている。",
+    "workflow": "AIエージェントが実行したいコードやコマンドを生成する。\nそのコードを、ファイルシステム・ネットワーク・実行時間などが制限されたサンドボックス環境(コンテナや仮想マシンなど)へ送り、実行する。\n実行結果(標準出力やエラー内容)だけをエージェントへ返し、サンドボックス外への影響がない状態を保ったまま次のステップに進む。",
+    "advantages": [
+      "生成されたコードにバグや意図しない挙動があっても、影響をサンドボックス内に限定できる",
+      "ファイルシステムやネットワークへのアクセス範囲を細かく制御でき、被害の範囲を最小化できる",
+      "AIエージェントのコード実行機能を、本番環境へのリスクを抑えながら提供できる"
+    ],
+    "disadvantages": [
+      "サンドボックス環境の構築・維持に、追加のインフラと運用コストがかかる",
+      "制限を厳しくしすぎると、エージェントが本来必要とする正当な操作までブロックしてしまうことがある",
+      "サンドボックスからの脱出(コンテナエスケープ等)を狙う攻撃手法への対策も別途必要になる"
+    ],
+    "comparisons": [
+      {
+        "slug": "code-interpreter",
+        "note": "Code Interpreterは、内部でサンドボックス化された実行環境を使ってコードを安全に実行する機能"
+      },
+      {
+        "slug": "guardrails",
+        "note": "ガードレールが入出力の内容を制御するのに対し、サンドボックス化は実行環境そのものを隔離する"
+      },
+      {
+        "slug": "human-in-the-loop",
+        "note": "サンドボックス化とHuman-in-the-Loopは、いずれもAIエージェントの実行リスクを抑える設計手法として組み合わせて使われる"
+      }
+    ],
+    "relatedTerms": [
+      "code-interpreter",
+      "guardrails",
+      "human-in-the-loop",
+      "ai-agent"
+    ],
+    "faq": [
+      {
+        "question": "サンドボックス化とガードレールの違いは？",
+        "answer": "ガードレールはLLMの入出力の内容を監視・制御する仕組みであるのに対し、サンドボックス化はコードやツールの実行環境そのものを隔離し、実行結果がシステム全体へ及ばないようにする仕組み。"
+      },
+      {
+        "question": "サンドボックス化はどうやって実現する？",
+        "answer": "コンテナ(Dockerなど)や仮想マシン、専用の実行時制限機構を使い、ファイルシステムへのアクセス範囲やネットワーク通信、実行時間・メモリ使用量の上限を制御する形で実現されることが多い。"
+      }
+    ],
+    "references": []
+  },
+  {
+    "slug": "code-interpreter",
+    "name": "Code Interpreter",
+    "aliases": [
+      "Advanced Data Analysis",
+      "コードインタープリタ"
+    ],
+    "tagline": "LLMがコードを生成し、その場で実行して結果を確認しながら回答を組み立てる機能",
+    "category": "エージェント",
+    "tags": [
+      "エージェント",
+      "ツール利用"
+    ],
+    "plainSummary": "AIがその場でプログラムを書いて実際に動かし、その実行結果を見ながら答えを作る機能。",
+    "summary": "Code Interpreterは、LLMが単に自然文で答えるだけでなく、Pythonなどのコードをその場で生成する機能。\nサンドボックス化された実行環境の中でそのコードを実際に実行し、得られた実行結果(計算結果、グラフ、エラーメッセージなど)を踏まえて回答を組み立てる。\n複雑な数値計算やデータ集計、グラフの描画、ファイルの読み込みと加工といった、LLMが内部知識だけで正確に処理することが難しいタスクを、実際にコードを実行して検証しながらこなせるようにする。\n生成したコードがエラーになった場合、エラーメッセージを踏まえてコードを修正し再実行するというサイクルを繰り返すことで、最初の1回では動かないコードも試行錯誤を経て正しい結果にたどり着けることが多い。\nOpenAIのChatGPTにおけるCode Interpreter(後にAdvanced Data Analysisと改称)がこの機能を広めた代表例で、以降多くのAIアシスタントやAIエージェントのフレームワークが類似のコード実行機能を提供するようになった。",
+    "background": "LLMは大規模な言語知識を持つ一方、正確な数値計算や大量データの集計といったタスクは、内部の確率的な推論だけでは誤りを起こしやすい。\nCode Interpreterは、実際にコードを実行させて計算過程を計算機に委ねることで、この種のタスクにおける正確性を高める目的で導入された。",
+    "history": "2023年: OpenAIがChatGPTのプラグインとしてCode Interpreterを公開。\n2023年: 機能をAdvanced Data Analysisへ改称し、ファイルアップロードやデータ分析用途を強化。\n2023年以降: 他のAIアシスタントやエージェントフレームワークにも、類似のコード実行機能が広く実装される。",
+    "workflow": "ユーザーからの質問やタスクを受け取り、LLMが必要なPythonコードを生成する。\n生成したコードをサンドボックス化された実行環境で実行し、標準出力やエラーメッセージ、生成されたファイル(グラフ等)を取得する。\n実行結果を踏まえて、必要であればコードを修正して再実行し、最終的な結果を自然文とともにユーザーへ提示する。",
+    "advantages": [
+      "数値計算やデータ集計など、LLMの内部知識だけでは誤りやすいタスクの正確性を高められる",
+      "エラーが出た場合にコードを修正・再実行するサイクルを経て、試行錯誤しながら正しい結果にたどり着ける",
+      "グラフの描画やファイルの加工など、実際にプログラムを動かす必要があるタスクに直接対応できる"
+    ],
+    "disadvantages": [
+      "サンドボックス環境の用意や維持など、追加のインフラコストが必要になる",
+      "コードの生成・実行・修正を繰り返すため、単純な質問応答よりレイテンシとコストが増加する",
+      "実行環境に用意されていないライブラリや、外部ネットワークへのアクセスが必要な処理には対応しにくい"
+    ],
+    "comparisons": [
+      {
+        "slug": "sandboxing",
+        "note": "Code Interpreterは、サンドボックス化された実行環境を利用してコードを安全に実行する代表的な機能"
+      },
+      {
+        "slug": "tool-calling",
+        "note": "Code Interpreterは、コード実行という特定のツールをLLMに使わせるツールコーリングの一形態と捉えられる"
+      },
+      {
+        "slug": "react-prompting",
+        "note": "Code Interpreterのコード生成・実行・修正のサイクルは、ReActの思考・行動・観察のループと類似した構造を持つ"
+      }
+    ],
+    "relatedTerms": [
+      "sandboxing",
+      "tool-calling",
+      "react-prompting"
+    ],
+    "faq": [
+      {
+        "question": "Code Interpreterはどんなタスクが得意？",
+        "answer": "数値計算、統計処理、グラフの描画、ファイルの読み込みと加工など、実際にプログラムを実行して確認する必要があるタスクを得意とする。"
+      },
+      {
+        "question": "生成したコードが失敗したらどうなる？",
+        "answer": "多くの実装では、エラーメッセージを踏まえてLLMがコードを修正し、再実行するというサイクルを自動的に繰り返すことで、最終的に正しく動くコードへたどり着けるよう設計されている。"
+      }
+    ],
+    "references": []
+  },
+  {
+    "slug": "browser-use",
+    "name": "Browser Use",
+    "aliases": [
+      "ブラウザ操作エージェント"
+    ],
+    "tagline": "AIエージェントがWebブラウザを直接操作し、Webサイト上のタスクを自律的にこなす技術",
+    "category": "エージェント",
+    "tags": [
+      "エージェント",
+      "ツール利用"
+    ],
+    "plainSummary": "AIが人と同じようにブラウザを開き、クリックや入力をして、Web上の作業を代わりにこなす技術。",
+    "summary": "Browser Useは、AIエージェントがWebブラウザを直接操作し、リンクのクリック、フォームへの入力、ページのスクロールといった人間と同じ操作を通じて、Webサイト上のタスク(情報収集、予約、フォーム入力など)を自律的にこなせるようにする技術。\n専用のAPIが用意されていないWebサイトであっても、画面上の要素(ボタンやリンク、入力欄)を認識して操作することで、対象サイトごとに個別の連携を実装することなく、幅広いWebサービスを横断的に操作できる可能性を持つ。\n実装方式としては、ページのHTML構造(DOM)を解析して要素を特定する方式と、Computer Useのようにスクリーンショットを視覚的に認識してクリック位置を決める方式があり、両者を組み合わせるハイブリッドな実装も見られる。\nオープンソースプロジェクトの「browser-use」をはじめ、複数のライブラリやサービスがこの分野に取り組んでおり、AIエージェントがAPI連携のないWeb上のタスクを代行する手段として注目されている。",
+    "background": "多くのWebサービスは人間のブラウザ操作を前提に作られており、API連携を提供していないサービスも多いため、AIエージェントがそうしたサービス上のタスクを自動化することは長らく難しかった。\nBrowser Useは、人間と同じブラウザ操作という手段でこの制約を回避し、API連携の有無にかかわらず幅広いWebサイトをエージェントの操作対象にする目的で発展してきた。",
+    "history": "2023年以前: Webスクレイピングやブラウザ自動化(Selenium、Playwright等)の技術が、AIを介さない形で先行して発展。\n2023-2024年: LLMと組み合わせ、自然言語の指示からブラウザ操作を自律的に計画・実行するエージェント型のツールが多数登場。\n2024年: Computer Useなど、視覚情報に基づく汎用的な画面操作技術とも技術的に接近。",
+    "workflow": "エージェントが、現在のページのDOM構造やスクリーンショットを取得して画面の状態を把握する。\nタスクの目標に基づき、次に行うべき操作(クリック、入力、スクロールなど)を決定する。\n決定した操作をブラウザ自動化ツール(Playwright等)経由で実行し、変化した画面の状態を再取得して次のステップの判断に使う。",
+    "advantages": [
+      "専用APIが存在しないWebサイトでも、人間と同じ操作方法でタスクを自動化できる",
+      "対象サイトごとの個別連携を実装する必要がなく、幅広いWebサービスに横断的に対応できる可能性がある",
+      "情報収集やフォーム入力など、人手で行っていた定型的なWeb作業を代行できる"
+    ],
+    "disadvantages": [
+      "Webサイトのレイアウト変更や予期しないポップアップに弱く、操作が失敗しやすい",
+      "DOM解析やスクリーンショット認識を繰り返すため、専用API連携と比べて処理が遅くコストもかかる",
+      "誤操作によって意図しない購入や送信をしてしまうリスクがあり、重要な操作には確認ステップが必要になる"
+    ],
+    "comparisons": [
+      {
+        "slug": "computer-use",
+        "note": "Computer Useが画面全体を対象にした汎用的な操作技術であるのに対し、Browser Useは主にWebブラウザ上の操作に特化している"
+      },
+      {
+        "slug": "tool-calling",
+        "note": "専用APIが存在するサービスではツールコーリングが使われるのに対し、Browser Useは専用APIがない場合の代替手段として使われる"
+      },
+      {
+        "slug": "human-in-the-loop",
+        "note": "誤操作のリスクを抑えるため、Browser Useの重要な操作にはHuman-in-the-Loopの確認ステップを組み合わせることが多い"
+      }
+    ],
+    "relatedTerms": [
+      "computer-use",
+      "tool-calling",
+      "human-in-the-loop"
+    ],
+    "faq": [
+      {
+        "question": "Browser UseとComputer Useの違いは？",
+        "answer": "Computer Useはデスクトップ全体を含む画面全般を操作対象にするのに対し、Browser Useは主にWebブラウザ上のページ操作に特化している。実装上はDOM解析とスクリーンショット認識のどちらか、または両方を使う。"
+      },
+      {
+        "question": "Browser Useはどんな場面で使われる？",
+        "answer": "専用のAPIが提供されていないWebサービスでの情報収集、予約、フォーム入力など、人間が手作業でブラウザを操作していたタスクの自動化に使われる。"
+      }
+    ],
+    "references": [
+      {
+        "type": "GitHub",
+        "label": "browser-use/browser-use",
+        "url": "https://github.com/browser-use/browser-use"
       }
     ]
   }
