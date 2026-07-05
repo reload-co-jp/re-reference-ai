@@ -4,7 +4,7 @@ import Link from "next/link"
 import { GoogleAnalytics } from "components/analytics/google-analytics"
 import { Title } from "components/elements/layout"
 import { toJsonLd } from "lib/json-ld"
-import { SITE_DESCRIPTION, SITE_NAME, SITE_TAGLINE_JA, SITE_URL } from "lib/site"
+import { SITE_DESCRIPTION, SITE_NAME, SITE_OG_IMAGE_URL, SITE_TAGLINE_JA, SITE_URL } from "lib/site"
 import "./reset.css"
 
 const display = Playfair_Display({
@@ -32,11 +32,13 @@ export const metadata: Metadata = {
     title: `${SITE_NAME} — ${SITE_TAGLINE_JA}`,
     description: SITE_DESCRIPTION,
     url: SITE_URL,
+    images: [SITE_OG_IMAGE_URL],
   },
   twitter: {
     card: "summary_large_image",
     title: `${SITE_NAME} — ${SITE_TAGLINE_JA}`,
     description: SITE_DESCRIPTION,
+    images: [SITE_OG_IMAGE_URL],
   },
   alternates: {
     canonical: SITE_URL,
