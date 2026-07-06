@@ -1918,6 +1918,10 @@
         "note": "RAGはコンテキストウィンドウに収まる範囲だけを都度検索して補うことで、上限を超える知識にも対応する"
       },
       {
+        "slug": "long-context",
+        "note": "コンテキストウィンドウは上限そのものを指すのに対し、ロングコンテキストはその上限を拡大し実際に活用できる能力・技術を指す"
+      },
+      {
         "slug": "attention",
         "note": "コンテキストウィンドウの拡大は、Attention計算の効率化と密接に関連する"
       },
@@ -1939,7 +1943,9 @@
       "agent-memory",
       "needle-in-a-haystack",
       "rotary-position-embedding",
-      "prompt-caching"
+      "prompt-caching",
+      "long-context",
+      "context-engineering"
     ],
     "faq": [
       {
@@ -2134,6 +2140,10 @@
       {
         "slug": "chain-of-thought",
         "note": "Chain-of-Thoughtはプロンプトエンジニアリングの代表的な手法の1つ"
+      },
+      {
+        "slug": "context-engineering",
+        "note": "プロンプトエンジニアリングが指示文言そのものの書き方を扱うのに対し、コンテキストエンジニアリングは指示・例・ツール定義・検索結果等を含む入力全体の構成を扱う、より広い実践"
       }
     ],
     "relatedTerms": [
@@ -2141,7 +2151,8 @@
       "fine-tuning",
       "chain-of-thought",
       "large-language-model",
-      "few-shot"
+      "few-shot",
+      "context-engineering"
     ],
     "faq": [
       {
@@ -7899,9 +7910,14 @@
       {
         "slug": "mlflow",
         "note": "MLflowはMLOps全般で使われる実験管理・モデル管理ツールであり、LLMOpsの一部としてプロンプトやLLMの評価管理に活用されることもある"
+      },
+      {
+        "slug": "opentelemetry",
+        "note": "OpenTelemetryはトレース・メトリクス・ログを収集するベンダー中立な計装標準であり、LLMOpsが扱う本番運用のモニタリングを実装レベルで支える技術要素の1つにあたる"
       }
     ],
     "relatedTerms": [
+      "opentelemetry",
       "mlflow",
       "hallucination",
       "retrieval-augmented-generation",
@@ -7934,12 +7950,17 @@
       "autonomous-agent",
       "reflection",
       "agent-memory",
-      "harness-engineering"
+      "harness-engineering",
+      "context-engineering"
     ],
     "comparisons": [
       {
         "slug": "harness-engineering",
         "note": "ハーネスエンジニアリングがエージェントを取り巻く環境全体(コンテキスト・ツール・ガードレール等)の設計を指すのに対し、ループエンジニアリングはその環境の中でエージェントを繰り返し動かす仕組みの設計に焦点を当てる"
+      },
+      {
+        "slug": "context-engineering",
+        "note": "コンテキストエンジニアリングが1回の入出力に渡す情報の質を高めることに焦点を当てるのに対し、ループエンジニアリングはエージェントが試行・検証・修正を繰り返すシステム全体の設計を扱う"
       }
     ]
   },
@@ -7964,12 +7985,17 @@
       "loop-engineering",
       "tool-calling",
       "guardrails",
-      "agent-memory"
+      "agent-memory",
+      "context-engineering"
     ],
     "comparisons": [
       {
         "slug": "loop-engineering",
         "note": "ハーネスエンジニアリングがエージェントを取り巻く環境全体の設計を指すのに対し、ループエンジニアリングはその環境の中でエージェントを繰り返し動かす仕組みの設計に焦点を当てる"
+      },
+      {
+        "slug": "context-engineering",
+        "note": "コンテキストエンジニアリングが1つのコンテキストウィンドウ内の情報構成を扱うのに対し、ハーネスエンジニアリングは複数のセッションやウィンドウを跨いだ環境全体の設計を扱う"
       }
     ]
   },
@@ -11512,12 +11538,17 @@
       {
         "slug": "retrieval-augmented-generation",
         "note": "RAGシステムの設計においても、コンテキストの中間に埋め込まれた情報の想起精度低下は考慮すべき課題とされる"
+      },
+      {
+        "slug": "long-context",
+        "note": "Needle in a Haystackは、ロングコンテキストが謳う実効性能を具体的に検証するための代表的なベンチマーク"
       }
     ],
     "relatedTerms": [
       "context-window",
       "mmlu",
-      "retrieval-augmented-generation"
+      "retrieval-augmented-generation",
+      "long-context"
     ],
     "faq": [
       {
@@ -11769,12 +11800,17 @@
       {
         "slug": "llmops",
         "note": "LLM Gatewayが提供する利用量計測やコスト管理は、LLMOpsが扱う運用プラクティスの一部を実装レベルで支える機能にあたる"
+      },
+      {
+        "slug": "opentelemetry",
+        "note": "LLM Gatewayがプロバイダ呼び出しの窓口を集約するのに対し、OpenTelemetryはその呼び出し過程をトレース・メトリクスとして計装・可視化する標準という違いがある"
       }
     ],
     "relatedTerms": [
       "bedrock",
       "llmops",
-      "prompt-caching"
+      "prompt-caching",
+      "opentelemetry"
     ],
     "faq": [
       {
@@ -14079,6 +14115,157 @@
       {
         "question": "何に使える？",
         "answer": "画像についての質問応答、商品画像の説明文生成、帳票や領収書からの情報抽出、グラフ・図表の読み取り、スクリーンショットを理解して画面操作するエージェントなど。"
+      }
+    ],
+    "references": []
+  },
+  {
+    "slug": "opentelemetry",
+    "name": "OpenTelemetry",
+    "aliases": ["OTel"],
+    "tagline": "アプリケーションのトレース・メトリクス・ログを収集するためのベンダー中立なオブザーバビリティ標準",
+    "category": "インフラ",
+    "tags": ["プロトコル", "相互運用性"],
+    "plainSummary": "アプリの動作状況（処理の流れ・数値・ログ）を、特定の監視サービスに縛られず共通の形式で収集できるようにする仕組み。",
+    "summary": "OpenTelemetryとは、分散システムやアプリケーションからトレース・メトリクス・ログといった観測データ（テレメトリーデータ）を収集・処理・エクスポートするための、ベンダー中立なAPI・SDK・プロトコルの集合を指す。\n各言語向けの計装ライブラリ（SDK）でアプリケーションコード内にトレースやメトリクスの計測点を仕込み、収集したデータをOTLP（OpenTelemetry Protocol）という共通プロトコルでバックエンドに送信する。\n送信先はDatadog、Grafana、New Relic、Jaegerなど任意の監視・観測基盤を選べるため、特定ベンダーの計装SDKへの依存を避けられる点が特徴。\nLLMアプリケーションの文脈では、LLM呼び出しやRAGパイプラインの各処理ステップをトレースとして記録し、レイテンシやトークン消費量を可観測にする用途でも利用が広がっている。",
+    "background": "マイクロサービス化が進み、1つのリクエストが複数サービスをまたぐ分散システムが一般化するにつれ、処理の流れやボトルネックを横断的に把握するオブザーバビリティの必要性が高まった。\nしかし監視ベンダーごとに異なる計装SDKを使う必要があり、ベンダーロックインや二重計装の負担が課題となっていた。",
+    "history": "2019年、分散トレーシング仕様のOpenTracingとGoogle発のOpenCensusが統合し、CNCF（Cloud Native Computing Foundation）のプロジェクトとしてOpenTelemetryが発足した。\n以降、トレースAPIの安定版に続き、メトリクス・ログのAPIも順次安定版となり、対応言語・エコシステムの拡大が続いている。",
+    "architecture": "API（計装用のインターフェース）、SDK（APIの実装とデータ処理）、Collector（テレメトリーデータの受信・加工・転送を担う独立プロセス）、OTLP（データ送信用の共通プロトコル）から構成される。\nアプリケーションはSDKで計装し、Collectorを経由（または直接）してバックエンドへデータを送る構成が一般的。",
+    "codeExamples": [
+      {
+        "title": "Python SDKでのトレース計装例",
+        "language": "python",
+        "code": "from opentelemetry import trace\nfrom opentelemetry.sdk.trace import TracerProvider\nfrom opentelemetry.sdk.trace.export import BatchSpanProcessor, ConsoleSpanExporter\n\ntrace.set_tracer_provider(TracerProvider())\ntracer = trace.get_tracer(__name__)\ntrace.get_tracer_provider().add_span_processor(\n    BatchSpanProcessor(ConsoleSpanExporter())\n)\n\nwith tracer.start_as_current_span(\"my-span\"):\n    print(\"Hello, OpenTelemetry!\")"
+      }
+    ],
+    "advantages": [
+      "特定の監視ベンダーの独自SDKに依存せず、計装コードを変えずに送信先バックエンドを切り替えられる",
+      "トレース・メトリクス・ログを共通の枠組みで扱えるため、分散システム全体の挙動を横断的に把握しやすい"
+    ],
+    "disadvantages": [
+      "APIやSDKの仕様・対応状況は言語・機能ごとに成熟度が異なるため、キャッチアップに手間がかかる場合もある",
+      "Collectorの設計や計装範囲の設計に一定の学習コストがあり、導入初期の設定が煩雑になりやすい"
+    ],
+    "relatedTerms": ["llmops", "llm-gateway"],
+    "faq": [
+      {
+        "question": "OpenTelemetryとDatadogやNew Relicの違いは？",
+        "answer": "OpenTelemetryはテレメトリーデータを収集・送信するためのオープンな標準・SDKであり、それ自体はデータの可視化やアラート機能を持たない。DatadogやNew Relicはそのデータを受け取って可視化・分析する監視サービス側にあたり、OpenTelemetryはこうしたサービスへの送信元として利用される。"
+      },
+      {
+        "question": "LLMアプリケーションでOpenTelemetryは何に使われる？",
+        "answer": "LLM呼び出しやRAGパイプラインの各ステップをスパン（トレースの単位）として記録し、レイテンシやエラー率、トークン消費量などを既存のオブザーバビリティ基盤上で監視する用途に使われる。"
+      }
+    ],
+    "references": [
+      {
+        "type": "Official Website",
+        "label": "OpenTelemetry",
+        "url": "https://opentelemetry.io/"
+      },
+      {
+        "type": "Documentation",
+        "label": "OpenTelemetry Docs",
+        "url": "https://opentelemetry.io/docs/"
+      },
+      {
+        "type": "GitHub",
+        "label": "open-telemetry/opentelemetry-specification",
+        "url": "https://github.com/open-telemetry/opentelemetry-specification"
+      }
+    ]
+  },
+  {
+    "slug": "long-context",
+    "name": "ロングコンテキスト",
+    "aliases": ["Long Context", "Long-Context LLM"],
+    "tagline": "非常に長い入力を一度に処理し、その内容を精度良く活用できるLLMの能力、およびそれを実現するための技術群",
+    "category": "技術",
+    "tags": ["LLM", "コンテキストウィンドウ"],
+    "plainSummary": "とても長い文章やコード全体を一度に読み込ませても、内容をきちんと理解して答えられるAIの性能のこと。",
+    "summary": "ロングコンテキストとは、数十万〜数百万トークン規模という大きなコンテキストウィンドウを持ち、かつその範囲内の情報を精度良く参照・活用できるLLMの能力、およびそれを実現するための技術群を指す。\nコンテキストウィンドウの数値上の上限そのものはモデルの仕様として決まるが、ウィンドウを単に大きくするだけでは、入力中の関連情報を見落とす「Lost in the Middle」のような現象が起き、実用上の性能を伴わないことがある。\nロングコンテキストという語は、こうした上限の拡大だけでなく、拡大したウィンドウの中身を実際に精度良く使いこなせるかという実効性能まで含めて評価・議論される文脈で使われる。\n長大な文書の要約、大規模なコードベース全体の解析、多数の会話履歴やドキュメントを検索なしにそのまま入力する用途などで活用が進んでいる。",
+    "background": "LLMの活用が進むにつれ、長文書の全体把握や大規模コードベースの横断的な解析など、コンテキストウィンドウの上限を超えやすいタスクへのニーズが高まった。\n一方でウィンドウを拡大しても、モデルが入力中のどの情報を重視するかは別問題であり、上限の拡大と実効性能の両立が技術的な課題として意識されるようになった。",
+    "architecture": "位置エンコーディングの外挿・スケーリング(RoPEのスケーリング等)、スパースアテンションやスライディングウィンドウアテンションによる計算量の削減、KVキャッシュの圧縮といった技術が、コンテキストウィンドウの拡大を支える要素として組み合わされる。",
+    "advantages": [
+      "検索(RAG)を介さず、関連文書や会話履歴をそのまま入力に含めて扱える",
+      "文書全体やコードベース全体を一度に参照させることで、断片化による文脈の欠落を避けられる"
+    ],
+    "disadvantages": [
+      "入力トークン数の増加に応じて推論コスト・レイテンシが増える",
+      "ウィンドウを拡大しても入力中の重要な情報を見落とす現象は起きうるため、上限の大きさは実効性能を保証しない",
+      "長大な入力を評価するベンチマーク(Needle in a Haystack等)の結果と、実際のタスクでの性能が一致するとは限らない"
+    ],
+    "comparisons": [
+      {
+        "slug": "context-window",
+        "note": "コンテキストウィンドウはLLMが一度に処理できるトークン量の上限そのものを指すのに対し、ロングコンテキストはその上限を拡大し、拡大した範囲を実際に精度良く活用できるかという能力・技術を指す"
+      },
+      {
+        "slug": "retrieval-augmented-generation",
+        "note": "RAGは必要な情報を都度検索して限られた入力に絞り込むのに対し、ロングコンテキストは関連しうる情報をまとめて入力に含めてしまうアプローチを取る"
+      }
+    ],
+    "relatedTerms": [
+      "context-window",
+      "needle-in-a-haystack",
+      "rotary-position-embedding",
+      "sliding-window-attention",
+      "retrieval-augmented-generation",
+      "kv-cache"
+    ],
+    "faq": [
+      {
+        "question": "ロングコンテキストがあればRAGは不要？",
+        "answer": "一概には言えない。ロングコンテキストは検索なしに関連情報をまとめて入力できる利点があるが、入力トークン数に応じてコスト・レイテンシが増え、情報量が多いほど重要箇所を見落とすリスクもある。扱う文書量やコスト要件に応じて、RAGとの使い分け・併用が検討される。"
+      }
+    ],
+    "references": [
+      {
+        "type": "Research Paper",
+        "label": "Lost in the Middle: How Language Models Use Long Contexts",
+        "url": "https://arxiv.org/abs/2307.03172"
+      }
+    ]
+  },
+  {
+    "slug": "context-engineering",
+    "name": "コンテキストエンジニアリング",
+    "aliases": ["Context Engineering"],
+    "tagline": "限られたコンテキストウィンドウ内でLLMやエージェントが最大の性能を発揮できるよう、渡す情報全体（指示・例・ツール定義・検索結果・記憶等）を設計する実践",
+    "category": "技術",
+    "tags": ["LLM", "入力設計"],
+    "plainSummary": "AIに渡す情報全部（指示文だけでなく、参考資料やツールの説明なども含む）を、限られた枠の中でうまく整理して見せる工夫のこと。",
+    "summary": "コンテキストエンジニアリングとは、LLMやAIエージェントへ入力として渡す情報全体を、限られたコンテキストウィンドウの中で最大の性能を引き出せるように設計する実践を指す。\nプロンプトエンジニアリングが1回の指示文言の書き方・表現を主に扱うのに対し、コンテキストエンジニアリングはシステム指示、少数例、ツール定義、検索で取得した文書、会話履歴や記憶など、入力に含まれる情報全体の取捨選択・構成・優先順位付けを扱う点で対象範囲が広い。\nコンテキストウィンドウには上限があり、詰め込みすぎるとコストが増えるだけでなく、関連情報が埋もれて精度が落ちる現象も起きるため、何を含め何を削るかの設計が性能に直結する。\nAIエージェントが複数のツール呼び出しや検索結果を扱う構成が一般化するにつれて、プロンプト単体の工夫を超えた実践として注目されるようになった。",
+    "background": "AIエージェントやRAGを組み込んだシステムでは、システム指示・ツール定義・検索結果・過去の会話履歴など、LLMに渡す情報の種類と量が増える。\nこれらを無秩序に詰め込むとコンテキストウィンドウの上限に達しやすく、また関連性の低い情報が紛れることで出力精度が下がるため、渡す情報全体を意図的に設計する必要性が生じた。",
+    "comparisons": [
+      {
+        "slug": "prompt-engineering",
+        "note": "プロンプトエンジニアリングが指示文言そのものの書き方を扱うのに対し、コンテキストエンジニアリングは指示・例・ツール定義・検索結果等を含む入力全体の構成を扱う、より広い実践"
+      },
+      {
+        "slug": "harness-engineering",
+        "note": "コンテキストエンジニアリングが1つのコンテキストウィンドウ内の情報構成を扱うのに対し、ハーネスエンジニアリングは複数のセッションやウィンドウを跨いだ環境全体の設計を扱う"
+      },
+      {
+        "slug": "loop-engineering",
+        "note": "コンテキストエンジニアリングが1回の入出力に渡す情報の質を高めることに焦点を当てるのに対し、ループエンジニアリングはエージェントが試行・検証・修正を繰り返すシステム全体の設計を扱う"
+      },
+      {
+        "slug": "context-window",
+        "note": "コンテキストウィンドウはLLMが一度に参照できる情報量の上限そのものを指し、コンテキストエンジニアリングはその上限内に何をどう含めるかを設計する実践を指す"
+      }
+    ],
+    "relatedTerms": [
+      "prompt-engineering",
+      "harness-engineering",
+      "loop-engineering",
+      "context-window",
+      "retrieval-augmented-generation"
+    ],
+    "faq": [
+      {
+        "question": "プロンプトエンジニアリングとの違いは？",
+        "answer": "プロンプトエンジニアリングは1回の指示文言の書き方・表現の工夫を指すことが多いのに対し、コンテキストエンジニアリングはシステム指示・少数例・ツール定義・検索結果・記憶など、入力に含まれる情報全体の取捨選択と構成を扱う、より広い概念として使われる。"
       }
     ],
     "references": []
