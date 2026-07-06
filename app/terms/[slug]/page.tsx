@@ -7,6 +7,7 @@ import { Badge, Container, Section, SectionTitle } from "components/elements/lay
 import { toJsonLd } from "lib/json-ld"
 import { SITE_NAME, SITE_URL } from "lib/site"
 import { getCategorySlug, getRelatedTerms, getTagSlug, getTermBySlug, Term, terms } from "lib/terms"
+import { linkifyTermMentions } from "lib/term-links"
 import { truncate } from "lib/text"
 
 export const dynamicParams = false
@@ -181,7 +182,7 @@ const TermPage: FC<Props> = async ({ params }) => {
       {term.plainSummary && (
         <Section style={{ marginTop: "3rem" }}>
           <SectionTitle>ひとことで言うと</SectionTitle>
-          <p style={{ whiteSpace: "pre-line" }}>{term.plainSummary}</p>
+          <p style={{ whiteSpace: "pre-line" }}>{linkifyTermMentions(term.plainSummary, term.slug)}</p>
         </Section>
       )}
 
@@ -189,7 +190,7 @@ const TermPage: FC<Props> = async ({ params }) => {
       {term.summary && (
         <Section style={{ marginTop: "3rem" }}>
           <SectionTitle>概要</SectionTitle>
-          <p style={{ whiteSpace: "pre-line" }}>{term.summary}</p>
+          <p style={{ whiteSpace: "pre-line" }}>{linkifyTermMentions(term.summary, term.slug)}</p>
         </Section>
       )}
 
@@ -197,7 +198,7 @@ const TermPage: FC<Props> = async ({ params }) => {
       {term.background && (
         <Section>
           <SectionTitle>背景</SectionTitle>
-          <p style={{ whiteSpace: "pre-line" }}>{term.background}</p>
+          <p style={{ whiteSpace: "pre-line" }}>{linkifyTermMentions(term.background, term.slug)}</p>
         </Section>
       )}
 
@@ -205,7 +206,7 @@ const TermPage: FC<Props> = async ({ params }) => {
       {term.history && (
         <Section>
           <SectionTitle>歴史</SectionTitle>
-          <p style={{ whiteSpace: "pre-line" }}>{term.history}</p>
+          <p style={{ whiteSpace: "pre-line" }}>{linkifyTermMentions(term.history, term.slug)}</p>
         </Section>
       )}
 
@@ -213,7 +214,7 @@ const TermPage: FC<Props> = async ({ params }) => {
       {term.architecture && (
         <Section>
           <SectionTitle>アーキテクチャ</SectionTitle>
-          <p style={{ whiteSpace: "pre-line" }}>{term.architecture}</p>
+          <p style={{ whiteSpace: "pre-line" }}>{linkifyTermMentions(term.architecture, term.slug)}</p>
         </Section>
       )}
 
@@ -221,7 +222,7 @@ const TermPage: FC<Props> = async ({ params }) => {
       {term.workflow && (
         <Section>
           <SectionTitle>ワークフロー</SectionTitle>
-          <p style={{ whiteSpace: "pre-line" }}>{term.workflow}</p>
+          <p style={{ whiteSpace: "pre-line" }}>{linkifyTermMentions(term.workflow, term.slug)}</p>
         </Section>
       )}
 
@@ -263,7 +264,7 @@ const TermPage: FC<Props> = async ({ params }) => {
           <ul style={{ paddingLeft: "1.25rem" }}>
             {term.advantages.map((advantage) => (
               <li key={advantage} style={{ marginBottom: ".375rem" }}>
-                {advantage}
+                {linkifyTermMentions(advantage, term.slug)}
               </li>
             ))}
           </ul>
@@ -277,7 +278,7 @@ const TermPage: FC<Props> = async ({ params }) => {
           <ul style={{ paddingLeft: "1.25rem" }}>
             {term.disadvantages.map((disadvantage) => (
               <li key={disadvantage} style={{ marginBottom: ".375rem" }}>
-                {disadvantage}
+                {linkifyTermMentions(disadvantage, term.slug)}
               </li>
             ))}
           </ul>
@@ -332,7 +333,9 @@ const TermPage: FC<Props> = async ({ params }) => {
           {term.faq.map((item) => (
             <div key={item.question} style={{ marginBottom: "1.25rem" }}>
               <p style={{ fontWeight: 600, marginBottom: ".375rem" }}>{item.question}</p>
-              <p style={{ color: "var(--color-text-muted)", whiteSpace: "pre-line" }}>{item.answer}</p>
+              <p style={{ color: "var(--color-text-muted)", whiteSpace: "pre-line" }}>
+                {linkifyTermMentions(item.answer, term.slug)}
+              </p>
             </div>
           ))}
         </Section>
