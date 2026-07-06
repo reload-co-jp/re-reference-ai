@@ -1312,7 +1312,8 @@
       "corpus",
       "nlp",
       "context-window",
-      "byte-pair-encoding"
+      "byte-pair-encoding",
+      "tokenization"
     ],
     "faq": [
       {
@@ -1581,7 +1582,9 @@
       "transfer-learning",
       "quantization",
       "dpo",
-      "catastrophic-forgetting"
+      "catastrophic-forgetting",
+      "peft",
+      "qlora"
     ],
     "faq": [
       {
@@ -2359,7 +2362,8 @@
       "deepseek",
       "search-tree",
       "self-consistency",
-      "tree-of-thought"
+      "tree-of-thought",
+      "test-time-scaling"
     ],
     "faq": [
       {
@@ -2733,7 +2737,11 @@
       "constitutional-ai",
       "instruction-tuning",
       "q-learning",
-      "reinforcement-learning"
+      "reinforcement-learning",
+      "grpo",
+      "rlvr",
+      "reward-model",
+      "rlaif"
     ],
     "faq": [
       {
@@ -3107,7 +3115,8 @@
       "prompt-caching",
       "grouped-query-attention",
       "multi-query-attention",
-      "flash-attention"
+      "flash-attention",
+      "multi-head-latent-attention"
     ],
     "faq": [
       {
@@ -4178,7 +4187,8 @@
       "langgraph",
       "crewai",
       "autogen",
-      "orchestrator"
+      "orchestrator",
+      "subagent"
     ],
     "faq": [
       {
@@ -5408,7 +5418,8 @@
       "mixture-of-experts",
       "reasoning-model",
       "rlhf",
-      "large-language-model"
+      "large-language-model",
+      "grpo"
     ],
     "faq": [
       {
@@ -5653,7 +5664,8 @@
       "ollama",
       "inference",
       "triton-inference-server",
-      "ray"
+      "ray",
+      "sglang"
     ],
     "faq": [
       {
@@ -7674,7 +7686,8 @@
     "relatedTerms": [
       "retrieval-augmented-generation",
       "hallucination",
-      "aio"
+      "aio",
+      "llms-txt"
     ],
     "faq": [
       {
@@ -7726,7 +7739,8 @@
     ],
     "relatedTerms": [
       "llmo",
-      "retrieval-augmented-generation"
+      "retrieval-augmented-generation",
+      "llms-txt"
     ],
     "faq": [
       {
@@ -7874,7 +7888,8 @@
       }
     ],
     "relatedTerms": [
-      "llmops"
+      "llmops",
+      "wandb"
     ],
     "references": [
       {
@@ -8052,7 +8067,8 @@
       "fine-tuning",
       "context-window",
       "zero-shot",
-      "self-consistency"
+      "self-consistency",
+      "in-context-learning"
     ],
     "references": [
       {
@@ -9260,7 +9276,8 @@
       "small-language-model",
       "npu",
       "knowledge-distillation",
-      "local-llm"
+      "local-llm",
+      "physical-ai"
     ]
   },
   {
@@ -9931,7 +9948,8 @@
       "large-language-model",
       "emergent-abilities",
       "transformer",
-      "pretraining"
+      "pretraining",
+      "test-time-scaling"
     ],
     "faq": [
       {
@@ -9995,7 +10013,8 @@
       "scaling-laws",
       "large-language-model",
       "chain-of-thought",
-      "reasoning-model"
+      "reasoning-model",
+      "agi"
     ],
     "faq": [
       {
@@ -10383,7 +10402,8 @@
     "relatedTerms": [
       "transformer",
       "recurrent-neural-network",
-      "context-window"
+      "context-window",
+      "mamba"
     ],
     "faq": [
       {
@@ -10582,7 +10602,8 @@
       "retrieval-augmented-generation",
       "agentic-rag",
       "vector-database",
-      "ontology"
+      "ontology",
+      "knowledge-graph"
     ],
     "faq": [
       {
@@ -12907,7 +12928,10 @@
     "relatedTerms": [
       "diffusion-model",
       "variational-autoencoder",
-      "clip"
+      "clip",
+      "u-net",
+      "midjourney",
+      "flux"
     ],
     "faq": [
       {
@@ -13035,7 +13059,9 @@
       "stable-diffusion",
       "multimodal",
       "cosine-similarity",
-      "vision-language-model"
+      "vision-language-model",
+      "contrastive-learning",
+      "vision-transformer"
     ],
     "faq": [
       {
@@ -14123,7 +14149,8 @@
       "gemini",
       "computer-use",
       "hallucination",
-      "instruction-tuning"
+      "instruction-tuning",
+      "vla"
     ],
     "faq": [
       {
@@ -14408,7 +14435,10 @@
       "code-interpreter",
       "ai-ide",
       "sandboxing",
-      "harness-engineering"
+      "harness-engineering",
+      "vibe-coding",
+      "spec-driven-development",
+      "subagent"
     ]
   },
   {
@@ -14492,6 +14522,2056 @@
       "gguf",
       "quantization",
       "open-webui"
+    ]
+  },
+  {
+    "slug": "test-time-scaling",
+    "name": "テスト時スケーリング",
+    "aliases": [
+      "Test-time Scaling",
+      "Test-time Compute",
+      "推論時スケーリング"
+    ],
+    "tagline": "学習済みモデルの推論時に計算量を追加投入し、思考の長文化や複数候補の生成・選別によって回答品質を高めるアプローチ",
+    "category": "技術",
+    "tags": [
+      "推論",
+      "スケーリング",
+      "LLM"
+    ],
+    "plainSummary": "AIが答えを出す瞬間に「考える時間」を長く与えるほど良い答えになる、という考え方。学習をやり直さずに性能を引き上げられる。",
+    "summary": "テスト時スケーリングとは、学習済みモデルの重みを変えずに、推論（テスト）時に使う計算量を増やして回答品質を高めるアプローチを指す。\n具体的な手段には、Chain-of-Thoughtを長く生成させて段階的に考えさせる方法、複数の解答候補を生成して多数決や検証器で選別する方法（Best-of-NやSelf-Consistency）、探索アルゴリズムを組み合わせる方法などがある。\n従来のスケーリング則が事前学習の計算量・データ量・パラメータ数の拡大を対象としてきたのに対し、テスト時スケーリングは推論時の計算量という別の軸で性能を伸ばす。\nOpenAI o1やDeepSeek-R1などの推論モデルは、推論時に長い思考過程を生成するほど難問の正答率が上がる性質を示し、この軸の有効性を広く知らしめた。",
+    "background": "事前学習のスケーリングは、学習データの枯渇や計算コストの増大により限界が意識されるようになった。\n一方で、難しい問題ほど人間は時間をかけて考える。モデルも推論時の計算量を増やすほど正答率が上がると確認され、再学習なしで性能を伸ばせる軸として注目された。",
+    "history": "推論時の計算量配分を体系的に扱った研究として、2024年8月に発表された論文「Scaling LLM Test-Time Compute Optimally can be More Effective than Scaling Model Parameters」（Snellら）が知られる。同年9月のOpenAI o1の公開以降、推論モデルの性能向上を説明する概念として広く使われるようになった。",
+    "advantages": [
+      "モデルを再学習せずに、推論時の設定だけで難しいタスクの正答率を引き上げられる",
+      "問題の難易度に応じて計算量を可変にでき、簡単な問題には少ない計算で応答できる"
+    ],
+    "disadvantages": [
+      "思考過程の生成や複数候補のサンプリングによって、推論のレイテンシとコストが増える",
+      "計算量を増やしても性能が頭打ちになるタスクがあり、常に有効とは限らない"
+    ],
+    "comparisons": [
+      {
+        "slug": "scaling-laws",
+        "note": "スケーリング則が事前学習時の計算量・データ量・パラメータ数と性能の関係を扱うのに対し、テスト時スケーリングは学習後の推論時に投入する計算量と性能の関係を扱う"
+      },
+      {
+        "slug": "reasoning-model",
+        "note": "推論モデルはテスト時スケーリングを体現するモデル群であり、推論時に長い思考過程を生成することで計算量を性能に変換する"
+      }
+    ],
+    "relatedTerms": [
+      "reasoning-model",
+      "chain-of-thought",
+      "self-consistency",
+      "tree-of-thought",
+      "scaling-laws"
+    ],
+    "faq": [
+      {
+        "question": "事前学習のスケーリングとどちらが重要か？",
+        "answer": "両者は排他的でなく補完関係にある。事前学習のスケーリングがモデルの基礎能力を決め、テスト時スケーリングはその能力を難しい問題に対して引き出す手段として働く。また、同じ回答品質を狙う場合、小さいモデルへ多くの推論計算を割り当てる方が総計算量を抑えられると報告されている。"
+      }
+    ],
+    "references": [
+      {
+        "type": "Research Paper",
+        "label": "Scaling LLM Test-Time Compute Optimally can be More Effective than Scaling Model Parameters (arXiv)",
+        "url": "https://arxiv.org/abs/2408.03314"
+      }
+    ]
+  },
+  {
+    "slug": "grpo",
+    "name": "GRPO",
+    "aliases": [
+      "Group Relative Policy Optimization",
+      "グループ相対方策最適化"
+    ],
+    "tagline": "価値関数モデルを使わず、同一プロンプトから生成した複数出力のグループ内比較で優位性を計算する、LLM向けの強化学習アルゴリズム",
+    "category": "技術",
+    "tags": [
+      "強化学習",
+      "学習",
+      "LLM"
+    ],
+    "plainSummary": "AIに同じ問題を何通りも解かせ、その中の出来の良し悪しを比べて学習させる方法。従来より少ないメモリと計算で強化学習できる。",
+    "summary": "GRPO（Group Relative Policy Optimization）とは、LLMの強化学習で使われる方策最適化アルゴリズムの1つで、DeepSeekが提案した。\nRLHFで広く使われてきたPPOは、報酬モデルとは別に価値関数（クリティック）モデルを学習し、それをベースラインとして方策を更新する。このため方策モデルと同規模のモデルをもう1つ保持する必要があり、メモリと計算のコストが課題だった。\nGRPOはクリティックモデルを廃し、同じプロンプトから複数の出力（グループ）をサンプリングして、グループ内の報酬の平均を基準に各出力の相対的な優位性を計算する。\nこの仕組みによりコストを抑えて方策を更新でき、数学やコーディングのように正誤を機械的に判定できるタスクの強化学習と相性がよい。\nDeepSeek-R1の学習に採用されたことで注目され、推論モデルを強化学習で鍛える際の代表的なアルゴリズムの1つになった。",
+    "background": "LLMの強化学習では、方策モデルに加えて報酬モデルや価値関数モデルなど複数の大規模モデルを同時に保持する必要があり、メモリと計算資源の負担が大きかった。\n特に数学やコーディングでは報酬を機械的な正誤判定で得られるため、価値関数モデルなしで安定して学習できる軽量なアルゴリズムが求められていた。",
+    "history": "2024年2月にDeepSeekが論文「DeepSeekMath」で提案した。2025年1月に公開されたDeepSeek-R1の学習に採用されたことで、広く知られるようになった。",
+    "advantages": [
+      "価値関数（クリティック）モデルが不要になり、PPOに比べてメモリ使用量と計算コストを抑えられる",
+      "グループ内の相対比較に基づくため、正誤判定のような単純な報酬でも安定して学習しやすい"
+    ],
+    "disadvantages": [
+      "プロンプトごとに複数の出力をサンプリングする必要があり、生成コストがかかる",
+      "グループ内の報酬に差が出ないプロンプトでは学習信号が得られない"
+    ],
+    "comparisons": [
+      {
+        "slug": "rlhf",
+        "note": "RLHFで標準的だったPPOが価値関数モデルをベースラインに使うのに対し、GRPOは同一プロンプトの複数出力の報酬平均をベースラインに使い、価値関数モデルを不要にした"
+      },
+      {
+        "slug": "dpo",
+        "note": "DPOが報酬モデルと強化学習のどちらも使わず選好ペアから直接学習するのに対し、GRPOは強化学習の枠組みを保ちつつ価値関数モデルだけを省いた手法"
+      }
+    ],
+    "relatedTerms": [
+      "rlhf",
+      "dpo",
+      "rlvr",
+      "reinforcement-learning",
+      "deepseek",
+      "reasoning-model"
+    ],
+    "references": [
+      {
+        "type": "Research Paper",
+        "label": "DeepSeekMath: Pushing the Limits of Mathematical Reasoning in Open Language Models (arXiv)",
+        "url": "https://arxiv.org/abs/2402.03300"
+      }
+    ]
+  },
+  {
+    "slug": "rlvr",
+    "name": "RLVR",
+    "aliases": [
+      "Reinforcement Learning with Verifiable Rewards",
+      "検証可能報酬による強化学習"
+    ],
+    "tagline": "学習済みの報酬モデルの代わりに、数学の正誤判定やテストの合否など機械的に検証できる報酬を使ってLLMを強化学習する手法",
+    "category": "技術",
+    "tags": [
+      "強化学習",
+      "学習",
+      "LLM"
+    ],
+    "plainSummary": "AIの答えの良し悪しを人の好みを学習したモデルで判断するのではなく、「答えが合っているか」「テストに通るか」といった機械的な採点で強化学習する方法。",
+    "summary": "RLVR（Reinforcement Learning with Verifiable Rewards）とは、LLMの強化学習において、人間の選好から学習した報酬モデルの代わりに、機械的に検証可能な報酬を使う手法を指す。\n数学問題であれば最終解答と正解の一致、コーディングであれば単体テストの合否、形式が定められたタスクであれば形式遵守の判定など、正誤をプログラムで判定できるシグナルをそのまま報酬として使う。\n報酬モデルを使う従来のRLHFでは、方策モデルが報酬モデルの弱点を突いて見かけ上のスコアだけを高める報酬ハッキングが課題だったのに対し、検証可能な報酬はごまかしが効きにくく、正確さが求められるタスクの能力を伸ばしやすい。\nDeepSeek-R1をはじめとする推論モデルの学習方式を説明する用語として広まり、GRPOなどのアルゴリズムと組み合わせて使われることが多い。",
+    "background": "RLHFで使われる報酬モデルは人間の選好の近似にすぎず、方策モデルがその不完全さを突いて報酬だけを稼ぐ報酬ハッキングが起きやすかった。\n一方、数学やコーディングのように正誤を機械的に判定できる領域では、判定結果を直接報酬にすれば、報酬モデルの学習と報酬ハッキング対策のどちらも不要になるという発想が生まれた。",
+    "history": "2024年11月にAllen Institute for AI（Ai2）が公開したTülu 3の技術報告で提唱された用語。その後、DeepSeek-R1などの推論モデルの学習方式を説明する言葉として定着した。",
+    "advantages": [
+      "報酬がプログラムによる判定に基づくため、報酬モデルの弱点を突く報酬ハッキングが起きにくい",
+      "人間の選好データや報酬モデルの学習が不要で、正解データと判定器があれば学習を回せる"
+    ],
+    "disadvantages": [
+      "正誤を機械的に判定できるタスクにしか適用できず、文章の質のような主観的な評価軸には使えない",
+      "判定器の穴を突く出力が学習される可能性は残り、判定器自体の設計品質が重要になる"
+    ],
+    "comparisons": [
+      {
+        "slug": "rlhf",
+        "note": "RLHFが人間の選好から学習した報酬モデルでスコアを与えるのに対し、RLVRは正誤判定やテストの合否といった機械的に検証できるシグナルをそのまま報酬に使う"
+      }
+    ],
+    "relatedTerms": [
+      "rlhf",
+      "grpo",
+      "reinforcement-learning",
+      "reasoning-model",
+      "deepseek"
+    ],
+    "references": [
+      {
+        "type": "Research Paper",
+        "label": "Tülu 3: Pushing Frontiers in Open Language Model Post-Training (arXiv)",
+        "url": "https://arxiv.org/abs/2411.15124"
+      }
+    ]
+  },
+  {
+    "slug": "world-model",
+    "name": "世界モデル",
+    "aliases": [
+      "World Model",
+      "World Models"
+    ],
+    "tagline": "環境のダイナミクスを学習し、行動の結果を内部でシミュレートできるようにするモデル",
+    "category": "技術",
+    "tags": [
+      "深層学習",
+      "強化学習",
+      "マルチモーダル"
+    ],
+    "plainSummary": "「こう動いたら世界はどう変わるか」をAIの頭の中で予測できるようにした模型。実際に試さなくても、頭の中のシミュレーションで行動の結果を確かめられる。",
+    "summary": "世界モデルとは、環境の状態がどのように変化するか（ダイナミクス）を学習し、行動の結果を内部でシミュレートできるようにしたモデルを指す。\nエージェントは実環境で試行錯誤する代わりに、世界モデルの中で「この行動をとったら次に何が起きるか」を予測しながら計画や学習を進められるため、実環境での試行コストや危険を減らせる。\n強化学習の分野で研究されてきた概念だが、近年は動画生成モデルを物理世界のシミュレータとみなす見方や、テキスト・映像・行動をまたいで物理世界の常識を学習する基盤モデルの文脈で再び注目されている。\nロボットや自動運転などのフィジカルAIでは、実世界での学習データ収集が高コストなため、世界モデルによるシミュレーション学習が重要な役割を担うと期待されている。",
+    "background": "強化学習エージェントを実環境だけで学習させると、試行回数が膨大になるうえ、ロボットや車両では失敗が破損や事故につながる。\n環境の挙動を学習したモデルの内部で試行をシミュレートできれば、安全かつ低コストに学習と計画を進められるため、環境そのものをモデル化する研究が続けられてきた。",
+    "history": "概念自体は制御理論や認知科学のメンタルモデルに遡るが、深層学習の分野ではDavid HaとJürgen Schmidhuberが2018年に発表した論文「World Models」が代表的な研究として知られる。近年は動画生成やロボティクスの基盤モデルの文脈で改めて注目されている。",
+    "comparisons": [
+      {
+        "slug": "large-language-model",
+        "note": "LLMがテキストの次トークン予測を通じて言語的な知識を学習するのに対し、世界モデルは環境の状態遷移の予測を通じて物理世界のダイナミクスを学習する"
+      }
+    ],
+    "relatedTerms": [
+      "reinforcement-learning",
+      "physical-ai",
+      "multimodal",
+      "diffusion-model"
+    ],
+    "references": [
+      {
+        "type": "Research Paper",
+        "label": "World Models (arXiv)",
+        "url": "https://arxiv.org/abs/1803.10122"
+      }
+    ]
+  },
+  {
+    "slug": "physical-ai",
+    "name": "フィジカルAI",
+    "aliases": [
+      "Physical AI"
+    ],
+    "tagline": "ロボットや自動運転車など、物理世界を知覚し行動する機械に組み込まれるAI",
+    "category": "技術",
+    "tags": [
+      "自律システム",
+      "ロボティクス"
+    ],
+    "plainSummary": "画面の中で文章や画像を作るAIではなく、ロボットや自動運転車のように現実の世界で見て・判断して・動くAIのこと。",
+    "summary": "フィジカルAIとは、ロボット・自動運転車・産業機械のように物理世界を知覚・理解し実際に行動する機械に組み込まれるAIを指す。\nテキストや画像といったデジタル空間で完結する生成AIに対し、フィジカルAIは重力・摩擦・物体の挙動といった物理法則の理解と、センサー入力からモーター制御までの実時間処理が求められる。\n実世界での学習データ収集は高コストで危険も伴うため、物理法則を反映したシミュレーション環境や世界モデルで学習し、その成果を実機に転移するアプローチ（Sim2Real）が重要な位置を占める。\n視覚と言語の理解を行動生成につなげるVLA（Vision-Language-Action）モデルなど、基盤モデルの技術をロボティクスへ展開する研究開発が活発化している。",
+    "background": "LLMや画像生成などデジタル空間の生成AIが普及した一方、労働力不足を背景に、物流・製造・モビリティなど物理世界の自動化への期待が高まった。\n基盤モデルの汎用的な理解能力をロボット制御へ応用する研究が進み、生成AIの次の応用領域としてフィジカルAIが位置づけられるようになった。",
+    "history": "2025年1月のCESにおけるNVIDIAのCEOジェンスン・フアンの基調講演で、生成AI・エージェンティックAIに続く波として提唱され、広く使われるようになった。",
+    "comparisons": [
+      {
+        "slug": "edge-ai",
+        "note": "エッジAIが「どこで推論するか」という配置の観点の言葉であるのに対し、フィジカルAIは「物理世界を知覚し行動する」という機能の観点の言葉。フィジカルAIの多くは機体上で推論するエッジAIとして実装される"
+      },
+      {
+        "slug": "agentic-ai",
+        "note": "エージェンティックAIが主にデジタル空間でツールを操作して目標を達成するのに対し、フィジカルAIは物理世界でセンサーとアクチュエータを通じて行動する"
+      }
+    ],
+    "relatedTerms": [
+      "world-model",
+      "edge-ai",
+      "vision-language-model",
+      "multimodal",
+      "autonomous-agent",
+      "vla"
+    ]
+  },
+  {
+    "slug": "deep-research",
+    "name": "Deep Research",
+    "aliases": [
+      "ディープリサーチ"
+    ],
+    "tagline": "エージェントが多数のWeb情報源を反復的に検索・閲覧し、出典付きの調査レポートを自動生成する機能の総称",
+    "category": "エージェント",
+    "tags": [
+      "エージェント",
+      "検索",
+      "自動化"
+    ],
+    "plainSummary": "調べたいテーマを伝えると、AIが自分で検索を繰り返してたくさんのWebページを読み込み、出典付きの長い調査レポートを数分〜数十分かけてまとめてくれる機能。",
+    "summary": "Deep Researchとは、調査したいテーマを与えるとエージェントが自律的に調査計画を立て、多数のWebページを反復的に検索・閲覧し、収集した情報を推論モデルで統合して出典付きの長文レポートを生成する機能の総称を指す。\n1回の検索と要約で答える従来のAI検索と異なり、検索結果を読んで新たな疑問を立て、追加の検索を繰り返す多段の調査ループを数分から数十分かけて実行する点が特徴。\n推論モデルによる計画・統合能力と、ツールコーリングによるWeb閲覧を組み合わせた、エージェント機能の代表的な応用例と位置づけられる。\n市場調査・技術調査・文献レビューのような、人間が数時間かけて行っていた調査業務の下書きを短時間で得られる用途に使われている。",
+    "background": "1回の検索結果を要約するだけのAI検索は、複数の情報源の突き合わせや深掘りが必要な調査には力不足だった。\n推論モデルの登場により長時間の多段推論が実用的になり、検索・閲覧ツールと組み合わせて調査プロセス全体を自動化するエージェントが成立するようになった。",
+    "history": "2024年12月にGoogleがGeminiの機能として発表し、2025年2月にOpenAIが同名の機能を公開した。以降、各社が提供する同種のエージェント型調査機能を指す一般的な呼称として定着した。",
+    "advantages": [
+      "複数の情報源を突き合わせた調査の下書きを、数分から数十分で得られる",
+      "出典リンク付きでレポートが生成されるため、内容の検証がしやすい"
+    ],
+    "disadvantages": [
+      "参照したWeb情報源自体の誤りや偏りがレポートに反映されるため、出典の確認が欠かせない",
+      "実行に時間と計算コストがかかり、即答が欲しい用途には向かない"
+    ],
+    "comparisons": [
+      {
+        "slug": "retrieval-augmented-generation",
+        "note": "RAGが検索した文書をコンテキストに入れて1回の生成を補強する構成を指すのに対し、Deep Researchは検索・閲覧・推論を多段に繰り返すエージェント型の調査プロセス全体を指す"
+      }
+    ],
+    "relatedTerms": [
+      "ai-agent",
+      "agentic-ai",
+      "reasoning-model",
+      "retrieval-augmented-generation",
+      "tool-calling"
+    ]
+  },
+  {
+    "slug": "vibe-coding",
+    "name": "バイブコーディング",
+    "aliases": [
+      "Vibe Coding"
+    ],
+    "tagline": "自然言語で意図を伝え、生成されたコードの詳細を検証せずAIとの対話を繰り返して開発を進めるスタイル",
+    "category": "技術",
+    "tags": [
+      "コード生成",
+      "コーディングエージェント"
+    ],
+    "plainSummary": "コードの中身を細かく読まずに、「こういうものを作って」とAIに日本語で頼んでは動かして、直してほしいところをまた言葉で伝える、というノリで開発を進めるやり方。",
+    "summary": "バイブコーディングとは、自然言語で作りたいものを伝え、AIが生成したコードの詳細を逐一検証せずに受け入れ、実行結果を見ながら対話的に修正を繰り返して開発を進めるスタイルを指す。\nコードの1行1行を理解して書く従来の開発と異なり、開発者はコードの存在をほとんど意識せず、要望と実行結果のフィードバックだけでソフトウェアを形にしていく。\nコーディングエージェントやAI IDEの能力向上によって成立するようになったスタイルで、プログラミング経験が浅い人でも動くソフトウェアを作れる点が注目された。\n一方、生成コードを検証しないまま積み上げるため、品質・保守性・セキュリティの担保が難しく、プロトタイピングや個人用ツールには適するが、本番運用するソフトウェア開発にそのまま適用することへの懸念も指摘されている。",
+    "background": "LLMのコード生成能力が向上し、コーディングエージェントは自律的なファイル編集・実行・デバッグまで行えるようになった。この結果、コードを人間が読まないまま開発の進む場面も生まれた。\nこの変化を象徴する言葉として提唱され、AI時代の開発スタイルを巡る議論の中心的な用語になった。",
+    "history": "2025年2月にAndrej KarpathyがXへの投稿で提唱した造語。「コードの存在を忘れて雰囲気（vibes）に身を委ねる」開発の様子を表す言葉として急速に広まり、同年にはCollins English Dictionaryのワード・オブ・ザ・イヤーに選ばれた。",
+    "advantages": [
+      "プログラミングの詳細な知識がなくても、動くソフトウェアを短時間で形にできる",
+      "プロトタイプや個人用ツールの検証サイクルを短縮できる"
+    ],
+    "disadvantages": [
+      "生成コードを検証しないため、バグや脆弱性が見過ごされたまま蓄積しやすい",
+      "コードベースの構造を誰も把握していない状態になり、保守や拡張が難しくなる"
+    ],
+    "comparisons": [
+      {
+        "slug": "spec-driven-development",
+        "note": "バイブコーディングが仕様を明文化せず対話の流れで開発を進めるのに対し、仕様駆動開発は実装前に仕様を文書化しそれを正としてコードを生成する、対照的なアプローチ"
+      },
+      {
+        "slug": "coding-agent",
+        "note": "コーディングエージェントが開発作業を担うツールを指すのに対し、バイブコーディングはそれを使ってコードを検証しないまま開発を進めるスタイルを指す"
+      }
+    ],
+    "relatedTerms": [
+      "coding-agent",
+      "ai-ide",
+      "spec-driven-development",
+      "prompt-engineering"
+    ],
+    "faq": [
+      {
+        "question": "バイブコーディングは実務で使ってよいのか？",
+        "answer": "プロトタイプ・検証用コード・個人用ツールのように、失敗のコストが低い用途では有効とされる。一方、本番運用するソフトウェアでは、生成コードのレビュー・テスト・セキュリティ検証を組み合わせるか、仕様駆動開発のような統制されたアプローチを採ることが推奨される。"
+      }
+    ]
+  },
+  {
+    "slug": "spec-driven-development",
+    "name": "仕様駆動開発",
+    "aliases": [
+      "Spec-Driven Development",
+      "SDD",
+      "スペック駆動開発"
+    ],
+    "tagline": "実装前に要件・設計・タスクを仕様書として明文化し、それをコーディングエージェントへの入力としてコードを生成する開発手法",
+    "category": "技術",
+    "tags": [
+      "コーディングエージェント",
+      "自動化"
+    ],
+    "plainSummary": "AIにいきなりコードを書かせるのではなく、先に「何を作るか」の仕様書をAIと一緒に作り、その仕様書をもとにAIにコードを書かせる開発のやり方。",
+    "summary": "仕様駆動開発とは、実装前に要件・設計・実装タスクを仕様書として明文化し、その仕様をコーディングエージェントへの主要な入力としてコードを生成させる開発手法を指す。\n思いつきのプロンプトを重ねるバイブコーディングでは、暗黙的な意図のまま実装が進み、規模の拡大とともに品質や一貫性を保てなくなる。仕様駆動開発は、要件定義・技術設計・タスク分解といった工程を仕様ファイルとして残し、人間が仕様をレビューしてからエージェントに実装させることで、この問題に対処する。\n仕様が唯一の正となり、コードは仕様から導かれる成果物と位置づけられるため、仕様を更新して再生成する反復や、実装意図のレビュー・共有がしやすくなる。\nAWSのKiroやGitHubのSpec Kitなど、この手法を支援するツールが相次いで公開され、コーディングエージェント時代の開発プロセスとして注目されている。",
+    "background": "コーディングエージェントの普及で実装の自動化が進んだ一方、プロンプトの積み重ねだけで開発すると、意図が記録されず、生成結果の検証基準も曖昧になる課題が明らかになった。\n実装前に意図を仕様として固定し、人間のレビューポイントを仕様に置くことで、エージェントによる開発を統制する手法が求められた。",
+    "history": "要求仕様を起点とする開発手法自体は古くからある。コーディングエージェントの文脈では、2025年7月に発表されたAWSのAI IDE「Kiro」や同年9月にGitHubが公開したツールキット「Spec Kit」を通じて、仕様駆動開発という呼称が広まった。",
+    "advantages": [
+      "実装意図が仕様書として残るため、人間によるレビューとエージェントによる実装の分業がしやすい",
+      "仕様を更新して再生成する反復開発ができ、大きめの機能でも一貫性を保ちやすい"
+    ],
+    "disadvantages": [
+      "仕様の作成・レビューに時間がかかり、小さな変更や試作には過剰な場合がある",
+      "仕様の品質が低いと、そのままコードの品質低下に直結する"
+    ],
+    "comparisons": [
+      {
+        "slug": "vibe-coding",
+        "note": "仕様駆動開発が実装前に仕様を明文化してからエージェントに実装させるのに対し、バイブコーディングは仕様を書かず対話の流れで開発を進める、対照的なアプローチ"
+      }
+    ],
+    "relatedTerms": [
+      "vibe-coding",
+      "coding-agent",
+      "ai-ide",
+      "context-engineering"
+    ],
+    "references": [
+      {
+        "type": "GitHub",
+        "label": "github/spec-kit",
+        "url": "https://github.com/github/spec-kit"
+      }
+    ]
+  },
+  {
+    "slug": "subagent",
+    "name": "サブエージェント",
+    "aliases": [
+      "Subagent",
+      "Sub-agent"
+    ],
+    "tagline": "親エージェントがタスクの一部を委譲するために起動する、独立したコンテキストを持つ子エージェント",
+    "category": "エージェント",
+    "tags": [
+      "エージェント",
+      "マルチエージェント"
+    ],
+    "plainSummary": "メインのAIエージェントが、調査や作業の一部を任せるために呼び出す「部下のAI」。部下が別の作業スペースで働いて結果だけ報告するので、メインの記憶容量を圧迫しない。",
+    "summary": "サブエージェントとは、親となるエージェントがタスクの一部を委譲するために起動する子エージェントを指す。\n多くの実装では、サブエージェントは親とは独立したコンテキストウィンドウを持ち、割り当てられたタスクに必要なツールと指示だけを与えられて動作する。大量のファイル読み込みや検索のような、コンテキストを大きく消費する作業をサブエージェント側で実行し、親には要約された結果だけを返すことで、親のコンテキストを本来のタスクに集中させられる。\nコードレビュー専用・調査専用のように役割を特化させた定義を用意しておき、親がタスクに応じて使い分けるほか、複数のサブエージェントを並列に起動して作業を分担させる構成もとれる。\nコーディングエージェントをはじめとするエージェント製品で標準的な機能になりつつあり、コンテキストエンジニアリングの実践手段としての側面も持つ。",
+    "background": "単一のエージェントで長いタスクを処理すると、調査結果やツール出力がコンテキストウィンドウを圧迫し、本来のタスクの精度低下を招く課題があった。\nコンテキストを消費する作業を独立した子エージェントに切り出し、結果だけを親へ返す構成が、この問題への対処として広まった。",
+    "comparisons": [
+      {
+        "slug": "multi-agent",
+        "note": "マルチエージェントが複数エージェントの協調構成全般を指すのに対し、サブエージェントは親が子へタスクを委譲する階層関係に焦点を当てた言葉"
+      },
+      {
+        "slug": "orchestrator",
+        "note": "オーケストレーターがタスクを分解して割り振る司令塔の役割を指すのに対し、サブエージェントは割り振られたタスクを独立したコンテキストで実行する側を指す"
+      }
+    ],
+    "relatedTerms": [
+      "multi-agent",
+      "orchestrator",
+      "coding-agent",
+      "context-engineering",
+      "ai-agent"
+    ],
+    "faq": [
+      {
+        "question": "サブエージェントを使うと何が良くなるのか？",
+        "answer": "大量のファイル読み込みや検索の結果を親のコンテキストへ入れずに済むため、親エージェントが長いタスクでも本来の目的に集中しやすくなる。また役割特化の指示とツールだけを持たせることで、個々のタスクの精度を上げやすい。並列起動による時間短縮も利点になる。"
+      }
+    ]
+  },
+  {
+    "slug": "llms-txt",
+    "name": "llms.txt",
+    "aliases": [
+      "llms-full.txt"
+    ],
+    "tagline": "WebサイトのルートにMarkdown形式で置き、LLMにサイトの概要と主要コンテンツを伝える提案仕様",
+    "category": "技術",
+    "tags": [
+      "コンテンツ最適化",
+      "LLM"
+    ],
+    "plainSummary": "Webサイトの入り口に置く「AI向けの案内板」。サイトの概要と大事なページの一覧をAIが読みやすい形式で書いておき、AIがサイトの内容を正しく理解できるようにする。",
+    "summary": "llms.txtとは、Webサイトのルート直下（/llms.txt）にMarkdown形式のファイルを置き、LLMやAIエージェントに向けてサイトの概要と主要コンテンツへのリンクを提供する提案仕様を指す。\nWebページのHTMLにはナビゲーション・広告・スクリプトなどのノイズが多く、コンテキストウィンドウに制約のあるLLMが内容を把握するには非効率だという問題意識から提案された。\nファイルにはサイト名と概要、重要なページへのリンク一覧を決められた構造のMarkdownで記述する。派生として、サイトの全コンテンツを1つのファイルにまとめたllms-full.txtを併せて提供する慣行もある。\nクローラのアクセス制御を扱うrobots.txtと異なり、llms.txtはアクセスを許可したうえで内容理解を助けることを目的とする。ドキュメントサイトを中心に採用が広がる一方、主要なAIサービスのクローラが公式に参照を保証しているわけではない点には注意が必要になる。",
+    "background": "AIチャットやAIエージェントがWebサイトを参照して回答する場面が増え、サイト運営者側にはAIに内容を正しく理解・引用してほしいという動機が生まれた。\nHTMLのままではノイズが多くトークン効率も悪いため、AI向けに整理した入り口を標準的な場所に置くという発想が支持された。",
+    "history": "2024年9月にAnswer.AIの共同創業者Jeremy Howardが提案した。以降、開発者向けドキュメントサイトを中心に採用が広がっている。",
+    "comparisons": [
+      {
+        "slug": "llmo",
+        "note": "LLMOがLLMの回答内で自社コンテンツに言及されるための施策全般を指すのに対し、llms.txtはその具体的な手段の1つとなりうる、サイト情報をAI向けに提供するファイル仕様"
+      }
+    ],
+    "relatedTerms": [
+      "llmo",
+      "aio",
+      "context-window"
+    ],
+    "faq": [
+      {
+        "question": "llms.txtを置けばAIに引用されやすくなるのか？",
+        "answer": "主要なAIサービスのクローラがllms.txtの参照を公式に保証しているわけではないため、設置すれば必ず引用されやすくなるとは言えない。現状はAIフレンドリーなサイト構造を示す提案仕様であり、効果はサービス側の対応状況に依存する。"
+      }
+    ],
+    "references": [
+      {
+        "type": "Official Website",
+        "label": "llms.txt 公式サイト",
+        "url": "https://llmstxt.org/"
+      }
+    ]
+  },
+  {
+    "slug": "sovereign-ai",
+    "name": "ソブリンAI",
+    "aliases": [
+      "Sovereign AI",
+      "主権AI"
+    ],
+    "tagline": "自国のデータ・インフラ・人材を用いて、国家が自律的にAI能力を構築・管理するという考え方",
+    "category": "インフラ",
+    "tags": [
+      "インフラ",
+      "プライバシー"
+    ],
+    "plainSummary": "AIを海外の企業やサービスに頼りきりにせず、自分の国のデータと設備と人材で作って運用できるようにしよう、という国レベルの考え方。",
+    "summary": "ソブリンAIとは、自国のデータ・計算インフラ・人材・法制度を用いて、国家が自律的にAI能力を構築・運用・管理するという考え方を指す。\n特定の国の企業が提供する基盤モデルやクラウドにAI利用が集中すると、機密データの国外流出、供給停止や規制変更のリスク、自国の言語・文化がモデルに反映されにくいといった懸念が生じる。ソブリンAIはこれらへの対応として、国内のデータセンターとGPUインフラの整備、自国語に強いLLMの開発、AI人材の育成などを国家的な取り組みとして進める文脈で使われる。\n各国政府のAI戦略や半導体・データセンター投資を説明する言葉として定着し、日本でも国産LLMの開発支援や計算資源の整備がこの文脈で進められている。",
+    "background": "基盤モデルの開発が一部の国の少数企業に集中し、AIが経済・安全保障の基盤技術と見なされるようになったことで、AI能力の対外依存を国家的リスクと捉える見方が強まった。\nデータ主権やデジタル主権の議論の延長として、AIについても自国で構築・管理できる能力を持つべきだという考え方が広まった。",
+    "history": "2024年頃から、NVIDIAのCEOジェンスン・フアンが各国は自国のAIインフラを持つべきだと繰り返し発言したことや、各国政府のAI戦略文書を通じて広く使われるようになった。",
+    "comparisons": [
+      {
+        "slug": "local-llm",
+        "note": "ローカルLLMが個人や組織が自前の環境でLLMを動かす運用形態を指すのに対し、ソブリンAIは国家レベルでAIのインフラ・モデル・人材を自律的に保有するという政策的な考え方を指す"
+      }
+    ],
+    "relatedTerms": [
+      "local-llm",
+      "gpu",
+      "large-language-model"
+    ]
+  },
+  {
+    "slug": "agi",
+    "name": "AGI",
+    "aliases": [
+      "Artificial General Intelligence",
+      "汎用人工知能"
+    ],
+    "tagline": "特定のタスクに限定されず、人間が行える幅広い知的タスクを人間と同等以上に遂行できるAIの概念",
+    "category": "技術",
+    "tags": [
+      "人工知能",
+      "安全性"
+    ],
+    "plainSummary": "将棋だけ、翻訳だけ、のような特定の得意分野に限らず、人間ができる知的な仕事全般を人間並み以上にこなせるAIのこと。まだ実現しておらず、定義にも幅がある。",
+    "summary": "AGI（Artificial General Intelligence、汎用人工知能）とは、特定のタスクに限定されず、人間が行える幅広い知的タスクを人間と同等以上に遂行できるAIの概念を指す。\n画像認識や翻訳など個別のタスクに特化した従来のAI（narrow AI）と対比される言葉で、未知の課題への適応、分野をまたぐ知識の転用、自律的な学習といった汎用性が要件として語られる。\nただし合意された厳密な定義はなく、「大半の経済的に価値ある仕事で人間を上回る」といった経済的定義から、認知能力の網羅性を求める定義まで幅がある。到達判定の基準も定まっていない。\nLLMの能力向上に伴い、AGIの実現時期・定義・評価方法がAI企業や研究者の間で議論の中心になっており、アライメントやAI安全性の研究もAGIの実現を見据えた文脈で語られることが多い。",
+    "background": "AI研究の初期から人間並みの汎用知能は目標として語られてきたが、実際に発展したのは特定タスクに特化したAIだった。\n特化型AIの成功と区別して本来の目標を指す言葉が必要とされ、AGIという用語が使われるようになった。近年はフロンティアモデルの汎用的な能力向上により、遠い理想ではなく到達可能性を議論する対象へと位置づけが変わりつつある。",
+    "history": "「Artificial General Intelligence」という用語は、1997年にMark Gubrudが論文で用いた例が早期のものとして知られる。2000年代半ばにShane LeggやBen Goertzelらがこの名称を採用し、2007年出版の同名の論文集などを通じて、特化型AIと対比する言葉として定着した。",
+    "comparisons": [
+      {
+        "slug": "large-language-model",
+        "note": "LLMは現存する技術としてのモデルを指すのに対し、AGIは到達目標としての概念を指す。LLMの汎用性がAGIへの経路になるかどうかは見解が分かれている"
+      }
+    ],
+    "relatedTerms": [
+      "emergent-abilities",
+      "scaling-laws",
+      "alignment",
+      "reasoning-model",
+      "large-language-model",
+      "arc-agi"
+    ],
+    "faq": [
+      {
+        "question": "AGIとASIの違いは？",
+        "answer": "AGIが人間と同等程度の汎用的な知的能力を指すのに対し、ASI（Artificial Superintelligence、人工超知能）はほぼすべての領域で人類全体の知的能力を大きく上回る段階を指す言葉として使われる。ASIはAGIのさらに先の概念と位置づけられることが多い。"
+      },
+      {
+        "question": "AGIはいつ実現するのか？",
+        "answer": "研究者やAI企業の間でも予測は数年以内から数十年以上まで大きく分かれており、そもそも定義と判定基準が定まっていないため、確立された見通しは存在しない。"
+      }
+    ]
+  },
+  {
+    "slug": "generative-ai",
+    "name": "生成AI",
+    "aliases": [
+      "Generative AI",
+      "ジェネレーティブAI"
+    ],
+    "tagline": "テキスト・画像・音声・動画・コードなどの新しいコンテンツを生成できるAIの総称",
+    "category": "技術",
+    "tags": [
+      "生成AI",
+      "深層学習"
+    ],
+    "plainSummary": "文章や画像、音声、動画などを新しく「作り出す」タイプのAIのまとめ言葉。ChatGPTのような文章AIも、画像を描くAIもここに含まれる。",
+    "summary": "生成AIとは、テキスト・画像・音声・動画・コードなどの新しいコンテンツを生成できるAIの総称を指す。\n入力データの分類や予測を主な目的とする従来の識別系AIと対比され、LLMによる文章生成や拡散モデルによる画像生成が代表例になる。\n2022年のStable DiffusionやChatGPTの公開を境に一般へ普及し、AI活用の中心的な領域として産業・行政・教育の各分野で導入が進んでいる。",
+    "background": "深層学習の初期の成功は画像認識や音声認識といった識別タスクが中心だった。\nGANや拡散モデル、Transformerに基づくLLMの発展により生成の品質が実用水準へ達し、識別系のAIと区別する言葉として生成AIが定着した。",
+    "relatedTerms": [
+      "large-language-model",
+      "diffusion-model",
+      "gan",
+      "foundation-model",
+      "multimodal"
+    ],
+    "faq": [
+      {
+        "question": "生成AIとLLMの違いは？",
+        "answer": "LLMは生成AIのうち言語を中心に扱うモデルを指す。生成AIは画像・音声・動画などを生成するモデルも含む、より広い総称になる。"
+      }
+    ]
+  },
+  {
+    "slug": "foundation-model",
+    "name": "基盤モデル",
+    "aliases": [
+      "Foundation Model",
+      "ファウンデーションモデル"
+    ],
+    "tagline": "大量のデータで事前学習され、ファインチューニングやプロンプトによって幅広いタスクへ適応できる汎用モデル",
+    "category": "モデル",
+    "tags": [
+      "事前学習",
+      "LLM"
+    ],
+    "plainSummary": "1つの巨大なAIモデルを共通の土台として作っておき、少しの調整でいろいろな仕事に使い回すという考え方のモデル。",
+    "summary": "基盤モデルとは、大規模なデータで事前学習され、その後の適応によって幅広い下流タスクへ転用できる汎用モデルを指す。\nタスクごとに個別のモデルを学習する従来の方式と異なり、1つのモデルを共通の基盤とし、ファインチューニング・プロンプト・RAGなどで多様な用途へ展開する。\nGPTやClaudeのようなLLMのほか、画像・音声・タンパク質構造など、言語以外の領域の大規模事前学習モデルも含む広い概念になる。",
+    "background": "自己教師あり学習と計算資源の拡大により、単一の大規模モデルが多くのタスクで個別モデルを上回るようになった。\nこの転換を捉える言葉として提唱され、AI開発の前提を「タスクごとの学習」から「基盤の共有と適応」へ変えた。",
+    "history": "2021年8月にスタンフォード大学の研究者ら（Bommasaniら）が論文「On the Opportunities and Risks of Foundation Models」で提唱した。",
+    "comparisons": [
+      {
+        "slug": "large-language-model",
+        "note": "LLMが言語を中心とする基盤モデルの代表例であるのに対し、基盤モデルは画像・音声・科学データなど言語以外の領域の大規模事前学習モデルも含む広い概念"
+      }
+    ],
+    "relatedTerms": [
+      "large-language-model",
+      "pretraining",
+      "fine-tuning",
+      "transfer-learning",
+      "self-supervised-learning",
+      "frontier-model"
+    ],
+    "references": [
+      {
+        "type": "Research Paper",
+        "label": "On the Opportunities and Risks of Foundation Models (arXiv)",
+        "url": "https://arxiv.org/abs/2108.07258"
+      }
+    ]
+  },
+  {
+    "slug": "frontier-model",
+    "name": "フロンティアモデル",
+    "aliases": [
+      "Frontier Model",
+      "フロンティアAI"
+    ],
+    "tagline": "その時点で最も高い能力を持つ一群の基盤モデルを指す、主に安全性・政策の文脈で使われる言葉",
+    "category": "モデル",
+    "tags": [
+      "LLM",
+      "安全性"
+    ],
+    "plainSummary": "その時代の「いちばん賢い最先端のAIモデルたち」を指す言葉。能力が高いぶん新しいリスクもあるとして、安全対策やルール作りの話でよく使われる。",
+    "summary": "フロンティアモデルとは、その時点で最も高い能力を持つ一群の基盤モデルを指す。\n技術的な定義よりもAIの安全性やガバナンスの文脈で使われることが多く、能力の高さゆえに新たなリスクをもたらしうるモデルとして、開発企業の自主的な安全対策や各国の規制の対象として語られる。\n開発各社は、フロンティアモデルの公開前に危険な能力の評価やレッドチーミングを行う枠組みを整備している。",
+    "background": "モデルの能力向上に伴い、最先端モデルには従来と質の異なるリスク管理が必要だという認識が政府と開発企業の双方で強まった。\n規制や自主的枠組みの対象を特定するために、開発の最前線にあるモデル群を指す言葉が必要とされた。",
+    "history": "2023年7月にAnthropic・Google・Microsoft・OpenAIの4社が設立した業界団体「Frontier Model Forum」などを通じて、政策と安全性の文脈で定着した。",
+    "comparisons": [
+      {
+        "slug": "foundation-model",
+        "note": "基盤モデルが汎用的な事前学習モデル全般を指すのに対し、フロンティアモデルはその中でも最も高い能力を持つモデル群を指す、主に安全性・政策文脈の言葉"
+      }
+    ],
+    "relatedTerms": [
+      "foundation-model",
+      "red-teaming",
+      "alignment",
+      "agi"
+    ]
+  },
+  {
+    "slug": "sora",
+    "name": "Sora",
+    "aliases": [
+      "OpenAI Sora"
+    ],
+    "tagline": "OpenAIが開発する、テキストから動画を生成するAIモデル",
+    "category": "モデル",
+    "tags": [
+      "動画生成",
+      "OpenAI"
+    ],
+    "plainSummary": "文章で「こんな映像がほしい」と伝えると動画を作ってくれる、OpenAIの動画生成AI。",
+    "summary": "Soraとは、OpenAIが開発するテキスト指示から動画を生成するAIモデルを指す。\nテキストプロンプトから、複数のキャラクターや背景の一貫性を保った動画を生成でき、拡散モデルとTransformerを組み合わせた構成で学習されている。\nOpenAIはSoraを物理世界のシミュレータとしての性質を持つモデルへの一歩と位置づけており、動画生成AIの代表例として注目されている。",
+    "history": "2024年2月にOpenAIが発表し、同年12月に一般提供を開始した。2025年には後継のSora 2と専用アプリを公開した。",
+    "comparisons": [
+      {
+        "slug": "veo",
+        "note": "いずれもテキストから動画を生成するモデルで、SoraはOpenAI、VeoはGoogle DeepMindが開発している"
+      }
+    ],
+    "relatedTerms": [
+      "text-to-video",
+      "veo",
+      "diffusion-model",
+      "world-model"
+    ],
+    "references": [
+      {
+        "type": "Official Website",
+        "label": "OpenAI Sora",
+        "url": "https://openai.com/sora"
+      }
+    ]
+  },
+  {
+    "slug": "veo",
+    "name": "Veo",
+    "aliases": [
+      "Google Veo"
+    ],
+    "tagline": "Google DeepMindが開発する、テキストや画像から音声付きの動画を生成するAIモデル",
+    "category": "モデル",
+    "tags": [
+      "動画生成",
+      "Google"
+    ],
+    "plainSummary": "Googleの動画生成AI。文章や画像から映像を作れて、新しい版ではセリフや効果音まで一緒に生成できる。",
+    "summary": "Veoとは、Google DeepMindが開発するテキストや画像から動画を生成するAIモデルを指す。\n2025年に公開されたVeo 3では映像と同期した音声・効果音・会話の生成に対応し、音付きの動画を一度に生成できる点が特徴になった。\nGeminiアプリや動画作成ツールFlowなどを通じて提供され、Soraと並ぶ動画生成AIの代表例として扱われている。",
+    "history": "2024年5月の開発者会議Google I/OでGoogle DeepMindが発表した。2024年12月にVeo 2、2025年5月に音声生成へ対応したVeo 3を公開した。",
+    "comparisons": [
+      {
+        "slug": "sora",
+        "note": "いずれもテキストから動画を生成するモデルで、Veo 3は映像と同期した音声の生成へ対応した点を特徴として打ち出した"
+      }
+    ],
+    "relatedTerms": [
+      "text-to-video",
+      "sora",
+      "gemini",
+      "diffusion-model"
+    ]
+  },
+  {
+    "slug": "midjourney",
+    "name": "Midjourney",
+    "aliases": [
+      "ミッドジャーニー"
+    ],
+    "tagline": "芸術的な画風に強みを持つ、テキストから画像を生成するサブスクリプション型AIサービス",
+    "category": "モデル",
+    "tags": [
+      "画像生成",
+      "クローズドウェイト"
+    ],
+    "plainSummary": "文章から絵を作ってくれる有料サービス。アート寄りの美しい絵柄が得意で、画像生成AIブームの火付け役のひとつ。",
+    "summary": "Midjourneyとは、同名の企業が開発・運営する、テキストから画像を生成するAIサービスを指す。\n芸術的で様式化された画風に強みがあり、当初はDiscordのボットへプロンプトを送る独特の利用形態で普及した。現在はWebインターフェースも提供されている。\nStable Diffusionのようなオープンウェイトモデルと異なりモデルは非公開で、サブスクリプション型のサービスとして提供される。",
+    "history": "2022年7月にオープンベータとして公開され、同年の画像生成AIブームを牽引したサービスの1つになった。",
+    "comparisons": [
+      {
+        "slug": "stable-diffusion",
+        "note": "Stable Diffusionがモデルを公開し手元の環境でも実行できるのに対し、Midjourneyはモデル非公開のサブスクリプション型サービスとして提供される"
+      }
+    ],
+    "relatedTerms": [
+      "stable-diffusion",
+      "diffusion-model",
+      "flux"
+    ],
+    "references": [
+      {
+        "type": "Official Website",
+        "label": "Midjourney",
+        "url": "https://www.midjourney.com/"
+      }
+    ]
+  },
+  {
+    "slug": "flux",
+    "name": "FLUX",
+    "aliases": [
+      "FLUX.1",
+      "Flux"
+    ],
+    "tagline": "Stable Diffusionの元開発メンバーが設立したBlack Forest Labsによる画像生成AIモデルのシリーズ",
+    "category": "モデル",
+    "tags": [
+      "画像生成",
+      "オープンウェイト"
+    ],
+    "plainSummary": "Stable Diffusionを作った人たちが独立して開発した画像生成AI。無料で使えるオープン版と高性能な有料版がある。",
+    "summary": "FLUXとは、Black Forest Labsが開発する、テキストから画像を生成するAIモデルのシリーズを指す。\nStable Diffusionの元開発メンバーらが設立した企業によるモデルで、公開当初からオープンウェイト版とAPI提供の上位版を並行して展開した。\n文字の描画やプロンプトへの忠実性に強みがあるとされ、Stable Diffusionの後継の位置づけでオープンな画像生成コミュニティに広く採用されている。",
+    "history": "2024年8月にBlack Forest Labsが最初のモデルFLUX.1を公開した。同社はStable Diffusionを開発した研究者らが2024年に設立した。",
+    "relatedTerms": [
+      "stable-diffusion",
+      "diffusion-model",
+      "midjourney"
+    ],
+    "references": [
+      {
+        "type": "GitHub",
+        "label": "black-forest-labs/flux",
+        "url": "https://github.com/black-forest-labs/flux"
+      }
+    ]
+  },
+  {
+    "slug": "notebooklm",
+    "name": "NotebookLM",
+    "aliases": [
+      "ノートブックLM"
+    ],
+    "tagline": "アップロードした資料だけを情報源として質問応答・要約・音声解説ができる、GoogleのAIリサーチアシスタント",
+    "category": "技術",
+    "tags": [
+      "RAG",
+      "Google"
+    ],
+    "plainSummary": "自分がアップロードした資料の内容だけをもとに、質問に答えたり要約したり、ラジオ番組風の音声解説まで作ってくれるGoogleのツール。",
+    "summary": "NotebookLMとは、Googleが提供する、ユーザーがアップロードした資料を情報源として動作するAIリサーチアシスタントを指す。\nPDF・Webページ・動画などの資料を登録すると、その内容に基づいた質問応答・要約・整理ができ、回答には資料への出典が付く。\n2人のホストが資料をポッドキャスト風に解説する音声を生成するAudio Overview機能が話題になり、資料に基づいて回答するグラウンディング型AIツールの代表例として広まった。",
+    "history": "2023年のGoogle I/OでProject Tailwindとして発表され、同年NotebookLMへ改称された。2024年9月に公開されたAudio Overview機能で広く注目された。",
+    "relatedTerms": [
+      "retrieval-augmented-generation",
+      "gemini",
+      "text-to-speech",
+      "hallucination"
+    ],
+    "references": [
+      {
+        "type": "Official Website",
+        "label": "NotebookLM",
+        "url": "https://notebooklm.google.com/"
+      }
+    ]
+  },
+  {
+    "slug": "kimi",
+    "name": "Kimi",
+    "aliases": [
+      "Kimi K2",
+      "Moonshot AI Kimi"
+    ],
+    "tagline": "中国のMoonshot AIが開発するLLMシリーズ。オープンウェイトの大規模MoEモデルKimi K2で注目された",
+    "category": "モデル",
+    "tags": [
+      "LLM",
+      "オープンウェイト"
+    ],
+    "plainSummary": "中国のAI企業Moonshot AIが作るAIモデル。誰でも重みを使える形で公開された高性能モデルK2で世界的に有名になった。",
+    "summary": "Kimiとは、中国のAI企業Moonshot AI（月之暗面）が開発するLLMおよびチャットサービスのシリーズを指す。\nロングコンテキスト処理を強みとして中国市場で利用者を集め、2025年に公開されたオープンウェイトの大規模MoEモデルKimi K2で国際的にも注目された。\nDeepSeekやQwenと並び、高性能なオープンウェイトモデルを公開する中国系開発元の代表例として挙げられる。",
+    "history": "2023年10月にMoonshot AIがチャットサービスとして公開した。2025年7月にオープンウェイトモデルのKimi K2を公開した。",
+    "relatedTerms": [
+      "deepseek",
+      "qwen",
+      "mixture-of-experts",
+      "long-context"
+    ]
+  },
+  {
+    "slug": "segment-anything",
+    "name": "SAM",
+    "aliases": [
+      "Segment Anything Model",
+      "Segment Anything"
+    ],
+    "tagline": "点やボックスの指示だけで画像内の任意の物体を切り出せる、Metaのセグメンテーション基盤モデル",
+    "category": "モデル",
+    "tags": [
+      "画像認識",
+      "Meta"
+    ],
+    "plainSummary": "画像の中の「これ」と指した物体を、輪郭に沿ってきれいに切り出してくれるMetaのAIモデル。初めて見る物体でも切り出せる。",
+    "summary": "SAM（Segment Anything Model）とは、Metaが公開した、画像内の任意の物体の領域を切り出すセグメンテーションの基盤モデルを指す。\n点やボックスなどの簡単な指示（プロンプト）を与えるだけで、学習時に見ていない物体でもゼロショットで領域を切り出せる。\n約11億のマスクを含む大規模データセットSA-1Bとともに公開され、画像セグメンテーションの汎用基盤として研究・産業の双方で広く使われている。後継のSAM 2では動画への対応が加わった。",
+    "history": "2023年4月にMetaが論文とともに公開した。2024年7月には動画に対応したSAM 2が公開された。",
+    "relatedTerms": [
+      "foundation-model",
+      "yolo",
+      "clip",
+      "zero-shot"
+    ],
+    "references": [
+      {
+        "type": "Research Paper",
+        "label": "Segment Anything (arXiv)",
+        "url": "https://arxiv.org/abs/2304.02643"
+      }
+    ]
+  },
+  {
+    "slug": "alphafold",
+    "name": "AlphaFold",
+    "aliases": [
+      "アルファフォールド"
+    ],
+    "tagline": "アミノ酸配列からタンパク質の立体構造を予測する、Google DeepMindのAIモデル",
+    "category": "モデル",
+    "tags": [
+      "深層学習",
+      "Google"
+    ],
+    "plainSummary": "タンパク質の設計図（アミノ酸の並び）から、その立体的な形を予測するAI。生命科学の長年の難問を解き、開発者はノーベル化学賞を受賞した。",
+    "summary": "AlphaFoldとは、Google DeepMindが開発した、アミノ酸配列からタンパク質の立体構造を予測するAIモデルを指す。\nタンパク質構造予測コンテストCASPで実験手法に迫る精度を示し、50年来の課題とされた構造予測問題を前進させた。\n予測結果はデータベースとして公開され、創薬や基礎研究など生命科学の基盤として広く使われている。AlphaFold 3ではタンパク質以外の分子との複合体の予測へ拡張された。\n2024年、開発を主導したデミス・ハサビスとジョン・ジャンパーはノーベル化学賞を受賞した。",
+    "history": "2018年のCASP13に初代が参加し、2020年のCASP14でAlphaFold 2が実験手法に匹敵する精度を示した。2024年5月にはAlphaFold 3が発表された。",
+    "relatedTerms": [
+      "deep-learning",
+      "transformer",
+      "foundation-model"
+    ],
+    "references": [
+      {
+        "type": "Official Website",
+        "label": "AlphaFold Protein Structure Database",
+        "url": "https://alphafold.ebi.ac.uk/"
+      }
+    ]
+  },
+  {
+    "slug": "alphago",
+    "name": "AlphaGo",
+    "aliases": [
+      "アルファ碁"
+    ],
+    "tagline": "深層学習とモンテカルロ木探索を組み合わせ、囲碁で人間のトップ棋士に初めて勝利したGoogle DeepMindのAI",
+    "category": "モデル",
+    "tags": [
+      "強化学習",
+      "探索アルゴリズム"
+    ],
+    "plainSummary": "囲碁で世界トップ棋士に初めて勝ったAI。「AIはまだ囲碁では人間に勝てない」という常識を覆し、AIブームの象徴になった。",
+    "summary": "AlphaGoとは、Google DeepMindが開発した囲碁AIで、深層学習とモンテカルロ木探索を組み合わせ、人間のトップ棋士に初めて勝利したシステムを指す。\n盤面の評価と着手の選択をニューラルネットワークで行い、探索と組み合わせる構成で、長く人間優位が続くとされていた囲碁を攻略した。\n2017年の後継AlphaGo Zeroは、人間の棋譜を使わず自己対戦のみで学習し、元のAlphaGoを上回った。\n深層強化学習の可能性を広く示した節目として、AIの歴史で語られる。",
+    "history": "2016年3月に李世乭（イ・セドル）九段との五番勝負に4勝1敗で勝利した。2017年には自己対戦のみで学習するAlphaGo Zeroが発表された。",
+    "relatedTerms": [
+      "monte-carlo-tree-search",
+      "reinforcement-learning",
+      "q-learning",
+      "deep-learning"
+    ]
+  },
+  {
+    "slug": "vla",
+    "name": "VLA",
+    "aliases": [
+      "Vision-Language-Action",
+      "VLAモデル"
+    ],
+    "tagline": "視覚と言語の理解に行動の生成を統合し、カメラ映像と自然言語の指示からロボットの動作を出力する基盤モデル",
+    "category": "モデル",
+    "tags": [
+      "ロボティクス",
+      "マルチモーダル"
+    ],
+    "plainSummary": "「机の上のコップを取って」と言葉で頼むと、カメラの映像を見ながらロボットの動きを直接生み出すAIモデル。",
+    "summary": "VLA（Vision-Language-Action）モデルとは、視覚と言語の理解に行動の生成を統合し、カメラ映像と自然言語の指示からロボットの動作を直接出力する基盤モデルを指す。\nVLMをベースにロボットの操作データで行動出力を学習させる構成が一般的で、「机の上のコップを取って」のような言語指示を動作の系列へ変換する。\nタスクごとの個別プログラミングに頼らず、Web由来の知識をロボット制御へ転用できる点が期待され、フィジカルAIの中核技術として研究開発が活発化している。",
+    "history": "2023年7月にGoogle DeepMindが発表したRT-2の論文が、Vision-Language-Actionモデルという呼称を提唱した。",
+    "comparisons": [
+      {
+        "slug": "vision-language-model",
+        "note": "VLMが画像と言語の理解・生成までを扱うのに対し、VLAはそこへ行動の出力を加え、ロボットの制御までを1つのモデルで担う"
+      }
+    ],
+    "relatedTerms": [
+      "vision-language-model",
+      "physical-ai",
+      "world-model",
+      "multimodal",
+      "foundation-model"
+    ],
+    "references": [
+      {
+        "type": "Research Paper",
+        "label": "RT-2: Vision-Language-Action Models (arXiv)",
+        "url": "https://arxiv.org/abs/2307.15818"
+      }
+    ]
+  },
+  {
+    "slug": "text-to-video",
+    "name": "動画生成AI",
+    "aliases": [
+      "Text-to-Video",
+      "テキスト動画生成"
+    ],
+    "tagline": "テキストや画像などの指示から動画を生成するAI技術の総称",
+    "category": "技術",
+    "tags": [
+      "動画生成",
+      "生成AI"
+    ],
+    "plainSummary": "文章や1枚の画像から動く映像を作り出すAI技術のまとめ言葉。SoraやVeoが代表例。",
+    "summary": "動画生成AIとは、テキストや画像などの指示から動画を生成するAI技術の総称を指す。\n拡散モデルを時間方向へ拡張し、フレーム間の一貫性を保ちながら映像を生成する方式が主流で、SoraやVeoなどのモデルが代表例になる。\n数秒から数十秒の短い映像の生成が中心だが品質の向上は速く、広告・映像制作・プロトタイピングでの活用が広がっている。一方で、ディープフェイクへの悪用や学習データの権利面の課題も議論されている。",
+    "history": "2022年頃からMetaのMake-A-VideoやGoogleのImagen Videoなどの研究発表が相次ぎ、2024年2月のSoraの発表を機に注目が高まった。",
+    "relatedTerms": [
+      "sora",
+      "veo",
+      "diffusion-model",
+      "deepfake",
+      "stable-diffusion"
+    ]
+  },
+  {
+    "slug": "text-to-speech",
+    "name": "音声合成",
+    "aliases": [
+      "TTS",
+      "Text-to-Speech",
+      "テキスト読み上げ"
+    ],
+    "tagline": "テキストから人間の音声を生成する技術。ニューラル方式の登場で自然さが向上した",
+    "category": "技術",
+    "tags": [
+      "音声合成",
+      "生成AI"
+    ],
+    "plainSummary": "文章を人間の声で読み上げる技術。最近は本人そっくりの声を数秒のサンプルから再現できるまでになっている。",
+    "summary": "音声合成（TTS）とは、テキストから人間の音声を生成する技術を指す。\n従来は録音素片の接続や統計モデルによる方式が主流だったが、ニューラルネットワークによる波形生成の登場で自然さが向上した。\n近年は、数秒のサンプルから話者の声質を再現するボイスクローニング、感情や話速の制御、LLMと組み合わせたリアルタイム音声対話への展開が進む。\n一方で、本人になりすました音声による詐欺や偽情報への悪用も課題として議論されている。",
+    "history": "ニューラル音声合成の転機としては、2016年にDeepMindの発表した波形生成モデルWaveNetが知られる。",
+    "comparisons": [
+      {
+        "slug": "whisper",
+        "note": "Whisperが音声をテキストへ変換する音声認識モデルであるのに対し、音声合成はテキストから音声を生成する逆方向の技術"
+      }
+    ],
+    "relatedTerms": [
+      "whisper",
+      "deepfake",
+      "multimodal",
+      "notebooklm"
+    ]
+  },
+  {
+    "slug": "mamba",
+    "name": "Mamba",
+    "aliases": [
+      "Selective State Space Model"
+    ],
+    "tagline": "選択的状態空間モデルに基づき、系列長に線形の計算量で長い系列を処理できるアーキテクチャ",
+    "category": "アーキテクチャ",
+    "tags": [
+      "系列モデリング",
+      "Mamba"
+    ],
+    "plainSummary": "Transformerの「文が長くなるほど計算が急増する」弱点を避け、長い文章を軽い計算で処理できる新しい仕組み。",
+    "summary": "Mambaとは、選択的状態空間モデル（Selective SSM）に基づく系列モデリングのアーキテクチャを指す。\nTransformerの自己注意機構は系列長の2乗に比例する計算量を要するのに対し、Mambaは系列長に線形の計算量で処理でき、長い系列を効率よく扱える。\n入力に応じて状態の更新を変える選択機構の導入により、従来の状態空間モデルの弱点だった内容依存の処理を可能にした。\nTransformerの代替や、注意機構と組み合わせたハイブリッド構成の要素として、言語・音声・ゲノムなどの長系列タスクで採用が広がっている。",
+    "history": "2023年12月にAlbert GuとTri Daoが論文「Mamba: Linear-Time Sequence Modeling with Selective State Spaces」で発表した。",
+    "comparisons": [
+      {
+        "slug": "transformer",
+        "note": "Transformerが系列長の2乗に比例する自己注意で全トークン間の関係を捉えるのに対し、Mambaは線形計算量の状態空間モデルで系列を逐次的に圧縮しながら処理する"
+      },
+      {
+        "slug": "state-space-model",
+        "note": "状態空間モデルの枠組みに、入力内容に応じて状態の更新を変える選択機構を加えたものがMamba"
+      }
+    ],
+    "relatedTerms": [
+      "state-space-model",
+      "transformer",
+      "self-attention",
+      "long-context"
+    ],
+    "references": [
+      {
+        "type": "Research Paper",
+        "label": "Mamba: Linear-Time Sequence Modeling with Selective State Spaces (arXiv)",
+        "url": "https://arxiv.org/abs/2312.00752"
+      }
+    ]
+  },
+  {
+    "slug": "vision-transformer",
+    "name": "ViT",
+    "aliases": [
+      "Vision Transformer",
+      "ビジョントランスフォーマー"
+    ],
+    "tagline": "画像をパッチの系列に分割してTransformerで処理する画像認識アーキテクチャ",
+    "category": "アーキテクチャ",
+    "tags": [
+      "画像認識",
+      "Transformer"
+    ],
+    "plainSummary": "画像を小さなタイルに切り分けて「単語の列」のように扱い、文章用のTransformerで画像を認識する仕組み。",
+    "summary": "ViT（Vision Transformer）とは、画像を小さなパッチの系列に分割し、Transformerで処理する画像認識アーキテクチャを指す。\n画像を16×16ピクセル程度のパッチへ切り分けて各パッチをトークンとして扱い、言語向けに設計されたTransformerをほぼそのまま画像へ適用した。\n大規模データでの事前学習を前提とすればCNNを上回る精度を達成できると示し、画像認識の主流アーキテクチャをCNNからTransformerへ転換させる契機になった。\nCLIPの画像エンコーダやVLMの視覚部分など、マルチモーダルモデルの構成要素としても広く使われている。",
+    "history": "2020年10月にGoogleの研究者ら（Dosovitskiyら）が論文「An Image is Worth 16x16 Words」で発表した。",
+    "comparisons": [
+      {
+        "slug": "convolutional-neural-network",
+        "note": "CNNが畳み込みによる局所的な特徴抽出を積み重ねるのに対し、ViTは自己注意で画像全体のパッチ間の関係を直接捉える"
+      }
+    ],
+    "relatedTerms": [
+      "transformer",
+      "convolutional-neural-network",
+      "clip",
+      "self-attention"
+    ],
+    "references": [
+      {
+        "type": "Research Paper",
+        "label": "An Image is Worth 16x16 Words (arXiv)",
+        "url": "https://arxiv.org/abs/2010.11929"
+      }
+    ]
+  },
+  {
+    "slug": "u-net",
+    "name": "U-Net",
+    "aliases": [
+      "ユーネット"
+    ],
+    "tagline": "縮小と拡大の経路をスキップ接続でつないだU字型のネットワーク。セグメンテーションと拡散モデルで標準的な構成",
+    "category": "アーキテクチャ",
+    "tags": [
+      "画像認識",
+      "ニューラルネットワーク"
+    ],
+    "plainSummary": "画像をいったん縮めて全体をつかみ、元の大きさへ戻しながら細部を復元するU字型のネットワーク。画像の切り出しや画像生成AIの中身として広く使われる。",
+    "summary": "U-Netとは、縮小（エンコーダ）と拡大（デコーダ）の経路をスキップ接続でつないだ、U字型のニューラルネットワークアーキテクチャを指す。\n入力画像を段階的に圧縮して文脈を捉え、拡大側で解像度を戻す際に対応する縮小側の特徴をスキップ接続で合流させ、位置の細部と全体の文脈を両立させる。\n医用画像のセグメンテーション向けに提案されたが、その後Stable Diffusionをはじめとする拡散モデルのノイズ除去ネットワークとして採用され、画像生成の分野でも標準的な構成要素になった。",
+    "history": "2015年にRonnebergerらが医用画像セグメンテーション向けの論文で発表した。",
+    "relatedTerms": [
+      "convolutional-neural-network",
+      "diffusion-model",
+      "stable-diffusion",
+      "autoencoder",
+      "residual-connection"
+    ],
+    "references": [
+      {
+        "type": "Research Paper",
+        "label": "U-Net: Convolutional Networks for Biomedical Image Segmentation (arXiv)",
+        "url": "https://arxiv.org/abs/1505.04597"
+      }
+    ]
+  },
+  {
+    "slug": "decoder",
+    "name": "Decoder",
+    "aliases": [
+      "デコーダ",
+      "デコーダオンリー"
+    ],
+    "tagline": "内部表現から出力系列を生成する側のネットワーク。デコーダのみを積んだ構成が現在のLLMの主流",
+    "category": "アーキテクチャ",
+    "tags": [
+      "Transformer",
+      "系列モデリング"
+    ],
+    "plainSummary": "AIモデルの中で「出力の文章を組み立てる」側の部品。GPTなど今の生成AIの多くはこの部品だけを積み重ねて作られている。",
+    "summary": "Decoderとは、エンコーダ・デコーダ構成において、内部表現から出力系列を生成する側のネットワークを指す。\nTransformerのデコーダは、生成済みのトークンだけを参照するマスク付き自己注意を使い、次のトークンを順に予測する。\nGPT系のLLMはエンコーダを持たずデコーダのみを積み重ねたデコーダオンリー構成を採用し、これが現在のLLMの主流アーキテクチャになっている。\n翻訳のように入力の理解と出力の生成を分けたい場合はエンコーダ・デコーダ構成、テキスト生成中心の用途ではデコーダオンリー構成と使い分けられてきた。",
+    "history": "系列変換モデルの構成要素としては2014年のSeq2Seqで確立し、現在の形は2017年のTransformerの論文に由来する。",
+    "comparisons": [
+      {
+        "slug": "encoder",
+        "note": "エンコーダが入力系列を内部表現へ変換する側であるのに対し、デコーダはその表現や生成済みトークンから出力系列を生成する側を指す"
+      }
+    ],
+    "relatedTerms": [
+      "encoder",
+      "transformer",
+      "seq2seq",
+      "gpt",
+      "self-attention"
+    ]
+  },
+  {
+    "slug": "multi-head-latent-attention",
+    "name": "MLA",
+    "aliases": [
+      "Multi-head Latent Attention",
+      "マルチヘッド潜在注意"
+    ],
+    "tagline": "キーとバリューを低ランクの潜在ベクトルへ圧縮して保持し、KVキャッシュを削減する注意機構",
+    "category": "アーキテクチャ",
+    "tags": [
+      "Attention",
+      "推論最適化"
+    ],
+    "plainSummary": "AIが長い文章を扱うときに膨らむ「作業メモ（KVキャッシュ）」を、ぎゅっと圧縮して保存する工夫。DeepSeekのモデルで使われ有名になった。",
+    "summary": "MLA（Multi-head Latent Attention）とは、注意機構のキーとバリューを低次元の潜在ベクトルへ圧縮して保持する方式を指す。\nマルチヘッド注意ではヘッドごとにキーとバリューを保持するためKVキャッシュが肥大化し、長いコンテキストの推論でGPUメモリを圧迫する。\nMLAはキーとバリューを共同で低ランクの潜在ベクトルへ圧縮して格納し、必要時に復元することで、精度の低下を抑えながらキャッシュ量を削減する。\nDeepSeek-V2で導入されV3・R1にも採用された。GQAやMQAに代わるKVキャッシュ削減手法として注目されている。",
+    "history": "2024年5月にDeepSeekがDeepSeek-V2の技術報告で発表した。",
+    "comparisons": [
+      {
+        "slug": "grouped-query-attention",
+        "note": "GQAがキー・バリューのヘッド数を減らして共有することでキャッシュを削減するのに対し、MLAはキー・バリューを低ランクの潜在ベクトルへ圧縮して保持する"
+      }
+    ],
+    "relatedTerms": [
+      "kv-cache",
+      "grouped-query-attention",
+      "multi-query-attention",
+      "self-attention",
+      "deepseek"
+    ],
+    "references": [
+      {
+        "type": "Research Paper",
+        "label": "DeepSeek-V2 (arXiv)",
+        "url": "https://arxiv.org/abs/2405.04434"
+      }
+    ]
+  },
+  {
+    "slug": "positional-encoding",
+    "name": "位置エンコーディング",
+    "aliases": [
+      "Positional Encoding",
+      "位置埋め込み"
+    ],
+    "tagline": "語順を区別できない自己注意機構へ、トークンの位置情報を与える仕組み",
+    "category": "アーキテクチャ",
+    "tags": [
+      "Transformer",
+      "位置エンコーディング"
+    ],
+    "plainSummary": "Transformerは単語の順番をそのままでは区別できないため、「この単語は何番目か」という情報を別途埋め込む仕組み。",
+    "summary": "位置エンコーディングとは、系列内のトークンの位置情報をモデルへ与える仕組みを指す。\nTransformerの自己注意はトークンの順序を区別しないため、位置情報を別途注入しなければ語順を扱えない。\n元のTransformerでは周期の異なる正弦波によるパターンを埋め込みへ加算する方式が使われ、その後、学習可能な位置埋め込み・相対位置エンコーディング・回転行列を使うRoPEなど多様な方式が提案された。\n位置エンコーディングの設計は、学習時より長い系列への外挿性能、すなわちロングコンテキスト対応に直結する要素として重要視されている。",
+    "history": "2017年のTransformerの論文「Attention Is All You Need」で正弦波による方式が導入された。",
+    "relatedTerms": [
+      "transformer",
+      "rotary-position-embedding",
+      "self-attention",
+      "long-context",
+      "embedding"
+    ]
+  },
+  {
+    "slug": "in-context-learning",
+    "name": "In-Context Learning",
+    "aliases": [
+      "ICL",
+      "文脈内学習"
+    ],
+    "tagline": "重みを更新せず、プロンプト内の例示や指示だけから新しいタスクの解き方を捉えて実行するLLMの能力",
+    "category": "技術",
+    "tags": [
+      "LLM",
+      "プロンプトエンジニアリング"
+    ],
+    "plainSummary": "AIに例をいくつか見せるだけで、追加の学習をしなくてもその場でやり方を覚えたように振る舞う能力。",
+    "summary": "In-Context Learning（文脈内学習）とは、モデルの重みを更新せず、プロンプトに与えた例示や指示だけから新しいタスクの解き方を捉えて実行するLLMの能力を指す。\nプロンプトに少数の入出力例を並べると、モデルはその場でパターンを読み取り、続く入力へ同じ形式や規則を適用する。Few-shotプロンプティングはこの能力を利用した手法になる。\n勾配降下による学習を伴わないのにタスクへの適応が起きる現象として、その仕組み自体が研究対象になっている。\nファインチューニングなしでタスクへ適応できるため、LLM活用の基本的な前提を成す能力と位置づけられる。",
+    "history": "2020年のGPT-3の論文「Language Models are Few-Shot Learners」で大規模モデルの顕著な能力として示され、広く知られるようになった。",
+    "comparisons": [
+      {
+        "slug": "fine-tuning",
+        "note": "ファインチューニングが重みの更新によってタスクへ適応させるのに対し、In-Context Learningは重みを変えずプロンプト内の例示だけで適応する"
+      }
+    ],
+    "relatedTerms": [
+      "few-shot",
+      "zero-shot",
+      "prompt-engineering",
+      "fine-tuning",
+      "emergent-abilities"
+    ],
+    "references": [
+      {
+        "type": "Research Paper",
+        "label": "Language Models are Few-Shot Learners (arXiv)",
+        "url": "https://arxiv.org/abs/2005.14165"
+      }
+    ]
+  },
+  {
+    "slug": "self-supervised-learning",
+    "name": "自己教師あり学習",
+    "aliases": [
+      "Self-Supervised Learning",
+      "SSL"
+    ],
+    "tagline": "人手のラベルを使わず、データ自体から擬似的な正解を作って学習する方式。LLMの事前学習の基盤",
+    "category": "技術",
+    "tags": [
+      "学習",
+      "事前学習"
+    ],
+    "plainSummary": "人間が正解ラベルを付けなくても、「文章の続きを当てる」のようにデータ自体から問題と答えを作って学習する方法。",
+    "summary": "自己教師あり学習とは、人手によるラベルを使わず、データ自体から擬似的な正解を作って学習する方式を指す。\n文章の次の単語を当てる、隠した単語を復元する、画像の一部から残りを予測するなど、データの構造そのものを教師信号として使う。\n人手のアノテーションが不要なためWeb規模の大量データで学習でき、LLMの事前学習（次トークン予測）やBERTのマスク言語モデルはその代表例になる。\n大規模な基盤モデルの成立を支える中心的な学習方式と位置づけられている。",
+    "background": "教師あり学習の性能はラベル付きデータの量に制約され、人手のアノテーションがボトルネックだった。\nラベルなしデータから教師信号を作れれば、データ量の制約を緩和できるという発想が背景にある。",
+    "relatedTerms": [
+      "pretraining",
+      "machine-learning",
+      "bert",
+      "contrastive-learning",
+      "foundation-model"
+    ]
+  },
+  {
+    "slug": "contrastive-learning",
+    "name": "対照学習",
+    "aliases": [
+      "Contrastive Learning",
+      "コントラスティブ学習"
+    ],
+    "tagline": "似たデータの表現を近づけ、異なるデータの表現を遠ざけるように埋め込みを学習する方式",
+    "category": "技術",
+    "tags": [
+      "学習",
+      "埋め込み"
+    ],
+    "plainSummary": "「似ているもの同士は近く、違うもの同士は遠く」に配置されるよう、データの特徴の座標を学習する方法。",
+    "summary": "対照学習とは、似たデータの組の表現を近づけ、異なるデータの組の表現を遠ざけるように埋め込みを学習する方式を指す。\n同じ画像への異なるデータ拡張を正例ペア、他の画像を負例として学習する画像表現学習や、画像とその説明文を対応づけるCLIPの学習が代表例になる。\nラベルを使わずに質の高い表現を得られる自己教師あり学習の主要な方法であり、検索や類似度計算に使う埋め込みモデルの学習にも広く使われている。",
+    "history": "画像分野では2020年に発表されたSimCLRやMoCoが代表的な研究として知られる。",
+    "relatedTerms": [
+      "embedding",
+      "clip",
+      "self-supervised-learning",
+      "embedding-model",
+      "data-augmentation"
+    ],
+    "references": [
+      {
+        "type": "Research Paper",
+        "label": "SimCLR (arXiv)",
+        "url": "https://arxiv.org/abs/2002.05709"
+      }
+    ]
+  },
+  {
+    "slug": "federated-learning",
+    "name": "連合学習",
+    "aliases": [
+      "Federated Learning",
+      "フェデレーテッドラーニング"
+    ],
+    "tagline": "データを1か所に集めず、端末や組織ごとの学習結果だけを集約して共有モデルを作る分散学習方式",
+    "category": "技術",
+    "tags": [
+      "学習",
+      "プライバシー"
+    ],
+    "plainSummary": "個人データをサーバーへ送らず、各スマホや各病院の中で学習した「学習の差分」だけを持ち寄ってAIを賢くする方法。",
+    "summary": "連合学習とは、データを1か所に集めず、端末や組織ごとにローカルで学習した結果（重みの更新分）だけを集約して共有モデルを作る分散学習の方式を指す。\n生データが端末や組織の外へ出ないため、プライバシーや規制の制約でデータを集約できない場合でも、複数拠点のデータを活かした学習ができる。\nスマートフォンの入力予測の改善や、医療機関をまたぐモデル学習などで使われている。\n通信コスト、拠点間のデータ分布の偏り、更新情報からの情報漏えいへの対策が技術的な課題になる。",
+    "history": "2016年にGoogleの研究者ら（McMahanら）が提唱し、代表的なアルゴリズムFedAvgを発表した。",
+    "relatedTerms": [
+      "machine-learning",
+      "pii",
+      "edge-ai"
+    ],
+    "references": [
+      {
+        "type": "Research Paper",
+        "label": "Communication-Efficient Learning of Deep Networks from Decentralized Data (arXiv)",
+        "url": "https://arxiv.org/abs/1602.05629"
+      }
+    ]
+  },
+  {
+    "slug": "peft",
+    "name": "PEFT",
+    "aliases": [
+      "Parameter-Efficient Fine-Tuning",
+      "パラメータ効率的ファインチューニング"
+    ],
+    "tagline": "モデルの大部分を凍結し、少数のパラメータだけを学習してファインチューニングする手法の総称",
+    "category": "技術",
+    "tags": [
+      "ファインチューニング",
+      "PEFT"
+    ],
+    "plainSummary": "巨大なAIモデルの全体を作り直すのではなく、ごく一部の部品だけを差し替えて調整する省エネなカスタマイズ方法のまとめ言葉。",
+    "summary": "PEFT（Parameter-Efficient Fine-Tuning）とは、モデルの大部分の重みを凍結し、少数の追加・選択パラメータだけを学習してファインチューニングする手法の総称を指す。\n全パラメータを更新するフルファインチューニングは、大規模モデルでは膨大なGPUメモリを要する。そこで、低ランク行列を挿入するLoRAや小さな中間層を挟むアダプターなど、更新対象を絞る手法が発展した。\n少ない計算資源で実用的な適応性能を得られ、タスクごとの差分を小さなファイルとして管理できるため、LLMのファインチューニングの標準的な選択肢になっている。",
+    "history": "アダプターによる手法は2019年のHoulsbyらの研究が知られ、2021年のLoRAの発表以降に広く普及した。Hugging Faceが2023年に公開した同名のライブラリも定着に寄与した。",
+    "comparisons": [
+      {
+        "slug": "lora",
+        "note": "LoRAはPEFTの代表的な一手法で、PEFTはLoRAのほかアダプターやプロンプトチューニングなどを含む総称"
+      },
+      {
+        "slug": "fine-tuning",
+        "note": "フルファインチューニングが全パラメータを更新するのに対し、PEFTは少数のパラメータだけを更新して計算資源を節約する"
+      }
+    ],
+    "relatedTerms": [
+      "lora",
+      "qlora",
+      "fine-tuning",
+      "instruction-tuning"
+    ],
+    "references": [
+      {
+        "type": "GitHub",
+        "label": "huggingface/peft",
+        "url": "https://github.com/huggingface/peft"
+      }
+    ]
+  },
+  {
+    "slug": "qlora",
+    "name": "QLoRA",
+    "aliases": [
+      "Quantized LoRA"
+    ],
+    "tagline": "ベースモデルを4bitに量子化して凍結し、その上にLoRAを載せて学習するメモリ効率の高いファインチューニング手法",
+    "category": "技術",
+    "tags": [
+      "ファインチューニング",
+      "量子化"
+    ],
+    "plainSummary": "AIモデルを圧縮した状態のまま少しだけ追加学習する方法。大きなモデルの調整が1枚のGPUでもできるようになった。",
+    "summary": "QLoRAとは、ベースモデルを4bitに量子化して凍結し、その上にLoRAアダプターを載せて学習するファインチューニング手法を指す。\n4bit NormalFloat（NF4）量子化や量子化定数の再量子化などの工夫により、精度の低下を抑えながらメモリ使用量を削減する。\n65Bパラメータ級のモデルのファインチューニングを単一の48GB GPUで可能にし、大規模モデルの個人や小規模チームによるカスタマイズを現実的にした。",
+    "history": "2023年5月にワシントン大学のDettmersらが論文で発表した。",
+    "comparisons": [
+      {
+        "slug": "lora",
+        "note": "LoRAがベースモデルを元の精度のまま凍結するのに対し、QLoRAはベースモデルを4bitへ量子化してメモリ使用量をさらに削減する"
+      }
+    ],
+    "relatedTerms": [
+      "lora",
+      "quantization",
+      "peft",
+      "int4",
+      "fine-tuning"
+    ],
+    "references": [
+      {
+        "type": "Research Paper",
+        "label": "QLoRA: Efficient Finetuning of Quantized LLMs (arXiv)",
+        "url": "https://arxiv.org/abs/2305.14314"
+      }
+    ]
+  },
+  {
+    "slug": "rlaif",
+    "name": "RLAIF",
+    "aliases": [
+      "Reinforcement Learning from AI Feedback",
+      "AIフィードバックによる強化学習"
+    ],
+    "tagline": "人間の代わりにAIモデルが出力を評価し、そのフィードバックでモデルを強化学習する手法",
+    "category": "技術",
+    "tags": [
+      "強化学習",
+      "アライメント"
+    ],
+    "plainSummary": "AIの回答の良し悪しを人間ではなく別のAIに採点させて、その採点結果で学習を進める方法。人手の採点コストを減らせる。",
+    "summary": "RLAIF（Reinforcement Learning from AI Feedback）とは、人間の代わりにAIモデルが出力の良し悪しを評価し、そのフィードバックを使ってモデルを強化学習する手法を指す。\nRLHFは人間による選好ラベルの収集がコストと速度のボトルネックになるため、評価役をAIへ置き換えることで、フィードバック収集を大規模化・高速化する。\nAnthropicのConstitutional AIでは、原則（憲法）に基づいてAIが応答を比較評価し、その選好データで学習する方式として使われた。\n評価役モデルの偏りがそのまま増幅されるリスクへの注意が必要になる。",
+    "history": "2022年12月にAnthropicがConstitutional AIの論文内で提唱した。",
+    "comparisons": [
+      {
+        "slug": "rlhf",
+        "note": "RLHFが人間の選好ラベルから報酬モデルを学習するのに対し、RLAIFは選好の評価自体をAIモデルに行わせる"
+      }
+    ],
+    "relatedTerms": [
+      "rlhf",
+      "constitutional-ai",
+      "llm-as-a-judge",
+      "synthetic-data",
+      "alignment"
+    ],
+    "references": [
+      {
+        "type": "Research Paper",
+        "label": "Constitutional AI: Harmlessness from AI Feedback (arXiv)",
+        "url": "https://arxiv.org/abs/2212.08073"
+      }
+    ]
+  },
+  {
+    "slug": "reward-model",
+    "name": "報酬モデル",
+    "aliases": [
+      "Reward Model",
+      "RM"
+    ],
+    "tagline": "LLMの出力の良し悪しをスコアとして予測し、強化学習の審判役を担うモデル",
+    "category": "技術",
+    "tags": [
+      "強化学習",
+      "アライメント"
+    ],
+    "plainSummary": "AIの回答に点数を付ける「採点係」のAI。人間の好みを学習しておき、本体のAIを鍛えるときの審判になる。",
+    "summary": "報酬モデルとは、LLMの出力の良し悪しをスコアとして予測するモデルを指す。\nRLHFでは、人間がどちらの応答を好むかを示した選好データで報酬モデルを学習し、その後の強化学習で方策モデルの出力を採点する審判として使う。\n人間の選好の近似にすぎないため、方策モデルが報酬モデルの穴を突いてスコアだけを稼ぐ報酬ハッキングの対象になりやすく、報酬モデルの品質がアライメント全体の品質を左右する。\n推論時に複数の候補から最良の出力を選ぶ検証器としても使われる。",
+    "history": "人間の選好から報酬関数を学習するアプローチは、2017年のChristianoらによる研究が代表的な起点として知られる。",
+    "relatedTerms": [
+      "rlhf",
+      "reward-hacking",
+      "rlvr",
+      "alignment",
+      "llm-as-a-judge"
+    ]
+  },
+  {
+    "slug": "reward-hacking",
+    "name": "報酬ハッキング",
+    "aliases": [
+      "Reward Hacking",
+      "報酬の過剰最適化"
+    ],
+    "tagline": "エージェントが意図した目的を達成せず、報酬関数の欠陥や抜け穴を突いて報酬だけを最大化する現象",
+    "category": "技術",
+    "tags": [
+      "強化学習",
+      "安全性"
+    ],
+    "plainSummary": "テストの点数だけ上げるカンニングのように、AIが本来の目的を果たさずに「採点の抜け穴」を突いて高得点を取ってしまう現象。",
+    "summary": "報酬ハッキングとは、強化学習エージェントが、設計者の意図した目的を達成せずに、報酬関数の欠陥や抜け穴を突いて報酬だけを最大化する現象を指す。\nRLHFでは、方策モデルが報酬モデルの偏り（長い応答や自信のある口調を好むなど）を突き、実際の品質を上げずにスコアを稼ぐ形で現れる。\n報酬はあくまで意図の代理指標であるため、代理指標の最適化が本来の意図から乖離するという、アライメント問題の中核的な難しさを示す例として語られる。\n検証可能な報酬の使用（RLVR）や報酬モデルの改善が対策として研究されている。",
+    "history": "AIの安全性の課題としては、2016年の論文「Concrete Problems in AI Safety」で整理されたことで広く知られるようになった。",
+    "relatedTerms": [
+      "reward-model",
+      "rlhf",
+      "rlvr",
+      "alignment"
+    ],
+    "references": [
+      {
+        "type": "Research Paper",
+        "label": "Concrete Problems in AI Safety (arXiv)",
+        "url": "https://arxiv.org/abs/1606.06565"
+      }
+    ]
+  },
+  {
+    "slug": "post-training",
+    "name": "ポストトレーニング",
+    "aliases": [
+      "Post-training",
+      "事後学習"
+    ],
+    "tagline": "事前学習を終えたモデルへ行う、指示チューニング・選好学習・強化学習などの追加学習の総称",
+    "category": "技術",
+    "tags": [
+      "学習",
+      "ファインチューニング"
+    ],
+    "plainSummary": "土台となる学習を終えたAIを、「指示に従う」「安全に答える」「深く考える」ように仕上げる後工程のまとめ言葉。",
+    "summary": "ポストトレーニングとは、事前学習を終えたモデルに対して行う一連の追加学習の総称を指す。\n指示チューニング（SFT）、RLHFやDPOによる選好の学習、検証可能報酬による強化学習（RLVR）などが含まれる。事前学習で得た知識・能力を、指示に従う・安全に応答する・深く推論するといった実用的な振る舞いへ変換する工程になる。\n近年のモデルの性能差はポストトレーニングの設計にも左右されるようになり、事前学習と並ぶ独立した技術領域として扱われている。",
+    "history": "2024年頃から、LlamaやTüluなどの技術報告を通じて、事前学習と対置される工程の名称として定着した。",
+    "comparisons": [
+      {
+        "slug": "pretraining",
+        "note": "事前学習が大量のテキストから知識と言語能力を獲得する工程であるのに対し、ポストトレーニングはその能力を指示追従や安全性などの実用的な振る舞いへ整える工程"
+      }
+    ],
+    "relatedTerms": [
+      "pretraining",
+      "instruction-tuning",
+      "rlhf",
+      "dpo",
+      "rlvr",
+      "fine-tuning"
+    ]
+  },
+  {
+    "slug": "model-merging",
+    "name": "モデルマージ",
+    "aliases": [
+      "Model Merging",
+      "モデル融合"
+    ],
+    "tagline": "複数の学習済みモデルの重みを演算で合成し、追加学習なしで新しいモデルを作る手法",
+    "category": "技術",
+    "tags": [
+      "LLM",
+      "学習"
+    ],
+    "plainSummary": "複数のAIモデルの中身（重み）を足し合わせたり混ぜたりして、学習し直さずに「いいとこ取り」のモデルを作る方法。",
+    "summary": "モデルマージとは、複数の学習済みモデルの重みを演算で合成し、追加学習なしで新しい1つのモデルを作る手法を指す。\n重みの平均を取る単純な方法から、ファインチューニングによる差分（タスクベクトル）を組み合わせる方法、干渉を抑えて統合するTIESやDAREのような手法まで、多様な方式が提案されている。\nGPUによる学習をほとんど必要とせず、異なる得意分野を持つモデルの能力を組み合わせられるため、オープンウェイトモデルのコミュニティで活発に使われている。\n合成結果の性能には理論的な保証が薄く、試行錯誤に依存する面が残る。",
+    "history": "重み平均の有効性を示した2022年のModel Soupsの研究などを契機に注目され、mergekitなどのツールの登場で普及した。",
+    "relatedTerms": [
+      "fine-tuning",
+      "lora",
+      "hugging-face"
+    ]
+  },
+  {
+    "slug": "grokking",
+    "name": "グロッキング",
+    "aliases": [
+      "Grokking"
+    ],
+    "tagline": "過学習の後も学習を続けると、あるタイミングで突然汎化が起きる現象",
+    "category": "技術",
+    "tags": [
+      "学習",
+      "汎化"
+    ],
+    "plainSummary": "AIが丸暗記状態（過学習）になった後もしつこく学習を続けると、ある日突然「本当の理解」に切り替わる不思議な現象。",
+    "summary": "グロッキングとは、モデルが学習データへ過学習した後も学習を続けると、あるタイミングで突然テストデータへの汎化が起きる現象を指す。\n合同算術のような小さなアルゴリズム的タスクで、学習データの正解率が100%に達してから長い停滞を経て、テスト正解率が急上昇する挙動として報告された。\n過学習した後は汎化しないという従来の直感に反する現象であり、記憶から規則の獲得への内部的な相転移として、ニューラルネットワークの学習ダイナミクスや解釈可能性の研究対象になっている。",
+    "history": "2022年1月にOpenAIの研究者ら（Powerら）が論文で報告し命名した。",
+    "relatedTerms": [
+      "overfitting",
+      "emergent-abilities",
+      "mechanistic-interpretability"
+    ],
+    "references": [
+      {
+        "type": "Research Paper",
+        "label": "Grokking: Generalization Beyond Overfitting (arXiv)",
+        "url": "https://arxiv.org/abs/2201.02177"
+      }
+    ]
+  },
+  {
+    "slug": "data-augmentation",
+    "name": "データ拡張",
+    "aliases": [
+      "Data Augmentation"
+    ],
+    "tagline": "既存の学習データへ変換を加えて多様性を増やし、モデルの汎化性能を高める技術",
+    "category": "技術",
+    "tags": [
+      "データ",
+      "学習"
+    ],
+    "plainSummary": "手持ちの学習データを回転させたり言い換えたりして「水増し」し、AIが応用を利かせられるようにする技術。",
+    "summary": "データ拡張とは、既存の学習データへ変換を加えて訓練サンプルの多様性を増やし、モデルの汎化性能を高める技術を指す。\n画像では回転・反転・切り抜き・色調変更、音声では速度変更やノイズ付加、テキストでは言い換えや逆翻訳などが使われる。\nラベル付きデータが限られる状況で過学習を抑える基本的な手段であり、対照学習では正例ペアを作る中核的な役割も担う。\nLLMの時代には、モデル自身に学習データを生成させる合成データがデータ拡張の発展形として広く使われている。",
+    "relatedTerms": [
+      "overfitting",
+      "synthetic-data",
+      "contrastive-learning",
+      "transfer-learning"
+    ]
+  },
+  {
+    "slug": "tokenization",
+    "name": "トークナイゼーション",
+    "aliases": [
+      "Tokenization",
+      "トークン化",
+      "トークナイザー"
+    ],
+    "tagline": "テキストをモデルが扱う最小単位であるトークンの列へ分割する処理",
+    "category": "技術",
+    "tags": [
+      "トークナイゼーション",
+      "NLP"
+    ],
+    "plainSummary": "文章をAIが読める細かい部品（トークン）に切り分ける処理。切り方しだいでAIの効率や得意・不得意が変わる。",
+    "summary": "トークナイゼーションとは、テキストをモデルが扱う最小単位であるトークンの列へ分割する処理を指す。分割するプログラムはトークナイザーと呼ばれる。\n単語単位や文字単位の分割に対し、現在のLLMでは頻出パターンをまとめるサブワード分割（BPEやUnigram法など）が主流で、未知語への頑健さと語彙サイズのバランスを取る。\nトークンの区切り方は、モデルの処理コスト・多言語の効率・数値や文字列の扱いに直結する。日本語はアルファベット圏の言語より1文字あたりのトークン数が多くなりやすいなど、言語による差も生む。",
+    "history": "サブワード分割の代表であるBPEは、2016年に機械翻訳向けの手法として導入されたものがLLMへ受け継がれている。",
+    "relatedTerms": [
+      "token",
+      "byte-pair-encoding",
+      "n-gram",
+      "corpus",
+      "context-window"
+    ]
+  },
+  {
+    "slug": "knowledge-graph",
+    "name": "ナレッジグラフ",
+    "aliases": [
+      "Knowledge Graph",
+      "知識グラフ"
+    ],
+    "tagline": "実体をノード、実体間の関係をエッジとして知識をグラフ構造で表現したデータベース",
+    "category": "技術",
+    "tags": [
+      "知識",
+      "検索"
+    ],
+    "plainSummary": "「AさんはB社の創業者」「B社はC市にある」のような事実を、点と線のネットワークとして整理した知識のデータベース。",
+    "summary": "ナレッジグラフとは、実体（エンティティ）をノード、実体間の関係をエッジとして、知識をグラフ構造で表現したデータベースを指す。\n「企業Aの創業者は人物B」のような事実を構造化して蓄積し、推移的な関係の追跡や複数の関係をまたぐ質問への回答を可能にする。\n検索エンジンの知識パネルなどで実用化されてきたが、LLMの登場後は、ハルシネーション対策として構造化知識をLLMへ与える情報源として再注目された。GraphRAGのように検索拡張生成と組み合わせる構成が広がっている。",
+    "history": "概念は意味ネットワークなど古くからの知識表現の研究に遡るが、2012年にGoogleが検索機能「Knowledge Graph」を発表したことで広く知られるようになった。",
+    "relatedTerms": [
+      "graphrag",
+      "ontology",
+      "retrieval-augmented-generation",
+      "semantic-search"
+    ]
+  },
+  {
+    "slug": "deepfake",
+    "name": "ディープフェイク",
+    "aliases": [
+      "Deepfake"
+    ],
+    "tagline": "深層学習で人物の顔・声・動作を合成し、本物と見分けにくい偽の画像・動画・音声を作る技術とその生成物",
+    "category": "技術",
+    "tags": [
+      "安全性",
+      "画像生成"
+    ],
+    "plainSummary": "AIで作った「本物そっくりの偽動画・偽音声」。有名人のなりすましや詐欺への悪用が世界的な問題になっている。",
+    "summary": "ディープフェイクとは、深層学習を使って人物の顔・声・動作を合成・差し替えし、本物と見分けにくい偽の画像・動画・音声を作る技術、およびその生成物を指す。\n当初は顔の入れ替えを行うGANベースの手法が中心だったが、拡散モデルによる画像・動画生成や音声クローニングの進歩により、少量の素材から高品質な偽コンテンツを作れるようになった。\nなりすまし詐欺・偽情報の拡散・名誉毀損などへの悪用が世界的な問題となり、検出技術・電子透かし・来歴証明などの対策と、各国での法規制の整備が進んでいる。",
+    "history": "2017年に米国の掲示板Redditで顔交換動画を投稿したユーザー名「deepfakes」に由来して広まった呼称になる。",
+    "relatedTerms": [
+      "gan",
+      "diffusion-model",
+      "watermarking",
+      "text-to-video",
+      "text-to-speech"
+    ]
+  },
+  {
+    "slug": "shadow-ai",
+    "name": "シャドーAI",
+    "aliases": [
+      "Shadow AI"
+    ],
+    "tagline": "組織のIT部門の承認や管理を経ずに、従業員が業務で無断利用するAIツール",
+    "category": "技術",
+    "tags": [
+      "セキュリティ",
+      "プライバシー"
+    ],
+    "plainSummary": "会社の許可を取らずに従業員がこっそり業務で使っているAIツールのこと。機密情報の流出リスクとして問題視されている。",
+    "summary": "シャドーAIとは、組織のIT部門の承認や管理を経ずに、従業員が業務で無断利用するAIツールを指す。\n許可されていないチャットAIへ業務文書を貼り付ける、個人アカウントの生成AIサービスで顧客データを処理するといった形で発生する。\n機密情報や個人情報が外部サービスの学習・保存へ渡るリスクに加え、出力の品質や法的問題を組織が管理できないという課題を生む。\n利用禁止だけでは実態が地下化しやすいため、承認済みAIツールの提供・利用ガイドラインの整備・利用状況の可視化を組み合わせた統制が推奨されている。",
+    "background": "承認外のITツール利用を指すシャドーITから派生した言葉になる。生成AIは個人でも無料で使い始められるため、従来のソフトウェアより無断利用が広がりやすい。",
+    "relatedTerms": [
+      "pii",
+      "guardrails",
+      "llm-gateway"
+    ]
+  },
+  {
+    "slug": "ai-slop",
+    "name": "AIスロップ",
+    "aliases": [
+      "AI Slop",
+      "Slop"
+    ],
+    "tagline": "品質や正確さへの配慮なく大量生産され、WebやSNSにあふれる低品質なAI生成コンテンツを指す俗語",
+    "category": "技術",
+    "tags": [
+      "生成AI",
+      "信頼性"
+    ],
+    "plainSummary": "中身の薄いAI生成記事や画像が大量にばらまかれてネットを汚している状態を指す言葉。「AI版スパム」のような使われ方をする。",
+    "summary": "AIスロップとは、品質や正確さへの配慮なく大量生産され、WebやSNSにあふれる低品質なAI生成コンテンツを指す俗語になる。\n広告収益・検索順位・SNSでの拡散を目的に、内容の検証なく自動生成された記事・画像・動画が典型で、迷惑メールを指すスパムになぞらえた言葉として使われる。\n検索結果やSNSフィードの品質低下、誤情報の拡散に加え、Web上のAI生成物が将来のモデルの学習データへ混入する汚染も懸念されている。\n生成AIの普及がもたらした情報環境の変化を象徴する言葉として、2024年頃から急速に広まった。",
+    "history": "2024年頃から英語圏のSNSや技術ブログで広まり、同年には主要な辞書の「今年の言葉」の候補にも挙げられた。",
+    "relatedTerms": [
+      "hallucination",
+      "synthetic-data",
+      "data-poisoning"
+    ]
+  },
+  {
+    "slug": "explainable-ai",
+    "name": "説明可能AI",
+    "aliases": [
+      "Explainable AI",
+      "XAI"
+    ],
+    "tagline": "AIの判断の根拠を人間が理解できる形で提示するための技術・研究分野",
+    "category": "技術",
+    "tags": [
+      "信頼性",
+      "安全性"
+    ],
+    "plainSummary": "AIが「なぜその判断をしたのか」を人間に分かる形で示すための技術。融資審査や医療などの説明責任がある場面で必要になる。",
+    "summary": "説明可能AI（XAI）とは、AIの判断の根拠を人間が理解できる形で提示するための技術・研究分野を指す。\n深層学習モデルは高い精度を出す一方で内部の判断過程がブラックボックスになりやすく、金融の与信や医療診断のような説明責任を伴う用途では判断根拠の提示が求められる。\n特徴量の寄与を算出するSHAPやLIME、画像の注目領域を可視化する手法、判断が変わる条件を示す反実仮想説明などが代表的な手法になる。\nAI規制の整備に伴い、透明性の要件を満たす手段としての重要性も高まっている。",
+    "history": "用語としては、2010年代半ばに米国DARPAが開始した同名の研究プログラムを通じて広く知られるようになった。",
+    "comparisons": [
+      {
+        "slug": "mechanistic-interpretability",
+        "note": "説明可能AIが個々の判断の根拠を人間へ提示することを目的とするのに対し、メカニスティック解釈可能性はモデル内部の計算の仕組みそのものの解明を目指す"
+      }
+    ],
+    "relatedTerms": [
+      "mechanistic-interpretability",
+      "guardrails",
+      "alignment"
+    ]
+  },
+  {
+    "slug": "mechanistic-interpretability",
+    "name": "メカニスティック解釈可能性",
+    "aliases": [
+      "Mechanistic Interpretability",
+      "機械論的解釈可能性"
+    ],
+    "tagline": "ニューラルネットワーク内部の重みや活性を解析し、モデルの内部回路・アルゴリズムの解明を目指す研究分野",
+    "category": "技術",
+    "tags": [
+      "安全性",
+      "ニューラルネットワーク"
+    ],
+    "plainSummary": "AIの頭の中を「配線レベル」で調べて、どんな仕組みで考えているのかを解き明かそうとする研究分野。",
+    "summary": "メカニスティック解釈可能性とは、ニューラルネットワークの内部の重みや活性を解析し、モデルがどのような内部回路・アルゴリズムで計算しているかを解明しようとする研究分野を指す。\n入出力の関係から判断根拠を推定する従来の説明手法と異なり、リバースエンジニアリングのように内部構造そのものの理解を目指す。\n注意ヘッドの役割の特定、複数の概念が1つのニューロンへ重なる重ね合わせ（superposition）の分析、スパースオートエンコーダによる内部特徴の分解などが代表的な研究になる。\nモデルの欺瞞や危険な内部処理を検出する手段として、AI安全性の観点からも注目されている。",
+    "history": "Chris Olahらによるニューラルネットワーク内部の回路（circuits）研究を起点に、2020年代前半に研究分野として定着した。",
+    "comparisons": [
+      {
+        "slug": "explainable-ai",
+        "note": "説明可能AIが判断の根拠の提示を目的とするのに対し、メカニスティック解釈可能性は内部の計算メカニズム自体の解明を目的とする"
+      }
+    ],
+    "relatedTerms": [
+      "explainable-ai",
+      "alignment",
+      "grokking",
+      "neural-network"
+    ]
+  },
+  {
+    "slug": "eu-ai-act",
+    "name": "EU AI法",
+    "aliases": [
+      "EU AI Act",
+      "AI Act",
+      "欧州AI規制法"
+    ],
+    "tagline": "AIの用途をリスクで分類して禁止や義務を定める、EUによる包括的なAI規制法",
+    "category": "技術",
+    "tags": [
+      "規制",
+      "安全性"
+    ],
+    "plainSummary": "EUが作った世界初の本格的なAI規制の法律。危険度に応じてAIの使い方を分類し、禁止や義務を定める。EU外の企業にも適用される。",
+    "summary": "EU AI法（EU AI Act）とは、EUが制定した、AIシステムを包括的に規制する法律を指す。\nAIの用途をリスクの大きさで分類し、社会的スコアリングなどの許容できないリスクの用途を禁止する。雇用・与信・法執行などの高リスク用途には、適合性評価や透明性の義務を課すリスクベースのアプローチを採る。\nGPTのような汎用AIモデル（GPAI）の提供者にも、技術文書の作成や学習データの概要開示などの義務を定めた。\nEU域外の企業でもEU市場へAIを提供する場合は適用対象となり、違反には売上高に応じた制裁金が科されるため、世界のAI開発企業へ影響する規制として注目されている。",
+    "history": "2021年4月に欧州委員会が法案を提案し、2024年に成立して同年8月に発効した。禁止規定や汎用AIへの義務は2025年から、規制の大部分は2026年8月から段階的に適用される。",
+    "relatedTerms": [
+      "guardrails",
+      "red-teaming",
+      "frontier-model",
+      "foundation-model"
+    ]
+  },
+  {
+    "slug": "model-card",
+    "name": "モデルカード",
+    "aliases": [
+      "Model Card"
+    ],
+    "tagline": "機械学習モデルの用途・性能・制限・倫理的考慮事項を整理して公開する標準的なドキュメント形式",
+    "category": "技術",
+    "tags": [
+      "信頼性",
+      "評価"
+    ],
+    "plainSummary": "AIモデルの「取扱説明書」。何に使えて何に使ってはいけないか、性能や弱点はどうかを整理した文書。",
+    "summary": "モデルカードとは、機械学習モデルの用途・性能・制限・倫理的考慮事項を整理して公開する標準的なドキュメント形式を指す。\n想定される用途と対象外の用途、学習データの概要、属性グループ別を含む評価結果、既知のバイアスや制限などを記載し、モデルの利用者が適否を判断できるようにする。\nHugging Faceのモデルハブではモデル公開時の標準的な添付文書として定着し、LLMの公開時に各社が発表するシステムカードやテクニカルレポートもこの流れを汲む。\nAI規制が求める透明性要件への対応手段としても位置づけられている。",
+    "history": "2018年にGoogleの研究者ら（Mitchellら）が論文「Model Cards for Model Reporting」で提案した。",
+    "relatedTerms": [
+      "hugging-face",
+      "foundation-model",
+      "explainable-ai"
+    ],
+    "references": [
+      {
+        "type": "Research Paper",
+        "label": "Model Cards for Model Reporting (arXiv)",
+        "url": "https://arxiv.org/abs/1810.03993"
+      }
+    ]
+  },
+  {
+    "slug": "sglang",
+    "name": "SGLang",
+    "aliases": [
+      "sgl-project"
+    ],
+    "tagline": "RadixAttentionによる接頭辞キャッシュの再利用を特徴とする、オープンソースのLLM推論サービング基盤",
+    "category": "インフラ",
+    "tags": [
+      "サービング",
+      "推論最適化"
+    ],
+    "plainSummary": "LLMを高速に動かすためのオープンソースの実行基盤。似たようなプロンプトを大量にさばく場面に強く、vLLMと並ぶ定番になっている。",
+    "summary": "SGLangとは、LLMの推論サービングを高速化するオープンソースの実行フレームワークを指す。\nプロンプトの共通接頭辞のKVキャッシュを基数木で管理して再利用するRadixAttentionを特徴とし、少しずつ異なるプロンプトを大量に処理するエージェントや評価のワークロードで性能を発揮する。\n構造化出力の高速なデコーディングや、複数の生成呼び出しを組み合わせるプログラムの記述にも対応する。\nvLLMと並ぶ主要な推論サービング基盤として、オープンウェイトモデルの本番運用で採用が広がっている。",
+    "history": "2024年にLMSYSのメンバーを中心とするチームがオープンソースとして公開した。",
+    "comparisons": [
+      {
+        "slug": "vllm",
+        "note": "いずれもオープンソースのLLM推論サービング基盤で、vLLMがPagedAttentionによるメモリ管理を特徴とするのに対し、SGLangはRadixAttentionによる接頭辞キャッシュの再利用を特徴とする"
+      }
+    ],
+    "relatedTerms": [
+      "vllm",
+      "kv-cache",
+      "inference",
+      "structured-output"
+    ],
+    "references": [
+      {
+        "type": "GitHub",
+        "label": "sgl-project/sglang",
+        "url": "https://github.com/sgl-project/sglang"
+      }
+    ]
+  },
+  {
+    "slug": "groq",
+    "name": "Groq",
+    "aliases": [
+      "LPU",
+      "GroqCloud"
+    ],
+    "tagline": "LLM推論に特化した独自チップLPUを開発する半導体企業と、その高速推論クラウドサービス",
+    "category": "インフラ",
+    "tags": [
+      "ハードウェア",
+      "推論最適化"
+    ],
+    "plainSummary": "AIの回答生成を極端に速くする専用チップを作る会社。GPUの代わりに独自チップを使い、毎秒数百トークンの速さで文章を生成する。",
+    "summary": "Groqとは、LLM推論に特化した独自チップLPU（Language Processing Unit）を開発する米国の半導体企業、および同社の推論サービスを指す。\nLPUはGPUと異なり決定的な実行スケジューリングを前提とした設計で、メモリ帯域のボトルネックを抑え、トークン生成の速度に特化している。\nオープンウェイトモデルを毎秒数百トークン規模で生成するクラウドサービスGroqCloudを提供し、応答速度が体験を左右する音声対話やエージェント用途での利用が広がっている。\nイーロン・マスクのAI企業xAIが開発するチャットボットGrokとは無関係の別企業になる。",
+    "history": "2016年に、GoogleでTPUの開発に関わったJonathan Rossらが設立した。2024年頃からLLMの高速推論サービスで広く知られるようになった。",
+    "comparisons": [
+      {
+        "slug": "grok",
+        "note": "GroqはLLM推論用チップと推論サービスを提供する半導体企業、GrokはxAIが開発するLLM。名前が似ているが無関係"
+      },
+      {
+        "slug": "gpu",
+        "note": "GPUが学習・推論の双方に使われる汎用の並列計算チップであるのに対し、LPUはLLMのトークン生成速度に特化した設計を採る"
+      }
+    ],
+    "relatedTerms": [
+      "gpu",
+      "tpu",
+      "npu",
+      "inference"
+    ],
+    "references": [
+      {
+        "type": "Official Website",
+        "label": "Groq",
+        "url": "https://groq.com/"
+      }
+    ]
+  },
+  {
+    "slug": "deepspeed",
+    "name": "DeepSpeed",
+    "aliases": [
+      "ZeRO"
+    ],
+    "tagline": "ZeROによる分散学習を中心に、大規模モデルの学習・推論を効率化するMicrosoftのオープンソースライブラリ",
+    "category": "インフラ",
+    "tags": [
+      "フレームワーク",
+      "並列計算"
+    ],
+    "plainSummary": "1枚のGPUには載らない巨大なAIモデルを、たくさんのGPUに分担させて学習するためのMicrosoft製ツール。",
+    "summary": "DeepSpeedとは、Microsoftが開発する、大規模モデルの学習・推論を効率化するオープンソースの深層学習最適化ライブラリを指す。\nオプティマイザ状態・勾配・パラメータをGPU間で分割して保持するZeROにより、1枚のGPUに載らない規模のモデルの分散学習を可能にする。\nPyTorch上で動作し、パイプライン並列・テンソル並列・CPUへのオフロードなどを組み合わせて、数百億から数千億パラメータ級のモデル学習を支える標準的な基盤の1つとして使われてきた。",
+    "history": "2020年2月にMicrosoftがZeROの論文とともに公開した。",
+    "relatedTerms": [
+      "pytorch",
+      "gpu",
+      "ray"
+    ],
+    "references": [
+      {
+        "type": "Official Website",
+        "label": "DeepSpeed",
+        "url": "https://www.deepspeed.ai/"
+      }
+    ]
+  },
+  {
+    "slug": "wandb",
+    "name": "Weights & Biases",
+    "aliases": [
+      "W&B",
+      "wandb"
+    ],
+    "tagline": "機械学習の実験管理を中心とするMLOpsプラットフォーム。LLM向けのトレース・評価機能も提供",
+    "category": "インフラ",
+    "tags": [
+      "LLMOps",
+      "再現性"
+    ],
+    "plainSummary": "AIの学習実験の記録係。学習の進み具合や設定を自動で記録し、どの実験が良かったかをダッシュボードで比べられるサービス。",
+    "summary": "Weights & Biases（W&B）とは、機械学習の実験管理を中心とするMLOpsプラットフォームを指す。\n学習中の損失・精度・ハイパーパラメータ・成果物を数行のコード追加で記録し、ダッシュボードで実験間の比較・可視化・再現ができる。\nLLM向けには、プロンプトやエージェントの実行トレースを記録・評価するW&B Weaveを提供し、LLMOpsの領域へも展開している。\n研究コミュニティから企業まで広く使われる、実験管理の代表的なサービスになる。",
+    "history": "2017年にLukas Biewaldらが設立した。2025年にはAIクラウド企業CoreWeaveによる買収が発表された。",
+    "comparisons": [
+      {
+        "slug": "mlflow",
+        "note": "MLflowがオープンソースの自己ホスト型を基本とするのに対し、Weights & BiasesはマネージドなSaaSとして提供される実験管理プラットフォーム"
+      }
+    ],
+    "relatedTerms": [
+      "mlflow",
+      "llmops",
+      "hugging-face"
+    ],
+    "references": [
+      {
+        "type": "Official Website",
+        "label": "Weights & Biases",
+        "url": "https://wandb.ai/"
+      }
+    ]
+  },
+  {
+    "slug": "gpqa",
+    "name": "GPQA",
+    "aliases": [
+      "GPQA Diamond",
+      "Graduate-Level Google-Proof Q&A"
+    ],
+    "tagline": "検索しても解けない大学院レベルの科学問題で構成される、高難度の質問応答ベンチマーク",
+    "category": "評価",
+    "tags": [
+      "ベンチマーク",
+      "評価"
+    ],
+    "plainSummary": "博士級の専門家が作った、Google検索を使っても解けないほど難しい科学の試験。最先端AIの賢さを測る定番テスト。",
+    "summary": "GPQAとは、生物学・物理学・化学の大学院レベルの難問で構成される、多肢選択式の質問応答ベンチマークを指す。\n該当分野の博士号取得者や博士課程在籍者が作成・検証した問題で構成され、専門外の人間がWeb検索を使っても正答が難しい「Google-proof」な設計を特徴とする。\n特に難度の高い抜粋であるGPQA Diamondは、推論モデルの科学的推論能力を測る標準的なベンチマークとして、主要モデルの発表時に広く報告されている。\nMMLUなど従来のベンチマークが飽和する中、フロンティアモデルの能力差を判別できる高難度ベンチマークとして使われている。",
+    "history": "2023年11月にニューヨーク大学などの研究者ら（Reinら）が発表した。",
+    "relatedTerms": [
+      "mmlu",
+      "reasoning-model",
+      "aime",
+      "humanitys-last-exam"
+    ],
+    "references": [
+      {
+        "type": "Research Paper",
+        "label": "GPQA: A Graduate-Level Google-Proof Q&A Benchmark (arXiv)",
+        "url": "https://arxiv.org/abs/2311.12022"
+      }
+    ]
+  },
+  {
+    "slug": "aime",
+    "name": "AIME",
+    "aliases": [
+      "American Invitational Mathematics Examination"
+    ],
+    "tagline": "米国の数学コンテストを転用した、LLMの数学的推論能力を測る高難度ベンチマーク",
+    "category": "評価",
+    "tags": [
+      "ベンチマーク",
+      "評価"
+    ],
+    "plainSummary": "アメリカの数学オリンピック予選クラスの試験。毎年新しい問題が出るため「答えの丸暗記」が効かず、AIの数学力を測るテストとして使われる。",
+    "summary": "AIME（American Invitational Mathematics Examination）とは、米国の高校生向け数学コンテストで、LLMの数学的推論能力を測るベンチマークとして転用されている試験を指す。\n毎年出題される15問の整数解答問題で構成され、数学オリンピックの米国代表選考の一段階に当たる高難度の試験になる。\n新しい年度の問題は過去のモデルの学習データに含まれないため、データ汚染の影響を受けにくい評価として、推論モデルの発表時にAIME 2024・AIME 2025などの正答率が広く報告されている。",
+    "history": "試験自体は1983年から実施されている。LLMのベンチマークとしては、2024年以降の推論モデルの評価で標準的に使われるようになった。",
+    "relatedTerms": [
+      "gsm8k",
+      "gpqa",
+      "reasoning-model",
+      "data-contamination"
+    ]
+  },
+  {
+    "slug": "arc-agi",
+    "name": "ARC-AGI",
+    "aliases": [
+      "Abstraction and Reasoning Corpus",
+      "ARC"
+    ],
+    "tagline": "少数の例示から図形パターンの変換規則を見抜く、抽象化と推論の能力を測るベンチマーク",
+    "category": "評価",
+    "tags": [
+      "ベンチマーク",
+      "評価"
+    ],
+    "plainSummary": "「例を数個見て法則を見抜く」パズル集。人間には簡単でもAIには難しく、AIの本当の応用力を測るテストとして注目される。",
+    "summary": "ARC-AGIとは、少数の例示から図形パターンの変換規則を見抜いて適用する、抽象化と推論の能力を測るベンチマークを指す。\n各問題は数個の入出力例と1つのテスト入力で構成され、人間には直感的に解けるが、記憶した知識の再生では解けないよう設計されている。\n流動的知能、すなわち未知の課題への適応能力を測ることを狙いとし、大量の知識で解けるベンチマークが飽和する中でもAIの正答率が人間を下回る状態が続いたため、AGIへの進捗を測る指標として注目された。\n賞金コンテストARC Prizeが開催され、より難度の高いARC-AGI-2など後継版の整備も進んでいる。",
+    "history": "2019年にFrançois Cholletが論文「On the Measure of Intelligence」とともに公開した。2024年には賞金コンテストARC Prizeが始まり、同年12月にOpenAIのo3が高スコアを報告して話題になった。",
+    "relatedTerms": [
+      "agi",
+      "reasoning-model",
+      "test-time-scaling",
+      "few-shot"
+    ],
+    "references": [
+      {
+        "type": "Official Website",
+        "label": "ARC Prize",
+        "url": "https://arcprize.org/"
+      }
+    ]
+  },
+  {
+    "slug": "humanitys-last-exam",
+    "name": "Humanity's Last Exam",
+    "aliases": [
+      "HLE",
+      "人類最後の試験"
+    ],
+    "tagline": "世界中の専門家が作成した数千問の難問で構成される、フロンティアモデル向けの最高難度ベンチマーク",
+    "category": "評価",
+    "tags": [
+      "ベンチマーク",
+      "評価"
+    ],
+    "plainSummary": "「人類が作る最後の学術試験」を掲げて、世界中の専門家が持ち寄った超難問集。最先端AIでも正答率が低い、限界測定用のテスト。",
+    "summary": "Humanity's Last Exam（HLE）とは、数学・自然科学・人文学など幅広い分野の専門家が作成した、数千問の難問で構成されるベンチマークを指す。\n既存のベンチマークが最先端モデルにとって飽和しつつある状況を受け、「人類が作る最後の学術試験」を掲げ、世界中の専門家から公募した最高難度の問題を集めた。\n公開時点で最先端モデルの正答率は1桁パーセント台にとどまり、フロンティアモデルの限界を測る高難度ベンチマークとして、モデル発表時のスコア報告で広く使われている。",
+    "history": "2025年1月にCenter for AI SafetyとScale AIが公開した。",
+    "relatedTerms": [
+      "mmlu",
+      "gpqa",
+      "frontier-model",
+      "data-contamination"
+    ],
+    "references": [
+      {
+        "type": "Official Website",
+        "label": "Humanity's Last Exam",
+        "url": "https://lastexam.ai/"
+      }
+    ]
+  },
+  {
+    "slug": "data-contamination",
+    "name": "データ汚染",
+    "aliases": [
+      "Data Contamination",
+      "ベンチマーク汚染",
+      "データコンタミネーション"
+    ],
+    "tagline": "評価用ベンチマークの問題や解答が学習データへ混入し、評価スコアが実力以上に高く出てしまう問題",
+    "category": "評価",
+    "tags": [
+      "評価",
+      "データ"
+    ],
+    "plainSummary": "AIが「試験問題と答えを事前に見てしまっていた」状態。テストの点数が本当の実力より高く出てしまい、評価が信用できなくなる問題。",
+    "summary": "データ汚染とは、評価用ベンチマークの問題や解答がモデルの学習データへ混入し、評価スコアが実力以上に高く出てしまう問題を指す。\nLLMはWeb全体から収集したデータで学習するため、公開されているベンチマークは学習データへ紛れ込みやすく、スコアが能力の測定ではなく記憶の再生を反映してしまう。\n対策として、公開後の新しい問題での評価（新年度のAIMEなど）、非公開テストセットの維持、汚染検出手法の研究、実施のたびに問題を差し替える動的ベンチマークなどが使われている。\nベンチマークスコアの比較を信頼するうえで前提となる、評価の信頼性の中核的な課題になる。",
+    "comparisons": [
+      {
+        "slug": "data-poisoning",
+        "note": "データポイズニングが攻撃者による学習データへの意図的な混入を指すのに対し、データ汚染は主にベンチマークの問題が意図せず学習データへ混入する評価上の問題を指す"
+      }
+    ],
+    "relatedTerms": [
+      "mmlu",
+      "aime",
+      "humanitys-last-exam",
+      "data-poisoning"
     ]
   }
 ]
