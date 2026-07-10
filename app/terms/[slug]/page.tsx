@@ -39,7 +39,17 @@ export const generateMetadata = async ({ params }: Props): Promise<Metadata> => 
     title,
     description,
     alternates: { canonical: url },
-    openGraph: { title, description, type: "article", url, images: [image] },
+    keywords: [term.name, ...(term.aliases ?? []), term.category, ...term.tags],
+    openGraph: {
+      title,
+      description,
+      type: "article",
+      url,
+      images: [image],
+      siteName: SITE_NAME,
+      locale: "ja_JP",
+    },
+    category: term.category,
     twitter: { title, description, images: [image] },
   }
 }

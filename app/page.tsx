@@ -2,12 +2,27 @@ import { Metadata } from "next"
 import { FC } from "react"
 import { Container, Section } from "components/elements/layout"
 import { TermExplorer } from "components/term/term-explorer"
-import { SITE_URL } from "lib/site"
+import { SITE_DESCRIPTION, SITE_KEYWORDS, SITE_NAME, SITE_OG_IMAGE_URL, SITE_TAGLINE_JA, SITE_URL } from "lib/site"
 import { categories, terms } from "lib/terms"
 
 export const metadata: Metadata = {
+  title: `${SITE_NAME} (RRA) — ${SITE_TAGLINE_JA}・技術リファレンス`,
+  description: SITE_DESCRIPTION,
+  keywords: SITE_KEYWORDS,
   alternates: {
     canonical: SITE_URL,
+  },
+  openGraph: {
+    title: `${SITE_NAME} — ${SITE_TAGLINE_JA}`,
+    description: SITE_DESCRIPTION,
+    type: "website",
+    url: SITE_URL,
+    images: [SITE_OG_IMAGE_URL],
+  },
+  twitter: {
+    title: `${SITE_NAME} — ${SITE_TAGLINE_JA}`,
+    description: SITE_DESCRIPTION,
+    images: [SITE_OG_IMAGE_URL],
   },
 }
 

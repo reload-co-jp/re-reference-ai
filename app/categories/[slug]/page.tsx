@@ -31,7 +31,16 @@ export const generateMetadata = async ({ params }: Props): Promise<Metadata> => 
     title,
     description,
     alternates: { canonical: url },
-    openGraph: { title, description, type: "website", url, images: [SITE_OG_IMAGE_URL] },
+    keywords: [category, "AI", "機械学習", "用語一覧", "技術リファレンス"],
+    openGraph: {
+      title,
+      description,
+      type: "website",
+      url,
+      images: [SITE_OG_IMAGE_URL],
+      siteName: SITE_NAME,
+      locale: "ja_JP",
+    },
     twitter: { title, description, images: [SITE_OG_IMAGE_URL] },
   }
 }

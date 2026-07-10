@@ -4,7 +4,14 @@ import Link from "next/link"
 import { GoogleAnalytics } from "components/analytics/google-analytics"
 import { Title } from "components/elements/layout"
 import { toJsonLd } from "lib/json-ld"
-import { SITE_DESCRIPTION, SITE_NAME, SITE_OG_IMAGE_URL, SITE_TAGLINE_JA, SITE_URL } from "lib/site"
+import {
+  SITE_DESCRIPTION,
+  SITE_KEYWORDS,
+  SITE_NAME,
+  SITE_OG_IMAGE_URL,
+  SITE_TAGLINE_JA,
+  SITE_URL,
+} from "lib/site"
 import "./reset.css"
 
 const display = Playfair_Display({
@@ -19,7 +26,12 @@ const body = Inter({
 })
 
 export const metadata: Metadata = {
+  applicationName: SITE_NAME,
+  authors: [{ name: "Reload" }],
+  creator: "Reload",
   metadataBase: new URL(SITE_URL),
+  keywords: SITE_KEYWORDS,
+  publisher: "Reload",
   title: {
     default: `${SITE_NAME} (RRA) — ${SITE_TAGLINE_JA}・技術リファレンス`,
     template: `%s | ${SITE_NAME}`,
@@ -42,6 +54,17 @@ export const metadata: Metadata = {
   },
   alternates: {
     canonical: SITE_URL,
+  },
+  robots: {
+    follow: true,
+    index: true,
+    googleBot: {
+      follow: true,
+      index: true,
+      "max-image-preview": "large",
+      "max-snippet": -1,
+      "max-video-preview": -1,
+    },
   },
 }
 
