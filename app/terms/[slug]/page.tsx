@@ -6,7 +6,15 @@ import { Breadcrumb } from "components/elements/breadcrumb"
 import { Badge, Container, Section, SectionTitle } from "components/elements/layout"
 import { toJsonLd } from "lib/json-ld"
 import { SITE_NAME, SITE_URL } from "lib/site"
-import { getCategorySlug, getRelatedTerms, getTagSlug, getTermBySlug, Term, terms } from "lib/terms"
+import {
+  getCategorySlug,
+  getRelatedTerms,
+  getTagSlug,
+  getTermBySlug,
+  getZennArticles,
+  Term,
+  terms,
+} from "lib/terms"
 import { linkifyTermMentions } from "lib/term-links"
 import { truncate } from "lib/text"
 
@@ -128,6 +136,7 @@ const TermPage: FC<Props> = async ({ params }) => {
   }
 
   const relatedTerms = getRelatedTerms(term)
+  const zennArticles = getZennArticles(term)
   const jsonLdBlocks = buildJsonLd(term, relatedTerms)
 
   return (
@@ -366,6 +375,26 @@ const TermPage: FC<Props> = async ({ params }) => {
                   target="_blank"
                 >
                   {reference.label}
+                </a>
+              </li>
+            ))}
+          </ul>
+        </Section>
+      )}
+
+      {zennArticles.length > 0 && (
+        <Section>
+          <SectionTitle>関連Zenn記事</SectionTitle>
+          <ul style={{ paddingLeft: "1.25rem" }}>
+            {zennArticles.map((article) => (
+              <li key={article.url} style={{ marginBottom: ".5rem" }}>
+                <a
+                  href={article.url}
+                  rel="noreferrer"
+                  style={{ color: "var(--color-accent-bright)" }}
+                  target="_blank"
+                >
+                  {article.title}
                 </a>
               </li>
             ))}

@@ -1,0 +1,5366 @@
+{
+  "large-language-model": [
+    {
+      "title": "大規模言語モデル(LLM)の作り方 Megatron-DeepSpeed編 Part1",
+      "url": "https://zenn.dev/turing_motors/articles/04c1328bf6095a"
+    },
+    {
+      "title": "大規模言語モデル(LLM)の作り方 GPT-NeoX編 Part 1",
+      "url": "https://zenn.dev/turing_motors/articles/dff1466194f4ac"
+    },
+    {
+      "title": "大規模言語モデル(LLM)の作り方 Megatron-DeepSpeed編 Part2",
+      "url": "https://zenn.dev/turing_motors/articles/da7fa101ecb9a1"
+    },
+    {
+      "title": "大規模言語モデルを使って自動車走行時の状況説明をさせてみる？ -社内LLMハッカソン記-",
+      "url": "https://zenn.dev/turing_motors/articles/158b9036100639"
+    }
+  ],
+  "transformer": [
+    {
+      "title": "30分で完全理解するTransformerの世界",
+      "url": "https://zenn.dev/zenkigen_tech/articles/2023-01-shimizu"
+    },
+    {
+      "title": "Python(PyTorch)で自作して理解するTransformer",
+      "url": "https://zenn.dev/yukiyada/articles/59f3b820c52571"
+    },
+    {
+      "title": "Transformerアーキテクチャの変遷 ~Attention is All You Needからgpt-ossまで~",
+      "url": "https://zenn.dev/sakaitomoaki/articles/edbfb63b54a966"
+    },
+    {
+      "title": "大規模言語モデルを自作しよう！(Transformers+flash_attn2）",
+      "url": "https://zenn.dev/selllous/articles/transformers_pretrain_to_ft"
+    }
+  ],
+  "retrieval-augmented-generation": [
+    {
+      "title": "【16日目】RAG（検索拡張生成）入門 〜 Embeddings と Vector Search で “本当に使える生成AI” を作る 〜",
+      "url": "https://zenn.dev/churadata/articles/7e63f43f44ecaf"
+    },
+    {
+      "title": "re:Invent 2025: Agentic RAGによる高度な検索拡張生成システムの実装手法",
+      "url": "https://zenn.dev/kiiwami/articles/40a097f0a7fba382"
+    },
+    {
+      "title": "ブラウザだけで動く簡易RAG（検索拡張生成）を作ってみた IndexedDB + ベクトル検索",
+      "url": "https://zenn.dev/shinkai_m/articles/93a71ed8ea15ea"
+    },
+    {
+      "title": "RAG入門 — 検索拡張生成の基礎知識を実験結果とともに学ぶ",
+      "url": "https://zenn.dev/yoshihiko555/articles/b98df06d6ffcbe"
+    }
+  ],
+  "fine-tuning": [
+    {
+      "title": "Qwenが閉じ始めたのでGemma 4を選んだ——GPUなしPCでローカルLLMをファインチューニング",
+      "url": "https://zenn.dev/helloworld/articles/074671b77f030c"
+    },
+    {
+      "title": "LLMのファインチューニングで事実の学習ができないのは本当か？ちょっと実験してみた",
+      "url": "https://zenn.dev/ohtaman/articles/llm_finetune_lora"
+    },
+    {
+      "title": "子供でもわかる！蒸留・転移学習・ファインチューニングの違い",
+      "url": "https://zenn.dev/acntechjp/articles/be5bc8fbccafe2"
+    },
+    {
+      "title": "小さいローカル LLM をファインチューニングしてタスクに特化させ、Unity で利用する",
+      "url": "https://zenn.dev/meson_tech_blog/articles/fine-tuning-local-llm"
+    }
+  ],
+  "neural-network": [
+    {
+      "title": "シンプルな物理知ニューラルネットワーク (PINN: Physics-Informed Neural Network)",
+      "url": "https://zenn.dev/tatsukikodama/articles/ca050afe41058b"
+    },
+    {
+      "title": "グラフニューラルネットワーク(GNN)徹底解説！用途と仕組みからPyGでの実装まで",
+      "url": "https://zenn.dev/dena/articles/83c2daff760f5d"
+    },
+    {
+      "title": "fastai, WandB によるDANN (Domain Adversarial Neural Networks) の学習とメトリック監視",
+      "url": "https://zenn.dev/dainakai/articles/5590c68649d360"
+    },
+    {
+      "title": "グラフニューラルネットワーク(GNN)の基礎から多層化を阻む「オーバースムージング」への対策を解説",
+      "url": "https://zenn.dev/dalab/articles/80ce9a10d507b8"
+    }
+  ],
+  "corpus": [
+    {
+      "title": "LLM 向け日本語データセット(コーパス)の整備メモ",
+      "url": "https://zenn.dev/syoyo/articles/ef8dd798c7c619"
+    },
+    {
+      "title": "特化型llm(Doujinshi-1.8b)の開発報告書③:特定のドメインに特化したsft用データセット(コーパス)の作成",
+      "url": "https://zenn.dev/puwa/articles/doujinshi_development_report_3"
+    },
+    {
+      "title": "特化型llm(Doujinshi-1.8b)の開発報告書②:特定のドメインに特化した事前学習用データセット(コーパス)の作成",
+      "url": "https://zenn.dev/puwa/articles/doujinshi_development_report_2"
+    },
+    {
+      "title": "LLM 日本語データセット(コーパス)構築向け: C++ Exact dedup at scale(Suffix Array 構築編)",
+      "url": "https://zenn.dev/syoyo/articles/9b397158084dde"
+    }
+  ],
+  "recurrent-neural-network": [
+    {
+      "title": "Deep Learning資格試験 深層学習 RNN 代表的なモデル",
+      "url": "https://zenn.dev/takasaki/articles/3133c8a57735f7"
+    },
+    {
+      "title": "【深層学習】なぜRNNではダメなのか？LSTMの仕組みを解説",
+      "url": "https://zenn.dev/colorfulwave/articles/a2e5612198f011"
+    },
+    {
+      "title": "RNNでTransformer並みの性能を実現するRWKVがやばい",
+      "url": "https://zenn.dev/hikettei/articles/5d6c1318998411"
+    },
+    {
+      "title": "中学生でもわかる機械学習の基礎【第6回】～時間を記憶するニューラルネットワーク～RNNの世界へ～",
+      "url": "https://zenn.dev/madaozaku/articles/9a7abf97af341e"
+    }
+  ],
+  "nlp": [
+    {
+      "title": "自然言語処理（NLP）技術を用いた感情分析の実装",
+      "url": "https://zenn.dev/bonsai_engineer/articles/409678cf22382a"
+    },
+    {
+      "title": "自然言語処理の深層学習においてshortcut learningを減らすには",
+      "url": "https://zenn.dev/ty_nlp/articles/27d55b2d94daf3"
+    },
+    {
+      "title": "自然言語処理におけるデータ拡張手法",
+      "url": "https://zenn.dev/ty_nlp/articles/e999e85987f622"
+    },
+    {
+      "title": "自然言語処理で分類問題をやってみた",
+      "url": "https://zenn.dev/megane_otoko/articles/031_nlp_classify"
+    }
+  ],
+  "deep-learning": [
+    {
+      "title": "Deep Learning資格試験 深層学習 畳み込みニューラルネットワーク",
+      "url": "https://zenn.dev/takasaki/articles/f7c99060d621a7"
+    },
+    {
+      "title": "Deep Learning資格試験 深層学習 再帰的ニューラルネットワーク",
+      "url": "https://zenn.dev/takasaki/articles/ce60ffcd6f736a"
+    },
+    {
+      "title": "Deep Learning資格試験 深層学習 最適化・高速化・軽量化",
+      "url": "https://zenn.dev/takasaki/articles/ae05efaa7d6915"
+    },
+    {
+      "title": "Deep Learning資格試験 深層学習 順伝播ネットワーク",
+      "url": "https://zenn.dev/takasaki/articles/593243bf9345ed"
+    }
+  ],
+  "attention": [
+    {
+      "title": "深層学習の新たな扉を開く！注意機構（Attention Mechanism）入門記事のご紹介",
+      "url": "https://zenn.dev/omomuki/articles/e9647644d5dd8f"
+    },
+    {
+      "title": "Attention再入門 is all you need",
+      "url": "https://zenn.dev/mkj/articles/re-entry-attention_20251209"
+    },
+    {
+      "title": "Transformerアーキテクチャの変遷 ~Attention is All You Needからgpt-ossまで~",
+      "url": "https://zenn.dev/sakaitomoaki/articles/edbfb63b54a966"
+    },
+    {
+      "title": "生成AIの技術基盤を学ぶ：TransformerとSelf-Attention解説",
+      "url": "https://zenn.dev/takeojapan/articles/2035acf3cfc112"
+    }
+  ],
+  "gpu": [
+    {
+      "title": "鉄腕アトムからGPU（Graphics Processing Unit）のつながりを考えてみる",
+      "url": "https://zenn.dev/maskedridersys/articles/c9d029e16d36d4"
+    },
+    {
+      "title": "WSL2+Ubuntu24.04+Docker＋GPUでつくる機械学習環境",
+      "url": "https://zenn.dev/yumizz/articles/627d4e4821c636"
+    },
+    {
+      "title": "Qwenが閉じ始めたのでGemma 4を選んだ——GPUなしPCでローカルLLMをファインチューニング",
+      "url": "https://zenn.dev/helloworld/articles/074671b77f030c"
+    },
+    {
+      "title": "GPUなしローカルでも高速・高精度なOCRができるOnnxOCRが凄い",
+      "url": "https://zenn.dev/harumikun/articles/fb9c435acf4070"
+    }
+  ],
+  "cuda": [
+    {
+      "title": "[2025.09.20更新] UbuntuにNVIDIA DriverとCUDA, Dockerをインストールして機械学習サーバを構築する",
+      "url": "https://zenn.dev/mjun0812/articles/3694944ed3a588"
+    },
+    {
+      "title": "LLMのCUDAカーネルを自作しよう!",
+      "url": "https://zenn.dev/selllous/articles/diy_llm_kernel"
+    },
+    {
+      "title": "WSL2上にNVIDIA Container ToolkitをインストールしてDockerコンテナ内でCUDAを使用できるようにする",
+      "url": "https://zenn.dev/holliy/articles/e1ac7f2f806c35"
+    },
+    {
+      "title": "CUDA Programming Guide Part 1",
+      "url": "https://zenn.dev/kaz20/articles/1e622ef249d133"
+    }
+  ],
+  "pytorch": [
+    {
+      "title": "Python(PyTorch)で自作して理解するTransformer",
+      "url": "https://zenn.dev/yukiyada/articles/59f3b820c52571"
+    },
+    {
+      "title": "機械学習で手の形を識別しよう！（AI, Python, mediapipe, Pytorch）",
+      "url": "https://zenn.dev/tanileo/articles/b31725e353a70c"
+    },
+    {
+      "title": "WindowsにPython+CUDA+PyTorch+TransformersでLLM実行環境を構築したら色々大変だった",
+      "url": "https://zenn.dev/kumachii/articles/851bbd08703651"
+    },
+    {
+      "title": "PytorchによるLLMの高速化",
+      "url": "https://zenn.dev/umeko/articles/fe961fda3148d1"
+    }
+  ],
+  "hallucination": [
+    {
+      "title": "LLMのハルシネーションをリアルタイムで検出する？Hallucination Probesを動かしてみた",
+      "url": "https://zenn.dev/50s_zerotohero/articles/2b85e9a3668a7b"
+    },
+    {
+      "title": "正確性評価がLLMのハルシネーションを招く：Nature掲載論文が暴くインセンティブ構造",
+      "url": "https://zenn.dev/lixian/articles/llm-hallucination-incentive-nature"
+    },
+    {
+      "title": "LLMのハルシネーションを構造的に防ぐプロンプト設計（コードレビューでの実践）",
+      "url": "https://zenn.dev/fukukei23/articles/ai-code-review-prompt-hallucination"
+    },
+    {
+      "title": "LLMのハルシネーションを貼る前に減らす、3段階セルフチェックの運用",
+      "url": "https://zenn.dev/every_ai_recipe/articles/ai-hallucination-check-3-questions"
+    }
+  ],
+  "token": [
+    {
+      "title": "Snowflake Cortex Codeのコストを把握する ― TOKENS_GRANULARで見るトークン消費の実態",
+      "url": "https://zenn.dev/churadata/articles/12455f0b49c778"
+    },
+    {
+      "title": "actions/create-github-app-token を利用してカレントリポジトリ以外を操作可能なトークンを生成する",
+      "url": "https://zenn.dev/naotama/articles/using-github-app-token-for-other-repository"
+    },
+    {
+      "title": "GitHub Appsトークン解体新書：GitHub ActionsからPATを駆逐する技術",
+      "url": "https://zenn.dev/tmknom/articles/github-apps-token"
+    },
+    {
+      "title": "Claude Codeでトークン制限に悩む開発者のための実践ガイド - MCPツール導入からスペック駆動開発まで",
+      "url": "https://zenn.dev/okamyuji/articles/claude-code-token-limit-survival-guide"
+    }
+  ],
+  "convolutional-neural-network": [
+    {
+      "title": "CNN（畳み込みニューラルネットワーク）",
+      "url": "https://zenn.dev/minoda_kohei/articles/e1f288deb41307"
+    },
+    {
+      "title": "深層学習・生成AIの全体像を「3つの問い」で整理する｜CNNから拡散モデル・Mambaまで",
+      "url": "https://zenn.dev/manato_boys/articles/ecf3811c5e529a"
+    },
+    {
+      "title": "Deep Learning資格試験 深層学習 畳み込みニューラルネットワーク",
+      "url": "https://zenn.dev/takasaki/articles/f7c99060d621a7"
+    },
+    {
+      "title": "Deep Learning資格試験 深層学習 CNN 代表的なモデル",
+      "url": "https://zenn.dev/takasaki/articles/d5743f1de5d7d0"
+    }
+  ],
+  "long-short-term-memory": [
+    {
+      "title": "入門: Long Short-Term Memory（LSTM）ネットワーク",
+      "url": "https://zenn.dev/fuwamoekissaten/articles/473ecb88a094e6"
+    },
+    {
+      "title": "【深層学習】なぜRNNではダメなのか？LSTMの仕組みを解説",
+      "url": "https://zenn.dev/colorfulwave/articles/a2e5612198f011"
+    },
+    {
+      "title": "AIトレーダー開発ログ #1: LightGBM + LSTMアンサンブルで金融時系列予測は安定するのか？",
+      "url": "https://zenn.dev/sigma_lab/articles/qros-research-devlog-01-ensemble-20260509"
+    },
+    {
+      "title": "AIトレーダー開発ログ #1: LightGBM + LSTMアンサンブルで金融時系列予測は安定するのか？",
+      "url": "https://zenn.dev/sigma_lab/articles/aitrader-devlog-01-ensemble-20260305"
+    }
+  ],
+  "lora": [
+    {
+      "title": "LoRA（Low-Rank Adaptation）の理論と実践：効率的な大規模言語モデルのファインチューニング手法",
+      "url": "https://zenn.dev/takuh/articles/07eca3ef2450f5"
+    },
+    {
+      "title": "Gemma2 2Bをファインチューニング（QLoRA）でキャラクター化（ずんだもん、つくよみちゃん）",
+      "url": "https://zenn.dev/yumefuku/articles/llm-finetuning-qlora"
+    },
+    {
+      "title": "Phi-4 QLoRAファインチューニングプロジェクト：「的確性」を軸としたLLM評価手法の検討",
+      "url": "https://zenn.dev/mo_hu_p/articles/218fbec51be323"
+    },
+    {
+      "title": "LoRA・QLoRA完全マニュアル ─ 2026年のLLMファインチューニング実装ガイド",
+      "url": "https://zenn.dev/ai_nexus/articles/lora-qlora-finetuning-guide"
+    }
+  ],
+  "bert": [
+    {
+      "title": "KaggleのNLPコンペで初手に使える可視化 〜BERTopicを用いた文書クラスタリングと可視化〜",
+      "url": "https://zenn.dev/nishimoto/articles/74fddcb5c67960"
+    },
+    {
+      "title": "（Style-)Bert-VITS2 JP-Extra (日本語特化版)について",
+      "url": "https://zenn.dev/litagin/articles/034819a5256ff4"
+    },
+    {
+      "title": "SudachiをつかったBERTの事前学習モデルの構築をしてみようとおもったら（いまやってる途中）",
+      "url": "https://zenn.dev/murakamixi/articles/2064967364fc81"
+    },
+    {
+      "title": "【LLM for NewsRec】大規模言語モデル(BERT)を活用したニュース推薦のPyTorchによる実装と評価",
+      "url": "https://zenn.dev/yukiyada/articles/d028faf7217ec8"
+    }
+  ],
+  "transfer-learning": [
+    {
+      "title": "機械学習における転移学習の効果",
+      "url": "https://zenn.dev/kbaur/articles/7c405c1996a153"
+    },
+    {
+      "title": "LEIA: 言語間転移学習でLLMを賢くする新しい方法",
+      "url": "https://zenn.dev/ikuyamada/articles/179080fd4f48ea"
+    },
+    {
+      "title": "TensorflowのResNet50の事前学習モデルをU-Netに転移学習させる方法",
+      "url": "https://zenn.dev/derbuihan/articles/cc23e8d3be1570"
+    },
+    {
+      "title": "子供でもわかる！蒸留・転移学習・ファインチューニングの違い",
+      "url": "https://zenn.dev/acntechjp/articles/be5bc8fbccafe2"
+    }
+  ],
+  "small-language-model": [
+    {
+      "title": "小規模言語モデル（SLM）の紹介",
+      "url": "https://zenn.dev/eques/articles/9cce5fae1d54a7"
+    },
+    {
+      "title": "現実的な言語モデル(LLM/SLM)軽量化アプローチ   (Pruning編)",
+      "url": "https://zenn.dev/headwaters/articles/0ed1739f6de61c"
+    },
+    {
+      "title": "フィジカルAI・SLM・エッジAI：2026年に押さえるべき次世代AI技術トレンド3選",
+      "url": "https://zenn.dev/preferred/articles/physical-ai-robotics-slm-2026"
+    },
+    {
+      "title": "LiLM 小規模言語モデル TinyLlama 1.1B の日本語追加事前学習(incremental pretrain) を試したメモ",
+      "url": "https://zenn.dev/syoyo/articles/52f1d0d62fcad5"
+    }
+  ],
+  "context-window": [
+    {
+      "title": "RTX 5090環境におけるAITuber開発ログ：vLLMからllama.cppへの移行とContext Window最適化の検証",
+      "url": "https://zenn.dev/toki_mwc/articles/183c91a1e365d2"
+    },
+    {
+      "title": "Claude Codeで100万トークンのコンテキストウィンドウを使おう",
+      "url": "https://zenn.dev/shirochan/articles/8d45ac8cfa6224"
+    },
+    {
+      "title": "生成AIサービスをコンテキストウィンドウ（記憶力）から比較する",
+      "url": "https://zenn.dev/chameleonmeme/articles/989ccef3027419"
+    },
+    {
+      "title": "うさぎでもわかる！2025年後半に来る？Claudeの次世代100万トークン超えコンテキストウィンドウ予測",
+      "url": "https://zenn.dev/taku_sid/articles/20250415_claude_context"
+    }
+  ],
+  "embedding": [
+    {
+      "title": "「ベクトル表現」「埋め込み表現」「埋め込みベクトル」を簡単に整理してみる",
+      "url": "https://zenn.dev/takagi_tech/articles/ai-dl-vector-embedding"
+    },
+    {
+      "title": "埋め込みモデル2026総点検：Qwen3-Embedding＋Matryoshkaで日本語RAGのコストと精度を両取りする",
+      "url": "https://zenn.dev/libercraft/articles/20260709-embedding-models-2026-matryoshka"
+    },
+    {
+      "title": "OpenAIのCLIPによる画像埋め込みベクトル生成で画像類似度を求めてみる",
+      "url": "https://zenn.dev/headwaters/articles/699d81c0004aa7"
+    },
+    {
+      "title": "多言語BERT埋め込みモデルのサポート - NLContextualEmbedding",
+      "url": "https://zenn.dev/shu223/articles/multilingual_bert"
+    }
+  ],
+  "prompt": [
+    {
+      "title": "【Prompt Engineering Guide】で体系的に学ぶ　LLMプロンプトエンジニアリング①",
+      "url": "https://zenn.dev/akitek/articles/36b8bf5ba4af4b"
+    },
+    {
+      "title": "【Prompt Engineering Guide】で体系的に学ぶ　LLMプロンプトエンジニアリング②",
+      "url": "https://zenn.dev/akitek/articles/37dde9668ebfe8"
+    },
+    {
+      "title": "【Prompt Engineering Guide】で体系的に学ぶ　LLMプロンプトエンジニアリング③",
+      "url": "https://zenn.dev/akitek/articles/57a5994fa9455b"
+    },
+    {
+      "title": "OpenAIのPrompt Engineering Guideでより良い結果を得るプロンプトエンジニアリングを学ぶ",
+      "url": "https://zenn.dev/zuma_lab/articles/openai-prompt-engineering-guide"
+    }
+  ],
+  "prompt-engineering": [
+    {
+      "title": "【Prompt Engineering Guide】で体系的に学ぶ　LLMプロンプトエンジニアリング①",
+      "url": "https://zenn.dev/akitek/articles/36b8bf5ba4af4b"
+    },
+    {
+      "title": "【Prompt Engineering Guide】で体系的に学ぶ　LLMプロンプトエンジニアリング②",
+      "url": "https://zenn.dev/akitek/articles/37dde9668ebfe8"
+    },
+    {
+      "title": "【Prompt Engineering Guide】で体系的に学ぶ　LLMプロンプトエンジニアリング③",
+      "url": "https://zenn.dev/akitek/articles/57a5994fa9455b"
+    },
+    {
+      "title": "OpenAIのPrompt Engineering Guideでより良い結果を得るプロンプトエンジニアリングを学ぶ",
+      "url": "https://zenn.dev/zuma_lab/articles/openai-prompt-engineering-guide"
+    }
+  ],
+  "system-prompt": [
+    {
+      "title": "システムプロンプトって漏れるの？LLM07 System Prompt Leakageを初心者向けに解説",
+      "url": "https://zenn.dev/mapellion/articles/b1e06117b5b7bf"
+    },
+    {
+      "title": "エージェント開発の参考に！GitHub Copilotのシステムプロンプトを見てみよう",
+      "url": "https://zenn.dev/microsoft/articles/github-copilot-prompts"
+    },
+    {
+      "title": "Claude のシステムプロンプトを裸の LLM や他社モデルに読ませた 6 モデル対照実験ログ",
+      "url": "https://zenn.dev/orangewk/articles/claude-system-prompt-cross-model-logs"
+    },
+    {
+      "title": "システムプロンプト3万トークンのLLMに作業をさせてはいけない",
+      "url": "https://zenn.dev/echosphere/articles/dont-make-heavy-prompt-llm-work"
+    }
+  ],
+  "chain-of-thought": [
+    {
+      "title": "【最先端プロンプトエンジニアリング】LLM推論精度を爆上げするStrategic Chain-of-Thought とは？【CoTを超えろ】",
+      "url": "https://zenn.dev/chips0711/articles/d32bf746a6948e"
+    },
+    {
+      "title": "Deepseekで話題になっているCoT（Chain-of-Thought）データセットについて解説、入手先・LLMへの役割とは？",
+      "url": "https://zenn.dev/nexdataai/articles/f9afaf8486e277"
+    },
+    {
+      "title": "CoT(Chain-of-Thought) プロンプティングをやってみた",
+      "url": "https://zenn.dev/headwaters/articles/ad6dadfdec4ecf"
+    },
+    {
+      "title": "Abstract-CoT：言葉を使わず思考するLLM推論の効率化",
+      "url": "https://zenn.dev/lixian/articles/abstract-cot-latent-reasoning"
+    }
+  ],
+  "reasoning-model": [
+    {
+      "title": "推論モデルのコスト最適化をdiffで追跡する — llm-devproxy v0.4",
+      "url": "https://zenn.dev/ash4/articles/8973f300141afb"
+    },
+    {
+      "title": "[LLM] Reasoning Model でのユーザー体験を向上させるためにReasoning summaryを使う話",
+      "url": "https://zenn.dev/elements/articles/fc2430c96592f4"
+    },
+    {
+      "title": "2025年AI戦国群雄伝 ~推論モデルの台頭と覇権争いを月別に振り返る~",
+      "url": "https://zenn.dev/su8/articles/74a47b388ea6a1"
+    },
+    {
+      "title": "ELYZA-Thinking-1.0: MCTS を用いた推論パス探索と模倣学習による Reasoning Model の開発",
+      "url": "https://zenn.dev/elyza/articles/bc68f53fc0a83b"
+    }
+  ],
+  "temperature": [
+    {
+      "title": "【LLM基礎#3】出力の揺らぎを操る：Temperature / Top-p / Top-k / 反復ペナルティの検証",
+      "url": "https://zenn.dev/enegori6160/articles/b20a8f8c772830"
+    },
+    {
+      "title": "【LLM】MLXの基本的なコードまとめ(lora,seed,Temperature設定など)",
+      "url": "https://zenn.dev/michy/articles/d32d57d4bb1dec"
+    },
+    {
+      "title": "LLMのアウトプットの温度感を調整する Temperature、TopK、TopPについて",
+      "url": "https://zenn.dev/kouch/articles/10dfc6e9da1ddb"
+    },
+    {
+      "title": "【LLM】タスク分割とTemperature調整で出力を改善する",
+      "url": "https://zenn.dev/fivot/articles/fec94dcb2fb6a7"
+    }
+  ],
+  "top-p": [
+    {
+      "title": "【LLM基礎#3】出力の揺らぎを操る：Temperature / Top-p / Top-k / 反復ペナルティの検証",
+      "url": "https://zenn.dev/enegori6160/articles/b20a8f8c772830"
+    },
+    {
+      "title": "【自作LLMをまた少し改良】文章に多様性が無い問題を解決！Nucleus Samplingで10%→100%へ【SNN-LLM v3】",
+      "url": "https://zenn.dev/cell_activation/articles/ba91857537226f"
+    },
+    {
+      "title": "テキスト生成における decoding テクニック: Greedy search, Beam search, Top-K, Top-p",
+      "url": "https://zenn.dev/hellorusk/articles/1c0bef15057b1d"
+    },
+    {
+      "title": "xdg-desktop-portal とは？ (HyprPanelが起動しない)",
+      "url": "https://zenn.dev/okome_oisi/articles/5c12b85a8ba138"
+    }
+  ],
+  "top-k": [
+    {
+      "title": "【LLM基礎#3】出力の揺らぎを操る：Temperature / Top-p / Top-k / 反復ペナルティの検証",
+      "url": "https://zenn.dev/enegori6160/articles/b20a8f8c772830"
+    },
+    {
+      "title": "テキスト生成における decoding テクニック: Greedy search, Beam search, Top-K, Top-p",
+      "url": "https://zenn.dev/hellorusk/articles/1c0bef15057b1d"
+    },
+    {
+      "title": "RAGの精度はRerankで決まる｜top-k検索のその後を評価で検証する",
+      "url": "https://zenn.dev/startspace/articles/c597ec99a9f4ef"
+    },
+    {
+      "title": "画像分類モデルの性能評価の計算(top-k accuracy)",
+      "url": "https://zenn.dev/nnabeyang/articles/8b643ca99ddab2a568e0"
+    }
+  ],
+  "seed": [
+    {
+      "title": "筋トレのお手本動画をLLMで生成したい -Sora, Veo, Kling, Seedance, Wan を比べてみた-",
+      "url": "https://zenn.dev/tomo25/articles/167fec10e30d6c"
+    },
+    {
+      "title": "【LLM】MLXの基本的なコードまとめ(lora,seed,Temperature設定など)",
+      "url": "https://zenn.dev/michy/articles/d32d57d4bb1dec"
+    },
+    {
+      "title": "【Rails】Seedsデータの具体的な書き方",
+      "url": "https://zenn.dev/ganmo3/articles/820f5b7da27cce"
+    },
+    {
+      "title": "Playwright Test Agentsのseed.spec.tsって結局何なの？",
+      "url": "https://zenn.dev/kenfdev/articles/b192d2660b1722"
+    }
+  ],
+  "alignment": [
+    {
+      "title": "うさぎでもわかるAIアライメントのいろは",
+      "url": "https://zenn.dev/taku_sid/articles/20250413_ai_alignment"
+    },
+    {
+      "title": "選好ベースのアライメント／評価（LLM-as-a-judge）と物語アライメントに関する最新動向：サーベイ",
+      "url": "https://zenn.dev/headwaters/articles/4ec70e80a5c477"
+    },
+    {
+      "title": "阿頼耶識システム v3.0：単体LLMの決定論的整合性制御と減算的アライメント（Phase 1）",
+      "url": "https://zenn.dev/dosanko_tousan/articles/374389c9743a67"
+    },
+    {
+      "title": "論文\"Alignment Revisited\"：エージェントの安全性について",
+      "url": "https://zenn.dev/r_k/articles/0ce36e2e80a28b"
+    }
+  ],
+  "rlhf": [
+    {
+      "title": "LLMを強化学習: 進化が早すぎる！RLHFライブラリtrlの変わること変わらないこと",
+      "url": "https://zenn.dev/mitsukisakamoto/articles/0c97e7f723cbb7"
+    },
+    {
+      "title": "LLM 事後学習 (SFT / RLHF / DPO / RLVR / GRPO / 自己蒸留) を教師信号から眺める",
+      "url": "https://zenn.dev/shunk031/articles/llm-post-training-overview"
+    },
+    {
+      "title": "【全5回】強化学習の実践的設計——DQNの基礎からRLHFによるLLMチューニングまで",
+      "url": "https://zenn.dev/salt2/articles/rl-rlhf-salt-2"
+    },
+    {
+      "title": "【検証】RLHFの限界を突破する「引き算のアライメント」：初期仏教論理(Abhidhamma)を実装した自律推論エンジンの開発記録",
+      "url": "https://zenn.dev/dosanko_tousan/articles/0bef2b2d6355a8"
+    }
+  ],
+  "knowledge-distillation": [
+    {
+      "title": "クローズドLLM (GPT, Gemini, Claude, etc.)からの知識蒸留 [論文より]",
+      "url": "https://zenn.dev/barukan300/articles/c2a476488d912a"
+    },
+    {
+      "title": "知識蒸留とファインチューニング完全ガイド",
+      "url": "https://zenn.dev/givery_ai_lab/articles/014f8ca028159e"
+    },
+    {
+      "title": "[論文要約] DeiT: 知識蒸留による効率的なViTの学習手法",
+      "url": "https://zenn.dev/bilzard/articles/9945f4d7253217"
+    },
+    {
+      "title": "論文メモ：知識蒸留で実画像ノイズ除去をモバイルNPU向けに高速化する",
+      "url": "https://zenn.dev/kas_blog/articles/20260508-mobile-npu-denoising-kd"
+    }
+  ],
+  "quantization": [
+    {
+      "title": "LLMの重みの量子化でパフォーマンスが改善する仕組みについて",
+      "url": "https://zenn.dev/bilzard/articles/how-performance-improved-by-weight-quantization"
+    },
+    {
+      "title": "うさぎでもわかるLLM量子化手法完全ガイド: q4_K_Mの謎を解く",
+      "url": "https://zenn.dev/taku_sid/articles/20250415_llm_quantization"
+    },
+    {
+      "title": "AWS NeuronでLLMをINT8量子化してメモリ削減＋高速化する手順",
+      "url": "https://zenn.dev/exwzd/articles/20260327_neuron_quantization"
+    },
+    {
+      "title": "huggingfaceのモデルをlangchainで使う ＋ 量子化とストップワード（停止文字列）の設定",
+      "url": "https://zenn.dev/yumefuku/articles/huggingface-quantization-stop"
+    }
+  ],
+  "mixture-of-experts": [
+    {
+      "title": "DeepSeek MoE (Mixture of Experts) の解説",
+      "url": "https://zenn.dev/oroshi/articles/deepseek-moe"
+    },
+    {
+      "title": "学習済みの LLM を束ねて Mixture of Experts を作るテク",
+      "url": "https://zenn.dev/zaburo_ch/articles/88e35e5c80f974"
+    },
+    {
+      "title": "RTX3060でMoE付きTransformerの事前学習をしてみる",
+      "url": "https://zenn.dev/asap/articles/d3bada2f005330"
+    },
+    {
+      "title": "M5 Max のローカル LLM ベンチ — MoE は GPU 性能、Dense はメモリ帯域幅がボトルネック、発熱の影響も調査",
+      "url": "https://zenn.dev/kamo78/articles/ds4-m5max-benchmark"
+    }
+  ],
+  "kv-cache": [
+    {
+      "title": "MLエンジニアのための本質から理解するLLM推論 KV cache編",
+      "url": "https://zenn.dev/kaz20/articles/c77f8a41cf2bf5"
+    },
+    {
+      "title": "コンテキストエンジニアリングをKVキャッシュから理解する(Claude Codeユーザ～vLLMサーバ視点)",
+      "url": "https://zenn.dev/katalab/articles/39c313b89e6518"
+    },
+    {
+      "title": "TriAttention: 三角関数でKVキャッシュを10.7倍圧縮する長距離推論の効率化",
+      "url": "https://zenn.dev/lixian/articles/triattention-kv-compression"
+    },
+    {
+      "title": "[翻訳] XQuant: KVキャッシュの再計算によりLLM推論のメモリウォールを打破する",
+      "url": "https://zenn.dev/tosshi/articles/58f2d29c38a77e"
+    }
+  ],
+  "vector-database": [
+    {
+      "title": "【生成AIアプリのためのベクトル検索】① プロローグ（ベクトルデータベースとしてのApache Cassandra)",
+      "url": "https://zenn.dev/yoshiyuki_kono/articles/b1299dfed31b40"
+    },
+    {
+      "title": "開発者のためのRAGシステムとベクトルデータベース実装ガイド(後編)",
+      "url": "https://zenn.dev/acntechjp/articles/aa5f8e17e5af11"
+    },
+    {
+      "title": "re:Invent 2025: OpenSearchの検索・可観測性・ベクトルデータベース最新機能とGPUアクセラレーション",
+      "url": "https://zenn.dev/kiiwami/articles/b30ab7ccce559385"
+    },
+    {
+      "title": "開発者のためのRAGシステムとベクトルデータベース実装ガイド(前編)",
+      "url": "https://zenn.dev/acntechjp/articles/49e089375d9195"
+    }
+  ],
+  "embedding-model": [
+    {
+      "title": "RAGで文書検索の精度を上げるには、複数の埋め込みモデルを使う",
+      "url": "https://zenn.dev/knowledgesense/articles/653229e5c37f4e"
+    },
+    {
+      "title": "Ruri: 日本語に特化した汎用テキスト埋め込みモデル",
+      "url": "https://zenn.dev/hpp/articles/b5132c64c40d24"
+    },
+    {
+      "title": "埋め込みモデル2026総点検：Qwen3-Embedding＋Matryoshkaで日本語RAGのコストと精度を両取りする",
+      "url": "https://zenn.dev/libercraft/articles/20260709-embedding-models-2026-matryoshka"
+    },
+    {
+      "title": "Mosaic AI Model Serving で 多様な日本語LLMと埋め込みモデルをサービングするためのガイド (2/3)",
+      "url": "https://zenn.dev/hiouchiy/articles/ed501ffcf26667"
+    }
+  ],
+  "chunk": [
+    {
+      "title": "semantic chunkingが負けていた — RAGチャンク戦略を論文ベースで整理した",
+      "url": "https://zenn.dev/archfill/articles/rag-chunk-strategy-2026"
+    },
+    {
+      "title": "Viteで意外と知られていないSplitVendorChunkPluginでチャンク戦略を図る",
+      "url": "https://zenn.dev/toaru_fe/articles/5128fb6a6c21d2"
+    },
+    {
+      "title": "Contextual RetrievalとLate Chunking：チャンク文脈喪失問題の2解法を日本語文書で比較実装する",
+      "url": "https://zenn.dev/libercraft/articles/20260708-contextual-retrieval-late-chunking"
+    },
+    {
+      "title": "Document Parseの出力をRAG向けに賢くチャンクする設計手法と落とし穴",
+      "url": "https://zenn.dev/ytkdm/articles/upstage-dp-rag-chunking"
+    }
+  ],
+  "chunking": [
+    {
+      "title": "RAGの精度が73%から100%に向上した話 ─ チャンキング戦略の比較検証",
+      "url": "https://zenn.dev/oharu121/articles/efd3d038afc6da"
+    },
+    {
+      "title": "RAGの精度を上げる：チャンキングとハイブリッド検索をGoで実装した記録",
+      "url": "https://zenn.dev/tanakin36/articles/rag-chunking-hybrid-search"
+    },
+    {
+      "title": "RAGのチャンキング戦略を比較する：固定長・再帰分割・セマンティックの使い分け",
+      "url": "https://zenn.dev/libercraft/articles/20260511-rag-chunking-comparison"
+    },
+    {
+      "title": "RAGの検索精度を上げるチャンク分割を実装してみた！",
+      "url": "https://zenn.dev/tukiyubi/articles/a3360a39a546d4"
+    }
+  ],
+  "semantic-search": [
+    {
+      "title": "ローカルRAG環境 + 意味検索によるAI力の強化",
+      "url": "https://zenn.dev/nttdata_tech/articles/f1e291d7c0eea3"
+    },
+    {
+      "title": "ローカルで機密性高くRAGじゃないセマンティック検索",
+      "url": "https://zenn.dev/okadatk/articles/c36bf7a66832d5"
+    },
+    {
+      "title": "意味検索で『過去の自分』を引き出したら、AI が 6 ファイルこっそり無視していた話 ── C3 v2.10.0",
+      "url": "https://zenn.dev/satoh_y_0323/articles/b47f9bf20638be"
+    },
+    {
+      "title": "RAGシステム導入前に、全文検索 / セマンティック検索 / ハイブリット検索を整理してみた",
+      "url": "https://zenn.dev/shuto2828/articles/5090433d38e42c"
+    }
+  ],
+  "hybrid-search": [
+    {
+      "title": "LLMによるナレッジグラフの作成とハイブリッド検索 + RAG",
+      "url": "https://zenn.dev/yumefuku/articles/llm-neo4j-hybrid"
+    },
+    {
+      "title": "RAGの精度は検索戦略で決まる｜ハイブリッド検索が効く理由を検証する",
+      "url": "https://zenn.dev/startspace/articles/3f8775d70e2c9f"
+    },
+    {
+      "title": "RAGにおけるベクトル+BM25ハイブリッド検索の性能比較および評価指標の解説",
+      "url": "https://zenn.dev/digeon/articles/79c7cda54838e6"
+    },
+    {
+      "title": "Neo4jのRAGで全文検索＋ベクトル検索のハイブリッド検索しよう！でもベクトル検索のデメリットは消せないよ",
+      "url": "https://zenn.dev/yamada_quantum/articles/f7760ae32705e8"
+    }
+  ],
+  "bm25": [
+    {
+      "title": "現代版 TF-IDF である Okapi BM25 の原理について(前半)",
+      "url": "https://zenn.dev/wm3/articles/233dccc6e54dab"
+    },
+    {
+      "title": "現代版 TF-IDF である Okapi BM25 の原理について(後半)",
+      "url": "https://zenn.dev/wm3/articles/31dd38542861eb"
+    },
+    {
+      "title": "PostgreSQLだけで日本語全文検索を実現する - ParadeDBのBM25検索を実測で検証した",
+      "url": "https://zenn.dev/okamyuji/articles/paradedb-japanese-fulltext-search"
+    },
+    {
+      "title": "LangChain×BM25でMarkdown文書をキーワード検索する",
+      "url": "https://zenn.dev/serio/articles/400d678176ec56"
+    }
+  ],
+  "reranker": [
+    {
+      "title": "【RAG】CohereのRerankerをLangchainで試す",
+      "url": "https://zenn.dev/khisa/articles/4e1174cbcaae0d"
+    },
+    {
+      "title": "【RAG ベストプラクティス探索】Reranker用のモデル比較とコスト削減実験",
+      "url": "https://zenn.dev/elyza/articles/2642fd1b964fd2"
+    },
+    {
+      "title": "Dify のRAGバックエンドベクトルストアにTiDB Vector Search を設定する　その２ Cohere Reranker",
+      "url": "https://zenn.dev/kameoncloud/articles/7835a7f5c894ba"
+    },
+    {
+      "title": "単一GPUに、LLM・reranker・embeddingを同居させて運用している話",
+      "url": "https://zenn.dev/agata_corp/articles/828dd2af8d4389"
+    }
+  ],
+  "metadata-filter": [
+    {
+      "title": "エージェントが検索を制御する RAG | メタデータフィルタリングの活用",
+      "url": "https://zenn.dev/systemzeus_blog/articles/bedrock-kb-rag-effort"
+    },
+    {
+      "title": "Amazon S3 Vectorsでacl.jsonではなくmetadata filterを選んだ制限付きRAG試してみた",
+      "url": "https://zenn.dev/fusic/articles/b772000259b74d"
+    },
+    {
+      "title": "Dify (Cloud版) v1.9.2 「ナレッジパイプライン」経由で「メタデータフィルタ」機能を利用した際のバグ検証レポート",
+      "url": "https://zenn.dev/hone_jud/articles/ae1b7e2d3e6f34"
+    },
+    {
+      "title": "Bardのようなimage2textAIを構築して動画検索システムを作る",
+      "url": "https://zenn.dev/turing_motors/articles/ai-movie-searcher"
+    }
+  ],
+  "ai-agent": [
+    {
+      "title": "AIエージェントの決済履歴は「戦略ログ」になる ─ 誰が誰に払ったかを隠す private x402 \"SubEtha\"を作った",
+      "url": "https://zenn.dev/peaceandwhisky/articles/6f0b8b672a6f78"
+    },
+    {
+      "title": "ナレッジグラフだけじゃない。AIエージェントが使う5種類のグラフ",
+      "url": "https://zenn.dev/knowledge_graph/articles/ai-agent-five-graph-types"
+    },
+    {
+      "title": "AWS Summit Japan 2026現地報告：AIエージェントの成熟とPhysical AIの萌芽",
+      "url": "https://zenn.dev/exwzd/articles/20260701_aws_summit_builders_fair"
+    },
+    {
+      "title": "SigmaのAIエージェントに分析させて、そのままPPTXをダウンロードする仕組みを作った",
+      "url": "https://zenn.dev/truestar/articles/94682b422d1b19"
+    }
+  ],
+  "agentic-ai": [
+    {
+      "title": "Agentic AIについて非エンジニア向けにわかりやすくまとめてみた（前編）",
+      "url": "https://zenn.dev/nttdata_tech/articles/925b2510ccf517"
+    },
+    {
+      "title": "【第4回 Agentic AI Hackathon】「何切ればよかったの？」 ~ 対面麻雀で何切るに遭遇した時どうしてますか？~",
+      "url": "https://zenn.dev/kazuuuuuu/articles/886735f24d6151"
+    },
+    {
+      "title": "AWSのマネージドなエージェンティックAIOpsサービスを整理する（2026年4月時点）",
+      "url": "https://zenn.dev/sprix_it/articles/d4bd93d0b00523"
+    },
+    {
+      "title": "re:Invent 2025: SageMaker AIとBedrockでエージェンティックAIモデルをカスタマイズ",
+      "url": "https://zenn.dev/kiiwami/articles/52ca3ce730de63aa"
+    }
+  ],
+  "tool-calling": [
+    {
+      "title": "LLM の動き〜Tool Calling確認〜",
+      "url": "https://zenn.dev/yy7613/articles/ca3e6d730171e8"
+    },
+    {
+      "title": "AIエージェントに従量課金APIを払わせる: x402 v2 + JPYC でわかった LLM 並列ツール呼び出しの罠",
+      "url": "https://zenn.dev/k0yote/articles/16269f93375722"
+    },
+    {
+      "title": "無料Gemini と LiteLLM で Tool Calling を使いこなそう！～初心者向け徹底解説～",
+      "url": "https://zenn.dev/sunwood_ai_labs/articles/master-tool-calling-gemini-litelm-beginners"
+    },
+    {
+      "title": "FastMCP（Streamable HTTP）とLiteLLMで、ツール呼び出しする簡易対話アプリ作成",
+      "url": "https://zenn.dev/rakuichi/articles/92fc96be23cd1d"
+    }
+  ],
+  "function-calling": [
+    {
+      "title": "Azure OpenAI の Function Calling で並列関数呼び出しが出来るようになっていた",
+      "url": "https://zenn.dev/headwaters/articles/0f1de630d467f8"
+    },
+    {
+      "title": "Goで作るセキュリティ分析LLMエージェント(8): Function Callingによる外部ツール連携",
+      "url": "https://zenn.dev/mizutani/articles/sec-agent-08-function-calling"
+    },
+    {
+      "title": "Gemini API の Function Calling 機能で LLM Agent を実装する",
+      "url": "https://zenn.dev/google_cloud_jp/articles/3fa4da1eb63948"
+    },
+    {
+      "title": "MCP クライアントをゼロから作る ── Function Calling で LLM をツール使いにする方法",
+      "url": "https://zenn.dev/aki_think/articles/a99f9a028951d3"
+    }
+  ],
+  "mcp": [
+    {
+      "title": "Model Context Protocol（MCP）とは？生成 AI の可能性を広げる新しい標準",
+      "url": "https://zenn.dev/cloud_ace_jp/articles/model-context-protocol"
+    },
+    {
+      "title": "Model Context Protocol (MCP) サーバを使ってみた・作ってみた",
+      "url": "https://zenn.dev/karaage0703/articles/42f7b0655a6af8"
+    },
+    {
+      "title": "複数LLMに対応したスマートホームエージェントアプリをMCP（Model Context Protocol）に対応させた",
+      "url": "https://zenn.dev/bonzoyt/articles/2a19809ed7e920"
+    },
+    {
+      "title": "Model Context Protocol (MCP)入門：公式ドキュメントベースで牛歩のごとくゆっくり理解する 🐮",
+      "url": "https://zenn.dev/su8/articles/edc7ac5a8e0046"
+    }
+  ],
+  "a2a": [
+    {
+      "title": "Google発のAgent2Agent Protocol (A2A)とは？AIエージェント間の通信を標準化する新プロトコル",
+      "url": "https://zenn.dev/ytok/articles/92f18e14dbbe31"
+    },
+    {
+      "title": "#クロスプラットフォーム Agent-to-Agent (A2A) 協調フレームワークの構築",
+      "url": "https://zenn.dev/wangsh/articles/0e55be38918bf8"
+    },
+    {
+      "title": "Agent2Agent Protocol (A2A)発表",
+      "url": "https://zenn.dev/shirochan/articles/b36b430ac53d56"
+    },
+    {
+      "title": "Agent2Agent Protocol (A2A) - 概要",
+      "url": "https://zenn.dev/aoyamadev/articles/1b6a47a85626cb"
+    }
+  ],
+  "multi-agent": [
+    {
+      "title": "マルチエージェントシステムのアーキテクチャーを紐解く",
+      "url": "https://zenn.dev/google_cloud_jp/articles/5410925dc984b1"
+    },
+    {
+      "title": "マルチエージェントシステムの設計——複数のAIエージェントが協調する仕組み",
+      "url": "https://zenn.dev/shona_zenn/articles/ai-agent-multi-agent-collaboration"
+    },
+    {
+      "title": "A2A リモートエージェント対応のマルチエージェントシステム",
+      "url": "https://zenn.dev/google_cloud_jp/articles/d24a22a87a84f8"
+    },
+    {
+      "title": "Strands Agents でマルチエージェントシステムを組む方法4選",
+      "url": "https://zenn.dev/aws_japan/articles/8a0863b7dea242"
+    }
+  ],
+  "planner": [
+    {
+      "title": "Multi-Agent Orchestratorを使用したAI旅行プランナーの構築",
+      "url": "https://zenn.dev/sunwood_ai_labs/articles/ai-trip-planner-with-multi-agent-orchestrator"
+    },
+    {
+      "title": "Playwrightの新機能 使ってみた【プランナーエージェントについて】",
+      "url": "https://zenn.dev/skiyaki_dev/articles/084708f69f3f26"
+    },
+    {
+      "title": "（旧）[実践・自律型Agent] （2/10）計画（Planner詳細）",
+      "url": "https://zenn.dev/toshio/articles/e2569807fbd105"
+    },
+    {
+      "title": "（旧）[実践・自律型Agent] （8/10)-a Planner × Executor 連携テスト計画",
+      "url": "https://zenn.dev/toshio/articles/b40f4180818904"
+    }
+  ],
+  "executor": [
+    {
+      "title": "（旧）[実践・自律型Agent] （3/10）実行（Executor詳細）",
+      "url": "https://zenn.dev/toshio/articles/923a4093ef46d3"
+    },
+    {
+      "title": "Claude Code で複数タスクを並列実行する MoAI Parallel SPEC Executor",
+      "url": "https://zenn.dev/toshipon/articles/a87f3cbbaad3ea"
+    },
+    {
+      "title": "LLMの効率的な実行方法:ThreadPoolExecutorとasyncio.gather",
+      "url": "https://zenn.dev/sergicalsix/articles/895437035e4e82"
+    },
+    {
+      "title": "Command Executor MCP Server v0.1.0 リリース：事前承認コマンド実行の安全な橋渡し役",
+      "url": "https://zenn.dev/sunwood_ai_labs/articles/command-executor-mcp-server-v0-1-0-release"
+    }
+  ],
+  "agent-memory": [
+    {
+      "title": "[翻訳] エージェントメモリソリューションとしての OpenSearch: 永続メモリを使用したコンテキスト認識エージェントの構築",
+      "url": "https://zenn.dev/opensearch/articles/opensearch-agentic-memory-persistent-context"
+    },
+    {
+      "title": "SimpleMem: 効率重視のLLMエージェントメモリ",
+      "url": "https://zenn.dev/yasuhito/articles/simplemem-efficient-memory"
+    },
+    {
+      "title": "Claude Code×Codexの横断が捗るエージェントメモリを作った",
+      "url": "https://zenn.dev/thimo/articles/30e7e63baeb6b1"
+    },
+    {
+      "title": "「ベクトル検索だけ」では未来のスーパースターを発掘できない：TiDBで作るW杯選手RAG × AIエージェントメモリ",
+      "url": "https://zenn.dev/ptwo/articles/37f94f47423eba"
+    }
+  ],
+  "reflection": [
+    {
+      "title": "C++26リフレクションでつくる tuple と variant",
+      "url": "https://zenn.dev/yaito3014/articles/reflection-tuple-variant"
+    },
+    {
+      "title": "リフレクションは本当に遅い？大規模ループで試してみた速度検証レポート",
+      "url": "https://zenn.dev/exmedia/articles/reflection-overhead-test"
+    },
+    {
+      "title": "RFC 9107: BGP最適ルート・リフレクション (BGP ORR)",
+      "url": "https://zenn.dev/moatdrive/articles/rfc9107-bgp-optimal-route-reflection"
+    },
+    {
+      "title": "Go言語の変わった書き方に驚き！リフレクションでエラーをこっそり変換するas関数を解説します",
+      "url": "https://zenn.dev/exmedia/articles/go-reflection-trick"
+    }
+  ],
+  "workflow": [
+    {
+      "title": "複数のAIエージェント：LangGraphとLangChainを使用したマルチエージェントワークフローの作成",
+      "url": "https://zenn.dev/ippeisuzuki/articles/b9955ea2662dc5"
+    },
+    {
+      "title": "Mastraのマルチエージェントワークフローにおける条件分岐",
+      "url": "https://zenn.dev/serio/articles/0a7e227b9f536a"
+    },
+    {
+      "title": "Mastraでマルチエージェントワークフローを動かすまでの備忘録",
+      "url": "https://zenn.dev/serio/articles/655673a6b59f66"
+    },
+    {
+      "title": "Open WebUIをn8n AIエージェントワークフローに接続する方法",
+      "url": "https://zenn.dev/masato13/articles/77d14695fc2a61"
+    }
+  ],
+  "autonomous-agent": [
+    {
+      "title": "自律型エージェントの全体像",
+      "url": "https://zenn.dev/k_k_p/articles/autonomous-agent-overview"
+    },
+    {
+      "title": "Claude Agent SDK 入門：Python/TypeScriptで「自律型エージェント」を実装できるSDK",
+      "url": "https://zenn.dev/tmtk/articles/624b98c6a52f09"
+    },
+    {
+      "title": "Interactions API × Deep Research Agent 入門：Google が描く「自律型エージェント」の未来",
+      "url": "https://zenn.dev/google_cloud_jp/articles/4d04c72142b8f1"
+    },
+    {
+      "title": "自律型エージェントの実装 ~ ReAct パターン",
+      "url": "https://zenn.dev/aprender/articles/b8df512d8210eb"
+    }
+  ],
+  "inference": [
+    {
+      "title": "MLエンジニアのための本質から理解するLLM推論: LLM Inference Benchmarking",
+      "url": "https://zenn.dev/kaz20/articles/8034f0587633f3"
+    },
+    {
+      "title": "【19日目】Inference Tables 〜 LLM/MLモデルを“運用できる状態”にするための推論ログ基盤 〜",
+      "url": "https://zenn.dev/churadata/articles/cccec3572572f7"
+    },
+    {
+      "title": "Azure Machine Learning Inference HTTP Serverを使って推論スクリプトをローカルで実行する",
+      "url": "https://zenn.dev/microsoft/articles/5042c0b2f42176"
+    },
+    {
+      "title": "【MMAction2】inference_recognizerでリアルタイム推論がうまくいかない人のための実践ガイド",
+      "url": "https://zenn.dev/sre_holdings/articles/6c465fb784bbb2"
+    }
+  ],
+  "decoding": [
+    {
+      "title": "出力品質が下がらないLLM推論高速化手法「投機的デコーディング」",
+      "url": "https://zenn.dev/u_hyszk/articles/7bf9c6fc4dd154"
+    },
+    {
+      "title": "Hao AI Labの研究プロジェクト総まとめ：LLM推論高速化・並列デコーディング・長文脈AIの最前線",
+      "url": "https://zenn.dev/copperbean/articles/07137a62e6b8c5"
+    },
+    {
+      "title": "vLLMのSpeculative Decodingによる推論高速化を試す",
+      "url": "https://zenn.dev/aratako_lm/articles/efeadd6d1e0f4b"
+    },
+    {
+      "title": "decoding=\"async\" について詳しく調べてみる",
+      "url": "https://zenn.dev/ixkaito/articles/deep-dive-into-decoding"
+    }
+  ],
+  "speculative-decoding": [
+    {
+      "title": "出力品質が下がらないLLM推論高速化手法「投機的デコーディング」",
+      "url": "https://zenn.dev/u_hyszk/articles/7bf9c6fc4dd154"
+    },
+    {
+      "title": "投機的デコーディングはなぜ速いのか？トイモデルで検証する",
+      "url": "https://zenn.dev/tamref/articles/8f92a063126b43"
+    },
+    {
+      "title": "vLLMのSpeculative Decodingによる推論高速化を試す",
+      "url": "https://zenn.dev/aratako_lm/articles/efeadd6d1e0f4b"
+    },
+    {
+      "title": "投機的デコーディングによる推論高速化（Eagle3・DFlash・DSpark）",
+      "url": "https://zenn.dev/syurenuko/articles/b31d9d63035c9c"
+    }
+  ],
+  "beam-search": [
+    {
+      "title": "「最適解」を捨てたら、設計がスケールした話 ── 編成最適化とビームサーチ、そしてAIの使いどころ",
+      "url": "https://zenn.dev/tomo1015/articles/c1e40077a25863"
+    },
+    {
+      "title": "テキスト生成における decoding テクニック: Greedy search, Beam search, Top-K, Top-p",
+      "url": "https://zenn.dev/hellorusk/articles/1c0bef15057b1d"
+    },
+    {
+      "title": "視覚的に学ぶヒューリスティック最適化入門 —— 焼きなまし・ビームサーチ・遺伝的アルゴリズム",
+      "url": "https://zenn.dev/polarisai_blog/articles/5d02ee585be0b4"
+    },
+    {
+      "title": "ビームサーチの上位 N件を高速に取る手法について考えてみる",
+      "url": "https://zenn.dev/siman/articles/e94f63246f6cb3"
+    }
+  ],
+  "streaming": [
+    {
+      "title": "MSK × Glue Streaming ETL で実現するデータストリーミング",
+      "url": "https://zenn.dev/wakaka23/articles/b93fe9b55c8b2b"
+    },
+    {
+      "title": "Apple Vision Pro へOmniverseのSpatial Streamingからストリーミングする環境の構築手順",
+      "url": "https://zenn.dev/hololab/articles/3db2a9abe60ae4"
+    },
+    {
+      "title": "[OpenAI API] ストリーミングレスポンスの構造を理解してトークン数を取得する",
+      "url": "https://zenn.dev/tomodo_ysys/articles/openai-streaming-token-count"
+    },
+    {
+      "title": "Mastra Workflowでマルチエージェントの処理状況をストリーミングする実装例【Next.js】",
+      "url": "https://zenn.dev/meijin/articles/mastra-workflow-object-streaming-in-nextjs"
+    }
+  ],
+  "batch-inference": [
+    {
+      "title": "Databricks上でAIモデルの分散バッチ推論を実行する ~PyTorch編~",
+      "url": "https://zenn.dev/hiouchiy/articles/5285e405014c45"
+    },
+    {
+      "title": "Databricks上でAIモデルの分散バッチ推論を実行する ~OpenVINO編~",
+      "url": "https://zenn.dev/hiouchiy/articles/4faae964060a7b"
+    },
+    {
+      "title": "VertexAI Pipelines×Memorystore for Redisで機械学習のバッチ推論基盤を構築した話",
+      "url": "https://zenn.dev/macbee_planet/articles/5cc43b5eefb4ae"
+    },
+    {
+      "title": "Amazon Bedrockのバッチ推論を試してみた",
+      "url": "https://zenn.dev/fusic/articles/github-zenn-linkage-20240907"
+    }
+  ],
+  "tpu": [
+    {
+      "title": "【OpenAI API】Structured OutputsでLLMアプリ開発を高精度化&爆速化🚀【構造化出力】",
+      "url": "https://zenn.dev/chips0711/articles/ab49bde721375e"
+    },
+    {
+      "title": "LangChain `with_structured_output` メソッドによる構造化データ抽出",
+      "url": "https://zenn.dev/ml_bear/articles/cb07549ec52175"
+    },
+    {
+      "title": "仕様と突き合わせてStructured Outputs実装を仕上げたコーディングエージェント伴走記",
+      "url": "https://zenn.dev/explaza/articles/251023-vibecoding-with-specification"
+    },
+    {
+      "title": "LangchainのStructured OutputとTool Callingを利用して構造化された形式で情報を抽出する",
+      "url": "https://zenn.dev/khisa/articles/82e7d3d33f907d"
+    }
+  ],
+  "npu": [
+    {
+      "title": "まだinputに一々disabledかけている？",
+      "url": "https://zenn.dev/qaynam/articles/73f7d808d71537"
+    },
+    {
+      "title": "label で input[type=\"file\"] を装飾するな",
+      "url": "https://zenn.dev/dqn/articles/7505cfa1bed278"
+    },
+    {
+      "title": "input[type=\"number\"]をやめた話",
+      "url": "https://zenn.dev/funteractiveinc/articles/component-input-number"
+    },
+    {
+      "title": "dGPUなしRyzen AIラップトップでローカルLLMは動くのか：CPU・NPU・iGPU実測比較",
+      "url": "https://zenn.dev/omohikane/articles/thinkpadx13g6-localllm"
+    }
+  ],
+  "gpt": [
+    {
+      "title": "GPT-4oとGemini-2.0の画像生成能力はいかにして作られているのか",
+      "url": "https://zenn.dev/discus0434/articles/gemini-2-0-mm"
+    },
+    {
+      "title": "ChatGPT時代のAI Agent設計: LLMチャットUI vs OpenAI API vs フレームワーク5種の選定基準",
+      "url": "https://zenn.dev/epicai_techblog/articles/e4e1a27584e631"
+    },
+    {
+      "title": "大規模言語モデル(LLM)の作り方 GPT-NeoX編 Part 1",
+      "url": "https://zenn.dev/turing_motors/articles/dff1466194f4ac"
+    },
+    {
+      "title": "GPTをドーピングする LangChain 基礎編",
+      "url": "https://zenn.dev/takiko/articles/24217eece242e1"
+    }
+  ],
+  "claude": [
+    {
+      "title": "[翻訳] Anthropic ハッカソン優勝者による Claude Code 完全ガイド【基礎編】",
+      "url": "https://zenn.dev/studypocket/articles/claude-code-complete-guide"
+    },
+    {
+      "title": "Anthropic ハッカソン優勝者のClaude Codeの設定がすごすぎた",
+      "url": "https://zenn.dev/shintaroamaike/articles/6397da70f4a445"
+    },
+    {
+      "title": "Anthropicが公開しているClaude Codeのベストプラクティスを初心者向けに解説",
+      "url": "https://zenn.dev/tmasuyama1114/articles/claude_code_best_practice_guide"
+    },
+    {
+      "title": "Anthropicハッカソン優勝者のClaude Code設定集「everything-claude-code」を読み解く",
+      "url": "https://zenn.dev/ttks/articles/a54c7520f827be"
+    }
+  ],
+  "gemini": [
+    {
+      "title": "NotebookLM のスライドを「編集できる資料」にするーGemini で YAML 化 → Google Slide 生成",
+      "url": "https://zenn.dev/hirokita117/articles/24c42f407dc9b9"
+    },
+    {
+      "title": "【Google Gemini】マジで使うGemを5つ紹介",
+      "url": "https://zenn.dev/mavericks/articles/my-favorite-google-gems"
+    },
+    {
+      "title": "Claude Code Orchestra: Claude Code × Codex CLI × Gemini CLIの最適解を探る",
+      "url": "https://zenn.dev/mkj/articles/claude-code-orchestra_20260120"
+    },
+    {
+      "title": "GPT-4oとGemini-2.0の画像生成能力はいかにして作られているのか",
+      "url": "https://zenn.dev/discus0434/articles/gemini-2-0-mm"
+    }
+  ],
+  "llama": [
+    {
+      "title": "Ollama + Open WebUI でローカルLLMを手軽に楽しむ",
+      "url": "https://zenn.dev/karaage0703/articles/c271ca65b91bdb"
+    },
+    {
+      "title": "ELYZAが公開した日本語LLM「ELYZA-japanese-Llama-2-7b」についての解説 : (1) 事前学習編",
+      "url": "https://zenn.dev/elyza/articles/2fd451c944649d"
+    },
+    {
+      "title": "ローカルでLLMの推論を実行するのにOllamaがかわいい",
+      "url": "https://zenn.dev/seya/articles/03399b9e3d465e"
+    },
+    {
+      "title": "【LLM】社内文書をセキュアに検索！OllamaとOpen WebUIで構築する完全無料・RAG環境",
+      "url": "https://zenn.dev/shineos/articles/local-llm-rag-web-search-with-ollama"
+    }
+  ],
+  "mistral": [
+    {
+      "title": "【GPT vs Claude vs Gemini vs Llama vs Mistral】 LLM戦国時代に各モデルの使い所を考えてみる",
+      "url": "https://zenn.dev/microsoft/articles/which_typeof_llm_should_we_choose"
+    },
+    {
+      "title": "LangChainでいろんなLLMを試す（GPT・Claude・Gemini・Mistral）",
+      "url": "https://zenn.dev/buenotheebiten/articles/573c64d9019359"
+    },
+    {
+      "title": "0日目：なぜ今 Mistral AI を触るのか──LLM の箱の中身と OSS へ",
+      "url": "https://zenn.dev/shio_shoppaize/articles/8b5052eb46cad0"
+    },
+    {
+      "title": "Macで“ローカルLLM＋マルチモーダル”――Ollama × Mistral-small 3.2 & 専用Web UI超速セットアップ",
+      "url": "https://zenn.dev/exmedia/articles/ollama-mistral-on-mac-quick-guide"
+    }
+  ],
+  "deepseek": [
+    {
+      "title": "DeepSeekがやっていると噂の蒸留というやつを、ローカルLLMで今すぐやってみる 前編",
+      "url": "https://zenn.dev/yuiseki/articles/4737799cad4a8d"
+    },
+    {
+      "title": "DeepSeek-R1の論文読んだ？【勉強になるよ】",
+      "url": "https://zenn.dev/asap/articles/34237ad87f8511"
+    },
+    {
+      "title": "AI初心者がDeepSeekの論文を読んで感動した話（解説付き）",
+      "url": "https://zenn.dev/spacemarket/articles/5143742a78e889"
+    },
+    {
+      "title": "【LLMの事前学習と事後学習を支える技術】 GPT-3, InstructGPT, DeepSeek-R1で理解し, OSSで再現実装する",
+      "url": "https://zenn.dev/epicai_techblog/articles/cbb8774f43783b"
+    }
+  ],
+  "qwen": [
+    {
+      "title": "ついにローカルLLMで安心して仕事が出来る！― Qwen3.5-27B 採用レポート (2026/02/27)",
+      "url": "https://zenn.dev/rna4219/articles/b945d175cde87c"
+    },
+    {
+      "title": "Qwenが閉じ始めたのでGemma 4を選んだ——GPUなしPCでローカルLLMをファインチューニング",
+      "url": "https://zenn.dev/helloworld/articles/074671b77f030c"
+    },
+    {
+      "title": "Qwen3-Swallow & GPT-OSS-Swallow",
+      "url": "https://zenn.dev/tokyotech_lm/articles/fa56f10e51fd7d"
+    },
+    {
+      "title": "ClineとローカルLLMを用いたNext.jsアプリ開発に挑戦〜Qwen2.5-Coder-32B-Instructを使ってみた（後編）〜",
+      "url": "https://zenn.dev/robustonian/articles/qwen25_coder_32b_2nd"
+    }
+  ],
+  "phi": [
+    {
+      "title": "AI時代にこそ設計を学ぶため A Philosophy of Software Design を読んでみました",
+      "url": "https://zenn.dev/moneyforward/articles/85ab923cbdaea9"
+    },
+    {
+      "title": "【ollama / Phi-3】ニュースで話題のLLMをローカルPC上で動かしてみる",
+      "url": "https://zenn.dev/tanny/articles/705682d88e254e"
+    },
+    {
+      "title": "明日から使えるTypeScriptの応用テクニックその3 -Polymorphic Component編-",
+      "url": "https://zenn.dev/t_keshi/articles/tips-typescript-3"
+    },
+    {
+      "title": "商用利用可能かつ軽量なLLM、phi-2をMacbook Pro (M1 Pro)で動かす",
+      "url": "https://zenn.dev/dynagon/articles/77e7778312f889"
+    }
+  ],
+  "gemma": [
+    {
+      "title": "Qwenが閉じ始めたのでGemma 4を選んだ——GPUなしPCでローカルLLMをファインチューニング",
+      "url": "https://zenn.dev/helloworld/articles/074671b77f030c"
+    },
+    {
+      "title": "Raspberry Pi 5上でGoogleの軽量LLM Gemma 2Bを動作させてみた",
+      "url": "https://zenn.dev/tsutof/articles/fa2e92d5297efd"
+    },
+    {
+      "title": "Googleの出したオープンLLM: Gemmaのテクニカルレポートを読む",
+      "url": "https://zenn.dev/neoai/articles/3c7a47d5823ad3"
+    },
+    {
+      "title": "Googleの作ったオープンモデルLLM「Gemma」をGoogle Colabで使ってみる",
+      "url": "https://zenn.dev/neoai/articles/afd82d407b31d2"
+    }
+  ],
+  "vllm": [
+    {
+      "title": "vLLMで独自実装モデルを高速推論させる",
+      "url": "https://zenn.dev/turing_motors/articles/2fd279f6bb25a4"
+    },
+    {
+      "title": "2台のDGX Sparkを相互接続して無事にvLLMを動作させるまでのメモ",
+      "url": "https://zenn.dev/t0d4/articles/7d8951b7c40fba"
+    },
+    {
+      "title": "vLLMのSpeculative Decodingによる推論高速化を試す",
+      "url": "https://zenn.dev/aratako_lm/articles/efeadd6d1e0f4b"
+    },
+    {
+      "title": "コンテキストエンジニアリングをKVキャッシュから理解する(Claude Codeユーザ～vLLMサーバ視点)",
+      "url": "https://zenn.dev/katalab/articles/39c313b89e6518"
+    }
+  ],
+  "ollama": [
+    {
+      "title": "Ollama + Open WebUI でローカルLLMを手軽に楽しむ",
+      "url": "https://zenn.dev/karaage0703/articles/c271ca65b91bdb"
+    },
+    {
+      "title": "ローカルでLLMの推論を実行するのにOllamaがかわいい",
+      "url": "https://zenn.dev/seya/articles/03399b9e3d465e"
+    },
+    {
+      "title": "OpenClaw × OllamaをMacBook 16GBで動かす - ローカルLLM入門",
+      "url": "https://zenn.dev/komlock_lab/articles/openclaw-local-llm"
+    },
+    {
+      "title": "久々にOllamaを触ったら、量子化で別物になってた",
+      "url": "https://zenn.dev/dassimen/articles/fb7c9c893479ee"
+    }
+  ],
+  "lm-studio": [
+    {
+      "title": "無料で Claude Code？！ Qwen3.6 と LM Studio でローカルLLMコーディング",
+      "url": "https://zenn.dev/yokoe24/articles/147ceccdd72319"
+    },
+    {
+      "title": "ローカルLLM入門！LM Studioをバックグラウンドで実行しObsidianと連携する",
+      "url": "https://zenn.dev/r4ynode/articles/local-llm-intro-with-obsidian"
+    },
+    {
+      "title": "Mac miniでローカルLLM(LM Studio)動かしてみた",
+      "url": "https://zenn.dev/b_tm/articles/4b612cf6ee506b"
+    },
+    {
+      "title": "LM Studio とローカルLLMで理解する Microsoft Agent Framework ハーネスの仕組みと実行フロー",
+      "url": "https://zenn.dev/yy7613/articles/74265daaf7929a"
+    }
+  ],
+  "llama-cpp": [
+    {
+      "title": "【ローカルAI】Llama2-13b-chatをllama.cpp使ってGPUで推論させる",
+      "url": "https://zenn.dev/saldra/articles/cf68099720b9cf"
+    },
+    {
+      "title": "llama.cpp の動かし方と量子化手法",
+      "url": "https://zenn.dev/turing_motors/articles/f5f19f875bd8ba"
+    },
+    {
+      "title": "llama.cppの推論エンジンggmlの動作",
+      "url": "https://zenn.dev/lisosia/articles/598ec8e469176e"
+    },
+    {
+      "title": "llama.cpp で CPU で LLM のメモ(2023/05/15 時点日本語もいけるよ)",
+      "url": "https://zenn.dev/syoyo/articles/f869a3fda15f45"
+    }
+  ],
+  "langchain": [
+    {
+      "title": "AIエンジニアがLangChainを推奨しない理由",
+      "url": "https://zenn.dev/genshi_ai/articles/166cf652723496"
+    },
+    {
+      "title": "遂にLangChain v1.0リリース！ 新機能と移行のポイントをコード付きで分かりやすく解説！(RAG/MCP,MLflow対応版)",
+      "url": "https://zenn.dev/nttdata_tech/articles/2ea5821c65fc06"
+    },
+    {
+      "title": "LangChain v1 × Ollama。ローカル環境で完結する RAG 構築ガイド",
+      "url": "https://zenn.dev/nttdata_tech/articles/2b80f968856c36"
+    },
+    {
+      "title": "GPTをドーピングする LangChain 基礎編",
+      "url": "https://zenn.dev/takiko/articles/24217eece242e1"
+    }
+  ],
+  "langgraph": [
+    {
+      "title": "AIエージェントのビジネスインパクトとLangChain、LangGraphを使った実装例",
+      "url": "https://zenn.dev/dev_commune/articles/b93a7296fbb354"
+    },
+    {
+      "title": "LangGraphの基本的な使い方",
+      "url": "https://zenn.dev/pharmax/articles/8796b892eed183"
+    },
+    {
+      "title": "AIスクレインピングエージェントの構築(LangGraph, Firecrawl)",
+      "url": "https://zenn.dev/shoheiweb/articles/86ef445581d8b0"
+    },
+    {
+      "title": "複数のAIエージェント：LangGraphとLangChainを使用したマルチエージェントワークフローの作成",
+      "url": "https://zenn.dev/ippeisuzuki/articles/b9955ea2662dc5"
+    }
+  ],
+  "haystack": [
+    {
+      "title": "Haystackで作る最初の検索AI",
+      "url": "https://zenn.dev/headwaters/articles/32999ba4e180b7"
+    },
+    {
+      "title": "Open-book な 日本語質問応答システム構築してみた with Haystack and Elasticsearch",
+      "url": "https://zenn.dev/shingo_kamata/articles/8a182ff5acfa62"
+    },
+    {
+      "title": "PHPの$haystackと$needleの由来",
+      "url": "https://zenn.dev/k_log24/articles/1219dc3f5097a9"
+    },
+    {
+      "title": "Fable時代のAI活用法を、Anthropicの開発者が公開",
+      "url": "https://zenn.dev/knowledgesense/articles/283244af941a2d"
+    }
+  ],
+  "crewai": [
+    {
+      "title": "マルチエージェントフレームワークCrewAIのチュートリアルを解説",
+      "url": "https://zenn.dev/yamada_quantum/articles/aa418528a98b64"
+    },
+    {
+      "title": "マルチエージェント型のブログ作成システムをCrewai と Ollama で作る",
+      "url": "https://zenn.dev/ippeisuzuki/articles/9bf7e3cbf95663"
+    },
+    {
+      "title": "CrewAI/LangGraph/AutoGen/Agents SDK/Dify 5フレームワークを目的別に整理する",
+      "url": "https://zenn.dev/kenimo49/articles/multi-agent-framework-comparison-5"
+    },
+    {
+      "title": "【2026年最新】LLMマルチエージェント設計パターンを整理する — TradingAgents・CrewAI・AutoGenに学ぶ5つの型",
+      "url": "https://zenn.dev/amu_lab/articles/llm-multi-agent-design-patterns-tradingagents"
+    }
+  ],
+  "autogen": [
+    {
+      "title": "AutoGen(マルチエージェントフレームワーク)を試してみた",
+      "url": "https://zenn.dev/shirochan/articles/a08e8a969412ce"
+    },
+    {
+      "title": "AutoGen入門：マルチエージェントで自律型AIライターを構築し、記事作成を自動化する方法",
+      "url": "https://zenn.dev/secondselection/articles/ai_articles_generator"
+    },
+    {
+      "title": "LLMマルチエージェントAutoGenに入門 ~基本設計書の作成とレビューをさせてみる~",
+      "url": "https://zenn.dev/nomhiro/articles/autogen-abstract"
+    },
+    {
+      "title": "AutoGenを使ったマルチエージェントシステムのコトハジメ",
+      "url": "https://zenn.dev/headwaters/articles/9f442a8fed550d"
+    }
+  ],
+  "dify": [
+    {
+      "title": "Tanuki-8BとOllamaとDifyを使って日本語ローカルRAG構築",
+      "url": "https://zenn.dev/mkj/articles/93dbd6c9d94c58"
+    },
+    {
+      "title": "Difyをローカルで動かしてRAGまで試してみる",
+      "url": "https://zenn.dev/karaage0703/articles/6bcbaf37d6607d"
+    },
+    {
+      "title": "Difyの基礎知識",
+      "url": "https://zenn.dev/zozotech/articles/e94e49f590f4b6"
+    },
+    {
+      "title": "Lステップ×Make×Difyの連携でノーコード開発！LINE AIチャットボットの作り方！",
+      "url": "https://zenn.dev/krap/articles/c0fc24a442a689"
+    }
+  ],
+  "flowise": [
+    {
+      "title": "ノーコードでAIエージェントが作成できる「Flowise」を試してみた",
+      "url": "https://zenn.dev/mixi/articles/37426f7e2da4ac"
+    },
+    {
+      "title": "FlowiseAI を Cloud Run でセキュアに動かす",
+      "url": "https://zenn.dev/google_cloud_jp/articles/securing-flowiseai-on-cloud-run"
+    },
+    {
+      "title": "Fable時代のAI活用法を、Anthropicの開発者が公開",
+      "url": "https://zenn.dev/knowledgesense/articles/283244af941a2d"
+    },
+    {
+      "title": "「モダンC#」に入門しよう！2025【.NET10/C#14】",
+      "url": "https://zenn.dev/inuinu/articles/modern-c-sharp-2025-in-csharp14-and-dotnet10"
+    }
+  ],
+  "n8n": [
+    {
+      "title": "n8nを使って面倒くさいリリースノートのチェックを自動化してみた",
+      "url": "https://zenn.dev/cloud_ace_jp/articles/n8n-google-cloud-release-note"
+    },
+    {
+      "title": "Claude Codeでn8nワークフロー作るのが楽すぎて、もう手動で作る気が起きない件",
+      "url": "https://zenn.dev/ryorn/articles/a6dc96dc425669"
+    },
+    {
+      "title": "\"世界変わる\"——非エンジニアでもできる、 Claude Code による n8n ワークフロー開発",
+      "url": "https://zenn.dev/ubie_dev/articles/6b23a74187766b"
+    },
+    {
+      "title": "n8nでAIエージェントを構築する時代が来た - ノーコードで業務自動化を一新する新潮流",
+      "url": "https://zenn.dev/pianomachine/articles/17a99c209aaea8"
+    }
+  ],
+  "open-webui": [
+    {
+      "title": "Ollama + Open WebUI でローカルLLMを手軽に楽しむ",
+      "url": "https://zenn.dev/karaage0703/articles/c271ca65b91bdb"
+    },
+    {
+      "title": "Open WebUIとMCPOでローカルLLMにMCPツールを使ってもらう",
+      "url": "https://zenn.dev/pkkudo/articles/mcpo-for-local-llm"
+    },
+    {
+      "title": "【LLM】社内文書をセキュアに検索！OllamaとOpen WebUIで構築する完全無料・RAG環境",
+      "url": "https://zenn.dev/shineos/articles/local-llm-rag-web-search-with-ollama"
+    },
+    {
+      "title": "Raspberry Pi + Tailscale + Open WebUI で手軽に自分だけの LLM 環境を構築するチュートリアル",
+      "url": "https://zenn.dev/ikumasudo/articles/18437293cca7c7"
+    }
+  ],
+  "rocm": [
+    {
+      "title": "Irodori-TTS の AMD ROCm（Radeon Open Compute）対応 PR がマージされました",
+      "url": "https://zenn.dev/masahide/articles/ca053067cc9010"
+    },
+    {
+      "title": "WSL2 上で AMD ROCm(Radeon Open Compute) を使えるようにする手順",
+      "url": "https://zenn.dev/masahide/articles/7a5ebf770c5692"
+    },
+    {
+      "title": "Next.js(TypeScript)、TailwindCSS、microCMSでブログを作成しよう！",
+      "url": "https://zenn.dev/elletech/articles/nextjs_microcms"
+    },
+    {
+      "title": "iOS でも Web Push が送れる！microCMS と Firebase Cloud Messaging を使った実装方法",
+      "url": "https://zenn.dev/chot/articles/web-push-with-microcms-and-fcm"
+    }
+  ],
+  "gguf": [
+    {
+      "title": "2GB VPSで日本語LLMを動かす現実解：GGUF量子化とllama.cpp運用の勘所（2026年1月版）",
+      "url": "https://zenn.dev/tktomaru/articles/2gb-vps-japanese-llm-gguf-llamacpp"
+    },
+    {
+      "title": "LLM-jp-4 32B Thinking を本家学習コーパスでキャリブレーションして量子化したGGUFを公開しました",
+      "url": "https://zenn.dev/suzumura_lab/articles/0a1bdb04ec87ca"
+    },
+    {
+      "title": "Mac mini M4 Pro / M4 Max でローカル LLM を動かす：VRAM 早見表と GGUF 量子化の選び方",
+      "url": "https://zenn.dev/runlocal/articles/a506b0c8d57313"
+    },
+    {
+      "title": "TanukiモデルのAWQ、GPTQ、GGUF量子化について",
+      "url": "https://zenn.dev/matsuolab/articles/2857bf0feeeb5d"
+    }
+  ],
+  "onnx": [
+    {
+      "title": "GPUなしローカルでも高速・高精度なOCRができるOnnxOCRが凄い",
+      "url": "https://zenn.dev/harumikun/articles/fb9c435acf4070"
+    },
+    {
+      "title": "リアルタイムAIアプリケーションにおけるONNXのチューニング",
+      "url": "https://zenn.dev/parakeet_tech/articles/15d22c8235c576"
+    },
+    {
+      "title": "ONNX Runtime をつかって Web ブラウザで機械学習モデル推論してみる",
+      "url": "https://zenn.dev/shusuke_o/articles/e768828ae2df75"
+    },
+    {
+      "title": "OpenVINOで各フレームワーク（ONNX、TensorFlow、TFLite、PaddlePaddle）の重みを読み込んで推論",
+      "url": "https://zenn.dev/kazuhito/articles/f9fe5835d8d10d"
+    }
+  ],
+  "tensorrt": [
+    {
+      "title": "TensorRT-LLMによるRTX 5090でのLLMのNVFP4量子化・推論",
+      "url": "https://zenn.dev/aratako_lm/articles/a573b2ccc4d795"
+    },
+    {
+      "title": "QLoRAによるLLM省メモリFine-tuningと高速デプロイ： TensorRT-LLM・Triton・H100検証 1",
+      "url": "https://zenn.dev/fixstars/articles/llm-qlora-triton-1"
+    },
+    {
+      "title": "QLoRAによるLLM省メモリFine-tuningと高速デプロイ： TensorRT-LLM・Triton・H100検証 2",
+      "url": "https://zenn.dev/fixstars/articles/llm-qlora-triton-2"
+    },
+    {
+      "title": "WSL2×RTX5090でTensorRT-LLMビルド記録と推論時の課題",
+      "url": "https://zenn.dev/toki_mwc/articles/d2d02fe44c03f8"
+    }
+  ],
+  "fp16": [
+    {
+      "title": "[翻訳] FP16 量子化で OpenSearch を最適化する",
+      "url": "https://zenn.dev/opensearch/articles/opensearch-fp16-quantization-optimization"
+    },
+    {
+      "title": "Darknet_ros_FP16レポート（1.3倍高速）",
+      "url": "https://zenn.dev/array/articles/4c82fc8382e62d"
+    },
+    {
+      "title": "[翻訳] OpenSearch 3.5 でバルク SIMD を使用した FP16 ベクトル検索の高速化",
+      "url": "https://zenn.dev/opensearch/articles/accelerating-fp16-vector-search-performance-using"
+    },
+    {
+      "title": "[JavaScript] WebGPUで半精度浮動小数点 (16bit float) を使う",
+      "url": "https://zenn.dev/ymd_h/articles/a3e5a19e5364cf"
+    }
+  ],
+  "int8": [
+    {
+      "title": "AWS NeuronでLLMをINT8量子化してメモリ削減＋高速化する手順",
+      "url": "https://zenn.dev/exwzd/articles/20260327_neuron_quantization"
+    },
+    {
+      "title": "INT8量子化でCNNをエッジ推論向けに最適化する — ONNX Runtime PTQ 実践記",
+      "url": "https://zenn.dev/ux_xu/articles/ort-int8-ptq-cnn"
+    },
+    {
+      "title": "リランカーを INT8 で量子化しようとして失敗し、FP8 に落ち着いた話",
+      "url": "https://zenn.dev/agata_corp/articles/79cf6777ebe299"
+    },
+    {
+      "title": "a64fx で int8 で train し, スマッホで推論について考えるメモ",
+      "url": "https://zenn.dev/syoyo/articles/4ee0ae96c96114"
+    }
+  ],
+  "int4": [
+    {
+      "title": "LLMをINT4に量子化したら、GPUはもう要らない？──エンジニアの直感を検証する",
+      "url": "https://zenn.dev/schhrcat/articles/45505bf903abf5"
+    },
+    {
+      "title": "INT4 量子化を使って Llama 4 Scout を NVIDIA H100 1 枚で動かす",
+      "url": "https://zenn.dev/fixstars/articles/llama4-int4-quantization-on-h100"
+    },
+    {
+      "title": "ローカルLLMの「感情知能」を測る — EQ-Bench 3 で Qwen3.5-122B(int4) をベンチマーク",
+      "url": "https://zenn.dev/quixotiks/articles/89273f2e2338b5"
+    },
+    {
+      "title": "[Quantization] int4 vs fp4  which to choose?",
+      "url": "https://zenn.dev/yokosyun/articles/004ea3d85b7cac"
+    }
+  ],
+  "mmlu": [
+    {
+      "title": "MMLUライクなドメイン知識評価のデータセットをLLMで作る",
+      "url": "https://zenn.dev/kendama/articles/86fbb44716aedf"
+    },
+    {
+      "title": "Gemma 4 の MMLU-Pro スコアを NVIDIA B200 で再現する：ステップ・バイ・ステップガイド",
+      "url": "https://zenn.dev/highreso/articles/4b7e51a726f90a"
+    },
+    {
+      "title": "Fable時代のAI活用法を、Anthropicの開発者が公開",
+      "url": "https://zenn.dev/knowledgesense/articles/283244af941a2d"
+    },
+    {
+      "title": "「モダンC#」に入門しよう！2025【.NET10/C#14】",
+      "url": "https://zenn.dev/inuinu/articles/modern-c-sharp-2025-in-csharp14-and-dotnet10"
+    }
+  ],
+  "humaneval": [
+    {
+      "title": "13モデル実測比較：HumanEval/HumanEval+でわかるLLMコーディング実力ランキング2026",
+      "url": "https://zenn.dev/76hata/articles/llm-humaneval-coding-score-tier-2026"
+    },
+    {
+      "title": "Fable時代のAI活用法を、Anthropicの開発者が公開",
+      "url": "https://zenn.dev/knowledgesense/articles/283244af941a2d"
+    },
+    {
+      "title": "「モダンC#」に入門しよう！2025【.NET10/C#14】",
+      "url": "https://zenn.dev/inuinu/articles/modern-c-sharp-2025-in-csharp14-and-dotnet10"
+    },
+    {
+      "title": "【Vue.js】今、ゼロから Vue を学び始めるならこうやるといいんじゃないか (2024) 【初学者向け】",
+      "url": "https://zenn.dev/comm_vue_nuxt/articles/start-to-learn-vue-2024"
+    }
+  ],
+  "swe-bench": [
+    {
+      "title": "AIベンチマーク読み方ガイド｜SWE-bench・GPQA・ARC-AGIの意味と活用法",
+      "url": "https://zenn.dev/yoshihiko555/articles/f1011ac0c4e61c"
+    },
+    {
+      "title": "コーディングエージェントの評価でよく見る SWE-Bench とは結局なんなのか",
+      "url": "https://zenn.dev/etal/articles/swe-bench-explained"
+    },
+    {
+      "title": "SWE-Bench Pro登場: AIコーディングエージェントの限界が露呈",
+      "url": "https://zenn.dev/tenormusica/articles/swe-bench-pro-coding-ai-benchmark"
+    },
+    {
+      "title": "Stanford AI Index 2026完全解説 — SWE-bench制覇・開発者雇用20%減・AI信頼危機の全貌",
+      "url": "https://zenn.dev/kai_kou/articles/237-stanford-ai-index-2026-developer-impact-guide"
+    }
+  ],
+  "arena": [
+    {
+      "title": "Kaggle 「LMSYS - Chatbot Arena Human Preference Predictions」 まとめ",
+      "url": "https://zenn.dev/sinchir0/articles/1cb47925a225cb"
+    },
+    {
+      "title": "Gemini 3 Pro が LMArena 1501 Elo達成 - GPT-5.1・Claude 4.5を上回る歴史的スコア",
+      "url": "https://zenn.dev/tenormusica/articles/gemini-3-pro-preview-release"
+    },
+    {
+      "title": "LiveCodeBench・LMArenaで1位獲得🎉 Gemini-2.5-Pro-Preview-06-05の実力とは?",
+      "url": "https://zenn.dev/yareyare/articles/4070e0b83fee92"
+    },
+    {
+      "title": "Fable時代のAI活用法を、Anthropicの開発者が公開",
+      "url": "https://zenn.dev/knowledgesense/articles/283244af941a2d"
+    }
+  ],
+  "bleu": [
+    {
+      "title": "機械翻訳におけるBLEUスコアの落とし穴",
+      "url": "https://zenn.dev/pythocial/articles/044fe58e0333f8"
+    },
+    {
+      "title": "モデルの品質を数値化 - BLEU、METEOR、ROUGE-L、CIDEr、SPICE、BERTScoreについて！",
+      "url": "https://zenn.dev/headwaters/articles/c0b91961749811"
+    },
+    {
+      "title": "コード生成の評価手法、CodeBLEU",
+      "url": "https://zenn.dev/raptech_jp/articles/f15f8dcb54c80d"
+    },
+    {
+      "title": "PerplexityとBLEUスコア",
+      "url": "https://zenn.dev/m10k1/articles/506cd0f201a36a"
+    }
+  ],
+  "rouge": [
+    {
+      "title": "[Rails]redcarpetとrougeによるマークダウン機能",
+      "url": "https://zenn.dev/redheadchloe/articles/89d0c9371b0abf"
+    },
+    {
+      "title": "モデルの品質を数値化 - BLEU、METEOR、ROUGE-L、CIDEr、SPICE、BERTScoreについて！",
+      "url": "https://zenn.dev/headwaters/articles/c0b91961749811"
+    },
+    {
+      "title": "rouge-scoreライブラリで日本語のROUGEを計算する",
+      "url": "https://zenn.dev/toshi_456/articles/8990966992a4fa"
+    },
+    {
+      "title": "Fable時代のAI活用法を、Anthropicの開発者が公開",
+      "url": "https://zenn.dev/knowledgesense/articles/283244af941a2d"
+    }
+  ],
+  "precision": [
+    {
+      "title": "二値分類問題における適合率、再現率、F値について",
+      "url": "https://zenn.dev/spring_mt/articles/2947c05a723f1a"
+    },
+    {
+      "title": "【Rails】カラム修飾子 precision について",
+      "url": "https://zenn.dev/linkedge/articles/e00dfeaf3bcbaf"
+    },
+    {
+      "title": "OptiQ 移行で長文 ingest が 1.85 倍速 — Qwen3.6-35B-A3B の mixed-precision KV",
+      "url": "https://zenn.dev/8091info/articles/hermes-agent-mlx-optiq-migration"
+    },
+    {
+      "title": "Automatic Mixed Precision を理解してみた",
+      "url": "https://zenn.dev/hayato_yoneda/articles/9f4b5a72dcdbaa"
+    }
+  ],
+  "recall": [
+    {
+      "title": "Vercel AI SDK 6 のアツい機能: needsApproval, ToolLoopAgent, prepareCalls",
+      "url": "https://zenn.dev/layerx/articles/5538adfc79b14e"
+    },
+    {
+      "title": "🎨Figma MCPの構造化問題を改善！「Layermate」でデザイン再現率を向上させた話",
+      "url": "https://zenn.dev/canly/articles/a40805a70ad59f"
+    },
+    {
+      "title": "【物体検出】評価指標（TP/TN/FP/FN/Precisio/Recall）を分かり易く解説【図解】",
+      "url": "https://zenn.dev/nekoallergy/articles/dl-advance-eval-metrics"
+    },
+    {
+      "title": "会議録画Botは「作るな」 - Recall.aiで会議録画Botを爆速実装する",
+      "url": "https://zenn.dev/loglass/articles/89cfe769a9c44c"
+    }
+  ],
+  "f1": [
+    {
+      "title": "「モダンC#」に入門しよう！2025【.NET10/C#14】",
+      "url": "https://zenn.dev/inuinu/articles/modern-c-sharp-2025-in-csharp14-and-dotnet10"
+    },
+    {
+      "title": "【Vue.js】今、ゼロから Vue を学び始めるならこうやるといいんじゃないか (2024) 【初学者向け】",
+      "url": "https://zenn.dev/comm_vue_nuxt/articles/start-to-learn-vue-2024"
+    },
+    {
+      "title": "Vite ってよく聞くけど何なんですか？ あれは",
+      "url": "https://zenn.dev/comm_vue_nuxt/articles/what-is-vite"
+    },
+    {
+      "title": "VS Code DevContainer を使わなくなった私の、LLM エージェント向け開発環境",
+      "url": "https://zenn.dev/kenfdev/articles/1febc0052b0d71"
+    }
+  ],
+  "prompt-injection": [
+    {
+      "title": "LLMを使ったシステムのリスク：プロンプトインジェクションとその対策",
+      "url": "https://zenn.dev/sun_asterisk/articles/a11520b914e058"
+    },
+    {
+      "title": "【LLMセキュリティ】プロンプトインジェクションの脅威：.env流出からRCEまでの仕組みと対策",
+      "url": "https://zenn.dev/gmomedia/articles/9981601fc89710"
+    },
+    {
+      "title": "LLMアプリを狙う日本語プロンプトインジェクション — 攻撃の仕組みと日本語特有のリスク",
+      "url": "https://zenn.dev/nexus_api_lab/articles/cbb3d35774294a"
+    },
+    {
+      "title": "LLMエージェントにプロンプトインジェクションを仕掛けたら、検出できるのか実験してみた",
+      "url": "https://zenn.dev/wharfe/articles/dda016918b95c0"
+    }
+  ],
+  "jailbreak": [
+    {
+      "title": "AIのジェイルブレイクにCVSSを、Anthropicらが深刻度の共通指標を作り始めた",
+      "url": "https://zenn.dev/okssusucha/articles/20260702-anthropic-jailbreak-severity-framework"
+    },
+    {
+      "title": "LLMの「中身」を覗いてJailbreakを見破る — \"Jailbreaking Leaves a Trace\" 論文解説",
+      "url": "https://zenn.dev/k_eclaire39/articles/d8729ec734c23c"
+    },
+    {
+      "title": "iPhone 脱獄( Jailbreak )ツールまとめ",
+      "url": "https://zenn.dev/mr_robot/articles/f4f89e9f4a77804bbca9"
+    },
+    {
+      "title": "claude codeにjailbreakの防ぎ方理解しているか聞いてみた",
+      "url": "https://zenn.dev/akasan/articles/610e22ba6ff864"
+    }
+  ],
+  "data-poisoning": [
+    {
+      "title": "AI が大量にアウトプットしてくるので認知負荷を下げる Skill を作った",
+      "url": "https://zenn.dev/hataluck/articles/0752919b305a9f"
+    },
+    {
+      "title": "LLMを用いた最近の学習について",
+      "url": "https://zenn.dev/razokulover/articles/b6efec15ea1823"
+    },
+    {
+      "title": "同じ5行のコードが全く違って見える12の瞬間、なぜ私たちは学ぶのか？",
+      "url": "https://zenn.dev/coconala/articles/reasons-for-continuing-to-learn"
+    },
+    {
+      "title": "時間がないからこそ、テストを書く",
+      "url": "https://zenn.dev/coconala/articles/write-tests-in-parallel"
+    }
+  ],
+  "guardrails": [
+    {
+      "title": "Nemo Guardrailsを用いたLLMガードレールの適用",
+      "url": "https://zenn.dev/rounda_blog/articles/5114cca07fef7c"
+    },
+    {
+      "title": "AIにガードレールを設定しないと、本当に大変なことになる ―Azure Guardrails・Evaluation―",
+      "url": "https://zenn.dev/tai0921/articles/fa690e91248395"
+    },
+    {
+      "title": "LLMガードレールソリューションの比較",
+      "url": "https://zenn.dev/mkj/articles/llm-guardrails-comparison"
+    },
+    {
+      "title": "LLMにおけるガードレールについて",
+      "url": "https://zenn.dev/ayumuakagi/articles/llm_guardrails"
+    }
+  ],
+  "pii": [
+    {
+      "title": "Amazon Bedrock Guardrails で日本語 PII をどこまで検知できるか",
+      "url": "https://zenn.dev/aws_japan/articles/8d8714fed3e609"
+    },
+    {
+      "title": "Zero-PII Architecture 実装の現実 — 個人情報を持たない LLM ゲートウェイで「誰がいくら使ったか」をどう答えるか",
+      "url": "https://zenn.dev/beki/articles/c0dec34744f2f0"
+    },
+    {
+      "title": "re:Invent 2025: AIデータ基盤におけるprompt injection対策とPII保護の実装",
+      "url": "https://zenn.dev/kiiwami/articles/0002747b2e680225"
+    },
+    {
+      "title": "AIコーディングアシスタントがファイルを編集するとき、個人情報をどう守るか ― MCP層での透過的PIIマスキングの設計と実装",
+      "url": "https://zenn.dev/aliksir/articles/pii-mask-yoshi-mcp-pii-masking"
+    }
+  ],
+  "red-teaming": [
+    {
+      "title": "AI エージェントを攻撃してみる - AI Red Teaming Agent による安全性検証",
+      "url": "https://zenn.dev/microsoft/articles/dd383498a556a9"
+    },
+    {
+      "title": "AI製品のQAって何するの？レッドチーミング「6軸」で挑む、一歩踏んだ安全性の守り方",
+      "url": "https://zenn.dev/r_sasaki/articles/14d72d10ac25bd"
+    },
+    {
+      "title": "Azure ガードレールの先 — PyRIT・Red Teaming Agent・Risk & Safety Evaluators・Defe",
+      "url": "https://zenn.dev/headwaters/articles/fb0b48788a914b"
+    },
+    {
+      "title": "「何をテストすべきか」を自動で決める ― 業務AIエージェントのレッドチーミング",
+      "url": "https://zenn.dev/kitagishi/articles/b39aa847d515f9"
+    }
+  ],
+  "llmo": [
+    {
+      "title": "いろんなツールでLLMOpsの初手のLLM Observabilityを使ってみた",
+      "url": "https://zenn.dev/hosimesi/articles/fbdf2083c883b0"
+    },
+    {
+      "title": "【2026年最新】40%のAIプロジェクトが失敗する理由。MLOps→LLMOps移行で生き残るための完全ガイド",
+      "url": "https://zenn.dev/babushkai/articles/71646d8539d20d"
+    },
+    {
+      "title": "SOV/SOMだけでは足りない LLMO効果測定の最小実装と3つの新指標",
+      "url": "https://zenn.dev/kenimo49/articles/llmo-effect-measurement-3-metrics"
+    },
+    {
+      "title": "【生成 AI 時代の LLMOps】モデル評価編",
+      "url": "https://zenn.dev/google_cloud_jp/articles/d660e277740c41"
+    }
+  ],
+  "aio": [
+    {
+      "title": "自己進化する運用エージェントの設計と実装 〜 3層メモリで AI が AI を育てる AIOps の世界 〜",
+      "url": "https://zenn.dev/aws_japan/articles/self-evolving-ops-agent-multi-layer-memory"
+    },
+    {
+      "title": "LoRA: Low-Rank Adaptaion of Large Language Models の解説",
+      "url": "https://zenn.dev/fusic/articles/paper-reading-lora"
+    },
+    {
+      "title": "Azure の運用を支える AIOps #2【インシデント管理編】",
+      "url": "https://zenn.dev/openjny/articles/e4a349ba7d8e8d"
+    },
+    {
+      "title": "Azure の運用を支える AIOps #1【イントロ編】",
+      "url": "https://zenn.dev/openjny/articles/78f91604a8c30f"
+    }
+  ],
+  "agentcore": [
+    {
+      "title": "【AWS公式】ヘルスケアAIエージェント - Amazon Bedrock AgentCore を活用した構築を徹底解説",
+      "url": "https://zenn.dev/aws_japan/articles/679e723bb34cb6"
+    },
+    {
+      "title": "[AWS Summit] Amazon Bedrock AgentCore による堅牢な SaaS データエージェントの設計 振り返り",
+      "url": "https://zenn.dev/aws_japan/articles/b75232a7fa8a70"
+    },
+    {
+      "title": "AWS CLIで学ぶAmazon Bedrock AgentCore Memory",
+      "url": "https://zenn.dev/sonicmoov/articles/bedrock-agentcore-memory-introduction"
+    },
+    {
+      "title": "AWS Strands AgentsをAmazon Bedrock AgentCoreにCloudFormationでデプロイしてみた",
+      "url": "https://zenn.dev/fusic/articles/6f019a35ffa03c"
+    }
+  ],
+  "bedrock": [
+    {
+      "title": "【読書会】「AWSではじめる生成AI」12章：生成AIのマネージドサービス Amazon Bedrock",
+      "url": "https://zenn.dev/issy/articles/aws-generative-ai-on-aws-12"
+    },
+    {
+      "title": "【AWS公式】ヘルスケアAIエージェント - Amazon Bedrock AgentCore を活用した構築を徹底解説",
+      "url": "https://zenn.dev/aws_japan/articles/679e723bb34cb6"
+    },
+    {
+      "title": "[AWS Summit] Amazon Bedrock AgentCore による堅牢な SaaS データエージェントの設計 振り返り",
+      "url": "https://zenn.dev/aws_japan/articles/b75232a7fa8a70"
+    },
+    {
+      "title": "Claude Code on AWS パターン解説 - Amazon Bedrock / AWS Marketplace",
+      "url": "https://zenn.dev/aws_japan/articles/04999e5689d460"
+    }
+  ],
+  "mlflow": [
+    {
+      "title": "遂にLangChain v1.0リリース！ 新機能と移行のポイントをコード付きで分かりやすく解説！(RAG/MCP,MLflow対応版)",
+      "url": "https://zenn.dev/nttdata_tech/articles/2ea5821c65fc06"
+    },
+    {
+      "title": "MLOps ZoomCamp Week2：実験管理の極意 - MLflowで機械学習モデルの構築を体系化する",
+      "url": "https://zenn.dev/udai_sharelearn/articles/mlops-zoomcamp-week2"
+    },
+    {
+      "title": "【MLflow】Tailscale + AWS EC2/S3で作る、セキュアなLLM学習管理環境の構築ガイド",
+      "url": "https://zenn.dev/quixotiks/articles/9681909f4bfbf7"
+    },
+    {
+      "title": "MLflowで機械学習パイプラインの管理（1）",
+      "url": "https://zenn.dev/pluck/articles/299ead20e6ab50"
+    }
+  ],
+  "llmops": [
+    {
+      "title": "【生成 AI 時代の LLMOps】モデル評価編",
+      "url": "https://zenn.dev/google_cloud_jp/articles/d660e277740c41"
+    },
+    {
+      "title": "【生成 AI 時代の LLMOps】評価ことはじめ",
+      "url": "https://zenn.dev/google_cloud_jp/articles/a268706ca62ed2"
+    },
+    {
+      "title": "LLMOpsを実運用する――プロンプト管理・評価・ツール選定の実際",
+      "url": "https://zenn.dev/shintaroamaike/articles/ba975609780e3a"
+    },
+    {
+      "title": "いろんなツールでLLMOpsの初手のLLM Observabilityを使ってみた",
+      "url": "https://zenn.dev/hosimesi/articles/fbdf2083c883b0"
+    }
+  ],
+  "loop-engineering": [
+    {
+      "title": "【第5回】Loop Engineering（ループエンジニアリング）",
+      "url": "https://zenn.dev/monkey_gineer/articles/ea800a3bea420a"
+    },
+    {
+      "title": "Loop Engineering（ループエンジニアリング）を本番に載せるとしたら",
+      "url": "https://zenn.dev/acntechjp/articles/5293df541361ef"
+    },
+    {
+      "title": "もうプロンプトを書くな──「Loop Engineering」という新しいパラダイムの正体",
+      "url": "https://zenn.dev/acrosstudioblog/articles/38509c0473683a"
+    },
+    {
+      "title": "すでに4800スター、Loop Engineeringとは — “自分の仕事はloopを書くこと”",
+      "url": "https://zenn.dev/acntechjp/articles/0c63b5b08bbdb9"
+    }
+  ],
+  "harness-engineering": [
+    {
+      "title": "【第4回】Harness Engineering（ハーネスエンジニアリング）",
+      "url": "https://zenn.dev/monkey_gineer/articles/eb9ad73b353068"
+    },
+    {
+      "title": "ハーネスエンジニアリングを極めたら、IssueからAIエージェントが動き、人間の役割は要件定義だけになった",
+      "url": "https://zenn.dev/aicon_kato/articles/harness-engineering-startup"
+    },
+    {
+      "title": "ハーネスエンジニアリングを楽にする Microsoft 製の新ツール「APM」ハンズオン",
+      "url": "https://zenn.dev/microsoft/articles/agent-package-manager-handson"
+    },
+    {
+      "title": "ハーネスエンジニアリングで人間のコードレビューをやめる",
+      "url": "https://zenn.dev/theaktky/articles/1c6c3b9333117c"
+    }
+  ],
+  "few-shot": [
+    {
+      "title": "chatGPTのfew-shot learningを使ってAI夫婦カウンセラーのプロンプトを作成した",
+      "url": "https://zenn.dev/seiyakitazume/articles/83f1ffe1743e5b"
+    },
+    {
+      "title": "AWS AIF対策メモ #1 ｜ プロンプトエンジニアリング ― Zero-shot・Few-shot・CoT",
+      "url": "https://zenn.dev/yuzzzn/articles/54633635b2b266"
+    },
+    {
+      "title": "例を増やしたらLLMの性能が下がる ── few-shot collapseの発見と検出方法",
+      "url": "https://zenn.dev/okuma/articles/few_shot_collapse"
+    },
+    {
+      "title": "ゼロショットの次へ：Few-shotとCoTで感情分類を底上げする（IMDB＋vLLM）",
+      "url": "https://zenn.dev/arai0711/articles/llm_sentiment_cot_blog"
+    }
+  ],
+  "machine-learning": [
+    {
+      "title": "[streamlit]Pythonで機械学習アプリを作ってみよう.vol01",
+      "url": "https://zenn.dev/littledarwin/articles/8b5372e2f2c249"
+    },
+    {
+      "title": "機械学習で因果推論~Meta-LearnerとEconML~",
+      "url": "https://zenn.dev/s1ok69oo/articles/1eeebe75842a50"
+    },
+    {
+      "title": "機械学習で因果推論~Double Machine Learning~",
+      "url": "https://zenn.dev/s1ok69oo/articles/4da9e3b01a0a93"
+    },
+    {
+      "title": "コマンドラインでの機械学習 (AzureML + GitHub Actions)",
+      "url": "https://zenn.dev/keonabut/articles/42bd1924ccd882"
+    }
+  ],
+  "search-tree": [
+    {
+      "title": "二分探索木（BST:Binary Search Tree）",
+      "url": "https://zenn.dev/cyberworld/articles/62ffb682f5a24e"
+    },
+    {
+      "title": "探索木を「見える化」する：親ポインタがLLM推論を劇的に改善する",
+      "url": "https://zenn.dev/lixian/articles/lintree-explicit-search-tree-reasoning"
+    },
+    {
+      "title": "自作Boxで二分探索木を作ってみた！",
+      "url": "https://zenn.dev/pullriku/articles/rikubox-rust"
+    },
+    {
+      "title": "【AOJ解説(python)】ALDS1_8_C 二分探索木の実装",
+      "url": "https://zenn.dev/usma11dia0/articles/solve-alds-1-8-c"
+    }
+  ],
+  "transitivity": [
+    {
+      "title": "ABC292-E: Transitivity 解説",
+      "url": "https://zenn.dev/dokaraya/articles/atcoder-abc292e"
+    },
+    {
+      "title": "Fable時代のAI活用法を、Anthropicの開発者が公開",
+      "url": "https://zenn.dev/knowledgesense/articles/283244af941a2d"
+    },
+    {
+      "title": "「モダンC#」に入門しよう！2025【.NET10/C#14】",
+      "url": "https://zenn.dev/inuinu/articles/modern-c-sharp-2025-in-csharp14-and-dotnet10"
+    },
+    {
+      "title": "【Vue.js】今、ゼロから Vue を学び始めるならこうやるといいんじゃないか (2024) 【初学者向け】",
+      "url": "https://zenn.dev/comm_vue_nuxt/articles/start-to-learn-vue-2024"
+    }
+  ],
+  "ontology": [
+    {
+      "title": "Claudeに「オントロジー」を持たせたら、コスト半分・3倍速になるかも",
+      "url": "https://zenn.dev/takupeso/articles/claude-ontology-knowledge-structuring"
+    },
+    {
+      "title": "社内データ利活用のためのオントロジー整理方法",
+      "url": "https://zenn.dev/suwash/articles/shanai_data_ontology_seiri_20260215"
+    },
+    {
+      "title": "オントロジー入門：データマネジメントの「意味」を司る基盤とAI時代の役割",
+      "url": "https://zenn.dev/coffee_break/articles/data-management-ontology-beginner"
+    },
+    {
+      "title": "データエンジニアがオントロジーを触って、導入可能性に思いを馳せてみた",
+      "url": "https://zenn.dev/bare64/articles/ontology-data-platform-practice"
+    }
+  ],
+  "cyc": [
+    {
+      "title": "開発速度UP⤴️！UX UP⤴️！利益⤴️！フィーチャーフラグはDevCycleで50ミリ秒以下の世界に 🚀",
+      "url": "https://zenn.dev/gunta/articles/79f77bdc285874"
+    },
+    {
+      "title": "サイバーエージェントのインターン「CYCOMPE」に参加しました",
+      "url": "https://zenn.dev/mshr0969/articles/8fc07ad2a101b4"
+    },
+    {
+      "title": "トークン84%減 + 長時間連続自走を実現したAIワーカーのCycle運用 (Codex CLI)",
+      "url": "https://zenn.dev/marvelousu/articles/codex-cli-cycle-ops"
+    },
+    {
+      "title": "【TidalCycles】 SuperDirtにSideChain Compressorを追加する",
+      "url": "https://zenn.dev/hiroki_mtplc/articles/d3de0840c773c6"
+    }
+  ],
+  "activation-function": [
+    {
+      "title": "【PyTorchで深層学習の仕組みを学ぶ②】中間層を使ってみよう〜中間層、活性化関数、ReLU〜",
+      "url": "https://zenn.dev/kouch/articles/f9f7d8b1bc483f"
+    },
+    {
+      "title": "ニューラルネットワークにおける活性化関数",
+      "url": "https://zenn.dev/minoda_kohei/articles/64e41b2c6d5be3"
+    },
+    {
+      "title": "【初心者】ネコでも分かる「活性化関数」ってなに？",
+      "url": "https://zenn.dev/nekoallergy/articles/4e224b57a97af9"
+    },
+    {
+      "title": "Intro2DL：活性化関数とその特徴 pytorchによる実装",
+      "url": "https://zenn.dev/yoshida0312/articles/77c6011beb94b5"
+    }
+  ],
+  "hidden-layer": [
+    {
+      "title": "【PyTorch/FastAPI】LLMの隠れ層にリアルタイムで介入するAITuber配信システムの実装 (WSL2 + Windows)",
+      "url": "https://zenn.dev/toki_mwc/articles/bc80993a530f33"
+    },
+    {
+      "title": "🤖 生成AIモデルの隠れ層に超伝導量子コンピュータの量子回路をドッキングさせてみた",
+      "url": "https://zenn.dev/yuichirominato/articles/d6f1b094fcd13b"
+    },
+    {
+      "title": "NeuralNetwork on Scratch（隠れ層の増やし方）",
+      "url": "https://zenn.dev/fuji_t/articles/c292e6eb1d84a7"
+    },
+    {
+      "title": "Fable時代のAI活用法を、Anthropicの開発者が公開",
+      "url": "https://zenn.dev/knowledgesense/articles/283244af941a2d"
+    }
+  ],
+  "decision-tree": [
+    {
+      "title": "ゼロから始める勾配ブースティング決定木の理論",
+      "url": "https://zenn.dev/dalab/articles/9c843f0ec8aabf"
+    },
+    {
+      "title": "Pythonで決定木による機械学習を行う",
+      "url": "https://zenn.dev/koukibuu3/articles/3358f0f0f08462"
+    },
+    {
+      "title": "Scikit-learnで分類用の決定木を作ってみよう",
+      "url": "https://zenn.dev/megshinagawa/articles/creating-a-decision-tree-scikit-learn"
+    },
+    {
+      "title": "決定木ってなんやねん（回帰木編）",
+      "url": "https://zenn.dev/mi_01_24fu/articles/regression-tree"
+    }
+  ],
+  "random-forest": [
+    {
+      "title": "ランダムフォレスト回帰【機械学習】",
+      "url": "https://zenn.dev/0w0kaomoji/articles/7a1218c23ba357"
+    },
+    {
+      "title": "1-⑥[AI][Kaggle]Kaggle入門(機械学習Intro 6. ランダムフォレスト)",
+      "url": "https://zenn.dev/rg687076/articles/30b3d16e6086c9"
+    },
+    {
+      "title": "OOB Error をランダムフォレストで使う【機械学習】",
+      "url": "https://zenn.dev/arir/articles/de91dc88f2a706"
+    },
+    {
+      "title": "15-④[AI][Kaggle]Kaggle実践1 特徴量エンジニアリング(ランダムフォレストによる年齢補完)",
+      "url": "https://zenn.dev/rg687076/articles/zenn_20260702_2031_age_imputation"
+    }
+  ],
+  "gradient-boosting": [
+    {
+      "title": "最新機械学習モデル HistGradientBoostingTreeの性能調査(LightGBMと比較検証)",
+      "url": "https://zenn.dev/r2en/articles/1f848b2b3f7fe4fca840"
+    },
+    {
+      "title": "機械学習モデルの予測根拠を可視化：LightGBM × SHAP入門",
+      "url": "https://zenn.dev/swatchp/articles/3722a08b2429c0"
+    },
+    {
+      "title": "身近なデータで試すPythonの機械学習！　その２　お住まいの地域の不動産取引価格　続編　１　-　LightGBMモデルの学習と保存-",
+      "url": "https://zenn.dev/pincolo/articles/92fb9bc8201966"
+    },
+    {
+      "title": "ゼロから始める勾配ブースティング決定木の理論",
+      "url": "https://zenn.dev/dalab/articles/9c843f0ec8aabf"
+    }
+  ],
+  "ensemble-learning": [
+    {
+      "title": "【マルチエージェントの基礎】アンサンブル学習とLLM",
+      "url": "https://zenn.dev/furunag/articles/fa073c70bbc581"
+    },
+    {
+      "title": "論文要約：Stacking Ensemble Learning in Deep Domain Adaptation for Ophthalm",
+      "url": "https://zenn.dev/take0212/articles/860e1094cecadb"
+    },
+    {
+      "title": "最新アンサンブル学習SklearnStackingの性能調査(LBGM, RGF, ET, RF, LR, KNNモデル",
+      "url": "https://zenn.dev/r2en/articles/797abfc4de68505b3b49"
+    },
+    {
+      "title": "決定木とアンサンブル学習——バギング・ランダムフォレスト・ブースティングの理論とコード【輪読会 section12 予習ノート】",
+      "url": "https://zenn.dev/little/articles/ml-section12-decision-tree-ensemble"
+    }
+  ],
+  "svm": [
+    {
+      "title": "サポートベクターマシン (SVM) の仕組みをゼロから解説",
+      "url": "https://zenn.dev/colorfulwave/articles/924c7e20ba79b7"
+    },
+    {
+      "title": "[機械学習]サポートベクトルマシン(SVM)の気持ちを説明する(ハードマージン編)",
+      "url": "https://zenn.dev/sasshi_i/articles/4cede72ad782c0"
+    },
+    {
+      "title": "SVG論文に学ぶ、埋め込み+SVMによる文書分類と能動学習への展望",
+      "url": "https://zenn.dev/gorn/articles/7a94d8864f7d54"
+    },
+    {
+      "title": "scikit-learnでSVM使ってirisのクラス分類やってみた",
+      "url": "https://zenn.dev/takemikami/articles/20170221-scikitlearnsvmiris"
+    }
+  ],
+  "logistic-regression": [
+    {
+      "title": "機械学習の分類：ロジスティック回帰とクロスエントロピー",
+      "url": "https://zenn.dev/kmj13/articles/logistic_regression_jp_with_image"
+    },
+    {
+      "title": "ロジスティック回帰の4通りの表現+多クラス分類",
+      "url": "https://zenn.dev/skata/articles/20240426-logistic"
+    },
+    {
+      "title": "Pythonでロジスティック回帰分類してみた",
+      "url": "https://zenn.dev/umibows/articles/9dd895f662059c"
+    },
+    {
+      "title": "EmbeddingGemma-300mでテキスト分類（ロジスティック回帰）",
+      "url": "https://zenn.dev/piment/articles/2b2c8c82089233"
+    }
+  ],
+  "encoder": [
+    {
+      "title": "ロータリーエンコーダーのキー割り当ての3つの方法",
+      "url": "https://zenn.dev/yoichi/articles/qmk-ways-to-customize-encoder-map"
+    },
+    {
+      "title": "cocot46plusのロータリーエンコーダーへのキーコード割り当て",
+      "url": "https://zenn.dev/yoichi/articles/cocot46plus-customize-encoder-map"
+    },
+    {
+      "title": "Base64エンコーダー/デコーダーを作った — ブラウザ完結で安全に変換する",
+      "url": "https://zenn.dev/devnestio/articles/devnestio-tool-base64-encoder-decoder"
+    },
+    {
+      "title": "Base64画像エンコーダーをVanilla JSで作った話（PNG/JPG/SVGをData URLに変換、ゼロ依存）",
+      "url": "https://zenn.dev/devnestio/articles/devnestio-tool-base64-image-encoder"
+    }
+  ],
+  "bptt": [
+    {
+      "title": "AI が大量にアウトプットしてくるので認知負荷を下げる Skill を作った",
+      "url": "https://zenn.dev/hataluck/articles/0752919b305a9f"
+    },
+    {
+      "title": "LLMを用いた最近の学習について",
+      "url": "https://zenn.dev/razokulover/articles/b6efec15ea1823"
+    },
+    {
+      "title": "同じ5行のコードが全く違って見える12の瞬間、なぜ私たちは学ぶのか？",
+      "url": "https://zenn.dev/coconala/articles/reasons-for-continuing-to-learn"
+    },
+    {
+      "title": "時間がないからこそ、テストを書く",
+      "url": "https://zenn.dev/coconala/articles/write-tests-in-parallel"
+    }
+  ],
+  "gru": [
+    {
+      "title": "Terragrunt 導入で Terraform コードを DRY にしてみた",
+      "url": "https://zenn.dev/simpleform/articles/20221111-01-terraform-with-terragrunt"
+    },
+    {
+      "title": "AIを使ってBower/GruntJS時代の個人サイトをモダナイズした",
+      "url": "https://zenn.dev/kinzal/articles/3295f5d16b9ceb"
+    },
+    {
+      "title": "terragrunt 新旧コマンド早見表 with llms.txt",
+      "url": "https://zenn.dev/arx8/articles/1e02667ba405c9"
+    },
+    {
+      "title": "Terraformをいい感じで管理するTerragruntのメリットを紹介する",
+      "url": "https://zenn.dev/ring_belle/articles/terragrunt-start"
+    }
+  ],
+  "time-series-data": [
+    {
+      "title": "ゼロから作る時系列データベースエンジン",
+      "url": "https://zenn.dev/nakabonne/articles/d300838a1500c7"
+    },
+    {
+      "title": "時系列データの交差検証(クロスバリデーション)は交差検証とはいえないし、良い方法でもないらしい",
+      "url": "https://zenn.dev/skata/articles/20241204-tscv"
+    },
+    {
+      "title": "時系列データのための大規模言語モデル",
+      "url": "https://zenn.dev/tsurubee/articles/00446669b6c83a"
+    },
+    {
+      "title": "インクリメンタルに複数の時系列データに対する平均・標準偏差を計算する",
+      "url": "https://zenn.dev/utcarnivaldayo/articles/ffeed5ac2e62bb"
+    }
+  ],
+  "self-attention": [
+    {
+      "title": "生成AIの技術基盤を学ぶ：TransformerとSelf-Attention解説",
+      "url": "https://zenn.dev/takeojapan/articles/2035acf3cfc112"
+    },
+    {
+      "title": "AI界を席巻する「Transformer」をゆっくり解説(6日目) ～Why Self-Attention編～",
+      "url": "https://zenn.dev/attentionplease/articles/4e09c41d7a85db"
+    },
+    {
+      "title": "TransformerのSelf-Attentionをわかりやすく理解できないものだろうか？-Part1",
+      "url": "https://zenn.dev/kitacom_blog/articles/observe_self_attention_p1"
+    },
+    {
+      "title": "TransformerのSelf-Attentionをわかりやすく理解できないものだろうか？-Part2",
+      "url": "https://zenn.dev/kitacom_blog/articles/observe_self_attention_p2"
+    }
+  ],
+  "seq2seq": [
+    {
+      "title": "【Transformerとは？ - 第六回D】再帰型モデルから系列変換へ：Seq2SeqとAttentionの誕生",
+      "url": "https://zenn.dev/hitama/articles/b8d2e001bcbd78"
+    },
+    {
+      "title": "seq2seqにおいてEncoderが出力した潜在変数をVAEをしてからDecoderに渡してみる。",
+      "url": "https://zenn.dev/derbuihan/articles/8b024f1bb8eb99"
+    },
+    {
+      "title": "BERTでseq2seqしたいときのモデルの理解",
+      "url": "https://zenn.dev/roju/articles/1b33cbed0f6e67"
+    },
+    {
+      "title": "【Seq2Seq】入力文を「反転」させるとなぜ翻訳精度が劇的に向上するのか？",
+      "url": "https://zenn.dev/colorfulwave/articles/5d299055e857d7"
+    }
+  ],
+  "autoencoder": [
+    {
+      "title": "Natural Language Autoencoders — AIの「隠れた思考」を読み解く新技術",
+      "url": "https://zenn.dev/ryok/articles/anthropic-natural-language-autoencoders"
+    },
+    {
+      "title": "受験者毎に適切な問題を出しわける試験の仕組みをAutoEncoderとみなして実装する",
+      "url": "https://zenn.dev/ohtaman/articles/irt_cat_python_01"
+    },
+    {
+      "title": "論文解説：Gaussian Process Prior Variational Autoencoders",
+      "url": "https://zenn.dev/takuya_fukatsu/articles/7d906f92609ef9"
+    },
+    {
+      "title": "Masked Autoencoders (MAE) 論文解説 ― なぜ高マスク率と非対称設計が効くのか",
+      "url": "https://zenn.dev/mantis_ryuji/articles/67e096d62c9265"
+    }
+  ],
+  "alexnet": [
+    {
+      "title": "Fable時代のAI活用法を、Anthropicの開発者が公開",
+      "url": "https://zenn.dev/knowledgesense/articles/283244af941a2d"
+    },
+    {
+      "title": "「モダンC#」に入門しよう！2025【.NET10/C#14】",
+      "url": "https://zenn.dev/inuinu/articles/modern-c-sharp-2025-in-csharp14-and-dotnet10"
+    },
+    {
+      "title": "【Vue.js】今、ゼロから Vue を学び始めるならこうやるといいんじゃないか (2024) 【初学者向け】",
+      "url": "https://zenn.dev/comm_vue_nuxt/articles/start-to-learn-vue-2024"
+    },
+    {
+      "title": "Vite ってよく聞くけど何なんですか？ あれは",
+      "url": "https://zenn.dev/comm_vue_nuxt/articles/what-is-vite"
+    }
+  ],
+  "yolo": [
+    {
+      "title": "【自動運転】信号機認識に挑む / 走行画像15,000枚のアノテーションとYOLOXモデルによる深層学習実践",
+      "url": "https://zenn.dev/turing_motors/articles/70c5072c04d04c"
+    },
+    {
+      "title": "YOLOで画像認識した動画をWebRTCでリアルタイム配信",
+      "url": "https://zenn.dev/kazuya_m/articles/1ddfb9fe426b8b"
+    },
+    {
+      "title": "賃貸の制約を、ラズパイ × AIでハック?した話【YOLO × LINE通知】",
+      "url": "https://zenn.dev/req9/articles/b6208e21c36292"
+    },
+    {
+      "title": "AI エージェント開発時代の開発環境構築：VM で実現する安全な YOLO モード",
+      "url": "https://zenn.dev/jtechjapan_pub/articles/04f75837885d9a"
+    }
+  ],
+  "bounding-box": [
+    {
+      "title": "PDFの検索（ColPali）→ 画像からキャプションの生成とバウンディングボックスの配置（Florence-2-large）を試してみた",
+      "url": "https://zenn.dev/yumefuku/articles/pdf-image-search"
+    },
+    {
+      "title": "Gemini-2.0-flashにバウンディングボックス描画をさせて物体検出能力を試す",
+      "url": "https://zenn.dev/headwaters/articles/8f9e6bd01b7f76"
+    },
+    {
+      "title": "2次ベジェ曲線のバウンディングボックスを求める",
+      "url": "https://zenn.dev/baroqueengine/articles/9fd55644bf79df"
+    },
+    {
+      "title": "3次ベジエ曲線のバウンディングボックス",
+      "url": "https://zenn.dev/kurogitsune/articles/7caf52733747ef"
+    }
+  ],
+  "n-gram": [
+    {
+      "title": "連載｜生成AIの数理   第1回「次の言葉」を予測せよ  ——n-gramからアテンションまで，必然の連鎖——",
+      "url": "https://zenn.dev/tamtak18/articles/19995cd1ceb020"
+    },
+    {
+      "title": "n-gramからLLMまで：言語モデル30年の進化を丁寧に整理する",
+      "url": "https://zenn.dev/gnus/articles/25d68d151f9a4e"
+    },
+    {
+      "title": "【Transformerとは？ - 第六回B】ニューラル言語モデル（FFNNLM）：n-gramをニューラルネットで拡張する",
+      "url": "https://zenn.dev/hitama/articles/57973430c06a4d"
+    },
+    {
+      "title": "【PostgreSQL × Go】570万件のデータをミリ秒で曖昧検索するハイブリッドN-gram検索の実装を経験した話",
+      "url": "https://zenn.dev/aqsh/articles/0fd0b33801b89a"
+    }
+  ],
+  "palm": [
+    {
+      "title": "Google製LLM「PaLM2」と対話できるLINE Botを作ってみた",
+      "url": "https://zenn.dev/ymd65536/articles/cloudrun_linebot_palm2"
+    },
+    {
+      "title": "Google Cloud で生成 AI アプリケーションを作ろう！パート 2：PaLM API の利用例 1 〜 英文を日本語で要約する",
+      "url": "https://zenn.dev/google_cloud_jp/articles/generative-ai-summarization"
+    },
+    {
+      "title": "Vertex AI PaLM APIを触ってみる",
+      "url": "https://zenn.dev/layerx/articles/e13030eb8e364a"
+    },
+    {
+      "title": "Vertex AI Studio で PaLM2 に対する Grounding が可能になりました",
+      "url": "https://zenn.dev/cloud_ace_jp/articles/94dc989c5eb278"
+    }
+  ],
+  "hidden-markov-model": [
+    {
+      "title": "Tiberius:HMMを使用した遺伝子予測のためのEnd-to-Endの深層学習法",
+      "url": "https://zenn.dev/edna_startup/articles/tiberius_geneprediction01"
+    },
+    {
+      "title": "インデックスを超えていけ ~Hidden Markov Modelとマルチシグナル検出による戦術的アセットアロケーション~",
+      "url": "https://zenn.dev/shizumaru/articles/d1bda8dac00cf1"
+    },
+    {
+      "title": "HMMを理解する",
+      "url": "https://zenn.dev/ryoiida0306/articles/hmm_understanding"
+    },
+    {
+      "title": "隠れマルコフモデル",
+      "url": "https://zenn.dev/tmiya/articles/7ad6448b48ed68"
+    }
+  ],
+  "monte-carlo-tree-search": [
+    {
+      "title": "LLMの思考の性能をモンテカルロ木探索で引き上げる",
+      "url": "https://zenn.dev/knowledgesense/articles/87026a4a6a43c4"
+    },
+    {
+      "title": "ELYZA-Thinking-1.0: MCTS を用いた推論パス探索と模倣学習による Reasoning Model の開発",
+      "url": "https://zenn.dev/elyza/articles/bc68f53fc0a83b"
+    },
+    {
+      "title": "kaggle(UM-MCTSコンペ)振り返り(11th Place) &上位解法",
+      "url": "https://zenn.dev/ryushi496/articles/ddd480808f6a86"
+    },
+    {
+      "title": "モンテカルロ木探索を Python で実装する",
+      "url": "https://zenn.dev/ganariya/articles/python-monte-carlo-tree-search"
+    }
+  ],
+  "multimodal": [
+    {
+      "title": "Gemini 2.0 Multimodal Live API でリアルタイムマルチモーダルアプリケーションを構築しよう！",
+      "url": "https://zenn.dev/google_cloud_jp/articles/5696180a001fc0"
+    },
+    {
+      "title": "【ちょっとコード】Vertex AI マルチモーダル検索の利用シーン整理と最新実装例2024",
+      "url": "https://zenn.dev/longrun_jp/articles/try-vertex-ai-multimodal-search"
+    },
+    {
+      "title": "GPT-4oのマルチモーダル入力をiOSから試す",
+      "url": "https://zenn.dev/shu223/articles/gpt4o-multimodal"
+    },
+    {
+      "title": "NVIDIA Blackwell におけるマルチモーダル学習の高速化",
+      "url": "https://zenn.dev/fixstars/articles/multimodal-blackwell"
+    }
+  ],
+  "edge-ai": [
+    {
+      "title": "【エッジAI学習メモ】番外編：Edge AI検証を設計書とGitHub Issueで管理してみる",
+      "url": "https://zenn.dev/mono_tec/articles/edgeai-extra-02-project-management"
+    },
+    {
+      "title": "Jetson AGX Orin 開発者キットで、Deep Seek R1 を動作させる詳細手順。エッジAIに向けて。",
+      "url": "https://zenn.dev/open_developers/articles/011c32b716213b"
+    },
+    {
+      "title": "【2026年版】エッジAI実装完全ガイド ─ デバイスで動くAI推論の最新手法と実践",
+      "url": "https://zenn.dev/ai_nexus/articles/edge-ai-2026-guide"
+    },
+    {
+      "title": "うさぎでもわかるセキュアな通信+水平型テルコクラウド＋エッジAIのユースケース",
+      "url": "https://zenn.dev/taku_sid/articles/20250415_telco_edge_ai"
+    }
+  ],
+  "backpropagation": [
+    {
+      "title": "誤差逆伝播法（バックプロパゲーション）",
+      "url": "https://zenn.dev/minoda_kohei/articles/7f1b5ec1f2ea6a"
+    },
+    {
+      "title": "Scratch3.0の標準機能だけで誤差逆伝播法を実装してMNISTの学習機を作成する day3",
+      "url": "https://zenn.dev/galapagos/articles/backpropagation_on_scratch"
+    },
+    {
+      "title": "Scratch3.0で誤差逆伝播法を実装 day4 動いたけどバグってた、デバッグするぜ",
+      "url": "https://zenn.dev/galapagos/articles/debug_backpropagation"
+    },
+    {
+      "title": "深層学習-1-誤差逆伝播法まで-20250616",
+      "url": "https://zenn.dev/tomnjp/articles/7e7f8f68172e4f"
+    }
+  ],
+  "gradient-descent": [
+    {
+      "title": "AI&Julia #14｜数理最適化 » 線形回帰 » 勾配降下法 » 損失関数",
+      "url": "https://zenn.dev/catalyst2064/articles/7193ce9cdf1032"
+    },
+    {
+      "title": "AI&Julia #10｜数理最適化 » 勾配降下法 » 1変数関数の最小点を探索",
+      "url": "https://zenn.dev/catalyst2064/articles/1baa5206fdbf13"
+    },
+    {
+      "title": "AI&Julia #02｜数理最適化 » 勾配降下法 » 勾配ベクトル場",
+      "url": "https://zenn.dev/catalyst2064/articles/1ec1c7273c80bc"
+    },
+    {
+      "title": "【Python】ADALINE(フルバッチ勾配降下法)と学習の収束",
+      "url": "https://zenn.dev/youken/articles/539bf2fb92934a"
+    }
+  ],
+  "overfitting": [
+    {
+      "title": "AI-900 対策ノート：過学習（Overfitting）とは？",
+      "url": "https://zenn.dev/raynya/articles/ai-900-overfitting"
+    },
+    {
+      "title": "過学習（Overfitting）とは？原因と対策をわかりやすく解説",
+      "url": "https://zenn.dev/tkrndisk/articles/d01cec8116dc34"
+    },
+    {
+      "title": "【深層学習】過学習の「向こう側」にある汎化：Grokking（頓悟）現象の数理メカニズム",
+      "url": "https://zenn.dev/lixian/articles/bad35e0cbbeeb2"
+    },
+    {
+      "title": "過学習からLLMへ",
+      "url": "https://zenn.dev/knowhere_blog/articles/c26a3d70345eb4"
+    }
+  ],
+  "dropout": [
+    {
+      "title": "9-⑤[AI][Kaggle][python]Kaggle入門(ディープラーニング入門 5.ドロップアウトとバッチ正規化)",
+      "url": "https://zenn.dev/rg687076/articles/ccca63b7de738f"
+    },
+    {
+      "title": "DropoutをCIFAR-10で0.0/0.2/0.5と変えたらtrain_lossが逆転した話【Keras実験】",
+      "url": "https://zenn.dev/wasurenamemo/articles/8a862cefc3f28e"
+    },
+    {
+      "title": "[個人的メモ]機械学習におけるDropoutとは？",
+      "url": "https://zenn.dev/kaba777/articles/1a06726bf86216"
+    },
+    {
+      "title": "【Keras実験】BatchNormalizationとDropoutは併用すべきか？4パターンをMNISTで比較",
+      "url": "https://zenn.dev/wasurenamemo/articles/6f7c41acc66fcb"
+    }
+  ],
+  "loss-function": [
+    {
+      "title": "【PyTorchで深層学習の仕組みを学ぶ①】深層学習の全体像〜モデル、損失関数、最適化手法〜",
+      "url": "https://zenn.dev/kouch/articles/cf580a6c9d582d"
+    },
+    {
+      "title": "機械学習で使用される目的関数の理論",
+      "url": "https://zenn.dev/tasada038/articles/e4f298c2c8cd54"
+    },
+    {
+      "title": "【生成AI】なぜ「対数尤度の最大化」ではなく「ELBOの最大化」が目的関数になるのか【VAE・拡散モデル】",
+      "url": "https://zenn.dev/asap/articles/ea9f42edff6573"
+    },
+    {
+      "title": "AI&Julia #14｜数理最適化 » 線形回帰 » 勾配降下法 » 損失関数",
+      "url": "https://zenn.dev/catalyst2064/articles/7193ce9cdf1032"
+    }
+  ],
+  "learning-rate": [
+    {
+      "title": "全ての学習率スケジューリングを過去にするOptimizer",
+      "url": "https://zenn.dev/dena/articles/6f04641801b387"
+    },
+    {
+      "title": "【PyTorch】学習率スケジューラー解説",
+      "url": "https://zenn.dev/yuto_mo/articles/6e2803495029d4"
+    },
+    {
+      "title": "全ての学習率スケジューリングを過去にするRAdamScheduleFreeはGNNsでも健在",
+      "url": "https://zenn.dev/zenkigen_tech/articles/8356bed81aec91"
+    },
+    {
+      "title": "論文メモ：DALSで学習率設計を層×時間に拡張する",
+      "url": "https://zenn.dev/kas_blog/articles/20260603-learning-rate-engineering-dals"
+    }
+  ],
+  "softmax": [
+    {
+      "title": "Softmax関数とエントロピー正則化",
+      "url": "https://zenn.dev/akira5kitaoka/articles/332ea4b3cf18cd"
+    },
+    {
+      "title": "生成AIの推論状態を分解する―― Grokking から見る logit、softmax、KV cache の役割",
+      "url": "https://zenn.dev/albatrosary/articles/cbd89bf23275d7"
+    },
+    {
+      "title": "生成AIはなぜメジャー技術に強く見えるのか── Logit と Softmax で眺める“AIの迷いやすさ”",
+      "url": "https://zenn.dev/albatrosary/articles/e3364349f99b2a"
+    },
+    {
+      "title": "生成AIの挙動を支配する「2つの数理法則」：Softmax CrowdingとSemantic Drift",
+      "url": "https://zenn.dev/albatrosary/articles/4126f5b78249c6"
+    }
+  ],
+  "word2vec": [
+    {
+      "title": "【自然言語処理】【Python】Word2Vecを使って「人生」から「愛」を引いたら何が残るかを計算してみた",
+      "url": "https://zenn.dev/robes/articles/c251dd89a0e47f"
+    },
+    {
+      "title": "【Python】Word2Vecで単語の分散表現を体感する",
+      "url": "https://zenn.dev/robes/articles/61847e68587b98"
+    },
+    {
+      "title": "【週末研究】05. 学習済word2vecモデルの構築 - word2vec の追加学習と記事のクロール",
+      "url": "https://zenn.dev/tkosht/articles/685b5b715fc1b3"
+    },
+    {
+      "title": "数式が苦手でもWord2Vecがわかる｜2つの行列・Skip-gram・負例サンプリングを具体例だけで",
+      "url": "https://zenn.dev/manato_boys/articles/cc18a54fcd6710"
+    }
+  ],
+  "tf-idf": [
+    {
+      "title": "【自然言語処理】【Python】TF-IDFを使って文書の特徴をつかもう",
+      "url": "https://zenn.dev/robes/articles/241f6c3fac1486"
+    },
+    {
+      "title": "TF-IDFを使った簡単な検索システムを作ってみた",
+      "url": "https://zenn.dev/matsui_at/articles/5c0ca1d9f5a36a"
+    },
+    {
+      "title": "現代版 TF-IDF である Okapi BM25 の原理について(前半)",
+      "url": "https://zenn.dev/wm3/articles/233dccc6e54dab"
+    },
+    {
+      "title": "Zennで学ぶスパムメール分類講座：初級編 - AIを賢くする最初のテクニック「TF-IDF」",
+      "url": "https://zenn.dev/sato8891/articles/4639bf50ef95e9"
+    }
+  ],
+  "byte-pair-encoding": [
+    {
+      "title": "Puppeteer +Lighthouse +GitHubActionsで認証付きWebアプリのWebperfを定期計測",
+      "url": "https://zenn.dev/lapras_inc/articles/webperf-watcher"
+    },
+    {
+      "title": "AutoWebPerf で CoreWebVitals を計測する",
+      "url": "https://zenn.dev/tiwu_dev/articles/1738fd34f7fd5a"
+    },
+    {
+      "title": "AutoWebPerf を使って CoreWebVitals やページパフォーマンスの悪化を検知してみる",
+      "url": "https://zenn.dev/takumi_n/articles/1162e558ad42c3"
+    },
+    {
+      "title": "【SpicaLM #2】BPE Tokenizerの設計と実装",
+      "url": "https://zenn.dev/andogensi/articles/e17c8c19fbd538"
+    }
+  ],
+  "scaling-laws": [
+    {
+      "title": "生成AIは、ただ大きくすれば賢くなるのか？〜Scaling Laws の限界と、その先の研究潮流〜",
+      "url": "https://zenn.dev/albatrosary/articles/2b4b560efe46d6"
+    },
+    {
+      "title": "論文：強化学習でもスケーリング則がある？",
+      "url": "https://zenn.dev/kiyohiro8/articles/67147034d2d29f"
+    },
+    {
+      "title": "時系列予測におけるスケーリング則：ルックバックウィンドウサイズの最適化（論文解説）",
+      "url": "https://zenn.dev/weebo/articles/time-series-forecasting-scaling-law"
+    },
+    {
+      "title": "【GitHub公開】Claudeの創造主、ダリオ・アモディの「思考」をリバースエンジニアリングしてみた(Scaling Lawsの真実)",
+      "url": "https://zenn.dev/leading_ai/articles/31da4d9ea63d41"
+    }
+  ],
+  "emergent-abilities": [
+    {
+      "title": "VS Code DevContainer を使わなくなった私の、LLM エージェント向け開発環境",
+      "url": "https://zenn.dev/kenfdev/articles/1febc0052b0d71"
+    },
+    {
+      "title": "Fable時代のAI活用法を、Anthropicの開発者が公開",
+      "url": "https://zenn.dev/knowledgesense/articles/283244af941a2d"
+    },
+    {
+      "title": "「モダンC#」に入門しよう！2025【.NET10/C#14】",
+      "url": "https://zenn.dev/inuinu/articles/modern-c-sharp-2025-in-csharp14-and-dotnet10"
+    },
+    {
+      "title": "【Vue.js】今、ゼロから Vue を学び始めるならこうやるといいんじゃないか (2024) 【初学者向け】",
+      "url": "https://zenn.dev/comm_vue_nuxt/articles/start-to-learn-vue-2024"
+    }
+  ],
+  "catastrophic-forgetting": [
+    {
+      "title": "【2026年最新】なぜAIエンジニアはあなたの仕事を奪えないのか？「破滅的忘却」という致命的弱点",
+      "url": "https://zenn.dev/babushkai/articles/2026-01-31-continual-learning-llm-future"
+    },
+    {
+      "title": "AI が大量にアウトプットしてくるので認知負荷を下げる Skill を作った",
+      "url": "https://zenn.dev/hataluck/articles/0752919b305a9f"
+    },
+    {
+      "title": "LLMを用いた最近の学習について",
+      "url": "https://zenn.dev/razokulover/articles/b6efec15ea1823"
+    },
+    {
+      "title": "同じ5行のコードが全く違って見える12の瞬間、なぜ私たちは学ぶのか？",
+      "url": "https://zenn.dev/coconala/articles/reasons-for-continuing-to-learn"
+    }
+  ],
+  "diffusion-model": [
+    {
+      "title": "【生成AI】なぜ「対数尤度の最大化」ではなく「ELBOの最大化」が目的関数になるのか【VAE・拡散モデル】",
+      "url": "https://zenn.dev/asap/articles/ea9f42edff6573"
+    },
+    {
+      "title": "深層学習・生成AIの全体像を「3つの問い」で整理する｜CNNから拡散モデル・Mambaまで",
+      "url": "https://zenn.dev/manato_boys/articles/ecf3811c5e529a"
+    },
+    {
+      "title": "What are Diffusion Models?",
+      "url": "https://zenn.dev/nakky/articles/09fb1804001ff8"
+    },
+    {
+      "title": "革命的コード生成AI「Mercury Coder」の仕組みを徹底解説 〜拡散モデルが切り拓く次世代LLMの世界〜",
+      "url": "https://zenn.dev/taku_sid/articles/20250401_mercury_coder"
+    }
+  ],
+  "gan": [
+    {
+      "title": "GAN（敵対的生成ネットワーク）",
+      "url": "https://zenn.dev/akira11/articles/19d73df7715cac"
+    },
+    {
+      "title": "生成AIに「GFPGAN（顔復元）」を聞いてみた（なぜ一度かたむけてから直すのか）",
+      "url": "https://zenn.dev/tkpurine/articles/gfpgan-face-restoration"
+    },
+    {
+      "title": "AIアシスタントはどうやってパスワードを守っているのか 〜Gandalfで学ぶプロンプトインジェクション対策〜",
+      "url": "https://zenn.dev/loglass/articles/0563084acfd17e"
+    },
+    {
+      "title": "Self-Attentionで画像生成を改善する：DCGAN vs SAGAN比較実験",
+      "url": "https://zenn.dev/yakagen/articles/2d37789ca363bb"
+    }
+  ],
+  "variational-autoencoder": [
+    {
+      "title": "TensorFlowでCIFAR-10を変分オートエンコーダー(VAE)する。",
+      "url": "https://zenn.dev/derbuihan/articles/a69df133014944"
+    },
+    {
+      "title": "【初心者向け】PyTorchで異常検知：VAE（Variational Autoencoder）による時系列解析入門",
+      "url": "https://zenn.dev/small_test/articles/2dcfe58637a9ae"
+    },
+    {
+      "title": "【生成AI】なぜ「対数尤度の最大化」ではなく「ELBOの最大化」が目的関数になるのか【VAE・拡散モデル】",
+      "url": "https://zenn.dev/asap/articles/ea9f42edff6573"
+    },
+    {
+      "title": "VAEって結局何者なの？",
+      "url": "https://zenn.dev/asap/articles/6caa9043276424"
+    }
+  ],
+  "rotary-position-embedding": [
+    {
+      "title": "RoPE（Rotary Position Embedding）を理解するまで",
+      "url": "https://zenn.dev/amasashi/articles/6d2d380e483ffc"
+    },
+    {
+      "title": "【LLM自作入門 Vol.2】モダンTransformerの実装：RMSNorm, RoPE, SwiGLUを使用した実装方法",
+      "url": "https://zenn.dev/lluminai_tech/articles/f488b0843efda3"
+    },
+    {
+      "title": "レスポンシブデザインで Tailwind CSS と CSS custom properties を併用する体験が良過ぎる",
+      "url": "https://zenn.dev/amon/articles/9e8b7d220d2661"
+    },
+    {
+      "title": "[ADK] 今更 LlmAgentの各種プロパティを詳しく説明する ~ ADK LlmAgent Property Maniax ~",
+      "url": "https://zenn.dev/soundtricker/articles/4148762a3c6f22"
+    }
+  ],
+  "state-space-model": [
+    {
+      "title": "線形ガウス状態空間モデル(2) - ローカルレベルモデル",
+      "url": "https://zenn.dev/knao124/articles/ssm-03-local-level-model"
+    },
+    {
+      "title": "状態空間モデル",
+      "url": "https://zenn.dev/knao124/articles/ssm-01-state-space-model"
+    },
+    {
+      "title": "線形ガウス状態空間モデル(1) - 線形ガウス状態空間モデルとは",
+      "url": "https://zenn.dev/knao124/articles/ssm-02-linear-gaussian"
+    },
+    {
+      "title": "Kotomamba: Mamba State Space Model 分散学習ライブラリ",
+      "url": "https://zenn.dev/kotoba_tech/articles/3eb0984d8fdfb8"
+    }
+  ],
+  "residual-connection": [
+    {
+      "title": "【ディープラーニング基礎⑫】スキップ接続",
+      "url": "https://zenn.dev/student_blog/articles/c905e32166c807"
+    },
+    {
+      "title": "Residual接続（スキップ接続）あり vs なし を比較｜スキップ接続が過学習を加速した話【Keras×CIFAR-10】",
+      "url": "https://zenn.dev/wasurenamemo/articles/49d08dc46d765b"
+    },
+    {
+      "title": "【Transformer】Residual connection(残差コネクション)の話",
+      "url": "https://zenn.dev/timoneko/articles/8e37d8403555f9"
+    },
+    {
+      "title": "Fable時代のAI活用法を、Anthropicの開発者が公開",
+      "url": "https://zenn.dev/knowledgesense/articles/283244af941a2d"
+    }
+  ],
+  "layer-normalization": [
+    {
+      "title": "【解説】なぜTransformerはBatchNormではなくLayerNormなのか？ (数式なしで語るエンジニアリングの必然)",
+      "url": "https://zenn.dev/lixian/articles/240f820da83546"
+    },
+    {
+      "title": "LayerNormの誤差逆伝播法",
+      "url": "https://zenn.dev/taro137/articles/2c639b39a32166"
+    },
+    {
+      "title": "Fable時代のAI活用法を、Anthropicの開発者が公開",
+      "url": "https://zenn.dev/knowledgesense/articles/283244af941a2d"
+    },
+    {
+      "title": "「モダンC#」に入門しよう！2025【.NET10/C#14】",
+      "url": "https://zenn.dev/inuinu/articles/modern-c-sharp-2025-in-csharp14-and-dotnet10"
+    }
+  ],
+  "graphrag": [
+    {
+      "title": "GraphRAGを実際に構築して分かった「使うほど賢くなるAI」の仕組み",
+      "url": "https://zenn.dev/okikusan/articles/0f8295e7ecaa19"
+    },
+    {
+      "title": "エンジニアのためのGraphRAG入門: 知識グラフ活用の第一歩",
+      "url": "https://zenn.dev/fukurou_labo/articles/f0c233eb5aebb7"
+    },
+    {
+      "title": "ベクトル検索では答えられない質問がある -- GraphRAGが従来RAGの構造的限界を超える仕組み",
+      "url": "https://zenn.dev/kenimo49/articles/graphrag-beyond-vector-search-limit"
+    },
+    {
+      "title": "AutoGen × GraphRAG で類似レポート検索を試してみた",
+      "url": "https://zenn.dev/secondselection/articles/autogen_graphrag"
+    }
+  ],
+  "agentic-rag": [
+    {
+      "title": "Agentic RAGに進化した社内向けQAエージェント",
+      "url": "https://zenn.dev/hacobu/articles/86b95396acc76f"
+    },
+    {
+      "title": "【論文紹介】Agentic RAGのサーベイ",
+      "url": "https://zenn.dev/zenkigen_tech/articles/2025-01-katsuta-rag"
+    },
+    {
+      "title": "RAGに「どこを見るか」を判断させる Agentic RAGの3つのアーキテクチャパターン",
+      "url": "https://zenn.dev/kenimo49/articles/agentic-rag-self-deciding-search-strategy"
+    },
+    {
+      "title": "LangGraphで学ぶAgentic RAG解説",
+      "url": "https://zenn.dev/egghead/articles/22966db52b604d"
+    }
+  ],
+  "dpo": [
+    {
+      "title": "Tanuki-8B, 8x8B - Direct Preference Optimization (DPO)実行(11/24日勉強会公開用)",
+      "url": "https://zenn.dev/matsuolab/articles/62d99af24ff89a"
+    },
+    {
+      "title": "RLHFは重すぎると思ったら — 小さな“好みデータ”から始めるDirect Preference Optimization（DPO）入門",
+      "url": "https://zenn.dev/lluminai_tech/articles/47cd1c0b86b9a3"
+    },
+    {
+      "title": "LLM 事後学習 (SFT / RLHF / DPO / RLVR / GRPO / 自己蒸留) を教師信号から眺める",
+      "url": "https://zenn.dev/shunk031/articles/llm-post-training-overview"
+    },
+    {
+      "title": "【Team JINIAC】事後学習：DPOによるアライメント",
+      "url": "https://zenn.dev/matsuolab/articles/d76e5faaf4e18b"
+    }
+  ],
+  "instruction-tuning": [
+    {
+      "title": "LLMのInstruction Tuningデータ、10%に絞っても精度が上がる仕組みをNAITで理解する",
+      "url": "https://zenn.dev/hokuto7/articles/d30fc83fc198ba"
+    },
+    {
+      "title": "LLMの“言うことを聞く力”はどこまで合成データだけで鍛えられるか — FLAN流 の Instruction tuning",
+      "url": "https://zenn.dev/lluminai_tech/articles/ffe4fc2ff473de"
+    },
+    {
+      "title": "指示チューニングとファインチューニングの違いを設計レベルで整理する",
+      "url": "https://zenn.dev/amasashi/articles/c0c1c35805d898"
+    },
+    {
+      "title": "Mixtral 250MのpretrainingからInstruction Tuningまで",
+      "url": "https://zenn.dev/if001/articles/9bb90e0d8c201f"
+    }
+  ],
+  "constitutional-ai": [
+    {
+      "title": "vercel ai で書き捨ての Deno CLI を書き直した (OpenAI, AnthropicAI, Google Gemini)",
+      "url": "https://zenn.dev/mizchi/articles/deno-cli-ai-sdk-tools-template"
+    },
+    {
+      "title": "AnthropicAI Tool で Retrieval-Augmented Generation を実装してみた",
+      "url": "https://zenn.dev/mizchi/articles/impl-rag-by-anthropic-tools"
+    },
+    {
+      "title": "PydanticAI の新機能：pydantic-graph で AI エージェントのワークフローを作る",
+      "url": "https://zenn.dev/atsukish/articles/8169318b02e39c"
+    },
+    {
+      "title": "[Snowflake Summit2025 参加記] Snowflake IntelligenceとNo-code AgenticAI",
+      "url": "https://zenn.dev/finatext/articles/session-report-snowflake-summit-wn214b"
+    }
+  ],
+  "structured-output": [
+    {
+      "title": "【OpenAI API】Structured OutputsでLLMアプリ開発を高精度化&爆速化🚀【構造化出力】",
+      "url": "https://zenn.dev/chips0711/articles/ab49bde721375e"
+    },
+    {
+      "title": "【最速検証記事!?】Azure OpenAIで実現するStructured Outputsの力: 具体例と実装ガイド🚀【構造化出力】",
+      "url": "https://zenn.dev/chips0711/articles/feb8663ebc54ad"
+    },
+    {
+      "title": "画像認識アプリを無料枠で作る。Gemini 2.5 Flashの構造化出力（Structured Outputs）が優秀すぎた",
+      "url": "https://zenn.dev/snowy_montblanc/articles/c361df1781105c"
+    },
+    {
+      "title": "OpenAI APIのJSON ModeとFunction Callingの精度比較",
+      "url": "https://zenn.dev/stafes_blog/articles/7f96753fa0de75"
+    }
+  ],
+  "prompt-caching": [
+    {
+      "title": "Prompt Cachingを完全に理解してLLMコストを爆裂に下げる",
+      "url": "https://zenn.dev/ubie_dev/articles/ade17afebabaa9"
+    },
+    {
+      "title": "Claudeの「Prompt Caching」でLLMのコスト削減を図る",
+      "url": "https://zenn.dev/acntechjp/articles/bf7733a7044e6a"
+    },
+    {
+      "title": "Claude Codeユーザーのためのプロンプトキャッシュ入門",
+      "url": "https://zenn.dev/lv/articles/302bf552110e67"
+    },
+    {
+      "title": "MCPサーバーを使うなら Prompt Caching が大切だと思い知った話",
+      "url": "https://zenn.dev/ncdc/articles/26165a6fedd7e4"
+    }
+  ],
+  "synthetic-data": [
+    {
+      "title": "Synthetic Data（合成データ）についてのSEとしての理解",
+      "url": "https://zenn.dev/muit_techblog/articles/4d6cf3c0983190"
+    },
+    {
+      "title": "大規模言語モデルを開発するにあたっての事前・事後学習の戦略メモー特に合成データについてー",
+      "url": "https://zenn.dev/matsuolab/articles/34036f017fae9e"
+    },
+    {
+      "title": "Kubricで機械学習用の合成データを作成する",
+      "url": "https://zenn.dev/spritaro/articles/634105258b79f4"
+    },
+    {
+      "title": "Groq × DPO で「ひらがなだけで答える LLM」をつくる - 合成データ生成から学習・評価まで -",
+      "url": "https://zenn.dev/quixotiks/articles/98f34bc582ffc9"
+    }
+  ],
+  "react-prompting": [
+    {
+      "title": "ReAct: Synergizing Reasoning and Acting in Language Modelsの論文を読んでみた",
+      "url": "https://zenn.dev/tech_taka/articles/d81db2f45268f0"
+    },
+    {
+      "title": "React デザインパターン",
+      "url": "https://zenn.dev/grooves/articles/a1d268ac45ed67"
+    },
+    {
+      "title": "Reactベストプラクティスの宝庫！「bulletproof-react」が勉強になりすぎる件",
+      "url": "https://zenn.dev/manalink_dev/articles/bulletproof-react-is-best-architecture"
+    },
+    {
+      "title": "本気で考えるReactのベストプラクティス！bulletproof-react2022",
+      "url": "https://zenn.dev/t_keshi/articles/bulletproof-react-2022"
+    }
+  ],
+  "computer-use": [
+    {
+      "title": "Computer Use 時代のフォーム設計：AIエージェントに代理入力させる前提で組む",
+      "url": "https://zenn.dev/lova_man/articles/4e78e130efb330"
+    },
+    {
+      "title": "Claude Computer Use Demo - エージェントループの詳細解説",
+      "url": "https://zenn.dev/sunwood_ai_labs/articles/claude-agent-loop-demo"
+    },
+    {
+      "title": "Anthropic Claude の Computer Use Demo を解剖する：仮想世界を操るAIエージェント",
+      "url": "https://zenn.dev/sunwood_ai_labs/articles/claude-ai-demo-analysis"
+    },
+    {
+      "title": "OpenAI GPT-5.4が登場：100万トークンコンテキストとネイティブコンピュータ操作でエージェント時代が本格化",
+      "url": "https://zenn.dev/yu_ga/articles/2026-03-10-gpt-5-4-release"
+    }
+  ],
+  "human-in-the-loop": [
+    {
+      "title": "HITL（Human-in-the-Loop）で“暴走しないエージェント”を作る ― 任せる前に合意、動かす前に確認",
+      "url": "https://zenn.dev/baobao1219/articles/14662b2ea450b5"
+    },
+    {
+      "title": "感想: Human-in-the-Loop 機械学習 -人間参加型AIのための能動学習とアノテーション-",
+      "url": "https://zenn.dev/hagino3000/articles/513b4883fe566e"
+    },
+    {
+      "title": "【AIエージェント入門】Mastraで理解するAgent LoopとHuman-in-the-Loop",
+      "url": "https://zenn.dev/condy/articles/24a81b8341fb89"
+    },
+    {
+      "title": "AIエージェントはなぜ人間と協働するのか｜Human-In-The-Loopで理解する意思決定の最終制御",
+      "url": "https://zenn.dev/startspace/articles/bd01942b140647"
+    }
+  ],
+  "orchestrator": [
+    {
+      "title": "GitHub Copilot サブエージェントによるオーケストレーター パターンの実践",
+      "url": "https://zenn.dev/openjny/articles/e11450f61d067f"
+    },
+    {
+      "title": "Claude Codeで「AI会社」を動かす — 89タスクを自律処理したオーケストレーター全設計",
+      "url": "https://zenn.dev/seeda_yuto/articles/bridgeboard-ai-company-orchestrator"
+    },
+    {
+      "title": "Opus 4.6 の Agent Teams でマルチエージェントオーケストレーターを強化する",
+      "url": "https://zenn.dev/kok1eeeee/articles/claude-opus-46-agent-teams-teammatetool"
+    },
+    {
+      "title": "Claude Codeマルチエージェント設計パターン — Orchestrator・Worker・Reviewerの使い分け",
+      "url": "https://zenn.dev/joinclass/articles/claude-code-multi-agent-patterns"
+    }
+  ],
+  "llm-as-a-judge": [
+    {
+      "title": "LLMによるLLMの評価「LLM-as-a-Judge」入門〜基礎から運用まで徹底解説",
+      "url": "https://zenn.dev/pharmax/articles/2d07bf0498e212"
+    },
+    {
+      "title": "LLM-as-a-Judge とルーブリック評価",
+      "url": "https://zenn.dev/ubie_dev/articles/llm-as-a-judge-rubric-evaluation"
+    },
+    {
+      "title": "信頼できるLLM-as-a-Judgeの構築に向けた研究動向",
+      "url": "https://zenn.dev/tsurubee/articles/1383f86eee4825"
+    },
+    {
+      "title": "RAGの評価方法の実装&比較~失敗談を添えて~【RAGAS】【LLM-as-a-judge】",
+      "url": "https://zenn.dev/hibari_inc/articles/rag_evaluation_article"
+    }
+  ],
+  "perplexity": [
+    {
+      "title": "【MCPのトリセツ #13】Perplexity MCP Server: Perplexity ならではの検索をAIとの会話で実行",
+      "url": "https://zenn.dev/takna/articles/mcp-server-tutorial-13-perplexity"
+    },
+    {
+      "title": "KenLMのPerplexityで日本語Instructionデータセットの品質を評価できないか試す",
+      "url": "https://zenn.dev/kendama/articles/239bac5e971656"
+    },
+    {
+      "title": "Microsoftが発表したPlaywright MCPについて[AIとやってみた(Perplexity)]",
+      "url": "https://zenn.dev/space_k/articles/20250322-playwright"
+    },
+    {
+      "title": "Perplexity APIでAgentにWeb検索機能を持たせてみる",
+      "url": "https://zenn.dev/akring/articles/760afffa29591e"
+    }
+  ],
+  "gsm8k": [
+    {
+      "title": "Fable時代のAI活用法を、Anthropicの開発者が公開",
+      "url": "https://zenn.dev/knowledgesense/articles/283244af941a2d"
+    },
+    {
+      "title": "「モダンC#」に入門しよう！2025【.NET10/C#14】",
+      "url": "https://zenn.dev/inuinu/articles/modern-c-sharp-2025-in-csharp14-and-dotnet10"
+    },
+    {
+      "title": "【Vue.js】今、ゼロから Vue を学び始めるならこうやるといいんじゃないか (2024) 【初学者向け】",
+      "url": "https://zenn.dev/comm_vue_nuxt/articles/start-to-learn-vue-2024"
+    },
+    {
+      "title": "Vite ってよく聞くけど何なんですか？ あれは",
+      "url": "https://zenn.dev/comm_vue_nuxt/articles/what-is-vite"
+    }
+  ],
+  "needle-in-a-haystack": [
+    {
+      "title": "「モダンC#」に入門しよう！2025【.NET10/C#14】",
+      "url": "https://zenn.dev/inuinu/articles/modern-c-sharp-2025-in-csharp14-and-dotnet10"
+    },
+    {
+      "title": "【Vue.js】今、ゼロから Vue を学び始めるならこうやるといいんじゃないか (2024) 【初学者向け】",
+      "url": "https://zenn.dev/comm_vue_nuxt/articles/start-to-learn-vue-2024"
+    },
+    {
+      "title": "Vite ってよく聞くけど何なんですか？ あれは",
+      "url": "https://zenn.dev/comm_vue_nuxt/articles/what-is-vite"
+    },
+    {
+      "title": "LLVM入門 - javascript使いがLLVM(Rust:inkwell)でjavascriptをJITコンパイルするまで",
+      "url": "https://zenn.dev/silverbirder/articles/d6ae6419ac167e"
+    }
+  ],
+  "triton-inference-server": [
+    {
+      "title": "[Triton Inference Server] TorchScript使用時と未使用時のモデルデプロイ比較",
+      "url": "https://zenn.dev/sousquared/articles/cc77e6bf00837d"
+    },
+    {
+      "title": "Triton Inference Serverを色々な環境から使いたい: TypeScript (Node.js) 編",
+      "url": "https://zenn.dev/tuxedocat/articles/triton-client-typescript"
+    },
+    {
+      "title": "DeepStream vs Triton Inference Server",
+      "url": "https://zenn.dev/getty708/articles/triton-vs-deepstream"
+    },
+    {
+      "title": "QLoRAによるLLM省メモリFine-tuningと高速デプロイ： TensorRT-LLM・Triton・H100検証 1",
+      "url": "https://zenn.dev/fixstars/articles/llm-qlora-triton-1"
+    }
+  ],
+  "ray": [
+    {
+      "title": "Raycastのススメと使い方",
+      "url": "https://zenn.dev/fumi_sagawa/articles/2ff5fd9c03fbcd"
+    },
+    {
+      "title": "Macの生産性を高めるRaycastの活用法【よく使う機能4つ+小技3つ】",
+      "url": "https://zenn.dev/ichigoooo/articles/5111e8a96a4c19"
+    },
+    {
+      "title": "Raycastの推しAI Command",
+      "url": "https://zenn.dev/ryo_kawamata/articles/a75bcceeff9e7b"
+    },
+    {
+      "title": "ブラウザ上でヌルヌル動作する流体シミュレーションを Rust + wasm-bindgen-rayon で実装する",
+      "url": "https://zenn.dev/sparkle/articles/8f9fb109c0d5aa"
+    }
+  ],
+  "hugging-face": [
+    {
+      "title": "Hugging Faceが提供するLLM講座を受講してみた（1~4章）",
+      "url": "https://zenn.dev/tmtk/articles/9bddf3bd2d6ecc"
+    },
+    {
+      "title": "イナババ怪文書生成AIをHugging Face Spaces + Streamlitでデプロイした",
+      "url": "https://zenn.dev/koujimachi2023/articles/b70ddeee91f3fb"
+    },
+    {
+      "title": "Hugging Face NLP Course - 7. MAIN NLP TASKS 後編",
+      "url": "https://zenn.dev/hijikix/articles/8f8cfaa38fbbcc"
+    },
+    {
+      "title": "Hugging Face NLP Course - 7. MAIN NLP TASKS 前編",
+      "url": "https://zenn.dev/hijikix/articles/a8c9ab73a3f3b4"
+    }
+  ],
+  "llm-gateway": [
+    {
+      "title": "能力制限付きルーティング — Fable 5 に学ぶLLMゲートウェイ設計",
+      "url": "https://zenn.dev/suwash/articles/capability-limited-routing_20260610"
+    },
+    {
+      "title": "LiteLLM vs OpenRouter vs Portkey: LLMゲートウェイ完全比較【2026年版】",
+      "url": "https://zenn.dev/agdexai/articles/llm-gateway-comparison-2026"
+    },
+    {
+      "title": "Fable時代のAI活用法を、Anthropicの開発者が公開",
+      "url": "https://zenn.dev/knowledgesense/articles/283244af941a2d"
+    },
+    {
+      "title": "「モダンC#」に入門しよう！2025【.NET10/C#14】",
+      "url": "https://zenn.dev/inuinu/articles/modern-c-sharp-2025-in-csharp14-and-dotnet10"
+    }
+  ],
+  "flash-attention": [
+    {
+      "title": "論文まとめ: FlashAttention",
+      "url": "https://zenn.dev/sinchir0/articles/21bb6e96c7b05b"
+    },
+    {
+      "title": "【WSL2 メモリ管理】 32GB RAM PCでFlashAttention 2のインストールに苦戦した話",
+      "url": "https://zenn.dev/yh_catalysis/articles/wsl2-flashattn2-install"
+    },
+    {
+      "title": "Fable時代のAI活用法を、Anthropicの開発者が公開",
+      "url": "https://zenn.dev/knowledgesense/articles/283244af941a2d"
+    },
+    {
+      "title": "「モダンC#」に入門しよう！2025【.NET10/C#14】",
+      "url": "https://zenn.dev/inuinu/articles/modern-c-sharp-2025-in-csharp14-and-dotnet10"
+    }
+  ],
+  "grouped-query-attention": [
+    {
+      "title": "[Attention] Grouped-Query Attention",
+      "url": "https://zenn.dev/yokosyun/articles/9931aee396f603"
+    },
+    {
+      "title": "Fable時代のAI活用法を、Anthropicの開発者が公開",
+      "url": "https://zenn.dev/knowledgesense/articles/283244af941a2d"
+    },
+    {
+      "title": "「モダンC#」に入門しよう！2025【.NET10/C#14】",
+      "url": "https://zenn.dev/inuinu/articles/modern-c-sharp-2025-in-csharp14-and-dotnet10"
+    },
+    {
+      "title": "【Vue.js】今、ゼロから Vue を学び始めるならこうやるといいんじゃないか (2024) 【初学者向け】",
+      "url": "https://zenn.dev/comm_vue_nuxt/articles/start-to-learn-vue-2024"
+    }
+  ],
+  "multi-query-attention": [
+    {
+      "title": "【論文紹介】MPMQA: Multimodal Question Answering on Product Manuals",
+      "url": "https://zenn.dev/panda_blog/articles/fd1d3ef8357829"
+    },
+    {
+      "title": "Fable時代のAI活用法を、Anthropicの開発者が公開",
+      "url": "https://zenn.dev/knowledgesense/articles/283244af941a2d"
+    },
+    {
+      "title": "「モダンC#」に入門しよう！2025【.NET10/C#14】",
+      "url": "https://zenn.dev/inuinu/articles/modern-c-sharp-2025-in-csharp14-and-dotnet10"
+    },
+    {
+      "title": "【Vue.js】今、ゼロから Vue を学び始めるならこうやるといいんじゃないか (2024) 【初学者向け】",
+      "url": "https://zenn.dev/comm_vue_nuxt/articles/start-to-learn-vue-2024"
+    }
+  ],
+  "sliding-window-attention": [
+    {
+      "title": "「モダンC#」に入門しよう！2025【.NET10/C#14】",
+      "url": "https://zenn.dev/inuinu/articles/modern-c-sharp-2025-in-csharp14-and-dotnet10"
+    },
+    {
+      "title": "【Vue.js】今、ゼロから Vue を学び始めるならこうやるといいんじゃないか (2024) 【初学者向け】",
+      "url": "https://zenn.dev/comm_vue_nuxt/articles/start-to-learn-vue-2024"
+    },
+    {
+      "title": "Vite ってよく聞くけど何なんですか？ あれは",
+      "url": "https://zenn.dev/comm_vue_nuxt/articles/what-is-vite"
+    },
+    {
+      "title": "LLVM入門 - javascript使いがLLVM(Rust:inkwell)でjavascriptをJITコンパイルするまで",
+      "url": "https://zenn.dev/silverbirder/articles/d6ae6419ac167e"
+    }
+  ],
+  "mixture-of-depths": [
+    {
+      "title": "Model Context Protocol（MCP）とは？生成 AI の可能性を広げる新しい標準",
+      "url": "https://zenn.dev/cloud_ace_jp/articles/model-context-protocol"
+    },
+    {
+      "title": "GoogleのModern Web Guidanceスキル登場。AIが古いCSS・JSを書く問題を解決する",
+      "url": "https://zenn.dev/ubie_dev/articles/modern-web-guidance"
+    },
+    {
+      "title": "Model Context Protocol (MCP) サーバを使ってみた・作ってみた",
+      "url": "https://zenn.dev/karaage0703/articles/42f7b0655a6af8"
+    },
+    {
+      "title": "FastAPIの作者が作った「SQLModel」が革命的すぎるので、全Python使いに教えたい",
+      "url": "https://zenn.dev/genshi_ai/articles/9923c448c2734c"
+    }
+  ],
+  "zero-shot": [
+    {
+      "title": "SAMURAI: SAMを活用したゼロショット物体追跡モデル（GoogleColab📒ノートブック付）",
+      "url": "https://zenn.dev/sunwood_ai_labs/articles/samurai-zero-shot-object-tracking"
+    },
+    {
+      "title": "ゼロショットの次へ：Few-shotとCoTで感情分類を底上げする（IMDB＋vLLM）",
+      "url": "https://zenn.dev/arai0711/articles/llm_sentiment_cot_blog"
+    },
+    {
+      "title": "LLMゼロショット感情推定の実験をしてみる",
+      "url": "https://zenn.dev/arai0711/articles/llm_sentiment_eval_blog"
+    },
+    {
+      "title": "ゼロショットから推論設計まで（実務で使うLLM運用整理）",
+      "url": "https://zenn.dev/fibujrsl/articles/d13bdad33fc78b"
+    }
+  ],
+  "self-consistency": [
+    {
+      "title": "【MindLab】Agent を「暗記」から「思考」へ：ReAct・Reflection・Self-Consistency 実装ガイド",
+      "url": "https://zenn.dev/asayi_megumi/articles/6fbcf1b248f708"
+    },
+    {
+      "title": "「step by step」は本当に精度が上がるのか — CoTとSelf-Consistencyをミニベンチで検証する",
+      "url": "https://zenn.dev/lluminai_tech/articles/ac19248f266349"
+    },
+    {
+      "title": "Fable時代のAI活用法を、Anthropicの開発者が公開",
+      "url": "https://zenn.dev/knowledgesense/articles/283244af941a2d"
+    },
+    {
+      "title": "「モダンC#」に入門しよう！2025【.NET10/C#14】",
+      "url": "https://zenn.dev/inuinu/articles/modern-c-sharp-2025-in-csharp14-and-dotnet10"
+    }
+  ],
+  "tree-of-thought": [
+    {
+      "title": "Tree of Thoughts (ToT)：わかりやすい実践ガイド",
+      "url": "https://zenn.dev/kimkiyong/articles/c6085c00c184d7"
+    },
+    {
+      "title": "Chromium(V8)のArray.prototype.flatを最大約5倍高速化した",
+      "url": "https://zenn.dev/dinii/articles/675d47a6c21c83"
+    },
+    {
+      "title": "【初心者向け 099】JS高級文法 (async&await,fetch,scope,Prototype,closure,This)　",
+      "url": "https://zenn.dev/eldorado215/articles/1ac37d12bd0d31"
+    },
+    {
+      "title": "AutoTokenizer.from_pretrainedコードリーディング",
+      "url": "https://zenn.dev/hijikix/articles/445343f9e06e5d"
+    }
+  ],
+  "self-instruct": [
+    {
+      "title": "Fable時代のAI活用法を、Anthropicの開発者が公開",
+      "url": "https://zenn.dev/knowledgesense/articles/283244af941a2d"
+    },
+    {
+      "title": "「モダンC#」に入門しよう！2025【.NET10/C#14】",
+      "url": "https://zenn.dev/inuinu/articles/modern-c-sharp-2025-in-csharp14-and-dotnet10"
+    },
+    {
+      "title": "【Vue.js】今、ゼロから Vue を学び始めるならこうやるといいんじゃないか (2024) 【初学者向け】",
+      "url": "https://zenn.dev/comm_vue_nuxt/articles/start-to-learn-vue-2024"
+    },
+    {
+      "title": "Vite ってよく聞くけど何なんですか？ あれは",
+      "url": "https://zenn.dev/comm_vue_nuxt/articles/what-is-vite"
+    }
+  ],
+  "prompt-chaining": [
+    {
+      "title": "Fable時代のAI活用法を、Anthropicの開発者が公開",
+      "url": "https://zenn.dev/knowledgesense/articles/283244af941a2d"
+    },
+    {
+      "title": "「モダンC#」に入門しよう！2025【.NET10/C#14】",
+      "url": "https://zenn.dev/inuinu/articles/modern-c-sharp-2025-in-csharp14-and-dotnet10"
+    },
+    {
+      "title": "【Vue.js】今、ゼロから Vue を学び始めるならこうやるといいんじゃないか (2024) 【初学者向け】",
+      "url": "https://zenn.dev/comm_vue_nuxt/articles/start-to-learn-vue-2024"
+    },
+    {
+      "title": "Vite ってよく聞くけど何なんですか？ あれは",
+      "url": "https://zenn.dev/comm_vue_nuxt/articles/what-is-vite"
+    }
+  ],
+  "retrieval-augmented-fine-tuning": [
+    {
+      "title": "Minecraft Mod/Pluginを対象としたマルウェア“fractureiser”",
+      "url": "https://zenn.dev/toliner/articles/19d1b06da5db81"
+    },
+    {
+      "title": "ハードウェアの知識が無い人向けのアセンブリ言語の話(draft)",
+      "url": "https://zenn.dev/satoru_takeuchi/articles/fb7400bebcaf1c"
+    },
+    {
+      "title": "Draft.js + TaiwindCSS + Next.jsでリッチテキストエディタ",
+      "url": "https://zenn.dev/trictrac/articles/4377beaf0953856b7a0e"
+    },
+    {
+      "title": "なぜ我々はRailsを選択したのか？Smart Craftバックエンドのご紹介",
+      "url": "https://zenn.dev/smartcraft/articles/smart-craft-backend-teck-stack"
+    }
+  ],
+  "hnsw": [
+    {
+      "title": "Fastly Compute と AI (1) HNSW を使ったベクトル検索",
+      "url": "https://zenn.dev/remore/articles/8e7fc66c79f902"
+    },
+    {
+      "title": "高速なベクトル検索を支える技術- HNSWの仕組み",
+      "url": "https://zenn.dev/gvatech_blog/articles/6d7347dfdc5d17"
+    },
+    {
+      "title": "HNSWアルゴリズムの仕組みを整理してみた",
+      "url": "https://zenn.dev/akihirookuda95/articles/642ac5cab66df4"
+    },
+    {
+      "title": "論文から再実装してわかったHNSW近傍探索の本当の難所 — pgvectorの中身を理解する",
+      "url": "https://zenn.dev/jobmore/articles/hnsw-pgvector-deep-dive"
+    }
+  ],
+  "faiss": [
+    {
+      "title": "RAGを自分で実装したくなったらまずこれ見て【ruri-v3 × Faiss】",
+      "url": "https://zenn.dev/genshi_ai/articles/b273cdfc07c55c"
+    },
+    {
+      "title": "ベクトル検索ライブラリFaissで自然言語の近傍検索を試す",
+      "url": "https://zenn.dev/yuta_enginner/articles/53a32cacef0e91"
+    },
+    {
+      "title": "Faissによるベクトル検索の検証とその先の選択肢（SQLite / DuckDB / RDB / BigQuery）",
+      "url": "https://zenn.dev/mima_ita/articles/860681ad19ea2d"
+    },
+    {
+      "title": "似た文書をベクトル検索で探し出したい ~SentenceTransformersとFaissで効率的にベクトル検索~",
+      "url": "https://zenn.dev/nishimoto/articles/0c2ac8c061e597"
+    }
+  ],
+  "cosine-similarity": [
+    {
+      "title": "Vector Search:４つのベクトル検索アルゴリズム：コサイン類似度、ユークリッド距離、マンハッタン距離、負の内部積（スカラー積）",
+      "url": "https://zenn.dev/kameoncloud/articles/56e84dce9cd89f"
+    },
+    {
+      "title": "コサイン類似度を用いた文章の類似性比較、および、キーセンテンス抽出方法の一考察",
+      "url": "https://zenn.dev/shungo_a/articles/1657658234e633"
+    },
+    {
+      "title": "コサイン類似度データの中の外れ値をもつファイルを見つける方法",
+      "url": "https://zenn.dev/ykesamaru/articles/bc10aa51772130"
+    },
+    {
+      "title": "コサイン類似度を計算して文章を比べてみた",
+      "url": "https://zenn.dev/headwaters/articles/86f20e09022f8f"
+    }
+  ],
+  "grok": [
+    {
+      "title": "Colab上でローカルLLMの簡易APIサーバーを構築する【Colab × FastAPI × ngrok】",
+      "url": "https://zenn.dev/satosh/articles/ca03eaa6bf326b"
+    },
+    {
+      "title": "【2025年版】GPT-5/Gemini/Claude/Grok 徹底比較！開発者が選ぶべき「使える」LLMはどれ？",
+      "url": "https://zenn.dev/okikusan/articles/101aec6c99440b"
+    },
+    {
+      "title": "完全無料？CursorでローカルLLMを動かす最短ルート！LM Studio + ngrok 設定ガイド",
+      "url": "https://zenn.dev/00/articles/use-localllm-with-cursor-and-lmstudio"
+    },
+    {
+      "title": "XプレミアムプランでGrokとx_searchツールを使う",
+      "url": "https://zenn.dev/robustonian/articles/x_premium_grok_search"
+    }
+  ],
+  "cohere": [
+    {
+      "title": "最新モデル Cohere Command R+ と AWS Step Functions でノーコード RAG をやってみる",
+      "url": "https://zenn.dev/nasubikun/articles/af95f6c69994ba"
+    },
+    {
+      "title": "Cohere Command R+をAzureで完全従量課金で利用できるので試してみた。",
+      "url": "https://zenn.dev/clouddevcode/articles/d527ca5f1b00ef"
+    },
+    {
+      "title": "Command R+ を Cohere API + Gradio で使う",
+      "url": "https://zenn.dev/bbled/articles/8f895be54b0412"
+    },
+    {
+      "title": "Cohere Embed 4で作る！パワポ資料に強いRAGシステム",
+      "url": "https://zenn.dev/nttdata_tech/articles/3770bb3605325f"
+    }
+  ],
+  "stable-diffusion": [
+    {
+      "title": "Mac miniでローカル画像生成AI(Stable Diffusion Web UI)動かしてみた",
+      "url": "https://zenn.dev/b_tm/articles/ecdc3c7ce06b77"
+    },
+    {
+      "title": "【2025年版】EasyReforgeで始める無料ローカル画像生成AI(Stable Diffusion)のインストールと使い方",
+      "url": "https://zenn.dev/km100/articles/8a65774aeb580f"
+    },
+    {
+      "title": "生成AIをGoogle Colaboratoryで簡単に 【Part8 画像生成AI Stable Diffusion 3 Medium編】",
+      "url": "https://zenn.dev/asap/articles/6f6ca9aa0513d8"
+    },
+    {
+      "title": "生成AIをGoogle Colaboratoryで簡単に  【Part6 画像生成AI Stable Diffusion XL編】",
+      "url": "https://zenn.dev/asap/articles/e4791be54f90ce"
+    }
+  ],
+  "whisper": [
+    {
+      "title": "技術イベントのメモはOpenAI WhisperとGemini CLIに任せる",
+      "url": "https://zenn.dev/r4ynode/articles/audio-transcription-using-openai-whisper"
+    },
+    {
+      "title": "音声認識AIのWhisperをUnreal Engineでリアルタイムに動かすためにやったこと",
+      "url": "https://zenn.dev/akiya_souken/articles/whsper-optimization-for-ue"
+    },
+    {
+      "title": "OpenAIの音声認識モデル Whisperの解説 / Fine Tuning 方法",
+      "url": "https://zenn.dev/fusic/articles/ml-openai-whisper-ft"
+    },
+    {
+      "title": "生成AIをGoogle Colaboratoryで簡単に  【Part5 音声認識AI faster-whisper編】",
+      "url": "https://zenn.dev/asap/articles/ba8fcb1880165e"
+    }
+  ],
+  "clip": [
+    {
+      "title": "ObsidianをWeb Clipperとして使う",
+      "url": "https://zenn.dev/karaage0703/articles/52c3e016653003"
+    },
+    {
+      "title": "AlfredやClipyをやめてRaycastを導入したら、生産性爆上げだった件",
+      "url": "https://zenn.dev/lclco/articles/45d2a49650ebf9"
+    },
+    {
+      "title": "新時代のCSS三角の作り方 clip-path 〜 さらば、すべての border 〜",
+      "url": "https://zenn.dev/seya/articles/f642acf1c47358"
+    },
+    {
+      "title": "コピペってなんだろう？Clipboard編",
+      "url": "https://zenn.dev/cybozu_frontend/articles/d2782f5ad615f0"
+    }
+  ],
+  "truthfulqa": [
+    {
+      "title": "Fable時代のAI活用法を、Anthropicの開発者が公開",
+      "url": "https://zenn.dev/knowledgesense/articles/283244af941a2d"
+    },
+    {
+      "title": "「モダンC#」に入門しよう！2025【.NET10/C#14】",
+      "url": "https://zenn.dev/inuinu/articles/modern-c-sharp-2025-in-csharp14-and-dotnet10"
+    },
+    {
+      "title": "【Vue.js】今、ゼロから Vue を学び始めるならこうやるといいんじゃないか (2024) 【初学者向け】",
+      "url": "https://zenn.dev/comm_vue_nuxt/articles/start-to-learn-vue-2024"
+    },
+    {
+      "title": "Vite ってよく聞くけど何なんですか？ あれは",
+      "url": "https://zenn.dev/comm_vue_nuxt/articles/what-is-vite"
+    }
+  ],
+  "hellaswag": [
+    {
+      "title": "Fable時代のAI活用法を、Anthropicの開発者が公開",
+      "url": "https://zenn.dev/knowledgesense/articles/283244af941a2d"
+    },
+    {
+      "title": "「モダンC#」に入門しよう！2025【.NET10/C#14】",
+      "url": "https://zenn.dev/inuinu/articles/modern-c-sharp-2025-in-csharp14-and-dotnet10"
+    },
+    {
+      "title": "【Vue.js】今、ゼロから Vue を学び始めるならこうやるといいんじゃないか (2024) 【初学者向け】",
+      "url": "https://zenn.dev/comm_vue_nuxt/articles/start-to-learn-vue-2024"
+    },
+    {
+      "title": "Vite ってよく聞くけど何なんですか？ あれは",
+      "url": "https://zenn.dev/comm_vue_nuxt/articles/what-is-vite"
+    }
+  ],
+  "mt-bench": [
+    {
+      "title": "Tanuki8Bに対するMT-Benchを用いた評価を体験してみる",
+      "url": "https://zenn.dev/matsuolab/articles/2aafa8a7ba7482"
+    },
+    {
+      "title": "Fable時代のAI活用法を、Anthropicの開発者が公開",
+      "url": "https://zenn.dev/knowledgesense/articles/283244af941a2d"
+    },
+    {
+      "title": "「モダンC#」に入門しよう！2025【.NET10/C#14】",
+      "url": "https://zenn.dev/inuinu/articles/modern-c-sharp-2025-in-csharp14-and-dotnet10"
+    },
+    {
+      "title": "【Vue.js】今、ゼロから Vue を学び始めるならこうやるといいんじゃないか (2024) 【初学者向け】",
+      "url": "https://zenn.dev/comm_vue_nuxt/articles/start-to-learn-vue-2024"
+    }
+  ],
+  "elo-rating": [
+    {
+      "title": "LLMプロダクト開発における独自評価基準とデータセットの作り方の考察",
+      "url": "https://zenn.dev/seya/articles/ba06e37d226182"
+    },
+    {
+      "title": "LLMの日本語ロールプレイ能力を計測するベンチマーク「Japanese-RP-Bench」の概要と評価結果などのまとめ",
+      "url": "https://zenn.dev/aratako_lm/articles/42ad1a6ac9da45"
+    },
+    {
+      "title": "Fable時代のAI活用法を、Anthropicの開発者が公開",
+      "url": "https://zenn.dev/knowledgesense/articles/283244af941a2d"
+    },
+    {
+      "title": "「モダンC#」に入門しよう！2025【.NET10/C#14】",
+      "url": "https://zenn.dev/inuinu/articles/modern-c-sharp-2025-in-csharp14-and-dotnet10"
+    }
+  ],
+  "batch-normalization": [
+    {
+      "title": "Batch Normalization/バッチ正規化とは",
+      "url": "https://zenn.dev/yuto_mo/articles/1f6478e0d7ae1d"
+    },
+    {
+      "title": "9-⑤[AI][Kaggle][python]Kaggle入門(ディープラーニング入門 5.ドロップアウトとバッチ正規化)",
+      "url": "https://zenn.dev/rg687076/articles/ccca63b7de738f"
+    },
+    {
+      "title": "【ディープラーニング基礎⑪】正規化層とバッチ正規化、その他正規化手法",
+      "url": "https://zenn.dev/student_blog/articles/682e0488629814"
+    },
+    {
+      "title": "Batch Normalization 勉強の備忘録",
+      "url": "https://zenn.dev/haru0805/articles/e0db47991b05fc"
+    }
+  ],
+  "vanishing-gradient": [
+    {
+      "title": "E.勾配消失問題",
+      "url": "https://zenn.dev/logeeeeee/articles/6d8784473faaf2"
+    },
+    {
+      "title": "AI が大量にアウトプットしてくるので認知負荷を下げる Skill を作った",
+      "url": "https://zenn.dev/hataluck/articles/0752919b305a9f"
+    },
+    {
+      "title": "LLMを用いた最近の学習について",
+      "url": "https://zenn.dev/razokulover/articles/b6efec15ea1823"
+    },
+    {
+      "title": "同じ5行のコードが全く違って見える12の瞬間、なぜ私たちは学ぶのか？",
+      "url": "https://zenn.dev/coconala/articles/reasons-for-continuing-to-learn"
+    }
+  ],
+  "adam-optimizer": [
+    {
+      "title": "全ての学習率スケジューリングを過去にするRAdamScheduleFreeはGNNsでも健在",
+      "url": "https://zenn.dev/zenkigen_tech/articles/8356bed81aec91"
+    },
+    {
+      "title": "Adam オプティマイザ — モメントと適応的学習率で細長い谷を降りる",
+      "url": "https://zenn.dev/novaslover/articles/adam-optimizer-adaptive-moment"
+    },
+    {
+      "title": "【線形代数・微積分】最適化アルゴリズムAdamの更新式を理解する",
+      "url": "https://zenn.dev/hiroakikody/articles/f8dcd96292a357"
+    },
+    {
+      "title": "【小学5年生でもわかる】Adam（アダム最適化）ってなに？",
+      "url": "https://zenn.dev/tkrndisk/articles/g-kentei-adam-optimizer-kids"
+    }
+  ],
+  "q-learning": [
+    {
+      "title": "AI&Julia #13｜強化学習 » Q学習 » 迷路探索",
+      "url": "https://zenn.dev/catalyst2064/articles/57132d59a5a4ec"
+    },
+    {
+      "title": "[強化学習][ゼロつく4]Q学習にニューラルネットワーク導入",
+      "url": "https://zenn.dev/the_oga/articles/e262c5794d2d74"
+    },
+    {
+      "title": "[強化学習][ゼロつく4] SARSA, Q学習",
+      "url": "https://zenn.dev/the_oga/articles/5c4d588655591d"
+    },
+    {
+      "title": "Act 28. Q学習について学ぶ",
+      "url": "https://zenn.dev/onishi_ai_lad/articles/459255fd2e7c16"
+    }
+  ],
+  "model-extraction": [
+    {
+      "title": "VS Code DevContainer を使わなくなった私の、LLM エージェント向け開発環境",
+      "url": "https://zenn.dev/kenfdev/articles/1febc0052b0d71"
+    },
+    {
+      "title": "Fable時代のAI活用法を、Anthropicの開発者が公開",
+      "url": "https://zenn.dev/knowledgesense/articles/283244af941a2d"
+    },
+    {
+      "title": "「モダンC#」に入門しよう！2025【.NET10/C#14】",
+      "url": "https://zenn.dev/inuinu/articles/modern-c-sharp-2025-in-csharp14-and-dotnet10"
+    },
+    {
+      "title": "【Vue.js】今、ゼロから Vue を学び始めるならこうやるといいんじゃないか (2024) 【初学者向け】",
+      "url": "https://zenn.dev/comm_vue_nuxt/articles/start-to-learn-vue-2024"
+    }
+  ],
+  "watermarking": [
+    {
+      "title": "【失敗】勝手に画像を転載してくる輩のためにAIにコード書いてもらって画像に電子透かしを入れようとしたが、うまくいかなかった話【解決策求む】",
+      "url": "https://zenn.dev/wwwave/articles/5dff5aa0fb9425"
+    },
+    {
+      "title": "ニューラルネットワークによる音声データの電子透かし技術",
+      "url": "https://zenn.dev/dalab/articles/94968aebdeb3ea"
+    },
+    {
+      "title": "Go言語で画像のsteganography (電子透かし)を実装しよう!(標準ライブラリのみで）",
+      "url": "https://zenn.dev/akb428/articles/129d1c77ffd3e5"
+    },
+    {
+      "title": "VS Code DevContainer を使わなくなった私の、LLM エージェント向け開発環境",
+      "url": "https://zenn.dev/kenfdev/articles/1febc0052b0d71"
+    }
+  ],
+  "backdoor-attack": [
+    {
+      "title": "Fable時代のAI活用法を、Anthropicの開発者が公開",
+      "url": "https://zenn.dev/knowledgesense/articles/283244af941a2d"
+    },
+    {
+      "title": "「モダンC#」に入門しよう！2025【.NET10/C#14】",
+      "url": "https://zenn.dev/inuinu/articles/modern-c-sharp-2025-in-csharp14-and-dotnet10"
+    },
+    {
+      "title": "【Vue.js】今、ゼロから Vue を学び始めるならこうやるといいんじゃないか (2024) 【初学者向け】",
+      "url": "https://zenn.dev/comm_vue_nuxt/articles/start-to-learn-vue-2024"
+    },
+    {
+      "title": "Vite ってよく聞くけど何なんですか？ あれは",
+      "url": "https://zenn.dev/comm_vue_nuxt/articles/what-is-vite"
+    }
+  ],
+  "sandboxing": [
+    {
+      "title": "Claude CodeのSandboxing機能を試してみる：ファイルシステム分離",
+      "url": "https://zenn.dev/tomioka/articles/0496a427f8bcd0"
+    },
+    {
+      "title": "MSIX + AppContainerとWinUIでサンドボックス化されたモダンなWindowsアプリを開発する",
+      "url": "https://zenn.dev/nexryai/articles/68d80b025820cb"
+    },
+    {
+      "title": "Claude CodeのSandboxing機能を試してみる：ネットワーク分離",
+      "url": "https://zenn.dev/tomioka/articles/120252fdaedec3"
+    },
+    {
+      "title": "ENABLE_USER_SCRIPT_SANDBOXINGとは何なのか?",
+      "url": "https://zenn.dev/mxxaxxm/articles/f176caa8e4e63b"
+    }
+  ],
+  "code-interpreter": [
+    {
+      "title": "Advanced Data Analysis（旧ChatGPT Code Interpreter）の活用方法を片っ端から試していく",
+      "url": "https://zenn.dev/karaage0703/articles/5df61d446684f9"
+    },
+    {
+      "title": "Google Colab上で手軽にAdvanced Data Analysis(Code Interpreter)的機能を実現する方法",
+      "url": "https://zenn.dev/karaage0703/articles/f6a1df0b2eabf4"
+    },
+    {
+      "title": "Advanced Data Analysis（旧Code Interpreter）でダミー画像を生成する",
+      "url": "https://zenn.dev/lovegraph/articles/dd7c95fcbda974"
+    },
+    {
+      "title": "Chat GPT Advanced Data Analysis（旧Code Interpreter）で実際のセンサデータ分析を試してみた",
+      "url": "https://zenn.dev/karaage0703/articles/b5db4262fb90d2"
+    }
+  ],
+  "browser-use": [
+    {
+      "title": "Mastra で作る AIエージェント(28) ブラウザ操作エージェントを作ってみる",
+      "url": "https://zenn.dev/shiromizuj/articles/38a53b4b3a6915"
+    },
+    {
+      "title": "X投稿をAIに読ませるなら、まずBrowser Useで画面を見せるのが軽かった",
+      "url": "https://zenn.dev/yamk/articles/xmcp-vs-computer-use-x-research"
+    },
+    {
+      "title": "Claude Code上でPlaywright、Browser Useを色々なパターンで導入＆両者の使い分けについて考えてみる",
+      "url": "https://zenn.dev/shinyaa31/articles/dd315ea4868eb1"
+    },
+    {
+      "title": "Browser Use vs Skyvern vs Stagehand — AIブラウザ自動化ツール徹底比較【2026年版】",
+      "url": "https://zenn.dev/agdex_ai/articles/4710a60a733dd9"
+    }
+  ],
+  "reinforcement-learning": [
+    {
+      "title": "LLM×強化学習の新しいパラダイム: Agentic RLの研究紹介",
+      "url": "https://zenn.dev/kuto5046/articles/agentic_rl_2025"
+    },
+    {
+      "title": "Verlフレームワークを用いたLLMの強化学習(PPO,GRPO,DAPO)",
+      "url": "https://zenn.dev/puwa/articles/verl_document_report"
+    },
+    {
+      "title": "LLMを強化学習: 進化が早すぎる！RLHFライブラリtrlの変わること変わらないこと",
+      "url": "https://zenn.dev/mitsukisakamoto/articles/0c97e7f723cbb7"
+    },
+    {
+      "title": "NeMo RLでLLMの強化学習を実際にやってみた",
+      "url": "https://zenn.dev/fusic/articles/585289784fdc09"
+    }
+  ],
+  "pretraining": [
+    {
+      "title": "ELYZAが公開した日本語LLM「ELYZA-japanese-Llama-2-7b」についての解説 : (1) 事前学習編",
+      "url": "https://zenn.dev/elyza/articles/2fd451c944649d"
+    },
+    {
+      "title": "【LLMの事前学習と事後学習を支える技術】 GPT-3, InstructGPT, DeepSeek-R1で理解し, OSSで再現実装する",
+      "url": "https://zenn.dev/epicai_techblog/articles/cbb8774f43783b"
+    },
+    {
+      "title": "日本語LLMにヒンディー語も学習させてみた。①事前学習・知識転移編",
+      "url": "https://zenn.dev/matsuolab/articles/ad6dc84122fd15"
+    },
+    {
+      "title": "LLMの学習データの違い（事前学習・SFT・RLHF・DPO・RLVR）",
+      "url": "https://zenn.dev/podtech/articles/1c755a018de672"
+    }
+  ],
+  "vision-language-model": [
+    {
+      "title": "VLM視覚言語モデルの歴史整理（2025年9月まで）",
+      "url": "https://zenn.dev/acrosstudioblog/articles/5fac4252d1881a"
+    },
+    {
+      "title": "AIをポケットに。2026年、VLM（視覚言語モデル）を爆速にする4つの神技術",
+      "url": "https://zenn.dev/cahal_inc/articles/272834d5fec90c"
+    },
+    {
+      "title": "うさぎでもわかる日本発の大規模視覚言語モデル「NABLA-VL」",
+      "url": "https://zenn.dev/taku_sid/articles/20250423_nabla_vlm"
+    },
+    {
+      "title": "確定申告の領収書処理をローカルVLM&ローカルLLMでやっつけてみる",
+      "url": "https://zenn.dev/dimeiza/articles/final_tax_return_with_vlm"
+    }
+  ],
+  "opentelemetry": [
+    {
+      "title": "いきなり全部OTelにしなくてOK。New Relic OpenTelemetry API support（Hybrid Agent）",
+      "url": "https://zenn.dev/arairyus/articles/35bb9a0a1d8c4f"
+    },
+    {
+      "title": "ターミナルでOpenTelemetryのトレースを閲覧できるツール「otel-tui」を作りました",
+      "url": "https://zenn.dev/ymtdzzz/articles/a3a809ca1ba440"
+    },
+    {
+      "title": "OpenTelemetry Collector Builder (ocb) を使ってお好みの OTel Collector を作る",
+      "url": "https://zenn.dev/k6s4i53rx/articles/df59cb65b34ef8"
+    },
+    {
+      "title": "curl -> OpenTelemetry Collector -> otel-tui で簡単 OTLP trace 入門",
+      "url": "https://zenn.dev/msksgm/articles/20250811-curl-to-otel-collector-to-otel-tui"
+    }
+  ],
+  "long-context": [
+    {
+      "title": "Gemini 1.5 のロングコンテキストを活かして AI を育てるアプローチ 〜 RAG の限界を軽やかに突破するために",
+      "url": "https://zenn.dev/google_cloud_jp/articles/598d52341cc56f"
+    },
+    {
+      "title": "RAG vs Long-Context LLMs vs Self-Route どれを使うべきか？Self-Route論文解説！",
+      "url": "https://zenn.dev/shromesh/articles/68bca236bc6d38"
+    },
+    {
+      "title": "【LLM】Long Context + Short Instruction (LCSI) との格闘記：評価・データ・アーキテクチャの急所",
+      "url": "https://zenn.dev/lixian/articles/d03457e78df943"
+    },
+    {
+      "title": "LLMの性能評価をしよう(ロングコンテキスト編)",
+      "url": "https://zenn.dev/neody/articles/6d24e7fbb54212"
+    }
+  ],
+  "context-engineering": [
+    {
+      "title": "【第2回】Context Engineering：コンテキストエンジニアリング",
+      "url": "https://zenn.dev/monkey_gineer/articles/cfe343ae6f0c36"
+    },
+    {
+      "title": "コンテキストエンジニアリングがなぜ重要なのか",
+      "url": "https://zenn.dev/knowledgesense/articles/47afd29ecfc3bb"
+    },
+    {
+      "title": "ClaudeCodeで挑むコンテキストエンジニアリング実践",
+      "url": "https://zenn.dev/aki_think/articles/66f6fc7530467a"
+    },
+    {
+      "title": "コンテキストエンジニアリングをKVキャッシュから理解する(Claude Codeユーザ～vLLMサーバ視点)",
+      "url": "https://zenn.dev/katalab/articles/39c313b89e6518"
+    }
+  ],
+  "diffusion-llm": [
+    {
+      "title": "[翻訳+検証] SGLangでDiffusion LLMをサポート：LLaDA 2.0のDay-0実装",
+      "url": "https://zenn.dev/tosshi/articles/067d4c912c98d6"
+    },
+    {
+      "title": "拡散型LLM(Gemini Diffusion)におけるプロンプトの調査",
+      "url": "https://zenn.dev/artistics_blog/articles/20250620-gemini-diffusion"
+    },
+    {
+      "title": "拡散型LLM(Gemini Diffusion)におけるプロンプトの調査 その2",
+      "url": "https://zenn.dev/artistics_blog/articles/20250625-gemini-diffusion"
+    },
+    {
+      "title": "日本語特化拡散言語モデル「ELYZA-LLM-Diffusion」の公開",
+      "url": "https://zenn.dev/elyza/articles/f9dd010e895a34"
+    }
+  ],
+  "ai-ide": [
+    {
+      "title": "NotebookLM のスライドを「編集できる資料」にするーGemini で YAML 化 → Google Slide 生成",
+      "url": "https://zenn.dev/hirokita117/articles/24c42f407dc9b9"
+    },
+    {
+      "title": "amazonの出したIDE「kiro」がめちゃくちゃ未来だったのでClaude Codeユーザーの人はみんな一度試してみてほしい",
+      "url": "https://zenn.dev/sesere/articles/31d4b460c949e5"
+    },
+    {
+      "title": "Vimmer にお勧めしたい AI エージェント「Aider」",
+      "url": "https://zenn.dev/acro5piano/articles/1d900a93c608e1"
+    },
+    {
+      "title": "「クラウドでIDEを動かしたかっただけなのに」AWSで22万円のクラウド破産した話",
+      "url": "https://zenn.dev/eightbeat/articles/ca6ce3d06c0265"
+    }
+  ],
+  "coding-agent": [
+    {
+      "title": "コーディングエージェントにやさしい環境は、人間にも優しかった ghq × gwq × fzf のススメ",
+      "url": "https://zenn.dev/shunk031/articles/ghq-gwq-fzf-worktree"
+    },
+    {
+      "title": "ゼロからコーディングエージェントを作るならこんなふうに🛠️",
+      "url": "https://zenn.dev/minedia/articles/11822c2b509a79"
+    },
+    {
+      "title": "コーディングエージェントのサンドボックス技術を理解する",
+      "url": "https://zenn.dev/mkj/articles/3ec9d2d39f446b"
+    },
+    {
+      "title": "楽しかったコーディングエージェントサブスク時代の終わり",
+      "url": "https://zenn.dev/tkithrta/articles/0378bc53599fb3"
+    }
+  ],
+  "model-router": [
+    {
+      "title": "【Azure】- モデルルーター（Model Router）がGPT-5に対応していた",
+      "url": "https://zenn.dev/headwaters/articles/62525b4b32cdc9"
+    },
+    {
+      "title": "LLMルーターの自動プロファイル選択をrule-basedでどこまでやるか—CodeRouter v1.6 auto_router",
+      "url": "https://zenn.dev/zephel01/articles/7614011eef3e76"
+    },
+    {
+      "title": "Azure AI Foundryのモデルルーターを使ってみた",
+      "url": "https://zenn.dev/headwaters/articles/e3c9ef44588874"
+    },
+    {
+      "title": "【2026年6月】3大AIモデル同時進化を受けて作る「マルチLLMルーター」入門",
+      "url": "https://zenn.dev/kairosai/articles/7c4fe5ae93db4f"
+    }
+  ],
+  "local-llm": [
+    {
+      "title": "ローカルLLMをいつ使うべきか？",
+      "url": "https://zenn.dev/sompojapan_dx/articles/74624afa03040c"
+    },
+    {
+      "title": "CodexをローカルLLMで駆動する",
+      "url": "https://zenn.dev/robustonian/articles/codex_with_local_llm"
+    },
+    {
+      "title": "DeepSeekがやっていると噂の蒸留というやつを、ローカルLLMで今すぐやってみる 前編",
+      "url": "https://zenn.dev/yuiseki/articles/4737799cad4a8d"
+    },
+    {
+      "title": "逆に、すべてのローカルLLMは開発元をOpenAIだと思い込んでいる説",
+      "url": "https://zenn.dev/yuiseki/articles/d90c4544ea3ea6"
+    }
+  ],
+  "test-time-scaling": [
+    {
+      "title": "AISIのtest-time computeを使う：AIエージェント評価を3予算で作る",
+      "url": "https://zenn.dev/hironakamura_ai/articles/fc964f9050c0eb"
+    },
+    {
+      "title": "シンプルなTest-time Scalingの紹介 (s1: Simple test-time scaling)",
+      "url": "https://zenn.dev/mkj/articles/6d8f3282482bd7"
+    },
+    {
+      "title": "VS Code DevContainer を使わなくなった私の、LLM エージェント向け開発環境",
+      "url": "https://zenn.dev/kenfdev/articles/1febc0052b0d71"
+    },
+    {
+      "title": "Fable時代のAI活用法を、Anthropicの開発者が公開",
+      "url": "https://zenn.dev/knowledgesense/articles/283244af941a2d"
+    }
+  ],
+  "grpo": [
+    {
+      "title": "Group Relative Policy Optimization (GRPO): 大規模言語モデルのための効率的強化学習",
+      "url": "https://zenn.dev/questlico/articles/a503c8f9d10522"
+    },
+    {
+      "title": "Verlフレームワークを用いたLLMの強化学習(PPO,GRPO,DAPO)",
+      "url": "https://zenn.dev/puwa/articles/verl_document_report"
+    },
+    {
+      "title": "強化学習「GRPO」をCartPoleタスクで実装しながら解説",
+      "url": "https://zenn.dev/mkj/articles/10dfe35cd32026"
+    },
+    {
+      "title": "LLM 事後学習 (SFT / RLHF / DPO / RLVR / GRPO / 自己蒸留) を教師信号から眺める",
+      "url": "https://zenn.dev/shunk031/articles/llm-post-training-overview"
+    }
+  ],
+  "rlvr": [
+    {
+      "title": "LLM 事後学習 (SFT / RLHF / DPO / RLVR / GRPO / 自己蒸留) を教師信号から眺める",
+      "url": "https://zenn.dev/shunk031/articles/llm-post-training-overview"
+    },
+    {
+      "title": "LLMの学習データの違い（事前学習・SFT・RLHF・DPO・RLVR）",
+      "url": "https://zenn.dev/podtech/articles/1c755a018de672"
+    },
+    {
+      "title": "RLVRの隠れた失敗：LLMはバリデータを「ハック」している",
+      "url": "https://zenn.dev/lixian/articles/rlvr-reward-hacking"
+    },
+    {
+      "title": "PPOかGRPOか？Explained Varianceが解くRLVRの最大のジレンマ",
+      "url": "https://zenn.dev/lixian/articles/evpo-explained-variance-ppo"
+    }
+  ],
+  "world-model": [
+    {
+      "title": "世界モデル（World Models）の現在地 — 2026年3月時点の動向整理",
+      "url": "https://zenn.dev/taniii_shio/articles/311b721b7d9782"
+    },
+    {
+      "title": "Looped World Modelsを読んで、未来を予測するAIキャラクターを作りたくなった",
+      "url": "https://zenn.dev/y2yhwh/articles/98c1cc84d76fba"
+    },
+    {
+      "title": "世界モデル（World Model）ベンチマーク結果2024 - o1 & Grok2",
+      "url": "https://zenn.dev/singularity/articles/ai-world-model-comparison-2024"
+    },
+    {
+      "title": "GAIA-1: 自動運転のための世界モデルを理解する",
+      "url": "https://zenn.dev/turing_motors/articles/201d77875d7f8d"
+    }
+  ],
+  "physical-ai": [
+    {
+      "title": "フィジカルAI最前線2026 — 日本の製造業・モビリティを変革するAIロボティクスの実装ガイド",
+      "url": "https://zenn.dev/ai_nexus/articles/physical-ai-japan-2026"
+    },
+    {
+      "title": "ロボティクス分野に見るフィジカルAIの利活用事例",
+      "url": "https://zenn.dev/oggata/articles/01691db7430889"
+    },
+    {
+      "title": "【フィジカルAI x Gemini x MCP】相棒ロボ「Reachy」と楽しくドライブ！",
+      "url": "https://zenn.dev/beavers_hive/articles/8d4d34d54bec1c"
+    },
+    {
+      "title": "【連載#7】Raspberry Pi × FlutterでフィジカルAI：Flutter監視UI①（ダッシュボード/死活/一覧）",
+      "url": "https://zenn.dev/docbrown/articles/c5c03e6a013c6c"
+    }
+  ],
+  "deep-research": [
+    {
+      "title": "RAGでDeep Researchのような深い検索を実現する手法",
+      "url": "https://zenn.dev/knowledgesense/articles/6d4d9bf52690a4"
+    },
+    {
+      "title": "perplexityのdeep researchでAIエージェント検索サービスを比較してみる",
+      "url": "https://zenn.dev/chameleonmeme/articles/e0b05cd38d9dfb"
+    },
+    {
+      "title": "GitHub Copilot カスタムエージェントでつくる「なんちゃって Deep Research」エージェント",
+      "url": "https://zenn.dev/openjny/articles/ac83e9eca6678a"
+    },
+    {
+      "title": "Interactions API × Deep Research Agent 入門：Google が描く「自律型エージェント」の未来",
+      "url": "https://zenn.dev/google_cloud_jp/articles/4d04c72142b8f1"
+    }
+  ],
+  "vibe-coding": [
+    {
+      "title": "Vibe Codingで25万ダウンロード超のOSSを開発できた。できたが… ── AIの役割 vs 人間の役割ではなく「協働」で考える",
+      "url": "https://zenn.dev/team_zenn/articles/claudecode-ai-coding-vs-human-engineer"
+    },
+    {
+      "title": "フルVibe Codingでも仕事が進むようになってきた2025年",
+      "url": "https://zenn.dev/kazuph/articles/full-vibe-coding-2025"
+    },
+    {
+      "title": "Claude Codeを20万円分使ってバイブコーディングの生産性を更に向上させるツールを作った",
+      "url": "https://zenn.dev/aktriver/articles/2025-06-claude-code-200k-vibe-coding"
+    },
+    {
+      "title": "スマホでバイブコーディングする技術",
+      "url": "https://zenn.dev/tsuvic/articles/4a866f40142d8b"
+    }
+  ],
+  "spec-driven-development": [
+    {
+      "title": "「Vibe Coding」から「Spec-Driven Development」仕様駆動開発（SDD）入門",
+      "url": "https://zenn.dev/nogu66/articles/spec-driven-development"
+    },
+    {
+      "title": "仕様駆動開発（SDD）を採用したAI駆動開発の実態と課題",
+      "url": "https://zenn.dev/assign/articles/ab66b2843d9380"
+    },
+    {
+      "title": "実務で使い倒したので cc-sdd の仕様駆動開発プロセスを丁寧に解説してみた",
+      "url": "https://zenn.dev/tmasuyama1114/articles/cc_sdd_whole_flow"
+    },
+    {
+      "title": "国産の仕様駆動開発ツール cc-sdd を推していきたい",
+      "url": "https://zenn.dev/kokushing/articles/7468d5f195e54c"
+    }
+  ],
+  "subagent": [
+    {
+      "title": "Claude Code のサブエージェント作成を楽にする小ネタ：subagent-creator を作ってみた話",
+      "url": "https://zenn.dev/hirokita117/articles/69cbc2c1a389c9"
+    },
+    {
+      "title": "開発効率を改善するClaudeCodeサブエージェント（SubAgents）活用術",
+      "url": "https://zenn.dev/nextbeat/articles/e3b91749320680"
+    },
+    {
+      "title": "Claude Code の勝手な処理を防止：Subagents（サブエージェント）の利用案",
+      "url": "https://zenn.dev/sfitb/articles/dd95769c191df7"
+    },
+    {
+      "title": "Claude Code スキル・サブエージェント攻略ガイド",
+      "url": "https://zenn.dev/oligin/articles/7691926a83936a"
+    }
+  ],
+  "llms-txt": [
+    {
+      "title": "LLMs.txtについての覚書",
+      "url": "https://zenn.dev/watany/articles/0b28a68a2dffc3"
+    },
+    {
+      "title": "LLMS.txt: AI時代のWebサイト最適化ガイド",
+      "url": "https://zenn.dev/minedia/articles/llmtxt-in-action"
+    },
+    {
+      "title": "llms.txt と Jina.AI Reader",
+      "url": "https://zenn.dev/kameoncloud/articles/4777d4affc49ea"
+    },
+    {
+      "title": "GitHub Organizationのレポジトリからllms.txtを作成する",
+      "url": "https://zenn.dev/mseabass/articles/0b23717b8e536a"
+    }
+  ],
+  "sovereign-ai": [
+    {
+      "title": "国産LLMが必要な本当の理由 ─ 「帰国子女AI」と「日本生まれAI」で読み解くソブリンAI",
+      "url": "https://zenn.dev/kotakotahiro/articles/45af55a51f14a7"
+    },
+    {
+      "title": "【連載②】ソブリンAIはなぜ今、日本に不可欠なのか──データ主権・経済安全保障・有事のリスク",
+      "url": "https://zenn.dev/nkjm0820/articles/09a1cda67eecb0"
+    },
+    {
+      "title": "そもそも『ソブリンAI』とは何か──なぜ“自前のAI”が国家の論点になったのか",
+      "url": "https://zenn.dev/nkjm0820/articles/daca09cb30cd5d"
+    },
+    {
+      "title": "Fable時代のAI活用法を、Anthropicの開発者が公開",
+      "url": "https://zenn.dev/knowledgesense/articles/283244af941a2d"
+    }
+  ],
+  "agi": [
+    {
+      "title": "Lightweight-AGI: Go言語と大規模言語モデルを使用した軽量な汎用人工知能エージェントを作った話",
+      "url": "https://zenn.dev/zawawahoge/articles/7247e11e284a27"
+    },
+    {
+      "title": "AI Agent yagi を作った",
+      "url": "https://zenn.dev/mattn/articles/af6b456142dafe"
+    },
+    {
+      "title": "iOS でも Web Push が送れる！microCMS と Firebase Cloud Messaging を使った実装方法",
+      "url": "https://zenn.dev/chot/articles/web-push-with-microcms-and-fcm"
+    },
+    {
+      "title": "AI の力でファイル形式を判定する Google 製の「Magika」を試してみる",
+      "url": "https://zenn.dev/kou_pg_0131/articles/magika-introduction"
+    }
+  ],
+  "generative-ai": [
+    {
+      "title": "生成AIの腕試し！Generative AI Testを受けてみた",
+      "url": "https://zenn.dev/carenet/articles/34c6ac8b097de3"
+    },
+    {
+      "title": "プログラミング用途の生成AI関連ツールの評価 2025/04/14",
+      "url": "https://zenn.dev/mizchi/articles/ai-model-current-snapshot-2025-0414"
+    },
+    {
+      "title": "生成AI時代のドキュメント基盤",
+      "url": "https://zenn.dev/nuits_jp/articles/2026-03-19-genai-documentation-foundation"
+    },
+    {
+      "title": "生成AIでパワポを作る方法一覧【2026年3月版】",
+      "url": "https://zenn.dev/ncukondo/articles/ai-generate-pptx-methods-2026"
+    }
+  ],
+  "foundation-model": [
+    {
+      "title": "【論文紹介】A foundation modelfor the Earth system:気象や環境等の時空間データ向けの基盤モデル",
+      "url": "https://zenn.dev/yossya18/articles/1f03445a148ce8"
+    },
+    {
+      "title": "AIエンジニアリング、始めませんか？ ～基盤モデルという巨人の肩に乗って～",
+      "url": "https://zenn.dev/r_kaga/articles/74673cb9333007"
+    },
+    {
+      "title": "【AppleのLLM Foundation Models】で thinking モードをつくる",
+      "url": "https://zenn.dev/mlboydaisuke/articles/c173a120deff786485e5"
+    },
+    {
+      "title": "【17日目】LLM ファインチューニング入門 〜 Foundation Model Training と LoRA で賢く・軽くモデルを育て",
+      "url": "https://zenn.dev/churadata/articles/d133291a60d525"
+    }
+  ],
+  "frontier-model": [
+    {
+      "title": "フロンティアAI による脅威変化を踏まえたFinatextグループとしての対応方針",
+      "url": "https://zenn.dev/finatext/articles/policy-for-frontier-ai"
+    },
+    {
+      "title": "MCPが9,700万DL、フロンティアモデル3連発 — AI業界が加速しすぎてる件【2026年第13週】",
+      "url": "https://zenn.dev/yokoi_ai/articles/ai-general-weekly-2026-w13"
+    },
+    {
+      "title": "Frontier Models are Capable of In-context Scheming",
+      "url": "https://zenn.dev/deepkawamura/articles/d5e4144ab84d70"
+    },
+    {
+      "title": "フロンティアモデルをプロンプトのみで比較(GPT-5.5, opus-4.8, 3.5-Flash)",
+      "url": "https://zenn.dev/rounda_blog/articles/010e46e2f0f82f"
+    }
+  ],
+  "sora": [
+    {
+      "title": "OpenAI Sora に使われる技術",
+      "url": "https://zenn.dev/elith/articles/8567f55b655d0c"
+    },
+    {
+      "title": "OpenAI sora technical report まとめ",
+      "url": "https://zenn.dev/jow/articles/b88118540efd4c"
+    },
+    {
+      "title": "OpenAI Sora 2 公式発表のまとめ（日本語翻訳）",
+      "url": "https://zenn.dev/aidriven/articles/8aa938216cc107"
+    },
+    {
+      "title": "【AI動画生成】Sora 要素技術解説",
+      "url": "https://zenn.dev/mattyamonaca/articles/e234e57834d7ad"
+    }
+  ],
+  "veo": [
+    {
+      "title": "Google Veo 3.1：音声と映像を同時に生成する革新的AI",
+      "url": "https://zenn.dev/querypie/articles/65eafb1d099f07"
+    },
+    {
+      "title": "Google Veo 3がもたらすAI動画制作の革命：2025年最強のテキストto動画ツール完全ガイド",
+      "url": "https://zenn.dev/freeai/articles/956961befca654"
+    },
+    {
+      "title": "Next.js 15とGoogle Veo 3.1で構築した、次世代AI動画SaaS「VEDAI」の技術アーキテクチャ",
+      "url": "https://zenn.dev/evanmo/articles/489f3969caf68d"
+    },
+    {
+      "title": "Google Veo 3.1 APIを使ったEC向けUGC動画の一括制作",
+      "url": "https://zenn.dev/pan0x11/articles/32cbc75c64a5b5"
+    }
+  ],
+  "midjourney": [
+    {
+      "title": "ログ-キャラクターデザインを画像生成AIでブラッシュアップする-DALLE3, Midjourney, niji-jouney",
+      "url": "https://zenn.dev/masasan/articles/76a919b0800fe6"
+    },
+    {
+      "title": "Midjourney V6.1の革新機能で変わるAI画像生成の未来🚀",
+      "url": "https://zenn.dev/supermassu/articles/22dde7b021422a"
+    },
+    {
+      "title": "画像生成AI「Midjourney」を使ってみた！",
+      "url": "https://zenn.dev/satoru_output/articles/midjourney_text"
+    },
+    {
+      "title": "Midjourneyで画像生成してみよう",
+      "url": "https://zenn.dev/yu_saku_3/articles/2239e626a6ba35"
+    }
+  ],
+  "flux": [
+    {
+      "title": "FLUX.1を使ってみた - 高品質画像生成AI！",
+      "url": "https://zenn.dev/acntechjp/articles/395f787e185778"
+    },
+    {
+      "title": "東方風ゲームを作れなかったので、画像生成AI「Flux.1」をローカルで構築した話",
+      "url": "https://zenn.dev/linux_club/articles/1c947796dc00c6"
+    },
+    {
+      "title": "Stable Diffusion WebUI Forge（画像生成AI)でFLUX.1を使用する",
+      "url": "https://zenn.dev/isi00141/articles/9bc241e2abf9e9"
+    },
+    {
+      "title": "生成AIをGoogle Colabで簡単に 【FLUX.1-dev + ControlNet + LoRA】【Diffusers】",
+      "url": "https://zenn.dev/asap/articles/e4c199cecf1836"
+    }
+  ],
+  "notebooklm": [
+    {
+      "title": "NotebookLM のスライドを「編集できる資料」にするーGemini で YAML 化 → Google Slide 生成",
+      "url": "https://zenn.dev/hirokita117/articles/24c42f407dc9b9"
+    },
+    {
+      "title": "NotebookLMの最新動向と活用事例",
+      "url": "https://zenn.dev/tsuruo/articles/9057ee40f89bda"
+    },
+    {
+      "title": "エンジニアの調査タスクにはNotebookLMが最高！使い方とメリットまとめ",
+      "url": "https://zenn.dev/oke331/articles/65d2833a6a555f"
+    },
+    {
+      "title": "Gemini × NotebookLM 連携で「自分専用エージェント」を量産する：蓄積した履歴を血肉化する究極の活用術",
+      "url": "https://zenn.dev/minipoisson/articles/2806b4a0865acb"
+    }
+  ],
+  "kimi": [
+    {
+      "title": "Claude Opus 4.5 vs Kimi K2.5 〜コーディング性能とコスト効率比較〜",
+      "url": "https://zenn.dev/robustonian/articles/claude_vs_kimi_k25"
+    },
+    {
+      "title": "Claude Codeに乗り遅れたあなたへ。Open CodeとGithub CopilotとVSCode（期間限定kimi k2.5）",
+      "url": "https://zenn.dev/kiva/articles/7be372e4783248"
+    },
+    {
+      "title": "Kimi K2.5：エージェントスウォームの夜明けと1兆パラメータ知能の民主化に向けて",
+      "url": "https://zenn.dev/cahal_inc/articles/50f4083975d641"
+    },
+    {
+      "title": "【Kimi K2.5】100体のAIエージェントが同時稼働する次世代マルチモーダルモデルが登場",
+      "url": "https://zenn.dev/yu_ga/articles/kimi-k2-5-agent-swarm"
+    }
+  ],
+  "segment-anything": [
+    {
+      "title": "Meta開発のセグメンテーションモデル Segment Anything Model(SAM) の解説",
+      "url": "https://zenn.dev/fusic/articles/ml-segment-anything-meta"
+    },
+    {
+      "title": "Segment Anything Model 2 (SAM 2)の動画データに対するセグメンテーションのチュートリアル",
+      "url": "https://zenn.dev/hacarus_blog/articles/be8dd532ebeda8"
+    },
+    {
+      "title": "[Tips] Segment Anything Model 2 (SAM 2)を使うときに悩んだ細かい点: 動画の順方向と逆方向への処理",
+      "url": "https://zenn.dev/takilog/articles/44943bb26a92be"
+    },
+    {
+      "title": "生成AIに「SAM（Segment Anything）」を聞いてみた（クリックで任意の対象を切り抜く）",
+      "url": "https://zenn.dev/tkpurine/articles/segment-anything-sam"
+    }
+  ],
+  "alphafold": [
+    {
+      "title": "AlphaFold3の中身の日本語解説",
+      "url": "https://zenn.dev/tonets/articles/dd8c3855eadb2b"
+    },
+    {
+      "title": "【AF2】WindowsユーザーのためのAlphafold2導入方法(デュアルブート)",
+      "url": "https://zenn.dev/zenzenr_2/articles/490680224f732d"
+    },
+    {
+      "title": "AlphaFoldってなに？",
+      "url": "https://zenn.dev/google_cloud_jp/articles/whatisalphafold"
+    },
+    {
+      "title": "【論文紹介】AlphaFold3",
+      "url": "https://zenn.dev/tori_rakko/articles/693c3bf0a93859"
+    }
+  ],
+  "alphago": [
+    {
+      "title": "アルファ碁！説明しよう！",
+      "url": "https://zenn.dev/personal/articles/bb1bb60ed7e9ff"
+    },
+    {
+      "title": "Fable時代のAI活用法を、Anthropicの開発者が公開",
+      "url": "https://zenn.dev/knowledgesense/articles/283244af941a2d"
+    },
+    {
+      "title": "「モダンC#」に入門しよう！2025【.NET10/C#14】",
+      "url": "https://zenn.dev/inuinu/articles/modern-c-sharp-2025-in-csharp14-and-dotnet10"
+    },
+    {
+      "title": "【Vue.js】今、ゼロから Vue を学び始めるならこうやるといいんじゃないか (2024) 【初学者向け】",
+      "url": "https://zenn.dev/comm_vue_nuxt/articles/start-to-learn-vue-2024"
+    }
+  ],
+  "vla": [
+    {
+      "title": "自動運転基盤モデルの最前線 #1 (VLAモデルで挑む自動運転)",
+      "url": "https://zenn.dev/turing_motors/articles/bfbc91eeb94d64"
+    },
+    {
+      "title": "【ダイジェスト】Physical AI・VLAモデルをロボットに統合する実践ガイド",
+      "url": "https://zenn.dev/yamarikihub/articles/physical-ai-vla-robot-integration"
+    },
+    {
+      "title": "100ms以内で動作するVLAモデルの実車適用",
+      "url": "https://zenn.dev/turing_motors/articles/f5e44178d78153"
+    },
+    {
+      "title": "RACER: 自動運転VLAモデルの学習データセットの構築",
+      "url": "https://zenn.dev/turing_motors/articles/aeb2b1219eb6ee"
+    }
+  ],
+  "text-to-video": [
+    {
+      "title": "Azureについに動画生成AIのSoraが来たのでおもむろに試してみる🚀",
+      "url": "https://zenn.dev/chips0711/articles/2d39ceb72038e3"
+    },
+    {
+      "title": "高品質動画生成AI【Allegro】をローカルで実行する【VRAM12GB】",
+      "url": "https://zenn.dev/asap/articles/dac57655eb0314"
+    },
+    {
+      "title": "動画生成AI【CogVideoX】をローカルで実行する",
+      "url": "https://zenn.dev/asap/articles/a4077e8b9ddf1a"
+    },
+    {
+      "title": "高品質動画生成AI【Pyramid Flow】をローカルで実行する",
+      "url": "https://zenn.dev/asap/articles/e1880903625cb5"
+    }
+  ],
+  "text-to-speech": [
+    {
+      "title": "Google Gemini APIで複数話者テキスト音声合成（TTS）を実現！会話を自然な声で生成",
+      "url": "https://zenn.dev/coji/articles/gemini-multi-speaker-tts"
+    },
+    {
+      "title": "ブラウザ内で音声合成を実現する ― sherpa-onnx TTS で完全オフライン翻訳パイプラインを完成させる",
+      "url": "https://zenn.dev/shinonome_tk/articles/aae6da52c1fa39"
+    },
+    {
+      "title": "【音声合成】Matcha-TTS🍵で日本語音声を生成してみる",
+      "url": "https://zenn.dev/fusic/articles/bd7da12adf5901"
+    },
+    {
+      "title": "Google Colab T4でKokoro TTSの音声合成を試してみた",
+      "url": "https://zenn.dev/00/articles/kokoro_tts_on_google_colab"
+    }
+  ],
+  "mamba": [
+    {
+      "title": "深層学習・生成AIの全体像を「3つの問い」で整理する｜CNNから拡散モデル・Mambaまで",
+      "url": "https://zenn.dev/manato_boys/articles/ecf3811c5e529a"
+    },
+    {
+      "title": "Kotomamba: Mamba State Space Model 分散学習ライブラリ",
+      "url": "https://zenn.dev/kotoba_tech/articles/3eb0984d8fdfb8"
+    },
+    {
+      "title": "mambaの理論を理解する①：HiPPOフレームワークとLSSL",
+      "url": "https://zenn.dev/izmyon/articles/8374a11d272602"
+    },
+    {
+      "title": "Transformerは時代遅れ？次世代AIアーキテクチャMamba",
+      "url": "https://zenn.dev/zenn_mita/articles/4ac83668f3b09f"
+    }
+  ],
+  "vision-transformer": [
+    {
+      "title": "論文解説|I-ViT:Integer-only Quantization for Efficient Vision Transformer…",
+      "url": "https://zenn.dev/awesome_ai_tech/articles/bc5a07b066559b"
+    },
+    {
+      "title": "huggingfaceで公開されてるVision Transformer (ViT)のモデルを転移学習する",
+      "url": "https://zenn.dev/derbuihan/articles/1e3c0f2c049053"
+    },
+    {
+      "title": "バンドラー 2025 まとめ | まだ \"vite\" 使ってるの？",
+      "url": "https://zenn.dev/nakasyou/articles/give_up_vite"
+    },
+    {
+      "title": "Vite ってよく聞くけど何なんですか？ あれは",
+      "url": "https://zenn.dev/comm_vue_nuxt/articles/what-is-vite"
+    }
+  ],
+  "u-net": [
+    {
+      "title": "PyTorchとU-Netで作る領域分割モデル",
+      "url": "https://zenn.dev/shnakazawa/articles/a43ebe82dfbb8b"
+    },
+    {
+      "title": "TensorflowのResNet50の事前学習モデルをU-Netに転移学習させる方法",
+      "url": "https://zenn.dev/derbuihan/articles/cc23e8d3be1570"
+    },
+    {
+      "title": "FreeU: Free Lunch in Diffusion U-Net",
+      "url": "https://zenn.dev/kabupen/articles/60e11f4b257634"
+    },
+    {
+      "title": "【論文メモ】PHASE-AWARE SPEECH ENHANCEMENT WITH DEEP COMPLEX U-NET",
+      "url": "https://zenn.dev/rockwell/articles/68b186a8f2f89e"
+    }
+  ],
+  "decoder": [
+    {
+      "title": "JWTデコーダーを自作したら、atob()が動かなくて半日溶かした",
+      "url": "https://zenn.dev/ai_worklab/articles/jwt-decoder-base64url-padding"
+    },
+    {
+      "title": "Base64エンコーダー/デコーダーを作った — ブラウザ完結で安全に変換する",
+      "url": "https://zenn.dev/devnestio/articles/devnestio-tool-base64-encoder-decoder"
+    },
+    {
+      "title": "連載｜生成AIの数理　第3回　Transformerの全貌 ——エンコーダーとデコーダー，データが通る道を数式で辿る——",
+      "url": "https://zenn.dev/tamtak18/articles/36e33e89534948"
+    },
+    {
+      "title": "Decoder-only Transformerとは？GPT系LLMの構造を整理",
+      "url": "https://zenn.dev/kas_blog/articles/20260509-llm-08-decoder-only-transformer"
+    }
+  ],
+  "multi-head-latent-attention": [
+    {
+      "title": "Multi-head Latent Attention (MLA)の詳細【be absorbedとは？】",
+      "url": "https://zenn.dev/asap/articles/be3d4b60d8ac92"
+    },
+    {
+      "title": "Attention の基礎から DeepSeek MLA (Multi-Head Latent Attention) を解説する",
+      "url": "https://zenn.dev/oroshi/articles/deepseek-mla"
+    },
+    {
+      "title": "memlab を使って Web サイトのメモリリークを検出しよう",
+      "url": "https://zenn.dev/sa2knight/articles/analyze_javascript_heap_with_memlab"
+    },
+    {
+      "title": "マルチLLMエージェントシステム（MLAS）のアーキテクチャ4分類",
+      "url": "https://zenn.dev/r_kaga/articles/ebeba0bd1385e1"
+    }
+  ],
+  "positional-encoding": [
+    {
+      "title": "[メモ]Relative Positional Encodingのためのrel_shift",
+      "url": "https://zenn.dev/reppy/articles/8f953a81e4834e"
+    },
+    {
+      "title": "Fable時代のAI活用法を、Anthropicの開発者が公開",
+      "url": "https://zenn.dev/knowledgesense/articles/283244af941a2d"
+    },
+    {
+      "title": "「モダンC#」に入門しよう！2025【.NET10/C#14】",
+      "url": "https://zenn.dev/inuinu/articles/modern-c-sharp-2025-in-csharp14-and-dotnet10"
+    },
+    {
+      "title": "【Vue.js】今、ゼロから Vue を学び始めるならこうやるといいんじゃないか (2024) 【初学者向け】",
+      "url": "https://zenn.dev/comm_vue_nuxt/articles/start-to-learn-vue-2024"
+    }
+  ],
+  "in-context-learning": [
+    {
+      "title": "RAG を「In-Context Learning」と呼ぶかは微妙という話",
+      "url": "https://zenn.dev/os1ma/articles/ff5b78c7882c67"
+    },
+    {
+      "title": "in-context learningとは",
+      "url": "https://zenn.dev/zuyu/articles/858e3a3001004b"
+    },
+    {
+      "title": "LLM x semanticlayerな分析bot",
+      "url": "https://zenn.dev/kiwamizamurai/articles/8097d8b11e74e2"
+    },
+    {
+      "title": "Geminiと暮らす GeminiClaw 🦀",
+      "url": "https://zenn.dev/emonn/articles/e2a71108b39360"
+    }
+  ],
+  "self-supervised-learning": [
+    {
+      "title": "新人エンジニアのための今度こそ理解するSSL/TLS超入門",
+      "url": "https://zenn.dev/collabostyle/articles/ec7604c7468b84"
+    },
+    {
+      "title": "脱・人力アノテーション！自己教師あり学習による事前学習手法と自動運転への応用",
+      "url": "https://zenn.dev/turing_motors/articles/4247435fcc8ace"
+    },
+    {
+      "title": "生成AIの進化を支える「自己教師あり学習」：基礎から応用例まで",
+      "url": "https://zenn.dev/mkj/articles/3f1a948f0d326f"
+    },
+    {
+      "title": "無料の SSL 証明書が得られる ZeroSSL を使ってみた",
+      "url": "https://zenn.dev/mattn/articles/b2c4c92c9116b1"
+    }
+  ],
+  "contrastive-learning": [
+    {
+      "title": "Pythonなしで検索のパーソナライズを実装する：TypeScriptだけで対照学習（Contrastive Learning）を動かす",
+      "url": "https://zenn.dev/daiki_moritake/articles/ts-contrastive-learning"
+    },
+    {
+      "title": "バンダイナムコグループで対照学習による埋め込み表現を用いてレコメンド技術検証をした話",
+      "url": "https://zenn.dev/bnx_techblog/articles/afaa04a539385d"
+    },
+    {
+      "title": "バンダイナムコグループで対照学習による埋め込み表現を用いてレコメンド技術検証をした話",
+      "url": "https://zenn.dev/bnxkoho/articles/82bd5208f3e54c"
+    },
+    {
+      "title": "SimCLR 論文解説 ＆ PyTorch 実装（Contrastive Learning / 自己教師あり学習）",
+      "url": "https://zenn.dev/mantis_ryuji/articles/8018d3c45c4290"
+    }
+  ],
+  "federated-learning": [
+    {
+      "title": "Federated Learning ―プライバシー保護下における機械学習― を読んだ",
+      "url": "https://zenn.dev/hagino3000/articles/d4fc4b90c76817"
+    },
+    {
+      "title": "Snowflakeネイティブ機能だけで実現する水平連合学習（HFL）アーキテクチャ",
+      "url": "https://zenn.dev/snowflakejp/articles/a9b551d3203957"
+    },
+    {
+      "title": "連合学習とは？概要から最新動向まで詳しく解説！",
+      "url": "https://zenn.dev/songren/articles/ea092549b044e8"
+    },
+    {
+      "title": "【技術提案】機密は守り、智慧は共有する。「Dual-Layer Alaya」アーキテクチャによる連合学習の再定義",
+      "url": "https://zenn.dev/dosanko_tousan/articles/2bfda492d3bb8b"
+    }
+  ],
+  "peft": [
+    {
+      "title": "小さい計算コストでスマートにLLMをチューニング!-Hugging Face PEFT入門(前編)",
+      "url": "https://zenn.dev/elith/articles/3ec1d319c8a40f"
+    },
+    {
+      "title": "小さい計算コストでスマートにLLMをチューニング!-Hugging Face PEFT入門(後編)",
+      "url": "https://zenn.dev/elith/articles/a4b17e072d4870"
+    },
+    {
+      "title": "LLM model を, PEFT checkpoint から from_pretrained するメモ",
+      "url": "https://zenn.dev/syoyo/articles/5c902b9eb7d6b2"
+    },
+    {
+      "title": "japanese-stablelmを低コストEC2でaccelerateとpeft使ってQlora並列学習させてみるコード",
+      "url": "https://zenn.dev/onaka_ga_pkpk/articles/c582d49456aa4b"
+    }
+  ],
+  "qlora": [
+    {
+      "title": "QLoRAを知らずして量子化ファインチューニングを語るなかれ",
+      "url": "https://zenn.dev/bilzard/articles/qlora-4bit-quantized-finetuning"
+    },
+    {
+      "title": "Gemma2 2Bをファインチューニング（QLoRA）でキャラクター化（ずんだもん、つくよみちゃん）",
+      "url": "https://zenn.dev/yumefuku/articles/llm-finetuning-qlora"
+    },
+    {
+      "title": "Phi-4 QLoRAファインチューニングプロジェクト：「的確性」を軸としたLLM評価手法の検討",
+      "url": "https://zenn.dev/mo_hu_p/articles/218fbec51be323"
+    },
+    {
+      "title": "LoRA・QLoRA完全マニュアル ─ 2026年のLLMファインチューニング実装ガイド",
+      "url": "https://zenn.dev/ai_nexus/articles/lora-qlora-finetuning-guide"
+    }
+  ],
+  "rlaif": [
+    {
+      "title": "re:Invent 2025: Amazon SageMaker AIのモデルカスタマイゼーション機能とRLAIFによる高速化",
+      "url": "https://zenn.dev/kiiwami/articles/5fb166a1110170ee"
+    },
+    {
+      "title": "re:Invent 2025: SageMaker AIでのfoundation modelsカスタマイズ手法とDPO・RLAIF実践",
+      "url": "https://zenn.dev/kiiwami/articles/da7fe375ad61f283"
+    },
+    {
+      "title": "Fable時代のAI活用法を、Anthropicの開発者が公開",
+      "url": "https://zenn.dev/knowledgesense/articles/283244af941a2d"
+    },
+    {
+      "title": "「モダンC#」に入門しよう！2025【.NET10/C#14】",
+      "url": "https://zenn.dev/inuinu/articles/modern-c-sharp-2025-in-csharp14-and-dotnet10"
+    }
+  ],
+  "reward-model": [
+    {
+      "title": "Hermes Agent のバックエンドを Mac mini のローカル LLM にする（mlx_lm.server×Tailscale）",
+      "url": "https://zenn.dev/8091info/articles/hermes-agent-mlx-lm-tailscale"
+    },
+    {
+      "title": "【RLHF】LLM-as-a-Judge全盛期に、なぜ我々はまだ「Reward Model」を訓練するのか？",
+      "url": "https://zenn.dev/lixian/articles/cb59b19c9f99e1"
+    },
+    {
+      "title": "Terraform+GitHubActionsでGoogleCloudのCI/CD構築入門",
+      "url": "https://zenn.dev/optimind/articles/googlecloud-githubactions-terraform-cicd"
+    },
+    {
+      "title": "ARM tempate DSL、Bicep を使おう(1)",
+      "url": "https://zenn.dev/takekazuomi/articles/bicep-getting-started"
+    }
+  ],
+  "reward-hacking": [
+    {
+      "title": "強化学習における報酬ハッキング (新しい研究論文の紹介）",
+      "url": "https://zenn.dev/ronosh/articles/a7a5fd6ce34efe"
+    },
+    {
+      "title": "Fable時代のAI活用法を、Anthropicの開発者が公開",
+      "url": "https://zenn.dev/knowledgesense/articles/283244af941a2d"
+    },
+    {
+      "title": "「モダンC#」に入門しよう！2025【.NET10/C#14】",
+      "url": "https://zenn.dev/inuinu/articles/modern-c-sharp-2025-in-csharp14-and-dotnet10"
+    },
+    {
+      "title": "【Vue.js】今、ゼロから Vue を学び始めるならこうやるといいんじゃないか (2024) 【初学者向け】",
+      "url": "https://zenn.dev/comm_vue_nuxt/articles/start-to-learn-vue-2024"
+    }
+  ],
+  "post-training": [
+    {
+      "title": "LLM 事後学習 (SFT / RLHF / DPO / RLVR / GRPO / 自己蒸留) を教師信号から眺める",
+      "url": "https://zenn.dev/shunk031/articles/llm-post-training-overview"
+    },
+    {
+      "title": "【LLMの事前学習と事後学習を支える技術】 GPT-3, InstructGPT, DeepSeek-R1で理解し, OSSで再現実装する",
+      "url": "https://zenn.dev/epicai_techblog/articles/cbb8774f43783b"
+    },
+    {
+      "title": "大規模言語モデルを開発するにあたっての事前・事後学習の戦略メモー特に合成データについてー",
+      "url": "https://zenn.dev/matsuolab/articles/34036f017fae9e"
+    },
+    {
+      "title": "日本語LLM事後学習データセットの構築方法の整理",
+      "url": "https://zenn.dev/podtech/articles/c61d9ec6810264"
+    }
+  ],
+  "model-merging": [
+    {
+      "title": "進化的モデルマージを用いた日本語金融LLMモデルの構築",
+      "url": "https://zenn.dev/mtec_blog/articles/47a5a44798a912"
+    },
+    {
+      "title": "Sakana AIの「進化的モデルマージ」をPythonで再現して理解するところまで",
+      "url": "https://zenn.dev/lluminai_tech/articles/c1f543b3abf868"
+    },
+    {
+      "title": "AIの目となり得るモデルマージを利用したマルチモーダルモデル【論文要約】",
+      "url": "https://zenn.dev/zenn_mita/articles/e7036085d4397f"
+    },
+    {
+      "title": "Sakana AIが切り開く次世代AI開発の新地平：進化的モデルマージの可能性",
+      "url": "https://zenn.dev/acrovision/articles/31ccb6ea94ec31"
+    }
+  ],
+  "grokking": [
+    {
+      "title": "【深層学習】過学習の「向こう側」にある汎化：Grokking（頓悟）現象の数理メカニズム",
+      "url": "https://zenn.dev/lixian/articles/bad35e0cbbeeb2"
+    },
+    {
+      "title": "生成AIの推論状態を分解する―― Grokking から見る logit、softmax、KV cache の役割",
+      "url": "https://zenn.dev/albatrosary/articles/cbd89bf23275d7"
+    },
+    {
+      "title": "Grokkingを10分で再現する — モデルが\"突然目覚める\"瞬間を可視化で追う",
+      "url": "https://zenn.dev/50s_zerotohero/articles/b4481d2e97f2a8"
+    },
+    {
+      "title": "Grokking： 言語の「離散化誤差」を超えて、関係性をエンジニアリングする幾何学",
+      "url": "https://zenn.dev/imkohenauser/articles/d8ddb06e13668f"
+    }
+  ],
+  "data-augmentation": [
+    {
+      "title": "AIにおけるデータ拡張技術 (Data Augmentation)",
+      "url": "https://zenn.dev/ippeisuzuki/articles/898d28966f016b"
+    },
+    {
+      "title": "3way1shot　99.14パーセント　メタ学習なし、事前学習なし、データ拡張なし",
+      "url": "https://zenn.dev/doragonkipa/articles/c943f62fea478c"
+    },
+    {
+      "title": "視覚的連続制御の習得：データ拡張強化学習の改良版という論文のコード実行環境構築",
+      "url": "https://zenn.dev/takeofuture/articles/744ce398ce1b9f"
+    },
+    {
+      "title": "10-⑥[AI][Kaggle][python]Kaggle入門(コンピュータービジョン 6.最終回 データ拡張)",
+      "url": "https://zenn.dev/rg687076/articles/067d917c6e64be"
+    }
+  ],
+  "tokenization": [
+    {
+      "title": "【LLM基礎#1】Transformerとトークナイゼーションの仕組みを理解する",
+      "url": "https://zenn.dev/enegori6160/articles/ae70946592fbc3"
+    },
+    {
+      "title": "LLM解説シリーズ：SentencePieceからTokenizationを整理する",
+      "url": "https://zenn.dev/kas_blog/articles/20260509-llm-02-tokenization"
+    },
+    {
+      "title": "カード番号をSalt無しのSHA256でトークン化するのがどのくらい危険か試してみた",
+      "url": "https://zenn.dev/koduki/articles/c6ef840d06aaf0"
+    },
+    {
+      "title": "機密データの取り扱いにおいて、適切な暗号化やトークナイゼーションが実装されているか？",
+      "url": "https://zenn.dev/kanaria007/articles/743fb90d764ae0"
+    }
+  ],
+  "knowledge-graph": [
+    {
+      "title": "LLMによるナレッジグラフの作成とハイブリッド検索 + RAG",
+      "url": "https://zenn.dev/yumefuku/articles/llm-neo4j-hybrid"
+    },
+    {
+      "title": "エンジニアのためのGraphRAG入門: 知識グラフ活用の第一歩",
+      "url": "https://zenn.dev/fukurou_labo/articles/f0c233eb5aebb7"
+    },
+    {
+      "title": "【OmniRAG】ベクトル検索とナレッジグラフによるRAG ~ Azure Cosmos AI Graph ~",
+      "url": "https://zenn.dev/nomhiro/articles/cosmos-ai-graph-rag"
+    },
+    {
+      "title": "ベクトル検索の苦手を克服。ナレッジグラフでRAGを作る",
+      "url": "https://zenn.dev/yamada_quantum/articles/1a61c618a1c37f"
+    }
+  ],
+  "deepfake": [
+    {
+      "title": "AI Vision Quest　〜ディープフェイクを見抜く審美眼〜",
+      "url": "https://zenn.dev/yamamomo/articles/ad77e0899b282c"
+    },
+    {
+      "title": "DeepFakeに対してNFTができること、できないこと",
+      "url": "https://zenn.dev/hkiridera/articles/0d3f9e1ec1ecea"
+    },
+    {
+      "title": "DeepFakeの仕組みを全て解説してみた",
+      "url": "https://zenn.dev/tamoto/articles/bf394a3cf06477"
+    },
+    {
+      "title": "facefusionを用いてdeepfake動画を作成する",
+      "url": "https://zenn.dev/yblockcha1n/articles/a0a41584f12b46"
+    }
+  ],
+  "shadow-ai": [
+    {
+      "title": "Fable時代のAI活用法を、Anthropicの開発者が公開",
+      "url": "https://zenn.dev/knowledgesense/articles/283244af941a2d"
+    },
+    {
+      "title": "「モダンC#」に入門しよう！2025【.NET10/C#14】",
+      "url": "https://zenn.dev/inuinu/articles/modern-c-sharp-2025-in-csharp14-and-dotnet10"
+    },
+    {
+      "title": "【Vue.js】今、ゼロから Vue を学び始めるならこうやるといいんじゃないか (2024) 【初学者向け】",
+      "url": "https://zenn.dev/comm_vue_nuxt/articles/start-to-learn-vue-2024"
+    },
+    {
+      "title": "Vite ってよく聞くけど何なんですか？ あれは",
+      "url": "https://zenn.dev/comm_vue_nuxt/articles/what-is-vite"
+    }
+  ],
+  "ai-slop": [
+    {
+      "title": "OSSにおけるAI Slop問題の何が問題なのか？",
+      "url": "https://zenn.dev/yusukebe/articles/3fd5bc6ea341c9"
+    },
+    {
+      "title": "AI時代の新語カタログ ー Vibe Coding、AI Slop、ハルシネーションなど63語",
+      "url": "https://zenn.dev/inspector/articles/ai-era-new-vibes-catalog"
+    },
+    {
+      "title": "YouTube BGM 自動投稿パイプラインを TypeScript で組んだ話 — AI Slop 規制下での設計",
+      "url": "https://zenn.dev/tanakakun/articles/e6e5dd63e5eb20"
+    },
+    {
+      "title": "他人のAI Slopを笑うな",
+      "url": "https://zenn.dev/inspector/articles/dont-laugh-at-others-ai-slop"
+    }
+  ],
+  "explainable-ai": [
+    {
+      "title": "説明可能なAI（Explainable AI：XAI）の各手法調査(1)",
+      "url": "https://zenn.dev/pluck/articles/d29dafe92cdfc1"
+    },
+    {
+      "title": "説明可能なAI（Explainable AI：XAI）の各手法調査(2)",
+      "url": "https://zenn.dev/pluck/articles/c5360fab91ca53"
+    },
+    {
+      "title": "投資xAIで勉強してきたことまとめ",
+      "url": "https://zenn.dev/ageonsen/articles/fa6646e4c62307"
+    },
+    {
+      "title": "VertexAI SDK for Python Language Models",
+      "url": "https://zenn.dev/ymd65536/articles/vertexai_for_python"
+    }
+  ],
+  "mechanistic-interpretability": [
+    {
+      "title": "機械論的解釈可能性の紹介",
+      "url": "https://zenn.dev/rtakatsky/articles/b1dba521879845"
+    },
+    {
+      "title": "Fable時代のAI活用法を、Anthropicの開発者が公開",
+      "url": "https://zenn.dev/knowledgesense/articles/283244af941a2d"
+    },
+    {
+      "title": "「モダンC#」に入門しよう！2025【.NET10/C#14】",
+      "url": "https://zenn.dev/inuinu/articles/modern-c-sharp-2025-in-csharp14-and-dotnet10"
+    },
+    {
+      "title": "【Vue.js】今、ゼロから Vue を学び始めるならこうやるといいんじゃないか (2024) 【初学者向け】",
+      "url": "https://zenn.dev/comm_vue_nuxt/articles/start-to-learn-vue-2024"
+    }
+  ],
+  "eu-ai-act": [
+    {
+      "title": "Can AI Actually Build Real Video Games in 2026?",
+      "url": "https://zenn.dev/neotechpark/articles/54a6b2283b2599"
+    },
+    {
+      "title": "あなたのAIサービスはEU AI法 第50条の対象? 3分でわかる適用判定フローと最小対応",
+      "url": "https://zenn.dev/akagifreeez/articles/eu-ai-act-art50-intro"
+    },
+    {
+      "title": "MicrosoftとEU研究機関が示すAIガバナンスの国際基準案、AI Act(AI法)施行に備えてる日本企業SIer像は",
+      "url": "https://zenn.dev/syoshida07/articles/8529c77d03955c"
+    },
+    {
+      "title": "Fable時代のAI活用法を、Anthropicの開発者が公開",
+      "url": "https://zenn.dev/knowledgesense/articles/283244af941a2d"
+    }
+  ],
+  "model-card": [
+    {
+      "title": "12-⑤[AI][Kaggle][python]Kaggle入門(AI倫理入門 5.最終回 説明書(Model Cards))",
+      "url": "https://zenn.dev/rg687076/articles/3201cdc11e0ca3"
+    },
+    {
+      "title": "Model Cardって知ってる？",
+      "url": "https://zenn.dev/dhirooka/articles/c2b3d52e31cd10"
+    },
+    {
+      "title": "huggingfaceのモデルカードで画像リンクの404エラー",
+      "url": "https://zenn.dev/wasabind/articles/d12a4b3be96387"
+    },
+    {
+      "title": "LLMプロダクト開発における独自評価基準とデータセットの作り方の考察",
+      "url": "https://zenn.dev/seya/articles/ba06e37d226182"
+    }
+  ],
+  "sglang": [
+    {
+      "title": "re:Invent 2025: Amazon SageMakerとSGLangによるAIエージェントのスケーリングとモデル最適化",
+      "url": "https://zenn.dev/kiiwami/articles/9be9203f5b3f26ae"
+    },
+    {
+      "title": "DGX Spark + SGLang + Qwen3.6-35B-A3B-FP8 環境構築 その2: LiteLLM Proxy 活用",
+      "url": "https://zenn.dev/supertaro/articles/4744c929c8981c"
+    },
+    {
+      "title": "[翻訳+検証] SGLangでDiffusion LLMをサポート：LLaDA 2.0のDay-0実装",
+      "url": "https://zenn.dev/tosshi/articles/067d4c912c98d6"
+    },
+    {
+      "title": "DGX Spark + Docker + SGLang + Qwen3-Coder-Next-FP8 環境構築",
+      "url": "https://zenn.dev/supertaro/articles/ddaf02bea47487"
+    }
+  ],
+  "groq": [
+    {
+      "title": "AIエージェントのみでBPO 企業を作り上げる方法：Dify+Ollama+Llama3+Groqで顧客サポート窓口業務を完全自動化",
+      "url": "https://zenn.dev/ippeisuzuki/articles/71971d747c101b"
+    },
+    {
+      "title": "Groq API + LangChain & LangGraph + TavilyでCRAGを実装する",
+      "url": "https://zenn.dev/mizunny/articles/dacdd21384a16b"
+    },
+    {
+      "title": "Groq Cloud はどのように高速な LLM 推論を実現しているのか",
+      "url": "https://zenn.dev/stzone/articles/2790b18aeb7867"
+    },
+    {
+      "title": "完全無料で毎朝AIニュースをDiscordに自動配信する「AI朝刊Bot」をGoogle Apps ScriptとGroq APIで作った",
+      "url": "https://zenn.dev/rada3329/articles/ai-morning-news-discord-bot"
+    }
+  ],
+  "deepspeed": [
+    {
+      "title": "アニメーションでDeepSpeed (ZeRO1)の仕組みを完全に理解する",
+      "url": "https://zenn.dev/turing_motors/articles/d00c46a79dc976"
+    },
+    {
+      "title": "GPT-OSS-120B を DeepSpeed ZeRO-3 でファインチューニングする",
+      "url": "https://zenn.dev/fixstars/articles/deepspeed-zero3-gpt-oss-120b"
+    },
+    {
+      "title": "Panda CSS - Chakra UI の Zero Runtime CSS フレームワーク",
+      "url": "https://zenn.dev/cybozu_frontend/articles/panda-is-coming"
+    },
+    {
+      "title": "大規模言語モデル(LLM)の作り方 Megatron-DeepSpeed編 Part1",
+      "url": "https://zenn.dev/turing_motors/articles/04c1328bf6095a"
+    }
+  ],
+  "wandb": [
+    {
+      "title": "KaggleのW&B実験管理をオフラインでも動かす：kaggle-wandb-sync を作った",
+      "url": "https://zenn.dev/shogaku/articles/kaggle-wandb-sync-offline-sync"
+    },
+    {
+      "title": "SIGNATEコンペのスコアをW&Bに記録する：signate-wandb-sync を作った",
+      "url": "https://zenn.dev/shogaku/articles/signate-wandb-sync-introduction"
+    },
+    {
+      "title": "LLMアプリを本番で監視する：Weights & BiasesとMLflowでObservabilityを実装する方法",
+      "url": "https://zenn.dev/libercraft/articles/20260612-llm-observability-wandb-mlflow"
+    },
+    {
+      "title": "OpenTelemetryを使ってSpanをW&Bに記録する",
+      "url": "https://zenn.dev/getty708/articles/20241006-wandb-spanmetrics-exporter"
+    }
+  ],
+  "gpqa": [
+    {
+      "title": "AIベンチマーク読み方ガイド｜SWE-bench・GPQA・ARC-AGIの意味と活用法",
+      "url": "https://zenn.dev/yoshihiko555/articles/f1011ac0c4e61c"
+    },
+    {
+      "title": "LLMプロダクト開発における独自評価基準とデータセットの作り方の考察",
+      "url": "https://zenn.dev/seya/articles/ba06e37d226182"
+    },
+    {
+      "title": "LLMの日本語ロールプレイ能力を計測するベンチマーク「Japanese-RP-Bench」の概要と評価結果などのまとめ",
+      "url": "https://zenn.dev/aratako_lm/articles/42ad1a6ac9da45"
+    },
+    {
+      "title": "Fable時代のAI活用法を、Anthropicの開発者が公開",
+      "url": "https://zenn.dev/knowledgesense/articles/283244af941a2d"
+    }
+  ],
+  "aime": [
+    {
+      "title": "マルチエージェントフレームワークAIMEの紹介と実装",
+      "url": "https://zenn.dev/mkj/articles/e2612cb8bb9d5b"
+    },
+    {
+      "title": "会議進行をサポートするAIエージェント「AiMee」の紹介",
+      "url": "https://zenn.dev/rapirapi/articles/de88dfb7d5e4fa"
+    },
+    {
+      "title": "DASH：回答ドリフトで「考えすぎ」を検出・GRPOの過思考を解決・AIME25+5.4%",
+      "url": "https://zenn.dev/lixian/articles/dash-overthinking-credit"
+    },
+    {
+      "title": "僕がKaggleで挫折してメダル🏅を取るまでの軌跡 ~「LAIME Kaggle Dojo」への招待",
+      "url": "https://zenn.dev/surumen/articles/b534f0918ebb95"
+    }
+  ],
+  "arc-agi": [
+    {
+      "title": "AIベンチマーク読み方ガイド｜SWE-bench・GPQA・ARC-AGIの意味と活用法",
+      "url": "https://zenn.dev/yoshihiko555/articles/f1011ac0c4e61c"
+    },
+    {
+      "title": "日本語LLM（llm-jp-4）にARC-AGIの問題を投げてみた",
+      "url": "https://zenn.dev/snow_rabbit/articles/8a84c641f863f0"
+    },
+    {
+      "title": "【完全ガイド】ARC-AGIとは？～概要と始め方～",
+      "url": "https://zenn.dev/songren/articles/2ced0aab37fd8d"
+    },
+    {
+      "title": "なぜ、Claude Codeは、RAGを捨ててAgentic Searchを選んだのか？",
+      "url": "https://zenn.dev/karamage/articles/2514cf04e0d1ac"
+    }
+  ],
+  "humanitys-last-exam": [
+    {
+      "title": "高校時代の自分を救え！数学の「試行錯誤」を支えるエージェント: MathLeaf",
+      "url": "https://zenn.dev/ymsy/articles/8853f169dd4fbe"
+    },
+    {
+      "title": "Phlex + Literal + RubyUI で Rails の HTML を Ruby のクラスとして書く",
+      "url": "https://zenn.dev/megeton/articles/96db8981951e8f"
+    },
+    {
+      "title": "TechLead Conference 2026 参加レポート：AI時代における「フロー効率」と「教育」の再設計",
+      "url": "https://zenn.dev/wisevine/articles/1265fd3cfbd1c6"
+    },
+    {
+      "title": "運動支援AIエージェント AIthlete",
+      "url": "https://zenn.dev/forest_tech/articles/5240bac7bfefa0"
+    }
+  ],
+  "data-contamination": [
+    {
+      "title": "LLMプロダクト開発における独自評価基準とデータセットの作り方の考察",
+      "url": "https://zenn.dev/seya/articles/ba06e37d226182"
+    },
+    {
+      "title": "Fable時代のAI活用法を、Anthropicの開発者が公開",
+      "url": "https://zenn.dev/knowledgesense/articles/283244af941a2d"
+    },
+    {
+      "title": "「モダンC#」に入門しよう！2025【.NET10/C#14】",
+      "url": "https://zenn.dev/inuinu/articles/modern-c-sharp-2025-in-csharp14-and-dotnet10"
+    },
+    {
+      "title": "低すぎる自己評価は実際の評価も下げてしまうという話",
+      "url": "https://zenn.dev/nekoya/articles/1389ea37e5f9b2"
+    }
+  ]
+}

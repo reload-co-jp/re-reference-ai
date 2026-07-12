@@ -14,6 +14,11 @@ export type Reference = {
   url: string
 }
 
+export type ZennArticle = {
+  title: string
+  url: string
+}
+
 export type FaqItem = {
   question: string
   answer: string
@@ -55,10 +60,13 @@ export type Term = {
 import categoriesData from "data/categories.json"
 import tagDescriptionsData from "data/tag-descriptions.json"
 import termsData from "data/terms.json"
+import zennArticlesData from "data/zenn-articles.json"
 
 export const categories = categoriesData as string[]
 
 export const terms = termsData as Term[]
+
+const zennArticlesBySlug = zennArticlesData as Record<string, ZennArticle[]>
 
 export const getTermBySlug = (slug: string): Term | undefined =>
   terms.find((term) => term.slug === slug)
@@ -85,6 +93,9 @@ export const getRelatedTerms = (term: Term): Term[] =>
   (term.relatedTerms ?? [])
     .map((slug) => getTermBySlug(slug))
     .filter((t): t is Term => Boolean(t))
+
+export const getZennArticles = (term: Term): ZennArticle[] =>
+  zennArticlesBySlug[term.slug] ?? []
 
 const TAG_SLUGS: Record<string, string> = {
   アライメント: "alignment",
