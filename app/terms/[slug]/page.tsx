@@ -32,14 +32,19 @@ export const generateMetadata = async ({ params }: Props): Promise<Metadata> => 
     return {}
   }
 
-  const jaAlias = term.aliases?.find(
-    (alias) => alias !== term.name && /[ぁ-んァ-ヶ一-龠]/.test(alias),
-  )
+  const otherAliases = term.aliases?.filter((alias) => alias !== term.name) ?? []
+  const titleAlias =
+    otherAliases.find((alias) => /[ぁ-んァ-ヶ一-龠]/.test(alias)) ?? otherAliases[0]
   const title =
-    jaAlias && term.name.length + jaAlias.length <= 22
-      ? `${term.name}（${jaAlias}）とは？意味・仕組みを解説`
-      : `${term.name}とは？意味・仕組みを解説`
-  const description = truncate(term.plainSummary ?? term.summary ?? term.tagline, 120)
+    titleAlias && term.name.length + titleAlias.length <= 22
+      ? `${term.name}（${titleAlias}）とは`
+      : `${term.name}とは`
+  const aliasNote =
+    otherAliases.length > 0 ? `${otherAliases.slice(0, 2).join("・")}とも呼ばれる。` : ""
+  const description = truncate(
+    `${aliasNote}${term.plainSummary ?? term.summary ?? term.tagline}`,
+    120,
+  )
   const url = `${SITE_URL}/terms/${term.slug}/`
   const image = `${SITE_URL}/terms/${term.slug}/opengraph-image`
 
@@ -66,6 +71,7 @@ const buildJsonLd = (term: Term, relatedTerms: Term[]) => {
   const url = `${SITE_URL}/terms/${term.slug}/`
   const categoryUrl = `${SITE_URL}/categories/${getCategorySlug(term.category)}/`
   const description = term.plainSummary ?? term.summary ?? term.tagline
+  const image = `${SITE_URL}/terms/${term.slug}/opengraph-image`
 
   const definedTerm = {
     "@context": "https://schema.org",
@@ -74,6 +80,7 @@ const buildJsonLd = (term: Term, relatedTerms: Term[]) => {
     alternateName: term.aliases,
     description,
     url,
+    image,
     inDefinedTermSet: `${SITE_URL}/`,
     termCode: term.category,
   }
@@ -84,6 +91,7 @@ const buildJsonLd = (term: Term, relatedTerms: Term[]) => {
     headline: term.name,
     description,
     url,
+    image,
     about: term.name,
     keywords: term.tags?.join(", "),
     isPartOf: {
