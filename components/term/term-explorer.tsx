@@ -3,9 +3,9 @@
 import { FC, useState } from "react"
 import { Badge, Section, SectionTitle } from "components/elements/layout"
 import { TermCard } from "components/term/term-card"
-import { Term } from "lib/terms"
+import { TermSummaryCard } from "lib/terms"
 
-const matchesQuery = (term: Term, query: string): boolean => {
+const matchesQuery = (term: TermSummaryCard, query: string): boolean => {
   const normalized = query.trim().toLowerCase()
   if (!normalized) return true
   const haystack = [
@@ -20,7 +20,7 @@ const matchesQuery = (term: Term, query: string): boolean => {
   return haystack.includes(normalized)
 }
 
-export const TermExplorer: FC<{ categories: string[]; terms: Term[] }> = ({
+export const TermExplorer: FC<{ categories: string[]; terms: TermSummaryCard[] }> = ({
   categories,
   terms,
 }) => {

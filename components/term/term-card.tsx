@@ -1,9 +1,9 @@
 import { FC } from "react"
 import Link from "next/link"
 import { Badge, Card } from "components/elements/layout"
-import { Term } from "lib/terms"
+import { TermSummaryCard } from "lib/terms"
 
-export const TermCard: FC<{ term: Term }> = ({ term }) => (
+export const TermCard: FC<{ term: TermSummaryCard }> = ({ term }) => (
   <Link
     className="term-card-link"
     href={`/terms/${term.slug}/`}

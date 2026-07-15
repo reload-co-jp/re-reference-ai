@@ -3,7 +3,7 @@ import { FC } from "react"
 import { Container, Section } from "components/elements/layout"
 import { TermExplorer } from "components/term/term-explorer"
 import { SITE_DESCRIPTION, SITE_KEYWORDS, SITE_NAME, SITE_OG_IMAGE_URL, SITE_TAGLINE_JA, SITE_URL } from "lib/site"
-import { categories, terms } from "lib/terms"
+import { categories, termSummaries } from "lib/terms"
 
 export const metadata: Metadata = {
   title: `${SITE_NAME} (RRA) — ${SITE_TAGLINE_JA}・技術リファレンス`,
@@ -60,7 +60,7 @@ const Page: FC = () => {
         </p>
       </Section>
 
-      <TermExplorer categories={categories} terms={terms} />
+      <TermExplorer categories={categories} terms={termSummaries} />
     </Container>
   )
 }

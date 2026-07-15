@@ -66,6 +66,22 @@ export const categories = categoriesData as string[]
 
 export const terms = termsData as Term[]
 
+export type TermSummaryCard = Pick<
+  Term,
+  "slug" | "name" | "aliases" | "tagline" | "category" | "tags"
+>
+
+export const termSummaries: TermSummaryCard[] = terms.map(
+  ({ slug, name, aliases, tagline, category, tags }) => ({
+    slug,
+    name,
+    aliases,
+    tagline,
+    category,
+    tags,
+  }),
+)
+
 const zennArticlesBySlug = zennArticlesData as Record<string, ZennArticle[]>
 
 export const getTermBySlug = (slug: string): Term | undefined =>
