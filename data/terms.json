@@ -11285,7 +11285,8 @@
     "slug": "orchestrator",
     "name": "オーケストレーター",
     "aliases": [
-      "Orchestrator"
+      "Orchestrator",
+      "オーケストレータ"
     ],
     "tagline": "複数のAIエージェントやツールへタスクを振り分け、全体の進行を統括する管理役のコンポーネント",
     "category": "エージェント",
@@ -14412,7 +14413,8 @@
     "relatedTerms": [
       "coding-agent",
       "code-interpreter",
-      "tool-calling"
+      "tool-calling",
+      "cursor"
     ]
   },
   {
@@ -14457,7 +14459,8 @@
       "harness-engineering",
       "vibe-coding",
       "spec-driven-development",
-      "subagent"
+      "subagent",
+      "codex"
     ]
   },
   {
@@ -16592,5 +16595,164 @@
       "humanitys-last-exam",
       "data-poisoning"
     ]
+  },
+  {
+    "slug": "codex",
+    "name": "Codex",
+    "aliases": ["OpenAI Codex", "Codex CLI"],
+    "tagline": "OpenAIが提供する、ターミナルやクラウド上で自律的にコード生成・実行・修正するコーディングエージェント",
+    "category": "エージェント",
+    "tags": ["コーディングエージェント", "コード生成"],
+    "plainSummary": "OpenAIが作った、指示に沿って自分でコードを書いて実行・修正までしてくれるAIツール。",
+    "summary": "Codexは、OpenAIが提供するコーディングエージェント製品群の名称。\nターミナル上で動作するCodex CLIやChatGPT上のクラウド版など複数の形態で提供され、自然言語の指示を受けてリポジトリ内のコードを読み書きし、コマンド実行やテストを行いながらタスクを完了まで自律的に進める。\n名称は2021年にOpenAIが発表したコード生成特化モデル「Codex」に由来するが、そのモデル自体は2023年にAPI提供を終了しており、現在のCodexはエージェント型の製品として再展開されたもの。",
+    "background": "初代Codexは2021年、GPT-3をGitHub上の公開コードでfine-tuningしたモデルとして発表され、GitHub Copilotの初期バックエンドに採用された。\n2023年にAPIが終了した後、OpenAIは2025年に「Codex」ブランドを、自律的にコードを実行・修正するエージェント型ツールとして再始動させた。",
+    "history": "2021年: OpenAIがGPT-3をコード向けにfine-tuningした「Codex」モデルを発表、GitHub Copilotの初期バックエンドとして採用。\n2023年3月: OpenAIがCodexモデルのAPI提供を終了。\n2025年: OpenAIがCodex CLI・クラウド版を含む自律型コーディングエージェントとして「Codex」ブランドを再展開。",
+    "advantages": [
+      "リポジトリ全体を横断的に扱い、コード生成から実行・テスト・修正までを自律的にこなせる",
+      "ChatGPTやOpenAI APIのエコシステムと統合しやすい"
+    ],
+    "disadvantages": [
+      "自律的な実行権限を伴うため、サンドボックス等の安全対策が前提となる",
+      "2021年の同名モデルと混同されやすい"
+    ],
+    "comparisons": [
+      {
+        "slug": "coding-agent",
+        "note": "CodexはOpenAIが提供する商用コーディングエージェント製品の1つ"
+      }
+    ],
+    "relatedTerms": ["coding-agent", "gpt", "sandboxing"]
+  },
+  {
+    "slug": "ai-dlc",
+    "name": "AI-DLC",
+    "aliases": ["AI Development Life Cycle", "AI駆動開発ライフサイクル"],
+    "tagline": "AIエージェントを開発ライフサイクル全体(要件定義・設計・実装・テスト)に組み込む開発プロセス手法",
+    "category": "技術",
+    "tags": ["自動化", "協調"],
+    "plainSummary": "要件定義から実装・テストまで、開発の各工程にAIを組み込んで進める開発手法。",
+    "summary": "AI-DLC(AI Development Life Cycle)は、AWSが提唱する開発プロセスの枠組みで、要件定義・設計・実装・テストといったソフトウェア開発ライフサイクルの各工程に生成AIエージェントを組み込み、人間とAIが協調しながら開発を進める手法。\n従来のアジャイル開発が数週間単位のスプリントで進むのに対し、AI-DLCは人間が意思決定を行うチェックポイントを挟みつつ、AIエージェントが実装やテストの反復を高速に回すことで、開発サイクル全体の期間短縮を狙う。",
+    "background": "コーディングエージェントの実用化が進む中、個々のコード生成にとどまらず要件定義やレビューを含む開発プロセス全体をAIとの協調作業として再設計する動きから生まれた概念。",
+    "history": "2025年: AWSが「AI-DLC」を発表し、要件定義からテストまでの開発ライフサイクル全体に生成AIエージェントを組み込む手法として提唱。",
+    "advantages": [
+      "要件定義からテストまでの工程を横断してAIを活用でき、開発サイクル全体の短縮が期待できる",
+      "人間の意思決定ポイントを残しつつ反復作業をAIに委ねられる"
+    ],
+    "disadvantages": [
+      "組織のプロセスやツールチェーン全体の見直しを伴うため導入コストが高い",
+      "確立された標準ではなく、提唱するベンダーにより定義や範囲が異なる"
+    ],
+    "comparisons": [
+      {
+        "slug": "spec-driven-development",
+        "note": "仕様駆動開発が要件・仕様の記述に焦点を当てるのに対し、AI-DLCは開発ライフサイクル全体の進め方を再設計する、より広い枠組み"
+      }
+    ],
+    "relatedTerms": ["spec-driven-development", "vibe-coding", "coding-agent"]
+  },
+  {
+    "slug": "cursor",
+    "name": "Cursor",
+    "tagline": "VS Codeをフォークし、チャットや複数ファイル編集などのAI機能をエディタに統合したAI IDE",
+    "category": "インフラ",
+    "tags": ["コーディングエージェント", "コード生成"],
+    "plainSummary": "VS Codeを元に作られた、AIとチャットしながらコードを編集できるエディタ。",
+    "summary": "Cursorは、Anysphereが開発するAI統合開発環境(AI IDE)。\nVS Codeをフォークし、コード補完に加えてチャットによる対話的な編集、プロジェクト内の複数ファイルにまたがる変更の提案・適用、ターミナルコマンドの実行などをエディタ上から直接行える点が特徴。\n2023年の公開以降、AI IDEという製品カテゴリを代表する存在として急速に普及した。",
+    "background": "GitHub Copilotなどのコード補完拡張機能が広まる中、Anysphereはエディタそのものをフォークし、AIによる複数ファイル編集や対話的な支援をより深く統合する形でCursorを開発した。",
+    "history": "2023年: AnysphereがVS Codeをフォークし、チャット・複数ファイル編集機能を統合したAI IDE「Cursor」を公開。",
+    "advantages": [
+      "コード補完・チャット・複数ファイル編集が単一のエディタ内に統合されている",
+      "既存のVS Code拡張機能やキーバインドとの互換性が高い"
+    ],
+    "disadvantages": [
+      "VS Codeのフォークであるため、本家VS Codeの更新への追従や拡張機能の互換性維持が必要になる",
+      "AIによる自動編集の範囲が広がるほど意図しない変更を見落とすリスクが増える"
+    ],
+    "comparisons": [
+      {
+        "slug": "ai-ide",
+        "note": "CursorはAI IDEという製品カテゴリを代表する具体的な製品の1つ"
+      }
+    ],
+    "relatedTerms": ["ai-ide", "coding-agent"]
+  },
+  {
+    "slug": "claude-skills",
+    "name": "Claude Skills",
+    "aliases": ["Agent Skills"],
+    "tagline": "特定タスク向けの指示・スクリプト・リソースをまとめ、該当タスク実行時にClaudeへ読み込ませる拡張機構",
+    "category": "技術",
+    "tags": ["ツール連携", "自動化"],
+    "plainSummary": "決まった作業手順やスクリプトをまとめておき、必要なときだけClaudeに読み込ませる仕組み。",
+    "summary": "Claude Skills(Agent Skills)は、Anthropicが提供する、特定タスクの実行手順・スクリプト・参考資料をひとまとまりのフォルダとしてパッケージ化し、必要な場面でClaudeへ動的に読み込ませる拡張機構。\n全ての情報を常にプロンプトへ含めるのではなく、タスクに関連するSkillだけを実行時に選択的に読み込む(プログレッシブディスクロージャー)ことで、コンテキストウィンドウを圧迫せずに専門的な作業手順をClaudeに与えられる。\nClaude appやClaude Code、API経由など複数の実行環境で共通して利用できる。",
+    "background": "MCPがツールや外部データソースへの接続方式を標準化するのに対し、Skillsは「特定タスクをどのような手順で行うか」という手続き的知識をパッケージ化し再利用する目的で導入された。",
+    "history": "2025年10月: Anthropicが「Agent Skills」を発表し、Claude app・Claude Code・API横断でタスク別の指示・スクリプトをパッケージ化して利用できる仕組みを提供開始。",
+    "advantages": [
+      "タスクに関連するSkillのみを動的に読み込むため、常時コンテキストを消費しない",
+      "指示文だけでなくスクリプトやリソースファイルを含めてパッケージ化できる"
+    ],
+    "disadvantages": [
+      "Skillの粒度や内容の設計次第で、期待通りに選択・実行されない場合がある",
+      "Anthropicのエコシステムに特化した仕組みであり、他ベンダーのモデルでは利用できない"
+    ],
+    "comparisons": [
+      {
+        "slug": "mcp",
+        "note": "MCPが外部ツール・データソースへの接続方法を標準化するのに対し、Skillsはタスク遂行の手順そのものをパッケージ化する"
+      }
+    ],
+    "relatedTerms": ["mcp", "claude", "coding-agent", "claude-md"]
+  },
+  {
+    "slug": "claude-md",
+    "name": "CLAUDE.md",
+    "tagline": "Claude Codeがプロジェクトの規約・構成・注意点を把握するために自動で読み込む、リポジトリ直下に置くMarkdown形式の指示ファイル",
+    "category": "技術",
+    "tags": ["ツール連携", "自動化"],
+    "plainSummary": "そのプロジェクト固有のルールや注意点をAIエージェントに伝えるためのメモ書きファイル。",
+    "summary": "CLAUDE.mdは、AnthropicのClaude Codeがセッション開始時に自動的に読み込む、リポジトリ直下(または上位ディレクトリ、ユーザーのホーム配下)に置くMarkdown形式の指示ファイル。\nビルド・テストコマンド、コーディング規約、ディレクトリ構成、注意すべき既知の落とし穴など、そのプロジェクト固有の文脈をあらかじめ記述しておくことで、Claudeが毎回コードベースを探索し直さずに作業を始められるようにする。\nプロジェクト全体で共有する内容はリポジトリにコミットし、個人設定は別ファイルに分けて管理する運用が一般的。",
+    "background": "コーディングエージェントは会話ごとにコードベースの前提知識を持たない状態から作業を始めるため、都度同じ説明を繰り返す非効率が生じていた。CLAUDE.mdは、その前提知識をファイルとして永続化し、セッションをまたいで再利用する目的で導入された。",
+    "history": "2025年: AnthropicがClaude Codeの一部として、プロジェクト固有の指示を記述する「CLAUDE.md」規約を導入。",
+    "advantages": [
+      "プロジェクト固有の規約や注意点を毎回説明し直す手間が省ける",
+      "リポジトリにコミットすることでチーム全体がAIエージェントへの指示を共有できる"
+    ],
+    "disadvantages": [
+      "内容が古くなったり肥大化したりすると、かえって誤った前提をAIに与える",
+      "Claude Code固有の仕組みであり、他ベンダーのツールとは形式が異なる(例: AGENTS.md)"
+    ],
+    "comparisons": [
+      {
+        "slug": "agents-md",
+        "note": "AGENTS.mdが複数のAIコーディングツール間で共通利用できる形式を目指すのに対し、CLAUDE.mdはClaude Code専用の指示ファイル"
+      }
+    ],
+    "relatedTerms": ["agents-md", "coding-agent", "claude-skills"]
+  },
+  {
+    "slug": "agents-md",
+    "name": "AGENTS.md",
+    "tagline": "OpenAI CodexやCursorなど複数のAIコーディングツールが共通して読み込める、リポジトリ向けの標準指示ファイル形式",
+    "category": "技術",
+    "tags": ["ツール連携", "相互運用性"],
+    "plainSummary": "どのAIコーディングツールを使っても同じ内容を読み込ませられるよう決めた、共通の指示ファイル形式。",
+    "summary": "AGENTS.mdは、OpenAIが中心となりCursorやFactory等複数の企業が賛同して策定した、AIコーディングエージェント向けの共通指示ファイル形式。\nビルド・テストコマンド、コーディング規約、ディレクトリ構成といった内容を1つのファイルにまとめておくことで、Claude Code・Codex・Cursorなど複数のツールを併用する場合でも同じ指示ファイルを参照できるようにする。\nCLAUDE.mdのような特定ベンダー専用の指示ファイルが乱立する状況に対し、ツール間の相互運用性を確保することを狙いとしている。",
+    "background": "コーディングエージェント/AI IDEの普及に伴い、ツールごとに異なる指示ファイル形式(CLAUDE.md等)が乱立し、複数ツールを併用する開発者が同じ内容を重複して管理する負担が生じていた。AGENTS.mdは、この重複を解消する共通フォーマットとして提案された。",
+    "history": "2025年: OpenAIがCursor・Factory等と共同で、AIコーディングエージェント共通の指示ファイル規格「AGENTS.md」を公開。",
+    "advantages": [
+      "複数のAIコーディングツールを併用しても、指示ファイルを1つに集約できる",
+      "オープンな仕様であり特定ベンダーに依存しない"
+    ],
+    "disadvantages": [
+      "ツールによってはAGENTS.mdへの対応が不十分だったり、独自形式(CLAUDE.md等)と併存させる必要がある",
+      "策定されて間もなく、記法や運用の実務的な定着はこれからの段階"
+    ],
+    "comparisons": [
+      {
+        "slug": "claude-md",
+        "note": "CLAUDE.mdがClaude Code専用の指示ファイルであるのに対し、AGENTS.mdは複数ツールで共通利用できる形式を目指す"
+      }
+    ],
+    "relatedTerms": ["claude-md", "coding-agent", "ai-ide"]
   }
 ]

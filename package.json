@@ -8,6 +8,7 @@
     "dev": "next dev",
     "lint": "eslint",
     "lint:text": "node scripts/lint-terms-text.mjs",
+    "fetch:zenn-ai-keywords": "node scripts/fetch-zenn-ai-keywords.mjs",
     "build": "next build",
     "start": "next start",
     "format": "prettier --write .",
