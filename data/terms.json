@@ -4040,6 +4040,10 @@
       {
         "slug": "agentcore",
         "note": "AWSのAgentCoreは、Gatewayコンポーネントを通じて既存APIをMCP互換のツールへ変換する機能を提供する"
+      },
+      {
+        "slug": "fastmcp",
+        "note": "FastMCPは、MCPプロトコルに対応するサーバー・クライアントをPythonのデコレータ構文で簡潔に実装できるフレームワーク"
       }
     ],
     "relatedTerms": [
@@ -4048,7 +4052,8 @@
       "ai-agent",
       "function-calling",
       "claude",
-      "agentcore"
+      "agentcore",
+      "fastmcp"
     ],
     "faq": [
       {
@@ -5022,6 +5027,10 @@
       {
         "slug": "edge-ai",
         "note": "NPUは、エッジデバイス上でAI推論を効率的に実行するために搭載される専用プロセッサ"
+      },
+      {
+        "slug": "intelligent-vision-sensor",
+        "note": "NPUがSoC上でAI推論を担う専用プロセッサであるのに対し、インテリジェントビジョンセンサーはイメージセンサー自体にAI推論機能を統合したデバイス"
       }
     ],
     "relatedTerms": [
@@ -5029,7 +5038,8 @@
       "tpu",
       "quantization",
       "small-language-model",
-      "edge-ai"
+      "edge-ai",
+      "intelligent-vision-sensor"
     ],
     "faq": [
       {
@@ -5475,12 +5485,17 @@
       {
         "slug": "llama",
         "note": "QwenとLlamaは、いずれもオープンウェイトの方針で複数のモデルサイズを公開している"
+      },
+      {
+        "slug": "ornith",
+        "note": "Ornith-1.0は、Qwen 3.5の重みをベースにエージェント型コーディング向けの強化学習を施した派生モデルファミリー"
       }
     ],
     "relatedTerms": [
       "large-language-model",
       "llama",
-      "deepseek"
+      "deepseek",
+      "ornith"
     ],
     "faq": [
       {
@@ -5597,12 +5612,17 @@
       {
         "slug": "small-language-model",
         "note": "Gemmaは、SLMとして扱われる軽量なモデルサイズのバリエーションも展開している"
+      },
+      {
+        "slug": "ornith",
+        "note": "Ornith-1.0は、Gemma 4を含む複数の事前学習済みモデルをベースに、エージェント型コーディング向けの強化学習を施した派生モデルファミリー"
       }
     ],
     "relatedTerms": [
       "gemini",
       "phi",
-      "small-language-model"
+      "small-language-model",
+      "ornith"
     ],
     "faq": [
       {
@@ -8994,11 +9014,16 @@
       {
         "slug": "bounding-box",
         "note": "YOLOは、画像内の物体の矩形領域(バウンディングボックス)とクラスを同時に予測する"
+      },
+      {
+        "slug": "mediapipe",
+        "note": "YOLOが物体検出に特化した単一モデルであるのに対し、MediaPipeは顔検出・姿勢推定等複数タスクの推論パイプラインをまとめて提供するフレームワーク"
       }
     ],
     "relatedTerms": [
       "convolutional-neural-network",
-      "bounding-box"
+      "bounding-box",
+      "mediapipe"
     ],
     "references": [
       {
@@ -9270,6 +9295,22 @@
       {
         "slug": "local-llm",
         "note": "エッジAIがスマートフォン等の組み込み・モバイル端末での推論を指すことが多いのに対し、ローカルLLMは主に個人のPCやオンプレミスサーバーでの運用を指す"
+      },
+      {
+        "slug": "mediapipe",
+        "note": "MediaPipeは、顔検出・姿勢推定等のエッジAI推論パイプラインをモバイル・Web上に構築できるフレームワーク"
+      },
+      {
+        "slug": "tinyml",
+        "note": "TinyMLは、エッジAIの中でもマイクロコントローラ等さらに制約の大きい組み込み機器上での推論に特化する分野"
+      },
+      {
+        "slug": "intelligent-vision-sensor",
+        "note": "インテリジェントビジョンセンサーは、撮像とAI推論をセンサー単体で完結させる、エッジAIの実装形態の1つ"
+      },
+      {
+        "slug": "ai-presence-sensor",
+        "note": "スマート人感センサーは、エッジAIの実践例として、センサー・端末側でAIによる人の在不在検知を完結させる"
       }
     ],
     "relatedTerms": [
@@ -9278,7 +9319,11 @@
       "npu",
       "knowledge-distillation",
       "local-llm",
-      "physical-ai"
+      "physical-ai",
+      "mediapipe",
+      "tinyml",
+      "intelligent-vision-sensor",
+      "ai-presence-sensor"
     ]
   },
   {
@@ -16804,5 +16849,488 @@
       }
     ],
     "relatedTerms": ["rlhf", "reinforcement-learning", "grpo", "reward-model", "q-learning"]
+  },
+  {
+    "slug": "mediapipe",
+    "name": "MediaPipe",
+    "tagline": "顔検出・姿勢推定・手指トラッキング等のリアルタイム推論パイプラインをモバイル/Web/エッジ上に構築できるGoogleのオープンソースフレームワーク",
+    "category": "インフラ",
+    "tags": [
+      "フレームワーク",
+      "エッジAI",
+      "画像認識"
+    ],
+    "plainSummary": "顔や手、姿勢の動きをスマホやブラウザ上でリアルタイムに認識できるGoogle製の無料ツール集。",
+    "summary": "MediaPipeとは、Googleが開発したオープンソースのクロスプラットフォームフレームワークで、映像・音声・センサー等のストリームデータに対しリアルタイムに機械学習推論を適用するパイプラインを構築できる。\n処理単位「Calculator」をノードとし、Calculator間をデータストリームでつなぐ有向グラフとしてパイプラインを記述する設計が特徴で、入力取得から前処理・モデル推論・後処理・出力までを一貫した流れとして表現する。\n顔検出・顔ランドマーク推定・手指トラッキング・姿勢推定・物体検出・画像セグメンテーション等、あらかじめ用意された「ソリューション(Solutions)」を通じ、モデルを一から実装せずに主要な知覚タスクを組み込める。Android・iOS・Web(WASM)・Python・組み込み機器等、多様なプラットフォーム上でCPU/GPUを用いた低遅延な推論を実現できる。",
+    "background": "モバイルアプリやWebアプリで顔・手・姿勢等をリアルタイム認識する機能を実装する場合、プラットフォームごとに推論パイプラインを個別開発する必要があり、開発・保守コストが高かった。MediaPipeは、この推論パイプラインの構築をグラフベースの共通フレームワークとして抽象化し、同一のパイプライン定義を複数プラットフォームへ展開できるよう開発された。",
+    "history": "2019年: Googleの研究チームが論文「MediaPipe: A Framework for Building Perception Pipelines」(Lugaresi et al.)を発表し、MediaPipeをオープンソース化。\n以降、顔検出・姿勢推定・物体検出等のソリューションが順次追加され、2023年以降はより簡易に利用できる「MediaPipe Tasks API」への統合、およびオンデバイスLLM推論向けの「LLM Inference API」の追加が進んでいる。",
+    "architecture": "処理単位となる「Calculator」をノードとし、Calculator間をデータストリーム(Packet)でつなぐ有向グラフとしてパイプラインを定義する。グラフ構成はprotobuf形式の設定ファイルで記述し、パイプラインの一部を差し替えたり複数モデルを組み合わせた処理を柔軟に構築できる。",
+    "advantages": [
+      "Android・iOS・Web・Python等、複数プラットフォームで同一のパイプライン定義を再利用できる",
+      "顔検出や姿勢推定等の主要タスクが「ソリューション」として提供され、モデルを一から学習・実装せずに組み込める",
+      "グラフベースの設計により、CPU/GPUを活用した低遅延なリアルタイム推論に最適化されている"
+    ],
+    "disadvantages": [
+      "グラフベースの記述方式は独自の学習コストがあり、通常のモデル呼び出しAPIと比べて習得に時間がかかる",
+      "提供されているソリューションの精度・仕様は固定的で、独自データでの再学習・カスタマイズには制約がある"
+    ],
+    "comparisons": [
+      {
+        "slug": "edge-ai",
+        "note": "MediaPipeは、エッジAIの実践例として、モバイル・組み込み機器上でのリアルタイムML推論パイプラインを提供するフレームワーク"
+      },
+      {
+        "slug": "yolo",
+        "note": "YOLOが物体検出に特化した単一モデルであるのに対し、MediaPipeは顔検出・姿勢推定等複数タスクの推論パイプラインをまとめて提供するフレームワーク"
+      },
+      {
+        "slug": "ml-kit",
+        "note": "ML KitがAPI呼び出しで完結する既製の認識機能群を提供するのに対し、MediaPipeはCalculatorを組み合わせグラフとして推論パイプラインを自由に構築できる、より低レベルなフレームワーク"
+      }
+    ],
+    "relatedTerms": [
+      "edge-ai",
+      "yolo",
+      "convolutional-neural-network",
+      "ml-kit"
+    ],
+    "faq": [
+      {
+        "question": "MediaPipeはLLM推論にも使える?",
+        "answer": "「LLM Inference API」の追加により、Gemma等一部の軽量LLMをオンデバイスで実行する用途にも対応している。ただし主軸は画像・音声・姿勢認識等の知覚タスク向けパイプライン。"
+      }
+    ],
+    "references": [
+      {
+        "type": "Official Website",
+        "label": "Google AI Edge - MediaPipe",
+        "url": "https://ai.google.dev/edge/mediapipe"
+      },
+      {
+        "type": "GitHub",
+        "label": "google-ai-edge/mediapipe",
+        "url": "https://github.com/google-ai-edge/mediapipe"
+      },
+      {
+        "type": "Research Paper",
+        "label": "MediaPipe: A Framework for Building Perception Pipelines",
+        "url": "https://arxiv.org/abs/1906.08172"
+      }
+    ]
+  },
+  {
+    "slug": "ml-kit",
+    "name": "ML Kit",
+    "aliases": [
+      "ML Kit for Firebase"
+    ],
+    "tagline": "テキスト認識・バーコードスキャン・顔検出等の学習済みモデルをAndroid/iOSアプリへ組み込める、Googleのオンデバイス機械学習SDK",
+    "category": "インフラ",
+    "tags": [
+      "フレームワーク",
+      "エッジAI",
+      "画像認識"
+    ],
+    "plainSummary": "文字認識やバーコード読み取り、顔検出等の機能を、スマホアプリへ簡単に追加できるGoogle製の開発キット。",
+    "summary": "ML Kitとは、Googleが提供するモバイルアプリ向けの機械学習SDKで、テキスト認識・バーコードスキャン・顔検出・ポーズ検出・画像ラベリング・言語識別・翻訳等の学習済みモデルを、Android/iOSアプリへAPI呼び出しだけで組み込める。\n多くのAPIが端末上(オンデバイス)で推論を完結させる設計で、ネットワーク接続なしで高速に動作し、データを外部へ送信しない。\n近年はGemini Nano等の生成AIモデルを端末上で利用する「GenAI API」(要約・校正・画像説明等)も追加されており、対応領域は認識系タスクから生成系タスクへ拡大している。",
+    "background": "モバイルアプリへ文字認識や顔検出等の機械学習機能を組み込む場合、モデルの学習・変換・最適化・推論コードの実装を開発者自身で行う必要があり、専門知識と開発コストを要した。ML Kitは、Google社内で磨き上げた学習済みモデルを簡易なAPI越しに提供することで、機械学習の専門知識がなくてもモバイルアプリへ認識機能を組み込めるよう開発された。",
+    "history": "2018年5月: Google I/OでFirebaseのモジュール「ML Kit for Firebase」としてベータ公開。\n2020年6月: オンデバイスAPI群がFirebaseから分離され、Firebaseプロジェクトを必要としないスタンドアロンのML Kit SDKとして提供開始。\n以降、顔メッシュ検出等のVision APIに加え、Gemini Nanoを用いた要約・校正等のGenAI APIが追加されている。",
+    "advantages": [
+      "テキスト認識・バーコードスキャン・顔検出等の主要な認識タスクを、モデルの学習・実装なしにAPI呼び出しだけで組み込める",
+      "多くのAPIがオンデバイス推論のため、ネットワーク接続不要かつデータを外部へ送信せず動作できる"
+    ],
+    "disadvantages": [
+      "提供されているAPIの認識対象・精度は固定的で、独自データでの再学習等のカスタマイズには制約がある",
+      "一部の高精度APIはクラウド処理に依存し、オンデバイスAPIと比べて通信環境や処理速度の制約を受ける"
+    ],
+    "comparisons": [
+      {
+        "slug": "mediapipe",
+        "note": "ML KitがAPI呼び出しで完結する既製の認識機能群を提供するのに対し、MediaPipeはCalculatorを組み合わせグラフとして推論パイプラインを自由に構築できる、より低レベルなフレームワーク"
+      },
+      {
+        "slug": "edge-ai",
+        "note": "ML Kitは、エッジAIの実践例として、モバイル端末上でのオンデバイス推論を主軸に据えたSDK"
+      }
+    ],
+    "relatedTerms": [
+      "mediapipe",
+      "edge-ai"
+    ],
+    "references": [
+      {
+        "type": "Official Website",
+        "label": "ML Kit | Google for Developers",
+        "url": "https://developers.google.com/ml-kit"
+      },
+      {
+        "type": "Blog",
+        "label": "Introducing ML Kit for Firebase",
+        "url": "https://firebase.googleblog.com/2018/05/introducing-ml-kit-for-firebase.html"
+      },
+      {
+        "type": "Blog",
+        "label": "On-device machine learning solutions with ML Kit, now even easier to use",
+        "url": "https://android-developers.googleblog.com/2020/06/mlkit-on-device-machine-learning-solutions.html"
+      }
+    ]
+  },
+  {
+    "slug": "tinyml",
+    "name": "TinyML",
+    "tagline": "マイクロコントローラ等の超低消費電力・低リソース組み込み機器上で機械学習モデルを動作させる技術分野",
+    "category": "インフラ",
+    "tags": [
+      "エッジAI",
+      "軽量化"
+    ],
+    "plainSummary": "電池で動くセンサー等、ごく小さなコンピュータの中でAIを動かす技術分野。",
+    "summary": "TinyMLとは、マイクロコントローラ(MCU)等、消費電力・メモリ・計算資源が極めて限られた組み込み機器上で機械学習モデルを推論させる技術分野を指す。\nクラウドやスマートフォンよりもさらに制約の大きいミリワット〜マイクロワット級の電力で動作するデバイスを対象とし、量子化・枝刈り(プルーニング)・軽量なニューラルネットワーク構造の採用等でモデルを数十KB〜数百KB程度のメモリに収まるサイズへ圧縮した上で実行する。\nバッテリー駆動のIoTセンサーやウェアラブルデバイス等、常時のネットワーク接続やクラウド処理が難しい環境でのリアルタイム推論に用いられる。",
+    "background": "従来の機械学習は、クラウド上のサーバーやGPU等、潤沢な計算資源を前提に設計・運用されてきた。IoTデバイスの普及に伴い、通信コスト・レイテンシ・プライバシー・バッテリー消費といった制約から、より制約の大きいマイクロコントローラ上で推論を完結させたいという需要が高まり、モデル圧縮技術の進展と合わせてTinyMLという分野が形成された。",
+    "history": "2019年: Pete WardenとDaniel Situnayakeが著書「TinyML: Machine Learning with TensorFlow Lite on Arduino and Ultra-Low-Power Microcontrollers」を刊行。\n同年、TinyML Foundationが設立され、「TinyML」という呼称が広く普及した。\n背景には2010年代後半からの、モデル圧縮・量子化・計算量を抑えたニューラルネットワーク構造に関する研究進展があった。",
+    "advantages": [
+      "バッテリー駆動の組み込み機器上でもリアルタイムに推論でき、クラウドとの通信コスト・レイテンシを避けられる",
+      "ミリワット級の低消費電力で動作するため、常時稼働のセンサー等バッテリー交換が困難な用途にも適する"
+    ],
+    "disadvantages": [
+      "マイクロコントローラのメモリ・計算資源は極めて限定的で、扱えるモデルサイズやタスクの複雑さに制約がある",
+      "モデルの量子化・軽量化に伴い、クラウド上の大規模モデルと比べて精度が低下しやすい"
+    ],
+    "comparisons": [
+      {
+        "slug": "edge-ai",
+        "note": "エッジAIがスマートフォンやゲートウェイ等、比較的計算能力のある端末上での推論も含む広い概念であるのに対し、TinyMLはマイクロコントローラ等さらに制約の大きい組み込み機器上での推論に特化する分野"
+      },
+      {
+        "slug": "quantization",
+        "note": "量子化は、TinyMLが要求する厳しいメモリ・電力制約下でモデルを動作させるための代表的な軽量化手法の1つ"
+      }
+    ],
+    "relatedTerms": [
+      "edge-ai",
+      "quantization",
+      "knowledge-distillation"
+    ],
+    "references": [
+      {
+        "type": "Documentation",
+        "label": "TinyML - Wikipedia",
+        "url": "https://en.wikipedia.org/wiki/TinyML"
+      }
+    ]
+  },
+  {
+    "slug": "intelligent-vision-sensor",
+    "name": "インテリジェントビジョンセンサー",
+    "aliases": [
+      "Intelligent Vision Sensor",
+      "AIセンサー"
+    ],
+    "tagline": "撮像回路にAI推論用のプロセッサとメモリを一体化し、撮像からAI処理までをセンサー単体で完結できるイメージセンサー",
+    "category": "インフラ",
+    "tags": [
+      "ハードウェア",
+      "エッジAI",
+      "画像認識"
+    ],
+    "plainSummary": "カメラのセンサー自体がAIで映像を解析し、必要な情報だけを出力できるイメージセンサー。",
+    "summary": "インテリジェントビジョンセンサーとは、イメージセンサー内へ、画像処理回路に加えAI推論するプロセッサ・メモリを一体化させ、撮像から物体検出等のAI処理までをセンサー単体で完結できるビジョンセンサーを指す。\n画素を配置した「画素チップ」と、ISP(画像信号処理)およびAI推論専用のDSPとAIモデル格納用メモリを搭載した「ロジックチップ」を積層する構造を取り、動画の1フレーム内でISP処理とAI推論を完結させることで高速なリアルタイム処理を実現する。\n従来型のシステムでは撮像した画像データをプロセッサやクラウドへ転送してAI処理する必要があったのに対し、インテリジェントビジョンセンサーは検出結果等の軽量なメタデータのみを出力するため、データ転送量・消費電力・通信コストを削減できる。画像そのものは外部へ送信しないため、プライバシー配慮の面でも有利。\nセンサー内のAIモデルは書き換え可能で、用途に応じて同一ハードウェアを使い分けられる。",
+    "background": "従来のカメラ・イメージセンサーを用いたAI画像認識システムでは、撮像した画像データを外部のプロセッサやクラウドへ転送した上でAI処理する構成が一般的で、データ転送に伴う遅延・帯域消費・消費電力、および画像データを外部へ送信することによるプライバシー上の懸念があった。インテリジェントビジョンセンサーは、AI推論機能をイメージセンサー自体へ統合し、これらの課題を解決するために開発された。",
+    "history": "2020年5月14日: ソニーセミコンダクタソリューションズが、世界初(同社調べ)のAI処理機能搭載インテリジェントビジョンセンサー「IMX500」「IMX501」を発表。\n以降、Raspberry Pi AI CameraをはじめIMX500を搭載した各種エッジAIデバイスが登場している。",
+    "architecture": "有効約1230万画素の裏面照射型画素を配置した「画素チップ」と、通常のイメージセンサーが持つ信号処理回路に加えAI推論専用のDSPとAIモデルを書き込めるメモリーを搭載した「ロジックチップ」を積層する構造を取る。画素チップから得た信号をロジックチップでISP処理・AI処理し、検出対象をメタデータとして出力する。",
+    "advantages": [
+      "撮像とAI推論をセンサー単体、かつ動画の1フレーム内で完結でき、高精度なリアルタイムトラッキングが可能",
+      "画像データではなく軽量なメタデータのみを出力するため、データ転送量・消費電力・通信コストを削減でき、プライバシーにも配慮できる",
+      "AIモデルをメモリー上で書き換えられるため、同一ハードウェアを用途に応じて使い分けられる"
+    ],
+    "disadvantages": [
+      "センサー内蔵のDSP・メモリーで実行できるAIモデルの規模には制約があり、大規模なモデルはそのまま搭載できない",
+      "汎用イメージセンサーと比べ、AI処理機能を搭載する分コストが高くなりやすい"
+    ],
+    "comparisons": [
+      {
+        "slug": "npu",
+        "note": "NPUがスマートフォン等のSoC上に搭載されAI推論を担う専用プロセッサであるのに対し、インテリジェントビジョンセンサーはイメージセンサー自体にAI推論機能を統合したデバイス"
+      },
+      {
+        "slug": "edge-ai",
+        "note": "インテリジェントビジョンセンサーは、撮像とAI推論をセンサー単体で完結させる、エッジAIの実装形態の1つ"
+      },
+      {
+        "slug": "ai-presence-sensor",
+        "note": "インテリジェントビジョンセンサーが画像認識によりセンサー上でAI処理を行うのに対し、スマート人感センサーは主に画像を伴わないPIR・ミリ波レーダー等のセンシング手法にAIを組み合わせる"
+      }
+    ],
+    "relatedTerms": [
+      "npu",
+      "edge-ai",
+      "ai-presence-sensor"
+    ],
+    "references": [
+      {
+        "type": "Official Website",
+        "label": "インテリジェントビジョンセンサー(AIセンサー) | ソニーセミコンダクタソリューションズグループ",
+        "url": "https://www.sony-semicon.com/ja/technology/ivs/index.html"
+      },
+      {
+        "type": "Blog",
+        "label": "ソニーが世界初「AI機能搭載インテリジェントビジョンセンサー」を発表",
+        "url": "https://robotstart.info/article/2020/05/20/202279.html"
+      }
+    ]
+  },
+  {
+    "slug": "ai-presence-sensor",
+    "name": "スマート人感センサー",
+    "aliases": [
+      "AI人感センサー"
+    ],
+    "tagline": "PIRやミリ波レーダー等の人感センサーにAIによる誤検知抑制・環境学習機能を組み合わせ、人の在不在を高精度に検知するセンサー",
+    "category": "インフラ",
+    "tags": [
+      "ハードウェア",
+      "エッジAI"
+    ],
+    "plainSummary": "人の存在をより正確に検知できるよう、AIで賢くした人感センサー。",
+    "summary": "スマート人感センサーとは、赤外線(PIR)センサーやミリ波(mmWave)レーダー等の人感センサーに、AIによる信号解析・環境学習機能を組み合わせ、人の存在・不在をより高精度に検知するセンサーを指す。\n従来のPIRセンサーは体温による赤外線の変化を検知する仕組み上、静止した人物の検知や、ペット・空調の風・回転するファン等による誤作動が課題だった。ミリ波レーダーは静止した人物の呼吸等の微細な動きも捉えられる一方、壁越しに隣室の動きを検知してしまう等の課題がある。\nAIを組み合わせることで、周囲の環境(ファンの回転周波数等)を学習してノイズ要因を除外したり、複数センサーの情報を統合(センサーフュージョン)して判定精度を高めたりする用途に使われる。スマートホームの照明・空調の自動制御や、在室状況をトリガーとしたオートメーションの精度向上に活用されている。",
+    "background": "照明の自動点灯やスマートホームのオートメーションに使われる人感センサーは、PIRセンサー単体では静止した人物を検知できない、あるいは熱源やファンの動きに反応し誤作動するといった精度面の課題を抱えていた。スマート人感センサーは、レーダー等のセンシング技術とAIによる信号処理・学習機能を組み合わせ、誤検知・検知漏れを抑えた実用的な在室検知を行えるよう発展した。",
+    "advantages": [
+      "静止した人物やペット・家電の動き等、従来のPIRセンサーが苦手とした状況でも高精度に人の在不在を検知できる",
+      "環境学習によりファンの回転や空調の風等、既知のノイズ要因を除外し誤作動を抑えられる"
+    ],
+    "disadvantages": [
+      "ミリ波レーダーは壁越しに隣室の動きを検知してしまうことがあり、設置場所に応じた調整を要する",
+      "PIRセンサーのみの製品と比べ、ハードウェア・AI処理のコストが高くなりやすい"
+    ],
+    "comparisons": [
+      {
+        "slug": "intelligent-vision-sensor",
+        "note": "インテリジェントビジョンセンサーが画像認識によりセンサー上でAI処理を行うのに対し、スマート人感センサーは主に画像を伴わないPIR・ミリ波レーダー等のセンシング手法にAIを組み合わせる"
+      },
+      {
+        "slug": "smart-home",
+        "note": "スマート人感センサーは、スマートホームにおいて在室検知・自動制御のトリガーとして使われるセンサーの1つ"
+      }
+    ],
+    "relatedTerms": [
+      "intelligent-vision-sensor",
+      "edge-ai",
+      "smart-home"
+    ],
+    "references": [
+      {
+        "type": "Blog",
+        "label": "SwitchBot Launches the New Presence Sensor with mmWave Radar",
+        "url": "https://www.prnewswire.com/news-releases/switchbot-launches-the-new-presence-sensor-with-mmwave-radar-302616822.html"
+      }
+    ]
+  },
+  {
+    "slug": "ai-soft-sensor",
+    "name": "AIソフトセンサー",
+    "aliases": [
+      "AI Soft Sensor",
+      "ソフトセンサー"
+    ],
+    "tagline": "温度・圧力等、測定容易なセンサーデータからAIが測定困難な品質・状態をリアルタイムに推定する仮想センサー技術",
+    "category": "技術",
+    "tags": [
+      "機械学習",
+      "データ"
+    ],
+    "plainSummary": "測定しやすいデータから、直接測るのが難しい状態をAIが予測する仕組み。",
+    "summary": "AIソフトセンサーとは、温度・圧力・流量等の測定しやすいセンサーデータから、AI(機械学習)モデルを介して、直接測定が困難な品質や状態(濃度・純度等)をリアルタイムに推定する技術を指す。物理的なセンサーではなくソフトウェア上のモデルとして実装されることから「ソフト(仮想)センサー」と呼ばれる。\n化学プラントや水処理施設等のプロセス産業では、対象物の状態を分析装置で直接測定すると1日1回程度の頻度でしか評価できない場合がある。AIソフトセンサーを用いれば、常時取得できるセンサーデータから毎分単位で状態を推定できる。\n近年は環境変化に応じてモデルを自動的に再学習し精度を維持する製品も登場しており、現場主導のDX推進を支える技術として活用が広がっている。",
+    "background": "従来の品質・状態管理は、分析装置による定期的な直接測定に頼っており、測定頻度やコストの制約から、環境変化への即応が難しいという課題があった。AIソフトセンサーは、常時取得できる周辺センサーのデータから対象の状態を推定するモデルを構築することで、測定コストを抑えつつ高頻度な状態把握を実現するために発展した。",
+    "history": "1970〜80年代: 化学プラント等のプロセス産業において、物理法則に基づく数式モデルで測定困難な変数を推定する「ソフトセンサー」の概念が登場。\n1990年代以降: コンピュータ性能の向上を背景に、大量の実データから統計的な関係性を学習するデータ駆動型モデルへ発展し、近年は機械学習・AIを用いた「AIソフトセンサー」の実用化が進んでいる。",
+    "advantages": [
+      "高コスト・低頻度にしか測定できない品質・状態を、既存の安価なセンサーデータから高頻度に推定できる",
+      "環境変化に応じてモデルを自動再学習する製品もあり、運用中の精度低下を抑えられる"
+    ],
+    "disadvantages": [
+      "推定値はモデルによる予測であり、実測値との誤差が生じやすい",
+      "モデルの構築・再学習には、現場の対象データやドメイン知識の蓄積が必要になる"
+    ],
+    "comparisons": [
+      {
+        "slug": "machine-learning",
+        "note": "AIソフトセンサーは、機械学習を用いて測定困難な状態・品質を周辺データから推定する応用分野の1つ"
+      }
+    ],
+    "relatedTerms": [
+      "machine-learning"
+    ],
+    "references": [
+      {
+        "type": "Blog",
+        "label": "AI活用で“現場のDX”を加速させる「AIソフトセンサー」とは?",
+        "url": "https://www.teldevice.co.jp/dx/column/column-1283/"
+      },
+      {
+        "type": "Blog",
+        "label": "現場主導でAI活用を加速する「AI Soft Sensor」導入支援パッケージを提供開始",
+        "url": "https://www.ntt.com/about-us/press-releases/news/article/2025/1112.html"
+      }
+    ]
+  },
+  {
+    "slug": "smart-home",
+    "name": "スマートホーム",
+    "aliases": [
+      "Smart Home"
+    ],
+    "tagline": "IoT機器・AIスマートスピーカー等を組み合わせ、家電の遠隔操作や生活パターンの学習による自動化を実現する住宅",
+    "category": "インフラ",
+    "tags": [
+      "自動化",
+      "エッジAI"
+    ],
+    "plainSummary": "スマホや音声で家電を操作したり、AIが生活パターンを学習して自動で快適にしてくれる住まい。",
+    "summary": "スマートホームとは、IoTやAIの技術を活用し、スマートフォンやAIスマートスピーカー等の制御デバイスを通じて、テレビ・照明・エアコン等の家電を遠隔操作・自動化できる住宅を指す。\n構成要素には、家電をネットワークに接続するスマートプラグ・スマートリモコン、ドアの開閉や在室状況を検知するドアセンサー・人感センサー等のセンサー類、AIアシスタント機能を持つスマートスピーカー、見守り・防犯用のカメラ等がある。\nAIが生活パターンを学習し、帰宅時間を予測して空調を調整したり、冷蔵庫内の在庫を把握して自動発注したりする等、単なる遠隔操作を超えた自動化・最適化への活用が期待されている。",
+    "background": "従来の住宅設備は、個々の家電・機器を手動操作する前提で設計されていた。IoT技術の普及であらゆる家電をネットワークへ接続できるようになり、AIスマートスピーカーの登場で音声による家電操作も可能になったことで、家全体を統合的に制御・自動化する「スマートホーム」という概念が広まった。日本では2016年、経済産業省の産業構造審議会がスマートホームを国内の成長戦略分野の1つに位置付けている。",
+    "advantages": [
+      "家電の遠隔操作や音声操作により、日常の操作性・利便性が向上する",
+      "生活パターンの学習に基づく自動化により、エネルギー管理や防犯・見守り等の最適化が期待できる"
+    ],
+    "disadvantages": [
+      "複数メーカーのデバイスを組み合わせる場合、通信規格やアプリの違いにより連携が複雑になることがある",
+      "ネットワークに接続された家電・センサーが増えるため、セキュリティ・プライバシー面のリスク管理が必要になる"
+    ],
+    "comparisons": [
+      {
+        "slug": "edge-ai",
+        "note": "スマートホームのAIスマートスピーカーやセンサー機器の多くは、エッジAIによりデバイス内で音声認識やセンサーデータ処理を行う"
+      },
+      {
+        "slug": "ai-presence-sensor",
+        "note": "スマート人感センサーは、スマートホームにおいて在室検知・自動制御のトリガーとして使われるセンサーの1つ"
+      }
+    ],
+    "relatedTerms": [
+      "edge-ai",
+      "ai-presence-sensor"
+    ],
+    "references": [
+      {
+        "type": "Documentation",
+        "label": "スマートホーム - Wikipedia",
+        "url": "https://ja.wikipedia.org/wiki/%E3%82%B9%E3%83%9E%E3%83%BC%E3%83%88%E3%83%9B%E3%83%BC%E3%83%A0"
+      }
+    ]
+  },
+  {
+    "slug": "ornith",
+    "name": "Ornith",
+    "aliases": [
+      "Ornith-1.0"
+    ],
+    "tagline": "AlibabaのQwen 3.5とGoogleのGemma 4を基盤に、エージェント型コーディング向けへ強化学習で自己改善させたオープンウェイトLLMファミリー",
+    "category": "モデル",
+    "tags": [
+      "LLM",
+      "オープンウェイト",
+      "コーディングエージェント"
+    ],
+    "plainSummary": "既存モデルを土台に、コーディングを自動でこなすエージェント向けへ特化させたオープンな大規模言語モデル。",
+    "summary": "Ornith(Ornith-1.0)とは、AIスタートアップDeepReinforceが開発した、エージェント型のコーディングタスクに特化したオープンウェイトの大規模言語モデルファミリー。\nAlibabaのQwen 3.5とGoogleのGemma 4という既存の事前学習済みモデルをベースに、強化学習によるポストトレーニングを施している。\n最大の特徴は、モデル自身に解答の生成だけでなく、その解答を導くタスクごとの足場(スキャフォールド、エージェントの探索・実行手順)も生成させ、両者を同時に最適化する「自己足場構築(self-scaffolding)」という学習手法。人手で設計したハーネスに頼らず、モデル自身がタスクに適した探索戦略を発見することで、より高品質な解答を導けるとしている。\n9B(Dense)・31B(Dense)・35B(MoE)・397B(MoE)の4種類のサイズを展開しており、エッジデバイス向けの小型モデルから大規模なフロンティアモデルまで幅広くカバーする。MITライセンスで重みが公開されている。",
+    "background": "従来のエージェント型コーディングモデルの強化学習では、人間が設計した固定的なハーネス(探索・実行の手順)の上で解答の生成のみを学習対象とすることが一般的だった。Ornith-1.0は、ハーネス自体もモデルが学習・生成する対象に含め、タスクに適した探索戦略をモデル自身が発見できるようにする目的で開発された。",
+    "history": "2026年6月25日: DeepReinforceが、Qwen 3.5・Gemma 4をベースにしたエージェント型コーディング向けLLMファミリー「Ornith-1.0」を公開。",
+    "advantages": [
+      "Terminal-Bench 2.1やSWE-bench Verified等のエージェント型コーディングベンチマークで、同規模のオープンソースモデルを上回る性能を示す",
+      "9Bから397Bまで幅広いサイズを展開しており、エッジデバイスから大規模フロンティア用途まで選択できる",
+      "MITライセンスで重みが公開されており、利用・改変の制約が少ない"
+    ],
+    "disadvantages": [
+      "自己足場構築という新しい学習手法のため、既存モデルと比べ実運用での知見・エコシステムの蓄積がまだ少ない",
+      "エージェント型コーディングに特化した設計のため、汎用対話等その他タスクでの性能は評価対象に含まれていない"
+    ],
+    "comparisons": [
+      {
+        "slug": "qwen",
+        "note": "Ornith-1.0は、Qwen 3.5の重みをベースにGemma 4と合わせてポストトレーニングした、コーディングエージェント特化モデル"
+      },
+      {
+        "slug": "gemma",
+        "note": "Ornith-1.0は、Gemma 4を含む複数の事前学習済みモデルをベースに、エージェント型コーディング向けの強化学習を施したモデル"
+      },
+      {
+        "slug": "swe-bench",
+        "note": "Ornith-1.0は、SWE-bench Verified等のエージェント型コーディングベンチマークで高いスコアを示している"
+      },
+      {
+        "slug": "coding-agent",
+        "note": "Ornith-1.0は、コーディングエージェント向けに強化学習でポストトレーニングされたLLMファミリー"
+      }
+    ],
+    "relatedTerms": [
+      "qwen",
+      "gemma",
+      "swe-bench",
+      "coding-agent"
+    ],
+    "references": [
+      {
+        "type": "Blog",
+        "label": "Ornith-1.0: Self-Scaffolding LLMs for Agentic Coding | DeepReinforce Blog",
+        "url": "https://deep-reinforce.com/ornith.html"
+      },
+      {
+        "type": "GitHub",
+        "label": "deepreinforce-ai/Ornith-1",
+        "url": "https://github.com/deepreinforce-ai/Ornith-1"
+      },
+      {
+        "type": "Documentation",
+        "label": "deepreinforce-ai/Ornith-1.0-35B | Hugging Face",
+        "url": "https://huggingface.co/deepreinforce-ai/Ornith-1.0-35B"
+      }
+    ]
+  },
+  {
+    "slug": "fastmcp",
+    "name": "FastMCP",
+    "tagline": "PythonでMCPサーバー・クライアントを簡潔なデコレータ構文で構築できる、事実上標準のMCPフレームワーク",
+    "category": "インフラ",
+    "tags": [
+      "フレームワーク",
+      "ツール連携"
+    ],
+    "plainSummary": "MCPサーバーやクライアントを、PythonでシンプルなコードだけでサクッとApplication作れるフレームワーク。",
+    "summary": "FastMCPとは、Model Context Protocol(MCP)に対応するサーバー・クライアントをPythonで構築するためのフレームワーク。\n`@mcp.tool`のようなデコレータでPython関数を装飾するだけで、MCPツールとして必要なスキーマ定義・入力検証・ドキュメント生成が自動的に行われ、トランスポートのネゴシエーションや認証、プロトコルのライフサイクル管理もフレームワーク側が担う。開発者はツールのロジック実装に専念できる。\nサーバー機能に加え、任意のMCPサーバーへ接続するクライアント機能、複数のMCPサーバーを組み合わせる「Composition」機能、既存のMCPサーバーを中継する「Proxy」機能等を備え、プロトタイピングから本番運用までを一貫してカバーする。\nMCPサーバー実装における事実上の標準フレームワークの1つとされ、複数言語のMCPサーバーの多くがFastMCPを基盤にしているとされる。",
+    "background": "MCPはLLMとツール・データソースを接続するためのプロトコルを定義するが、スキーマ定義・入力検証・認証・トランスポート管理等、安定したMCPサーバー・クライアントを実装するには多くの定型作業が伴う。FastMCPは、こうした定型作業をフレームワーク側で肩代わりし、Pythonの関数定義だけでMCPサーバーを構築できるよう開発された。",
+    "history": "2024年11月: MCP公開から約1週間後、Jeremiah LowinがFastMCPの開発を個人プロジェクトとして開始。\n2024年: FastMCP 1.0が公式のMCP Python SDKへ統合される。\n2025年4月16日: 独立プロジェクトとして「Composition」「Proxy」等の機能を追加したFastMCP 2.0を公開。\n2026年2月18日: FastMCP 3.0が安定版(GA)としてリリースされ、リポジトリの管理元がJeremiah Lowin個人からPrefectHQへ移管された。",
+    "advantages": [
+      "デコレータでPython関数を装飾するだけで、MCPツールに必要なスキーマ定義・入力検証・ドキュメント生成が自動化される",
+      "サーバー・クライアントに加え、複数サーバーの合成(Composition)や既存サーバーの中継(Proxy)等、本番運用を見据えた機能を備える"
+    ],
+    "disadvantages": [
+      "Pythonエコシステムが前提となっており、他言語でMCPサーバーを実装する場合は選択肢にならない",
+      "バージョン間(1.0/2.0/3.0)でAPIや配布元リポジトリに変更があり、移行時にはアップグレードガイドの確認を要する"
+    ],
+    "comparisons": [
+      {
+        "slug": "mcp",
+        "note": "FastMCPは、MCPプロトコルに対応するサーバー・クライアントをPythonで実装するためのフレームワーク"
+      }
+    ],
+    "relatedTerms": [
+      "mcp"
+    ],
+    "references": [
+      {
+        "type": "Official Website",
+        "label": "FastMCP",
+        "url": "https://gofastmcp.com"
+      },
+      {
+        "type": "GitHub",
+        "label": "PrefectHQ/fastmcp",
+        "url": "https://github.com/PrefectHQ/fastmcp"
+      },
+      {
+        "type": "Blog",
+        "label": "FastMCP 3.0 is GA",
+        "url": "https://jlowin.dev/blog/fastmcp-3-launch"
+      }
+    ]
   }
 ]
