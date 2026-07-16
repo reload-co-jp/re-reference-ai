@@ -636,13 +636,18 @@
       {
         "slug": "data-poisoning",
         "note": "データポイズニングは、学習に使われるコーパスの信頼性を脅かす攻撃"
+      },
+      {
+        "slug": "common-crawl",
+        "note": "Common Crawlは、LLMの事前学習に使われる代表的な大規模Webコーパスの1つ"
       }
     ],
     "relatedTerms": [
       "large-language-model",
       "fine-tuning",
       "token",
-      "data-poisoning"
+      "data-poisoning",
+      "common-crawl"
     ],
     "faq": [
       {
@@ -1666,6 +1671,14 @@
       {
         "slug": "encoder",
         "note": "BERTは、TransformerのEncoder部分のみを積み重ねて文章理解に特化させたモデル"
+      },
+      {
+        "slug": "sentence-bert",
+        "note": "Sentence-BERTは、BERTをシャムネットワーク構造で微調整し、文単位の埋め込みを高速に比較できるよう改良したモデル"
+      },
+      {
+        "slug": "mlm",
+        "note": "BERTは、MLMを事前学習タスクの1つとして採用した代表的なモデル"
       }
     ],
     "relatedTerms": [
@@ -1675,7 +1688,9 @@
       "attention",
       "nlp",
       "encoder",
-      "pretraining"
+      "pretraining",
+      "mlm",
+      "sentence-bert"
     ],
     "faq": [
       {
@@ -2917,6 +2932,22 @@
       {
         "slug": "int4",
         "note": "INT4は、量子化の中でも特に高い圧縮率を狙う際に使われる目標精度"
+      },
+      {
+        "slug": "ptq",
+        "note": "PTQは、学習済みモデルへ事後的に量子化を適用する代表的な手法の1つ"
+      },
+      {
+        "slug": "qat",
+        "note": "QATは、学習段階から量子化による精度低下を織り込む代表的な手法の1つ"
+      },
+      {
+        "slug": "gptq",
+        "note": "GPTQは、少量のキャリブレーションデータでLLMを4bit程度まで量子化する代表的なPTQ手法"
+      },
+      {
+        "slug": "awq",
+        "note": "AWQは、活性化値の分布に基づき重要な重みを保護しながら量子化する代表的なPTQ手法"
       }
     ],
     "relatedTerms": [
@@ -2931,7 +2962,11 @@
       "fp16",
       "int8",
       "int4",
-      "edge-ai"
+      "edge-ai",
+      "ptq",
+      "qat",
+      "gptq",
+      "awq"
     ],
     "faq": [
       {
@@ -3255,6 +3290,14 @@
       {
         "slug": "bert",
         "note": "多くの埋め込みモデルは、BERT等のエンコーダ型Transformerをベースに学習される"
+      },
+      {
+        "slug": "sentence-bert",
+        "note": "Sentence-BERTは、文単位の埋め込みを効率的に計算できるようBERTを改良した代表的な埋め込みモデル"
+      },
+      {
+        "slug": "mteb",
+        "note": "MTEBは、埋め込みモデルの性能を複数タスクにわたって横断的に評価する代表的なベンチマーク"
       }
     ],
     "relatedTerms": [
@@ -3264,7 +3307,9 @@
       "retrieval-augmented-generation",
       "word2vec",
       "faiss",
-      "cosine-similarity"
+      "cosine-similarity",
+      "sentence-bert",
+      "mteb"
     ],
     "faq": [
       {
@@ -3498,6 +3543,10 @@
       {
         "slug": "reranker",
         "note": "ハイブリッド検索で統合した候補群を、さらにリランカーで並べ替えることもある"
+      },
+      {
+        "slug": "rrf",
+        "note": "RRFは、ハイブリッド検索でセマンティック検索とキーワード検索のスコアを統合する代表的な手法"
       }
     ],
     "relatedTerms": [
@@ -3505,7 +3554,8 @@
       "bm25",
       "reranker",
       "retrieval-augmented-generation",
-      "tf-idf"
+      "tf-idf",
+      "rrf"
     ],
     "faq": [
       {
@@ -3555,13 +3605,18 @@
       {
         "slug": "hybrid-search",
         "note": "ハイブリッド検索では、キーワード検索側のアルゴリズムとしてBM25がよく使われる"
+      },
+      {
+        "slug": "rrf",
+        "note": "RRFは、BM25によるキーワード検索の結果とベクトル検索の結果を統合する際によく使われる"
       }
     ],
     "relatedTerms": [
       "semantic-search",
       "hybrid-search",
       "retrieval-augmented-generation",
-      "tf-idf"
+      "tf-idf",
+      "rrf"
     ],
     "faq": [
       {
@@ -4896,13 +4951,18 @@
       {
         "slug": "vllm",
         "note": "vLLMは、連続バッチングによりバッチ推論のスループットを高める"
+      },
+      {
+        "slug": "continuous-batching",
+        "note": "連続バッチ処理は、固定サイズのバッチ推論と異なりイテレーション単位でバッチの構成を動的に組み替える発展形"
       }
     ],
     "relatedTerms": [
       "streaming",
       "inference",
       "kv-cache",
-      "vllm"
+      "vllm",
+      "continuous-batching"
     ],
     "faq": [
       {
@@ -5677,6 +5737,10 @@
       {
         "slug": "ollama",
         "note": "vLLMが大規模なサーバー向けサービングに向くのに対し、Ollamaは個人利用・ローカル環境向けに設計されている"
+      },
+      {
+        "slug": "continuous-batching",
+        "note": "vLLMは、連続バッチ処理とPagedAttentionを組み合わせた代表的なLLM推論サーバーの1つ"
       }
     ],
     "relatedTerms": [
@@ -5686,7 +5750,8 @@
       "inference",
       "triton-inference-server",
       "ray",
-      "sglang"
+      "sglang",
+      "continuous-batching"
     ],
     "faq": [
       {
@@ -10179,6 +10244,10 @@
       {
         "slug": "multimodal",
         "note": "テキストから画像を生成するモデルの多くは、拡散モデルとテキストエンコーダを組み合わせたマルチモーダルな構成をとる"
+      },
+      {
+        "slug": "latent-diffusion-model",
+        "note": "潜在拡散モデルは、拡散過程をピクセル空間ではなく潜在空間で行い、計算コストを抑えた拡散モデルの一種"
       }
     ],
     "relatedTerms": [
@@ -10186,7 +10255,8 @@
       "variational-autoencoder",
       "multimodal",
       "stable-diffusion",
-      "diffusion-llm"
+      "diffusion-llm",
+      "latent-diffusion-model"
     ],
     "faq": [
       {
@@ -12660,13 +12730,23 @@
       {
         "slug": "cosine-similarity",
         "note": "HNSWによる探索では、ノード間の近さを測る距離指標としてコサイン類似度がよく使われる"
+      },
+      {
+        "slug": "ivf",
+        "note": "IVFがベクトルをクラスタへ分割し探索範囲を絞り込むのに対し、HNSWはグラフ構造をたどって近傍を探索する"
+      },
+      {
+        "slug": "ann",
+        "note": "HNSWは、グラフ構造を用いた代表的なANNアルゴリズムの1つ"
       }
     ],
     "relatedTerms": [
       "vector-database",
       "faiss",
       "cosine-similarity",
-      "semantic-search"
+      "semantic-search",
+      "ivf",
+      "ann"
     ],
     "faq": [
       {
@@ -12724,13 +12804,18 @@
       {
         "slug": "embedding-model",
         "note": "Faissは、埋め込みモデルが出力したベクトルを登録・検索する用途で使われることが多い"
+      },
+      {
+        "slug": "ivf",
+        "note": "IVFは、Faissで実装されている代表的な近似最近傍探索のインデックス方式の1つ"
       }
     ],
     "relatedTerms": [
       "hnsw",
       "vector-database",
       "embedding-model",
-      "semantic-search"
+      "semantic-search",
+      "ivf"
     ],
     "faq": [
       {
@@ -12970,6 +13055,10 @@
       {
         "slug": "clip",
         "note": "テキストプロンプトの理解には、CLIPに類似したテキストエンコーダの技術が活用されている"
+      },
+      {
+        "slug": "latent-diffusion-model",
+        "note": "Stable Diffusionは、潜在拡散モデルのアーキテクチャを採用した代表的な画像生成モデル"
       }
     ],
     "relatedTerms": [
@@ -12978,7 +13067,8 @@
       "clip",
       "u-net",
       "midjourney",
-      "flux"
+      "flux",
+      "latent-diffusion-model"
     ],
     "faq": [
       {
@@ -17330,6 +17420,664 @@
         "type": "Blog",
         "label": "FastMCP 3.0 is GA",
         "url": "https://jlowin.dev/blog/fastmcp-3-launch"
+      }
+    ]
+  },
+  {
+    "slug": "continuous-batching",
+    "name": "連続バッチ処理",
+    "aliases": [
+      "Continuous Batching"
+    ],
+    "tagline": "生成完了したリクエストの枠へ新規リクエストを即座に詰め替え、LLM推論サーバーのスループットを高めるバッチ処理方式",
+    "category": "技術",
+    "tags": [
+      "推論最適化",
+      "スループット"
+    ],
+    "plainSummary": "終わったリクエストの空き枠に次のリクエストをすぐ入れて、GPUを無駄なく使い続けるバッチ処理の方式。",
+    "summary": "連続バッチ処理(Continuous Batching)とは、LLM推論サーバーにおいて、バッチ内の一部のリクエストが生成完了した時点でそのスロットへ新しい待機中のリクエストを即座に組み込み、バッチ全体の完了を待たずに次のリクエストの処理を開始するバッチ処理方式。\n従来の静的バッチ処理では、生成するトークン数の異なる複数のリクエストを1つのバッチにまとめると、最も長いリクエストの完了までGPUの一部が遊休状態になっていた。連続バッチ処理は、デコードの反復(イテレーション)単位でバッチの構成を見直すことで、この遊休時間を減らしGPU利用率とスループットを高める。\nvLLM・Text Generation Inference(TGI)・TensorRT-LLM等、主要なLLM推論サーバーで採用されている中核的な最適化技術の1つ。",
+    "background": "静的バッチ処理では、バッチ内の各リクエストで生成するトークン数が異なるため、短いリクエストが早く完了してもバッチ全体は最も長いリクエストに合わせて待機する必要があり、GPUリソースを無駄にしていた。連続バッチ処理は、リクエストごとの生成完了タイミングのばらつきを吸収し、GPU利用率を高めるために考案された。",
+    "history": "2022年: Seoul National UniversityとFriendliAIの研究チームがOSDI 2022にて論文「Orca: A Distributed Serving System for Transformer-Based Generative Models」を発表。イテレーション単位でバッチを組み替える「イテレーションレベルスケジューリング」を提案し、従来のバッチ処理と比べ最大36.9倍のスループット向上を報告した。\n以降、vLLM等の主要なLLM推論サーバーが同様の仕組みを「連続バッチ処理(Continuous Batching)」として実装し、業界標準的な最適化技術として広まった。",
+    "advantages": [
+      "リクエストごとの生成完了タイミングのばらつきを吸収し、GPU利用率とスループットを高められる",
+      "新規リクエストを待たせず即座にバッチへ組み込めるため、待ち時間(レイテンシ)も改善しやすい"
+    ],
+    "disadvantages": [
+      "バッチの構成をイテレーションごとに動的に管理する必要があり、スケジューラの実装が静的バッチ処理より複雑になる",
+      "KVキャッシュのメモリ管理と組み合わせて実装されることが多く、関連技術への理解も要する"
+    ],
+    "comparisons": [
+      {
+        "slug": "batch-inference",
+        "note": "バッチ推論が固定サイズのバッチをまとめて処理するのに対し、連続バッチ処理はイテレーション単位でバッチの構成を動的に組み替える"
+      },
+      {
+        "slug": "kv-cache",
+        "note": "連続バッチ処理は、KVキャッシュの管理方式(PagedAttention等)と組み合わせて実装されることが多い"
+      },
+      {
+        "slug": "vllm",
+        "note": "vLLMは、連続バッチ処理とPagedAttentionを組み合わせた代表的なLLM推論サーバーの1つ"
+      }
+    ],
+    "relatedTerms": [
+      "batch-inference",
+      "kv-cache",
+      "vllm"
+    ],
+    "references": [
+      {
+        "type": "Research Paper",
+        "label": "Orca: A Distributed Serving System for Transformer-Based Generative Models",
+        "url": "https://www.usenix.org/system/files/osdi22-yu.pdf"
+      }
+    ]
+  },
+  {
+    "slug": "rrf",
+    "name": "RRF",
+    "aliases": [
+      "Reciprocal Rank Fusion"
+    ],
+    "tagline": "複数の検索手法によるランキング結果を、順位の逆数の和で統合するハイブリッド検索のスコア統合手法",
+    "category": "技術",
+    "tags": [
+      "検索",
+      "情報検索"
+    ],
+    "plainSummary": "違う検索方法の結果を、順位だけをもとに1つのランキングへまとめる手法。",
+    "summary": "RRF(Reciprocal Rank Fusion)とは、キーワード検索(BM25等)とベクトル検索(embedding類似度)のように、異なる検索手法が出力した複数のランキング結果を、各文書の「順位」のみをもとに1つのランキングへ統合する手法。\n各検索結果におけるドキュメントの順位の逆数を、平滑化のための定数で補正しながら合計し、そのスコアをもとに並べ替えて統合ランキングを得る。スコアそのものの値ではなく順位のみを使うため、検索手法ごとにスコアのスケールが異なっていても、正規化なしにそのまま組み合わせられる点が特徴。\nBM25によるキーワード検索とベクトル検索を組み合わせるハイブリッド検索において、両者の結果を統合する代表的な手法として広く使われている。",
+    "background": "キーワード検索とベクトル検索は、それぞれ得意とするクエリ・文書の特性が異なり、検索精度を高めるためには両者を組み合わせるハイブリッド検索が有効とされる。しかし、各検索手法が出力するスコアは値のスケールや分布が異なるため単純に加算・平均できない。RRFは、スコアの値ではなく順位という共通の指標をもとに複数の検索結果を統合する手法として考案された。",
+    "history": "2009年: Gordon V. Cormackらが、SIGIR 2009にて論文「Reciprocal Rank Fusion outperforms Condorcet and Individual Rank Learning Methods」を発表しRRFを提案。\n共著者はCharles L. A. ClarkeとStefan Büttcher。",
+    "architecture": "各ドキュメントについて、検索手法ごとの順位を求め、その逆数を平滑化定数で補正した値を、複数の検索手法にわたって合計することでRRFスコアを算出する。この定数は順位の影響を滑らかにするためのパラメータで、Cormackらの実験では60程度の値が良好な結果を示すとされている。",
+    "advantages": [
+      "検索手法ごとのスコアのスケールが異なっていても、正規化なしに複数の結果を統合できる",
+      "実装がシンプルで、追加の学習データやチューニングをほとんど必要としない"
+    ],
+    "disadvantages": [
+      "順位のみを利用するため、スコアの差の大きさ(自信度)は考慮されない",
+      "定数の設定によって統合結果の傾向が変わり、データセットに応じた調整を要することがある"
+    ],
+    "comparisons": [
+      {
+        "slug": "hybrid-search",
+        "note": "RRFは、ハイブリッド検索でキーワード検索とベクトル検索の結果を統合する代表的な手法の1つ"
+      },
+      {
+        "slug": "bm25",
+        "note": "RRFは、BM25によるキーワード検索の結果とベクトル検索の結果を統合する際によく使われる"
+      }
+    ],
+    "relatedTerms": [
+      "hybrid-search",
+      "bm25",
+      "semantic-search"
+    ],
+    "references": [
+      {
+        "type": "Research Paper",
+        "label": "Reciprocal Rank Fusion outperforms Condorcet and Individual Rank Learning Methods",
+        "url": "https://cormack.uwaterloo.ca/cormacksigir09-rrf.pdf"
+      }
+    ]
+  },
+  {
+    "slug": "mteb",
+    "name": "MTEB",
+    "aliases": [
+      "Massive Text Embedding Benchmark"
+    ],
+    "tagline": "分類・クラスタリング・検索等の複数タスク・100以上の言語にわたり、テキスト埋め込みモデルの性能を横断的に評価するベンチマーク",
+    "category": "評価",
+    "tags": [
+      "ベンチマーク",
+      "埋め込み"
+    ],
+    "plainSummary": "文章の埋め込みモデルの性能を、いろいろなタスク・言語で横断的に測るベンチマーク。",
+    "summary": "MTEB(Massive Text Embedding Benchmark)とは、テキスト埋め込みモデルの性能を、分類・クラスタリング・ペア分類・リランキング・検索・意味的テキスト類似度(STS)・要約等、複数の異なるタスクにわたって横断的に評価するベンチマーク。\n単一のタスクだけでモデルを評価すると、そのタスクには強くても他の用途では性能が振るわない埋め込みモデルを見逃してしまう。MTEBは、多様なタスク・データセット・言語を用いることで、埋め込みモデルの汎用的な性能を比較できるようにしている。\n結果は公開のリーダーボードで公表されており、各種埋め込みモデルの性能比較で広く参照される代表的な指標になっている。",
+    "background": "従来のテキスト埋め込みモデルの評価は、意味的テキスト類似度(STS)等、特定のタスク・データセットに限定されることが多く、検索・分類・クラスタリング等、埋め込みモデルの幅広い用途における性能を十分に評価できていなかった。MTEBは、複数タスク・複数言語にわたる横断的な評価を通じて、埋め込みモデルの汎用性をより正確に比較できるよう開発された。",
+    "history": "2022年10月: Muennighoff・Tazi・Magne・Reimersらが、論文「MTEB: Massive Text Embedding Benchmark」を発表。当初は8種類のタスク・58データセット・112言語をカバーする形で公開された。",
+    "advantages": [
+      "分類・検索・クラスタリング等、複数タスクにわたる横断評価により、埋め込みモデルの汎用的な性能を比較できる",
+      "公開リーダーボードにより、多数の埋め込みモデルの性能を継続的に比較できる"
+    ],
+    "disadvantages": [
+      "タスク・言語ごとに得意不得意が分かれるモデルも多く、総合スコアだけでは特定用途への適性を判断しづらい",
+      "ベンチマークに特化したチューニングにより、実運用での性能と乖離するモデルが出てくる可能性がある"
+    ],
+    "comparisons": [
+      {
+        "slug": "embedding-model",
+        "note": "MTEBは、埋め込みモデルの性能を複数タスクにわたって横断的に評価する代表的なベンチマーク"
+      }
+    ],
+    "relatedTerms": [
+      "embedding-model",
+      "embedding",
+      "semantic-search"
+    ],
+    "references": [
+      {
+        "type": "Research Paper",
+        "label": "MTEB: Massive Text Embedding Benchmark",
+        "url": "https://arxiv.org/abs/2210.07316"
+      },
+      {
+        "type": "GitHub",
+        "label": "embeddings-benchmark/mteb",
+        "url": "https://github.com/embeddings-benchmark/mteb"
+      }
+    ]
+  },
+  {
+    "slug": "ptq",
+    "name": "PTQ",
+    "aliases": [
+      "Post-Training Quantization",
+      "学習後量子化"
+    ],
+    "tagline": "学習済みモデルの重みを、追加学習なしに事後的に低ビット精度へ変換する量子化手法",
+    "category": "技術",
+    "tags": [
+      "モデル圧縮",
+      "軽量化"
+    ],
+    "plainSummary": "学習が終わったモデルに、後から手軽に量子化をかける手法。",
+    "summary": "PTQ(Post-Training Quantization、学習後量子化)とは、既に学習が完了したモデルに対し、再学習せずに重みや活性化値を低ビット精度の数値表現へ変換する量子化手法。\n量子化後のモデル性能を保つため、変換前に少量のキャリブレーションデータを用いて数値の分布(スケール・ゼロ点等)を調整する場合が多いが、QATのようにモデル全体を再学習する必要はなく、比較的少ない計算コスト・短時間で適用できる点が特徴。\nGPTQやAWQ等、LLM向けに開発された量子化手法の多くもPTQに分類される。",
+    "background": "学習済みの大規模モデルを量子化する際、QATのように学習全体をやり直すアプローチは計算コスト・時間の面で負担が大きい。PTQは、既存の学習済みモデルへ事後的に変換を適用するだけで量子化を完了できる、より手軽な手法として発展した。",
+    "advantages": [
+      "再学習が不要なため、量子化を短時間・低コストで適用できる",
+      "学習用のデータセットや計算資源を用意できない場合でも、学習済みモデルへ適用しやすい"
+    ],
+    "disadvantages": [
+      "QATと比べ、低ビット化に伴う性能低下(精度劣化)が大きくなりやすい",
+      "キャリブレーションデータの質や量子化のビット数によっては、想定より精度が低下しやすい"
+    ],
+    "comparisons": [
+      {
+        "slug": "qat",
+        "note": "QATが学習段階から量子化を考慮するのに対し、PTQは学習済みモデルへ事後的に量子化を適用する"
+      },
+      {
+        "slug": "quantization",
+        "note": "PTQは、量子化の中でも学習済みモデルへ事後的に適用する代表的な手法の1つ"
+      },
+      {
+        "slug": "gptq",
+        "note": "GPTQは、LLM向けに開発された代表的なPTQ手法の1つ"
+      },
+      {
+        "slug": "awq",
+        "note": "AWQは、LLM向けに開発された代表的なPTQ手法の1つ"
+      }
+    ],
+    "relatedTerms": [
+      "qat",
+      "quantization",
+      "int8",
+      "int4",
+      "gptq",
+      "awq"
+    ]
+  },
+  {
+    "slug": "qat",
+    "name": "QAT",
+    "aliases": [
+      "Quantization-Aware Training",
+      "量子化を考慮した学習"
+    ],
+    "tagline": "学習段階から量子化による誤差を考慮に入れることで、低ビット化後も精度低下を抑える量子化手法",
+    "category": "技術",
+    "tags": [
+      "モデル圧縮",
+      "軽量化"
+    ],
+    "plainSummary": "学習の段階から量子化の影響を織り込んでおき、後で精度が落ちにくくする手法。",
+    "summary": "QAT(Quantization-Aware Training、量子化を考慮した学習)とは、モデルの学習(または再学習)の過程に量子化による数値表現の丸め誤差をシミュレートする処理を組み込み、量子化後の性能低下をあらかじめ抑え込む量子化手法。\n学習中、順伝播では量子化後の低ビット表現を模した値を使い、逆伝播では通常の高精度な勾配で重みを更新する「疑似量子化(fake quantization)」という仕組みにより、モデル自身が量子化の影響に適応した重みを学習する。\n学習済みモデルへ事後的に変換を適用するPTQと比べて計算コストは高いが、特に低ビット(4bit以下等)まで圧縮する場合に、より高い精度を維持しやすいとされる。",
+    "background": "PTQのように学習済みモデルへ事後的に量子化を適用する手法は手軽だが、低ビット化の度合いが大きいほど性能低下が顕著になりやすい。QATは、学習段階から量子化による誤差を織り込むことで、量子化後の精度低下をより小さく抑えるために考案された。",
+    "advantages": [
+      "学習段階から量子化の影響を織り込むため、PTQと比べて低ビット化後の精度低下を抑えやすい",
+      "特に4bit以下等、圧縮率の高い量子化を行う場合に効果を発揮しやすい"
+    ],
+    "disadvantages": [
+      "モデルの学習(または再学習)が必要なため、PTQと比べて計算コスト・時間がかかる",
+      "学習用のデータセットや計算資源を確保できない場合には適用しにくい"
+    ],
+    "comparisons": [
+      {
+        "slug": "ptq",
+        "note": "PTQが学習済みモデルへ事後的に量子化を適用するのに対し、QATは学習段階から量子化の影響を考慮する"
+      },
+      {
+        "slug": "quantization",
+        "note": "QATは、量子化の中でも学習段階から精度低下を抑える代表的な手法の1つ"
+      }
+    ],
+    "relatedTerms": [
+      "ptq",
+      "quantization",
+      "int4"
+    ]
+  },
+  {
+    "slug": "latent-diffusion-model",
+    "name": "潜在拡散モデル",
+    "aliases": [
+      "Latent Diffusion Model",
+      "LDM"
+    ],
+    "tagline": "画像そのものではなく、次元を圧縮した潜在空間上で拡散過程を行うことで計算コストを抑えた拡散モデル",
+    "category": "アーキテクチャ",
+    "tags": [
+      "生成AI",
+      "画像生成"
+    ],
+    "plainSummary": "画像を圧縮した小さな空間の中でノイズ除去を行い、計算コストを抑えた画像生成の仕組み。",
+    "summary": "潜在拡散モデル(Latent Diffusion Model, LDM)とは、拡散モデルのノイズ除去過程を、画像のピクセル空間ではなく、オートエンコーダで次元圧縮した低次元の潜在空間上で行うアーキテクチャ。\nピクセル空間上で直接拡散過程を行う従来の拡散モデルは、高解像度画像を扱う場合に計算コスト・メモリ使用量が非常に大きくなる課題があった。潜在拡散モデルは、あらかじめ学習した(変分)オートエンコーダで画像を低次元の潜在表現へ圧縮し、その潜在空間上で拡散・ノイズ除去した後、デコーダで画像へ復元することで、画質を大きく損なわずに計算コストを削減する。\nさらにクロスアテンション層を導入することで、テキスト等の条件付け情報を柔軟に取り込めるようにしており、text-to-image生成の基盤アーキテクチャとして広く採用されている。Stable Diffusionは、このアーキテクチャを採用した代表的なモデル。",
+    "background": "拡散モデルは高品質な画像生成を実現する一方、ピクセル空間上で直接ノイズ除去を繰り返す従来の方式は、解像度が上がるほど計算コスト・メモリ使用量が増大し、学習・推論の両面で大きな計算資源を要していた。潜在拡散モデルは、次元圧縮した潜在空間で拡散過程を行うことで、この計算コストの課題を解決するために考案された。",
+    "history": "2022年6月: Rombach・Blattmann・Lorenz・Esser・OmmerらがCVPR 2022にて論文「High-Resolution Image Synthesis with Latent Diffusion Models」を発表し、潜在拡散モデルを提案。\n同アーキテクチャは、後にStability AIが公開したStable Diffusionの基盤技術として採用された。",
+    "architecture": "事前学習した(変分)オートエンコーダのエンコーダで画像を低次元の潜在表現へ圧縮し、その潜在空間上でU-Net等を用いた拡散・ノイズ除去過程を実行する。テキスト等の条件付け情報はクロスアテンション層を通じてノイズ除去過程へ組み込まれ、最終的にデコーダで潜在表現を画像空間へ復元する。",
+    "advantages": [
+      "ピクセル空間ではなく低次元の潜在空間で拡散過程を行うため、画質を大きく損なわずに計算コスト・メモリ使用量を抑えられる",
+      "クロスアテンション層により、テキスト等多様な条件付け情報を柔軟に取り込める"
+    ],
+    "disadvantages": [
+      "オートエンコーダによる圧縮・復元を経るため、非常に細かいディテール(文字等)の再現性に制約が出やすい",
+      "オートエンコーダ自体の学習品質が、最終的な生成画像の品質に影響する"
+    ],
+    "comparisons": [
+      {
+        "slug": "diffusion-model",
+        "note": "潜在拡散モデルは、拡散過程をピクセル空間ではなく潜在空間で行い、計算コストを抑えた拡散モデルの一種"
+      },
+      {
+        "slug": "stable-diffusion",
+        "note": "Stable Diffusionは、潜在拡散モデルのアーキテクチャを採用した代表的な画像生成モデル"
+      },
+      {
+        "slug": "u-net",
+        "note": "潜在拡散モデルのノイズ除去過程には、U-Netアーキテクチャがよく用いられる"
+      }
+    ],
+    "relatedTerms": [
+      "diffusion-model",
+      "stable-diffusion",
+      "u-net",
+      "autoencoder",
+      "variational-autoencoder"
+    ],
+    "references": [
+      {
+        "type": "Research Paper",
+        "label": "High-Resolution Image Synthesis with Latent Diffusion Models",
+        "url": "https://arxiv.org/abs/2112.10752"
+      }
+    ]
+  },
+  {
+    "slug": "sentence-bert",
+    "name": "Sentence-BERT",
+    "aliases": [
+      "SBERT"
+    ],
+    "tagline": "シャム(Siamese)ネットワーク構造でBERTを微調整し、コサイン類似度で比較可能な文単位の埋め込みを高速に得られるモデル",
+    "category": "モデル",
+    "tags": [
+      "NLP",
+      "埋め込み"
+    ],
+    "plainSummary": "文章ごとの埋め込みを高速に作れるよう、BERTを改良したモデル。",
+    "summary": "Sentence-BERT(SBERT)とは、事前学習済みのBERTをシャム(Siamese)/トリプレットネットワーク構造で微調整し、文単位の埋め込みベクトルをコサイン類似度で直接比較できるようにしたモデル。\n通常のBERTで2つの文の類似度を求めるには、2文をまとめて1回のモデル入力として処理する必要があり、大規模なコーパスの中から類似文を検索する用途では計算コストが非常に高くなる。Sentence-BERTは、各文を個別にBERTへ入力し、プーリング(CLSトークン・平均・最大値等)によって固定長の文埋め込みへ変換したうえで、シャムネットワーク構造により類似文同士の埋め込みが近くなるよう学習する。\nあらかじめ全文書の埋め込みを計算しておけば、類似文検索はコサイン類似度の計算だけで高速化でき、意味的テキスト類似度(STS)判定やクラスタリング、意味検索(セマンティック検索)等の用途で広く使われている。",
+    "background": "BERTは文ペアの類似度判定で高い精度を示す一方、2文をまとめて入力する構造上、大規模なコーパスから類似文を検索するような組み合わせ数の多いタスクでは計算コストが膨大になっていた。Sentence-BERTは、文ごとに独立した埋め込みベクトルを得られるようにすることで、この計算コストの課題を解決するために開発された。",
+    "history": "2019年8月: Nils ReimersとIryna Gurevychが、EMNLP-IJCNLP 2019にて論文「Sentence-BERT: Sentence Embeddings using Siamese BERT-Networks」を発表。",
+    "advantages": [
+      "文ごとに独立した埋め込みベクトルを事前計算できるため、大規模なコーパスからの類似文検索を高速に行える",
+      "コサイン類似度等の単純な計算で文同士の意味的な類似度を比較できる"
+    ],
+    "disadvantages": [
+      "通常のBERTが2文を同時に処理して得る精度と比べ、個別の埋め込みを比較する方式では精度がわずかに劣る場合がある",
+      "埋め込みの品質は学習に使ったデータ・タスク次第で決まり、ドメインが大きく異なる文書では性能が低下しやすい"
+    ],
+    "comparisons": [
+      {
+        "slug": "bert",
+        "note": "Sentence-BERTは、BERTをシャムネットワーク構造で微調整し、文単位の埋め込みを高速に比較できるよう改良したモデル"
+      },
+      {
+        "slug": "embedding-model",
+        "note": "Sentence-BERTは、文単位の埋め込みを得る代表的な埋め込みモデルの1つ"
+      },
+      {
+        "slug": "semantic-search",
+        "note": "Sentence-BERTによる文埋め込みは、意味検索(セマンティック検索)の実装によく使われる"
+      }
+    ],
+    "relatedTerms": [
+      "bert",
+      "embedding-model",
+      "semantic-search",
+      "cosine-similarity"
+    ],
+    "references": [
+      {
+        "type": "Research Paper",
+        "label": "Sentence-BERT: Sentence Embeddings using Siamese BERT-Networks",
+        "url": "https://arxiv.org/abs/1908.10084"
+      }
+    ]
+  },
+  {
+    "slug": "ivf",
+    "name": "IVF",
+    "aliases": [
+      "Inverted File Index",
+      "転置ファイルインデックス"
+    ],
+    "tagline": "ベクトルをあらかじめクラスタへ分割し、検索時は近いクラスタのみを探索することで近似最近傍探索を高速化するインデックス構造",
+    "category": "技術",
+    "tags": [
+      "ベクトル検索",
+      "アルゴリズム"
+    ],
+    "plainSummary": "ベクトルをグループ分けしておき、近いグループだけ調べて検索を速くする仕組み。",
+    "summary": "IVF(Inverted File Index、転置ファイルインデックス)とは、大量のベクトルをk-means等でいくつかのクラスタへ分割し、各クラスタに属するベクトルの一覧(転置リスト)を保持しておくことで、近似最近傍探索(ANN)を高速化するインデックス構造。\n検索時には、クエリベクトルに近いクラスタの中心(セントロイド)をいくつか選び、その周辺のクラスタに属するベクトルのみを対象に距離を計算する。全ベクトルと総当たりで距離を計算する場合と比べ、探索対象を絞り込める分、検索速度を大きく向上できる。\nテキスト検索における転置インデックス(単語から文書への対応表)の発想をベクトル検索へ応用したもので、Product Quantization(積み量子化)等の圧縮手法と組み合わせて使われることが多く、Faiss等のライブラリで代表的なインデックス方式の1つとして実装されている。",
+    "background": "大規模なベクトル集合から類似ベクトルを検索する際、全ベクトルと総当たりで距離を計算する方式(Flatインデックス)は正確だが、データ量に比例して検索時間が増大する。IVFは、ベクトルをあらかじめクラスタへ分割し検索対象を絞り込むことで、精度をある程度保ちながら検索を高速化するために考案された。",
+    "history": "IVFは、テキスト検索における転置インデックスの発想を近似最近傍探索へ応用したインデックス構造。\n2011年: Hervé Jégouらが論文「Product Quantization for Nearest Neighbor Search」(IEEE TPAMI)にて、IVFとProduct Quantizationを組み合わせたベクトル検索手法を示した。\n同手法は、後にMeta(旧Facebook)が公開したFaissの代表的なインデックス方式の1つとして実装されている。",
+    "architecture": "k-meansクラスタリングで得られた各セントロイドに対し、そのクラスタに属するベクトルのIDをまとめた転置リストを保持する。検索時はクエリに近いセントロイドをnprobe個選び、対応する転置リスト内のベクトルのみを対象に距離を計算する。クラスタ数やnprobeの値を調整することで、検索速度と精度のトレードオフを制御できる。",
+    "advantages": [
+      "全ベクトルとの総当たり計算と比べ、探索対象をクラスタ単位に絞り込むことで検索速度を大きく向上できる",
+      "クラスタ数やnprobe等のパラメータで、検索速度と精度のトレードオフを調整できる"
+    ],
+    "disadvantages": [
+      "クラスタの境界付近にある正解ベクトルを見逃す可能性があり、Flatインデックスと比べ検索精度は近似的になる",
+      "クラスタリングの学習(トレーニング)が必要で、データ分布が大きく変化すると再学習を要する場合がある"
+    ],
+    "comparisons": [
+      {
+        "slug": "hnsw",
+        "note": "IVFがベクトルをクラスタへ分割し探索範囲を絞り込むのに対し、HNSWはグラフ構造をたどって近傍を探索する"
+      },
+      {
+        "slug": "faiss",
+        "note": "IVFは、Faissで実装されている代表的な近似最近傍探索のインデックス方式の1つ"
+      },
+      {
+        "slug": "quantization",
+        "note": "IVFは、Product Quantization等の圧縮手法と組み合わせて使われることが多い"
+      },
+      {
+        "slug": "ann",
+        "note": "IVFは、ベクトルをクラスタへ分割し探索範囲を絞り込む代表的なANNアルゴリズムの1つ"
+      }
+    ],
+    "relatedTerms": [
+      "hnsw",
+      "faiss",
+      "vector-database",
+      "ann"
+    ],
+    "references": [
+      {
+        "type": "Research Paper",
+        "label": "Product Quantization for Nearest Neighbor Search",
+        "url": "https://pubmed.ncbi.nlm.nih.gov/21088323/"
+      }
+    ]
+  },
+  {
+    "slug": "ann",
+    "name": "ANN",
+    "aliases": [
+      "Approximate Nearest Neighbor",
+      "近似最近傍探索"
+    ],
+    "tagline": "厳密な最近傍探索の代わりに、多少の精度を犠牲にして高速に類似ベクトルを検索する手法の総称",
+    "category": "技術",
+    "tags": [
+      "ベクトル検索",
+      "アルゴリズム"
+    ],
+    "plainSummary": "完璧な正確さより速さを優先して、似ているデータを高速に見つける検索方法の総称。",
+    "summary": "ANN(Approximate Nearest Neighbor、近似最近傍探索)とは、高次元ベクトルの集合から、クエリベクトルに最も近い点を厳密に求める代わりに、多少の精度低下を許容しながら高速に「近い」点を検索する手法の総称。\nデータ量・次元数が増えるほど、全件を総当たりで比較する厳密な最近傍探索は計算コストが膨大になる(次元の呪い)。ANNは、探索範囲をあらかじめ絞り込んだり、近似的に距離計算したりすることで、精度と速度のトレードオフを許容しながら実用的な検索速度を実現する。\nHNSW(グラフベース)、IVF(クラスタベースの転置ファイル)、LSH(Locality-Sensitive Hashing、局所性鋭敏型ハッシュ)等、複数のアプローチのアルゴリズムが存在し、データ規模・次元数・要求精度に応じて使い分けられる。ベクトルデータベースやセマンティック検索の基盤技術として広く利用されている。",
+    "background": "埋め込みベクトルを用いた類似検索の需要が高まる一方、全件と総当たりで比較する厳密な最近傍探索は、データ量や次元数の増加とともに計算コストが急激に増大し、実用的な応答速度を確保できなくなる。ANNは、多少の精度低下を許容することでこの計算コストの課題を解決し、大規模なベクトル集合でも実用的な速度で類似検索を行えるよう発展した。",
+    "history": "1998年: Piotr IndykとRajeev Motwaniが、STOC 1998にて論文「Approximate Nearest Neighbors: Towards Removing the Curse of Dimensionality」を発表。代表的なANNアルゴリズムの1つであるLSH(Locality-Sensitive Hashing)の枠組みを提案した。\n以降、IVFとProduct Quantizationを組み合わせた手法(2011年)やHNSW(2016年)等、クラスタリングやグラフ構造に基づく多様なANNアルゴリズムが提案され、ベクトルデータベースの基盤技術として普及した。",
+    "advantages": [
+      "厳密な最近傍探索と比べ、大規模・高次元なベクトル集合でも実用的な速度で検索できる",
+      "アルゴリズムやパラメータの調整により、検索速度と精度のトレードオフを用途に応じて制御できる"
+    ],
+    "disadvantages": [
+      "近似的な手法であるため、厳密な最近傍探索と比べて検索漏れが発生しうる",
+      "アルゴリズムの選定やパラメータチューニングに、データ特性への理解を要する"
+    ],
+    "comparisons": [
+      {
+        "slug": "hnsw",
+        "note": "HNSWは、グラフ構造を用いた代表的なANNアルゴリズムの1つ"
+      },
+      {
+        "slug": "ivf",
+        "note": "IVFは、ベクトルをクラスタへ分割し探索範囲を絞り込む代表的なANNアルゴリズムの1つ"
+      },
+      {
+        "slug": "vector-database",
+        "note": "多くのベクトルデータベースは、内部でANNアルゴリズムを用いて類似検索を高速化している"
+      }
+    ],
+    "relatedTerms": [
+      "hnsw",
+      "ivf",
+      "vector-database",
+      "semantic-search"
+    ],
+    "references": [
+      {
+        "type": "Research Paper",
+        "label": "Approximate Nearest Neighbor: Towards Removing the Curse of Dimensionality",
+        "url": "https://theoryofcomputing.org/articles/v008a014/"
+      }
+    ]
+  },
+  {
+    "slug": "common-crawl",
+    "name": "Common Crawl",
+    "aliases": [],
+    "tagline": "月次で数十億ページ規模のWebページをクロールし無償公開しているオープンなWebアーカイブで、多くのLLMの事前学習データの主要な情報源",
+    "category": "技術",
+    "tags": [
+      "データ",
+      "事前学習"
+    ],
+    "plainSummary": "インターネット全体を定期的に巡回して集めたWebページのデータを、誰でも無料で使えるよう公開しているアーカイブ。",
+    "summary": "Common Crawlとは、非営利団体Common Crawl Foundationが運営する、Web全体を定期的にクロールしそのアーカイブデータを無償で一般公開しているプロジェクト。\n2008年以降、月1回程度のペースでクロールを実施しており、1回のクロールで20億ページ超のWebページを収集、蓄積データ量は10ペタバイトを超える。収集データはHTML・テキスト抽出済みデータ・メタデータ等の形式で、誰でも自由にダウンロード・利用できる。\nGPT-3をはじめとする多くのLLMが、事前学習データセットの主要な構成要素としてCommon Crawlのフィルタリング済みデータを利用しており、大規模言語モデルの学習データの土台となるWebコーパスの代表例として位置づけられる。",
+    "background": "大規模言語モデルの事前学習には、Web規模のテキストデータが不可欠だが、個々の企業・研究機関が独自にWeb全体をクロールするのは技術的・コスト的なハードルが高い。Common Crawlは、Webクロールデータを誰もが利用できるオープンな公共財として提供することで、この参入障壁を下げる目的で運営されている。",
+    "history": "2007年: Gil Elbazが非営利団体Common Crawl Foundationを設立。\n2008年: 最初のWebクロールデータの蓄積を開始。\n2020年代: OpenAIのGPT-3の学習データの大部分がフィルタリング済みCommon Crawlデータで占められていたことが論文で報告され、LLMの事前学習データセットとしての利用が広く知られるようになった。\n2023年: AnthropicやOpenAI等のAI企業がそれぞれ25万ドルを寄付するなど、AI業界からの支援が拡大している。",
+    "advantages": [
+      "誰でも無償でダウンロードできる、Web規模のテキストデータの代表的な情報源",
+      "月次で継続的に更新されており、最新のWebコンテンツを反映したデータを取得できる"
+    ],
+    "disadvantages": [
+      "クロール対象・品質に偏りがあり、そのまま学習に使うには重複除去・フィルタリング等の前処理が必須",
+      "著作権保護されたコンテンツも含まれており、学習データとしての利用を巡る法的な議論の対象になっている"
+    ],
+    "comparisons": [
+      {
+        "slug": "corpus",
+        "note": "Common Crawlは、LLMの事前学習に使われる代表的な大規模Webコーパスの1つ"
+      }
+    ],
+    "relatedTerms": [
+      "corpus",
+      "synthetic-data",
+      "pretraining"
+    ],
+    "references": [
+      {
+        "type": "Official Website",
+        "label": "Common Crawl",
+        "url": "https://commoncrawl.org"
+      },
+      {
+        "type": "Documentation",
+        "label": "Common Crawl - Wikipedia",
+        "url": "https://en.wikipedia.org/wiki/Common_Crawl"
+      }
+    ]
+  },
+  {
+    "slug": "mlm",
+    "name": "MLM",
+    "aliases": [
+      "Masked Language Model",
+      "マスク化言語モデル"
+    ],
+    "tagline": "入力トークンの一部をランダムにマスクし、その単語を周囲の文脈から予測させることで双方向の言語表現を学習する事前学習手法",
+    "category": "技術",
+    "tags": [
+      "NLP",
+      "事前学習"
+    ],
+    "plainSummary": "文中の単語を一部隠し、前後の文脈からその単語を当てさせることで言葉の理解を学習させる手法。",
+    "summary": "MLM(Masked Language Model、マスク化言語モデル)とは、入力テキストの一部のトークンをランダムに特殊トークン([MASK]等)へ置き換え、モデルにその元の単語を周囲の文脈(前後双方向)から予測させることで、言語表現を学習させる事前学習タスク。\n左から右へ一方向に次の単語を予測する自己回帰型の言語モデリングと異なり、MLMは文中の各単語を前後双方向の文脈を同時に参照して予測するため、文全体の意味を踏まえた表現を獲得しやすい。\nBERTの事前学習タスクの1つとして採用されたことで広く知られるようになり、RoBERTa・ALBERT等、BERT系列の派生モデルの多くも同様のMLMを事前学習に用いている。",
+    "background": "従来の言語モデルの多くは、左から右へ一方向に次の単語を予測する形で学習されており、文全体の双方向の文脈を同時に考慮した表現を学習しにくいという制約があった。MLMは、一部の単語を隠しその周囲の文脈から復元させるタスクを通じて、双方向の文脈を踏まえた言語表現を教師なしで学習できるよう考案された。",
+    "history": "MLMの着想は、文中の一部の単語を空欄にして推測させる心理言語学の「クローズ法(cloze procedure)」(Taylor, 1953)に由来する。\n2018年: Googleの研究チームが、BERTの事前学習タスクの1つとしてMLMを採用した論文「BERT: Pre-training of Deep Bidirectional Transformers for Language Understanding」を発表し、広く知られるようになった。",
+    "advantages": [
+      "前後双方向の文脈を同時に参照して単語を予測するため、文全体の意味を踏まえた表現を学習しやすい",
+      "ラベル付けされたデータを必要とせず、大規模な生テキストから教師なしで学習できる"
+    ],
+    "disadvantages": [
+      "事前学習時にはマスクされた一部のトークンのみが予測対象となり、学習効率が自己回帰型の言語モデリングと比べて低いとされる",
+      "マスク用の特殊トークンはファインチューニング時の入力には現れず、事前学習と本番利用の入力分布に差異が生じる"
+    ],
+    "comparisons": [
+      {
+        "slug": "bert",
+        "note": "BERTは、MLMを事前学習タスクの1つとして採用した代表的なモデル"
+      },
+      {
+        "slug": "pretraining",
+        "note": "MLMは、双方向の言語表現を教師なしで獲得する代表的な事前学習タスクの1つ"
+      }
+    ],
+    "relatedTerms": [
+      "bert",
+      "pretraining",
+      "self-supervised-learning"
+    ],
+    "references": [
+      {
+        "type": "Research Paper",
+        "label": "BERT: Pre-training of Deep Bidirectional Transformers for Language Understanding",
+        "url": "https://arxiv.org/abs/1810.04805"
+      }
+    ]
+  },
+  {
+    "slug": "gptq",
+    "name": "GPTQ",
+    "aliases": [],
+    "tagline": "少量のキャリブレーションデータのみで、LLMの重みを4bit程度まで高速かつ高精度に量子化するPTQ手法",
+    "category": "技術",
+    "tags": [
+      "モデル圧縮",
+      "軽量化"
+    ],
+    "plainSummary": "少しのデータだけで、AIモデルを短時間で4bit程度まで軽量化できる量子化手法。",
+    "summary": "GPTQとは、大規模言語モデルの重みを4bit程度まで、少量のキャリブレーションデータと比較的短い処理時間で量子化できる、PTQ(学習後量子化)の代表的な手法。\n量子化対象の重み行列を層ごとに、少数のサンプルデータを使った二次近似(ヘッセ行列に基づく重み更新)により量子化誤差を最小化しながら、少数の列ずつ順に量子化していく。\n数百億パラメータ規模のモデルでも数時間程度で量子化を完了でき、量子化後もFP16に近い性能を維持しやすいことから、LLMをコンシューマー向けGPUや限られたメモリ環境で動作させる用途に広く採用されている。",
+    "background": "大規模言語モデルをそのまま実行するには大量のGPUメモリを要するため、モデルサイズを圧縮する量子化が重要になる一方、モデル全体を再学習するQATは計算コストが高く、数百億パラメータ規模のモデルには適用しづらかった。GPTQは、少量のデータのみで高精度な量子化を短時間に完了できる手法として考案された。",
+    "history": "2022年10月: Frantar・Ashkboos・Hoefler・Alistarhらが論文「GPTQ: Accurate Post-Training Quantization for Generative Pre-trained Transformers」を発表。",
+    "advantages": [
+      "少量のキャリブレーションデータのみで、数百億パラメータ規模のモデルも数時間程度で量子化できる",
+      "4bit程度まで圧縮しても、FP16に近い性能を維持しやすい"
+    ],
+    "disadvantages": [
+      "QATと比べると、極端に低いビット数まで圧縮した場合の精度低下は避けにくい",
+      "ヘッセ行列の近似計算等を要し、単純な丸め処理のみのPTQ手法よりは計算コストが高い"
+    ],
+    "comparisons": [
+      {
+        "slug": "ptq",
+        "note": "GPTQは、少量のキャリブレーションデータで高精度な量子化を実現する代表的なPTQ手法の1つ"
+      },
+      {
+        "slug": "awq",
+        "note": "GPTQとAWQは、いずれもLLM向けに開発された代表的な4bit量子化手法であり、アルゴリズムのアプローチが異なる"
+      },
+      {
+        "slug": "quantization",
+        "note": "GPTQは、LLM向けに広く使われる量子化手法の1つ"
+      }
+    ],
+    "relatedTerms": [
+      "ptq",
+      "awq",
+      "quantization",
+      "int4"
+    ],
+    "references": [
+      {
+        "type": "Research Paper",
+        "label": "GPTQ: Accurate Post-Training Quantization for Generative Pre-trained Transformers",
+        "url": "https://arxiv.org/abs/2210.17323"
+      },
+      {
+        "type": "GitHub",
+        "label": "IST-DASLab/gptq",
+        "url": "https://github.com/IST-DASLab/gptq"
+      }
+    ]
+  },
+  {
+    "slug": "awq",
+    "name": "AWQ",
+    "aliases": [
+      "Activation-aware Weight Quantization"
+    ],
+    "tagline": "活性化値の分布をもとに重要な重みを特定し、その精度を保護しながら量子化するLLM向けの重み量子化手法",
+    "category": "技術",
+    "tags": [
+      "モデル圧縮",
+      "軽量化"
+    ],
+    "plainSummary": "AIモデルの中で特に重要な部分だけ精度を保ちながら、全体を軽量化する量子化手法。",
+    "summary": "AWQ(Activation-aware Weight Quantization)とは、モデルの活性化値(推論時の中間出力)の分布を観察し、出力への影響が大きい「重要な重み」を特定したうえで、その精度を保護しながら量子化するLLM向けのPTQ手法。\n重みの大きさそのものではなく、対応する活性化値の大きさに着目して重要な重みのチャネルを選び出し、それらのチャネルにスケーリングを適用することで、量子化誤差の影響を受けやすい重要な重みの精度を実質的に保護する。\nGPTQのように逆ヘッセ行列を使った複雑な最適化を必要とせず、比較的シンプルな計算で量子化を完了できるため、処理自体の速さと量子化後の精度の両立を狙った手法として知られる。\nエッジデバイスやオンデバイスLLM推論など、限られたメモリ環境でのモデル展開にも活用されている。",
+    "background": "LLMの重みを量子化する際、全ての重みを一様に扱うと、出力への影響が大きい一部の重みの精度低下がモデル全体の性能へ大きく影響することがある。AWQは、活性化値の分布から重要な重みを特定し、そこを重点的に保護することで、量子化による性能低下を抑えるために考案された。",
+    "history": "2023年6月: MIT(Song Han研究室)のLin・Tang・Tang・Yang・Hanらが、論文「AWQ: Activation-aware Weight Quantization for LLM Compression and Acceleration」を発表。\n2024年: MLSys 2024にてBest Paper Awardを受賞。",
+    "advantages": [
+      "活性化値に基づき重要な重みを重点的に保護するため、量子化後も高い精度を維持しやすい",
+      "逆ヘッセ行列等の複雑な計算を必要とせず、比較的シンプルな計算で量子化を完了できる"
+    ],
+    "disadvantages": [
+      "活性化値の分布を把握するためのキャリブレーションデータの選定が、量子化結果の品質に影響する",
+      "活性化値の分布が学習時と大きく異なる入力に対しては、手法の効果が薄れやすい"
+    ],
+    "comparisons": [
+      {
+        "slug": "gptq",
+        "note": "GPTQとAWQは、いずれもLLM向けに開発された代表的な4bit量子化手法であり、アルゴリズムのアプローチが異なる"
+      },
+      {
+        "slug": "ptq",
+        "note": "AWQは、活性化値の分布に基づき重要な重みを保護する代表的なPTQ手法の1つ"
+      }
+    ],
+    "relatedTerms": [
+      "gptq",
+      "ptq",
+      "quantization",
+      "int4"
+    ],
+    "references": [
+      {
+        "type": "Research Paper",
+        "label": "AWQ: Activation-aware Weight Quantization for LLM Compression and Acceleration",
+        "url": "https://arxiv.org/abs/2306.00978"
+      },
+      {
+        "type": "GitHub",
+        "label": "mit-han-lab/llm-awq",
+        "url": "https://github.com/mit-han-lab/llm-awq"
       }
     ]
   }
