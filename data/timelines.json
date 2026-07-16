@@ -1,0 +1,556 @@
+[
+  {
+    "slug": "transformer",
+    "title": "Transformerの歴史",
+    "description": "自己注意機構(Self-Attention)のみで構成されるTransformerアーキテクチャが2017年に登場して以降、自然言語処理から画像・音声まで広がっていった変遷をたどる。",
+    "category": "アーキテクチャ",
+    "targetTerms": ["transformer"],
+    "events": [
+      {
+        "date": "2017-06",
+        "title": "「Attention Is All You Need」発表",
+        "description": "Googleの研究チームが、再帰・畳み込みを用いず自己注意機構のみでSeq2Seqを実現するTransformerアーキテクチャを提案。機械翻訳タスクで当時の最高性能を達成した。",
+        "organizations": ["Google"],
+        "references": [
+          {
+            "type": "Research Paper",
+            "label": "Attention Is All You Need",
+            "url": "https://arxiv.org/abs/1706.03762"
+          }
+        ],
+        "relatedTerms": ["transformer", "attention", "self-attention"]
+      },
+      {
+        "date": "2018-06",
+        "title": "GPT-1公開",
+        "description": "OpenAIが、Transformerのデコーダ部分を用いた事前学習とタスク別ファインチューニングの枠組みを示すGPT-1を発表。decoder-only Transformerの実用性を示した。",
+        "organizations": ["OpenAI"],
+        "references": [
+          {
+            "type": "Blog",
+            "label": "Improving Language Understanding with Unsupervised Learning",
+            "url": "https://openai.com/index/language-unsupervised/"
+          }
+        ],
+        "relatedTerms": ["gpt"]
+      },
+      {
+        "date": "2018-10",
+        "title": "BERT発表",
+        "description": "Googleが、Transformerのエンコーダ部分のみを用い、文脈を双方向に参照するBERTを発表。複数のNLPベンチマークで当時の最高性能を達成した。",
+        "organizations": ["Google"],
+        "references": [
+          {
+            "type": "Research Paper",
+            "label": "BERT: Pre-training of Deep Bidirectional Transformers for Language Understanding",
+            "url": "https://arxiv.org/abs/1810.04805"
+          }
+        ],
+        "relatedTerms": ["bert", "mlm"]
+      },
+      {
+        "date": "2020-05",
+        "title": "GPT-3発表",
+        "description": "1750億パラメータのGPT-3が、追加学習なしに少数の例示だけでタスクをこなすfew-shot学習能力を実証し、decoder-only Transformerの大規模化の有効性を示した。",
+        "organizations": ["OpenAI"],
+        "references": [
+          {
+            "type": "Research Paper",
+            "label": "Language Models are Few-Shot Learners",
+            "url": "https://arxiv.org/abs/2005.14165"
+          }
+        ],
+        "relatedTerms": ["gpt", "in-context-learning"]
+      },
+      {
+        "date": "2020-10",
+        "title": "Vision Transformer(ViT)発表",
+        "description": "Googleの研究者が、画像をパッチに分割しTransformerへ入力するVision Transformerを発表。CNNに頼らない画像認識の道を開いた。",
+        "organizations": ["Google"],
+        "references": [
+          {
+            "type": "Research Paper",
+            "label": "An Image is Worth 16x16 Words: Transformers for Image Recognition at Scale",
+            "url": "https://arxiv.org/abs/2010.11929"
+          }
+        ],
+        "relatedTerms": ["vision-transformer"]
+      },
+      {
+        "date": "2022",
+        "title": "FlashAttention発表",
+        "description": "Stanford大学の研究チームが、GPUのメモリ階層を意識したIOアウェアな実装により、Attention計算を高速化・省メモリ化するFlashAttentionを発表。",
+        "organizations": ["Stanford University"],
+        "references": [
+          {
+            "type": "Research Paper",
+            "label": "FlashAttention: Fast and Memory-Efficient Exact Attention with IO-Awareness",
+            "url": "https://arxiv.org/abs/2205.14135"
+          }
+        ],
+        "relatedTerms": ["flash-attention"]
+      },
+      {
+        "date": "2023",
+        "title": "GQA(Grouped-Query Attention)発表",
+        "description": "Googleの研究チームが、複数のQueryヘッドでKey・Valueヘッドを共有し推論を効率化するGQAを提案。Llama 2等、以降の主要オープンウェイトモデルで標準的に採用される。",
+        "organizations": ["Google"],
+        "references": [
+          {
+            "type": "Research Paper",
+            "label": "GQA: Training Generalized Multi-Query Transformer Models from Multi-Head Checkpoints",
+            "url": "https://arxiv.org/abs/2305.13245"
+          }
+        ],
+        "relatedTerms": ["grouped-query-attention"]
+      }
+    ],
+    "relatedTerms": [
+      "attention",
+      "self-attention",
+      "bert",
+      "gpt",
+      "vision-transformer",
+      "flash-attention",
+      "grouped-query-attention",
+      "mixture-of-experts"
+    ],
+    "references": [
+      {
+        "type": "Research Paper",
+        "label": "Attention Is All You Need",
+        "url": "https://arxiv.org/abs/1706.03762"
+      }
+    ]
+  },
+  {
+    "slug": "gpt",
+    "title": "GPTの歴史",
+    "description": "OpenAIが2018年のGPT-1から一貫して開発してきたGPTシリーズの変遷。ChatGPTによる一般普及からGPT-5に至るまでの主要リリースをたどる。",
+    "category": "モデル",
+    "targetTerms": ["gpt"],
+    "events": [
+      {
+        "date": "2018-06-11",
+        "title": "GPT-1公開",
+        "description": "「Improving Language Understanding by Generative Pre-Training」論文とともに、1.17億パラメータのGPT-1が公開される。事前学習とファインチューニングの枠組みを確立。",
+        "organizations": ["OpenAI"],
+        "references": [
+          {
+            "type": "Blog",
+            "label": "Improving Language Understanding with Unsupervised Learning",
+            "url": "https://openai.com/index/language-unsupervised/"
+          }
+        ],
+        "relatedTerms": ["gpt", "transformer"]
+      },
+      {
+        "date": "2019-02-14",
+        "title": "GPT-2公開",
+        "description": "15億パラメータへ拡大したGPT-2を発表。生成文の自然さが注目を集め、悪用リスクを理由に当初は段階的公開となった。",
+        "organizations": ["OpenAI"],
+        "references": [
+          {
+            "type": "Blog",
+            "label": "Better Language Models and Their Implications",
+            "url": "https://openai.com/index/better-language-models/"
+          }
+        ],
+        "relatedTerms": ["gpt"]
+      },
+      {
+        "date": "2020-05-28",
+        "title": "GPT-3公開",
+        "description": "1750億パラメータのGPT-3を発表。追加学習なしで少数の例示から新しいタスクをこなすfew-shot学習能力を実証した。",
+        "organizations": ["OpenAI"],
+        "references": [
+          {
+            "type": "Research Paper",
+            "label": "Language Models are Few-Shot Learners",
+            "url": "https://arxiv.org/abs/2005.14165"
+          }
+        ],
+        "relatedTerms": ["gpt", "in-context-learning"]
+      },
+      {
+        "date": "2022-01-27",
+        "title": "InstructGPT発表",
+        "description": "人間のフィードバックによる強化学習(RLHF)を用いて指示追従性を高めたInstructGPTを発表。後のChatGPTの技術的な土台となった。",
+        "organizations": ["OpenAI"],
+        "references": [
+          {
+            "type": "Research Paper",
+            "label": "Training Language Models to Follow Instructions with Human Feedback",
+            "url": "https://arxiv.org/abs/2203.02155"
+          }
+        ],
+        "relatedTerms": ["rlhf", "gpt"]
+      },
+      {
+        "date": "2022-11-30",
+        "title": "ChatGPT公開",
+        "description": "GPT-3.5をベースにした対話型サービスChatGPTを公開。一般消費者向けLLM普及の起点となった。",
+        "organizations": ["OpenAI"],
+        "references": [
+          {
+            "type": "Blog",
+            "label": "Introducing ChatGPT",
+            "url": "https://openai.com/index/chatgpt/"
+          }
+        ],
+        "relatedTerms": ["gpt"]
+      },
+      {
+        "date": "2023-03-14",
+        "title": "GPT-4公開",
+        "description": "テキストに加え画像入力へ対応したマルチモーダルモデルGPT-4を発表。",
+        "organizations": ["OpenAI"],
+        "references": [
+          {
+            "type": "Blog",
+            "label": "GPT-4 Research",
+            "url": "https://openai.com/index/gpt-4-research/"
+          }
+        ],
+        "relatedTerms": ["gpt", "vision-language-model"]
+      },
+      {
+        "date": "2024-05-13",
+        "title": "GPT-4o公開",
+        "description": "テキスト・画像・音声をエンドツーエンドで扱うネイティブなマルチモーダルモデルGPT-4oを発表。",
+        "organizations": ["OpenAI"],
+        "references": [
+          {
+            "type": "Blog",
+            "label": "Hello GPT-4o",
+            "url": "https://openai.com/index/hello-gpt-4o/"
+          }
+        ],
+        "relatedTerms": ["gpt", "multimodal"]
+      },
+      {
+        "date": "2025-08-07",
+        "title": "GPT-5公開",
+        "description": "OpenAIの新たな主力モデルとしてGPT-5を発表。",
+        "organizations": ["OpenAI"],
+        "references": [
+          {
+            "type": "Blog",
+            "label": "Introducing GPT-5",
+            "url": "https://openai.com/index/introducing-gpt-5/"
+          }
+        ],
+        "relatedTerms": ["gpt"]
+      }
+    ],
+    "majorVersions": [
+      { "version": "GPT-1", "date": "2018-06-11" },
+      { "version": "GPT-2", "date": "2019-02-14" },
+      { "version": "GPT-3", "date": "2020-05-28" },
+      { "version": "GPT-3.5(ChatGPT)", "date": "2022-11-30" },
+      { "version": "GPT-4", "date": "2023-03-14" },
+      { "version": "GPT-4o", "date": "2024-05-13" },
+      { "version": "GPT-5", "date": "2025-08-07" }
+    ],
+    "relatedTerms": ["large-language-model", "transformer", "rlhf", "claude"],
+    "references": [
+      {
+        "type": "Official Website",
+        "label": "OpenAI",
+        "url": "https://openai.com/"
+      }
+    ]
+  },
+  {
+    "slug": "llm",
+    "title": "LLMの歴史",
+    "description": "Transformerの登場から、ChatGPTによる一般普及、オープンウェイトモデルの拡大、推論特化モデルの登場まで、大規模言語モデル(LLM)全体の主要な流れをベンダー横断でたどる。",
+    "category": "モデル",
+    "targetTerms": ["large-language-model"],
+    "events": [
+      {
+        "date": "2017-06",
+        "title": "Transformer登場",
+        "description": "自己注意機構のみで構成されるTransformerアーキテクチャが発表され、以降のLLMの標準的な基盤アーキテクチャとなる。",
+        "organizations": ["Google"],
+        "references": [
+          {
+            "type": "Research Paper",
+            "label": "Attention Is All You Need",
+            "url": "https://arxiv.org/abs/1706.03762"
+          }
+        ],
+        "relatedTerms": ["transformer"]
+      },
+      {
+        "date": "2018-10",
+        "title": "BERT発表",
+        "description": "双方向の文脈理解に強みを持つBERTが発表され、事前学習・ファインチューニングという枠組みがNLP全体に広まる契機となった。",
+        "organizations": ["Google"],
+        "references": [
+          {
+            "type": "Research Paper",
+            "label": "BERT: Pre-training of Deep Bidirectional Transformers for Language Understanding",
+            "url": "https://arxiv.org/abs/1810.04805"
+          }
+        ],
+        "relatedTerms": ["bert"]
+      },
+      {
+        "date": "2020-05",
+        "title": "GPT-3発表",
+        "description": "1750億パラメータのGPT-3が、モデルサイズに応じて性能が向上するスケーリング則を実証し、大規模化競争の起点となった。",
+        "organizations": ["OpenAI"],
+        "references": [
+          {
+            "type": "Research Paper",
+            "label": "Language Models are Few-Shot Learners",
+            "url": "https://arxiv.org/abs/2005.14165"
+          }
+        ],
+        "relatedTerms": ["gpt", "scaling-laws"]
+      },
+      {
+        "date": "2022-11",
+        "title": "ChatGPT公開",
+        "description": "対話型サービスとして公開されたChatGPTが爆発的に普及し、一般消費者にLLMを浸透させた。",
+        "organizations": ["OpenAI"],
+        "references": [
+          {
+            "type": "Blog",
+            "label": "Introducing ChatGPT",
+            "url": "https://openai.com/index/chatgpt/"
+          }
+        ],
+        "relatedTerms": ["gpt"]
+      },
+      {
+        "date": "2023-02",
+        "title": "LLaMA公開",
+        "description": "Metaが研究者向けに公開したLLaMAの重みが流出したことをきっかけに、オープンウェイトLLMの開発・利用が本格的に広まった。",
+        "organizations": ["Meta"],
+        "references": [
+          {
+            "type": "Research Paper",
+            "label": "LLaMA: Open and Efficient Foundation Language Models",
+            "url": "https://arxiv.org/abs/2302.13971"
+          }
+        ],
+        "relatedTerms": ["llama"]
+      },
+      {
+        "date": "2023-03-14",
+        "title": "Claude・GPT-4が同日公開",
+        "description": "AnthropicのClaudeとOpenAIのGPT-4が同日に発表され、複数ベンダーによるフロンティアモデル競争が本格化した。",
+        "organizations": ["Anthropic", "OpenAI"],
+        "references": [
+          {
+            "type": "Official Website",
+            "label": "Anthropic: Introducing Claude",
+            "url": "https://www.anthropic.com/news/introducing-claude"
+          }
+        ],
+        "relatedTerms": ["claude", "gpt"]
+      },
+      {
+        "date": "2023-12-06",
+        "title": "Gemini発表",
+        "description": "Google DeepMindが、Ultra・Pro・Nanoの3サイズで構成されるGemini 1.0を発表。",
+        "organizations": ["Google DeepMind"],
+        "references": [
+          {
+            "type": "Official Website",
+            "label": "Google DeepMind: Gemini",
+            "url": "https://deepmind.google/technologies/gemini/"
+          }
+        ],
+        "relatedTerms": ["gemini"]
+      },
+      {
+        "date": "2025-01",
+        "title": "DeepSeek-R1公開",
+        "description": "強化学習により推論能力を獲得したオープンウェイトの推論モデルDeepSeek-R1が公開され、低い学習コストの報告とともに大きな反響を呼んだ。",
+        "organizations": ["DeepSeek"],
+        "references": [
+          {
+            "type": "Research Paper",
+            "label": "DeepSeek-R1: Incentivizing Reasoning Capability in LLMs via Reinforcement Learning",
+            "url": "https://arxiv.org/abs/2501.12948"
+          }
+        ],
+        "relatedTerms": ["deepseek", "reasoning-model"]
+      }
+    ],
+    "relatedTerms": ["gpt", "claude", "gemini", "llama", "deepseek", "transformer", "bert"],
+    "references": []
+  },
+  {
+    "slug": "mcp",
+    "title": "MCP(Model Context Protocol)の歴史",
+    "description": "AnthropicがLLMアプリケーションと外部ツール・データを接続する標準として公開したMCPが、主要AIベンダーを巻き込んだ業界標準へと広がっていった過程をたどる。",
+    "category": "エージェント",
+    "targetTerms": ["mcp"],
+    "events": [
+      {
+        "date": "2024-11",
+        "title": "MCP公開",
+        "description": "AnthropicがMCPをオープン標準として公開。LLMアプリケーションと外部データ・ツールを接続するための共通プロトコルを定義した。",
+        "organizations": ["Anthropic"],
+        "references": [
+          {
+            "type": "Blog",
+            "label": "Anthropic: Introducing the Model Context Protocol",
+            "url": "https://www.anthropic.com/news/model-context-protocol"
+          }
+        ],
+        "relatedTerms": ["mcp", "tool-calling"]
+      },
+      {
+        "date": "2024-11",
+        "title": "FastMCP開発開始",
+        "description": "MCP公開から約1週間後、Jeremiah LowinがPythonでMCPサーバーを簡潔に実装できるFastMCPの開発を個人プロジェクトとして開始。",
+        "organizations": ["Jeremiah Lowin"],
+        "references": [
+          {
+            "type": "Official Website",
+            "label": "FastMCP",
+            "url": "https://gofastmcp.com"
+          }
+        ],
+        "relatedTerms": ["fastmcp"]
+      },
+      {
+        "date": "2025-03",
+        "title": "OpenAIがMCPを採用",
+        "description": "OpenAIがAgents SDK・Responses API・ChatGPTデスクトップアプリを含む製品群でMCPへの対応を発表。",
+        "organizations": ["OpenAI"],
+        "references": [],
+        "relatedTerms": ["mcp", "gpt"]
+      },
+      {
+        "date": "2025-04",
+        "title": "Google DeepMindがMCP対応を表明",
+        "description": "Google DeepMindが、今後のGeminiモデルでMCPをサポートする方針を表明。",
+        "organizations": ["Google DeepMind"],
+        "references": [],
+        "relatedTerms": ["mcp", "gemini"]
+      },
+      {
+        "date": "2025-12",
+        "title": "Linux Foundationへ移管",
+        "description": "AnthropicがMCPを、Linux Foundation傘下の基金であるAgentic AI Foundation(AAIF)へ寄贈。主要AIベンダー横断での採用がさらに加速した。",
+        "organizations": ["Anthropic", "Linux Foundation"],
+        "references": [],
+        "relatedTerms": ["mcp"]
+      }
+    ],
+    "relatedTerms": ["tool-calling", "a2a", "fastmcp", "ai-agent", "claude", "gpt"],
+    "references": [
+      {
+        "type": "Official Website",
+        "label": "Model Context Protocol",
+        "url": "https://modelcontextprotocol.io/"
+      }
+    ]
+  },
+  {
+    "slug": "claude",
+    "title": "Claudeの歴史",
+    "description": "Anthropicが2023年に公開した対話型AI「Claude」の、Claude 2・Claude 3ファミリー・Computer Use・Claude Codeを経てClaude Sonnet 5に至るまでの変遷。",
+    "category": "モデル",
+    "targetTerms": ["claude"],
+    "events": [
+      {
+        "date": "2023-03-14",
+        "title": "Claude公開",
+        "description": "Anthropicが最初の商用対話型AIモデルClaudeを公開。",
+        "organizations": ["Anthropic"],
+        "references": [
+          {
+            "type": "Official Website",
+            "label": "Anthropic: Introducing Claude",
+            "url": "https://www.anthropic.com/news/introducing-claude"
+          }
+        ],
+        "relatedTerms": ["claude"]
+      },
+      {
+        "date": "2023-07",
+        "title": "Claude 2発表",
+        "description": "コンテキストウィンドウを拡大し、API提供も開始したClaude 2を発表。",
+        "organizations": ["Anthropic"],
+        "references": [],
+        "relatedTerms": ["claude", "context-window"]
+      },
+      {
+        "date": "2024-03",
+        "title": "Claude 3ファミリー発表",
+        "description": "Opus・Sonnet・Haikuの3サイズで構成されるClaude 3を発表し、以降の世代で踏襲されるサイズ体系を確立。画像入力への対応も追加された。",
+        "organizations": ["Anthropic"],
+        "references": [],
+        "relatedTerms": ["claude", "vision-language-model"]
+      },
+      {
+        "date": "2024-06-20",
+        "title": "Claude 3.5 Sonnet発表",
+        "description": "Claude 3 Opusを上回る性能を示したClaude 3.5 Sonnetを発表。コード生成結果をリアルタイムにプレビューできるArtifacts機能も同時公開。",
+        "organizations": ["Anthropic"],
+        "references": [],
+        "relatedTerms": ["claude"]
+      },
+      {
+        "date": "2024-10-22",
+        "title": "Computer Useベータ公開",
+        "description": "Claude 3.5 Sonnet(新版)とClaude 3.5 Haikuを発表。カーソル操作やクリック等でPC画面を直接操作できるComputer Use機能を公開ベータとして追加。",
+        "organizations": ["Anthropic"],
+        "references": [],
+        "relatedTerms": ["claude", "computer-use"]
+      },
+      {
+        "date": "2025-02-24",
+        "title": "Claude Codeリサーチプレビュー公開",
+        "description": "ターミナル上で動作するコーディングエージェントClaude Codeを、Claude 3.7 Sonnetとともにリサーチプレビューとして公開。",
+        "organizations": ["Anthropic"],
+        "references": [],
+        "relatedTerms": ["claude", "coding-agent"]
+      },
+      {
+        "date": "2025-05-22",
+        "title": "Claude Opus 4・Sonnet 4発表",
+        "description": "Claude 4世代となるClaude Opus 4とClaude Sonnet 4を発表。",
+        "organizations": ["Anthropic"],
+        "references": [],
+        "relatedTerms": ["claude"]
+      },
+      {
+        "date": "2026-06-30",
+        "title": "Claude Sonnet 5発表",
+        "description": "Claudeファミリーの最新モデルとしてClaude Sonnet 5を発表。",
+        "organizations": ["Anthropic"],
+        "references": [],
+        "relatedTerms": ["claude"]
+      }
+    ],
+    "majorVersions": [
+      { "version": "Claude 1", "date": "2023-03-14" },
+      { "version": "Claude 2", "date": "2023-07" },
+      { "version": "Claude 3", "date": "2024-03" },
+      { "version": "Claude 3.5 Sonnet", "date": "2024-06-20" },
+      { "version": "Claude 4(Opus/Sonnet)", "date": "2025-05-22" },
+      { "version": "Claude Sonnet 5", "date": "2026-06-30" }
+    ],
+    "relatedTerms": ["mcp", "coding-agent", "computer-use", "vision-language-model", "gpt"],
+    "references": [
+      {
+        "type": "Research Paper",
+        "label": "Constitutional AI: Harmlessness from AI Feedback",
+        "url": "https://arxiv.org/abs/2212.08073"
+      },
+      {
+        "type": "Official Website",
+        "label": "Anthropic",
+        "url": "https://www.anthropic.com/"
+      }
+    ]
+  }
+]

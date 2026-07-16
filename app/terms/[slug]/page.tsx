@@ -4,6 +4,9 @@ import Link from "next/link"
 import { notFound } from "next/navigation"
 import { Breadcrumb } from "components/elements/breadcrumb"
 import { Badge, Container, Section, SectionTitle } from "components/elements/layout"
+import { ComparisonCard } from "components/comparison/comparison-card"
+import { TimelineCard } from "components/timeline/timeline-card"
+import { getComparisonsForTerm } from "lib/comparisons"
 import { toJsonLd } from "lib/json-ld"
 import { SITE_NAME, SITE_URL } from "lib/site"
 import {
@@ -16,6 +19,7 @@ import {
   terms,
 } from "lib/terms"
 import { linkifyTermMentions } from "lib/term-links"
+import { getTimelinesForTerm } from "lib/timelines"
 import { truncate } from "lib/text"
 
 export const dynamicParams = false
@@ -145,6 +149,8 @@ const TermPage: FC<Props> = async ({ params }) => {
 
   const relatedTerms = getRelatedTerms(term)
   const zennArticles = getZennArticles(term)
+  const relatedTimelines = getTimelinesForTerm(term.slug)
+  const relatedComparisons = getComparisonsForTerm(term.slug)
   const jsonLdBlocks = buildJsonLd(term, relatedTerms)
 
   return (
@@ -387,6 +393,42 @@ const TermPage: FC<Props> = async ({ params }) => {
               </li>
             ))}
           </ul>
+        </Section>
+      )}
+
+      {/* Related Timelines */}
+      {relatedTimelines.length > 0 && (
+        <Section>
+          <SectionTitle>関連する年表</SectionTitle>
+          <div
+            style={{
+              display: "grid",
+              gap: "1.25rem",
+              gridTemplateColumns: "repeat(auto-fill, minmax(15rem, 1fr))",
+            }}
+          >
+            {relatedTimelines.map((timeline) => (
+              <TimelineCard key={timeline.slug} timeline={timeline} />
+            ))}
+          </div>
+        </Section>
+      )}
+
+      {/* Related Comparisons */}
+      {relatedComparisons.length > 0 && (
+        <Section>
+          <SectionTitle>関連する比較</SectionTitle>
+          <div
+            style={{
+              display: "grid",
+              gap: "1.25rem",
+              gridTemplateColumns: "repeat(auto-fill, minmax(15rem, 1fr))",
+            }}
+          >
+            {relatedComparisons.map((comparison) => (
+              <ComparisonCard key={comparison.slug} comparison={comparison} />
+            ))}
+          </div>
         </Section>
       )}
 

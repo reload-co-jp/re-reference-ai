@@ -93,8 +93,13 @@ const RootLayout = ({ children }: { children: React.ReactNode }) => {
         />
         <header
           style={{
+            alignItems: "center",
             background: "var(--color-bg-elevated)",
             borderBottom: "1px solid var(--color-border)",
+            display: "flex",
+            flexWrap: "wrap",
+            gap: "1rem",
+            justifyContent: "space-between",
             padding: "1rem 1.5rem",
             position: "relative",
           }}
@@ -102,6 +107,29 @@ const RootLayout = ({ children }: { children: React.ReactNode }) => {
           <Link href="/" style={{ color: "inherit", textDecoration: "none" }}>
             <Title>Re Reference AI</Title>
           </Link>
+          <nav>
+            <ul
+              style={{
+                display: "flex",
+                gap: "1.25rem",
+                fontSize: ".85rem",
+                listStyle: "none",
+                margin: 0,
+                padding: 0,
+              }}
+            >
+              <li>
+                <Link href="/timeline/" style={{ color: "var(--color-text-muted)" }}>
+                  技術年表
+                </Link>
+              </li>
+              <li>
+                <Link href="/compare/" style={{ color: "var(--color-text-muted)" }}>
+                  技術比較
+                </Link>
+              </li>
+            </ul>
+          </nav>
         </header>
         <main
           style={{

@@ -1,0 +1,336 @@
+[
+  {
+    "slug": "gpt-vs-claude",
+    "left": "gpt",
+    "right": "claude",
+    "summary": "GPTはOpenAIが開発するクローズドウェイトのLLMファミリー、ClaudeはAnthropicが開発する安全性とアライメントを重視したクローズドウェイトのLLMファミリー。いずれも重みは非公開で、API・チャットサービス経由での利用が基本となる。",
+    "quickSummary": [
+      "GPTはOpenAI、ClaudeはAnthropicが開発する、いずれもクローズドウェイトの大規模言語モデルファミリー。",
+      "GPTは幅広いエコシステムと継続的なマルチモーダル強化、Claudeは長文コンテキスト処理・コーディング支援とConstitutional AIによる安全性重視の設計を特徴とする。",
+      "どちらもAPI課金制で、チャットサービス(ChatGPT/Claude.ai)とAPIの両方から利用できる。"
+    ],
+    "table": [
+      { "item": "Purpose", "left": "汎用対話・生成AI、コード生成、マルチモーダル処理", "right": "対話・コーディング支援・長文書要約・エージェント的タスク" },
+      { "item": "Developer", "left": "OpenAI", "right": "Anthropic" },
+      { "item": "Release", "left": "2018年(GPT-1)", "right": "2023年3月(Claude 1)" },
+      { "item": "License", "left": "クローズドウェイト(API提供)", "right": "クローズドウェイト(API提供)" },
+      { "item": "Open Source", "left": "非公開", "right": "非公開" },
+      { "item": "API", "left": "OpenAI API(Chat Completions/Responses API)", "right": "Anthropic API(Messages API)" },
+      { "item": "Programming Language", "left": "公式SDKはPython/Node.js等主要言語に対応", "right": "公式SDKはPython/TypeScript等主要言語に対応" },
+      { "item": "Ecosystem", "left": "ChatGPT、Function Calling、豊富なサードパーティ統合", "right": "Claude Code、MCP、Claude.ai、Artifacts" }
+    ],
+    "architecture": {
+      "left": "デコーダのみのTransformerを基盤とし、事前学習後に指示チューニング・RLHFでアライメントする。",
+      "right": "デコーダのみのTransformerを基盤とし、あらかじめ定めた原則に照らしてモデル自身に出力を評価・改善させるConstitutional AIでアライメントする。"
+    },
+    "features": [
+      { "feature": "Streaming", "left": true, "right": true },
+      { "feature": "Tool Calling", "left": true, "right": true },
+      { "feature": "Vision", "left": true, "right": true },
+      { "feature": "Audio", "left": true, "right": false },
+      { "feature": "Multi Agent(ネイティブ対応)", "left": false, "right": false },
+      { "feature": "Memory(組み込み記憶)", "left": false, "right": false }
+    ],
+    "advantages": {
+      "left": [
+        "幅広いタスクに対応する汎用性と、継続的なモデル更新による性能向上",
+        "ChatGPT・API・各種インテグレーションを含む広範なエコシステムと開発者向けツール"
+      ],
+      "right": [
+        "長文コンテキストの処理やコーディング支援タスクで高い評価を得ている",
+        "安全性・アライメント研究を重視した設計思想に基づいて開発されている"
+      ]
+    },
+    "disadvantages": {
+      "left": [
+        "モデルの重みが非公開のクローズドウェイトであり、自前でのホスティングやカスタマイズに制約がある",
+        "API利用のコストが発生し、大量利用時のコスト管理が必要になる"
+      ],
+      "right": [
+        "モデルの重みが非公開のクローズドウェイトであり、自前でのホスティングやカスタマイズに制約がある",
+        "API利用のコストが発生し、大量利用時のコスト管理が必要になる"
+      ]
+    },
+    "bestUseCases": {
+      "left": "ChatGPTの豊富な機能・エコシステムを活用したい汎用対話や、既存のOpenAIエコシステム(Function Calling等)と連携したいアプリケーション。",
+      "right": "長文書の要約・分析やコーディング支援、Claude CodeやMCPを活用したエージェント的なワークフロー。"
+    },
+    "migration": "GPTからClaudeへ移行する場合、Chat Completions APIのメッセージ形式をAnthropicのMessages API形式へ変換する必要がある。Function CallingはClaudeのTool Useへ読み替え、システムプロンプトの扱いなど細部の仕様差にも注意する。",
+    "faq": [
+      {
+        "question": "GPTとClaude、どちらが優れている?",
+        "answer": "用途によって評価が分かれる。コーディング支援や長文処理はClaudeが高く評価されやすい。エコシステムの広さや汎用性ではGPTに強みがあるとされる。実際のタスクで比較検討するのが望ましい。"
+      }
+    ],
+    "references": [
+      { "type": "Official Website", "label": "OpenAI", "url": "https://openai.com/" },
+      { "type": "Official Website", "label": "Anthropic", "url": "https://www.anthropic.com/" }
+    ]
+  },
+  {
+    "slug": "mcp-vs-function-calling",
+    "left": "mcp",
+    "right": "function-calling",
+    "summary": "MCPはLLMアプリケーションと外部ツール・データソースの接続方法を標準化するオープンプロトコル、Function CallingはLLMが構造化された関数呼び出しを出力する仕組み。抽象化のレイヤーが異なり、両者は代替関係ではなく組み合わせて使われる。",
+    "quickSummary": [
+      "Function Callingは、LLMが「どの関数をどんな引数で呼ぶか」を決めて構造化データとして出力する仕組み。",
+      "MCPは、その呼び出し先となるツールやデータソースをどう発見・提供・接続するかを標準化する、より上位のプロトコル。",
+      "実際のエージェント開発では、LLM自体はFunction Calling(Tool Calling)でツール利用を判断し、MCPがそのツールの提供・接続方法を統一する、という組み合わせで使われることが多い。"
+    ],
+    "table": [
+      { "item": "Purpose", "left": "外部ツール・データソースとの接続方法の標準化", "right": "LLMによる関数呼び出し内容の構造化出力" },
+      { "item": "Developer", "left": "Anthropic", "right": "OpenAI(概念は他ベンダーにも普及)" },
+      { "item": "Release", "left": "2024年11月", "right": "2023年6月" },
+      { "item": "License", "left": "オープン標準(仕様・SDKはオープンソース)", "right": "該当なし(API機能)" },
+      { "item": "Open Source", "left": "MCP仕様・SDKはオープンソース", "right": "機能自体はクローズドAPIの一部" },
+      { "item": "API", "left": "MCPサーバー/クライアントの独自プロトコル(JSON-RPC)", "right": "Chat Completions API等のリクエストパラメータとして提供" },
+      { "item": "Programming Language", "left": "各言語向けSDKが提供される(Python/TypeScript等)", "right": "特定言語に依存しない(API仕様)" },
+      { "item": "Ecosystem", "left": "MCPサーバーのエコシステムが急速に拡大中(FastMCP等)", "right": "ほぼ全ての主要LLMベンダーが同様の機能を提供" }
+    ],
+    "architecture": {
+      "left": "ツール・データを提供する「MCPサーバー」と、それを利用する「MCPクライアント(LLMアプリ)」から構成され、JSON-RPCベースの共通プロトコルでやり取りする。",
+      "right": "LLMへ関数定義(名前・説明・JSON Schema)を渡し、モデルが呼び出すべき関数名と引数をJSON形式で出力する。"
+    },
+    "features": [
+      { "feature": "複数ツールの動的発見", "left": true, "right": "事前定義した関数リストに限定" },
+      { "feature": "複数アプリからの再利用性", "left": true, "right": false },
+      { "feature": "標準化されたプロトコル", "left": true, "right": "ベンダーごとに実装が異なる" },
+      { "feature": "リモートサーバーへの対応", "left": true, "right": "APIを通じた呼び出しが基本" }
+    ],
+    "advantages": {
+      "left": [
+        "一度実装したMCPサーバーを、複数の異なるLLMアプリケーションから再利用できる",
+        "ツール・データ連携の実装が標準化され、開発・保守の重複を減らせる"
+      ],
+      "right": [
+        "LLMの出力を、プログラムが安定して解釈できる構造化データとして得られる",
+        "既存のAPIや社内システムの関数をそのままLLMから呼び出せるように統合しやすい"
+      ]
+    },
+    "disadvantages": {
+      "left": [
+        "標準化されたプロトコルである分、特殊な連携要件への対応は独自実装より柔軟性に欠けることがある",
+        "比較的新しい仕様であり、エコシステムやセキュリティのベストプラクティスが発展途上の部分がある"
+      ],
+      "right": [
+        "引数のスキーマ定義や関数の説明文の質が、呼び出し精度に大きく影響する",
+        "定義する関数の数が増えるほど、必要な関数の選択を誤りやすくなる"
+      ]
+    },
+    "bestUseCases": {
+      "left": "複数のLLMアプリケーションから同じツール・データソースを再利用したい場合や、サードパーティ製のツールを標準化された方法で組み込みたいエージェント開発。",
+      "right": "単一のアプリケーション内で、あらかじめ決まった少数の関数(社内API呼び出し等)をLLMに使わせたいシンプルなケース。"
+    },
+    "migration": "既存のFunction Calling実装をMCPへ移行する場合、個々の関数定義をMCPサーバーのツール定義として再実装し、LLMアプリケーション側はMCPクライアントとして接続する構成に変更する。LLM自体がどの関数を呼ぶか判断する部分はFunction Calling(Tool Calling)の仕組みに委ねられる点は変わらない。",
+    "faq": [
+      {
+        "question": "MCPを使えばFunction Callingは不要になる?",
+        "answer": "いいえ。両者は代替関係ではなく補完関係にある。LLMがどの関数を呼ぶか判断する部分はFunction Calling(Tool Calling)が担い、その関数(ツール)をどう提供・接続するかをMCPが標準化する。"
+      }
+    ],
+    "references": [
+      { "type": "Official Website", "label": "Model Context Protocol", "url": "https://modelcontextprotocol.io/" },
+      { "type": "Documentation", "label": "OpenAI: Function calling", "url": "https://platform.openai.com/docs/guides/function-calling" }
+    ]
+  },
+  {
+    "slug": "retrieval-augmented-generation-vs-fine-tuning",
+    "left": "retrieval-augmented-generation",
+    "right": "fine-tuning",
+    "summary": "RAGは外部知識を検索してプロンプトに組み込むことでLLMの回答を根拠づける手法、ファインチューニングは追加データでモデル自体の重みを更新する手法。知識の最新化のしやすさと、モデル自体の挙動・文体の変更しやすさという異なる強みを持つ。",
+    "quickSummary": [
+      "RAGはモデルを再学習せず、検索した外部知識をプロンプトに追加して回答させる手法。",
+      "ファインチューニングはモデル自体の重みを追加学習し、特定タスクやドメイン・文体へ適応させる手法。",
+      "知識の更新頻度が高い場合はRAG、モデルの振る舞いや文体そのものを変えたい場合はファインチューニングが向く。両者を組み合わせる構成も広く使われる。"
+    ],
+    "table": [
+      { "item": "Purpose", "left": "外部知識に基づく回答の根拠づけ・最新化", "right": "特定タスク・ドメインへのモデル適応" },
+      { "item": "Developer", "left": "手法(Lewisらが提案)", "right": "手法(転移学習の一種)" },
+      { "item": "Release", "left": "2020年(論文発表)", "right": "LLM文脈では2018年前後(ULMFiT/BERT)から普及" },
+      { "item": "License", "left": "該当なし(手法)", "right": "該当なし(手法)" },
+      { "item": "Open Source", "left": "実装(LangChain・LlamaIndex等)はオープンソースのものが多い", "right": "実装(Hugging Face PEFT等)はオープンソースのものが多い" },
+      { "item": "API", "left": "ベクトルデータベース・埋め込みAPI・LLM APIを組み合わせて実装", "right": "各LLMプロバイダのファインチューニングAPI、またはローカルでの学習スクリプト" },
+      { "item": "Programming Language", "left": "Python(LangChain等)が主流", "right": "Python(Hugging Face Transformers/PEFT等)が主流" },
+      { "item": "Ecosystem", "left": "ベクトルデータベース・埋め込みモデル・RAGフレームワークのエコシステム", "right": "LoRA・PEFT等パラメータ効率的学習手法のエコシステム" }
+    ],
+    "architecture": {
+      "left": "検索コンポーネントが関連文書をベクトル検索等で取得し、その内容をプロンプトのコンテキストとしてLLMへ渡し回答を生成させる。",
+      "right": "事前学習済みモデルの重みを、タスク・ドメイン固有のデータセットで追加学習して更新する(全パラメータ更新、またはLoRA等の部分更新)。"
+    },
+    "features": [
+      { "feature": "モデル再学習の要否", "left": "不要", "right": "必要" },
+      { "feature": "知識更新の即時性", "left": true, "right": false },
+      { "feature": "文体・振る舞いの変更", "left": false, "right": true },
+      { "feature": "出典提示のしやすさ", "left": true, "right": false },
+      { "feature": "追加インフラ(ベクトルDB等)", "left": true, "right": false }
+    ],
+    "advantages": {
+      "left": [
+        "検索した根拠に基づくことでハルシネーションを低減",
+        "モデルを再学習せずに知識を更新できる",
+        "出典の提示に対応できる"
+      ],
+      "right": [
+        "狭いドメイン固有タスクでの性能を向上させる",
+        "パラメータ効率的手法により限られた計算資源でも利用しやすい"
+      ]
+    },
+    "disadvantages": {
+      "left": [
+        "検索精度が回答品質全体のボトルネックになる",
+        "ベクトルDB・インデックス構築など追加のインフラと遅延が発生する"
+      ],
+      "right": [
+        "汎用能力を失う破滅的忘却のリスクがある",
+        "タスク固有の厳選された学習データが必要"
+      ]
+    },
+    "bestUseCases": {
+      "left": "社内文書検索や最新情報を反映した回答が必要なチャットボット、頻繁に更新される知識ベースを扱うアプリケーション。",
+      "right": "特定ドメイン(医療・法律等)への特化や、一貫した文体・振る舞いをモデル自体に持たせたい場合。"
+    },
+    "migration": "RAGからファインチューニングへ切り替える(あるいは併用する)場合、検索対象の文書群を学習データセットとして整形し直す必要がある。両者は排他的でなく、ファインチューニングで基本的な振る舞い・文体を調整しつつRAGで最新知識を補うハイブリッド構成も広く使われる。",
+    "faq": [
+      {
+        "question": "RAGとファインチューニング、どちらを使うべき?",
+        "answer": "知識の更新頻度が高く出典提示も必要ならRAG、モデルの振る舞い・文体・専門用語の使い方自体を変えたいならファインチューニングが向く。両方の要件がある場合は組み合わせて使われることも多い。"
+      }
+    ],
+    "references": [
+      { "type": "Research Paper", "label": "Retrieval-Augmented Generation for Knowledge-Intensive NLP Tasks", "url": "https://arxiv.org/abs/2005.11401" }
+    ]
+  },
+  {
+    "slug": "langchain-vs-langgraph",
+    "left": "langchain",
+    "right": "langgraph",
+    "summary": "LangChainはLLMアプリケーションの部品を組み合わせて直線的な処理(チェーン)を構築するフレームワーク、LangGraphは同じチームが開発した、状態遷移をグラフとして表現し条件分岐・ループ・マルチエージェントに対応するフレームワーク。",
+    "quickSummary": [
+      "LangChainは、プロンプト・ツール呼び出し・検索等の部品を直線的に連結する「チェーン」としてLLMアプリを構築する。",
+      "LangGraphは同じLangChainチームが開発し、処理フローをノードとエッジのグラフとして表現することで、条件分岐・ループ・複数エージェント間の状態共有を扱える。",
+      "単純なパイプラインならLangChain、複雑な制御フローやマルチエージェント構成にはLangGraphが向く。"
+    ],
+    "table": [
+      { "item": "Purpose", "left": "LLMアプリケーションの部品化・連結", "right": "複雑な状態遷移を伴うエージェントアプリケーションの構築" },
+      { "item": "Developer", "left": "LangChain, Inc.(Harrison Chase)", "right": "LangChain, Inc." },
+      { "item": "Release", "left": "2022年10月", "right": "2024年" },
+      { "item": "License", "left": "Apache License 2.0", "right": "MIT License" },
+      { "item": "Open Source", "left": "オープンソース", "right": "オープンソース" },
+      { "item": "API", "left": "Python/JavaScript SDK", "right": "Python/JavaScript SDK" },
+      { "item": "Programming Language", "left": "Python、JavaScript/TypeScript", "right": "Python、JavaScript/TypeScript" },
+      { "item": "Ecosystem", "left": "対応LLM・データソース・ツールが非常に豊富", "right": "LangChainのエコシステムをベースに、状態永続化・ヒューマンインザループ機能を追加" }
+    ],
+    "architecture": {
+      "left": "コンポーネント(プロンプトテンプレート・LLM呼び出し・ツール・パーサー等)を直線的に連結するチェーンとして処理を表現する。",
+      "right": "処理単位をノード、遷移をエッジとするグラフとして定義し、条件分岐・ループ・並列実行や、各ノードの状態を永続化するチェックポイント機構を持つ。"
+    },
+    "features": [
+      { "feature": "直線的なチェーン構築", "left": true, "right": true },
+      { "feature": "条件分岐・ループ", "left": "限定的", "right": true },
+      { "feature": "マルチエージェント状態共有", "left": false, "right": true },
+      { "feature": "状態の永続化・再開", "left": false, "right": true },
+      { "feature": "ヒューマンインザループ", "left": "実装は可能だが標準機能ではない", "right": true }
+    ],
+    "advantages": {
+      "left": [
+        "RAG・ツール呼び出し等、LLMアプリケーションでよく使われる処理を部品として再利用できる",
+        "対応するLLMプロバイダ・データソース・ツールの種類が豊富で、エコシステムが大きい"
+      ],
+      "right": [
+        "条件分岐・ループ・並列処理など、複雑な制御フローを明示的なグラフとして表現できる",
+        "複数エージェント間で状態を共有するマルチエージェント構成を構築しやすい"
+      ]
+    },
+    "disadvantages": {
+      "left": [
+        "抽象化の層が多く、内部の挙動を細かく制御・デバッグしたい場合に複雑さを感じることがある",
+        "バージョンアップの頻度が高く、APIの変更に追従する保守コストがかかりやすい"
+      ],
+      "right": [
+        "単純なタスクに対しては、グラフ構造を定義する分オーバーヘッドが大きく感じられやすい",
+        "LangChainのエコシステムに関する前提知識を要する場合がある"
+      ]
+    },
+    "bestUseCases": {
+      "left": "RAGパイプラインやシンプルなツール呼び出し等、直線的な処理フローで十分なLLMアプリケーションの試作。",
+      "right": "条件分岐やループ、複数エージェント間の状態共有が必要な、より本格的なエージェントシステムの構築。"
+    },
+    "migration": "LangChainのチェーンで実装した処理をLangGraphへ移行する場合、各処理ステップをノードとして再定義し、遷移条件をエッジとして明示的に記述し直す。LangChainのコンポーネント(プロンプト・ツール・LLM呼び出し等)自体はLangGraphのノード内でそのまま再利用できる。",
+    "faq": [
+      {
+        "question": "LangGraphを使うならLangChainは不要?",
+        "answer": "いいえ。LangGraphはLangChainのコンポーネント(プロンプトテンプレートやツール等)を前提として使うことが多く、両者は代替ではなく組み合わせて使われることが一般的。"
+      }
+    ],
+    "references": [
+      { "type": "Official Website", "label": "LangChain", "url": "https://www.langchain.com/" },
+      { "type": "Official Website", "label": "LangGraph", "url": "https://www.langchain.com/langgraph" }
+    ]
+  },
+  {
+    "slug": "crewai-vs-autogen",
+    "left": "crewai",
+    "right": "autogen",
+    "summary": "CrewAIは役割(ロール)を与えた複数エージェントをチームとして協調させることに特化したPythonフレームワーク、AutoGenはMicrosoft Research発の、エージェント間の対話(カンバセーション)を通じてタスクを解決するフレームワーク。",
+    "quickSummary": [
+      "CrewAIは、「リサーチ担当」「ライター担当」のように役割を与えたエージェントをチーム(クルー)として協調させることに特化している。",
+      "AutoGenは、Microsoft Researchが開発し、エージェント同士のメッセージのやり取り(カンバセーション)を通じてタスクを解決する、より汎用的な対話パターンを扱える。",
+      "役割分担が明確なワークフローを素早く試作したいならCrewAI、柔軟な対話パターンやコード生成・実行を伴う複雑な協調タスクにはAutoGenが向く。"
+    ],
+    "table": [
+      { "item": "Purpose", "left": "役割ベースのマルチエージェント協調タスクの実行", "right": "エージェント間の対話を通じたタスクの協調的解決" },
+      { "item": "Developer", "left": "CrewAI, Inc.", "right": "Microsoft Research" },
+      { "item": "Release", "left": "2023年", "right": "2023年" },
+      { "item": "License", "left": "MIT License", "right": "MIT License(コード部分)" },
+      { "item": "Open Source", "left": "オープンソース", "right": "オープンソース" },
+      { "item": "API", "left": "Python SDK", "right": "Python SDK" },
+      { "item": "Programming Language", "left": "Python", "right": "Python" },
+      { "item": "Ecosystem", "left": "役割ベースのエージェント構築に特化した比較的シンプルなエコシステム", "right": "Microsoft製ツールとの連携や、コード実行を伴うエージェント開発に強み" }
+    ],
+    "architecture": {
+      "left": "役割(ロール)・目標・利用可能なツールを設定したエージェントを定義し、逐次型・階層型などのプロセスでタスクを分担・連携させる。",
+      "right": "複数のエージェントがメッセージを送り合う対話(カンバセーション)としてタスクを進行させ、人間をエージェントの1人として対話に参加させることもできる。"
+    },
+    "features": [
+      { "feature": "役割ベースの宣言的設計", "left": true, "right": "対話パターンとして表現(宣言的な役割定義は限定的)" },
+      { "feature": "柔軟な対話パターン", "left": "限定的", "right": true },
+      { "feature": "コード生成・実行との統合", "left": "ツールとして組み込み可能", "right": true },
+      { "feature": "ヒューマンインザループ", "left": "実装可能", "right": true }
+    ],
+    "advantages": {
+      "left": [
+        "役割ベースのマルチエージェントシステムを、比較的簡潔なコードで構築できる",
+        "タスクの分担や実行順序を宣言的に定義でき、構成の見通しが立てやすい"
+      ],
+      "right": [
+        "エージェント同士の対話パターンを柔軟に設計でき、複雑な協調タスクに対応しやすい",
+        "コード生成・実行を伴うエージェントワークフローの構築に強みを持つ"
+      ]
+    },
+    "disadvantages": {
+      "left": [
+        "複雑な条件分岐やループを伴うワークフローの表現は、LangGraph等のグラフベースのフレームワークと比べ柔軟性に制約が生じやすい",
+        "エージェント数が増えるほど、役割設定やタスク間の連携の設計が難しくなる"
+      ],
+      "right": [
+        "対話パターンが柔軟な分、意図した挙動になるよう設計・調整する難易度が上がりやすい",
+        "エージェント数や対話のターン数が増えるほど、デバッグや挙動を把握しづらくなる"
+      ]
+    },
+    "bestUseCases": {
+      "left": "コンテンツ制作(リサーチ→執筆→レビュー等)のように、役割分担が明確なワークフローを素早く試作したい場合。",
+      "right": "コード生成・実行・レビューを繰り返すペアプログラミング的なタスクや、人間参加型のレビュー工程を組み込みたい協調タスク。"
+    },
+    "migration": "CrewAIで定義した役割ベースのエージェントをAutoGenへ移行する場合、各役割(ロール)を対話に参加するエージェントとして再定義し、タスクの実行順序は明示的な対話フロー(誰が誰にメッセージを送るか)として設計し直す必要がある。",
+    "faq": [
+      {
+        "question": "CrewAIとAutoGen、LangGraphとは何が違う?",
+        "answer": "CrewAIとAutoGenはエージェント間の協調(役割分担・対話)に特化しているのに対し、LangGraphは処理フロー全体をグラフとして明示的に制御できる、より汎用的なオーケストレーション基盤という違いがある。"
+      }
+    ],
+    "references": [
+      { "type": "Official Website", "label": "CrewAI", "url": "https://www.crewai.com/" },
+      { "type": "Research Paper", "label": "AutoGen: Enabling Next-Gen LLM Applications via Multi-Agent Conversation", "url": "https://arxiv.org/abs/2308.08155" }
+    ]
+  }
+]
