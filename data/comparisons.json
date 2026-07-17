@@ -888,5 +888,137 @@
         "url": "https://x.ai/"
       }
     ]
+  },
+  {
+    "slug": "llama-vs-mistral",
+    "left": "llama",
+    "right": "mistral",
+    "summary": "Llamaは米Metaが開発する、研究・商用利用向けに重みを公開しているオープンウェイトのLLMファミリー。Mistralはフランスの Mistral AI が開発する、効率性を重視したオープンウェイトのLLMファミリー(一部上位モデルはクローズドウェイトのAPI提供)。",
+    "quickSummary": [
+      "LlamaはMeta、MistralはフランスのMistral AIが開発する、いずれもオープンウェイトを中心に展開するLLMファミリー。",
+      "Llamaは幅広いパラメータサイズ展開とHugging Face等を中心とした巨大なエコシステム、Mistralは少ないパラメータ数でも高い性能を出す効率性とSliding Window Attention等の技術的工夫を特徴とする。",
+      "MistralはMistral Largeなど一部の上位モデルをクローズドウェイトのAPI限定で提供している。"
+    ],
+    "table": [
+      {
+        "item": "Purpose",
+        "left": "研究・商用利用向けの汎用LLM基盤",
+        "right": "効率的な推論・ファインチューニング向けの汎用LLM基盤"
+      },
+      {
+        "item": "Developer",
+        "left": "Meta",
+        "right": "Mistral AI"
+      },
+      {
+        "item": "Release",
+        "left": "2023年2月(LLaMA 1)",
+        "right": "2023年9月(Mistral 7B)"
+      },
+      {
+        "item": "License",
+        "left": "Llama Community License等の独自ライセンス",
+        "right": "Apache 2.0(一部上位モデルはクローズドウェイト)"
+      },
+      {
+        "item": "Open Source",
+        "left": "重み公開(用途制限あり)",
+        "right": "重み公開(Apache 2.0、商用利用可)"
+      },
+      {
+        "item": "API",
+        "left": "公式APIはなく、各種クラウド・推論基盤経由で提供",
+        "right": "Mistral API(La Plateforme)"
+      },
+      {
+        "item": "Programming Language",
+        "left": "Hugging Face Transformers等主要MLフレームワークに対応",
+        "right": "Hugging Face Transformers、公式Python SDKに対応"
+      },
+      {
+        "item": "Ecosystem",
+        "left": "Hugging Face、Llama Stack、幅広いサードパーティのファインチューニング・推論基盤",
+        "right": "Hugging Face、Mistral La Plateforme、Le Chat"
+      }
+    ],
+    "architecture": {
+      "left": "デコーダのみのTransformerを基盤とし、RMSNorm・SwiGLU・回転位置埋め込み(RoPE)等を採用したアーキテクチャで、モデルサイズごとに複数のバリエーションを展開する。",
+      "right": "デコーダのみのTransformerを基盤とし、Sliding Window AttentionやGrouped Query Attentionにより少ないパラメータ数・計算コストで高い性能を実現する設計を特徴とする。上位モデルではMixture of Expertsも採用する。"
+    },
+    "features": [
+      {
+        "feature": "Streaming",
+        "left": true,
+        "right": true
+      },
+      {
+        "feature": "Tool Calling",
+        "left": true,
+        "right": true
+      },
+      {
+        "feature": "Vision",
+        "left": true,
+        "right": true
+      },
+      {
+        "feature": "Audio",
+        "left": false,
+        "right": false
+      },
+      {
+        "feature": "Multi Agent(ネイティブ対応)",
+        "left": false,
+        "right": false
+      },
+      {
+        "feature": "Memory(組み込み記憶)",
+        "left": false,
+        "right": false
+      }
+    ],
+    "advantages": {
+      "left": [
+        "幅広いパラメータサイズのモデルが公開されており、用途に応じて選択できる",
+        "Hugging Faceを中心とした巨大なオープンソースエコシステムと豊富な事例がある"
+      ],
+      "right": [
+        "少ないパラメータ数でも高い性能を発揮する効率性に定評がある",
+        "Apache 2.0ライセンスの完全なオープンウェイトモデルを中心に展開している"
+      ]
+    },
+    "disadvantages": {
+      "left": [
+        "ライセンスに一部利用制限があり、完全なApache 2.0等のパーミッシブライセンスではない",
+        "モデルサイズによっては推論に大きな計算資源が必要になる"
+      ],
+      "right": [
+        "最上位モデル(Mistral Large等)はクローズドウェイトでAPI経由の利用に限られる",
+        "Llamaと比べるとコミュニティ・ファインチューニング事例の蓄積はまだ少ない"
+      ]
+    },
+    "bestUseCases": {
+      "left": "自前でホスティングしパラメータサイズを柔軟に選びたい研究・商用プロジェクトや、Hugging Face上の豊富な派生モデルを活用したい用途。",
+      "right": "限られた計算資源で高い性能を求める用途や、Apache 2.0ライセンスでの商用利用を重視するプロジェクト。"
+    },
+    "migration": "LlamaからMistralへ移行する場合、いずれもHugging Face Transformers経由であればモデル名の変更のみで対応できることが多い。API経由で利用する場合はMistral API(La Plateforme)のエンドポイント・認証方式への切り替えが必要になる。",
+    "faq": [
+      {
+        "question": "LlamaとMistral、どちらが優れている?",
+        "answer": "用途によって評価が分かれる。幅広いモデルサイズやエコシステムの豊富さではLlamaに強みがある。少ない計算資源での効率性やライセンスの自由度ではMistralが選ばれることがある。実際のタスク・環境で比較検討するのが望ましい。"
+      }
+    ],
+    "references": [
+      {
+        "type": "Official Website",
+        "label": "Meta Llama",
+        "url": "https://ai.meta.com/llama/"
+      },
+      {
+        "type": "Official Website",
+        "label": "Mistral AI",
+        "url": "https://mistral.ai/"
+      }
+    ]
   }
 ]
