@@ -24,9 +24,25 @@ const groupByYear = (events: TimelineEvent[]): [string, TimelineEvent[]][] => {
   return Array.from(groups.entries()).sort(([a], [b]) => a.localeCompare(b))
 }
 
+const eventKey = (year: string, index: number): string => `${year}-${index}`
+
 export const TimelineView: FC<Props> = ({ events, termNames }) => {
-  const [openKey, setOpenKey] = useState<string | null>(null)
   const groups = groupByYear(events)
+  const [openKeys, setOpenKeys] = useState<Set<string>>(
+    () => new Set(groups.flatMap(([year, yearEvents]) => yearEvents.map((_, i) => eventKey(year, i)))),
+  )
+
+  const toggle = (key: string) => {
+    setOpenKeys((prev) => {
+      const next = new Set(prev)
+      if (next.has(key)) {
+        next.delete(key)
+      } else {
+        next.add(key)
+      }
+      return next
+    })
+  }
 
   return (
     <div style={{ borderLeft: "2px solid var(--color-border)", paddingLeft: "1.5rem" }}>
@@ -44,8 +60,8 @@ export const TimelineView: FC<Props> = ({ events, termNames }) => {
             {year}
           </p>
           {yearEvents.map((event, i) => {
-            const key = `${year}-${i}`
-            const open = openKey === key
+            const key = eventKey(year, i)
+            const open = openKeys.has(key)
             return (
               <div key={key} style={{ marginBottom: "1rem", position: "relative" }}>
                 <span
@@ -61,7 +77,7 @@ export const TimelineView: FC<Props> = ({ events, termNames }) => {
                 />
                 <button
                   aria-expanded={open}
-                  onClick={() => setOpenKey(open ? null : key)}
+                  onClick={() => toggle(key)}
                   style={{
                     background: "none",
                     border: "none",
