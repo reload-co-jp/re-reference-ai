@@ -1152,5 +1152,127 @@
         "url": "https://ai.google.dev/gemma"
       }
     ]
+  },
+  {
+    "slug": "crewai-vs-langgraph",
+    "left": "crewai",
+    "right": "langgraph",
+    "summary": "CrewAIは役割を与えた複数のAIエージェントに協調してタスクを遂行させるPythonのマルチエージェントフレームワーク。LangGraphは状態遷移をグラフとして定義し、複雑なマルチエージェントアプリケーションを構築するLangChainエコシステムのフレームワーク。",
+    "quickSummary": [
+      "CrewAIは役割ベースの高レベルな抽象化、LangGraphは状態遷移をグラフとして定義する低レベルで柔軟な制御を特徴とするマルチエージェントフレームワーク。",
+      "CrewAIはエージェントの役割(role)・目標(goal)・タスク(task)を宣言的に定義するだけでチームとして協調動作させられる。LangGraphは分岐・ループを含む複雑な状態遷移を明示的に制御できる。",
+      "シンプルさを優先するならCrewAI、細かい制御やLangChainエコシステムとの連携を重視するならLangGraphが選ばれやすい。"
+    ],
+    "table": [
+      {
+        "item": "Purpose",
+        "left": "役割ベースのマルチエージェント協調タスクの実行",
+        "right": "グラフベースの状態遷移によるエージェントワークフロー構築"
+      },
+      {
+        "item": "Developer",
+        "left": "CrewAI, Inc.",
+        "right": "LangChain, Inc."
+      },
+      {
+        "item": "Release",
+        "left": "2023年10月",
+        "right": "2024年1月"
+      },
+      {
+        "item": "License",
+        "left": "MITライセンス",
+        "right": "MITライセンス"
+      },
+      {
+        "item": "Open Source",
+        "left": "オープンソース",
+        "right": "オープンソース"
+      },
+      {
+        "item": "API",
+        "left": "Python(role/goal/task/crew等の宣言的API)",
+        "right": "Python/TypeScript(グラフ・ノード・エッジによる状態遷移API)"
+      },
+      {
+        "item": "Programming Language",
+        "left": "Python",
+        "right": "Python/TypeScript"
+      },
+      {
+        "item": "Ecosystem",
+        "left": "CrewAI Enterprise、各種LLMプロバイダとの統合",
+        "right": "LangChain、LangSmith、LangGraph Platform"
+      }
+    ],
+    "architecture": {
+      "left": "エージェントに役割(role)・目標(goal)・背景(backstory)を与え、タスク(task)を順次または階層的に処理させるプロセス指向のアーキテクチャを採用する。",
+      "right": "有向グラフの各ノードにエージェントや処理ステップを配置し、エッジで状態遷移を明示的に定義する。分岐・ループ・人間の介入(Human-in-the-loop)を含む複雑なワークフローを表現できる。"
+    },
+    "features": [
+      {
+        "feature": "役割ベースの宣言的設計",
+        "left": true,
+        "right": "グラフのノードとして表現(宣言的な役割定義は限定的)"
+      },
+      {
+        "feature": "グラフによる状態遷移の明示的制御",
+        "left": "限定的(内部でシーケンシャル/階層プロセスに従う)",
+        "right": true
+      },
+      {
+        "feature": "分岐・ループを含む複雑なワークフロー",
+        "left": "限定的",
+        "right": true
+      },
+      {
+        "feature": "ヒューマンインザループ",
+        "left": "実装可能",
+        "right": true
+      }
+    ],
+    "advantages": {
+      "left": [
+        "role/goal/task/crewの宣言的な記述だけでエージェントチームを構築できる学習コストの低さ",
+        "少ないコード量で階層的・逐次的なタスク実行を実現できる"
+      ],
+      "right": [
+        "分岐・ループを含む複雑な状態遷移を明示的にグラフとして制御できる",
+        "LangChain・LangSmithとのシームレスな統合により、デバッグ・可観測性に優れる"
+      ]
+    },
+    "disadvantages": {
+      "left": [
+        "複雑な分岐やループを伴うワークフローの表現には向いていない",
+        "内部の実行フローがフレームワークに委ねられ、細かい制御が難しい場合がある"
+      ],
+      "right": [
+        "グラフの設計・状態管理を自前で定義する必要があり、学習コストが高い",
+        "シンプルな逐次タスクにはCrewAI等と比べてコード量が多くなりやすい"
+      ]
+    },
+    "bestUseCases": {
+      "left": "役割分担が明確なタスク(リサーチ→執筆→レビュー等)を素早く自動化したいプロジェクトや、マルチエージェント開発の学習コストを抑えたい場合。",
+      "right": "分岐・ループ・人間の承認を含む複雑なエージェントワークフローや、LangChainエコシステムを既に利用しているプロジェクト。"
+    },
+    "migration": "CrewAIからLangGraphへ移行する場合、role/task単位で定義していた処理をグラフのノードとして再設計する必要がある。逐次的なCrewの実行フローは、LangGraphでは明示的なエッジとして表現し直す。",
+    "faq": [
+      {
+        "question": "CrewAIとLangGraph、どちらを選ぶべき?",
+        "answer": "役割分担が明確なタスクを素早く自動化したい場合はCrewAIが向いている。分岐・ループを含む複雑なワークフローを細かく制御したい場合や、LangChainエコシステムを活用したい場合はLangGraphが向いている。"
+      }
+    ],
+    "references": [
+      {
+        "type": "Official Website",
+        "label": "CrewAI",
+        "url": "https://www.crewai.com/"
+      },
+      {
+        "type": "Documentation",
+        "label": "LangGraph",
+        "url": "https://langchain-ai.github.io/langgraph/"
+      }
+    ]
   }
 ]
