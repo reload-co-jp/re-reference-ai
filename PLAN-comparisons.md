@@ -15,23 +15,23 @@
 
 ## comparisons.json のスキーマ（1 エントリ）
 
-`left` / `right` は `terms.json` の `slug` を指す。全フィールド必須（既存 5 件準拠）。
+`left` / `right` は `terms.json` の `slug` を指す。`lib/comparisons.ts` の `Comparison` 型が正。必須は `slug` / `left` / `right` / `summary` の4つのみ、他は任意（`?`付き）。ただし既存5件は全フィールド埋まっているため、新規追加分も揃えるのが望ましい。
 
 ```
 slug:          string              例 "mcp-vs-function-calling"（"<left>-vs-<right>"）
 left:          string              term slug
 right:         string              term slug
 summary:       string              比較全体の要約
-quickSummary:  string[]            箇条書きの短い結論
-table:         { item, left, right }[]        観点別比較表
-architecture:  { left: string, right: string }  各アーキテクチャ説明
-features:      { feature, left, right }[]     left/right は string または boolean
-advantages:    { left: string[], right: string[] }
-disadvantages: { left: string[], right: string[] }
-bestUseCases:  { left: string[], right: string[] }
-migration:     string              乗り換え・併用の指針
-faq:           { question, answer }[]
-references:    { type, label, url }[]
+quickSummary?: string[]            箇条書きの短い結論
+table?:        { item, left, right }[]        観点別比較表
+architecture?: { left: string, right: string }  各アーキテクチャ説明
+features?:     { feature, left, right }[]     left/right は string または boolean
+advantages?:   { left: string[], right: string[] }
+disadvantages?:{ left: string[], right: string[] }
+bestUseCases?: { left: string, right: string }   ← left/rightは文字列(配列ではない)
+migration?:    string              乗り換え・併用の指針
+faq?:          { question, answer }[]
+references?:   { type, label, url }[]
 ```
 
 注意: `terms.json` 側にも `comparisons` フィールドがあるが、これは「関連用語との対比ノート」（`{ slug, note }[]`）であり、比較記事とは別物。混同しないこと。
@@ -54,6 +54,13 @@ references:    { type, label, url }[]
 - `node scripts/suggest-comparisons.mjs` が動き、既存 5 記事のペアが出力に含まれない
 - `llama vs qwen`, `bm25 vs semantic-search`, `fine-tuning vs lora` のような「兄弟概念」ペアが上位に来る
 - `attention vs transformer` のような包含ペアが上位 10 件に入らない
+
+**実装済み（`scripts/suggest-comparisons.mjs`）・検証結果:**
+- `attention vs transformer` は 207/371 位 → 上位10件外の条件は満たす
+- `bm25 vs semantic-search`（268位）・`fine-tuning vs lora`（339位）は上位に来ない。原因はタグ語彙の不一致（例: lora のタグ「ファインチューニング」が fine-tuning 自身のタグに含まれないため共有タグスコアが0になる）。ペナルティ調整で無理に押し上げると他の良ペアを壊すため未対応
+- `llama vs qwen` はそもそも候補に入らない（qwen→llama の片方向リンクのみで、relatedTerms 相互条件を満たさない。terms.json 側のデータ欠落）
+- 一方、実際の上位30件は `gemini vs grok` / `llama vs mistral` / `gemma vs phi` / `claude vs gemini` / `gpt vs grok` / `crewai vs langgraph` など質の高いペアを的確に抽出できている。当初の具体例3つは執筆時の仮説であり実データと完全一致しなかったが、スクリプト自体の有効性は確認できた
+- 改善の余地（未着手）: タグ語彙不一致の補完（例: 他方の name/slug が自分の tags に含まれる場合の加点）、relatedTerms の片方向リンク補完
 
 ### Phase 2: 比較記事追加スキル `.claude/skills/add-comparison/SKILL.md`
 
