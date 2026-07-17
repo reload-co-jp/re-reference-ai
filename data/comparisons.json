@@ -1274,5 +1274,127 @@
         "url": "https://langchain-ai.github.io/langgraph/"
       }
     ]
+  },
+  {
+    "slug": "midjourney-vs-flux",
+    "left": "midjourney",
+    "right": "flux",
+    "summary": "Midjourneyは芸術的な画風に強みを持つ、テキストから画像を生成するサブスクリプション型のクローズドなAIサービス。FLUXはStable Diffusionの元開発メンバーが設立したBlack Forest Labsによる画像生成AIモデルのシリーズで、一部モデルはオープンウェイトで公開されている。",
+    "quickSummary": [
+      "Midjourneyは主にDiscord・Web上のサブスクリプションサービスとして提供される、クローズドな画像生成AI。FLUXはBlack Forest Labsが開発する画像生成モデルシリーズで、Pro/Dev/Schnellといった複数のバリエーションを持つ。",
+      "Midjourneyは独特で芸術的な画風・美的センスに定評があり、FLUXは高いプロンプト追従性と写実的な画像生成、オープンウェイトモデルの提供を特徴とする。",
+      "FLUXはSchnell等の一部モデルをApache 2.0ライセンスで公開しており、自前でのホスティング・ファインチューニングが可能な点でMidjourneyと大きく異なる。"
+    ],
+    "table": [
+      {
+        "item": "Purpose",
+        "left": "芸術的・スタイライズされた画像生成",
+        "right": "写実的で高いプロンプト追従性を持つ画像生成"
+      },
+      {
+        "item": "Developer",
+        "left": "Midjourney, Inc.",
+        "right": "Black Forest Labs"
+      },
+      {
+        "item": "Release",
+        "left": "2022年7月(オープンベータ)",
+        "right": "2024年8月(FLUX.1)"
+      },
+      {
+        "item": "License",
+        "left": "クローズド(サブスクリプション利用)",
+        "right": "モデルにより異なる(Pro: クローズド、Dev: 非商用限定、Schnell: Apache 2.0)"
+      },
+      {
+        "item": "Open Source",
+        "left": "非公開",
+        "right": "Schnellのみ商用利用可能な形で公開"
+      },
+      {
+        "item": "API",
+        "left": "非公式API中心(公式APIは限定的)",
+        "right": "Black Forest Labs API、各種クラウド(Replicate等)経由でも提供"
+      },
+      {
+        "item": "Programming Language",
+        "left": "主にDiscordコマンド・Web UI経由での利用",
+        "right": "Python(Diffusers等)、REST API"
+      },
+      {
+        "item": "Ecosystem",
+        "left": "Discord、Midjourney Webアプリ",
+        "right": "Hugging Face、ComfyUI、Replicate"
+      }
+    ],
+    "architecture": {
+      "left": "拡散モデル(Diffusion Model)をベースとし、詳細なアーキテクチャは非公開。独自の学習データ・チューニングにより芸術的な画風を実現している。",
+      "right": "Rectified Flow Transformer(拡散モデルとTransformerを組み合わせたアーキテクチャ)を採用し、Pro/Dev/Schnellの各モデルで品質と推論速度のトレードオフを使い分けられる設計になっている。"
+    },
+    "features": [
+      {
+        "feature": "サブスクリプション不要でのセルフホスト",
+        "left": false,
+        "right": "Dev/Schnellのみ可能"
+      },
+      {
+        "feature": "商用利用可能なオープンウェイト",
+        "left": false,
+        "right": "Schnellのみ"
+      },
+      {
+        "feature": "Discord経由での利用",
+        "left": true,
+        "right": "コミュニティ実装経由で可能"
+      },
+      {
+        "feature": "API経由での統合",
+        "left": "限定的",
+        "right": true
+      }
+    ],
+    "advantages": {
+      "left": [
+        "独特で芸術的な画風・美的センスに強みがあり、クリエイティブ用途で高い評価を得ている",
+        "Discordコミュニティを通じた活発な作例共有・プロンプト文化が形成されている"
+      ],
+      "right": [
+        "Schnell等のモデルをApache 2.0ライセンスで公開しており、自前でのホスティング・ファインチューニングができる",
+        "プロンプトへの追従性や写実的な表現に強みがある"
+      ]
+    },
+    "disadvantages": {
+      "left": [
+        "モデルが非公開のクローズドサービスであり、自前でのホスティングやカスタマイズができない",
+        "利用にはサブスクリプション契約が必要になる"
+      ],
+      "right": [
+        "最高品質のPro版はクローズドでAPI経由の利用に限られる",
+        "Midjourneyと比べると独自の芸術的な画風においては評価が分かれる場合がある"
+      ]
+    },
+    "bestUseCases": {
+      "left": "独特な芸術性やビジュアルの美しさを重視するクリエイティブ制作、コンセプトアート等の用途。",
+      "right": "写実的な画像やプロンプトへの高い追従性が求められる用途、自前でモデルをホスティング・ファインチューニングしたいプロジェクト。"
+    },
+    "migration": "MidjourneyからFLUXへ移行する場合、Discordコマンドベースのワークフローから、REST APIやDiffusersライブラリを用いたプログラマティックな生成フローへの置き換えが必要になる。プロンプトの書き方も、モデルの特性に応じて調整が必要になる。",
+    "faq": [
+      {
+        "question": "MidjourneyとFLUX、どちらが優れている?",
+        "answer": "用途によって評価が分かれる。芸術的な画風やビジュアルの美しさを重視する場合はMidjourneyが選ばれやすい。写実性やプロンプト追従性、オープンウェイトでの自由な利用を重視する場合はFLUXが選ばれることがある。実際の生成結果で比較検討するのが望ましい。"
+      }
+    ],
+    "references": [
+      {
+        "type": "Official Website",
+        "label": "Midjourney",
+        "url": "https://www.midjourney.com/"
+      },
+      {
+        "type": "Official Website",
+        "label": "Black Forest Labs",
+        "url": "https://blackforestlabs.ai/"
+      }
+    ]
   }
 ]
