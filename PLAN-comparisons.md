@@ -74,11 +74,14 @@ references?:   { type, label, url }[]
 受け入れ条件:
 - スキル手順に検証ステップが含まれる: JSON 妥当性、left/right が terms.json に存在、slug 重複なし、`pnpm build` 成功
 
-### Phase 3: 内部リンク確認・強化
+### Phase 3: 内部リンク確認・強化 ✅完了
 
-1. term 詳細ページ（`app/terms/` 配下）から、その term が left/right に登場する比較記事へのリンクが表示されるか確認。なければ追加
-2. 比較記事詳細ページに「関連する比較」セクション（left/right いずれかの term を共有する他記事へのリンク）を追加
-3. `app/sitemap.ts` と `app/llms.txt` が comparisons.json から動的生成されているか確認。ハードコードなら動的化
+1. term 詳細ページ（`app/terms/[slug]/page.tsx`）→ 既に実装済み（`getComparisonsForTerm` + 「関連する比較」セクション）。対応不要
+2. 比較記事詳細ページ（`app/compare/[slug]/page.tsx`）→ 未実装だったため追加。`getComparisonsForTerm(left)` / `getComparisonsForTerm(right)` の結果をマージ・重複除去し、自分自身を除外して「関連する比較」セクションをページ末尾に追加。現状の5記事は互いに left/right を共有していないため表示は空（条件分岐で非表示、正しい挙動）。今後 `claude vs gemini` のように既存記事と用語を共有するペアを追加すると自動的にリンクが機能する
+3. `app/sitemap.ts` → 既に `comparisons` から動的生成済み。対応不要
+   `app/llms.txt/route.ts` → 用語は個別列挙されているが比較記事は `/compare/` 一覧へのリンクのみだったため、`## 比較` セクションを追加し `comparisons` から個別列挙するよう変更
+
+検証: `pnpm lint` / `pnpm build` 通過。`out/llms.txt` に `## 比較` セクションと5記事のリンクが出力されることを確認済み。
 
 ### Phase 4（任意・スコープ外可）: 初回バッチ生成
 

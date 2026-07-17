@@ -5,13 +5,20 @@ import { notFound } from "next/navigation"
 import { Breadcrumb } from "components/elements/breadcrumb"
 import { Badge, Container, Section, SectionTitle } from "components/elements/layout"
 import { ReferenceList } from "components/elements/reference-list"
+import { ComparisonCard } from "components/comparison/comparison-card"
 import { ComparisonTable } from "components/comparison/comparison-table"
 import { FeatureTable } from "components/comparison/feature-table"
 import { toJsonLd } from "lib/json-ld"
 import { SITE_NAME, SITE_OG_IMAGE_URL, SITE_URL } from "lib/site"
 import { linkifyTermMentions } from "lib/term-links"
 import { getTermBySlug } from "lib/terms"
-import { Comparison, comparisons, getComparisonBySlug, getComparisonTermNames } from "lib/comparisons"
+import {
+  Comparison,
+  comparisons,
+  getComparisonBySlug,
+  getComparisonsForTerm,
+  getComparisonTermNames,
+} from "lib/comparisons"
 import { truncate } from "lib/text"
 
 export const dynamicParams = false
@@ -122,6 +129,14 @@ const ComparePage: FC<Props> = async ({ params }) => {
 
   const { left: leftName, right: rightName } = getComparisonTermNames(comparison)
   const jsonLdBlocks = buildJsonLd(comparison, leftName, rightName)
+
+  const relatedComparisons = [
+    ...getComparisonsForTerm(comparison.left),
+    ...getComparisonsForTerm(comparison.right),
+  ].filter(
+    (other, index, all) =>
+      other.slug !== comparison.slug && all.findIndex((c) => c.slug === other.slug) === index,
+  )
 
   return (
     <Container>
@@ -358,6 +373,24 @@ const ComparePage: FC<Props> = async ({ params }) => {
         <Section>
           <SectionTitle>参考文献</SectionTitle>
           <ReferenceList references={comparison.references} />
+        </Section>
+      )}
+
+      {/* Related Comparisons */}
+      {relatedComparisons.length > 0 && (
+        <Section>
+          <SectionTitle>関連する比較</SectionTitle>
+          <div
+            style={{
+              display: "grid",
+              gap: "1.25rem",
+              gridTemplateColumns: "repeat(auto-fill, minmax(15rem, 1fr))",
+            }}
+          >
+            {relatedComparisons.map((other) => (
+              <ComparisonCard key={other.slug} comparison={other} />
+            ))}
+          </div>
         </Section>
       )}
     </Container>

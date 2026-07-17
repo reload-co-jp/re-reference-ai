@@ -1,4 +1,5 @@
 import { NextResponse } from "next/server"
+import { comparisons, getComparisonTermNames } from "lib/comparisons"
 import { SITE_DESCRIPTION, SITE_NAME, SITE_TAGLINE_JA, SITE_URL } from "lib/site"
 import { categories, getCategorySlug, getTermsByCategory } from "lib/terms"
 
@@ -11,6 +12,14 @@ const buildLlmsTxt = (): string => {
       .join("\n")
     return `## ${category}\n\n${items}`
   })
+
+  const comparisonItems = comparisons
+    .map((comparison) => {
+      const { left, right } = getComparisonTermNames(comparison)
+      return `- [${left} vs ${right}](${SITE_URL}/compare/${comparison.slug}/)`
+    })
+    .join("\n")
+  const comparisonSection = `## 比較\n\n${comparisonItems}`
 
   return [
     `# ${SITE_NAME}`,
@@ -27,6 +36,8 @@ const buildLlmsTxt = (): string => {
     ),
     "",
     ...sections,
+    "",
+    comparisonSection,
     "",
   ].join("\n")
 }
