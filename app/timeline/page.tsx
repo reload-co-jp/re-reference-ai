@@ -3,6 +3,7 @@ import { FC } from "react"
 import { Breadcrumb } from "components/elements/breadcrumb"
 import { Container, Section, SectionTitle } from "components/elements/layout"
 import { TimelineCard } from "components/timeline/timeline-card"
+import { toJsonLd } from "lib/json-ld"
 import { SITE_NAME, SITE_OG_IMAGE_URL, SITE_URL } from "lib/site"
 import { timelineSummaries } from "lib/timelines"
 
@@ -26,8 +27,21 @@ export const metadata: Metadata = {
   twitter: { title: TITLE, description: DESCRIPTION, images: [SITE_OG_IMAGE_URL] },
 }
 
+const breadcrumbList = {
+  "@context": "https://schema.org",
+  "@type": "BreadcrumbList",
+  itemListElement: [
+    { "@type": "ListItem", position: 1, name: SITE_NAME, item: `${SITE_URL}/` },
+    { "@type": "ListItem", position: 2, name: TITLE, item: `${SITE_URL}/timeline/` },
+  ],
+}
+
 const TimelineIndexPage: FC = () => (
   <Container>
+    <script
+      dangerouslySetInnerHTML={{ __html: toJsonLd(breadcrumbList) }}
+      type="application/ld+json"
+    />
     <Breadcrumb items={[{ href: "/", name: SITE_NAME }, { name: TITLE }]} />
     <Section style={{ padding: "1rem 0 3rem" }}>
       <h1 style={{ fontSize: "2.25rem", margin: 0 }}>{TITLE}</h1>

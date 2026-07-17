@@ -8,7 +8,7 @@ import { ReferenceList } from "components/elements/reference-list"
 import { ComparisonTable } from "components/comparison/comparison-table"
 import { FeatureTable } from "components/comparison/feature-table"
 import { toJsonLd } from "lib/json-ld"
-import { SITE_NAME, SITE_URL } from "lib/site"
+import { SITE_NAME, SITE_OG_IMAGE_URL, SITE_URL } from "lib/site"
 import { getTermBySlug } from "lib/terms"
 import { Comparison, comparisons, getComparisonBySlug, getComparisonTermNames } from "lib/comparisons"
 import { truncate } from "lib/text"
@@ -37,16 +37,26 @@ export const generateMetadata = async ({ params }: Props): Promise<Metadata> => 
     title,
     description,
     alternates: { canonical: url },
-    keywords: [leftName, rightName, `${leftName} vs ${rightName}`, `${leftName} 比較`, "違い"],
+    keywords: [
+      leftName,
+      rightName,
+      `${leftName} vs ${rightName}`,
+      `${leftName} 比較`,
+      `${rightName} 比較`,
+      `${leftName} ${rightName} 違い`,
+      "Difference between",
+      "Which is better",
+    ],
     openGraph: {
       title,
       description,
       type: "article",
       url,
+      images: [SITE_OG_IMAGE_URL],
       siteName: SITE_NAME,
       locale: "ja_JP",
     },
-    twitter: { title, description },
+    twitter: { title, description, images: [SITE_OG_IMAGE_URL] },
   }
 }
 
@@ -61,6 +71,7 @@ const buildJsonLd = (comparison: Comparison, leftName: string, rightName: string
     headline: `${leftName} vs ${rightName}`,
     description: comparison.summary,
     url,
+    image: SITE_OG_IMAGE_URL,
     about: `${leftName} vs ${rightName}`,
     isPartOf: {
       "@type": "WebSite",

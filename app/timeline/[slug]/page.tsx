@@ -8,7 +8,7 @@ import { ReferenceList } from "components/elements/reference-list"
 import { VersionBadge } from "components/elements/version-badge"
 import { TimelineView } from "components/timeline/timeline-view"
 import { toJsonLd } from "lib/json-ld"
-import { SITE_NAME, SITE_URL } from "lib/site"
+import { SITE_NAME, SITE_OG_IMAGE_URL, SITE_URL } from "lib/site"
 import { getTermBySlug } from "lib/terms"
 import { getTimelineBySlug, Timeline, timelines } from "lib/timelines"
 import { truncate } from "lib/text"
@@ -31,21 +31,36 @@ export const generateMetadata = async ({ params }: Props): Promise<Metadata> => 
   const description = truncate(timeline.description, 120)
   const url = `${SITE_URL}/timeline/${timeline.slug}/`
 
+  const primaryName =
+    (timeline.targetTerms ?? [])
+      .map((s) => getTermBySlug(s)?.name)
+      .filter((n): n is string => Boolean(n))[0] ?? timeline.category
+
   return {
     title,
     description,
     alternates: { canonical: url },
-    keywords: [timeline.title, "年表", "歴史", "Timeline", "Evolution", timeline.category],
+    keywords: [
+      timeline.title,
+      `${primaryName} 歴史`,
+      `${primaryName} 年表`,
+      `${primaryName} Timeline`,
+      `${primaryName} Evolution`,
+      `${primaryName} Release History`,
+      `${primaryName} Version History`,
+      timeline.category,
+    ],
     openGraph: {
       title,
       description,
       type: "article",
       url,
+      images: [SITE_OG_IMAGE_URL],
       siteName: SITE_NAME,
       locale: "ja_JP",
     },
     category: timeline.category,
-    twitter: { title, description },
+    twitter: { title, description, images: [SITE_OG_IMAGE_URL] },
   }
 }
 
@@ -64,6 +79,7 @@ const buildJsonLd = (timeline: Timeline) => {
     headline: timeline.title,
     description: timeline.description,
     url,
+    image: SITE_OG_IMAGE_URL,
     about: timeline.title,
     isPartOf: {
       "@type": "WebSite",
