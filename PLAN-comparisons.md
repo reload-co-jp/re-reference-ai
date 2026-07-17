@@ -83,9 +83,11 @@ references?:   { type, label, url }[]
 
 検証: `pnpm lint` / `pnpm build` 通過。`out/llms.txt` に `## 比較` セクションと5記事のリンクが出力されることを確認済み。
 
-### Phase 4（任意・スコープ外可）: 初回バッチ生成
+### Phase 4（任意・スコープ外可）: 初回バッチ生成 ✅完了
 
-Phase 1 の上位候補から 5〜10 記事を add-comparison スキルで生成。1 記事ずつ生成 → 検証 → コミット。
+Phase 1 の上位候補から6記事を生成・commit済み: `claude-vs-gemini` / `gemini-vs-grok` / `llama-vs-mistral` / `phi-vs-gemma` / `crewai-vs-langgraph` / `midjourney-vs-flux`。
+`crewai-vs-langgraph` は既存の `crewai-vs-autogen` / `langchain-vs-langgraph` の両方と用語を共有するため、Phase 3 の「関連する比較」相互リンクが実際に機能することをビルド後のHTMLで確認済み。
+`data/comparisons.json` は 5件 → 11件に増加。全件 `pnpm lint` / `pnpm build` 通過。
 
 ## 検証コマンド
 
