@@ -1,17 +1,19 @@
 "use client"
 
-import { FC, useState } from "react"
+import { FC, ReactNode, useState } from "react"
 import Link from "next/link"
 import { Badge, Card } from "components/elements/layout"
 import { TimelineEvent } from "lib/timelines"
 
+export type TimelineViewEvent = TimelineEvent & { descriptionNode: ReactNode }
+
 type Props = {
-  events: TimelineEvent[]
+  events: TimelineViewEvent[]
   termNames: Record<string, string>
 }
 
-const groupByYear = (events: TimelineEvent[]): [string, TimelineEvent[]][] => {
-  const groups = new Map<string, TimelineEvent[]>()
+const groupByYear = (events: TimelineViewEvent[]): [string, TimelineViewEvent[]][] => {
+  const groups = new Map<string, TimelineViewEvent[]>()
   for (const event of events) {
     const year = event.date.slice(0, 4)
     const bucket = groups.get(year)
@@ -105,7 +107,7 @@ export const TimelineView: FC<Props> = ({ events, termNames }) => {
                 </button>
                 {open && (
                   <Card style={{ marginTop: ".625rem" }}>
-                    <p style={{ margin: 0, whiteSpace: "pre-line" }}>{event.description}</p>
+                    <p style={{ margin: 0, whiteSpace: "pre-line" }}>{event.descriptionNode}</p>
                     {event.organizations && event.organizations.length > 0 && (
                       <div
                         style={{

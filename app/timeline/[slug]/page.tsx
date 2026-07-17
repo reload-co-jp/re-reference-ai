@@ -9,6 +9,7 @@ import { VersionBadge } from "components/elements/version-badge"
 import { TimelineView } from "components/timeline/timeline-view"
 import { toJsonLd } from "lib/json-ld"
 import { SITE_NAME, SITE_OG_IMAGE_URL, SITE_URL } from "lib/site"
+import { linkifyTermMentions } from "lib/term-links"
 import { getTermBySlug } from "lib/terms"
 import { getTimelineBySlug, Timeline, timelines } from "lib/timelines"
 import { truncate } from "lib/text"
@@ -144,6 +145,11 @@ const TimelinePage: FC<Props> = async ({ params }) => {
     if (term) termNames[s] = term.name
   }
 
+  const eventsWithLinks = timeline.events.map((event) => ({
+    ...event,
+    descriptionNode: linkifyTermMentions(event.description, ""),
+  }))
+
   const jsonLdBlocks = buildJsonLd(timeline)
 
   return (
@@ -178,7 +184,7 @@ const TimelinePage: FC<Props> = async ({ params }) => {
             marginTop: ".75rem",
           }}
         >
-          {timeline.description}
+          {linkifyTermMentions(timeline.description, "")}
         </p>
         {targetTerms.length > 0 && (
           <div style={{ display: "flex", flexWrap: "wrap", gap: ".375rem", marginTop: "1.25rem" }}>
@@ -198,7 +204,7 @@ const TimelinePage: FC<Props> = async ({ params }) => {
       {/* Timeline */}
       <Section>
         <SectionTitle>年表</SectionTitle>
-        <TimelineView events={timeline.events} termNames={termNames} />
+        <TimelineView events={eventsWithLinks} termNames={termNames} />
       </Section>
 
       {/* Major Versions */}
@@ -242,7 +248,7 @@ const TimelinePage: FC<Props> = async ({ params }) => {
             <div key={item.question} style={{ marginBottom: "1.25rem" }}>
               <p style={{ fontWeight: 600, marginBottom: ".375rem" }}>{item.question}</p>
               <p style={{ color: "var(--color-text-muted)", whiteSpace: "pre-line" }}>
-                {item.answer}
+                {linkifyTermMentions(item.answer, "")}
               </p>
             </div>
           ))}

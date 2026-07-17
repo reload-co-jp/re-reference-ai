@@ -9,6 +9,7 @@ import { ComparisonTable } from "components/comparison/comparison-table"
 import { FeatureTable } from "components/comparison/feature-table"
 import { toJsonLd } from "lib/json-ld"
 import { SITE_NAME, SITE_OG_IMAGE_URL, SITE_URL } from "lib/site"
+import { linkifyTermMentions } from "lib/term-links"
 import { getTermBySlug } from "lib/terms"
 import { Comparison, comparisons, getComparisonBySlug, getComparisonTermNames } from "lib/comparisons"
 import { truncate } from "lib/text"
@@ -155,7 +156,7 @@ const ComparePage: FC<Props> = async ({ params }) => {
             marginTop: ".75rem",
           }}
         >
-          {comparison.summary}
+          {linkifyTermMentions(comparison.summary, "")}
         </p>
         <div style={{ display: "flex", flexWrap: "wrap", gap: ".375rem", marginTop: "1.25rem" }}>
           <Link href={`/terms/${comparison.left}/`} style={{ color: "inherit", textDecoration: "none" }}>
@@ -174,7 +175,7 @@ const ComparePage: FC<Props> = async ({ params }) => {
           <ul style={{ paddingLeft: "1.25rem" }}>
             {comparison.quickSummary.map((line) => (
               <li key={line} style={{ marginBottom: ".375rem" }}>
-                {line}
+                {linkifyTermMentions(line, "")}
               </li>
             ))}
           </ul>
@@ -204,13 +205,13 @@ const ComparePage: FC<Props> = async ({ params }) => {
               <p style={{ color: "var(--color-accent-bright)", fontSize: ".85rem", fontWeight: 600 }}>
                 {leftName}
               </p>
-              <p style={{ margin: 0 }}>{comparison.architecture.left}</p>
+              <p style={{ margin: 0 }}>{linkifyTermMentions(comparison.architecture.left, "")}</p>
             </div>
             <div>
               <p style={{ color: "var(--color-accent-bright)", fontSize: ".85rem", fontWeight: 600 }}>
                 {rightName}
               </p>
-              <p style={{ margin: 0 }}>{comparison.architecture.right}</p>
+              <p style={{ margin: 0 }}>{linkifyTermMentions(comparison.architecture.right, "")}</p>
             </div>
           </div>
         </Section>
@@ -242,7 +243,7 @@ const ComparePage: FC<Props> = async ({ params }) => {
               <ul style={{ paddingLeft: "1.25rem" }}>
                 {comparison.advantages.left.map((item) => (
                   <li key={item} style={{ marginBottom: ".375rem" }}>
-                    {item}
+                    {linkifyTermMentions(item, "")}
                   </li>
                 ))}
               </ul>
@@ -254,7 +255,7 @@ const ComparePage: FC<Props> = async ({ params }) => {
               <ul style={{ paddingLeft: "1.25rem" }}>
                 {comparison.advantages.right.map((item) => (
                   <li key={item} style={{ marginBottom: ".375rem" }}>
-                    {item}
+                    {linkifyTermMentions(item, "")}
                   </li>
                 ))}
               </ul>
@@ -281,7 +282,7 @@ const ComparePage: FC<Props> = async ({ params }) => {
               <ul style={{ paddingLeft: "1.25rem" }}>
                 {comparison.disadvantages.left.map((item) => (
                   <li key={item} style={{ marginBottom: ".375rem" }}>
-                    {item}
+                    {linkifyTermMentions(item, "")}
                   </li>
                 ))}
               </ul>
@@ -293,7 +294,7 @@ const ComparePage: FC<Props> = async ({ params }) => {
               <ul style={{ paddingLeft: "1.25rem" }}>
                 {comparison.disadvantages.right.map((item) => (
                   <li key={item} style={{ marginBottom: ".375rem" }}>
-                    {item}
+                    {linkifyTermMentions(item, "")}
                   </li>
                 ))}
               </ul>
@@ -317,13 +318,13 @@ const ComparePage: FC<Props> = async ({ params }) => {
               <p style={{ color: "var(--color-accent-bright)", fontSize: ".85rem", fontWeight: 600 }}>
                 {leftName}
               </p>
-              <p style={{ margin: 0 }}>{comparison.bestUseCases.left}</p>
+              <p style={{ margin: 0 }}>{linkifyTermMentions(comparison.bestUseCases.left, "")}</p>
             </div>
             <div>
               <p style={{ color: "var(--color-accent-bright)", fontSize: ".85rem", fontWeight: 600 }}>
                 {rightName}
               </p>
-              <p style={{ margin: 0 }}>{comparison.bestUseCases.right}</p>
+              <p style={{ margin: 0 }}>{linkifyTermMentions(comparison.bestUseCases.right, "")}</p>
             </div>
           </div>
         </Section>
@@ -333,7 +334,7 @@ const ComparePage: FC<Props> = async ({ params }) => {
       {comparison.migration && (
         <Section>
           <SectionTitle>Migration</SectionTitle>
-          <p style={{ whiteSpace: "pre-line" }}>{comparison.migration}</p>
+          <p style={{ whiteSpace: "pre-line" }}>{linkifyTermMentions(comparison.migration, "")}</p>
         </Section>
       )}
 
@@ -345,7 +346,7 @@ const ComparePage: FC<Props> = async ({ params }) => {
             <div key={item.question} style={{ marginBottom: "1.25rem" }}>
               <p style={{ fontWeight: 600, marginBottom: ".375rem" }}>{item.question}</p>
               <p style={{ color: "var(--color-text-muted)", whiteSpace: "pre-line" }}>
-                {item.answer}
+                {linkifyTermMentions(item.answer, "")}
               </p>
             </div>
           ))}
