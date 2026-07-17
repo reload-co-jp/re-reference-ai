@@ -10,26 +10,82 @@
       "どちらもAPI課金制で、チャットサービス(ChatGPT/Claude.ai)とAPIの両方から利用できる。"
     ],
     "table": [
-      { "item": "Purpose", "left": "汎用対話・生成AI、コード生成、マルチモーダル処理", "right": "対話・コーディング支援・長文書要約・エージェント的タスク" },
-      { "item": "Developer", "left": "OpenAI", "right": "Anthropic" },
-      { "item": "Release", "left": "2018年(GPT-1)", "right": "2023年3月(Claude 1)" },
-      { "item": "License", "left": "クローズドウェイト(API提供)", "right": "クローズドウェイト(API提供)" },
-      { "item": "Open Source", "left": "非公開", "right": "非公開" },
-      { "item": "API", "left": "OpenAI API(Chat Completions/Responses API)", "right": "Anthropic API(Messages API)" },
-      { "item": "Programming Language", "left": "公式SDKはPython/Node.js等主要言語に対応", "right": "公式SDKはPython/TypeScript等主要言語に対応" },
-      { "item": "Ecosystem", "left": "ChatGPT、Function Calling、豊富なサードパーティ統合", "right": "Claude Code、MCP、Claude.ai、Artifacts" }
+      {
+        "item": "Purpose",
+        "left": "汎用対話・生成AI、コード生成、マルチモーダル処理",
+        "right": "対話・コーディング支援・長文書要約・エージェント的タスク"
+      },
+      {
+        "item": "Developer",
+        "left": "OpenAI",
+        "right": "Anthropic"
+      },
+      {
+        "item": "Release",
+        "left": "2018年(GPT-1)",
+        "right": "2023年3月(Claude 1)"
+      },
+      {
+        "item": "License",
+        "left": "クローズドウェイト(API提供)",
+        "right": "クローズドウェイト(API提供)"
+      },
+      {
+        "item": "Open Source",
+        "left": "非公開",
+        "right": "非公開"
+      },
+      {
+        "item": "API",
+        "left": "OpenAI API(Chat Completions/Responses API)",
+        "right": "Anthropic API(Messages API)"
+      },
+      {
+        "item": "Programming Language",
+        "left": "公式SDKはPython/Node.js等主要言語に対応",
+        "right": "公式SDKはPython/TypeScript等主要言語に対応"
+      },
+      {
+        "item": "Ecosystem",
+        "left": "ChatGPT、Function Calling、豊富なサードパーティ統合",
+        "right": "Claude Code、MCP、Claude.ai、Artifacts"
+      }
     ],
     "architecture": {
       "left": "デコーダのみのTransformerを基盤とし、事前学習後に指示チューニング・RLHFでアライメントする。",
       "right": "デコーダのみのTransformerを基盤とし、あらかじめ定めた原則に照らしてモデル自身に出力を評価・改善させるConstitutional AIでアライメントする。"
     },
     "features": [
-      { "feature": "Streaming", "left": true, "right": true },
-      { "feature": "Tool Calling", "left": true, "right": true },
-      { "feature": "Vision", "left": true, "right": true },
-      { "feature": "Audio", "left": true, "right": false },
-      { "feature": "Multi Agent(ネイティブ対応)", "left": false, "right": false },
-      { "feature": "Memory(組み込み記憶)", "left": false, "right": false }
+      {
+        "feature": "Streaming",
+        "left": true,
+        "right": true
+      },
+      {
+        "feature": "Tool Calling",
+        "left": true,
+        "right": true
+      },
+      {
+        "feature": "Vision",
+        "left": true,
+        "right": true
+      },
+      {
+        "feature": "Audio",
+        "left": true,
+        "right": false
+      },
+      {
+        "feature": "Multi Agent(ネイティブ対応)",
+        "left": false,
+        "right": false
+      },
+      {
+        "feature": "Memory(組み込み記憶)",
+        "left": false,
+        "right": false
+      }
     ],
     "advantages": {
       "left": [
@@ -63,8 +119,16 @@
       }
     ],
     "references": [
-      { "type": "Official Website", "label": "OpenAI", "url": "https://openai.com/" },
-      { "type": "Official Website", "label": "Anthropic", "url": "https://www.anthropic.com/" }
+      {
+        "type": "Official Website",
+        "label": "OpenAI",
+        "url": "https://openai.com/"
+      },
+      {
+        "type": "Official Website",
+        "label": "Anthropic",
+        "url": "https://www.anthropic.com/"
+      }
     ]
   },
   {
@@ -78,24 +142,72 @@
       "実際のエージェント開発では、LLM自体はFunction Calling(Tool Calling)でツール利用を判断し、MCPがそのツールの提供・接続方法を統一する、という組み合わせで使われることが多い。"
     ],
     "table": [
-      { "item": "Purpose", "left": "外部ツール・データソースとの接続方法の標準化", "right": "LLMによる関数呼び出し内容の構造化出力" },
-      { "item": "Developer", "left": "Anthropic", "right": "OpenAI(概念は他ベンダーにも普及)" },
-      { "item": "Release", "left": "2024年11月", "right": "2023年6月" },
-      { "item": "License", "left": "オープン標準(仕様・SDKはオープンソース)", "right": "該当なし(API機能)" },
-      { "item": "Open Source", "left": "MCP仕様・SDKはオープンソース", "right": "機能自体はクローズドAPIの一部" },
-      { "item": "API", "left": "MCPサーバー/クライアントの独自プロトコル(JSON-RPC)", "right": "Chat Completions API等のリクエストパラメータとして提供" },
-      { "item": "Programming Language", "left": "各言語向けSDKが提供される(Python/TypeScript等)", "right": "特定言語に依存しない(API仕様)" },
-      { "item": "Ecosystem", "left": "MCPサーバーのエコシステムが急速に拡大中(FastMCP等)", "right": "ほぼ全ての主要LLMベンダーが同様の機能を提供" }
+      {
+        "item": "Purpose",
+        "left": "外部ツール・データソースとの接続方法の標準化",
+        "right": "LLMによる関数呼び出し内容の構造化出力"
+      },
+      {
+        "item": "Developer",
+        "left": "Anthropic",
+        "right": "OpenAI(概念は他ベンダーにも普及)"
+      },
+      {
+        "item": "Release",
+        "left": "2024年11月",
+        "right": "2023年6月"
+      },
+      {
+        "item": "License",
+        "left": "オープン標準(仕様・SDKはオープンソース)",
+        "right": "該当なし(API機能)"
+      },
+      {
+        "item": "Open Source",
+        "left": "MCP仕様・SDKはオープンソース",
+        "right": "機能自体はクローズドAPIの一部"
+      },
+      {
+        "item": "API",
+        "left": "MCPサーバー/クライアントの独自プロトコル(JSON-RPC)",
+        "right": "Chat Completions API等のリクエストパラメータとして提供"
+      },
+      {
+        "item": "Programming Language",
+        "left": "各言語向けSDKが提供される(Python/TypeScript等)",
+        "right": "特定言語に依存しない(API仕様)"
+      },
+      {
+        "item": "Ecosystem",
+        "left": "MCPサーバーのエコシステムが急速に拡大中(FastMCP等)",
+        "right": "ほぼ全ての主要LLMベンダーが同様の機能を提供"
+      }
     ],
     "architecture": {
       "left": "ツール・データを提供する「MCPサーバー」と、それを利用する「MCPクライアント(LLMアプリ)」から構成され、JSON-RPCベースの共通プロトコルでやり取りする。",
       "right": "LLMへ関数定義(名前・説明・JSON Schema)を渡し、モデルが呼び出すべき関数名と引数をJSON形式で出力する。"
     },
     "features": [
-      { "feature": "複数ツールの動的発見", "left": true, "right": "事前定義した関数リストに限定" },
-      { "feature": "複数アプリからの再利用性", "left": true, "right": false },
-      { "feature": "標準化されたプロトコル", "left": true, "right": "ベンダーごとに実装が異なる" },
-      { "feature": "リモートサーバーへの対応", "left": true, "right": "APIを通じた呼び出しが基本" }
+      {
+        "feature": "複数ツールの動的発見",
+        "left": true,
+        "right": "事前定義した関数リストに限定"
+      },
+      {
+        "feature": "複数アプリからの再利用性",
+        "left": true,
+        "right": false
+      },
+      {
+        "feature": "標準化されたプロトコル",
+        "left": true,
+        "right": "ベンダーごとに実装が異なる"
+      },
+      {
+        "feature": "リモートサーバーへの対応",
+        "left": true,
+        "right": "APIを通じた呼び出しが基本"
+      }
     ],
     "advantages": {
       "left": [
@@ -129,8 +241,16 @@
       }
     ],
     "references": [
-      { "type": "Official Website", "label": "Model Context Protocol", "url": "https://modelcontextprotocol.io/" },
-      { "type": "Documentation", "label": "OpenAI: Function calling", "url": "https://platform.openai.com/docs/guides/function-calling" }
+      {
+        "type": "Official Website",
+        "label": "Model Context Protocol",
+        "url": "https://modelcontextprotocol.io/"
+      },
+      {
+        "type": "Documentation",
+        "label": "OpenAI: Function calling",
+        "url": "https://platform.openai.com/docs/guides/function-calling"
+      }
     ]
   },
   {
@@ -144,25 +264,77 @@
       "知識の更新頻度が高い場合はRAG、モデルの振る舞いや文体そのものを変えたい場合はファインチューニングが向く。両者を組み合わせる構成も広く使われる。"
     ],
     "table": [
-      { "item": "Purpose", "left": "外部知識に基づく回答の根拠づけ・最新化", "right": "特定タスク・ドメインへのモデル適応" },
-      { "item": "Developer", "left": "手法(Lewisらが提案)", "right": "手法(転移学習の一種)" },
-      { "item": "Release", "left": "2020年(論文発表)", "right": "LLM文脈では2018年前後(ULMFiT/BERT)から普及" },
-      { "item": "License", "left": "該当なし(手法)", "right": "該当なし(手法)" },
-      { "item": "Open Source", "left": "実装(LangChain・LlamaIndex等)はオープンソースのものが多い", "right": "実装(Hugging Face PEFT等)はオープンソースのものが多い" },
-      { "item": "API", "left": "ベクトルデータベース・埋め込みAPI・LLM APIを組み合わせて実装", "right": "各LLMプロバイダのファインチューニングAPI、またはローカルでの学習スクリプト" },
-      { "item": "Programming Language", "left": "Python(LangChain等)が主流", "right": "Python(Hugging Face Transformers/PEFT等)が主流" },
-      { "item": "Ecosystem", "left": "ベクトルデータベース・埋め込みモデル・RAGフレームワークのエコシステム", "right": "LoRA・PEFT等パラメータ効率的学習手法のエコシステム" }
+      {
+        "item": "Purpose",
+        "left": "外部知識に基づく回答の根拠づけ・最新化",
+        "right": "特定タスク・ドメインへのモデル適応"
+      },
+      {
+        "item": "Developer",
+        "left": "手法(Lewisらが提案)",
+        "right": "手法(転移学習の一種)"
+      },
+      {
+        "item": "Release",
+        "left": "2020年(論文発表)",
+        "right": "LLM文脈では2018年前後(ULMFiT/BERT)から普及"
+      },
+      {
+        "item": "License",
+        "left": "該当なし(手法)",
+        "right": "該当なし(手法)"
+      },
+      {
+        "item": "Open Source",
+        "left": "実装(LangChain・LlamaIndex等)はオープンソースのものが多い",
+        "right": "実装(Hugging Face PEFT等)はオープンソースのものが多い"
+      },
+      {
+        "item": "API",
+        "left": "ベクトルデータベース・埋め込みAPI・LLM APIを組み合わせて実装",
+        "right": "各LLMプロバイダのファインチューニングAPI、またはローカルでの学習スクリプト"
+      },
+      {
+        "item": "Programming Language",
+        "left": "Python(LangChain等)が主流",
+        "right": "Python(Hugging Face Transformers/PEFT等)が主流"
+      },
+      {
+        "item": "Ecosystem",
+        "left": "ベクトルデータベース・埋め込みモデル・RAGフレームワークのエコシステム",
+        "right": "LoRA・PEFT等パラメータ効率的学習手法のエコシステム"
+      }
     ],
     "architecture": {
       "left": "検索コンポーネントが関連文書をベクトル検索等で取得し、その内容をプロンプトのコンテキストとしてLLMへ渡し回答を生成させる。",
       "right": "事前学習済みモデルの重みを、タスク・ドメイン固有のデータセットで追加学習して更新する(全パラメータ更新、またはLoRA等の部分更新)。"
     },
     "features": [
-      { "feature": "モデル再学習の要否", "left": "不要", "right": "必要" },
-      { "feature": "知識更新の即時性", "left": true, "right": false },
-      { "feature": "文体・振る舞いの変更", "left": false, "right": true },
-      { "feature": "出典提示のしやすさ", "left": true, "right": false },
-      { "feature": "追加インフラ(ベクトルDB等)", "left": true, "right": false }
+      {
+        "feature": "モデル再学習の要否",
+        "left": "不要",
+        "right": "必要"
+      },
+      {
+        "feature": "知識更新の即時性",
+        "left": true,
+        "right": false
+      },
+      {
+        "feature": "文体・振る舞いの変更",
+        "left": false,
+        "right": true
+      },
+      {
+        "feature": "出典提示のしやすさ",
+        "left": true,
+        "right": false
+      },
+      {
+        "feature": "追加インフラ(ベクトルDB等)",
+        "left": true,
+        "right": false
+      }
     ],
     "advantages": {
       "left": [
@@ -197,7 +369,11 @@
       }
     ],
     "references": [
-      { "type": "Research Paper", "label": "Retrieval-Augmented Generation for Knowledge-Intensive NLP Tasks", "url": "https://arxiv.org/abs/2005.11401" }
+      {
+        "type": "Research Paper",
+        "label": "Retrieval-Augmented Generation for Knowledge-Intensive NLP Tasks",
+        "url": "https://arxiv.org/abs/2005.11401"
+      }
     ]
   },
   {
@@ -211,25 +387,77 @@
       "単純なパイプラインならLangChain、複雑な制御フローやマルチエージェント構成にはLangGraphが向く。"
     ],
     "table": [
-      { "item": "Purpose", "left": "LLMアプリケーションの部品化・連結", "right": "複雑な状態遷移を伴うエージェントアプリケーションの構築" },
-      { "item": "Developer", "left": "LangChain, Inc.(Harrison Chase)", "right": "LangChain, Inc." },
-      { "item": "Release", "left": "2022年10月", "right": "2024年" },
-      { "item": "License", "left": "Apache License 2.0", "right": "MIT License" },
-      { "item": "Open Source", "left": "オープンソース", "right": "オープンソース" },
-      { "item": "API", "left": "Python/JavaScript SDK", "right": "Python/JavaScript SDK" },
-      { "item": "Programming Language", "left": "Python、JavaScript/TypeScript", "right": "Python、JavaScript/TypeScript" },
-      { "item": "Ecosystem", "left": "対応LLM・データソース・ツールが非常に豊富", "right": "LangChainのエコシステムをベースに、状態永続化・ヒューマンインザループ機能を追加" }
+      {
+        "item": "Purpose",
+        "left": "LLMアプリケーションの部品化・連結",
+        "right": "複雑な状態遷移を伴うエージェントアプリケーションの構築"
+      },
+      {
+        "item": "Developer",
+        "left": "LangChain, Inc.(Harrison Chase)",
+        "right": "LangChain, Inc."
+      },
+      {
+        "item": "Release",
+        "left": "2022年10月",
+        "right": "2024年"
+      },
+      {
+        "item": "License",
+        "left": "Apache License 2.0",
+        "right": "MIT License"
+      },
+      {
+        "item": "Open Source",
+        "left": "オープンソース",
+        "right": "オープンソース"
+      },
+      {
+        "item": "API",
+        "left": "Python/JavaScript SDK",
+        "right": "Python/JavaScript SDK"
+      },
+      {
+        "item": "Programming Language",
+        "left": "Python、JavaScript/TypeScript",
+        "right": "Python、JavaScript/TypeScript"
+      },
+      {
+        "item": "Ecosystem",
+        "left": "対応LLM・データソース・ツールが非常に豊富",
+        "right": "LangChainのエコシステムをベースに、状態永続化・ヒューマンインザループ機能を追加"
+      }
     ],
     "architecture": {
       "left": "コンポーネント(プロンプトテンプレート・LLM呼び出し・ツール・パーサー等)を直線的に連結するチェーンとして処理を表現する。",
       "right": "処理単位をノード、遷移をエッジとするグラフとして定義し、条件分岐・ループ・並列実行や、各ノードの状態を永続化するチェックポイント機構を持つ。"
     },
     "features": [
-      { "feature": "直線的なチェーン構築", "left": true, "right": true },
-      { "feature": "条件分岐・ループ", "left": "限定的", "right": true },
-      { "feature": "マルチエージェント状態共有", "left": false, "right": true },
-      { "feature": "状態の永続化・再開", "left": false, "right": true },
-      { "feature": "ヒューマンインザループ", "left": "実装は可能だが標準機能ではない", "right": true }
+      {
+        "feature": "直線的なチェーン構築",
+        "left": true,
+        "right": true
+      },
+      {
+        "feature": "条件分岐・ループ",
+        "left": "限定的",
+        "right": true
+      },
+      {
+        "feature": "マルチエージェント状態共有",
+        "left": false,
+        "right": true
+      },
+      {
+        "feature": "状態の永続化・再開",
+        "left": false,
+        "right": true
+      },
+      {
+        "feature": "ヒューマンインザループ",
+        "left": "実装は可能だが標準機能ではない",
+        "right": true
+      }
     ],
     "advantages": {
       "left": [
@@ -263,8 +491,16 @@
       }
     ],
     "references": [
-      { "type": "Official Website", "label": "LangChain", "url": "https://www.langchain.com/" },
-      { "type": "Official Website", "label": "LangGraph", "url": "https://www.langchain.com/langgraph" }
+      {
+        "type": "Official Website",
+        "label": "LangChain",
+        "url": "https://www.langchain.com/"
+      },
+      {
+        "type": "Official Website",
+        "label": "LangGraph",
+        "url": "https://www.langchain.com/langgraph"
+      }
     ]
   },
   {
@@ -278,24 +514,72 @@
       "役割分担が明確なワークフローを素早く試作したいならCrewAI、柔軟な対話パターンやコード生成・実行を伴う複雑な協調タスクにはAutoGenが向く。"
     ],
     "table": [
-      { "item": "Purpose", "left": "役割ベースのマルチエージェント協調タスクの実行", "right": "エージェント間の対話を通じたタスクの協調的解決" },
-      { "item": "Developer", "left": "CrewAI, Inc.", "right": "Microsoft Research" },
-      { "item": "Release", "left": "2023年", "right": "2023年" },
-      { "item": "License", "left": "MIT License", "right": "MIT License(コード部分)" },
-      { "item": "Open Source", "left": "オープンソース", "right": "オープンソース" },
-      { "item": "API", "left": "Python SDK", "right": "Python SDK" },
-      { "item": "Programming Language", "left": "Python", "right": "Python" },
-      { "item": "Ecosystem", "left": "役割ベースのエージェント構築に特化した比較的シンプルなエコシステム", "right": "Microsoft製ツールとの連携や、コード実行を伴うエージェント開発に強み" }
+      {
+        "item": "Purpose",
+        "left": "役割ベースのマルチエージェント協調タスクの実行",
+        "right": "エージェント間の対話を通じたタスクの協調的解決"
+      },
+      {
+        "item": "Developer",
+        "left": "CrewAI, Inc.",
+        "right": "Microsoft Research"
+      },
+      {
+        "item": "Release",
+        "left": "2023年",
+        "right": "2023年"
+      },
+      {
+        "item": "License",
+        "left": "MIT License",
+        "right": "MIT License(コード部分)"
+      },
+      {
+        "item": "Open Source",
+        "left": "オープンソース",
+        "right": "オープンソース"
+      },
+      {
+        "item": "API",
+        "left": "Python SDK",
+        "right": "Python SDK"
+      },
+      {
+        "item": "Programming Language",
+        "left": "Python",
+        "right": "Python"
+      },
+      {
+        "item": "Ecosystem",
+        "left": "役割ベースのエージェント構築に特化した比較的シンプルなエコシステム",
+        "right": "Microsoft製ツールとの連携や、コード実行を伴うエージェント開発に強み"
+      }
     ],
     "architecture": {
       "left": "役割(ロール)・目標・利用可能なツールを設定したエージェントを定義し、逐次型・階層型などのプロセスでタスクを分担・連携させる。",
       "right": "複数のエージェントがメッセージを送り合う対話(カンバセーション)としてタスクを進行させ、人間をエージェントの1人として対話に参加させることもできる。"
     },
     "features": [
-      { "feature": "役割ベースの宣言的設計", "left": true, "right": "対話パターンとして表現(宣言的な役割定義は限定的)" },
-      { "feature": "柔軟な対話パターン", "left": "限定的", "right": true },
-      { "feature": "コード生成・実行との統合", "left": "ツールとして組み込み可能", "right": true },
-      { "feature": "ヒューマンインザループ", "left": "実装可能", "right": true }
+      {
+        "feature": "役割ベースの宣言的設計",
+        "left": true,
+        "right": "対話パターンとして表現(宣言的な役割定義は限定的)"
+      },
+      {
+        "feature": "柔軟な対話パターン",
+        "left": "限定的",
+        "right": true
+      },
+      {
+        "feature": "コード生成・実行との統合",
+        "left": "ツールとして組み込み可能",
+        "right": true
+      },
+      {
+        "feature": "ヒューマンインザループ",
+        "left": "実装可能",
+        "right": true
+      }
     ],
     "advantages": {
       "left": [
@@ -329,8 +613,148 @@
       }
     ],
     "references": [
-      { "type": "Official Website", "label": "CrewAI", "url": "https://www.crewai.com/" },
-      { "type": "Research Paper", "label": "AutoGen: Enabling Next-Gen LLM Applications via Multi-Agent Conversation", "url": "https://arxiv.org/abs/2308.08155" }
+      {
+        "type": "Official Website",
+        "label": "CrewAI",
+        "url": "https://www.crewai.com/"
+      },
+      {
+        "type": "Research Paper",
+        "label": "AutoGen: Enabling Next-Gen LLM Applications via Multi-Agent Conversation",
+        "url": "https://arxiv.org/abs/2308.08155"
+      }
+    ]
+  },
+  {
+    "slug": "claude-vs-gemini",
+    "left": "claude",
+    "right": "gemini",
+    "summary": "ClaudeはAnthropicが開発する安全性とアライメントを重視したLLMファミリー、GeminiはGoogleが開発するテキスト・画像・音声・動画を統合的に扱うマルチモーダルLLMファミリー。いずれも重みは非公開で、API・チャットサービス経由での利用が基本となる。",
+    "quickSummary": [
+      "ClaudeはAnthropic、GeminiはGoogleが開発する、いずれもクローズドウェイトの大規模言語モデルファミリー。",
+      "Claudeは長文コンテキスト処理・コーディング支援・安全性重視の設計、Geminiはテキスト・画像・音声・動画をネイティブに扱うマルチモーダル性能とGoogleサービスとの統合を特徴とする。",
+      "どちらもAPI課金制で、チャットサービス(Claude.ai/Gemini)とAPIの両方から利用できる。"
+    ],
+    "table": [
+      {
+        "item": "Purpose",
+        "left": "対話・コーディング支援・長文書要約・エージェント的タスク",
+        "right": "汎用対話・マルチモーダル生成、Google製品群との統合"
+      },
+      {
+        "item": "Developer",
+        "left": "Anthropic",
+        "right": "Google"
+      },
+      {
+        "item": "Release",
+        "left": "2023年3月(Claude 1)",
+        "right": "2023年12月(Gemini 1.0)"
+      },
+      {
+        "item": "License",
+        "left": "クローズドウェイト(API提供)",
+        "right": "クローズドウェイト(API提供)"
+      },
+      {
+        "item": "Open Source",
+        "left": "非公開",
+        "right": "非公開"
+      },
+      {
+        "item": "API",
+        "left": "Anthropic API(Messages API)",
+        "right": "Gemini API(Google AI Studio/Vertex AI)"
+      },
+      {
+        "item": "Programming Language",
+        "left": "公式SDKはPython/TypeScript等主要言語に対応",
+        "right": "公式SDKはPython/Node.js/Go等主要言語に対応"
+      },
+      {
+        "item": "Ecosystem",
+        "left": "Claude Code、MCP、Claude.ai、Artifacts",
+        "right": "Google Workspace、Search、Android、Vertex AI"
+      }
+    ],
+    "architecture": {
+      "left": "デコーダのみのTransformerを基盤とし、あらかじめ定めた原則に照らしてモデル自身に出力を評価・改善させるConstitutional AIでアライメントする。",
+      "right": "テキスト・画像・音声・動画を単一モデルで扱うネイティブマルチモーダルのTransformer系アーキテクチャを採用し、事前学習段階から複数モダリティを統合的に学習する。"
+    },
+    "features": [
+      {
+        "feature": "Streaming",
+        "left": true,
+        "right": true
+      },
+      {
+        "feature": "Tool Calling",
+        "left": true,
+        "right": true
+      },
+      {
+        "feature": "Vision",
+        "left": true,
+        "right": true
+      },
+      {
+        "feature": "Audio",
+        "left": false,
+        "right": true
+      },
+      {
+        "feature": "Multi Agent(ネイティブ対応)",
+        "left": false,
+        "right": false
+      },
+      {
+        "feature": "Memory(組み込み記憶)",
+        "left": false,
+        "right": false
+      }
+    ],
+    "advantages": {
+      "left": [
+        "長文コンテキストの処理やコーディング支援タスクで高い評価を得ている",
+        "安全性・アライメント研究を重視した設計思想に基づいて開発されている"
+      ],
+      "right": [
+        "テキスト・画像・音声・動画を単一モデルでネイティブに処理できるマルチモーダル性能",
+        "検索・Workspace・Androidなど既存のGoogleサービスとの統合が進んでいる"
+      ]
+    },
+    "disadvantages": {
+      "left": [
+        "モデルの重みが非公開のクローズドウェイトであり、自前でのホスティングやカスタマイズに制約がある",
+        "API利用のコストが発生し、大量利用時のコスト管理が必要になる"
+      ],
+      "right": [
+        "モデルの重みが非公開のクローズドウェイトであり、自前でのホスティングやカスタマイズに制約がある",
+        "API利用のコストが発生し、大量利用時のコスト管理が必要になる"
+      ]
+    },
+    "bestUseCases": {
+      "left": "長文書の要約・分析やコーディング支援、Claude CodeやMCPを活用したエージェント的なワークフロー。",
+      "right": "画像・音声・動画を含むマルチモーダル入力を扱うアプリケーションや、Google Workspace・Android等の既存エコシステムと連携したいプロダクト。"
+    },
+    "migration": "ClaudeからGeminiへ移行する場合、Anthropic Messages APIのメッセージ形式をGemini APIのcontents形式へ変換する必要がある。Tool UseはGeminiのFunction Callingへ読み替え、システムプロンプトの指定方法など細部の仕様差にも注意する。",
+    "faq": [
+      {
+        "question": "ClaudeとGemini、どちらが優れている?",
+        "answer": "用途によって評価が分かれる。コーディング支援や長文処理はClaudeが高く評価されやすい。マルチモーダル処理やGoogleサービスとの統合ではGeminiに強みがあるとされる。実際のタスクで比較検討するのが望ましい。"
+      }
+    ],
+    "references": [
+      {
+        "type": "Official Website",
+        "label": "Anthropic",
+        "url": "https://www.anthropic.com/"
+      },
+      {
+        "type": "Official Website",
+        "label": "Google Gemini",
+        "url": "https://gemini.google.com/"
+      }
     ]
   }
 ]
