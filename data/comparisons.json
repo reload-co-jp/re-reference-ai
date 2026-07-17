@@ -756,5 +756,137 @@
         "url": "https://gemini.google.com/"
       }
     ]
+  },
+  {
+    "slug": "gemini-vs-grok",
+    "left": "gemini",
+    "right": "grok",
+    "summary": "GeminiはGoogleが開発するテキスト・画像・音声・動画を統合的に扱うマルチモーダルLLMファミリー、GrokはxAIが開発するX(旧Twitter)とのリアルタイム統合を特徴とするLLMファミリー。いずれもチャットサービス・API経由で利用できる。",
+    "quickSummary": [
+      "GeminiはGoogle、GrokはxAIが開発する大規模言語モデルファミリー。",
+      "Geminiはテキスト・画像・音声・動画をネイティブに扱うマルチモーダル性能とGoogleサービスとの統合、GrokはX上のリアルタイム情報へのアクセスと比較的制限の少ない応答スタイルを特徴とする。",
+      "どちらもAPI課金制で、チャットサービス(Gemini/Grok)とAPIの両方から利用できる。"
+    ],
+    "table": [
+      {
+        "item": "Purpose",
+        "left": "汎用対話・マルチモーダル生成、Google製品群との統合",
+        "right": "汎用対話、X上のリアルタイム情報を踏まえた応答"
+      },
+      {
+        "item": "Developer",
+        "left": "Google",
+        "right": "xAI"
+      },
+      {
+        "item": "Release",
+        "left": "2023年12月(Gemini 1.0)",
+        "right": "2023年11月(Grok 1)"
+      },
+      {
+        "item": "License",
+        "left": "クローズドウェイト(API提供)",
+        "right": "クローズドウェイト(Grok-1のみ例外的にオープンウェイト公開)"
+      },
+      {
+        "item": "Open Source",
+        "left": "非公開",
+        "right": "Grok-1のみ公開(2024年3月)"
+      },
+      {
+        "item": "API",
+        "left": "Gemini API(Google AI Studio/Vertex AI)",
+        "right": "xAI API(Grok API)"
+      },
+      {
+        "item": "Programming Language",
+        "left": "公式SDKはPython/Node.js/Go等主要言語に対応",
+        "right": "公式SDKはPython対応、OpenAI/Anthropic互換のREST APIも提供"
+      },
+      {
+        "item": "Ecosystem",
+        "left": "Google Workspace、Search、Android、Vertex AI",
+        "right": "X(旧Twitter)、Grok Studio"
+      }
+    ],
+    "architecture": {
+      "left": "テキスト・画像・音声・動画を単一モデルで扱うネイティブマルチモーダルのTransformer系アーキテクチャを採用し、事前学習段階から複数モダリティを統合的に学習する。",
+      "right": "デコーダのみのTransformerを基盤とし、X上の投稿データを含む学習データとリアルタイム検索機能を組み合わせて時事性の高い応答を生成する。"
+    },
+    "features": [
+      {
+        "feature": "Streaming",
+        "left": true,
+        "right": true
+      },
+      {
+        "feature": "Tool Calling",
+        "left": true,
+        "right": true
+      },
+      {
+        "feature": "Vision",
+        "left": true,
+        "right": true
+      },
+      {
+        "feature": "Audio",
+        "left": true,
+        "right": true
+      },
+      {
+        "feature": "Multi Agent(ネイティブ対応)",
+        "left": false,
+        "right": false
+      },
+      {
+        "feature": "Memory(組み込み記憶)",
+        "left": false,
+        "right": false
+      }
+    ],
+    "advantages": {
+      "left": [
+        "テキスト・画像・音声・動画を単一モデルでネイティブに処理できるマルチモーダル性能",
+        "検索・Workspace・Androidなど既存のGoogleサービスとの統合が進んでいる"
+      ],
+      "right": [
+        "X(旧Twitter)と連携したリアルタイム情報へのアクセスに強みを持つ",
+        "既存の大手プロバイダと比べて制限の少ない応答スタイルを志向している"
+      ]
+    },
+    "disadvantages": {
+      "left": [
+        "モデルの重みが非公開のクローズドウェイトであり、自前でのホスティングやカスタマイズに制約がある",
+        "API利用のコストが発生し、大量利用時のコスト管理が必要になる"
+      ],
+      "right": [
+        "他の主要ファミリーと比べてエコシステムやドキュメント・実績の蓄積がまだ少ない",
+        "API利用のコストが発生し、大量利用時のコスト管理が必要になる"
+      ]
+    },
+    "bestUseCases": {
+      "left": "画像・音声・動画を含むマルチモーダル入力を扱うアプリケーションや、Google Workspace・Android等の既存エコシステムと連携したいプロダクト。",
+      "right": "X上の話題やトレンドを踏まえたリアルタイム性の高い対話や、比較的制限の少ない応答が求められるユースケース。"
+    },
+    "migration": "GeminiからGrokへ移行する場合、Gemini APIのcontents形式をxAI APIのメッセージ形式へ変換する必要がある。xAI APIはOpenAI互換のエンドポイントも提供しており、既存のOpenAI SDKをベースURLの変更のみで流用できる場合がある。",
+    "faq": [
+      {
+        "question": "GeminiとGrok、どちらが優れている?",
+        "answer": "用途によって評価が分かれる。マルチモーダル処理やGoogleサービスとの統合ではGeminiに強みがある。X上のリアルタイム情報を踏まえた対話や制限の少ない応答を求める場合はGrokが選ばれることがある。実際のタスクで比較検討するのが望ましい。"
+      }
+    ],
+    "references": [
+      {
+        "type": "Official Website",
+        "label": "Google Gemini",
+        "url": "https://gemini.google.com/"
+      },
+      {
+        "type": "Official Website",
+        "label": "xAI",
+        "url": "https://x.ai/"
+      }
+    ]
   }
 ]
