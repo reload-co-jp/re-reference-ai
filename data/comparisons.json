@@ -1020,5 +1020,137 @@
         "url": "https://mistral.ai/"
       }
     ]
+  },
+  {
+    "slug": "phi-vs-gemma",
+    "left": "phi",
+    "right": "gemma",
+    "summary": "PhiはMicrosoftが開発する、高品質な学習データを重視した小規模言語モデルファミリー。GemmaはGoogleが公開する、Geminiの研究成果をもとに構築された軽量なオープンウェイトモデルファミリー。いずれも限られた計算資源での実行を意識した設計を特徴とする。",
+    "quickSummary": [
+      "PhiはMicrosoft、GemmaはGoogleが開発する、いずれも軽量・オープンウェイトを中心とした小規模言語モデルファミリー。",
+      "Phiは厳選・合成された高品質な学習データによる少ないパラメータ数での高性能化、GemmaはGeminiと共通の研究基盤・安全性技術を受け継いだ設計を特徴とする。",
+      "ライセンスはPhiがMITライセンス、GemmaがGoogle独自のGemma利用規約となっており、利用条件が異なる。"
+    ],
+    "table": [
+      {
+        "item": "Purpose",
+        "left": "エッジ・オンデバイス実行を意識した小規模汎用LLM基盤",
+        "right": "エッジ・オンデバイス実行を意識した軽量LLM基盤"
+      },
+      {
+        "item": "Developer",
+        "left": "Microsoft",
+        "right": "Google"
+      },
+      {
+        "item": "Release",
+        "left": "2023年6月(Phi-1)",
+        "right": "2024年2月(Gemma 1)"
+      },
+      {
+        "item": "License",
+        "left": "MITライセンス",
+        "right": "Gemma利用規約(独自ライセンス)"
+      },
+      {
+        "item": "Open Source",
+        "left": "重み公開(MIT、商用利用可)",
+        "right": "重み公開(利用制限あり)"
+      },
+      {
+        "item": "API",
+        "left": "公式APIはなく、Azure AI Foundry等のクラウド経由で提供",
+        "right": "公式APIはなく、Google AI Studio等のクラウド経由で提供"
+      },
+      {
+        "item": "Programming Language",
+        "left": "Hugging Face Transformers、ONNX Runtime等に対応",
+        "right": "Hugging Face Transformers、Keras、JAXに対応"
+      },
+      {
+        "item": "Ecosystem",
+        "left": "Hugging Face、Azure AI Foundry、ONNX",
+        "right": "Hugging Face、Google AI Studio、Vertex AI、Ollama"
+      }
+    ],
+    "architecture": {
+      "left": "デコーダのみのTransformerを基盤とし、大規模Webデータではなく厳選・合成された高品質な学習データ(教科書的データ)を用いることで、少ないパラメータ数でも高い推論性能を実現する設計を特徴とする。",
+      "right": "デコーダのみのTransformerを基盤とし、Geminiの学習で得られた技術的知見・安全性フィルタリング手法を軽量なパラメータ数のモデルに反映して構築されている。"
+    },
+    "features": [
+      {
+        "feature": "Streaming",
+        "left": true,
+        "right": true
+      },
+      {
+        "feature": "Tool Calling",
+        "left": true,
+        "right": true
+      },
+      {
+        "feature": "Vision",
+        "left": true,
+        "right": true
+      },
+      {
+        "feature": "Audio",
+        "left": false,
+        "right": false
+      },
+      {
+        "feature": "Multi Agent(ネイティブ対応)",
+        "left": false,
+        "right": false
+      },
+      {
+        "feature": "Memory(組み込み記憶)",
+        "left": false,
+        "right": false
+      }
+    ],
+    "advantages": {
+      "left": [
+        "厳選・合成された高品質な学習データにより、少ないパラメータ数でも高い推論性能を発揮する",
+        "MITライセンスのため商用利用を含め自由度の高い利用ができる"
+      ],
+      "right": [
+        "Geminiの研究成果・安全性技術を軽量モデルに受け継いでいる",
+        "Ollama等のローカル実行ツールで幅広くサポートされ、導入事例が豊富"
+      ]
+    },
+    "disadvantages": {
+      "left": [
+        "Llama・Gemma等と比べるとコミュニティでの利用事例・派生モデルの蓄積がまだ少ない",
+        "小規模モデルであるため、大規模モデルと比べ複雑なタスクでの性能には限界がある"
+      ],
+      "right": [
+        "利用規約に一定の制限があり、MITライセンスのような完全な自由度ではない",
+        "小規模モデルであるため、大規模モデルと比べ複雑なタスクでの性能には限界がある"
+      ]
+    },
+    "bestUseCases": {
+      "left": "MITライセンスでの自由な商用利用を重視するエッジ・オンデバイスアプリケーションや、限られた計算資源でのコード生成・推論タスク。",
+      "right": "Google AI StudioやOllama等の既存ツールチェーンを活用したローカル実行・プロトタイピング、Geminiエコシステムとの親和性を重視する用途。"
+    },
+    "migration": "PhiからGemmaへ移行する場合、いずれもHugging Face Transformers経由であればモデル名の変更のみで対応できることが多い。ライセンス条件が異なるため、商用利用時は各モデルの利用規約を個別に確認する必要がある。",
+    "faq": [
+      {
+        "question": "PhiとGemma、どちらが優れている?",
+        "answer": "用途によって評価が分かれる。ライセンスの自由度を重視する場合はMITライセンスのPhiが選ばれやすい。ローカル実行ツールでの対応状況やGeminiエコシステムとの親和性を重視する場合はGemmaが選ばれることがある。実際のタスク・環境で比較検討するのが望ましい。"
+      }
+    ],
+    "references": [
+      {
+        "type": "Official Website",
+        "label": "Microsoft Phi",
+        "url": "https://azure.microsoft.com/en-us/products/phi"
+      },
+      {
+        "type": "Official Website",
+        "label": "Google Gemma",
+        "url": "https://ai.google.dev/gemma"
+      }
+    ]
   }
 ]
