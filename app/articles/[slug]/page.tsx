@@ -133,6 +133,9 @@ const ArticlePage: FC<Props> = async ({ params }) => {
     descriptionNode: linkifyTermMentions(event.description, ""),
   }))
 
+  const developerByModelSlug =
+    article.comparisonRows.find((row) => row.item === "開発元")?.values ?? {}
+
   const otherArticles = articles.filter((a) => a.slug !== article.slug)
   const jsonLdBlocks = buildJsonLd(article)
 
@@ -177,42 +180,68 @@ const ArticlePage: FC<Props> = async ({ params }) => {
       {/* Models */}
       <Section>
         <SectionTitle>モデル一覧</SectionTitle>
-        <div
+        <ol
           style={{
-            display: "grid",
-            gap: "1.25rem",
-            gridTemplateColumns: "repeat(auto-fill, minmax(15rem, 1fr))",
+            border: "1px solid var(--color-border)",
+            borderRadius: ".25rem",
+            listStyle: "none",
+            margin: 0,
+            overflow: "hidden",
+            padding: 0,
           }}
         >
-          {models.map((model) => (
-            <Link
-              key={model.slug}
-              href={`/terms/${model.slug}/`}
-              style={{ color: "inherit", textDecoration: "none" }}
-            >
-              <div
+          {models.map((model, index) => {
+            const developer = developerByModelSlug[model.slug]
+            return (
+              <li
+                key={model.slug}
                 style={{
-                  background: "var(--color-surface)",
-                  border: "1px solid var(--color-border)",
-                  borderRadius: ".25rem",
-                  height: "100%",
-                  padding: "1.5rem",
+                  borderBottom:
+                    index < models.length - 1 ? "1px solid var(--color-border)" : "none",
                 }}
               >
-                <h3 style={{ fontSize: "1.05rem", margin: 0 }}>{model.name}</h3>
-                <p
+                <Link
+                  href={`/terms/${model.slug}/`}
                   style={{
-                    color: "var(--color-text-muted)",
-                    fontSize: ".85rem",
-                    margin: ".75rem 0 0",
+                    alignItems: "baseline",
+                    color: "inherit",
+                    display: "flex",
+                    flexWrap: "wrap",
+                    gap: ".25rem 1rem",
+                    padding: "1rem 1.25rem",
+                    textDecoration: "none",
                   }}
                 >
-                  {model.tagline}
-                </p>
-              </div>
-            </Link>
-          ))}
-        </div>
+                  <span
+                    style={{
+                      color: "var(--color-text-muted)",
+                      flexShrink: 0,
+                      fontSize: ".8rem",
+                      width: "1.5rem",
+                    }}
+                  >
+                    {index + 1}
+                  </span>
+                  <span style={{ flexShrink: 0, fontSize: "1.05rem", fontWeight: 600, width: "9rem" }}>
+                    {model.name}
+                  </span>
+                  {developer && (
+                    <Badge style={{ flexShrink: 0 }}>{developer}</Badge>
+                  )}
+                  <span
+                    style={{
+                      color: "var(--color-text-muted)",
+                      flex: "1 1 20rem",
+                      fontSize: ".85rem",
+                    }}
+                  >
+                    {model.tagline}
+                  </span>
+                </Link>
+              </li>
+            )
+          })}
+        </ol>
       </Section>
 
       {/* Comparison */}
