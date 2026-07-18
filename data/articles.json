@@ -1,0 +1,196 @@
+[
+  {
+    "slug": "open-weight-llm-models",
+    "title": "主要オープンウェイトLLMモデル一覧",
+    "description": "Llama・Mistral・DeepSeek・Qwen・Phi・Gemma等、モデルの重みが公開されている主要なオープンウェイトLLM・生成AIモデルを一覧で紹介。各モデルの特徴・開発元比較・リリース年表まとめ。",
+    "category": "モデル",
+    "intro": "オープンウェイトモデルとは、モデルの重み(パラメータ)が公開され、誰でもダウンロードして自前の環境で実行・ファインチューニングできるモデルを指す。GPTやClaude、GeminiのようなクローズドウェイトモデルとAPI経由でしか利用できないのに対し、オープンウェイトモデルはローカル環境やオンプレミス環境での実行、独自データによる追加学習、ライセンス条件内での商用組み込みが可能。Meta・Mistral AI・Google・Microsoft・Alibaba・DeepSeek・Moonshot AI等、大手テック企業からスタートアップまで幅広い開発元がオープンウェイトモデルを公開しており、オープンウェイトLLMのエコシステム全体を大きく発展させてきた。",
+    "modelSlugs": [
+      "llama",
+      "mistral",
+      "gemma",
+      "qwen",
+      "phi",
+      "deepseek",
+      "kimi",
+      "flux",
+      "ornith"
+    ],
+    "comparisonRows": [
+      {
+        "item": "開発元",
+        "values": {
+          "llama": "Meta",
+          "mistral": "Mistral AI",
+          "gemma": "Google",
+          "qwen": "Alibaba Cloud",
+          "phi": "Microsoft",
+          "deepseek": "DeepSeek",
+          "kimi": "Moonshot AI",
+          "flux": "Black Forest Labs",
+          "ornith": "DeepReinforce"
+        }
+      },
+      {
+        "item": "初出",
+        "values": {
+          "llama": "2023年2月",
+          "mistral": "2023年9月",
+          "gemma": "2024年2月",
+          "qwen": "2023年8月",
+          "phi": "2023年6月",
+          "deepseek": "2024年12月",
+          "kimi": "2023年10月",
+          "flux": "2024年8月",
+          "ornith": "2026年6月"
+        }
+      },
+      {
+        "item": "モダリティ",
+        "values": {
+          "llama": "テキスト",
+          "mistral": "テキスト",
+          "gemma": "テキスト・画像",
+          "qwen": "テキスト・マルチモーダル",
+          "phi": "テキスト",
+          "deepseek": "テキスト",
+          "kimi": "テキスト",
+          "flux": "画像生成",
+          "ornith": "テキスト・コード"
+        }
+      },
+      {
+        "item": "特徴",
+        "values": {
+          "llama": "オープンウェイトLLMエコシステムの中心的存在",
+          "mistral": "MoEアーキテクチャの早期実証と効率重視の設計",
+          "gemma": "Gemini譲りの技術基盤による軽量・単一GPU動作",
+          "qwen": "多言語対応と幅広いパラメータ規模のバリエーション",
+          "phi": "高品質データ重視で小規模ながら高性能",
+          "deepseek": "低コスト学習と強化学習による高い推論能力",
+          "kimi": "ロングコンテキストと大規模MoEモデルKimi K2",
+          "flux": "Stable Diffusion後継としての文字描画・プロンプト忠実性",
+          "ornith": "自己足場構築によるエージェント型コーディング特化"
+        }
+      },
+      {
+        "item": "ライセンス",
+        "values": {
+          "llama": "Llamaコミュニティライセンス(商用利用可)",
+          "mistral": "Apache 2.0等",
+          "gemma": "Gemma利用規約(商用利用可)",
+          "qwen": "Apache 2.0等",
+          "phi": "MIT等",
+          "deepseek": "MIT等",
+          "kimi": "Modified MIT等",
+          "flux": "Apache 2.0 / 非商用ライセンス混在",
+          "ornith": "MIT"
+        }
+      }
+    ],
+    "events": [
+      {
+        "date": "2023-02",
+        "title": "Meta、LLaMA(第1世代)を研究者向けに公開",
+        "description": "申請制で公開されたが重みが流出し広く一般に出回った。オープンウェイトLLMブームの起点となった。",
+        "organizations": ["Meta"],
+        "relatedTerms": ["llama"]
+      },
+      {
+        "date": "2023-06",
+        "title": "Microsoft、Phi-1を発表",
+        "description": "質の高い学習データによる小規模モデルの性能向上を示した。",
+        "organizations": ["Microsoft"],
+        "relatedTerms": ["phi"]
+      },
+      {
+        "date": "2023-07",
+        "title": "Meta、Llama 2を公開",
+        "description": "商用利用も許可するライセンスで公開され、派生モデルの開発が本格化した。",
+        "organizations": ["Meta"],
+        "relatedTerms": ["llama"]
+      },
+      {
+        "date": "2023-08",
+        "title": "Alibaba Cloud、Qwen(通義千問)を公開",
+        "description": "中国語・英語をはじめとする多言語対応を特徴とするモデルファミリーとして展開を開始した。",
+        "organizations": ["Alibaba Cloud"],
+        "relatedTerms": ["qwen"]
+      },
+      {
+        "date": "2023-09",
+        "title": "Mistral AI、Mistral 7Bを公開",
+        "description": "同程度のパラメータ数を持つ他モデルを上回る性能をベンチマークで示した。",
+        "organizations": ["Mistral AI"],
+        "relatedTerms": ["mistral"]
+      },
+      {
+        "date": "2023-10",
+        "title": "Moonshot AI、Kimiをチャットサービスとして公開",
+        "description": "ロングコンテキスト処理を強みとして中国市場で利用者を集めた。",
+        "organizations": ["Moonshot AI"],
+        "relatedTerms": ["kimi"]
+      },
+      {
+        "date": "2023-12",
+        "title": "Mistral AI、Mixtral 8x7Bを公開",
+        "description": "MoE(専門家混合)アーキテクチャを採用し、オープンウェイトモデルでのMoE活用を早期に実証した。",
+        "organizations": ["Mistral AI"],
+        "relatedTerms": ["mistral"]
+      },
+      {
+        "date": "2024-02",
+        "title": "Google、Gemma(第1世代)を公開",
+        "description": "Geminiと同じ研究・技術基盤をもとに構築された軽量なオープンウェイトモデル。",
+        "organizations": ["Google"],
+        "relatedTerms": ["gemma"]
+      },
+      {
+        "date": "2024-08",
+        "title": "Black Forest Labs、FLUX.1を公開",
+        "description": "Stable Diffusionの元開発メンバーが設立した企業による画像生成モデル。",
+        "organizations": ["Black Forest Labs"],
+        "relatedTerms": ["flux"]
+      },
+      {
+        "date": "2024-12",
+        "title": "DeepSeek、DeepSeek-V3を公開",
+        "description": "MoEアーキテクチャを採用し、報告された学習コストの低さで注目を集めた。",
+        "organizations": ["DeepSeek"],
+        "relatedTerms": ["deepseek"]
+      },
+      {
+        "date": "2025-01",
+        "title": "DeepSeek、DeepSeek-R1を公開",
+        "description": "強化学習により推論能力を獲得した推論モデルとして、オープンウェイトモデルの中で大きな反響を呼んだ。",
+        "organizations": ["DeepSeek"],
+        "relatedTerms": ["deepseek"]
+      },
+      {
+        "date": "2025-07",
+        "title": "Moonshot AI、Kimi K2を公開",
+        "description": "オープンウェイトの大規模MoEモデルとして国際的にも注目された。",
+        "organizations": ["Moonshot AI"],
+        "relatedTerms": ["kimi"]
+      },
+      {
+        "date": "2026-06",
+        "title": "DeepReinforce、Ornith-1.0を公開",
+        "description": "Qwen 3.5・Gemma 4をベースに、自己足場構築の学習手法でエージェント型コーディングに特化させたモデルファミリー。",
+        "organizations": ["DeepReinforce"],
+        "relatedTerms": ["ornith"]
+      }
+    ],
+    "relatedTerms": ["foundation-model", "fine-tuning", "quantization", "mixture-of-experts"],
+    "faq": [
+      {
+        "question": "オープンウェイトとオープンソースの違いは?",
+        "answer": "オープンウェイトはモデルの重み(パラメータ)が公開されている状態を指し、学習データや学習コードまでは公開されていないことが多い。狭義のオープンソースは学習データ・コードを含む全てが公開・改変・再配布可能である必要があり、多くのオープンウェイトモデルは厳密なオープンソースの定義を満たさない。"
+      },
+      {
+        "question": "オープンウェイトモデルはどこで入手できる?",
+        "answer": "Hugging Face等のモデルリポジトリで公開されていることが多く、各モデルのライセンス条件を確認した上でダウンロード・実行できる。"
+      }
+    ]
+  }
+]

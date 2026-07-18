@@ -1,4 +1,5 @@
 import { MetadataRoute } from "next"
+import { articles } from "lib/articles"
 import { comparisons } from "lib/comparisons"
 import { SITE_URL } from "lib/site"
 import { categories, getAllTags, getCategorySlug, getTagSlug, getTermsByTag, terms } from "lib/terms"
@@ -48,6 +49,16 @@ const sitemap = (): MetadataRoute.Sitemap => [
   },
   ...comparisons.map((comparison) => ({
     url: `${SITE_URL}/compare/${comparison.slug}/`,
+    changeFrequency: "monthly" as const,
+    priority: 0.7,
+  })),
+  {
+    url: `${SITE_URL}/articles/`,
+    changeFrequency: "weekly" as const,
+    priority: 0.6,
+  },
+  ...articles.map((article) => ({
+    url: `${SITE_URL}/articles/${article.slug}/`,
     changeFrequency: "monthly" as const,
     priority: 0.7,
   })),

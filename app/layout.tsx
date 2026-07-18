@@ -128,6 +128,11 @@ const RootLayout = ({ children }: { children: React.ReactNode }) => {
                   技術比較
                 </Link>
               </li>
+              <li>
+                <Link href="/articles/" style={{ color: "var(--color-text-muted)" }}>
+                  特集記事
+                </Link>
+              </li>
             </ul>
           </nav>
         </header>
