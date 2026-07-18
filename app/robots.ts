@@ -21,15 +21,19 @@ const AI_CRAWLER_USER_AGENTS = [
   "Meta-ExternalAgent",
 ]
 
+const OPENGRAPH_IMAGE_PATHS = ["/opengraph-image", "/*/opengraph-image"]
+
 const robots = (): MetadataRoute.Robots => ({
   rules: [
     {
       userAgent: "*",
       allow: "/",
+      disallow: OPENGRAPH_IMAGE_PATHS,
     },
     {
       userAgent: AI_CRAWLER_USER_AGENTS,
       allow: "/",
+      disallow: OPENGRAPH_IMAGE_PATHS,
     },
   ],
   sitemap: `${SITE_URL}/sitemap.xml`,
