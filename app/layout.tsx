@@ -147,15 +147,23 @@ const RootLayout = ({ children }: { children: React.ReactNode }) => {
         </main>
         <footer
           style={{
+            alignItems: "center",
             background: "var(--color-bg-elevated)",
             borderTop: "1px solid var(--color-border)",
             color: "var(--color-text-muted)",
+            display: "flex",
+            flexWrap: "wrap",
             fontSize: ".75rem",
+            gap: "1rem",
+            justifyContent: "space-between",
             letterSpacing: "0.02em",
             padding: "1.25rem 1.5rem",
           }}
         >
-          <p>&copy; Reload</p>
+          <p style={{ margin: 0 }}>&copy; Reload</p>
+          <Link href="/about/" style={{ color: "var(--color-text-muted)" }}>
+            運営者情報
+          </Link>
         </footer>
       </body>
     </html>
