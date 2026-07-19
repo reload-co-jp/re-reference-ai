@@ -14550,7 +14550,9 @@
       "coding-agent",
       "code-interpreter",
       "tool-calling",
-      "cursor"
+      "cursor",
+      "windsurf",
+      "github-copilot"
     ]
   },
   {
@@ -14596,7 +14598,13 @@
       "vibe-coding",
       "spec-driven-development",
       "subagent",
-      "codex"
+      "codex",
+      "claude-code",
+      "github-copilot",
+      "cline",
+      "aider",
+      "devin",
+      "amazon-q-developer"
     ]
   },
   {
@@ -16775,7 +16783,7 @@
         "note": "CodexはOpenAIが提供する商用コーディングエージェント製品の1つ"
       }
     ],
-    "relatedTerms": ["coding-agent", "gpt", "sandboxing"]
+    "relatedTerms": ["coding-agent", "gpt", "sandboxing", "github-copilot"]
   },
   {
     "slug": "ai-dlc",
@@ -16826,9 +16834,13 @@
       {
         "slug": "ai-ide",
         "note": "CursorはAI IDEという製品カテゴリを代表する具体的な製品の1つ"
+      },
+      {
+        "slug": "windsurf",
+        "note": "CursorとWindsurfは、いずれもVS Codeを基盤としたAIネイティブIDEという点で共通する"
       }
     ],
-    "relatedTerms": ["ai-ide", "coding-agent"]
+    "relatedTerms": ["ai-ide", "coding-agent", "windsurf"]
   },
   {
     "slug": "claude-skills",
@@ -18080,5 +18092,185 @@
         "url": "https://github.com/mit-han-lab/llm-awq"
       }
     ]
+  },
+  {
+    "slug": "claude-code",
+    "name": "Claude Code",
+    "tagline": "Anthropicが提供する、ターミナル上で動作する自律型コーディングエージェント",
+    "category": "エージェント",
+    "tags": ["コーディングエージェント", "コード生成"],
+    "plainSummary": "Anthropicが作った、ターミナルで動きコードを読み書き・実行してくれるAIツール。",
+    "summary": "Claude Codeは、Anthropicが提供するCLI(コマンドラインインターフェース)型のコーディングエージェント。\nターミナル上で自然言語の指示を受け、リポジトリ内のファイル読み書き、コマンド実行、git操作等を自律的に行う。Claudeモデルを推論エンジンとして使用し、サブエージェントやスキル、フック等による拡張の仕組みを持つ。",
+    "history": "2025年2月: Anthropicがターミナル型コーディングエージェント「Claude Code」をresearch previewとして公開。",
+    "advantages": [
+      "ターミナル上での自律的なファイル操作・コマンド実行・git操作を一貫して行える",
+      "サブエージェントやスキル、フック等による拡張性が高い"
+    ],
+    "disadvantages": [
+      "自律的な実行権限を伴うため、権限設定やサンドボックス化の検討が前提となる",
+      "特定エディタに統合されたAI IDEと比べ、GUI上での視覚的な差分確認は別ツールに依存する"
+    ],
+    "comparisons": [
+      {
+        "slug": "coding-agent",
+        "note": "Claude CodeはAnthropicが提供する商用コーディングエージェント製品の1つ"
+      }
+    ],
+    "relatedTerms": ["coding-agent", "claude", "subagent", "harness-engineering"]
+  },
+  {
+    "slug": "github-copilot",
+    "name": "GitHub Copilot",
+    "tagline": "GitHubとMicrosoftが提供する、コード補完からチャット・自律的なコード編集までを担うAIペアプログラミングツール",
+    "category": "エージェント",
+    "tags": ["コーディングエージェント", "コード生成"],
+    "plainSummary": "GitHubが作った、コードを書く時に提案・補完してくれるAIアシスタント。",
+    "summary": "GitHub Copilotは、GitHubとMicrosoftが提供するAIコーディング支援ツール。\n2021年にVS Code拡張機能としてコード補完機能から提供が開始され、その後チャットによる対話的支援(Copilot Chat)、複数ファイルにまたがるタスクを自律的に進めるエージェントモード等へと機能を拡張してきた。初期モデルにはOpenAIのCodexが用いられていた。",
+    "history": "2021年6月: GitHubがVS Code拡張機能として「GitHub Copilot」の技術プレビューを公開。\n2022年6月: 一般提供(GA)を開始。",
+    "advantages": [
+      "VS Code・JetBrains・Neovim等、幅広いエディタで利用できる",
+      "GitHubのエコシステム(Issue・PR等)と連携した機能を持つ"
+    ],
+    "disadvantages": [
+      "提案されたコードの著作権・ライセンシングを巡る議論がある",
+      "補完中心の機能とエージェント的な自律機能が並存し、製品内での役割分担を把握しづらいことがある"
+    ],
+    "comparisons": [
+      {
+        "slug": "coding-agent",
+        "note": "GitHub CopilotはMicrosoft/GitHubが提供する商用コーディング支援ツールの1つ"
+      }
+    ],
+    "relatedTerms": ["coding-agent", "codex", "ai-ide"]
+  },
+  {
+    "slug": "windsurf",
+    "name": "Windsurf",
+    "aliases": ["Codeium"],
+    "tagline": "AIエージェント機能「Cascade」を統合したAIネイティブの統合開発環境(IDE)",
+    "category": "インフラ",
+    "tags": ["コーディングエージェント", "コード生成"],
+    "plainSummary": "AIと一緒にコードを書ける、Codeium社が開発したエディタ。",
+    "summary": "Windsurfは、Codeium社が開発するAIネイティブの統合開発環境。\nVS Codeをベースに、複数ファイルにまたがる変更を自律的に提案・実行するエージェント機能「Cascade」を統合している点が特徴。",
+    "history": "2024年: Codeiumが自社のコード補完技術を基盤としたAI IDE「Windsurf」を公開。",
+    "advantages": [
+      "Cascadeによる複数ファイルにまたがる自律的な変更提案・適用ができる",
+      "独自のコード補完技術を基盤に持つ"
+    ],
+    "disadvantages": [
+      "VS Codeベースのフォークであり、本家の更新への追従や拡張機能の互換性維持が必要になる",
+      "AIによる自動編集の範囲が広がるほど意図しない変更を見落とすリスクが増える"
+    ],
+    "comparisons": [
+      {
+        "slug": "ai-ide",
+        "note": "WindsurfはAI IDEという製品カテゴリを代表する具体的な製品の1つ"
+      },
+      {
+        "slug": "cursor",
+        "note": "WindsurfとCursorは、いずれもVS Codeを基盤としたAIネイティブIDEという点で共通する"
+      }
+    ],
+    "relatedTerms": ["ai-ide", "cursor", "coding-agent"]
+  },
+  {
+    "slug": "cline",
+    "name": "Cline",
+    "aliases": ["Claude Dev"],
+    "tagline": "VS Code拡張機能として提供される、オープンソースの自律型コーディングエージェント",
+    "category": "エージェント",
+    "tags": ["コーディングエージェント", "コード生成"],
+    "plainSummary": "VS Codeに追加できる、オープンソースの自律型AIコーディングツール。",
+    "summary": "Clineは、VS Code拡張機能として提供されるオープンソースのコーディングエージェント。\nファイルの作成・編集、ターミナルコマンドの実行、ブラウザ操作等を自律的に行い、各ステップでの変更内容をユーザーが確認・承認できる仕組みを持つ。特定のモデル提供元に縛られず、Claude・GPT等複数のLLMを切り替えて利用できる。",
+    "advantages": [
+      "オープンソースであり、利用するLLMを自由に選択・切り替えられる",
+      "各操作ステップでの変更内容をユーザーが確認できる"
+    ],
+    "disadvantages": [
+      "VS Code拡張機能という形態上、エディタ本体の機能や制約に依存する",
+      "モデル選択の自由度が高い分、性能や挙動がモデル選択に左右される"
+    ],
+    "comparisons": [
+      {
+        "slug": "coding-agent",
+        "note": "Clineはオープンソースかつマルチモデル対応のコーディングエージェント"
+      }
+    ],
+    "relatedTerms": ["coding-agent", "tool-calling"]
+  },
+  {
+    "slug": "aider",
+    "name": "Aider",
+    "tagline": "ターミナル上でgitと連携しながらペアプログラミングを行う、オープンソースのAIコーディングツール",
+    "category": "エージェント",
+    "tags": ["コーディングエージェント", "コード生成"],
+    "plainSummary": "ターミナルで動く、gitと連携しながらコードを一緒に書いてくれるオープンソースツール。",
+    "summary": "Aiderは、ターミナル上で動作するオープンソースのAIペアプログラミングツール。\nリポジトリ内のコードを解析した上で編集を提案・適用し、変更を自動的にgitコミットする点が特徴。複数のLLMプロバイダのモデルを切り替えて利用できる。",
+    "advantages": [
+      "編集内容を自動的にgitコミットとして記録し、変更履歴を追いやすい",
+      "複数のLLMプロバイダのモデルを切り替えて利用できる"
+    ],
+    "disadvantages": [
+      "GUIを持たずターミナル操作が前提となるため、慣れが必要になる",
+      "大規模な自律実行よりも、対話的なペアプログラミングに主眼を置いた設計になっている"
+    ],
+    "comparisons": [
+      {
+        "slug": "coding-agent",
+        "note": "Aiderはターミナル上で動作するオープンソースのコーディング支援ツール"
+      }
+    ],
+    "relatedTerms": ["coding-agent"]
+  },
+  {
+    "slug": "devin",
+    "name": "Devin",
+    "tagline": "Cognitionが開発した、タスクの計画から実装・デバッグまでを自律的に行うAIソフトウェアエンジニア",
+    "category": "エージェント",
+    "tags": ["コーディングエージェント", "コード生成"],
+    "plainSummary": "Cognition社が作った、自分で計画を立ててコードを書き上げるAIエージェント。",
+    "summary": "Devinは、Cognitionが開発するコーディングエージェント。\n独自のサンドボックス環境(開発環境・ブラウザ・ターミナル等)を持ち、タスクの計画立案からコード実装、テスト、デバッグまでの一連の作業を自律的に進める。「AIソフトウェアエンジニア」を謳って発表された。",
+    "history": "2024年3月: Cognitionが自律型コーディングエージェント「Devin」を発表。",
+    "advantages": [
+      "タスクの計画立案から実装・テスト・デバッグまで一貫して自律的に進められる",
+      "専用のサンドボックス環境(エディタ・ブラウザ・ターミナル)を備える"
+    ],
+    "disadvantages": [
+      "自律性が高い分、意図しない挙動や過剰な作業が発生するリスクの管理が必要になる",
+      "クローズドな商用製品であり、内部の意思決定プロセスの詳細は公開されていない"
+    ],
+    "comparisons": [
+      {
+        "slug": "coding-agent",
+        "note": "Devinは自律性の高いコーディングエージェント製品の代表例の1つ"
+      }
+    ],
+    "relatedTerms": ["coding-agent", "autonomous-agent"]
+  },
+  {
+    "slug": "amazon-q-developer",
+    "name": "Amazon Q Developer",
+    "aliases": ["Amazon CodeWhisperer"],
+    "tagline": "AWSが提供する、コード生成からレビュー・自律的なタスク実行までを担う開発者向けAIアシスタント",
+    "category": "エージェント",
+    "tags": ["コーディングエージェント", "コード生成"],
+    "plainSummary": "AWSが作った、コードの提案からタスク自動化まで行う開発者向けAIツール。",
+    "summary": "Amazon Q Developerは、AWSが提供する開発者向けAIアシスタント。\nコード補完・生成に加え、コードレビュー、脆弱性検出、ドキュメント作成、複数ステップのタスクを自律的に実行するエージェント機能等を備える。前身はコード補完ツール「Amazon CodeWhisperer」。",
+    "history": "2023年: AWSがコード補完ツール「Amazon CodeWhisperer」を一般提供開始。\n2024年: 「Amazon Q Developer」へと改称・機能拡張。",
+    "advantages": [
+      "AWSサービスやドキュメントに関する知識を活用した提案を受けられる",
+      "コード生成に加えレビューや移行作業支援等、開発ライフサイクル全般をカバーする"
+    ],
+    "disadvantages": [
+      "AWSのエコシステムに強く結びついた設計であり、他クラウド環境での活用は限定的になりやすい",
+      "エージェント機能の利用範囲によっては追加のライセンス・料金体系の理解が必要になる"
+    ],
+    "comparisons": [
+      {
+        "slug": "coding-agent",
+        "note": "Amazon Q DeveloperはAWSが提供する商用コーディング支援ツールの1つ"
+      }
+    ],
+    "relatedTerms": ["coding-agent"]
   }
 ]

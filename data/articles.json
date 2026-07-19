@@ -192,5 +192,150 @@
         "answer": "Hugging Face等のモデルリポジトリで公開されていることが多く、各モデルのライセンス条件を確認した上でダウンロード・実行できる。"
       }
     ]
+  },
+  {
+    "slug": "ai-coding-agents-overview",
+    "title": "主要AIコーディングエージェント一覧",
+    "description": "Claude Code・GitHub Copilot・Cursor・Windsurf・Codex等、ソフトウェア開発を支援する主要なAIコーディングエージェント・AI IDEを一覧で紹介。各ツールの提供形態・開発元比較・公開年表まとめ。",
+    "category": "エージェント",
+    "intro": "AIコーディングエージェントとは、コード生成にとどまらず、ファイルの読み書き・コマンド実行・テストの実行・修正までを自律的にこなすAIツールを指す。GitHub Copilotのようなエディタ拡張型のコード補完から始まり、Cursor・WindsurfのようなVS Codeベースの統合開発環境(AI IDE)、Claude Code・Codex・AiderのようなターミナルベースのCLIツール、Devinのようなクラウド上で動作するフルオートノマスなエージェントまで、提供形態は多様化している。Anthropic・OpenAI・GitHub/Microsoft・AWS等の大手プラットフォーマーに加え、Anysphere(Cursor)・Cognition(Devin)のようなスタートアップ、Cline・Aiderのようなオープンソースプロジェクトが並存し、ソフトウェア開発現場でのツール選定における重要な比較対象になっている。",
+    "modelSlugs": [
+      "claude-code",
+      "github-copilot",
+      "codex",
+      "cursor",
+      "windsurf",
+      "cline",
+      "aider",
+      "devin",
+      "amazon-q-developer"
+    ],
+    "comparisonRows": [
+      {
+        "item": "開発元",
+        "values": {
+          "claude-code": "Anthropic",
+          "github-copilot": "GitHub / Microsoft",
+          "codex": "OpenAI",
+          "cursor": "Anysphere",
+          "windsurf": "Codeium",
+          "cline": "オープンソースコミュニティ",
+          "aider": "オープンソースコミュニティ",
+          "devin": "Cognition",
+          "amazon-q-developer": "AWS"
+        }
+      },
+      {
+        "item": "提供形態",
+        "values": {
+          "claude-code": "CLI(ターミナル)",
+          "github-copilot": "エディタ拡張機能",
+          "codex": "CLI / クラウド",
+          "cursor": "統合IDE(VS Codeフォーク)",
+          "windsurf": "統合IDE(VS Codeフォーク)",
+          "cline": "エディタ拡張機能(VS Code)",
+          "aider": "CLI(ターミナル)",
+          "devin": "クラウド型自律エージェント",
+          "amazon-q-developer": "エディタ拡張機能 / CLI"
+        }
+      },
+      {
+        "item": "ライセンス形態",
+        "values": {
+          "claude-code": "商用",
+          "github-copilot": "商用",
+          "codex": "商用",
+          "cursor": "商用",
+          "windsurf": "商用",
+          "cline": "オープンソース",
+          "aider": "オープンソース",
+          "devin": "商用",
+          "amazon-q-developer": "商用"
+        }
+      },
+      {
+        "item": "特徴",
+        "values": {
+          "claude-code": "サブエージェント・スキル・フック等による拡張性の高さ",
+          "github-copilot": "幅広いエディタ対応とGitHubエコシステムとの連携",
+          "codex": "ChatGPT・OpenAI APIエコシステムとの統合",
+          "cursor": "エディタ統合の対話的な複数ファイル編集",
+          "windsurf": "エージェント機能「Cascade」による自律的な複数ファイル変更",
+          "cline": "オープンソースかつマルチモデル対応",
+          "aider": "gitコミットと連携したペアプログラミング",
+          "devin": "計画立案からデバッグまでの一貫した自律実行",
+          "amazon-q-developer": "AWSサービス知識を活用したコード支援"
+        }
+      }
+    ],
+    "events": [
+      {
+        "date": "2021-06",
+        "title": "GitHub、VS Code拡張機能として「GitHub Copilot」の技術プレビューを公開",
+        "description": "AIによるコード補完を広く一般開発者に普及させる契機となった。",
+        "organizations": ["GitHub"],
+        "relatedTerms": ["github-copilot"]
+      },
+      {
+        "date": "2022-06",
+        "title": "GitHub Copilot、一般提供(GA)を開始",
+        "description": "技術プレビューを経て正式サービスとして提供開始した。",
+        "organizations": ["GitHub", "Microsoft"],
+        "relatedTerms": ["github-copilot"]
+      },
+      {
+        "date": "2023",
+        "title": "Anysphere、AI IDE「Cursor」を公開",
+        "description": "VS Codeをフォークし、チャットや複数ファイル編集機能を統合した。",
+        "organizations": ["Anysphere"],
+        "relatedTerms": ["cursor"]
+      },
+      {
+        "date": "2024-03",
+        "title": "Cognition、自律型コーディングエージェント「Devin」を発表",
+        "description": "「AIソフトウェアエンジニア」を謳い、計画立案から実装・デバッグまでの自律実行を示した。",
+        "organizations": ["Cognition"],
+        "relatedTerms": ["devin"]
+      },
+      {
+        "date": "2024",
+        "title": "Codeium、AIネイティブIDE「Windsurf」を公開",
+        "description": "エージェント機能「Cascade」による複数ファイルの自律的な変更提案・適用を特徴とする。",
+        "organizations": ["Codeium"],
+        "relatedTerms": ["windsurf"]
+      },
+      {
+        "date": "2024",
+        "title": "AWS、「Amazon Q Developer」へ改称・機能拡張",
+        "description": "コード補完ツール「Amazon CodeWhisperer」を前身に、レビューやエージェント機能を拡充した。",
+        "organizations": ["AWS"],
+        "relatedTerms": ["amazon-q-developer"]
+      },
+      {
+        "date": "2025-02",
+        "title": "Anthropic、ターミナル型コーディングエージェント「Claude Code」をresearch previewとして公開",
+        "description": "サブエージェントやスキル等による拡張の仕組みを備えたCLI型エージェントとして提供開始した。",
+        "organizations": ["Anthropic"],
+        "relatedTerms": ["claude-code"]
+      },
+      {
+        "date": "2025",
+        "title": "OpenAI、自律型コーディングエージェントとして「Codex」ブランドを再展開",
+        "description": "2021年の同名コード生成モデルとは別に、CLI・クラウド版を含むエージェント製品として再始動した。",
+        "organizations": ["OpenAI"],
+        "relatedTerms": ["codex"]
+      }
+    ],
+    "relatedTerms": ["ai-ide", "coding-agent", "subagent", "tool-calling", "harness-engineering"],
+    "faq": [
+      {
+        "question": "AIコーディングエージェントとAI IDEの違いは?",
+        "answer": "明確な線引きがあるわけではないが、AI IDEはCursor・Windsurfのようにエディタそのものへコード補完・チャット・複数ファイル編集を統合した製品を指すことが多い。AIコーディングエージェントは、Claude Code・Codex・Devinのように、ターミナルやクラウド上でファイル操作・コマンド実行・テストまでをより自律的に繰り返す形態を指すことが多い。"
+      },
+      {
+        "question": "オープンソースのAIコーディングツールはある?",
+        "answer": "ClineやAiderはオープンソースで公開されており、利用するLLMを自由に選択・切り替えられる点が商用ツールとの違いになる。"
+      }
+    ]
   }
 ]
