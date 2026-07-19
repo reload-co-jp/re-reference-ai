@@ -460,5 +460,92 @@
         "answer": "LangGraph・CrewAI・AutoGen等のフレームワークは、それぞれの内部で複数のエージェントを協調させる仕組みを提供する。A2A(Agent2Agent)は、こうした異なるフレームワーク・ベンダーで構築されたエージェント同士が連携するための標準プロトコルであり、フレームワーク内部の協調方式とは扱う階層が異なる。"
       }
     ]
+  },
+  {
+    "slug": "vector-databases-overview",
+    "title": "主要ベクトルデータベース一覧",
+    "description": "Pinecone・Weaviate・Milvus・Qdrant・Chroma・pgvector等、RAGやAIエージェントの記憶機構を支える主要なベクトルデータベースを一覧で紹介。提供形態・特徴比較・公開年表まとめ。",
+    "category": "インフラ",
+    "intro": "ベクトルデータベースとは、テキストや画像から生成された埋め込みベクトルを保存し、意味的な類似度に基づく近似最近傍探索を高速に行うためのデータベースを指す。RAGアプリケーションの検索基盤やAIエージェントの長期記憶として利用されることが多い。インフラ管理不要のフルマネージドサービスとして提供されるPinecone、ハイブリッド検索を特徴とするWeaviate、大規模分散処理に対応するMilvus、Rust実装で高速なQdrant、軽量で組み込みやすいChroma、既存のPostgreSQLを拡張するpgvectorなど、提供形態や設計思想の異なる複数の選択肢が存在する。",
+    "modelSlugs": ["pinecone", "weaviate", "milvus", "qdrant", "chroma", "pgvector"],
+    "comparisonRows": [
+      {
+        "item": "開発元",
+        "values": {
+          "pinecone": "Pinecone",
+          "weaviate": "Weaviate",
+          "milvus": "Zilliz",
+          "qdrant": "Qdrant",
+          "chroma": "Chroma",
+          "pgvector": "オープンソースコミュニティ"
+        }
+      },
+      {
+        "item": "提供形態",
+        "values": {
+          "pinecone": "フルマネージド(クラウド)",
+          "weaviate": "セルフホスト / マネージドクラウド",
+          "milvus": "セルフホスト / マネージドクラウド(分散)",
+          "qdrant": "セルフホスト / マネージドクラウド",
+          "chroma": "組み込み型 / セルフホスト",
+          "pgvector": "PostgreSQL拡張機能"
+        }
+      },
+      {
+        "item": "ライセンス形態",
+        "values": {
+          "pinecone": "商用(クローズド)",
+          "weaviate": "オープンソース",
+          "milvus": "オープンソース",
+          "qdrant": "オープンソース",
+          "chroma": "オープンソース",
+          "pgvector": "オープンソース"
+        }
+      },
+      {
+        "item": "特徴",
+        "values": {
+          "pinecone": "インフラ管理不要のフルマネージドサービス",
+          "weaviate": "ベクトル検索とキーワード検索のハイブリッド検索",
+          "milvus": "数十億件規模の分散処理対応",
+          "qdrant": "Rust実装による高速な検索とフィルタリング",
+          "chroma": "軽量でアプリケーションへの組み込みが容易",
+          "pgvector": "既存PostgreSQL運用基盤をそのまま活用"
+        }
+      }
+    ],
+    "events": [
+      {
+        "date": "2019",
+        "title": "Pinecone社が設立",
+        "description": "マネージド型のベクトルデータベースサービスとしての提供を開始した。",
+        "organizations": ["Pinecone"],
+        "relatedTerms": ["pinecone"]
+      },
+      {
+        "date": "2019",
+        "title": "Zilliz、Milvusを公開",
+        "description": "大規模なベクトルデータの分散処理に対応するオープンソースのベクトルデータベースとして公開された。",
+        "organizations": ["Zilliz"],
+        "relatedTerms": ["milvus"]
+      },
+      {
+        "date": "2021",
+        "title": "Andrew Kane、PostgreSQL拡張機能「pgvector」を公開",
+        "description": "既存のPostgreSQL上でベクトル型データと類似検索を扱えるオープンソースの拡張機能として公開された。",
+        "relatedTerms": ["pgvector"]
+      }
+    ],
+    "relatedTerms": ["vector-database", "embedding", "retrieval-augmented-generation", "hnsw", "agent-memory"],
+    "faq": [
+      {
+        "question": "ベクトルデータベースと通常のデータベースの違いは?",
+        "answer": "通常のリレーショナルデータベースが完全一致や範囲検索を得意とするのに対し、ベクトルデータベースは埋め込みベクトル同士の距離(類似度)に基づく近似最近傍探索に特化しており、意味的に近いデータを高速に検索できる点が異なる。"
+      },
+      {
+        "question": "マネージド型とセルフホスト型、どちらを選べばよい?",
+        "answer": "インフラの構築・運用コストをかけたくない場合はPineconeのようなフルマネージドサービスが向く。既存インフラとの統合やコスト最適化を重視する場合は、Weaviate・Milvus・Qdrant・Chroma・pgvectorのようなセルフホスト可能な選択肢が向く。"
+      }
+    ]
   }
 ]

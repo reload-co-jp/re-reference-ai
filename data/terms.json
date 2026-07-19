@@ -3221,6 +3221,18 @@
       {
         "slug": "agent-memory",
         "note": "長期記憶は、埋め込みベクトルとしてベクトルデータベースに保存されることが多い"
+      },
+      {
+        "slug": "pinecone",
+        "note": "Pineconeはマネージド型ベクトルデータベースサービスの代表例の1つ"
+      },
+      {
+        "slug": "milvus",
+        "note": "Milvusは大規模分散処理に対応したオープンソースのベクトルデータベースの1つ"
+      },
+      {
+        "slug": "pgvector",
+        "note": "pgvectorは、専用のベクトルデータベースを別に構築せずPostgreSQL上でベクトル検索するための拡張機能"
       }
     ],
     "relatedTerms": [
@@ -3232,7 +3244,13 @@
       "graphrag",
       "hnsw",
       "faiss",
-      "cosine-similarity"
+      "cosine-similarity",
+      "pinecone",
+      "weaviate",
+      "milvus",
+      "qdrant",
+      "chroma",
+      "pgvector"
     ],
     "faq": [
       {
@@ -18354,5 +18372,152 @@
       }
     ],
     "relatedTerms": ["multi-agent", "autogen", "function-calling"]
+  },
+  {
+    "slug": "pinecone",
+    "name": "Pinecone",
+    "tagline": "フルマネージドで提供される、ベクトル検索に特化したクラウドデータベースサービス",
+    "category": "インフラ",
+    "tags": ["ベクトルデータベース", "検索"],
+    "plainSummary": "サーバー管理不要で使える、埋め込みベクトルの検索に特化したクラウドサービス。",
+    "summary": "Pineconeは、Pinecone社が提供するフルマネージドのベクトルデータベースサービス。\nインフラの構築・運用を意識せずに、埋め込みベクトルの保存と近似最近傍探索によるベクトル検索をAPI経由で利用できる。RAGアプリケーションのバックエンドとして広く利用されている。",
+    "history": "2019年: Pinecone社が設立され、マネージド型のベクトルデータベースサービスの提供を開始。",
+    "advantages": [
+      "インフラの構築・運用が不要で、API経由ですぐにベクトル検索を利用できる",
+      "大規模なベクトル数に対してもスケールするよう設計されている"
+    ],
+    "disadvantages": [
+      "フルマネージドのクラウドサービスであり、自社インフラ内での運用はできない",
+      "利用規模に応じた従量課金のコストがかかる"
+    ],
+    "comparisons": [
+      {
+        "slug": "vector-database",
+        "note": "Pineconeはマネージド型ベクトルデータベースサービスの代表例の1つ"
+      }
+    ],
+    "relatedTerms": ["vector-database", "embedding", "retrieval-augmented-generation"]
+  },
+  {
+    "slug": "weaviate",
+    "name": "Weaviate",
+    "tagline": "スキーマ定義とハイブリッド検索(ベクトル+キーワード)を備えたオープンソースのベクトルデータベース",
+    "category": "インフラ",
+    "tags": ["ベクトルデータベース", "検索"],
+    "plainSummary": "ベクトル検索とキーワード検索を組み合わせて使える、オープンソースのデータベース。",
+    "summary": "Weaviateは、オープンソースで提供されるベクトルデータベース。\nベクトル同士の類似検索に加え、キーワードベースの検索を組み合わせたハイブリッド検索や、オブジェクト間の関連を扱うスキーマ定義の仕組みを備える。セルフホストとマネージドクラウドの両方の形態で利用できる。",
+    "advantages": [
+      "ベクトル検索とキーワード検索を組み合わせたハイブリッド検索に対応する",
+      "セルフホストとマネージドサービスの両方を選択できる"
+    ],
+    "disadvantages": [
+      "スキーマ設計等、導入時に検討すべき設定項目が比較的多い",
+      "大規模運用時にはクラスタ構成の設計・運用知識が求められる"
+    ],
+    "comparisons": [
+      {
+        "slug": "vector-database",
+        "note": "Weaviateはハイブリッド検索やスキーマ定義を備えるオープンソースのベクトルデータベースの1つ"
+      }
+    ],
+    "relatedTerms": ["vector-database", "hnsw", "embedding"]
+  },
+  {
+    "slug": "milvus",
+    "name": "Milvus",
+    "tagline": "大規模なベクトルデータの分散処理に対応したオープンソースのベクトルデータベース",
+    "category": "インフラ",
+    "tags": ["ベクトルデータベース", "検索"],
+    "plainSummary": "非常に多くのベクトルデータを扱えるよう作られた、オープンソースのデータベース。",
+    "summary": "Milvusは、Zilliz社が開発するオープンソースのベクトルデータベース。\n数十億件規模のベクトルデータを分散アーキテクチャで処理できるよう設計されており、複数のインデックス手法(HNSW等)を選択して利用できる。LF AI & Data Foundationのプロジェクトとしても提供されている。",
+    "history": "2019年: Zillizが、オープンソースのベクトルデータベース「Milvus」を公開。",
+    "advantages": [
+      "分散アーキテクチャにより数十億件規模のベクトルデータをスケールして扱える",
+      "複数のインデックス手法を用途に応じて選択できる"
+    ],
+    "disadvantages": [
+      "分散構成での運用には、クラスタ管理の知識やインフラコストが必要になる",
+      "小規模な用途では構成の複雑さが過剰になる場合がある"
+    ],
+    "comparisons": [
+      {
+        "slug": "vector-database",
+        "note": "Milvusは大規模分散処理に重点を置くオープンソースのベクトルデータベースの1つ"
+      }
+    ],
+    "relatedTerms": ["vector-database", "hnsw", "embedding"]
+  },
+  {
+    "slug": "qdrant",
+    "name": "Qdrant",
+    "tagline": "Rustで実装された、高速な検索性能とフィルタリング機能を特徴とするオープンソースのベクトルデータベース",
+    "category": "インフラ",
+    "tags": ["ベクトルデータベース", "検索"],
+    "plainSummary": "Rustで作られた、高速な検索とメタデータでの絞り込みが得意なベクトルデータベース。",
+    "summary": "Qdrantは、Qdrant社が開発するオープンソースのベクトルデータベース。\nRustで実装されており、ベクトル類似検索とメタデータによるフィルタリングを組み合わせた検索性能を特徴とする。セルフホストとマネージドクラウドの両方の形態で利用できる。",
+    "advantages": [
+      "Rust実装による高速な検索性能とメモリ効率を特徴とする",
+      "メタデータによるフィルタリングとベクトル検索を組み合わせやすい"
+    ],
+    "disadvantages": [
+      "老舗のベクトルデータベース製品と比べ、エコシステムや事例の蓄積はまだ少ない",
+      "大規模分散運用の実績は発展途上にある"
+    ],
+    "comparisons": [
+      {
+        "slug": "vector-database",
+        "note": "Qdrantは高速な検索性能とフィルタリングを特徴とするオープンソースのベクトルデータベースの1つ"
+      }
+    ],
+    "relatedTerms": ["vector-database", "embedding"]
+  },
+  {
+    "slug": "chroma",
+    "name": "Chroma",
+    "tagline": "アプリケーションに組み込みやすい、軽量なオープンソースのベクトルデータベース",
+    "category": "インフラ",
+    "tags": ["ベクトルデータベース", "検索"],
+    "plainSummary": "アプリに手軽に組み込める、軽量なオープンソースのベクトルデータベース。",
+    "summary": "Chromaは、オープンソースで提供される軽量なベクトルデータベース。\nPythonアプリケーションへの組み込みやすさを重視して設計されており、少ないコードでベクトルの保存・類似検索を行える。プロトタイピングや小〜中規模のRAGアプリケーションで利用されることが多い。",
+    "advantages": [
+      "セットアップが簡単で、少ないコードでベクトル検索を組み込める",
+      "プロトタイピングや開発初期段階での試行がしやすい"
+    ],
+    "disadvantages": [
+      "大規模データや高可用性が求められる本番運用では、分散対応製品と比べ機能面の制約がある",
+      "エンタープライズ向けの運用機能は発展途上にある"
+    ],
+    "comparisons": [
+      {
+        "slug": "vector-database",
+        "note": "Chromaはアプリケーションへの組み込みやすさを重視した軽量なオープンソースのベクトルデータベースの1つ"
+      }
+    ],
+    "relatedTerms": ["vector-database", "embedding", "retrieval-augmented-generation"]
+  },
+  {
+    "slug": "pgvector",
+    "name": "pgvector",
+    "tagline": "PostgreSQLにベクトル型と類似検索機能を追加する、オープンソースの拡張機能",
+    "category": "インフラ",
+    "tags": ["ベクトルデータベース", "検索"],
+    "plainSummary": "PostgreSQLをベクトル検索に対応させる、オープンソースの拡張機能。",
+    "summary": "pgvectorは、PostgreSQLへベクトル型データと類似検索機能を追加するオープンソースの拡張機能。\n既存のPostgreSQLデータベースにインストールするだけで、リレーショナルデータとベクトルデータを同一のデータベース内で扱えるようになる。専用のベクトルデータベースを別途構築せずに、既存のPostgreSQL運用基盤の中でベクトル検索したい場合に利用される。",
+    "history": "2021年: Andrew Kaneが、PostgreSQL拡張機能「pgvector」を公開。",
+    "advantages": [
+      "既存のPostgreSQL運用基盤やツールチェーンをそのまま活用できる",
+      "リレーショナルデータとベクトルデータを同一データベース内で一貫して扱える"
+    ],
+    "disadvantages": [
+      "専用のベクトルデータベースと比べ、超大規模なベクトル数における検索性能・スケーラビリティには制約が生じることもある",
+      "PostgreSQL自体の運用・チューニングの知識が前提となる"
+    ],
+    "comparisons": [
+      {
+        "slug": "vector-database",
+        "note": "pgvectorは、専用のベクトルデータベースを別に構築せずPostgreSQL上でベクトル検索するための拡張機能"
+      }
+    ],
+    "relatedTerms": ["vector-database", "embedding"]
   }
 ]
