@@ -337,5 +337,128 @@
         "answer": "ClineやAiderはオープンソースで公開されており、利用するLLMを自由に選択・切り替えられる点が商用ツールとの違いになる。"
       }
     ]
+  },
+  {
+    "slug": "multi-agent-orchestration-frameworks",
+    "title": "主要マルチエージェント・オーケストレーションフレームワーク一覧",
+    "description": "LangGraph・CrewAI・AutoGen・Semantic Kernel・Agent Development Kit・OpenAI Agents SDK等、複数のAIエージェントを協調させるマルチエージェントフレームワークを一覧で紹介。協調方式の比較・開発元・公開年表まとめ。",
+    "category": "エージェント",
+    "intro": "マルチエージェントフレームワークとは、複数のAIエージェントに役割を分担させ、協調してタスクを遂行させるためのソフトウェア基盤を指す。単一のエージェントに全てを任せるのではなく、リサーチ担当・実装担当・レビュー担当のように役割を分けたエージェントを連携させることで、より複雑なタスクへの対応を狙う。グラフ構造で処理フローを明示的に定義するLangGraph、役割ベースの協調に重点を置くCrewAI、エージェント同士の対話を軸にするAutoGenのようなオープンソースプロジェクトに加え、Microsoft・Google・OpenAIといった大手プラットフォーマーも、それぞれSemantic Kernel・Agent Development Kit・OpenAI Agents SDKとしてマルチエージェント構築の基盤を提供しており、フレームワーク選定の際の比較対象になっている。",
+    "modelSlugs": [
+      "langgraph",
+      "crewai",
+      "autogen",
+      "semantic-kernel",
+      "google-adk",
+      "openai-agents-sdk"
+    ],
+    "comparisonRows": [
+      {
+        "item": "開発元",
+        "values": {
+          "langgraph": "LangChain",
+          "crewai": "CrewAI",
+          "autogen": "Microsoft Research",
+          "semantic-kernel": "Microsoft",
+          "google-adk": "Google",
+          "openai-agents-sdk": "OpenAI"
+        }
+      },
+      {
+        "item": "初出",
+        "values": {
+          "langgraph": "2024年",
+          "crewai": "2023年",
+          "autogen": "2023年",
+          "semantic-kernel": "2023年",
+          "google-adk": "2025年",
+          "openai-agents-sdk": "2025年(前身Swarmは2024年)"
+        }
+      },
+      {
+        "item": "協調方式",
+        "values": {
+          "langgraph": "グラフ(ノード・エッジ)による状態遷移",
+          "crewai": "役割(ロール)ベースのクルー編成",
+          "autogen": "エージェント間の対話(カンバセーション)",
+          "semantic-kernel": "プラグインベースのオーケストレーション",
+          "google-adk": "エージェントの階層的な組み合わせ",
+          "openai-agents-sdk": "エージェント間のハンドオフ"
+        }
+      },
+      {
+        "item": "ライセンス形態",
+        "values": {
+          "langgraph": "オープンソース",
+          "crewai": "オープンソース",
+          "autogen": "オープンソース",
+          "semantic-kernel": "オープンソース",
+          "google-adk": "オープンソース",
+          "openai-agents-sdk": "オープンソース"
+        }
+      }
+    ],
+    "events": [
+      {
+        "date": "2023",
+        "title": "Microsoft Research、AutoGenを公開",
+        "description": "複数エージェント間の対話に基づくマルチエージェントフレームワークとして展開された。",
+        "organizations": ["Microsoft Research"],
+        "relatedTerms": ["autogen"]
+      },
+      {
+        "date": "2023",
+        "title": "Microsoft、Semantic Kernelを公開",
+        "description": "LLMを既存アプリケーションへ統合するオープンソースSDKとして公開された。",
+        "organizations": ["Microsoft"],
+        "relatedTerms": ["semantic-kernel"]
+      },
+      {
+        "date": "2023",
+        "title": "CrewAIが公開",
+        "description": "役割ベースのマルチエージェント構築を簡潔に行えるフレームワークとして開発者コミュニティに普及した。",
+        "organizations": ["CrewAI"],
+        "relatedTerms": ["crewai"]
+      },
+      {
+        "date": "2024",
+        "title": "LangChainのチーム、LangGraphを公開",
+        "description": "状態を持つ複雑なエージェントアプリケーション構築向けのフレームワークとして展開された。",
+        "organizations": ["LangChain"],
+        "relatedTerms": ["langgraph"]
+      },
+      {
+        "date": "2024",
+        "title": "OpenAI、実験的なマルチエージェントフレームワーク「Swarm」を公開",
+        "description": "後のOpenAI Agents SDKの前身となった。",
+        "organizations": ["OpenAI"],
+        "relatedTerms": ["openai-agents-sdk"]
+      },
+      {
+        "date": "2025",
+        "title": "OpenAI、本番利用を想定した「OpenAI Agents SDK」を公開",
+        "description": "エージェント間のハンドオフを軸とした軽量なマルチエージェントフレームワークとして提供された。",
+        "organizations": ["OpenAI"],
+        "relatedTerms": ["openai-agents-sdk"]
+      },
+      {
+        "date": "2025",
+        "title": "Google、Agent Development Kit(ADK)を発表",
+        "description": "マルチエージェントシステムの構築・評価・デプロイを一貫してサポートするフレームワークとして発表された。",
+        "organizations": ["Google"],
+        "relatedTerms": ["google-adk"]
+      }
+    ],
+    "relatedTerms": ["multi-agent", "ai-agent", "orchestrator", "a2a", "agent-memory"],
+    "faq": [
+      {
+        "question": "LangGraphとCrewAI、どちらを選べばよい?",
+        "answer": "条件分岐やループを伴う複雑な制御フローを明示的に設計したい場合はLangGraphが向く。役割分担したエージェントのチームを比較的簡潔なコードで素早く試作したい場合はCrewAIが向く。"
+      },
+      {
+        "question": "マルチエージェントフレームワークとA2Aプロトコルの関係は?",
+        "answer": "LangGraph・CrewAI・AutoGen等のフレームワークは、それぞれの内部で複数のエージェントを協調させる仕組みを提供する。A2A(Agent2Agent)は、こうした異なるフレームワーク・ベンダーで構築されたエージェント同士が連携するための標準プロトコルであり、フレームワーク内部の協調方式とは扱う階層が異なる。"
+      }
+    ]
   }
 ]

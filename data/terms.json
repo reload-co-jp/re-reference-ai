@@ -6061,7 +6061,10 @@
       "langchain",
       "multi-agent",
       "crewai",
-      "ai-agent"
+      "ai-agent",
+      "semantic-kernel",
+      "google-adk",
+      "openai-agents-sdk"
     ],
     "faq": [
       {
@@ -6182,7 +6185,9 @@
       "multi-agent",
       "langgraph",
       "autogen",
-      "ai-agent"
+      "ai-agent",
+      "semantic-kernel",
+      "google-adk"
     ],
     "faq": [
       {
@@ -6238,7 +6243,8 @@
     "relatedTerms": [
       "multi-agent",
       "crewai",
-      "ai-agent"
+      "ai-agent",
+      "openai-agents-sdk"
     ],
     "faq": [
       {
@@ -18272,5 +18278,81 @@
       }
     ],
     "relatedTerms": ["coding-agent"]
+  },
+  {
+    "slug": "semantic-kernel",
+    "name": "Semantic Kernel",
+    "tagline": "Microsoftが提供する、LLMを既存アプリケーションへ統合するためのオープンソースSDK。マルチエージェントのオーケストレーション機能も備える",
+    "category": "エージェント",
+    "tags": ["フレームワーク", "マルチエージェント"],
+    "plainSummary": "Microsoftが作った、AIをアプリに組み込みやすくするSDK。複数のAIエージェントを協調させる機能もある。",
+    "summary": "Semantic Kernelは、Microsoftが提供するオープンソースのSDK。\nLLMの呼び出しをプラグインとして既存の.NET・Python・Javaアプリケーションへ統合できる。エージェント機能として、複数のエージェントに役割を与え協調させるマルチエージェントオーケストレーションの仕組みも提供する。",
+    "history": "2023年: MicrosoftがオープンソースSDK「Semantic Kernel」を公開。",
+    "advantages": [
+      ".NET・Python・Java等、複数言語のエコシステムに対応する",
+      "既存のエンタープライズアプリケーションへLLM機能を組み込みやすい"
+    ],
+    "disadvantages": [
+      "マルチエージェント関連の機能は比較的新しく、ベストプラクティスが発展途上にある",
+      "プラグイン・エージェント関連のAPI変更頻度が高く、追従コストがかかる"
+    ],
+    "comparisons": [
+      {
+        "slug": "langchain",
+        "note": "LangChainと同様LLMアプリ構築のためのフレームワークだが、Semantic Kernelは.NETエコシステムとの親和性やエンタープライズ統合に重点を置く"
+      }
+    ],
+    "relatedTerms": ["multi-agent", "langgraph", "crewai", "autogen"]
+  },
+  {
+    "slug": "google-adk",
+    "name": "Agent Development Kit",
+    "aliases": ["ADK", "Google ADK"],
+    "tagline": "Googleが提供する、マルチエージェントシステムの構築・評価・デプロイを行うオープンソースフレームワーク",
+    "category": "エージェント",
+    "tags": ["フレームワーク", "マルチエージェント"],
+    "plainSummary": "Googleが作った、複数のAIエージェントを組み合わせたシステムを作るオープンソースツール。",
+    "summary": "Agent Development Kit(ADK)は、Googleが提供するオープンソースフレームワーク。\n複数のエージェントを階層的に組み合わせるマルチエージェントシステムの構築・評価・デプロイまでを一貫してサポートする。Geminiに最適化されているが、他のモデルやフレームワークとの相互運用も意図して設計されている。",
+    "history": "2025年: GoogleがAgent Development Kit(ADK)を発表。",
+    "advantages": [
+      "エージェントの階層的な組み合わせによりマルチエージェントシステムを構造化しやすい",
+      "Google CloudやGeminiのエコシステムと統合しやすい"
+    ],
+    "disadvantages": [
+      "最適化の中心はGeminiモデルであり、他モデル利用時には機能差を考慮する必要がある",
+      "比較的新しいフレームワークであり、エコシステムや事例が発展途上にある"
+    ],
+    "comparisons": [
+      {
+        "slug": "langgraph",
+        "note": "LangGraphと同様マルチエージェントシステムの構築を目的とするが、ADKはGoogle Cloud・Geminiとの統合を軸に設計されている"
+      }
+    ],
+    "relatedTerms": ["multi-agent", "agentcore", "langgraph"]
+  },
+  {
+    "slug": "openai-agents-sdk",
+    "name": "OpenAI Agents SDK",
+    "tagline": "OpenAIが提供する、エージェント間のハンドオフ機能を備えた軽量なマルチエージェントフレームワーク",
+    "category": "エージェント",
+    "tags": ["フレームワーク", "マルチエージェント"],
+    "plainSummary": "OpenAIが作った、複数のAIエージェントに役割分担させタスクを引き継がせながら進める軽量ツール。",
+    "summary": "OpenAI Agents SDKは、OpenAIが提供する軽量なマルチエージェントフレームワーク。\nエージェントごとに役割・ツール・指示を定義し、会話の途中で別のエージェントへ処理を引き継ぐ「ハンドオフ」の仕組みを中心に設計されている。実験的フレームワーク「Swarm」を前身とする。",
+    "history": "2024年: OpenAIが実験的なマルチエージェントフレームワーク「Swarm」を公開。\n2025年: 本番利用を想定した後継の「OpenAI Agents SDK」を公開。",
+    "advantages": [
+      "エージェント間のハンドオフという単純な概念でマルチエージェントの処理フローを組み立てられる",
+      "OpenAIのモデル・APIとの親和性が高い"
+    ],
+    "disadvantages": [
+      "前身のSwarmは実験的な位置づけであり、設計思想の変遷を把握する必要がある",
+      "OpenAI以外のモデルを利用する場合、対応状況の確認が必要になる"
+    ],
+    "comparisons": [
+      {
+        "slug": "autogen",
+        "note": "AutoGenが複数エージェントの自由な対話を軸にするのに対し、OpenAI Agents SDKはエージェント間のハンドオフという明示的な処理の引き継ぎを軸に設計されている"
+      }
+    ],
+    "relatedTerms": ["multi-agent", "autogen", "function-calling"]
   }
 ]
