@@ -1396,5 +1396,365 @@
         "url": "https://blackforestlabs.ai/"
       }
     ]
+  },
+  {
+    "slug": "github-copilot-vs-codex",
+    "left": "github-copilot",
+    "right": "codex",
+    "summary": "GitHub CopilotはGitHubとMicrosoftが提供する、コード補完からチャット・自律的なコード編集までを担うAIペアプログラミングツール。CodexはOpenAIが提供する、ターミナルやクラウド上で自律的にコード生成・実行・修正するコーディングエージェント。",
+    "quickSummary": [
+      "GitHub Copilotは2021年から続くエディタ統合型のコード補完ツールとして先行し、Codexは2025年にOpenAIが自律型コーディングエージェントとして再展開したブランド。",
+      "GitHub CopilotはVS Code・JetBrains等幅広いエディタへ拡張機能として組み込む形態、Codexはターミナル(CLI)やクラウド上で自律的にタスクを完遂する形態が中心。",
+      "既存のエディタ環境をそのまま使いたいならGitHub Copilot、リポジトリ全体を横断した自律的なタスク遂行を重視するならCodexが選ばれやすい。"
+    ],
+    "table": [
+      {
+        "item": "Purpose",
+        "left": "幅広いエディタへのAIコード補完・チャット統合",
+        "right": "ターミナル・クラウド上での自律的なコード生成・実行・修正"
+      },
+      {
+        "item": "Developer",
+        "left": "GitHub / Microsoft",
+        "right": "OpenAI"
+      },
+      {
+        "item": "Release",
+        "left": "2021年6月(技術プレビュー)",
+        "right": "2025年(現行ブランドの再展開)"
+      },
+      {
+        "item": "提供形態",
+        "left": "エディタ拡張機能",
+        "right": "CLI / クラウド"
+      },
+      {
+        "item": "Ecosystem",
+        "left": "GitHub(Issue・PR等)との連携",
+        "right": "ChatGPT・OpenAI APIとの連携"
+      }
+    ],
+    "architecture": {
+      "left": "VS Code・JetBrains・Neovim等のエディタへ拡張機能として組み込まれ、コード補完に加えチャットや複数ファイルにまたがるタスクを進めるエージェントモードを備える。",
+      "right": "ターミナル上で動作するCLIやクラウド上の実行環境から、リポジトリ内のファイル読み書き・コマンド実行・テストを自律的に繰り返す構成を取る。"
+    },
+    "features": [
+      {
+        "feature": "自律的なコード実行・修正",
+        "left": "エージェントモードの範囲で対応",
+        "right": true
+      },
+      {
+        "feature": "幅広いエディタ対応",
+        "left": true,
+        "right": "限定的(CLIが中心)"
+      },
+      {
+        "feature": "リポジトリ全体を横断した自律実行",
+        "left": "限定的",
+        "right": true
+      },
+      {
+        "feature": "GitHubエコシステムとの統合",
+        "left": true,
+        "right": "限定的"
+      }
+    ],
+    "advantages": {
+      "left": [
+        "VS Code・JetBrains・Neovim等、幅広いエディタで利用できる",
+        "GitHubのエコシステム(Issue・PR等)と連携した機能を持つ"
+      ],
+      "right": [
+        "リポジトリ全体を横断的に扱い、コード生成から実行・テスト・修正までを自律的にこなせる",
+        "ChatGPTやOpenAI APIのエコシステムと統合しやすい"
+      ]
+    },
+    "disadvantages": {
+      "left": [
+        "提案されたコードの著作権・ライセンシングを巡る議論がある",
+        "補完中心の機能とエージェント的な自律機能が並存し、製品内での役割分担を把握しづらいことがある"
+      ],
+      "right": [
+        "自律的な実行権限を伴うため、サンドボックス等の安全対策が前提となる",
+        "2021年の同名モデルと混同されやすい"
+      ]
+    },
+    "bestUseCases": {
+      "left": "既存のエディタ環境を維持しながら、コード補完やチャットによる支援を受けたい場合。",
+      "right": "リポジトリ全体を横断したタスクを、ターミナルやクラウド上で自律的に完遂させたい場合。"
+    },
+    "migration": "GitHub CopilotからCodexへの移行は、エディタ拡張機能中心の利用からCLI・クラウド中心の運用への転換を伴う。両者は併用も可能で、日常的な補完はGitHub Copilot、大きめの自律タスクはCodexに任せるといった使い分けもされる。",
+    "faq": [
+      {
+        "question": "GitHub CopilotとCodex、どちらを選ぶべき?",
+        "answer": "既存エディタでの補完・チャット中心の支援を求めるならGitHub Copilotが向く。リポジトリ全体を横断する自律的なタスク遂行を求めるならCodexが向く。"
+      }
+    ]
+  },
+  {
+    "slug": "cursor-vs-windsurf",
+    "left": "cursor",
+    "right": "windsurf",
+    "summary": "CursorはAnysphereが開発する、VS Codeをフォークしたエディタ統合型のAI IDE。WindsurfはCodeiumが開発する、エージェント機能「Cascade」を統合したAIネイティブの統合開発環境。",
+    "quickSummary": [
+      "CursorとWindsurfは、いずれもVS Codeをベースとしたフォークで、AI機能をエディタの中核に統合したAI IDE。",
+      "Cursorはチャット・複数ファイル編集の統合を先行して確立し、Windsurfはエージェント機能「Cascade」による自律的な複数ファイル変更を特徴とする。",
+      "既存のCursorエコシステムに馴染みがあるならCursor、より自律的な複数ファイル変更を試したいならWindsurfが選ばれやすい。"
+    ],
+    "table": [
+      {
+        "item": "Purpose",
+        "left": "エディタ統合の対話的なコード編集",
+        "right": "エージェント機能Cascadeによる自律的な複数ファイル変更"
+      },
+      {
+        "item": "Developer",
+        "left": "Anysphere",
+        "right": "Codeium"
+      },
+      {
+        "item": "Release",
+        "left": "2023年",
+        "right": "2024年"
+      },
+      {
+        "item": "提供形態",
+        "left": "統合IDE(VS Codeフォーク)",
+        "right": "統合IDE(VS Codeフォーク)"
+      },
+      {
+        "item": "License",
+        "left": "商用",
+        "right": "商用"
+      }
+    ],
+    "architecture": {
+      "left": "VS Codeをフォークし、コード補完・チャット・複数ファイル編集の提案と適用をエディタ上から直接行える構成を採る。",
+      "right": "VS Codeをフォークし、エージェント機能「Cascade」が複数ファイルにまたがる変更を自律的に提案・実行する構成を採る。"
+    },
+    "features": [
+      {
+        "feature": "VS Code拡張機能との互換性",
+        "left": true,
+        "right": "フォーク元互換の範囲で対応"
+      },
+      {
+        "feature": "複数ファイルにまたがる自律的な変更(エージェント機能)",
+        "left": "対応(Composer/Agent機能)",
+        "right": "Cascadeとして前面に押し出す"
+      },
+      {
+        "feature": "独自のコード補完技術",
+        "left": "対応",
+        "right": "対応(Codeium由来の補完技術)"
+      }
+    ],
+    "advantages": {
+      "left": [
+        "コード補完・チャット・複数ファイル編集が単一のエディタ内に統合されている",
+        "既存のVS Code拡張機能やキーバインドとの互換性が高い"
+      ],
+      "right": [
+        "Cascadeによる複数ファイルにまたがる自律的な変更提案・適用ができる",
+        "独自のコード補完技術を基盤に持つ"
+      ]
+    },
+    "disadvantages": {
+      "left": [
+        "VS Codeのフォークであるため、本家VS Codeの更新への追従や拡張機能の互換性維持が必要になる",
+        "AIによる自動編集の範囲が広がるほど意図しない変更を見落とすリスクが増える"
+      ],
+      "right": [
+        "VS Codeベースのフォークであり、本家の更新への追従や拡張機能の互換性維持が必要になる",
+        "AIによる自動編集の範囲が広がるほど意図しない変更を見落とすリスクが増える"
+      ]
+    },
+    "bestUseCases": {
+      "left": "既存のVS Code拡張機能やキーバインドを維持しつつ、対話的なAI編集を取り入れたい場合。",
+      "right": "複数ファイルにまたがる変更をエージェントに自律的に任せたい場合。"
+    },
+    "migration": "CursorとWindsurfはいずれもVS Codeベースであるため、拡張機能や設定の大部分は流用しやすい。移行時は、それぞれ独自のAI機能(Cursor Composer/Agent、Windsurf Cascade)の操作体系に慣れる必要がある。",
+    "faq": [
+      {
+        "question": "CursorとWindsurf、どちらを選ぶべき?",
+        "answer": "対話的な複数ファイル編集を中心に使いたい場合はCursorが向く。エージェント機能による自律的な変更提案を重視する場合はWindsurfが向く。実際の使用感は個々のワークフローに左右されるため、両方を試して比較することが勧められる。"
+      }
+    ]
+  },
+  {
+    "slug": "langgraph-vs-semantic-kernel",
+    "left": "langgraph",
+    "right": "semantic-kernel",
+    "summary": "LangGraphはLangChainのチームが開発する、状態遷移をグラフとして定義するマルチエージェントフレームワーク。Semantic Kernelは、Microsoftが提供するLLM統合SDKで、マルチエージェントのオーケストレーション機能も備える。",
+    "quickSummary": [
+      "LangGraphはグラフ構造による明示的な状態遷移の制御を軸に設計され、Semantic KernelはLLMをアプリケーションに統合するSDKの一部としてマルチエージェント機能を提供する。",
+      "LangGraphはPython/TypeScriptエコシステム、Semantic Kernelは.NET・Python・Java等の複数言語エコシステムに対応する。",
+      "複雑な分岐・ループを伴うエージェントワークフローを細かく制御したいならLangGraph、既存の.NET/エンタープライズアプリケーションへLLM機能を統合したいならSemantic Kernelが選ばれやすい。"
+    ],
+    "table": [
+      {
+        "item": "Purpose",
+        "left": "グラフベースの状態遷移によるマルチエージェント構築",
+        "right": "LLM機能を既存アプリケーションへ統合するSDK(マルチエージェント機能含む)"
+      },
+      {
+        "item": "Developer",
+        "left": "LangChain",
+        "right": "Microsoft"
+      },
+      {
+        "item": "Release",
+        "left": "2024年",
+        "right": "2023年"
+      },
+      {
+        "item": "Programming Language",
+        "left": "Python/TypeScript",
+        "right": ".NET/Python/Java"
+      },
+      {
+        "item": "License",
+        "left": "オープンソース",
+        "right": "オープンソース"
+      }
+    ],
+    "architecture": {
+      "left": "アプリケーションの各処理ステップをノードとして定義し、ノード間の遷移条件をエッジとして表現するグラフ構造でアプリケーション全体を構築する。",
+      "right": "LLM呼び出しをプラグインとして既存アプリケーションへ統合し、複数のエージェントに役割を与え協調させるオーケストレーション機能を上位に持つ。"
+    },
+    "features": [
+      {
+        "feature": "グラフによる状態遷移の明示的制御",
+        "left": true,
+        "right": "限定的"
+      },
+      {
+        "feature": "複数言語エコシステム対応",
+        "left": "限定的(Python/TypeScript中心)",
+        "right": true
+      },
+      {
+        "feature": "エンタープライズアプリケーションへの統合のしやすさ",
+        "left": "限定的",
+        "right": true
+      }
+    ],
+    "advantages": {
+      "left": [
+        "条件分岐・ループ・並列処理など、複雑な制御フローを明示的なグラフとして表現できる",
+        "複数エージェント間で状態を共有するマルチエージェント構成を構築しやすい"
+      ],
+      "right": [
+        ".NET・Python・Java等、複数言語のエコシステムに対応する",
+        "既存のエンタープライズアプリケーションへLLM機能を組み込みやすい"
+      ]
+    },
+    "disadvantages": {
+      "left": [
+        "単純なタスクに対しては、グラフ構造を定義する分オーバーヘッドが大きく感じられやすい",
+        "LangChainのエコシステムに関する前提知識を要する場合がある"
+      ],
+      "right": [
+        "マルチエージェント関連の機能は比較的新しく、ベストプラクティスが発展途上にある",
+        "プラグイン・エージェント関連のAPI変更頻度が高く、追従コストがかかる"
+      ]
+    },
+    "bestUseCases": {
+      "left": "分岐・ループを含む複雑なエージェントワークフローを、Python/TypeScriptエコシステムで細かく制御したい場合。",
+      "right": ".NET等の既存エンタープライズアプリケーションへLLM機能やマルチエージェント機能を統合したい場合。"
+    },
+    "migration": "LangGraphからSemantic Kernelへ移行する場合、グラフのノード・エッジとして表現していた処理を、Semantic Kernelのプラグイン・エージェントオーケストレーションの概念で再設計する必要がある。開発言語のエコシステムが異なる点にも注意が必要。",
+    "faq": [
+      {
+        "question": "LangGraphとSemantic Kernel、どちらを選ぶべき?",
+        "answer": "Python/TypeScriptで複雑な状態遷移を細かく制御したい場合はLangGraphが向く。.NET等の複数言語エコシステムや既存のエンタープライズアプリケーションへの統合を重視する場合はSemantic Kernelが向く。"
+      }
+    ]
+  },
+  {
+    "slug": "autogen-vs-openai-agents-sdk",
+    "left": "autogen",
+    "right": "openai-agents-sdk",
+    "summary": "AutoGenはMicrosoft Researchが開発する、複数のAIエージェントの対話を通じてタスクを解決するフレームワーク。OpenAI Agents SDKはOpenAIが提供する、エージェント間のハンドオフ機能を軸にした軽量なマルチエージェントフレームワーク。",
+    "quickSummary": [
+      "AutoGenはエージェント同士の自由な対話(カンバセーション)を軸に設計され、OpenAI Agents SDKはエージェント間の明示的なハンドオフを軸に設計されている。",
+      "AutoGenは複雑な協調タスクへの柔軟な対応を狙い、OpenAI Agents SDKは単純な概念でマルチエージェントの処理フローを組み立てられる軽量さを狙う。",
+      "柔軟な対話パターンを重視するならAutoGen、OpenAIのモデル・APIとの親和性やシンプルさを重視するならOpenAI Agents SDKが選ばれやすい。"
+    ],
+    "table": [
+      {
+        "item": "Purpose",
+        "left": "対話ベースの複数エージェント協調",
+        "right": "ハンドオフベースの軽量なマルチエージェント構築"
+      },
+      {
+        "item": "Developer",
+        "left": "Microsoft Research",
+        "right": "OpenAI"
+      },
+      {
+        "item": "Release",
+        "left": "2023年",
+        "right": "2025年(前身Swarmは2024年)"
+      },
+      {
+        "item": "License",
+        "left": "オープンソース",
+        "right": "オープンソース"
+      }
+    ],
+    "architecture": {
+      "left": "各エージェントに役割やシステムプロンプトを設定し、エージェント同士あるいはエージェントと人間との間でメッセージをやり取りするグループチャット形式の対話を軸に処理を進める。",
+      "right": "エージェントごとに役割・ツール・指示を定義し、会話の途中で別のエージェントへ処理を引き継ぐハンドオフの仕組みを軸に処理を進める。"
+    },
+    "features": [
+      {
+        "feature": "エージェント間の自由な対話(グループチャット)",
+        "left": true,
+        "right": "限定的"
+      },
+      {
+        "feature": "明示的なハンドオフによる処理引き継ぎ",
+        "left": "限定的",
+        "right": true
+      },
+      {
+        "feature": "OpenAIモデル・APIとの親和性",
+        "left": "対応(モデル非依存)",
+        "right": true
+      }
+    ],
+    "advantages": {
+      "left": [
+        "エージェント同士の対話パターンを柔軟に設計でき、複雑な協調タスクに対応しやすい",
+        "コード生成・実行を伴うエージェントワークフローの構築に強みを持つ"
+      ],
+      "right": [
+        "エージェント間のハンドオフという単純な概念でマルチエージェントの処理フローを組み立てられる",
+        "OpenAIのモデル・APIとの親和性が高い"
+      ]
+    },
+    "disadvantages": {
+      "left": [
+        "対話パターンが柔軟な分、意図した挙動になるよう設計・調整する難易度が上がりやすい",
+        "エージェント数や対話のターン数が増えるほど、デバッグや挙動を把握しづらくなる"
+      ],
+      "right": [
+        "前身のSwarmは実験的な位置づけであり、設計思想の変遷を把握する必要がある",
+        "OpenAI以外のモデルを利用する場合、対応状況の確認が必要になる"
+      ]
+    },
+    "bestUseCases": {
+      "left": "エージェント同士が自由に対話しながら、コード生成・レビュー等の柔軟な協調タスクを進めたい場合。",
+      "right": "OpenAIのモデル・APIを前提に、エージェント間のハンドオフという単純な概念でマルチエージェントの処理フローを組み立てたい場合。"
+    },
+    "migration": "AutoGenからOpenAI Agents SDKへ移行する場合、グループチャット形式の対話パターンを、エージェント間の明示的なハンドオフとして再設計する必要がある。",
+    "faq": [
+      {
+        "question": "AutoGenとOpenAI Agents SDK、どちらを選ぶべき?",
+        "answer": "エージェント同士の柔軟な対話パターンを重視する場合や特定モデルに依存したくない場合はAutoGenが向く。OpenAIのモデル・APIを前提にシンプルなハンドオフの仕組みで組み立てたい場合はOpenAI Agents SDKが向く。"
+      }
+    ]
   }
 ]

@@ -6073,6 +6073,10 @@
       {
         "slug": "crewai",
         "note": "LangGraphとCrewAIは、いずれもマルチエージェントアプリケーションを構築するためのフレームワーク"
+      },
+      {
+        "slug": "semantic-kernel",
+        "note": "LangGraphがグラフ構造による明示的な状態遷移の制御を軸にするのに対し、Semantic KernelはLLM統合SDKの一部としてマルチエージェント機能を提供する"
       }
     ],
     "relatedTerms": [
@@ -16805,6 +16809,10 @@
       {
         "slug": "coding-agent",
         "note": "CodexはOpenAIが提供する商用コーディングエージェント製品の1つ"
+      },
+      {
+        "slug": "github-copilot",
+        "note": "Codexがターミナル・クラウド上での自律的なタスク遂行を軸にするのに対し、GitHub Copilotはエディタ統合型のコード補完・チャットを軸にする"
       }
     ],
     "relatedTerms": ["coding-agent", "gpt", "sandboxing", "github-copilot"]
@@ -18163,6 +18171,10 @@
       {
         "slug": "coding-agent",
         "note": "GitHub CopilotはMicrosoft/GitHubが提供する商用コーディング支援ツールの1つ"
+      },
+      {
+        "slug": "codex",
+        "note": "GitHub Copilotがエディタ統合型のコード補完・チャットを軸にするのに対し、Codexはターミナル・クラウド上での自律的なタスク遂行を軸にする"
       }
     ],
     "relatedTerms": ["coding-agent", "codex", "ai-ide"]
@@ -18318,6 +18330,10 @@
       {
         "slug": "langchain",
         "note": "LangChainと同様LLMアプリ構築のためのフレームワークだが、Semantic Kernelは.NETエコシステムとの親和性やエンタープライズ統合に重点を置く"
+      },
+      {
+        "slug": "langgraph",
+        "note": "Semantic KernelがLLM統合SDKの一部としてマルチエージェント機能を提供するのに対し、LangGraphはグラフ構造による明示的な状態遷移の制御を軸にする"
       }
     ],
     "relatedTerms": ["multi-agent", "langgraph", "crewai", "autogen"]
