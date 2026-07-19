@@ -547,5 +547,124 @@
         "answer": "インフラの構築・運用コストをかけたくない場合はPineconeのようなフルマネージドサービスが向く。既存インフラとの統合やコスト最適化を重視する場合は、Weaviate・Milvus・Qdrant・Chroma・pgvectorのようなセルフホスト可能な選択肢が向く。"
       }
     ]
+  },
+  {
+    "slug": "closed-weight-llm-models",
+    "title": "主要クローズドウェイトLLMモデル一覧",
+    "description": "GPT・Claude・Gemini・Grok・Cohere等、モデルの重みが非公開でAPI経由で提供される主要なクローズドウェイトLLMを一覧で紹介。各モデルの特徴・開発元比較・発表年表まとめ。",
+    "category": "モデル",
+    "intro": "クローズドウェイトモデルとは、モデルの重み(パラメータ)が公開されず、開発元が提供するAPIやアプリケーションを通じてのみ利用できるモデルを指す。Llama・Mistral・Qwen等のオープンウェイトモデルとは対照的に、開発元が推論環境や利用条件を管理し、モデル自体を手元にダウンロードして実行することはできない。OpenAIのGPT、AnthropicのClaude、GoogleのGemini、xAIのGrok、CohereのCommand等、フロンティアモデルの多くはクローズドウェイトとして提供されており、モデルの重みを直接公開しない代わりに、継続的なアップデートやマネージドなインフラ、安全対策等をAPI・サービスの一部として提供している。",
+    "modelSlugs": ["gpt", "claude", "gemini", "grok", "cohere"],
+    "comparisonRows": [
+      {
+        "item": "開発元",
+        "values": {
+          "gpt": "OpenAI",
+          "claude": "Anthropic",
+          "gemini": "Google",
+          "grok": "xAI",
+          "cohere": "Cohere"
+        }
+      },
+      {
+        "item": "初出",
+        "values": {
+          "gpt": "2018年(GPT-1)",
+          "claude": "2023年3月",
+          "gemini": "2023年12月",
+          "grok": "2023年",
+          "cohere": "2022年(API公開)"
+        }
+      },
+      {
+        "item": "モダリティ",
+        "values": {
+          "gpt": "テキスト・画像・音声等マルチモーダル",
+          "claude": "テキスト・画像",
+          "gemini": "テキスト・画像・音声・動画",
+          "grok": "テキスト・画像等マルチモーダル",
+          "cohere": "テキスト・埋め込み"
+        }
+      },
+      {
+        "item": "特徴",
+        "values": {
+          "gpt": "ChatGPTを通じた一般利用者への広範な普及",
+          "claude": "安全性とアライメントを重視した設計",
+          "gemini": "Google製品・マルチモーダル処理との統合",
+          "grok": "X(旧Twitter)との統合",
+          "cohere": "企業向けRAG・検索用途への特化"
+        }
+      }
+    ],
+    "events": [
+      {
+        "date": "2018",
+        "title": "OpenAI、GPT-1を発表",
+        "description": "Transformerデコーダによる事前学習と個別タスクへの微調整という枠組みを示した。",
+        "organizations": ["OpenAI"],
+        "relatedTerms": ["gpt"]
+      },
+      {
+        "date": "2019",
+        "title": "Cohereが設立",
+        "description": "Google Brain出身のメンバーにより設立された。",
+        "organizations": ["Cohere"],
+        "relatedTerms": ["cohere"]
+      },
+      {
+        "date": "2022",
+        "title": "OpenAI、ChatGPTを公開",
+        "description": "GPT-3.5をベースにした対話サービスとして広く普及した。",
+        "organizations": ["OpenAI"],
+        "relatedTerms": ["gpt"]
+      },
+      {
+        "date": "2023-03",
+        "title": "Anthropic、最初の商用モデルClaudeを公開",
+        "description": "安全性とアライメントを重視したモデルとして展開を開始した。",
+        "organizations": ["Anthropic"],
+        "relatedTerms": ["claude"]
+      },
+      {
+        "date": "2023",
+        "title": "xAIが設立され、Grokの最初のバージョンを発表",
+        "description": "X(旧Twitter)との統合を特徴とするモデルとして展開された。",
+        "organizations": ["xAI"],
+        "relatedTerms": ["grok"]
+      },
+      {
+        "date": "2023",
+        "title": "OpenAI、マルチモーダル対応のGPT-4を発表",
+        "description": "テキストに加え画像入力にも対応したモデルとして発表された。",
+        "organizations": ["OpenAI"],
+        "relatedTerms": ["gpt"]
+      },
+      {
+        "date": "2023-12",
+        "title": "Google DeepMind、Gemini 1.0を発表",
+        "description": "Ultra・Pro・Nanoの3サイズで構成されるマルチモーダルモデルとして発表された。",
+        "organizations": ["Google DeepMind"],
+        "relatedTerms": ["gemini"]
+      },
+      {
+        "date": "2024",
+        "title": "Cohere、Command Rシリーズを発表",
+        "description": "検索・ツール利用・引用機能を強化し、企業向けRAG用途での採用を拡大した。",
+        "organizations": ["Cohere"],
+        "relatedTerms": ["cohere"]
+      }
+    ],
+    "relatedTerms": ["foundation-model", "frontier-model", "reasoning-model"],
+    "faq": [
+      {
+        "question": "クローズドウェイトとオープンウェイトの違いは?",
+        "answer": "クローズドウェイトはモデルの重みが非公開で、開発元が提供するAPIやアプリケーション経由でのみ利用できる。オープンウェイトはモデルの重みが公開されており、利用者が自前の環境でダウンロード・実行・ファインチューニングできる点が異なる。"
+      },
+      {
+        "question": "クローズドウェイトモデルを使うメリットは?",
+        "answer": "開発元が継続的にモデルを更新し、推論インフラの構築・運用や安全対策をサービス側が担う。利用者はAPIを呼び出すだけで最新モデルの性能を利用でき、自前でGPU等の実行環境を用意する必要がない。"
+      }
+    ]
   }
 ]
