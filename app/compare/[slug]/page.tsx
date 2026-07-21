@@ -8,7 +8,8 @@ import { ReferenceList } from "components/elements/reference-list"
 import { ComparisonCard } from "components/comparison/comparison-card"
 import { ComparisonTable } from "components/comparison/comparison-table"
 import { FeatureTable } from "components/comparison/feature-table"
-import { toJsonLd } from "lib/json-ld"
+import { getFileGitDates } from "lib/git-dates"
+import { organizationRef, toJsonLd } from "lib/json-ld"
 import { SITE_NAME, SITE_OG_IMAGE_URL, SITE_URL } from "lib/site"
 import { linkifyTermMentions } from "lib/term-links"
 import { getTermBySlug } from "lib/terms"
@@ -72,6 +73,7 @@ const buildJsonLd = (comparison: Comparison, leftName: string, rightName: string
   const url = `${SITE_URL}/compare/${comparison.slug}/`
   const leftTerm = getTermBySlug(comparison.left)
   const rightTerm = getTermBySlug(comparison.right)
+  const { datePublished, dateModified } = getFileGitDates("data/comparisons.json")
 
   const techArticle = {
     "@context": "https://schema.org",
@@ -81,6 +83,10 @@ const buildJsonLd = (comparison: Comparison, leftName: string, rightName: string
     url,
     image: SITE_OG_IMAGE_URL,
     about: `${leftName} vs ${rightName}`,
+    datePublished,
+    dateModified,
+    author: organizationRef,
+    publisher: organizationRef,
     isPartOf: {
       "@type": "WebSite",
       name: SITE_NAME,

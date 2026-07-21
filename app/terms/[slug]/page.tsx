@@ -7,8 +7,9 @@ import { Badge, Container, Section, SectionTitle } from "components/elements/lay
 import { ComparisonCard } from "components/comparison/comparison-card"
 import { TimelineCard } from "components/timeline/timeline-card"
 import { getComparisonsForTerm } from "lib/comparisons"
-import { toJsonLd } from "lib/json-ld"
-import { SITE_NAME, SITE_URL } from "lib/site"
+import { getFileGitDates } from "lib/git-dates"
+import { organizationRef, toJsonLd } from "lib/json-ld"
+import { SITE_NAME, SITE_OG_IMAGE_URL, SITE_URL } from "lib/site"
 import {
   getCategorySlug,
   getRelatedTerms,
@@ -50,7 +51,7 @@ export const generateMetadata = async ({ params }: Props): Promise<Metadata> => 
     120,
   )
   const url = `${SITE_URL}/terms/${term.slug}/`
-  const image = `${SITE_URL}/terms/${term.slug}/opengraph-image`
+  const image = SITE_OG_IMAGE_URL
 
   return {
     title,
@@ -78,7 +79,8 @@ const buildJsonLd = (term: Term, relatedTerms: Term[]) => {
   const url = `${SITE_URL}/terms/${term.slug}/`
   const categoryUrl = `${SITE_URL}/categories/${getCategorySlug(term.category)}/`
   const description = term.plainSummary ?? term.summary ?? term.tagline
-  const image = `${SITE_URL}/terms/${term.slug}/opengraph-image`
+  const image = SITE_OG_IMAGE_URL
+  const { datePublished, dateModified } = getFileGitDates("data/terms.json")
 
   const definedTerm = {
     "@context": "https://schema.org",
@@ -101,6 +103,10 @@ const buildJsonLd = (term: Term, relatedTerms: Term[]) => {
     image,
     about: term.name,
     keywords: term.tags?.join(", "),
+    datePublished,
+    dateModified,
+    author: organizationRef,
+    publisher: organizationRef,
     isPartOf: {
       "@type": "WebSite",
       name: SITE_NAME,

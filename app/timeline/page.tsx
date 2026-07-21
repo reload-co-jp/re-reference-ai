@@ -3,7 +3,7 @@ import { FC } from "react"
 import { Breadcrumb } from "components/elements/breadcrumb"
 import { Container, Section, SectionTitle } from "components/elements/layout"
 import { TimelineCard } from "components/timeline/timeline-card"
-import { toJsonLd } from "lib/json-ld"
+import { buildItemListJsonLd, toJsonLd } from "lib/json-ld"
 import { SITE_NAME, SITE_OG_IMAGE_URL, SITE_URL } from "lib/site"
 import { timelineSummaries } from "lib/timelines"
 
@@ -36,10 +36,22 @@ const breadcrumbList = {
   ],
 }
 
+const itemList = buildItemListJsonLd(
+  TITLE,
+  timelineSummaries.map((timeline) => ({
+    name: timeline.title,
+    url: `${SITE_URL}/timeline/${timeline.slug}/`,
+  })),
+)
+
 const TimelineIndexPage: FC = () => (
   <Container>
     <script
       dangerouslySetInnerHTML={{ __html: toJsonLd(breadcrumbList) }}
+      type="application/ld+json"
+    />
+    <script
+      dangerouslySetInnerHTML={{ __html: toJsonLd(itemList) }}
       type="application/ld+json"
     />
     <Breadcrumb items={[{ href: "/", name: SITE_NAME }, { name: TITLE }]} />

@@ -3,11 +3,16 @@ import { FC } from "react"
 import { Breadcrumb } from "components/elements/breadcrumb"
 import { Container, Section } from "components/elements/layout"
 import { toJsonLd } from "lib/json-ld"
-import { SITE_DESCRIPTION, SITE_NAME, SITE_OG_IMAGE_URL, SITE_URL } from "lib/site"
+import {
+  SITE_DESCRIPTION,
+  SITE_NAME,
+  SITE_OG_IMAGE_URL,
+  SITE_PUBLISHER_NAME,
+  SITE_URL,
+} from "lib/site"
 
 const TITLE = "運営者情報"
 const DESCRIPTION = `${SITE_NAME}(RRA)の運営者情報。`
-const OPERATOR_NAME = "Reload"
 
 export const metadata: Metadata = {
   title: TITLE,
@@ -36,7 +41,7 @@ const breadcrumbList = {
 
 const ROWS: { label: string; value: string }[] = [
   { label: "サイト名", value: `${SITE_NAME}（RRA）` },
-  { label: "運営", value: OPERATOR_NAME },
+  { label: "運営", value: SITE_PUBLISHER_NAME },
   { label: "サイト概要", value: SITE_DESCRIPTION },
 ]
 

@@ -4,7 +4,7 @@ import { notFound } from "next/navigation"
 import { Breadcrumb } from "components/elements/breadcrumb"
 import { Container, Section, SectionTitle } from "components/elements/layout"
 import { TermCard } from "components/term/term-card"
-import { toJsonLd } from "lib/json-ld"
+import { buildItemListJsonLd, toJsonLd } from "lib/json-ld"
 import { SITE_NAME, SITE_OG_IMAGE_URL, SITE_URL } from "lib/site"
 import { getAllTags, getTagBySlug, getTagDescription, getTagSlug, getTermsByTag } from "lib/terms"
 
@@ -72,10 +72,19 @@ const TagPage: FC<Props> = async ({ params }) => {
     ],
   }
 
+  const itemList = buildItemListJsonLd(
+    `${tag}の用語一覧`,
+    matchedTerms.map((term) => ({ name: term.name, url: `${SITE_URL}/terms/${term.slug}/` })),
+  )
+
   return (
     <Container>
       <script
         dangerouslySetInnerHTML={{ __html: toJsonLd(breadcrumbList) }}
+        type="application/ld+json"
+      />
+      <script
+        dangerouslySetInnerHTML={{ __html: toJsonLd(itemList) }}
         type="application/ld+json"
       />
       <Breadcrumb items={[{ href: "/", name: SITE_NAME }, { name: tag }]} />

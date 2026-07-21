@@ -4,7 +4,7 @@ import { Breadcrumb } from "components/elements/breadcrumb"
 import { Container, Section, SectionTitle } from "components/elements/layout"
 import { ArticleCard } from "components/article/article-card"
 import { articleSummaries } from "lib/articles"
-import { toJsonLd } from "lib/json-ld"
+import { buildItemListJsonLd, toJsonLd } from "lib/json-ld"
 import { SITE_NAME, SITE_OG_IMAGE_URL, SITE_URL } from "lib/site"
 
 const TITLE = "特集記事(Articles)"
@@ -36,10 +36,22 @@ const breadcrumbList = {
   ],
 }
 
+const itemList = buildItemListJsonLd(
+  TITLE,
+  articleSummaries.map((article) => ({
+    name: article.title,
+    url: `${SITE_URL}/articles/${article.slug}/`,
+  })),
+)
+
 const ArticleIndexPage: FC = () => (
   <Container>
     <script
       dangerouslySetInnerHTML={{ __html: toJsonLd(breadcrumbList) }}
+      type="application/ld+json"
+    />
+    <script
+      dangerouslySetInnerHTML={{ __html: toJsonLd(itemList) }}
       type="application/ld+json"
     />
     <Breadcrumb items={[{ href: "/", name: SITE_NAME }, { name: TITLE }]} />

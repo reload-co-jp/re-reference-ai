@@ -9,7 +9,8 @@ import { Badge, Container, Section, SectionTitle } from "components/elements/lay
 import { ReferenceList } from "components/elements/reference-list"
 import { TimelineView } from "components/timeline/timeline-view"
 import { Article, articles, getArticleBySlug, getArticleModels } from "lib/articles"
-import { toJsonLd } from "lib/json-ld"
+import { getFileGitDates } from "lib/git-dates"
+import { organizationRef, toJsonLd } from "lib/json-ld"
 import { SITE_NAME, SITE_OG_IMAGE_URL, SITE_URL } from "lib/site"
 import { linkifyTermMentions } from "lib/term-links"
 import { getTermBySlug } from "lib/terms"
@@ -61,6 +62,7 @@ export const generateMetadata = async ({ params }: Props): Promise<Metadata> => 
 const buildJsonLd = (article: Article) => {
   const url = `${SITE_URL}/articles/${article.slug}/`
   const models = getArticleModels(article)
+  const { datePublished, dateModified } = getFileGitDates("data/articles.json")
 
   const techArticle = {
     "@context": "https://schema.org",
@@ -70,6 +72,10 @@ const buildJsonLd = (article: Article) => {
     url,
     image: SITE_OG_IMAGE_URL,
     about: article.title,
+    datePublished,
+    dateModified,
+    author: organizationRef,
+    publisher: organizationRef,
     isPartOf: {
       "@type": "WebSite",
       name: SITE_NAME,

@@ -3,7 +3,7 @@ import { Inter, Playfair_Display } from "next/font/google"
 import Link from "next/link"
 import { GoogleAnalytics } from "components/analytics/google-analytics"
 import { Title } from "components/elements/layout"
-import { toJsonLd } from "lib/json-ld"
+import { buildOrganizationJsonLd, organizationRef, toJsonLd } from "lib/json-ld"
 import {
   SITE_DESCRIPTION,
   SITE_KEYWORDS,
@@ -75,12 +75,15 @@ const websiteJsonLd = {
   alternateName: "RRA",
   description: SITE_DESCRIPTION,
   url: SITE_URL,
+  publisher: organizationRef,
   potentialAction: {
     "@type": "SearchAction",
     target: `${SITE_URL}/?q={search_term_string}`,
     "query-input": "required name=search_term_string",
   },
 }
+
+const organizationJsonLd = buildOrganizationJsonLd()
 
 const RootLayout = ({ children }: { children: React.ReactNode }) => {
   return (
@@ -89,6 +92,10 @@ const RootLayout = ({ children }: { children: React.ReactNode }) => {
         <GoogleAnalytics />
         <script
           dangerouslySetInnerHTML={{ __html: toJsonLd(websiteJsonLd) }}
+          type="application/ld+json"
+        />
+        <script
+          dangerouslySetInnerHTML={{ __html: toJsonLd(organizationJsonLd) }}
           type="application/ld+json"
         />
         <header
