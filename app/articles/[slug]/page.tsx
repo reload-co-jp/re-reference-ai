@@ -62,7 +62,9 @@ export const generateMetadata = async ({ params }: Props): Promise<Metadata> => 
 const buildJsonLd = (article: Article) => {
   const url = `${SITE_URL}/articles/${article.slug}/`
   const models = getArticleModels(article)
-  const { datePublished, dateModified } = getFileGitDates("data/articles.json")
+  const gitDates = getFileGitDates("data/articles.json")
+  const datePublished = gitDates.datePublished
+  const dateModified = article.updatedAt ?? gitDates.dateModified
 
   const techArticle = {
     "@context": "https://schema.org",

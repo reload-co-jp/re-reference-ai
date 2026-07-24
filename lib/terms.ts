@@ -55,6 +55,7 @@ export type Term = {
   relatedTerms?: string[]
   faq?: FaqItem[]
   references?: Reference[]
+  updatedAt?: string
 }
 
 import categoriesData from "data/categories.json"

@@ -27,6 +27,7 @@ export type Comparison = {
   migration?: string
   faq?: FaqItem[]
   references?: Reference[]
+  updatedAt?: string
 }
 
 import comparisonsData from "data/comparisons.json"

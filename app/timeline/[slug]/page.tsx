@@ -74,7 +74,9 @@ const buildJsonLd = (timeline: Timeline) => {
   const mentions = mentionSlugs
     .map((slug) => getTermBySlug(slug))
     .filter((term): term is NonNullable<typeof term> => Boolean(term))
-  const { datePublished, dateModified } = getFileGitDates("data/timelines.json")
+  const gitDates = getFileGitDates("data/timelines.json")
+  const datePublished = gitDates.datePublished
+  const dateModified = timeline.updatedAt ?? gitDates.dateModified
 
   const techArticle = {
     "@context": "https://schema.org",

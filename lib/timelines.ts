@@ -26,6 +26,7 @@ export type Timeline = {
   relatedTerms?: string[]
   faq?: FaqItem[]
   references?: Reference[]
+  updatedAt?: string
 }
 
 import timelinesData from "data/timelines.json"

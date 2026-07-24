@@ -18,6 +18,7 @@ export type Article = {
   relatedTerms?: string[]
   faq?: FaqItem[]
   references?: Reference[]
+  updatedAt?: string
 }
 
 import articlesData from "data/articles.json"

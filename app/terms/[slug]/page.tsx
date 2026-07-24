@@ -80,29 +80,24 @@ const buildJsonLd = (term: Term, relatedTerms: Term[]) => {
   const categoryUrl = `${SITE_URL}/categories/${getCategorySlug(term.category)}/`
   const description = term.plainSummary ?? term.summary ?? term.tagline
   const image = SITE_OG_IMAGE_URL
-  const { datePublished, dateModified } = getFileGitDates("data/terms.json")
+  const gitDates = getFileGitDates("data/terms.json")
+  const datePublished = gitDates.datePublished
+  const dateModified = term.updatedAt ?? gitDates.dateModified
 
-  const definedTerm = {
+  const definedTermArticle = {
     "@context": "https://schema.org",
-    "@type": "DefinedTerm",
+    "@type": ["TechArticle", "DefinedTerm"],
     name: term.name,
-    alternateName: term.aliases,
-    description,
-    url,
-    image,
-    inDefinedTermSet: `${SITE_URL}/`,
-    termCode: term.category,
-  }
-
-  const techArticle = {
-    "@context": "https://schema.org",
-    "@type": "TechArticle",
     headline: term.name,
+    alternateName: term.aliases,
     description,
     url,
     image,
     about: term.name,
     keywords: term.tags?.join(", "),
+    inDefinedTermSet: `${SITE_URL}/`,
+    termCode: term.category,
+    mainEntityOfPage: url,
     datePublished,
     dateModified,
     author: organizationRef,
@@ -145,7 +140,7 @@ const buildJsonLd = (term: Term, relatedTerms: Term[]) => {
       })),
     }
 
-  return [definedTerm, techArticle, breadcrumbList, faqPage].filter(Boolean)
+  return [definedTermArticle, breadcrumbList, faqPage].filter(Boolean)
 }
 
 const TermPage: FC<Props> = async ({ params }) => {
@@ -164,9 +159,9 @@ const TermPage: FC<Props> = async ({ params }) => {
 
   return (
     <Container>
-      {jsonLdBlocks.map((block) => (
+      {jsonLdBlocks.map((block, index) => (
         <script
-          key={(block as { "@type": string })["@type"]}
+          key={index}
           dangerouslySetInnerHTML={{ __html: toJsonLd(block) }}
           type="application/ld+json"
         />

@@ -73,7 +73,9 @@ const buildJsonLd = (comparison: Comparison, leftName: string, rightName: string
   const url = `${SITE_URL}/compare/${comparison.slug}/`
   const leftTerm = getTermBySlug(comparison.left)
   const rightTerm = getTermBySlug(comparison.right)
-  const { datePublished, dateModified } = getFileGitDates("data/comparisons.json")
+  const gitDates = getFileGitDates("data/comparisons.json")
+  const datePublished = gitDates.datePublished
+  const dateModified = comparison.updatedAt ?? gitDates.dateModified
 
   const techArticle = {
     "@context": "https://schema.org",
