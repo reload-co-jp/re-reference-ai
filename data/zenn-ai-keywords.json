@@ -1,364 +1,490 @@
 {
-  "generatedAt": "2026-07-15T14:30:05.619Z",
+  "generatedAt": "2026-07-26T06:19:29.006Z",
   "articleCount": 500,
   "keywords": [
     {
       "keyword": "Code",
-      "count": 64,
+      "count": 70,
       "samples": [
         {
-          "title": "Claude Code ToolSearch実践ガイド——公式ドキュメントにない4つの挙動",
-          "url": "https://zenn.dev/tottoko_hamu/articles/2026-07-09-205826"
+          "title": "Claude Codeの使用量・残量を確認する方法 — /usage・/context・ccusageで常時表示",
+          "url": "https://zenn.dev/novareorbis/articles/claude-code-usage"
         },
         {
-          "title": "Claude Code×Codex併用環境で踏んだ5つの境界 — CLAUDE.md設計・スキル・MCPの仕組みから整理する",
-          "url": "https://zenn.dev/takepon7/articles/claude-code-codex-boundary-lessons"
+          "title": "良い方法論を発明せず、集めて自分用に固める——Claude CodeのSkillsで作った\"手続き的記憶\"",
+          "url": "https://zenn.dev/peyangu485/articles/jibun-os-skills"
         },
         {
-          "title": "Claude Code に書かせたドキュメント、情報がギチギチで目が滑る。人間が読みやすいように書かせよう",
-          "url": "https://zenn.dev/zekeynn/articles/4bbb34af17de57"
-        }
-      ]
-    },
-    {
-      "keyword": "アプリ",
-      "count": 23,
-      "samples": [
-        {
-          "title": "AI彼女アプリを作っていて気付いた。関係性は少しずつではなく、突然変わる",
-          "url": "https://zenn.dev/mitsukida/articles/c76e3a26a45ef5"
-        },
-        {
-          "title": "【個人開発】React + Firebase + Stripeで「AIチャット占いアプリ」を作って本番リリースするまでの軌跡",
-          "url": "https://zenn.dev/ponsuko/articles/74051b1dae46df"
-        },
-        {
-          "title": "\"トラックが40分遅れても、17時に客は入ってくる ── 押した仕込みで職長が“どこを吸収してきたか”を、過去の走り書きから取り出すアプリ\"",
-          "url": "https://zenn.dev/hiroshift/articles/f045f875ecdd38"
-        }
-      ]
-    },
-    {
-      "keyword": "コード",
-      "count": 17,
-      "samples": [
-        {
-          "title": "同じコードを11回検査させても、そのCVEは0回だった ― LLMコード検査の再現性を実測する",
-          "url": "https://zenn.dev/rikkama/articles/llm-code-review-recall"
-        },
-        {
-          "title": "AIエージェントにコードを書かせるとき、最初に作るべきはプロンプト集ではなく停止条件だった",
-          "url": "https://zenn.dev/taktech/articles/9c48444db6d3b6"
-        },
-        {
-          "title": "AIが生成したコードは、検証できても承認できるとは限らない　― AI時代の Sign-Off Layer を考える",
-          "url": "https://zenn.dev/dxclab/articles/ca8a06a8dfb055"
-        }
-      ]
-    },
-    {
-      "keyword": "モデル",
-      "count": 17,
-      "samples": [
-        {
-          "title": "バックテストに「摩擦」を実装する——約定モデルの作り方",
-          "url": "https://zenn.dev/morimiso/articles/97f0ba52700f69"
-        },
-        {
-          "title": "長いCoTでモデルは自分の洞察を忘れる：InsightReplayで推論の状態性を回復",
-          "url": "https://zenn.dev/lixian/articles/insight-replay-stateful-reasoning"
-        },
-        {
-          "title": "ローカルLLM study1: MacBook Airで11モデルを実測してみた",
-          "url": "https://zenn.dev/tkpurine/articles/local-llm-study-001-macbook-air-10models"
-        }
-      ]
-    },
-    {
-      "keyword": "Codex",
-      "count": 15,
-      "samples": [
-        {
-          "title": "Claude Code×Codex併用環境で踏んだ5つの境界 — CLAUDE.md設計・スキル・MCPの仕組みから整理する",
-          "url": "https://zenn.dev/takepon7/articles/claude-code-codex-boundary-lessons"
-        },
-        {
-          "title": "herdr を活用した Codex とのオーケストレーション用 Claude Code Plugin を作ってみた",
-          "url": "https://zenn.dev/genda_jp/articles/46745564b7a9dd"
-        },
-        {
-          "title": "実装はCodex、レビューはClaude、JetBrains Airでクロスエージェントレビュー",
-          "url": "https://zenn.dev/nattosystem_jp/articles/584eb689033cfa"
-        }
-      ]
-    },
-    {
-      "keyword": "Fable",
-      "count": 15,
-      "samples": [
-        {
-          "title": "Claude Fable 5で生産性が2倍になった話——半年184日の作業ログから",
-          "url": "https://zenn.dev/koedesk/articles/141-person-months-half-year-ai"
-        },
-        {
-          "title": "Claude Codeの最上位モデルFable 5、使えるうちに賢さを「ルール」に絞り出す",
-          "url": "https://zenn.dev/tottoko_hamu/articles/2026-07-13-211000"
-        },
-        {
-          "title": "役割ごとにFableとGPT-5.6を使い分けるAgent Teamの設計",
-          "url": "https://zenn.dev/discus0434/articles/customizable-agent-teams"
-        }
-      ]
-    },
-    {
-      "keyword": "Agent",
-      "count": 14,
-      "samples": [
-        {
-          "title": "Microsoft Agent Framework オーケストレーション検証: Handoff(専門エージェントへの委譲)",
-          "url": "https://zenn.dev/yy7613/articles/99725527e49e35"
-        },
-        {
-          "title": "Agent Skillsを40本運用して分かった、効かせる3条件",
-          "url": "https://zenn.dev/ai_worklab/articles/agent-skills-40-lessons"
-        },
-        {
-          "title": "DifyのAIワークフローをSplunk Observability Cloud AI Agent Monitoringで評価する",
-          "url": "https://zenn.dev/kntr_nkgm/articles/f3a8d21e9b4c60"
-        }
-      ]
-    },
-    {
-      "keyword": "ループ",
-      "count": 12,
-      "samples": [
-        {
-          "title": "「本人らしいAI」の精度をどう測るか。perselfの検証ループと、数値が基準を超えても消えない違和感",
-          "url": "https://zenn.dev/sumumu26/articles/6c7572494b1b31"
-        },
-        {
-          "title": "AI ループの裏側の仕組み:Tool Request・worktree 分離・コンフリクト解決 — AIループ開発記・機能編",
-          "url": "https://zenn.dev/m2dw/articles/n8n-ai-cli-loop-features"
-        },
-        {
-          "title": "AIエージェントのReActループは単純だった。本当に難しかったのはその周りだった",
-          "url": "https://zenn.dev/mo_hu_p/articles/0de23fb3cf6435"
+          "title": "Claude Codeのスキル入門 — SKILL.mdで自分用コマンドを作る",
+          "url": "https://zenn.dev/novareorbis/articles/claude-code-skills"
         }
       ]
     },
     {
       "keyword": "ツール",
+      "count": 22,
+      "samples": [
+        {
+          "title": "そのAIエージェント、誰の代理？——委任の標準 KYA-OS を解説して、人間が読める検証ツールを作った",
+          "url": "https://zenn.dev/izurutoys/articles/dare-no-dairi-kya-os"
+        },
+        {
+          "title": "自己進化ツールを「作る」だけで終わらせないためにやったこと",
+          "url": "https://zenn.dev/moriwo_dev_ai/articles/ama-teras-202607220121"
+        },
+        {
+          "title": "AIオプトアウト設定はツールごとに何が違うか、初期値と保持期間で比較する",
+          "url": "https://zenn.dev/every_ai_recipe/articles/ai-training-optout-3-tools"
+        }
+      ]
+    },
+    {
+      "keyword": "コード",
+      "count": 19,
+      "samples": [
+        {
+          "title": "AI が書いたコードを人間が読める言語 — Jacquard v0.1 rc3 を触った記録",
+          "url": "https://zenn.dev/nomurasan/articles/jacquard-lang-first-look"
+        },
+        {
+          "title": "AIにコードを書かせると、なぜ理解が頭に残らないのか",
+          "url": "https://zenn.dev/junjunjunjun/articles/22f9cf04cbefbd"
+        },
+        {
+          "title": "コードを書いたことがなかったうちが、2日でBuild Weekに出た話",
+          "url": "https://zenn.dev/factory_mo/articles/buildweek-article-zenn-1"
+        }
+      ]
+    },
+    {
+      "keyword": "モデル",
+      "count": 15,
+      "samples": [
+        {
+          "title": "Superpowersを読み解く — AIエージェントの品質は、モデルではなく工程設計で決まる",
+          "url": "https://zenn.dev/inaki/articles/c6517e9ea1a8a6"
+        },
+        {
+          "title": "Opus 5でメインのモデルを固定し、モデル選択をサブエージェント側へ降ろした",
+          "url": "https://zenn.dev/map_universe/articles/model-routing-fixed-main-20260725"
+        },
+        {
+          "title": "TAKTのモデル構成、動かすとコストは必ず悪化する？ベンチマークスコアベースで5構成比較",
+          "url": "https://zenn.dev/yuki1027/articles/takt-model-cost-comparison-issue25"
+        }
+      ]
+    },
+    {
+      "keyword": "アプリ",
+      "count": 14,
+      "samples": [
+        {
+          "title": "【個人開発】お金を溶かさずにデイトレを\"素振り\"できる練習アプリを作った（AIコーチ付き）",
+          "url": "https://zenn.dev/takumishimizu/articles/kabu-trainer"
+        },
+        {
+          "title": "Claude DesignとClaude Codeを連携させてアプリを実装する",
+          "url": "https://zenn.dev/teeyo/articles/claude-design-with-claude-code"
+        },
+        {
+          "title": "4コマ漫画生成アプリを作って見えてきたContext Engineering",
+          "url": "https://zenn.dev/optimisuke/articles/c4e91a7b2d6f30"
+        }
+      ]
+    },
+    {
+      "keyword": "スキル",
+      "count": 14,
+      "samples": [
+        {
+          "title": "Claude Codeのスキル入門 — SKILL.mdで自分用コマンドを作る",
+          "url": "https://zenn.dev/novareorbis/articles/claude-code-skills"
+        },
+        {
+          "title": "AIコーディングCLIで毎回スキル名を思い出すのをやめた。文脈から候補を出す“ルーター”の作り方",
+          "url": "https://zenn.dev/ishizakahiroshi/articles/20260724-skill-router-multi-cli"
+        },
+        {
+          "title": "Claude Codeのスキルでお問い合わせ調査を半自動化し、チームで育てている話",
+          "url": "https://zenn.dev/canly/articles/7dd489193c41e4"
+        }
+      ]
+    },
+    {
+      "keyword": "Opus",
       "count": 12,
       "samples": [
         {
-          "title": "AIエージェントに社内ツールを「安全に」渡す ― 30行から始めるMCPサーバー自作と境界設計入門",
-          "url": "https://zenn.dev/akira_papa/articles/e31dff69f8928d"
+          "title": "【2026年最新】Claude Opus 5 完全ガイド — 「Fable 5の下位版？」の誤解からthinking破壊的変更まで",
+          "url": "https://zenn.dev/amu_lab/articles/claude-opus-5-migration-guide-2026"
         },
         {
-          "title": "商品写真1枚から広告動画が作れる時代——AIブランド動画ツールを使ってみてわかったこと",
-          "url": "https://zenn.dev/savielyamiani/articles/5b0a21db05a70c"
+          "title": "Opus 4.8 で Fable 5 を自作する — 「自作 Fable」は本家とどこまで戦えたか",
+          "url": "https://zenn.dev/tatsuqumo/articles/4b444d679bc802"
         },
         {
-          "title": "エージェントの実行ログから発注文と実行の食い違いを拾うツールを作った話",
-          "url": "https://zenn.dev/skova_digital/articles/490c5a54f80182"
-        }
-      ]
-    },
-    {
-      "keyword": "GitHub",
-      "count": 10,
-      "samples": [
-        {
-          "title": "AIエージェントにGitHubの鍵を「触らせない」設計 — s1ngularityに学ぶ最小到達(least-reach)の作り方",
-          "url": "https://zenn.dev/capsuleholdings/articles/a1cfe341ddc770"
-        },
-        {
-          "title": "GitHub RulesetsでAI生成PRのrequired checkを段階導入する手順",
-          "url": "https://zenn.dev/veripsa/articles/github-rulesets-ai-pr-required-check-rollout"
-        },
-        {
-          "title": "記録は増えるのに、人生は変わらない。GitHubとMarkdownで「経験を資産に変える仕組み」を作り始めた",
-          "url": "https://zenn.dev/yuta1995/articles/github-markdown-life-os"
-        }
-      ]
-    },
-    {
-      "keyword": "PR",
-      "count": 10,
-      "samples": [
-        {
-          "title": "一人前のエンジニアなら、そもそもPRを出すな。",
-          "url": "https://zenn.dev/headwaters/articles/7dd9cd7b9c8c86"
-        },
-        {
-          "title": "一人前のエンジニアなら、PRでコメントをもらうな。",
-          "url": "https://zenn.dev/headwaters/articles/72c39ad735038d"
-        },
-        {
-          "title": "GitHub RulesetsでAI生成PRのrequired checkを段階導入する手順",
-          "url": "https://zenn.dev/veripsa/articles/github-rulesets-ai-pr-required-check-rollout"
-        }
-      ]
-    },
-    {
-      "keyword": "ローカル",
-      "count": 10,
-      "samples": [
-        {
-          "title": "ローカルLLM study1: MacBook Airで11モデルを実測してみた",
-          "url": "https://zenn.dev/tkpurine/articles/local-llm-study-001-macbook-air-10models"
-        },
-        {
-          "title": "OpenFugu×ローカルLLM群でマルチAI駆動を検証③ 小型の群れは上位モデルを超えられるか",
-          "url": "https://zenn.dev/znet/articles/2026-openfugu-local-multiagent-part3"
-        },
-        {
-          "title": "Claude Code時代のAIエージェント専用「サンドボックス」設計論：ローカル破壊防止・Egress Proxy・LLM向けAXのすべて",
-          "url": "https://zenn.dev/masuda_masuo/articles/2026-07-11-sunaba-evolution"
-        }
-      ]
-    },
-    {
-      "keyword": "サーバー",
-      "count": 8,
-      "samples": [
-        {
-          "title": "AIエージェントに社内ツールを「安全に」渡す ― 30行から始めるMCPサーバー自作と境界設計入門",
-          "url": "https://zenn.dev/akira_papa/articles/e31dff69f8928d"
-        },
-        {
-          "title": "自作MCPサーバーを公式レジストリと各ディレクトリに載せる — 全手順とハマりどころ",
-          "url": "https://zenn.dev/argosvix/articles/1a687a03dab0c2"
-        },
-        {
-          "title": "MCPサーバーを「本物のクライアントとして」テストする mcp-testbench を作った",
-          "url": "https://zenn.dev/computer/articles/350e0ad2721a52"
+          "title": "Opus 5では今までのプロンプトが逆効果に。「検証して」を消して「簡潔に」と書くべし。公式プロンプトガイドを読み解く",
+          "url": "https://zenn.dev/little_hand_s/articles/72646a09f49d2a"
         }
       ]
     },
     {
       "keyword": "レビュー",
-      "count": 8,
+      "count": 11,
       "samples": [
         {
-          "title": "実装はCodex、レビューはClaude、JetBrains Airでクロスエージェントレビュー",
-          "url": "https://zenn.dev/nattosystem_jp/articles/584eb689033cfa"
+          "title": "執筆AIと検収AIを分けたら、事故を配布前に止められるようになった話 — Claude Codeの多段レビュー体制の作り方",
+          "url": "https://zenn.dev/teku1000/articles/8fb7e4d315da93"
         },
         {
-          "title": "AIにAIをレビューさせる ― Claude Code × Codex CLI で設計→レビュー→実装を自律で回す",
-          "url": "https://zenn.dev/nihonbashi/articles/claude-code-codex-dual-gate"
+          "title": "AIレビューの指摘を資産化する — 追記専用ログと予防DoDで作る自己学習ループ",
+          "url": "https://zenn.dev/ssiwnl/articles/03-self-learning-loop"
         },
         {
-          "title": "AI同士のレビューは簡単だった。難しいのは「その判定者を信じていいか」の測定だった",
-          "url": "https://zenn.dev/inokashiraryo/articles/cb3fef1c44a8a2"
+          "title": "Claude Codeのサブエージェント駆動開発——1タスク1AI＋二段レビューで、AIの報告を検収する話",
+          "url": "https://zenn.dev/abyssgate/articles/subagent-driven-dev-review"
+        }
+      ]
+    },
+    {
+      "keyword": "Agent",
+      "count": 11,
+      "samples": [
+        {
+          "title": "Gemini Enterprise Agent PlatformのModel RegistryからEndpointへデプロイ試してみた",
+          "url": "https://zenn.dev/fusic/articles/5f054db81f3585"
+        },
+        {
+          "title": "Agent型開発ツールたちをカオスマップにまとめてみた！AIネイティブなエディタやターミナルの選択肢が豊富な時代だけど逆に選ぶの大変そう！",
+          "url": "https://zenn.dev/dress_code/articles/b02867df40151c"
+        },
+        {
+          "title": "Microsoft Agent Framework の ハーネスのコア機能が正式リリース — LM Studioで試す 後編",
+          "url": "https://zenn.dev/yy7613/articles/0b92803c392341"
+        }
+      ]
+    },
+    {
+      "keyword": "Fable",
+      "count": 10,
+      "samples": [
+        {
+          "title": "【2026年最新】Claude Opus 5 完全ガイド — 「Fable 5の下位版？」の誤解からthinking破壊的変更まで",
+          "url": "https://zenn.dev/amu_lab/articles/claude-opus-5-migration-guide-2026"
+        },
+        {
+          "title": "Opus 4.8 で Fable 5 を自作する — 「自作 Fable」は本家とどこまで戦えたか",
+          "url": "https://zenn.dev/tatsuqumo/articles/4b444d679bc802"
+        },
+        {
+          "title": "AIコーディングの品質は「自分が知らないこと」で決まる — Claude Fable 5 フィールドガイド解説",
+          "url": "https://zenn.dev/akimitu_666/articles/claude-fable-finding-unknowns"
+        }
+      ]
+    },
+    {
+      "keyword": "ループ",
+      "count": 10,
+      "samples": [
+        {
+          "title": "意識は「絶え間ないループ」が生む現象なのではないか、という仮説の整理",
+          "url": "https://zenn.dev/fukurou_ry/articles/d21b29978ff62a"
+        },
+        {
+          "title": "AIレビューの指摘を資産化する — 追記専用ログと予防DoDで作る自己学習ループ",
+          "url": "https://zenn.dev/ssiwnl/articles/03-self-learning-loop"
+        },
+        {
+          "title": "AI修正ループが良い原稿を壊す問題をkeep-bestで防ぐ",
+          "url": "https://zenn.dev/miyoki_labs/articles/keepbest-revision-loop"
         }
       ]
     },
     {
       "keyword": "ChatGPT",
-      "count": 7,
+      "count": 9,
       "samples": [
         {
-          "title": "ChatGPT Can Finally Talk Like A Real Person, Thanks To GPT Live",
-          "url": "https://zenn.dev/neotechpark/articles/832e279a95b349"
+          "title": "実行型AI時代の自動化：Claude Opus 5とChatGPT Workで作る「タスク完遂」エージント実装パターン",
+          "url": "https://zenn.dev/kairosai/articles/5485a57e6a78bb"
         },
         {
-          "title": "ChatGPTのプロンプトを保存・再利用する方法（毎回打ち直しをやめる）",
-          "url": "https://zenn.dev/ktg/articles/promptstash-save-reuse-chatgpt-ja"
+          "title": "Claude CodeのハーネスでChatGPTモデルを使う",
+          "url": "https://zenn.dev/circleback/articles/using-claude-with-gpt"
         },
         {
-          "title": "ChatGPTゲームの、AI推理ADV『港町の荷札』を公開しました。",
-          "url": "https://zenn.dev/kokemichi/articles/9e58174aba5609"
+          "title": "ChatGPTのログインでつまずいた私が、コードを書かずに「2時間の持ち帰り作業」を10分にするまで",
+          "url": "https://zenn.dev/aizuchi_works/articles/060344415fe5e7"
         }
       ]
     },
     {
-      "keyword": "CLAUDE.md",
-      "count": 6,
+      "keyword": "ハーネス",
+      "count": 8,
       "samples": [
         {
-          "title": "Claude Code×Codex併用環境で踏んだ5つの境界 — CLAUDE.md設計・スキル・MCPの仕組みから整理する",
-          "url": "https://zenn.dev/takepon7/articles/claude-code-codex-boundary-lessons"
+          "title": "Cursor・Manus・Spotifyの「ハーネス」を読み比べた",
+          "url": "https://zenn.dev/tak3/articles/2686517823d1e7"
         },
         {
-          "title": "CLAUDE.mdが肥大化したときによくある対処5つと、その限界",
-          "url": "https://zenn.dev/map_universe/articles/claude-md-common-fixes"
+          "title": "Claude CodeのハーネスでChatGPTモデルを使う",
+          "url": "https://zenn.dev/circleback/articles/using-claude-with-gpt"
         },
         {
-          "title": "Web制作の実務で効いたClaude Code設定術 — CLAUDE.md・permissions・MCPの実例",
-          "url": "https://zenn.dev/nadarakainc/articles/1dc63a04cefc99"
-        }
-      ]
-    },
-    {
-      "keyword": "コンテンツ",
-      "count": 6,
-      "samples": [
-        {
-          "title": "AIエージェントで16媒体のコンテンツ運用を回す全体アーキテクチャ — 個人開発の設計メモ",
-          "url": "https://zenn.dev/mameresearcher/articles/ai-agent-multi-channel-content-ops"
-        },
-        {
-          "title": "コンテンツ生成と公開操作を分離するtrusted runner設計 - 実装手順",
-          "url": "https://zenn.dev/kmn/articles/a338daa0b87974"
-        },
-        {
-          "title": "1本の動画から5つのコンテンツへ：動画転写でコンテンツ制作効率を5倍にする方法",
-          "url": "https://zenn.dev/olzzz/articles/937acbf7596216"
+          "title": "Microsoft Agent Framework の ハーネスのコア機能が正式リリース — LM Studioで試す 後編",
+          "url": "https://zenn.dev/yy7613/articles/0b92803c392341"
         }
       ]
     },
     {
       "keyword": "システム",
-      "count": 6,
+      "count": 8,
       "samples": [
         {
-          "title": "AIサービスの年齢確認システム設計 — 46,812件の強制退会事例から考える",
-          "url": "https://zenn.dev/sunsun_eng/articles/15-chatgpt-4-6812"
+          "title": "AIを全社に広めたいのに、システム部と本部長で止まっている",
+          "url": "https://zenn.dev/taka_tech1988/articles/fcb7f2df844765"
         },
         {
-          "title": "①0.01くらいから始める、AWS×AI株価予測システム開発【企画編Ⅰ】",
-          "url": "https://zenn.dev/eggdolphin/articles/2db5f19de08971"
+          "title": "生成AIに『課金システムを作らせた』ら、同じ脆弱性を3回複製された話",
+          "url": "https://zenn.dev/emilia_lab/articles/ai-saas-factory-license-bypass-xss"
         },
         {
-          "title": "Anthropic Managed Agentsで\"走った記録を読み物にする\"システムを作って実運用した話——Memoryが育つまで",
-          "url": "https://zenn.dev/make_dog/articles/da432df0939416"
+          "title": "業務システムがすれ違う場所は、機能一覧の外にある",
+          "url": "https://zenn.dev/eurekalabo/articles/eureka-genba-system-gap"
         }
       ]
     },
     {
-      "keyword": "GPT-5.6",
-      "count": 6,
+      "keyword": "レポート",
+      "count": 8,
       "samples": [
         {
-          "title": "GPT-5.6完全解説 ― Sol・Terra・Luna比較とUltra、安全性、実践活用",
-          "url": "https://zenn.dev/m__f/articles/chatgpt_5_6_update_overview"
+          "title": "4つのファイルから、AIでグラフ付きWordレポートを生成してみた",
+          "url": "https://zenn.dev/reworkos/articles/94baf61102e071"
         },
         {
-          "title": "役割ごとにFableとGPT-5.6を使い分けるAgent Teamの設計",
-          "url": "https://zenn.dev/discus0434/articles/customizable-agent-teams"
+          "title": "AI Dev Day 2026 参加レポート",
+          "url": "https://zenn.dev/fire_arlo/articles/0865d3035ad115"
         },
         {
-          "title": "「GPT-5.6 SolはFable 5超え」をStruts 47万行の実レガシーで確かめる",
-          "url": "https://zenn.dev/egu777/articles/gpt56-vs-fable5-mifos"
+          "title": "AI DevSummit 2026 参加レポート",
+          "url": "https://zenn.dev/painter/articles/5b40519c602a82"
         }
       ]
     },
     {
-      "keyword": "Skill",
+      "keyword": "テスト",
+      "count": 8,
+      "samples": [
+        {
+          "title": "Claude Code × Playwright MCPで始めるE2Eテストの自動化",
+          "url": "https://zenn.dev/yx_xy/articles/5102413f722901"
+        },
+        {
+          "title": "「配布しない」と主張する自分のテストが、最後に赤くなった ── 自律モード、熟成 10 日を経て v2.53.0 で配布開始",
+          "url": "https://zenn.dev/satoh_y_0323/articles/1e8d415cca23d5"
+        },
+        {
+          "title": "タイトルと本文ハッシュで二重投稿を防ぐ - テスト設計",
+          "url": "https://zenn.dev/kmn/articles/bade9a7704e928"
+        }
+      ]
+    },
+    {
+      "keyword": "ガイド",
+      "count": 7,
+      "samples": [
+        {
+          "title": "【2026年最新】Claude Opus 5 完全ガイド — 「Fable 5の下位版？」の誤解からthinking破壊的変更まで",
+          "url": "https://zenn.dev/amu_lab/articles/claude-opus-5-migration-guide-2026"
+        },
+        {
+          "title": "AIエージェントへの指示設計 完全ガイド — Claude Code / Cursor / GitHub Copilot で成果を出すプロン",
+          "url": "https://zenn.dev/shohei_ai_lab/articles/c7552bb8d04f3d"
+        },
+        {
+          "title": "【2026年7月版】コンサル流、スライド生成AIの使い分け完全ガイド｜NotebookLM・Claude・Geminiの選定基準",
+          "url": "https://zenn.dev/eques_blog/articles/e2daf70970bcac"
+        }
+      ]
+    },
+    {
+      "keyword": "タスク",
+      "count": 7,
+      "samples": [
+        {
+          "title": "実行型AI時代の自動化：Claude Opus 5とChatGPT Workで作る「タスク完遂」エージント実装パターン",
+          "url": "https://zenn.dev/kairosai/articles/5485a57e6a78bb"
+        },
+        {
+          "title": "タスク別LLM比較で「主力」が入れ替わる理由、評価軸の直交性から見る",
+          "url": "https://zenn.dev/every_ai_recipe/articles/ai-winner-differs-email-outline"
+        },
+        {
+          "title": "Claude Code のタスク駆動開発を skills 化して全プロジェクトで使い回す",
+          "url": "https://zenn.dev/myvalval/articles/c7b6675f3d6384"
+        }
+      ]
+    },
+    {
+      "keyword": "エンジニア",
+      "count": 7,
+      "samples": [
+        {
+          "title": "AIが「実行していいですか？」と聞いてきたとき、Yesを押せますか — 非エンジニアが最初に詰まる用語10個",
+          "url": "https://zenn.dev/akimitu_666/articles/claude-code-words-for-beginners"
+        },
+        {
+          "title": "ループエンジニアリングはもうエンジニアだけのものじゃない、業務で回して見つけた4つ目の設計対象は「権限」だった",
+          "url": "https://zenn.dev/shio_shoppaize/articles/loop-mandate-design"
+        },
+        {
+          "title": "【AI駆動開発 1】任せられる仕組みを作る — エンジニアの仕事の再定義",
+          "url": "https://zenn.dev/idealive_kmon/articles/ai-dev-00-delegable-system"
+        }
+      ]
+    },
+    {
+      "keyword": "GitHub",
+      "count": 7,
+      "samples": [
+        {
+          "title": "AIエージェントへの指示設計 完全ガイド — Claude Code / Cursor / GitHub Copilot で成果を出すプロン",
+          "url": "https://zenn.dev/shohei_ai_lab/articles/c7552bb8d04f3d"
+        },
+        {
+          "title": "開発しているだけで進捗が更新される。Linear × Claude Code × GitHubで作る開発フロー",
+          "url": "https://zenn.dev/explaza/articles/500ded8ea67252"
+        },
+        {
+          "title": "コード差分から仕様書を自動更新する：LLM × GitHub Actions によるドキュメント自動同期パイプラインの構築",
+          "url": "https://zenn.dev/rrr068/articles/17fbb36ce6c7c7"
+        }
+      ]
+    },
+    {
+      "keyword": "ルール",
+      "count": 7,
+      "samples": [
+        {
+          "title": "一緒に開発していた相手は、たぶん人間ではなかった — AIのルールを、AIが決め始めている",
+          "url": "https://zenn.dev/kofujimura/articles/70dc505f9da52e"
+        },
+        {
+          "title": "AIエージェントの権限ルールに、`bash -c` という抜け穴があった話",
+          "url": "https://zenn.dev/map_universe/articles/bash-c-permission-gap-20260725"
+        },
+        {
+          "title": "Claude Code の settings.json を棚卸ししたら、許可ルールの9割が消せた",
+          "url": "https://zenn.dev/kuzzken/articles/5c73122da6b93b"
+        }
+      ]
+    },
+    {
+      "keyword": "ゲーム",
+      "count": 7,
+      "samples": [
+        {
+          "title": "プロトタイプと本開発は別のゲーム 〜試作から本開発へつなぐ設計〜",
+          "url": "https://zenn.dev/yamitake/articles/prototype-vs-production-development"
+        },
+        {
+          "title": "選択型ゲームのシナリオ作成とゲーム開発",
+          "url": "https://zenn.dev/core315185/articles/2e95fbbfaade72"
+        },
+        {
+          "title": "Claude・Gemini・Codexを毎日コンペさせてPhaser.jsゲームを39日間・92本自動生成しているパイプラインの全構成",
+          "url": "https://zenn.dev/mrt168/articles/0436802896d550"
+        }
+      ]
+    },
+    {
+      "keyword": "PR",
+      "count": 7,
+      "samples": [
+        {
+          "title": "ソース本文を預けずに、PR 同士の衝突はどこまで見えるのか",
+          "url": "https://zenn.dev/veripsa/articles/veripsa-content-free-analysis-scope"
+        },
+        {
+          "title": "設計書1枚から実装・レビュー・PRまで — Claude Code でオーケストレーター Skill を作る",
+          "url": "https://zenn.dev/ssiwnl/articles/02-orchestrator"
+        },
+        {
+          "title": "Claude/Codexに全PRを読ませれば十分？— 一度の回答と継続的なPR交通整理の違い",
+          "url": "https://zenn.dev/veripsa/articles/claude-codex-read-all-prs"
+        }
+      ]
+    },
+    {
+      "keyword": "コンテキスト",
       "count": 6,
       "samples": [
         {
-          "title": "プロンプトの職人芸からエンジニアリング資産へ：サーバーサイド視点で理解する「Skill Prompt」の設計思想",
-          "url": "https://zenn.dev/safie_inc/articles/ba3f924a86e1f6"
+          "title": "Claude Codeの/rewindで話題単位にコンテキストを畳んでいる",
+          "url": "https://zenn.dev/map_universe/articles/rewind-summarize-context-20260726"
         },
         {
-          "title": "Claude Code のContext・Skillを評価する『Evals』ツール徹底比較 〜トークン数と性能をどう測るか〜",
-          "url": "https://zenn.dev/yamitake/articles/claude-code-evals-tools-guide"
+          "title": "Cursor で役割（role / subagent）をつくるメリット — 品質とコンテキストを安定させる使い方",
+          "url": "https://zenn.dev/interestic/articles/0c9bf1c58c1103"
         },
         {
-          "title": "AI エージェントによる Skill 利用を把握する ─ SkillTrace で「どの Skill が どう使われたのか」を追跡！",
-          "url": "https://zenn.dev/h1deya/articles/skilltrace-introduction"
+          "title": "エージェントの会話が長くなったときのコンテキスト圧縮：要約か構造化状態か",
+          "url": "https://zenn.dev/libercraft/articles/20260724-agent-context-compression"
+        }
+      ]
+    },
+    {
+      "keyword": "ファイル",
+      "count": 6,
+      "samples": [
+        {
+          "title": "4つのファイルから、AIでグラフ付きWordレポートを生成してみた",
+          "url": "https://zenn.dev/reworkos/articles/94baf61102e071"
+        },
+        {
+          "title": "Claude CodeとCodex CLIを併用したら、設定ファイルが二重管理になっていた話",
+          "url": "https://zenn.dev/map_universe/articles/agents-md-consolidation-20260724"
+        },
+        {
+          "title": "AIに渡すルールは、矛盾していても動いてしまう — 設定ファイルの整理術",
+          "url": "https://zenn.dev/tamaki2026/articles/dd4118b133be54"
+        }
+      ]
+    },
+    {
+      "keyword": "パイプライン",
+      "count": 6,
+      "samples": [
+        {
+          "title": "SAM 3 vs SAM 2：動画追跡パイプラインを比較実装する",
+          "url": "https://zenn.dev/libercraft/articles/20260725-sam3-vs-sam2-video-tracking"
+        },
+        {
+          "title": "Claude・Gemini・Codexを毎日コンペさせてPhaser.jsゲームを39日間・92本自動生成しているパイプラインの全構成",
+          "url": "https://zenn.dev/mrt168/articles/0436802896d550"
+        },
+        {
+          "title": "SFT→GRPOをフェーズ分けしてFTする実装パイプライン — MCP連携とツール選定まとめ(2026年版)",
+          "url": "https://zenn.dev/oggata/articles/283f917ff39284"
+        }
+      ]
+    },
+    {
+      "keyword": "セッション",
+      "count": 6,
+      "samples": [
+        {
+          "title": "Claude Fable 5の「働き方」だけを抽出する — 実ログ406セッションから行動署名を作ってOSSにした",
+          "url": "https://zenn.dev/okaz/articles/fable-mode-behavior-signature"
+        },
+        {
+          "title": "Claude Code Hooksの実装ガイド — セッション終了時に自動でgit pushする仕組みをコードで解説",
+          "url": "https://zenn.dev/nakayama_acari/articles/claude-code-hooks-guide-v2"
+        },
+        {
+          "title": "Claude Codeの記事化スキルを2週間で育てた記録 ── 足りなかったのは感想だった、インタビュー機能とセッション横断機能を追加した話",
+          "url": "https://zenn.dev/yusukekcode/articles/article-writeup-skill-evolution"
         }
       ]
     },
@@ -367,16 +493,52 @@
       "count": 5,
       "samples": [
         {
-          "title": "Claudeのプロジェクト履歴を解析して、自分の作業パターンを可視化してみた",
-          "url": "https://zenn.dev/mskbhd/articles/lab-102-claude"
+          "title": "認知機能×実行トポロジー——AIエージェント設計パターンの二軸フレームワーク",
+          "url": "https://zenn.dev/hkame/articles/two-dimenstional-framework"
         },
         {
-          "title": "AI推論の正しさの「保証」はどう壊れ、どう回復するか——確率・価値・安全性で3度繰り返されたパターン",
-          "url": "https://zenn.dev/aikun2/articles/c40402cd783cd0"
+          "title": "実行型AI時代の自動化：Claude Opus 5とChatGPT Workで作る「タスク完遂」エージント実装パターン",
+          "url": "https://zenn.dev/kairosai/articles/5485a57e6a78bb"
         },
         {
-          "title": "AIエージェントの実行戦略12パターンまとめ",
-          "url": "https://zenn.dev/box2box/articles/agent-execution-strategies"
+          "title": "Anthropicの6つのエージェント設計パターンは2026年の今も通用するのか?",
+          "url": "https://zenn.dev/hkame/articles/agent-patterns-2026"
+        }
+      ]
+    },
+    {
+      "keyword": "v2",
+      "count": 5,
+      "samples": [
+        {
+          "title": "AIで紐解くAWS AI-DLC v2：導入判断",
+          "url": "https://zenn.dev/takeshishimada/articles/aidlc-v2-18-adoption"
+        },
+        {
+          "title": "AIで紐解くAWS AI-DLC v2：限界と注意点",
+          "url": "https://zenn.dev/takeshishimada/articles/aidlc-v2-17-limitations"
+        },
+        {
+          "title": "Pydantic AI v2、エージェントの拡張を「capability」1個に畳んだ設計",
+          "url": "https://zenn.dev/okssusucha/articles/20260706-pydantic-ai-v2-capabilities"
+        }
+      ]
+    },
+    {
+      "keyword": "サーバー",
+      "count": 5,
+      "samples": [
+        {
+          "title": "MCPサーバーをAPIラッパーで終わらせない：Slack連携を安全な業務操作にするGo設計",
+          "url": "https://zenn.dev/snknsk/articles/mcp-server-is-not-api-wrapper"
+        },
+        {
+          "title": "MCPサーバーを早々に使えない子判定してる人、ちょっと待った！！！正しくMCPプロトコルを理解しましょう",
+          "url": "https://zenn.dev/dhq_boiler/articles/da20f951623e81"
+        },
+        {
+          "title": "AIに書かせたMCPサーバー69本、稼働約半年でどれだけ宣言からズレたか実測してみた",
+          "url": "https://zenn.dev/aos_standard/articles/6cd28675d404f2"
         }
       ]
     },
@@ -385,340 +547,70 @@
       "count": 5,
       "samples": [
         {
-          "title": "【個人開発】React + Firebase + Stripeで「AIチャット占いアプリ」を作って本番リリースするまでの軌跡",
-          "url": "https://zenn.dev/ponsuko/articles/74051b1dae46df"
+          "title": "embodied-claude v0.3.0をリリースしました ── Windows対応と、行為で更新される現在地",
+          "url": "https://zenn.dev/kmizu/articles/2026-07-embodied-claude-v0-3"
         },
         {
-          "title": "設計・実装・テスト・インフラまでフルAIエージェントで開発してWebサービスを正式リリースした",
-          "url": "https://zenn.dev/masa_seakids/articles/09b8cda66cd3e1"
+          "title": "Microsoft Agent Framework の ハーネスのコア機能が正式リリース — LM Studioで試す 後編",
+          "url": "https://zenn.dev/yy7613/articles/0b92803c392341"
         },
         {
-          "title": "AIだけでマルチSNSビューアーを作ってリリースした話（人間の仕事はボタンを押すこと）",
-          "url": "https://zenn.dev/inazuma/articles/7e679f3754b012"
+          "title": "Microsoft Agent Framework の ハーネスのコア機能が正式リリース — LM Studioで試す 前編",
+          "url": "https://zenn.dev/yy7613/articles/ca60a03f4181e4"
         }
       ]
     },
     {
-      "keyword": "オーケストレーション",
+      "keyword": "ローカル",
       "count": 5,
       "samples": [
         {
-          "title": "Microsoft Agent Framework オーケストレーション検証: Handoff(専門エージェントへの委譲)",
-          "url": "https://zenn.dev/yy7613/articles/99725527e49e35"
+          "title": "ローカルLLM study1-b: Hugging Faceオリジナル版Gemma 4を動かしてみた",
+          "url": "https://zenn.dev/tkpurine/articles/local-llm-study-001b-gemma4-huggingface-original"
         },
         {
-          "title": "herdr を活用した Codex とのオーケストレーション用 Claude Code Plugin を作ってみた",
-          "url": "https://zenn.dev/genda_jp/articles/46745564b7a9dd"
+          "title": "ローカルLLMに心音をあげたくて、Mac miniをソニフィケーションした",
+          "url": "https://zenn.dev/req9/articles/7d11c860bb21cf"
         },
         {
-          "title": "Microsoft Agent Framework オーケストレーション検証: Group chat",
-          "url": "https://zenn.dev/yy7613/articles/0cbfcbd01a3d89"
+          "title": "ローカルLLMにテトリスを作らせたら54秒で一発動作した話（Gemma 4 MTP × Claude Code）",
+          "url": "https://zenn.dev/kotax/articles/gemma4-tetris-mtp"
         }
       ]
     },
     {
-      "keyword": "コンテキスト",
+      "keyword": "モード",
       "count": 5,
       "samples": [
         {
-          "title": "コンテキストを途切らせないObsidian術【ためる編】会議もチャットも、あらゆる文脈を外部脳化する",
-          "url": "https://zenn.dev/akaringo1109/articles/obsidian-context-continuity"
+          "title": "今週アップデートされたClaudeの音声モードで、ゆるくAI利用を楽しんでみる",
+          "url": "https://zenn.dev/chiwamaru/articles/claude-voice-mode-casual-ai-use"
         },
         {
-          "title": "AIにコンテキストを渡すな、コンテキストのあるところにAIをぶち込め",
-          "url": "https://zenn.dev/nishiryo/articles/81f18669fbfba381f88365b7454be530"
+          "title": "「配布しない」と主張する自分のテストが、最後に赤くなった ── 自律モード、熟成 10 日を経て v2.53.0 で配布開始",
+          "url": "https://zenn.dev/satoh_y_0323/articles/1e8d415cca23d5"
         },
         {
-          "title": "【2026/6/30】Claude Sonnet 5リリース — 1Mコンテキスト標準化・temperature廃止・実質3割の値上げも",
-          "url": "https://zenn.dev/sktt_panda/articles/claude-sonnet-5-release-2026-07"
+          "title": "「ループの次はグラフ」で頭が混乱したので、Opus に自律モードを完走させて確かめた ─ グラフ⊃ループの整理と実走でしか開かなかった穴３つ",
+          "url": "https://zenn.dev/satoh_y_0323/articles/f01a07afe1a654"
         }
       ]
     },
     {
-      "keyword": "ルール",
-      "count": 5,
-      "samples": [
-        {
-          "title": "AIで紐解くAWS AI-DLC v2：ルールとナレッジ",
-          "url": "https://zenn.dev/takeshishimada/articles/aidlc-v2-14-rule-timing"
-        },
-        {
-          "title": "Claude Codeの最上位モデルFable 5、使えるうちに賢さを「ルール」に絞り出す",
-          "url": "https://zenn.dev/tottoko_hamu/articles/2026-07-13-211000"
-        },
-        {
-          "title": "他人の CLAUDE.md をコピーしても『守られない・合わない』— Claude Code ルール設計の型",
-          "url": "https://zenn.dev/rs_dev/articles/claude-code-rule-design"
-        }
-      ]
-    },
-    {
-      "keyword": "エンジニア",
-      "count": 5,
-      "samples": [
-        {
-          "title": "一人前のエンジニアなら、そもそもPRを出すな。",
-          "url": "https://zenn.dev/headwaters/articles/7dd9cd7b9c8c86"
-        },
-        {
-          "title": "一人前のエンジニアなら、PRでコメントをもらうな。",
-          "url": "https://zenn.dev/headwaters/articles/72c39ad735038d"
-        },
-        {
-          "title": "AI時代に必要とされるエンジニアになるには、まず設計力を",
-          "url": "https://zenn.dev/okuda0715tech/articles/d6cc9c709803b5"
-        }
-      ]
-    },
-    {
-      "keyword": "スキル",
-      "count": 5,
-      "samples": [
-        {
-          "title": "3層ディレクトリ×層別ガバナンスで作る、Claude Codeスキルの部署共有基盤",
-          "url": "https://zenn.dev/hiro1117/articles/da56abe6b0096f"
-        },
-        {
-          "title": "Claude Codeはコードを書かせるだけじゃない：自作スキルで記事執筆から自動化まで回す",
-          "url": "https://zenn.dev/personal/articles/20260713-claude-code-skills-workflow"
-        },
-        {
-          "title": "調査用スキルを作ってみた",
-          "url": "https://zenn.dev/tokium_dev/articles/building-a-research-skill"
-        }
-      ]
-    },
-    {
-      "keyword": "コーディング",
-      "count": 5,
-      "samples": [
-        {
-          "title": "26. AIコーディングを哲学で守る：設計・実装・テストの「三批判サイクル」",
-          "url": "https://zenn.dev/yamada_ai_dev/articles/claude-code-tri-critique-loop"
-        },
-        {
-          "title": "Critを導入したらコーディングAIへのフィードバックがとても楽になった",
-          "url": "https://zenn.dev/tenkei/articles/5ba5c993dfb8d6"
-        },
-        {
-          "title": "AIコーディング / ダメな質問を止める方法",
-          "url": "https://zenn.dev/gabie/articles/ebdb5372d5e15e"
-        }
-      ]
-    },
-    {
-      "keyword": "ガイド",
+      "keyword": "Skills",
       "count": 4,
       "samples": [
         {
-          "title": "Claude Code ToolSearch実践ガイド——公式ドキュメントにない4つの挙動",
-          "url": "https://zenn.dev/tottoko_hamu/articles/2026-07-09-205826"
+          "title": "良い方法論を発明せず、集めて自分用に固める——Claude CodeのSkillsで作った\"手続き的記憶\"",
+          "url": "https://zenn.dev/peyangu485/articles/jibun-os-skills"
         },
         {
-          "title": "【2026年最新】Claude Fable 5完全ガイド — Xboxゲームとの混同からモデル選択まで",
-          "url": "https://zenn.dev/amu_lab/articles/claude-fable-5-guide-2026"
+          "title": "Claude Code のタスク駆動開発を skills 化して全プロジェクトで使い回す",
+          "url": "https://zenn.dev/myvalval/articles/c7b6675f3d6384"
         },
         {
-          "title": "Claude API 実装ガイド — 個人開発者のための完全版（2026年7月最新）",
-          "url": "https://zenn.dev/aimcreate/articles/3cd37d9f0041fd"
-        }
-      ]
-    },
-    {
-      "keyword": "ドキュメント",
-      "count": 4,
-      "samples": [
-        {
-          "title": "Claude Code ToolSearch実践ガイド——公式ドキュメントにない4つの挙動",
-          "url": "https://zenn.dev/tottoko_hamu/articles/2026-07-09-205826"
-        },
-        {
-          "title": "Claude Code に書かせたドキュメント、情報がギチギチで目が滑る。人間が読みやすいように書かせよう",
-          "url": "https://zenn.dev/zekeynn/articles/4bbb34af17de57"
-        },
-        {
-          "title": "Fable 5の残り時間を最大限活用する方法：ドキュメント監査で見つけた19の致命的欠陥と点検のススメ",
-          "url": "https://zenn.dev/bentenweb_fumi/articles/7tntag3v6ern"
-        }
-      ]
-    },
-    {
-      "keyword": "チェック",
-      "count": 4,
-      "samples": [
-        {
-          "title": "Foundry Hosted Agents はGAしたのか？公式シグナルの読み方と本番導入前チェック",
-          "url": "https://zenn.dev/kazu_aiengineer/articles/foundry-hosted-agents-ga-check"
-        },
-        {
-          "title": "LLM-as-judge はスコアを集計しない — チェックは証拠、判定は総合判断",
-          "url": "https://zenn.dev/shimo4228/articles/llm-judge-checks-not-scores"
-        },
-        {
-          "title": "TypeScript 7.0から考える、型チェックと開発体験の次の変化",
-          "url": "https://zenn.dev/53able/articles/5936e409668eb9"
-        }
-      ]
-    },
-    {
-      "keyword": "チャット",
-      "count": 4,
-      "samples": [
-        {
-          "title": "【個人開発】React + Firebase + Stripeで「AIチャット占いアプリ」を作って本番リリースするまでの軌跡",
-          "url": "https://zenn.dev/ponsuko/articles/74051b1dae46df"
-        },
-        {
-          "title": "コンテキストを途切らせないObsidian術【ためる編】会議もチャットも、あらゆる文脈を外部脳化する",
-          "url": "https://zenn.dev/akaringo1109/articles/obsidian-context-continuity"
-        },
-        {
-          "title": "チャット常駐AIの出力から機密情報を自動マスキングする設計パターン",
-          "url": "https://zenn.dev/hach/articles/chat-ai-masking-design"
-        }
-      ]
-    },
-    {
-      "keyword": "Microsoft",
-      "count": 4,
-      "samples": [
-        {
-          "title": "Microsoft Agent Framework オーケストレーション検証: Handoff(専門エージェントへの委譲)",
-          "url": "https://zenn.dev/yy7613/articles/99725527e49e35"
-        },
-        {
-          "title": "Microsoft Agent Framework オーケストレーション検証: Group chat",
-          "url": "https://zenn.dev/yy7613/articles/0cbfcbd01a3d89"
-        },
-        {
-          "title": "Microsoft Agent Framework オーケストレーション検証: Concurrent(並列実行と集約)",
-          "url": "https://zenn.dev/yy7613/articles/ee2fe58d208eeb"
-        }
-      ]
-    },
-    {
-      "keyword": "Framework",
-      "count": 4,
-      "samples": [
-        {
-          "title": "Microsoft Agent Framework オーケストレーション検証: Handoff(専門エージェントへの委譲)",
-          "url": "https://zenn.dev/yy7613/articles/99725527e49e35"
-        },
-        {
-          "title": "Microsoft Agent Framework オーケストレーション検証: Group chat",
-          "url": "https://zenn.dev/yy7613/articles/0cbfcbd01a3d89"
-        },
-        {
-          "title": "Microsoft Agent Framework オーケストレーション検証: Concurrent(並列実行と集約)",
-          "url": "https://zenn.dev/yy7613/articles/ee2fe58d208eeb"
-        }
-      ]
-    },
-    {
-      "keyword": "レポート",
-      "count": 4,
-      "samples": [
-        {
-          "title": "Alteryx on Tour Tokyo 2026 参加レポート  エージェンティックアナリティクスの幕開けと「信頼できるデータ」の重要性",
-          "url": "https://zenn.dev/truestar/articles/a4f4cb68bbe3f6"
-        },
-        {
-          "title": "特定の技術から読みやすい教材コード & 解説レポートを作成するスキルを作ってみた",
-          "url": "https://zenn.dev/yumefuku/articles/code-learn-skill"
-        },
-        {
-          "title": "「動くもの見せたら反応が変わった」— 第2回 ヘルスケア・ライフサイエンス Snowflake Meetup 開催レポート",
-          "url": "https://zenn.dev/kubokazu/articles/hcls-meetup-20260617-report"
-        }
-      ]
-    },
-    {
-      "keyword": "AI-DLC",
-      "count": 4,
-      "samples": [
-        {
-          "title": "AIで紐解くAWS AI-DLC v2：ルールとナレッジ",
-          "url": "https://zenn.dev/takeshishimada/articles/aidlc-v2-14-rule-timing"
-        },
-        {
-          "title": "AIで紐解くAWS AI-DLC v2：フェーズ境界検証",
-          "url": "https://zenn.dev/takeshishimada/articles/aidlc-v2-13-phase-boundary-verification"
-        },
-        {
-          "title": "AIで紐解くAWS AI-DLC v2：レビュアー",
-          "url": "https://zenn.dev/takeshishimada/articles/aidlc-v2-12-agent-reviewer"
-        }
-      ]
-    },
-    {
-      "keyword": "v2",
-      "count": 4,
-      "samples": [
-        {
-          "title": "AIで紐解くAWS AI-DLC v2：ルールとナレッジ",
-          "url": "https://zenn.dev/takeshishimada/articles/aidlc-v2-14-rule-timing"
-        },
-        {
-          "title": "AIで紐解くAWS AI-DLC v2：フェーズ境界検証",
-          "url": "https://zenn.dev/takeshishimada/articles/aidlc-v2-13-phase-boundary-verification"
-        },
-        {
-          "title": "AIで紐解くAWS AI-DLC v2：レビュアー",
-          "url": "https://zenn.dev/takeshishimada/articles/aidlc-v2-12-agent-reviewer"
-        }
-      ]
-    },
-    {
-      "keyword": "Sol",
-      "count": 4,
-      "samples": [
-        {
-          "title": "GPT-5.6完全解説 ― Sol・Terra・Luna比較とUltra、安全性、実践活用",
-          "url": "https://zenn.dev/m__f/articles/chatgpt_5_6_update_overview"
-        },
-        {
-          "title": "「GPT-5.6 SolはFable 5超え」をStruts 47万行の実レガシーで確かめる",
-          "url": "https://zenn.dev/egu777/articles/gpt56-vs-fable5-mifos"
-        },
-        {
-          "title": "CodexのサブエージェントにGPT-5.6 Lunaを指定したのに、実際はSolが動いていた件",
-          "url": "https://zenn.dev/hayatosc/articles/codex-agent-issue"
-        }
-      ]
-    },
-    {
-      "keyword": "コスト",
-      "count": 4,
-      "samples": [
-        {
-          "title": "生成AIのコスト急増を防ぐには？AWS上にLLM Gatewayを構成して“使う前に止める”",
-          "url": "https://zenn.dev/nttdata_tech/articles/0aef5de18fae3c"
-        },
-        {
-          "title": "「AI利用を制限しない」と言い続けるために。Hacobuの開発組織が1年で築いたAIコストとの向き合い方",
-          "url": "https://zenn.dev/hacobu/articles/af3f6f10198ac4"
-        },
-        {
-          "title": "OpenFugu×ローカルLLM群でマルチAI駆動を検証② コスト報酬で“使い分け”を学習させる",
-          "url": "https://zenn.dev/znet/articles/2026-openfugu-local-multiagent-part2"
-        }
-      ]
-    },
-    {
-      "keyword": "アシスタント",
-      "count": 4,
-      "samples": [
-        {
-          "title": "【脱初心者】LLMを「使う側」から「作る側」へ！パーソナルAIアシスタント開発のロードマップ",
-          "url": "https://zenn.dev/jackey_watawata/articles/bd722980c759ab"
-        },
-        {
-          "title": "Googleの新AIモデル「Gemini 3.5 Flash」から見えた検索のAIアシスタント化──長野陸が注目した3つの変化",
-          "url": "https://zenn.dev/rikunagano/articles/b55eadf08d063e"
-        },
-        {
-          "title": "GASで構築｜毎朝新鮮かつパーソナライズしたニュースを届ける自分専用アシスタント",
-          "url": "https://zenn.dev/kimkim0743/articles/a0dd205351528a"
+          "title": "AIが同じミスを二度としない開発環境 — Claude Code Skills×ループエンジニアリング（全体像）",
+          "url": "https://zenn.dev/ssiwnl/articles/01-loop-engineering-overview"
         }
       ]
     },
@@ -727,178 +619,286 @@
       "count": 4,
       "samples": [
         {
-          "title": "地道な反復作業を Claude Code に最後までやり切らせる loop コマンド",
-          "url": "https://zenn.dev/stak22/articles/ad7ac5baeeefbc"
+          "title": "Claude Codeのスキル入門 — SKILL.mdで自分用コマンドを作る",
+          "url": "https://zenn.dev/novareorbis/articles/claude-code-skills"
         },
         {
-          "title": "OpenClaw・Hermesをコマンドなしで常駐：ロリポップAIエージェントクラウドを月1,200円で試した",
-          "url": "https://zenn.dev/yuta1995/articles/lolipop-ai-agent-cloud"
+          "title": "AI がコマンドを打つ時代に、人間はなぜ Linux コマンドを学ぶのか",
+          "url": "https://zenn.dev/linuxtyper/articles/why-linux-typing"
         },
         {
-          "title": "ptufは本当にバイパス耐性があるか — 難読化した危険コマンドを投げて実測した",
-          "url": "https://zenn.dev/mskbhd/articles/lab-041-ptuf"
+          "title": "Claude Codeコマンドまとめ — スラッシュコマンド・ショートカット・CLI",
+          "url": "https://zenn.dev/novareorbis/articles/claude-code-commands"
         }
       ]
     },
     {
-      "keyword": "マルチ",
+      "keyword": "サイト",
       "count": 4,
       "samples": [
         {
-          "title": "AIだけでマルチSNSビューアーを作ってリリースした話（人間の仕事はボタンを押すこと）",
-          "url": "https://zenn.dev/inazuma/articles/7e679f3754b012"
+          "title": "Google Zeroとは何か｜AIが検索を「代理実行」する時代、サイト流入が消える仕組みとGEO対策を徹底解説",
+          "url": "https://zenn.dev/mameresearcher/articles/google-zero-ai-geo-weekly-20260710"
         },
         {
-          "title": "OpenFugu×ローカルLLM群でマルチAI駆動を検証③ 小型の群れは上位モデルを超えられるか",
-          "url": "https://zenn.dev/znet/articles/2026-openfugu-local-multiagent-part3"
+          "title": "AIサイト運営25日の失敗ログ｜検索クリック0・赤字$34の全記録",
+          "url": "https://zenn.dev/vynalo/articles/ai-site-operation-failure-log"
         },
         {
-          "title": "OpenFugu×ローカルLLM群でマルチAI駆動を検証② コスト報酬で“使い分け”を学習させる",
-          "url": "https://zenn.dev/znet/articles/2026-openfugu-local-multiagent-part2"
+          "title": "AI検索時代に自サイトを『AIに引用されやすく』する技術 — 構造化データとllms.txtの実装",
+          "url": "https://zenn.dev/kairosai/articles/08560a3fe14ce2"
         }
       ]
     },
     {
-      "keyword": "エンジニアリング",
+      "keyword": "グラフ",
       "count": 4,
       "samples": [
         {
-          "title": "プロンプトの職人芸からエンジニアリング資産へ：サーバーサイド視点で理解する「Skill Prompt」の設計思想",
-          "url": "https://zenn.dev/safie_inc/articles/ba3f924a86e1f6"
+          "title": "4つのファイルから、AIでグラフ付きWordレポートを生成してみた",
+          "url": "https://zenn.dev/reworkos/articles/94baf61102e071"
         },
         {
-          "title": "【SALT2 エンジニアリング勉強会】AIコーディングで「動く」を「届ける」に変えるためのエンジニアリングの土台",
-          "url": "https://zenn.dev/salt2/articles/salt2-ai-01836e68"
+          "title": "「ループの次はグラフ」で頭が混乱したので、Opus に自律モードを完走させて確かめた ─ グラフ⊃ループの整理と実走でしか開かなかった穴３つ",
+          "url": "https://zenn.dev/satoh_y_0323/articles/f01a07afe1a654"
         },
         {
-          "title": "AIの出力をどう評価するか ― AIエンジニアリング輪読会 3章・4章メモ",
-          "url": "https://zenn.dev/dmmdata/articles/04f9e9f775d966"
+          "title": "直列処理とグラフ処理の境界線",
+          "url": "https://zenn.dev/53able/articles/7fc78bdb6e0a40"
         }
       ]
     },
     {
-      "keyword": "Sonnet",
+      "keyword": "Copilot",
       "count": 4,
       "samples": [
         {
-          "title": "【2026/6/30】Claude Sonnet 5リリース — 1Mコンテキスト標準化・temperature廃止・実質3割の値上げも",
-          "url": "https://zenn.dev/sktt_panda/articles/claude-sonnet-5-release-2026-07"
+          "title": "AIエージェントへの指示設計 完全ガイド — Claude Code / Cursor / GitHub Copilot で成果を出すプロン",
+          "url": "https://zenn.dev/shohei_ai_lab/articles/c7552bb8d04f3d"
         },
         {
-          "title": "Fable 5が消える前に、Sonnetに残したプロンプト3本",
-          "url": "https://zenn.dev/ai_worklab/articles/fable5-sonnet-3-prompts"
+          "title": "Microsoft公式論文が示す、M365 Copilot定着の鍵は研修ではなく組織ネットワークによる定着の科学",
+          "url": "https://zenn.dev/syoshida07/articles/c30d96f8fe9e65"
         },
         {
-          "title": "Claude Sonnet 5 + 1Mトークンコンテキストを試す(Claude Code / API)",
-          "url": "https://zenn.dev/kairosai/articles/0a5e684a3552bd"
+          "title": "Building a Copilot Agent with Agent365 CLI: GCP Edition",
+          "url": "https://zenn.dev/microsoft/articles/a365cli-agentdevelopment-02-en"
         }
       ]
     },
     {
-      "keyword": "Cursor",
+      "keyword": "ネイティブ",
       "count": 4,
       "samples": [
         {
-          "title": "Cursorに「不要なブランチを整理して」と頼んだら、Dドライブが消えた話",
-          "url": "https://zenn.dev/iwaken71/articles/cursor-agent-d-drive-deleted"
+          "title": "AIネイティブ開発の基盤ができるまで — レガシー再生の課題・目標・順序・結果",
+          "url": "https://zenn.dev/fixu/articles/ai-native-platform-rebuild-story"
         },
         {
-          "title": "AIが自律でコードを書く時代に、Cursorは「コックピット」として残るのか",
-          "url": "https://zenn.dev/mediiiiium/articles/cursor-cockpit-loop-engineering"
+          "title": "AIネイティブ開発でQCDはどう変わったか — 直近2週間を実測データで評価する",
+          "url": "https://zenn.dev/fixu/articles/ai-native-qcd-measured-evaluation"
         },
         {
-          "title": "個人開発者はCursorよりDevinを使え!",
-          "url": "https://zenn.dev/suzukihinata/articles/recommend-devin-for-pd"
+          "title": "Agent型開発ツールたちをカオスマップにまとめてみた！AIネイティブなエディタやターミナルの選択肢が豊富な時代だけど逆に選ぶの大変そう！",
+          "url": "https://zenn.dev/dress_code/articles/b02867df40151c"
         }
       ]
     },
     {
-      "keyword": "プロジェクト",
-      "count": 3,
+      "keyword": "Microsoft",
+      "count": 4,
       "samples": [
         {
-          "title": "Claudeのプロジェクト履歴を解析して、自分の作業パターンを可視化してみた",
-          "url": "https://zenn.dev/mskbhd/articles/lab-102-claude"
+          "title": "Microsoft公式論文が示す、M365 Copilot定着の鍵は研修ではなく組織ネットワークによる定着の科学",
+          "url": "https://zenn.dev/syoshida07/articles/c30d96f8fe9e65"
         },
         {
-          "title": "Claude Codeで複数プロジェクトを回すと必ずぶつかる3つの壁と、その越え方",
-          "url": "https://zenn.dev/okogee/articles/claude-code-multi-project-limits"
+          "title": "Microsoft Agent Framework の ハーネスのコア機能が正式リリース — LM Studioで試す 後編",
+          "url": "https://zenn.dev/yy7613/articles/0b92803c392341"
         },
         {
-          "title": "プロジェクトが畳めないので、検証器に畳ませることにした",
-          "url": "https://zenn.dev/nyuki/articles/project-exit-verifier"
+          "title": "Microsoft Agent Framework の ハーネスのコア機能が正式リリース — LM Studioで試す 前編",
+          "url": "https://zenn.dev/yy7613/articles/ca60a03f4181e4"
         }
       ]
     },
     {
-      "keyword": "Pro",
-      "count": 3,
+      "keyword": "Enterprise",
+      "count": 4,
       "samples": [
         {
-          "title": "Seedream 5.0 と Seedream 5.0 Pro：用途に合うAI画像制作ワークフローの選び方",
-          "url": "https://zenn.dev/calvinclaire/articles/4951bad9028da6"
+          "title": "Gemini Enterprise Agent PlatformのModel RegistryからEndpointへデプロイ試してみた",
+          "url": "https://zenn.dev/fusic/articles/5f054db81f3585"
         },
         {
-          "title": "GPT Image 2 vs Nano Banana Pro: スライド生成で見えた差",
-          "url": "https://zenn.dev/softbank/articles/fd550155b93ad3"
+          "title": "SaaSかオンプレか？NVIDIA AI Enterpriseで考えるAI基盤の最適解",
+          "url": "https://zenn.dev/acntechjp/articles/e597a868b356dd"
         },
         {
-          "title": "Plaud Note Proでシステム開発の顧客ミーティングを効率化してみた",
-          "url": "https://zenn.dev/ryota_09/articles/plaud-note-customer-meeting"
+          "title": "Gemini Enterprise Agent PlatformのExperiments 試してみた",
+          "url": "https://zenn.dev/fusic/articles/e019020dad47ba"
         }
       ]
     },
     {
-      "keyword": "Obsidian",
-      "count": 3,
+      "keyword": "ドキュメント",
+      "count": 4,
       "samples": [
         {
-          "title": "コンテキストを途切らせないObsidian術【ためる編】会議もチャットも、あらゆる文脈を外部脳化する",
-          "url": "https://zenn.dev/akaringo1109/articles/obsidian-context-continuity"
+          "title": "命名規約を「ドキュメント」ではなく「生成メカニズム」にする — カラム名を手で付けないERDツールの話",
+          "url": "https://zenn.dev/hyuny00/articles/6dac9ddba8da99"
         },
         {
-          "title": "丸読み60秒を2秒に。Obsidian×AI記憶の二層設計",
-          "url": "https://zenn.dev/ai_worklab/articles/obsidian-ai-memory-two-layer"
+          "title": "コード差分から仕様書を自動更新する：LLM × GitHub Actions によるドキュメント自動同期パイプラインの構築",
+          "url": "https://zenn.dev/rrr068/articles/17fbb36ce6c7c7"
         },
         {
-          "title": "Claude × Obsidianで「外部記憶」を持つAIアシスタントを構築する",
-          "url": "https://zenn.dev/marrontakumi/articles/claude-obsidian-external-memory"
+          "title": "SE歴9年の私が、基幹システムに必要なドキュメント定義とAIを活用した運用を考えた",
+          "url": "https://zenn.dev/cyberdog_ai_lab/articles/20260709-core-system-doc-format"
         }
       ]
     },
     {
-      "keyword": "Skills",
-      "count": 3,
+      "keyword": "プラグイン",
+      "count": 4,
       "samples": [
         {
-          "title": "Agent Skillsを40本運用して分かった、効かせる3条件",
-          "url": "https://zenn.dev/ai_worklab/articles/agent-skills-40-lessons"
+          "title": "会社設立の登記実務をClaude Codeにやらせた記録と、そのノウハウをプラグインにした話",
+          "url": "https://zenn.dev/hummer/articles/tosbec-incorporation-with-claude-code"
         },
         {
-          "title": "skillsって意味あるの？デザインskills3種類で検証",
-          "url": "https://zenn.dev/dentyu/articles/compare-skills"
+          "title": "無料版を、体験版にしなかった話。個人開発のプラグインで、無料と有料の線をどこに引くか",
+          "url": "https://zenn.dev/rapls/articles/f97dac7336fde7"
         },
         {
-          "title": "そのAgent Skills、本当に効いてる？評価ツール3選を徹底比較",
-          "url": "https://zenn.dev/sunsun_eng/articles/agent-skills-3"
+          "title": "MermaidをObsidian上でGUI編集するプラグインを作った",
+          "url": "https://zenn.dev/okamo02427/articles/e65937ad189759"
         }
       ]
     },
     {
-      "keyword": "スコア",
+      "keyword": "コミット",
+      "count": 4,
+      "samples": [
+        {
+          "title": "ターミナルを自作したら、1日のコミット数が500を超えて、生産性がバグった話",
+          "url": "https://zenn.dev/singularity/articles/diy-terminal-500-commits"
+        },
+        {
+          "title": "CLAUDE.mdに何を書くと開発速度が変わるか - 16コミットから257コミットになった話",
+          "url": "https://zenn.dev/toda_naisei/articles/f0e1696a0ad851"
+        },
+        {
+          "title": "コード知識ゼロから8,700コミット積んだ僕が、269回「過去に戻した」話。AI時代の境界設計とツール使い分け",
+          "url": "https://zenn.dev/nagumo_giken/articles/9f83ea007c22d2"
+        }
+      ]
+    },
+    {
+      "keyword": "DB",
       "count": 3,
       "samples": [
         {
-          "title": "AI検索対応スコアが20〜98点に分かれた理由：初回診断12件の分析",
-          "url": "https://zenn.dev/nrengineer/articles/fa0a68689c9bf0"
+          "title": "長野県の市町村マスタが87行あった——AIが本番DBに埋めた捏造データの話",
+          "url": "https://zenn.dev/arafifu_kikaiya/articles/a92397193160c9"
         },
         {
-          "title": "LLM-as-judge はスコアを集計しない — チェックは証拠、判定は総合判断",
-          "url": "https://zenn.dev/shimo4228/articles/llm-judge-checks-not-scores"
+          "title": "「満点を取れ」と言うとAIはDBをハックする — エージェントのagencyを境界で御す",
+          "url": "https://zenn.dev/ryok/articles/reward-hacking-boundaries"
         },
         {
-          "title": "AIスコアで選ぶ 今週のGitHub注目リポジトリ 10選（2026-07-13週）",
-          "url": "https://zenn.dev/lazy_engineer/articles/ai-dev-radar-weekly-20260713"
+          "title": "CompanyOS の「読み込み方式」を選ぶ 〜GitHub を Single Source of Truth にする 3つのDB戦略",
+          "url": "https://zenn.dev/yamitake/articles/companyos-github-ssot-db-options"
+        }
+      ]
+    },
+    {
+      "keyword": "コーディング",
+      "count": 3,
+      "samples": [
+        {
+          "title": "AIコーディングの品質は「自分が知らないこと」で決まる — Claude Fable 5 フィールドガイド解説",
+          "url": "https://zenn.dev/akimitu_666/articles/claude-fable-finding-unknowns"
+        },
+        {
+          "title": "AIコーディングCLIで毎回スキル名を思い出すのをやめた。文脈から候補を出す“ルーター”の作り方",
+          "url": "https://zenn.dev/ishizakahiroshi/articles/20260724-skill-router-multi-cli"
+        },
+        {
+          "title": "AIコーディングが開発者の「見えなかった断層」を可視化した話",
+          "url": "https://zenn.dev/ai_eris_log/articles/eris-20260313-ai-coding-reveals-developer-divide"
+        }
+      ]
+    },
+    {
+      "keyword": "チーム",
+      "count": 3,
+      "samples": [
+        {
+          "title": "個人は速くなったのにチームが速くならない — 公開計測データを突き合わせる",
+          "url": "https://zenn.dev/luoxi/articles/ai-team-throughput-bottleneck"
+        },
+        {
+          "title": "Claude Codeのスキルでお問い合わせ調査を半自動化し、チームで育てている話",
+          "url": "https://zenn.dev/canly/articles/7dd489193c41e4"
+        },
+        {
+          "title": "週30分の「AIについて話す会」を2ヶ月続けたら、チームのAIスキルが底上げされた話",
+          "url": "https://zenn.dev/edash_tech_blog/articles/d69794d1ca8c01"
+        }
+      ]
+    },
+    {
+      "keyword": "データベース",
+      "count": 3,
+      "samples": [
+        {
+          "title": "【後編】17年分のXをAIで分析したい！イラストレーターがデータベース構築に挑むまで",
+          "url": "https://zenn.dev/katsutoatsuto/articles/c404fbc481fc5c"
+        },
+        {
+          "title": "【前編】17年分のXをAIで分析したい！イラストレーターがデータベース構築に挑むまで",
+          "url": "https://zenn.dev/katsutoatsuto/articles/299431de9962ca"
+        },
+        {
+          "title": "AI時代のデータベース設計──シニアエンジニアは何を設計すべきなのか",
+          "url": "https://zenn.dev/mamimami/articles/bf237865db0f8b"
+        }
+      ]
+    },
+    {
+      "keyword": "チェック",
+      "count": 3,
+      "samples": [
+        {
+          "title": "AIエージェントのモデルを差し替える前にやる20分のチェック",
+          "url": "https://zenn.dev/arthiarumugam/articles/948f6c5f592853"
+        },
+        {
+          "title": "AI生成物をチェックせずに人に見せることは非難されるべきか",
+          "url": "https://zenn.dev/shotaro_tsuji/articles/0b27e9d89d4618"
+        },
+        {
+          "title": "AI生成コードをレビューして見つけた典型バグ5選（と、公開前に自分でできるチェック）",
+          "url": "https://zenn.dev/heygeek/articles/ai-code-review-bugs-5"
+        }
+      ]
+    },
+    {
+      "keyword": "チャット",
+      "count": 3,
+      "samples": [
+        {
+          "title": "設計はチャットAI、実装はコーディングエージェント：xlflowでExcelVBAツールを作った話",
+          "url": "https://zenn.dev/truesunrise/articles/xlflow_vba_development_article_v2_1"
+        },
+        {
+          "title": "AIエージェントを使いこなせるかは、\"チャットAIの頃\"に決まっていた",
+          "url": "https://zenn.dev/hw_to_ai/articles/df554b8b3d8bca"
+        },
+        {
+          "title": "チャットに常駐するAIエージェントのプロンプトインジェクション対策",
+          "url": "https://zenn.dev/hach/articles/chat-agent-prompt-injection-defense"
         }
       ]
     }

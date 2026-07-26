@@ -5905,7 +5905,8 @@
       "constitutional-ai",
       "computer-use",
       "grok",
-      "cohere"
+      "cohere",
+      "fable"
     ],
     "faq": [
       {
@@ -23317,6 +23318,67 @@
         "type": "GitHub",
         "label": "pgvector/pgvector",
         "url": "https://github.com/pgvector/pgvector"
+      }
+    ]
+  },
+  {
+    "slug": "fable",
+    "name": "Fable",
+    "aliases": ["Claude Fable 5", "Claude Fable"],
+    "tagline": "Anthropicが2026年6月に発表した、Claudeファミリーの中でも「Mythosクラス」に位置づけられる最上位モデル",
+    "category": "モデル",
+    "tags": ["Claude", "Anthropic", "クローズドウェイト"],
+    "plainSummary": "Anthropicが2026年6月に公開した、これまでで最も高性能なClaudeモデル。",
+    "summary": "Claude Fable 5とは、Anthropicが2026年6月9日に発表した、Claudeファミリーの中でも「Mythosクラス」と呼ばれる最上位の能力層に位置づけられるモデル。\nソフトウェアエンジニアリング・知識労働・ビジョン・科学研究など、ほぼ全てのベンチマークで当時のAI能力の最先端(state-of-the-art)を示すとされる。\nClaude CodeやClaude Managed Agentsのようなエージェントハーネス上で動作させた場合、数日にわたる長時間タスクを、計画立案・サブエージェントへの委任・自己検証をしながら自律的に継続できる点が特徴とされる。\nAPI・Amazon Bedrock・Google Cloud・Microsoft Foundry等、複数の経路で一般提供されている。",
+    "background": "「Mythosクラス」は、通常のOpusクラスより上位に位置づけられる能力層で、特にサイバーセキュリティや研究生物学の領域で強力とされる。2026年4月には、限定配布のプレビュー版Claude Mythos Previewが「Project Glasswing」を通じて先行公開されていた。",
+    "history": "2026年4月: 限定配布のClaude Mythos Previewを「Project Glasswing」経由で先行公開。\n2026年6月9日: Anthropicが一般提供モデルとしてClaude Fable 5と、防衛専門家向け限定提供のClaude Mythos 5を同時発表。",
+    "architecture": "サイバーセキュリティ・生物学/化学等に関する危険性の高い要求を検知すると、自動的にClaude Opus 4.8による応答へ切り替える安全分類器を搭載しており、大半のセッションではこの切り替えは発生しないとされる。Mythos 5は同一の基盤モデルをベースに、サイバーセキュリティ領域の安全対策を防衛専門家向けに緩和した限定版という位置づけ。",
+    "advantages": [
+      "ソフトウェアエンジニアリングや科学研究など幅広い領域でベンチマーク上の高い性能を示す",
+      "数百万トークン規模の長時間・自律的なエージェントタスクに対応する",
+      "以前のClaudeモデルと比べてトークン効率が改善されているとされる"
+    ],
+    "disadvantages": [
+      "モデルの重みが非公開のクローズドウェイトであり、自前でのホスティングやカスタマイズに制約がある",
+      "出力トークンの単価が既存モデルより高く設定されている",
+      "安全分類器によりサイバーセキュリティ・生物/化学関連の一部要求はOpus 4.8による応答に切り替えられる"
+    ],
+    "comparisons": [
+      {
+        "slug": "claude",
+        "note": "FableはClaudeファミリーに属する個別モデルで、Claudeファミリー全体の中でも最上位の「Mythosクラス」に位置づけられる"
+      },
+      {
+        "slug": "frontier-model",
+        "note": "発表時点でのベンチマーク性能から、フロンティアモデルの1つに位置づけられる"
+      }
+    ],
+    "relatedTerms": ["claude", "frontier-model", "foundation-model", "agentic-ai", "long-context"],
+    "faq": [
+      {
+        "question": "Mythosクラスとは?",
+        "answer": "通常のOpusクラスよりさらに上位に位置づけられる能力層で、特にサイバーセキュリティや研究生物学の領域で強力とされるモデル群を指す。"
+      },
+      {
+        "question": "Claude Mythos 5とは何が違う?",
+        "answer": "同じ基盤モデルをベースにしているが、Mythos 5はサイバーセキュリティ領域の安全対策を緩和した、防衛専門家向けの限定提供モデルという違いがある。"
+      }
+    ],
+    "references": [
+      {
+        "type": "Official Website",
+        "label": "Claude Fable \\ Anthropic",
+        "url": "https://www.anthropic.com/claude/fable"
+      },
+      {
+        "type": "Blog",
+        "label": "Claude Fable 5 and Claude Mythos 5 \\ Anthropic",
+        "url": "https://www.anthropic.com/news/claude-fable-5-mythos-5"
+      },
+      {
+        "type": "Documentation",
+        "label": "Introducing Claude Fable 5 and Claude Mythos 5",
+        "url": "https://platform.claude.com/docs/en/about-claude/models/introducing-claude-fable-5-and-claude-mythos-5"
       }
     ]
   }
