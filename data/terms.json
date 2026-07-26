@@ -5934,6 +5934,7 @@
   {
     "slug": "gemini",
     "name": "Gemini",
+    "aliases": ["Google Gemini", "Bard"],
     "tagline": "Googleが開発する、テキスト・画像・音声等を統合的に扱うマルチモーダル大規模言語モデルファミリー",
     "category": "モデル",
     "tags": [
@@ -6080,6 +6081,7 @@
   {
     "slug": "mistral",
     "name": "Mistral",
+    "aliases": ["Mistral AI"],
     "tagline": "フランスのMistral AIが開発する、効率性を重視したオープンウェイトの大規模言語モデルファミリー",
     "category": "モデル",
     "tags": [
@@ -6142,6 +6144,7 @@
   {
     "slug": "deepseek",
     "name": "DeepSeek",
+    "aliases": ["DeepSeek AI"],
     "tagline": "中国のDeepSeekが開発する、高いコスト効率と推論能力を特徴とするオープンウェイトの大規模言語モデルファミリー",
     "category": "モデル",
     "tags": [
@@ -7314,6 +7317,7 @@
   {
     "slug": "open-webui",
     "name": "Open WebUI",
+    "aliases": ["Ollama WebUI"],
     "tagline": "OllamaやOpenAI互換APIと連携できる、セルフホスト型のオープンソースLLMチャットUI",
     "category": "インフラ",
     "tags": [
@@ -7587,6 +7591,7 @@
   {
     "slug": "tensorrt",
     "name": "TensorRT",
+    "aliases": ["NVIDIA TensorRT"],
     "tagline": "NVIDIA GPU上での推論を高速化する、NVIDIA製の推論最適化SDK",
     "category": "インフラ",
     "tags": [
@@ -9239,6 +9244,7 @@
   {
     "slug": "llmops",
     "name": "LLMOps",
+    "aliases": ["LLM Operations"],
     "tagline": "LLMを組み込んだアプリケーションの開発・評価・デプロイ・運用を継続的に行うための一連のプラクティスと基盤",
     "category": "インフラ",
     "tags": [
@@ -14046,7 +14052,7 @@
   {
     "slug": "hugging-face",
     "name": "Hugging Face",
-    "aliases": [],
+    "aliases": ["HF"],
     "tagline": "学習済みモデル・データセット・ライブラリを公開・共有するオープンソースのAIコミュニティプラットフォーム",
     "category": "インフラ",
     "tags": [
@@ -22438,6 +22444,7 @@
   {
     "slug": "github-copilot",
     "name": "GitHub Copilot",
+    "aliases": ["Copilot"],
     "tagline": "GitHubとMicrosoftが提供する、コード補完からチャット・自律的なコード編集までを担うAIペアプログラミングツール",
     "category": "エージェント",
     "tags": ["コーディングエージェント", "コード生成"],
@@ -22662,6 +22669,7 @@
   {
     "slug": "devin",
     "name": "Devin",
+    "aliases": ["Devin AI"],
     "tagline": "Cognitionが開発した、タスクの計画から実装・デバッグまでを自律的に行うAIソフトウェアエンジニア",
     "category": "エージェント",
     "tags": ["コーディングエージェント", "コード生成"],
@@ -22761,6 +22769,7 @@
   {
     "slug": "semantic-kernel",
     "name": "Semantic Kernel",
+    "aliases": ["Microsoft Semantic Kernel"],
     "tagline": "Microsoftが提供する、LLMを既存アプリケーションへ統合するためのオープンソースSDK。マルチエージェントのオーケストレーション機能も備える",
     "category": "エージェント",
     "tags": ["フレームワーク", "マルチエージェント"],
@@ -23199,6 +23208,7 @@
   {
     "slug": "chroma",
     "name": "Chroma",
+    "aliases": ["ChromaDB"],
     "tagline": "アプリケーションに組み込みやすい、軽量なオープンソースのベクトルデータベース",
     "category": "インフラ",
     "tags": ["ベクトルデータベース", "検索"],
