@@ -6482,6 +6482,10 @@
       {
         "slug": "continuous-batching",
         "note": "vLLMは、連続バッチ処理とPagedAttentionを組み合わせた代表的なLLM推論サーバーの1つ"
+      },
+      {
+        "slug": "llm-d",
+        "note": "llm-dは、vLLMを推論エンジンとして使いKubernetes上での分散サービングをオーケストレーションする層"
       }
     ],
     "relatedTerms": [
@@ -6492,7 +6496,8 @@
       "triton-inference-server",
       "ray",
       "sglang",
-      "continuous-batching"
+      "continuous-batching",
+      "llm-d"
     ],
     "faq": [
       {
@@ -19222,7 +19227,8 @@
     "name": "In-Context Learning",
     "aliases": [
       "ICL",
-      "文脈内学習"
+      "文脈内学習",
+      "コンテキスト内学習"
     ],
     "tagline": "重みを更新せず、プロンプト内の例示や指示だけから新しいタスクの解き方を捉えて実行するLLMの能力",
     "category": "技術",
@@ -23390,6 +23396,41 @@
         "label": "Introducing Claude Fable 5 and Claude Mythos 5",
         "url": "https://platform.claude.com/docs/en/about-claude/models/introducing-claude-fable-5-and-claude-mythos-5"
       }
+    ]
+  },
+  {
+    "slug": "llm-d",
+    "name": "llm-d",
+    "tagline": "Kubernetes上でLLM推論を分散オーケストレーションする、vLLMをベースにしたオープンソースの推論サービングフレームワーク",
+    "category": "インフラ",
+    "tags": [
+      "サービング",
+      "推論最適化"
+    ],
+    "plainSummary": "AIモデルの推論処理を、Kubernetes上の複数のサーバーへうまく分散させて動かすためのオープンソースの仕組み。",
+    "summary": "llm-d(エルエルエムディー)とは、Kubernetes上でLLMの推論・サービングを分散環境向けにオーケストレーションするオープンソースのフレームワーク。\nvLLMを推論エンジンとして採用し、その上にKubernetesネイティブな分散サービング層を構築することで、複数ノード・複数GPUにまたがる大規模なLLM推論クラスタの構築・運用を容易にすることを目指す。\nPrefill(入力処理)とDecode(トークン生成)を別々のワーカーに分離するDisaggregated Serving(分離型サービング)や、KVキャッシュの保持状況を考慮したリクエストルーティングなど、大規模運用に特有の最適化に焦点を当てている。\n単一ノード上での推論高速化が主眼のvLLM単体に対し、llm-dはそれをKubernetesクラスタ全体でどう分散・スケールさせるかという運用レイヤーを担う。",
+    "background": "LLM推論をvLLM等のエンジン単体で高速化できても、実運用では複数ノード・複数GPUにまたがる大規模クラスタでの負荷分散やスケーリングが別途必要になる。\nこうしたKubernetes上での分散推論の構築・運用を標準化・簡素化する目的でllm-dは開発されている。",
+    "architecture": "vLLMを各ワーカーの推論エンジンとして利用しつつ、Kubernetes上にPrefillワーカーとDecodeワーカーを分離して配置するDisaggregated Serving構成をとる。\nリクエストをどのワーカーへ振り分けるかについては、KVキャッシュの保持状況を考慮したルーティングを行い、キャッシュヒット率を高めながらレイテンシ・スループットの改善を図る設計になっている。",
+    "advantages": [
+      "Kubernetesネイティブに構築されており、既存のKubernetes運用基盤・エコシステムと統合しやすい",
+      "vLLMを推論エンジンとして再利用しつつ、複数ノードにまたがる分散サービングへ拡張できる",
+      "Prefill/Decode分離やKVキャッシュを考慮したルーティングにより、大規模クラスタでの推論効率を高められる"
+    ],
+    "disadvantages": [
+      "Kubernetesクラスタの構築・運用知識が前提となり、単体でのvLLM利用と比べ導入の複雑さが増す",
+      "分散構成(Prefill/Decode分離等)を活かすには複数ノード・複数GPUの環境を要し、小規模用途には過剰になりやすい"
+    ],
+    "comparisons": [
+      {
+        "slug": "vllm",
+        "note": "vLLMが単一ノード上での推論エンジンであるのに対し、llm-dはvLLMをベースにKubernetes上での分散サービングをオーケストレーションする"
+      }
+    ],
+    "relatedTerms": [
+      "vllm",
+      "kv-cache",
+      "continuous-batching",
+      "inference"
     ]
   }
 ]
