@@ -6,7 +6,13 @@ import { Container, Section, SectionTitle } from "components/elements/layout"
 import { TermCard } from "components/term/term-card"
 import { buildItemListJsonLd, toJsonLd } from "lib/json-ld"
 import { SITE_NAME, SITE_OG_IMAGE_URL, SITE_URL } from "lib/site"
-import { categories, getCategoryBySlug, getCategorySlug, getTermsByCategory } from "lib/terms"
+import {
+  categories,
+  getCategoryBySlug,
+  getCategoryDescription,
+  getCategorySlug,
+  getTermsByCategory,
+} from "lib/terms"
 
 export const dynamicParams = false
 
@@ -24,7 +30,9 @@ export const generateMetadata = async ({ params }: Props): Promise<Metadata> => 
   }
 
   const title = `${category}の用語一覧`
-  const description = `${category}に分類されるAI・機械学習用語の一覧。${SITE_NAME}が提供する技術リファレンス。`
+  const description =
+    getCategoryDescription(category) ??
+    `${category}に分類されるAI・機械学習用語の一覧。${SITE_NAME}が提供する技術リファレンス。`
   const url = `${SITE_URL}/categories/${slug}/`
 
   return {
@@ -54,6 +62,7 @@ const CategoryPage: FC<Props> = async ({ params }) => {
   }
 
   const terms = getTermsByCategory(category)
+  const categoryDescription = getCategoryDescription(category)
   const url = `${SITE_URL}/categories/${slug}/`
 
   const breadcrumbList = {
@@ -86,6 +95,11 @@ const CategoryPage: FC<Props> = async ({ params }) => {
         <p style={{ color: "var(--color-text-muted)", fontSize: "1.1rem", marginTop: ".75rem" }}>
           {category}に分類される用語（{terms.length}件）
         </p>
+        {categoryDescription && (
+          <p style={{ fontSize: "1rem", lineHeight: 1.8, marginTop: "1rem" }}>
+            {categoryDescription}
+          </p>
+        )}
       </Section>
 
       <Section>

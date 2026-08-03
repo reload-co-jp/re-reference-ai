@@ -255,6 +255,7 @@
       "bert",
       "kv-cache",
       "self-attention",
+      "deep-learning",
       "seq2seq",
       "rotary-position-embedding",
       "residual-connection",
@@ -467,6 +468,7 @@
       }
     ],
     "relatedTerms": [
+      "in-context-learning",
       "transfer-learning",
       "large-language-model",
       "transformer",
@@ -579,6 +581,14 @@
       {
         "question": "ニューラルネットワークと深層学習の違いは？",
         "answer": "ニューラルネットワークはモデルの構造そのもの。\n深層学習は、多数の層を持つニューラルネットワークを用いた学習手法全般を指す。"
+      },
+      {
+        "question": "ニューラルネットワークの仕組みを簡単に説明すると？",
+        "answer": "入力データに重みを掛けて足し合わせ、活性化関数で非線形変換する処理をノード単位で行い、それを層状に何度も繰り返して出力を得る。学習時は出力と正解の誤差を逆向きに伝播させ(誤差逆伝播法)、各重みを少しずつ調整することでネットワーク全体の予測精度を高めていく。"
+      },
+      {
+        "question": "ニューラルネットワークにはどんな種類があるか？",
+        "answer": "全結合層のみのMLP(多層パーセプトロン)、画像処理に強いCNN(畳み込みニューラルネットワーク)、系列データを扱うRNN・LSTM、そして現在の主流であるTransformer(自己注意機構ベース)が代表的な種類。扱うデータの構造に応じて層の組み方が異なる。"
       }
     ],
     "references": [
@@ -733,7 +743,8 @@
       "bptt",
       "gru",
       "time-series-data",
-      "hidden-markov-model"
+      "hidden-markov-model",
+      "deep-learning"
     ],
     "faq": [
       {
@@ -2266,7 +2277,8 @@
       "chain-of-thought",
       "large-language-model",
       "few-shot",
-      "context-engineering"
+      "context-engineering",
+      "in-context-learning"
     ],
     "faq": [
       {
@@ -3189,6 +3201,7 @@
       "npu",
       "llama-cpp",
       "gguf",
+      "local-llm",
       "fp16",
       "int8",
       "int4",
@@ -5155,7 +5168,8 @@
       "ai-agent",
       "agentic-ai",
       "workflow",
-      "human-in-the-loop"
+      "human-in-the-loop",
+      "physical-ai"
     ],
     "faq": [
       {
@@ -6737,7 +6751,8 @@
       "lm-studio",
       "quantization",
       "gpu",
-      "gguf"
+      "gguf",
+      "local-llm"
     ],
     "faq": [
       {
@@ -7365,7 +7380,8 @@
     "relatedTerms": [
       "ollama",
       "retrieval-augmented-generation",
-      "llama-cpp"
+      "llama-cpp",
+      "local-llm"
     ],
     "faq": [
       {
@@ -7509,7 +7525,8 @@
       "quantization",
       "llama-cpp",
       "ollama",
-      "lm-studio"
+      "lm-studio",
+      "local-llm"
     ],
     "faq": [
       {
@@ -11241,7 +11258,8 @@
       "whisper",
       "clip",
       "grok",
-      "vision-language-model"
+      "vision-language-model",
+      "physical-ai"
     ],
     "faq": [
       {
@@ -12162,7 +12180,8 @@
       "large-language-model",
       "chain-of-thought",
       "reasoning-model",
-      "agi"
+      "agi",
+      "in-context-learning"
     ],
     "faq": [
       {
@@ -14625,6 +14644,7 @@
       }
     ],
     "relatedTerms": [
+      "in-context-learning",
       "few-shot",
       "prompt-engineering",
       "instruction-tuning"
@@ -16890,7 +16910,8 @@
       "computer-use",
       "hallucination",
       "instruction-tuning",
-      "vla"
+      "vla",
+      "physical-ai"
     ],
     "faq": [
       {
@@ -18703,6 +18724,10 @@
       {
         "question": "AlphaZeroとの関係は？",
         "answer": "AlphaZeroは、AlphaGo Zeroの学習手法を囲碁以外のチェスや将棋にも一般化した後継システム。"
+      },
+      {
+        "question": "AlphaGoはなぜ画期的だったのか？",
+        "answer": "囲碁は打てる手の組み合わせが天文学的な数に上り、当時のコンピュータの力任せな探索だけでは人間のトップ棋士に勝てないと考えられていた。AlphaGoは深層学習による盤面評価とモンテカルロ木探索を組み合わせることでこの壁を突破し、AIが直感的判断を要する領域でも人間を超えうることを示した。"
       }
     ],
     "references": [
@@ -20197,6 +20222,10 @@
       {
         "question": "SHAPやLIMEとは何か。",
         "answer": "いずれも入出力の関係から特徴量ごとの寄与度を推定する代表的な説明可能AIの手法で、個々の予測に対してどの入力がどの程度結果に影響したかを示す。"
+      },
+      {
+        "question": "AIの説明可能性はなぜ重要か。",
+        "answer": "融資審査や医療診断のように結果が人の生活に大きく影響する場面では、AIがなぜその判断を下したのかを説明できないと、誤りの検証や不公正なバイアスの発見ができない。EU AI規制のようなAI規制の整備が進む中、説明責任を果たす手段としての重要性も高まっている。"
       }
     ]
   },

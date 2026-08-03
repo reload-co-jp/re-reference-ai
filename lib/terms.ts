@@ -59,6 +59,7 @@ export type Term = {
 }
 
 import categoriesData from "data/categories.json"
+import categoryDescriptionsData from "data/category-descriptions.json"
 import tagDescriptionsData from "data/tag-descriptions.json"
 import termsData from "data/terms.json"
 import zennArticlesData from "data/zenn-articles.json"
@@ -225,3 +226,8 @@ const tagDescriptions = tagDescriptionsData as Record<string, string>
 
 export const getTagDescription = (tag: string): string | undefined =>
   tagDescriptions[tag]
+
+const categoryDescriptions = categoryDescriptionsData as Record<string, string>
+
+export const getCategoryDescription = (category: string): string | undefined =>
+  categoryDescriptions[category]
