@@ -151,6 +151,7 @@ const TAG_SLUGS: Record<string, string> = {
   マルチエージェント: "multi-agent",
   マルチモーダル: "multimodal",
   モデル圧縮: "model-compression",
+  ユーザーインターフェース: "user-interface",
   ローカルLLM: "local-llm",
   安全性: "safety",
   画像認識: "image-recognition",
