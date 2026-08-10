@@ -22521,6 +22521,10 @@
       {
         "slug": "devin",
         "note": "Claude Codeが対話的な指示のもとターミナルから動作するのに対し、Devinはタスクを渡すとより自律的に計画・実行まで進めるクラウド型のエージェントという違いがある"
+      },
+      {
+        "slug": "openchamber",
+        "note": "Claude CodeがAnthropic純正モデルのみをターミナルから使うのに対し、OpenChamberは複数モデルを横断して並列実行でき、デスクトップ・ブラウザ・VS Codeを行き来できるという違いがある"
       }
     ],
     "relatedTerms": [
@@ -22529,7 +22533,8 @@
       "subagent",
       "harness-engineering",
       "mcp",
-      "tui"
+      "tui",
+      "openchamber"
     ],
     "faq": [
       {
@@ -22700,9 +22705,19 @@
       {
         "slug": "claude-code",
         "note": "Clineがオープンソースで複数のLLMプロバイダを切り替えられるのに対し、Claude CodeはAnthropic純正のCLIツールという違いがある"
+      },
+      {
+        "slug": "openchamber",
+        "note": "ClineがVS Code拡張として動作するのに対し、OpenChamberはデスクトップアプリ・ブラウザ・VS Code拡張の複数クライアントで同一セッションを共有できるという違いがある"
       }
     ],
-    "relatedTerms": ["coding-agent", "tool-calling", "aider", "claude-code"],
+    "relatedTerms": [
+      "coding-agent",
+      "tool-calling",
+      "aider",
+      "claude-code",
+      "openchamber"
+    ],
     "faq": [
       {
         "question": "Clineは無料で使える?",
@@ -23788,6 +23803,65 @@
       {
         "question": "なぜコーディングエージェントはTUIを採用することが多いのか？",
         "answer": "ストリーミング応答の表示、ツール実行の許可要求、長時間タスクの進捗表示といった、状態が変わり続ける情報を扱う必要があるため。加えて、SSH越しのリモート環境やコンテナ内でもそのまま動かせる点が、開発者の作業環境と相性が良い。"
+      }
+    ]
+  },
+  {
+    "slug": "openchamber",
+    "name": "OpenChamber",
+    "tagline": "デスクトップ・ブラウザ・VS Codeを横断して使えるオープンソースのエージェント型開発環境",
+    "category": "エージェント",
+    "tags": ["コーディングエージェント", "マルチモデル", "OSS"],
+    "summary": "OpenChamberは、AIコーディングエージェントを軸にした開発環境。macOS・Windows・Linux向けデスクトップアプリ、ブラウザ/PWA、VS Code拡張の3系統から同一セッションにアクセスでき、デスクトップを閉じてもエージェントの作業を継続させられる。\n1つのタスクを最大5モデルに並列実行させ、最も良い結果を採用したり複数モデルの成果を統合(Fusion)したりする機能や、大きな差分を意味のある単位に整理して見せるChanges Walkthrough、GitHubのissue/PRを起点に作業しチェック失敗をエージェントへ戻す機能等を備える。オープンソースで無料公開されており、エージェントハーネスにはOpenCode SDKを採用している。",
+    "background": "コーディングエージェントの普及に伴い、単一モデル・単一クライアントでの利用に留まらず、複数モデルを比較しながらデスクトップ・ブラウザ・エディタを横断して同じ作業セッションを継続したいというニーズが生まれた。OpenChamberは、既存のオープンソースエージェントハーネスであるOpenCode SDKを基盤に、マルチモデル実行やクロスプラットフォームでのセッション共有に焦点を当てた開発環境として作られた。",
+    "architecture": "エージェント実行部分はOpenCode SDK上に構築されており、CLIから`openchamber serve`でローカルにデーモンを起動し、Cloudflareトンネルやリレー(WebSocket)経由でブラウザ・モバイルからリモート接続する構成を取る。UIパスワードによるアクセス制御を備え、デスクトップアプリ・ブラウザ/PWA・VS Code拡張の各クライアントが同じセッション状態を共有する。",
+    "workflow": "ユーザーはSession Goalsとしてタスクの完了条件を設定し、エージェントはアプリを閉じた後もその目標に向けてターン(対話)を継続する。1つのタスクを複数モデルに同時実行させるMulti-runで結果を比較し、良い部分を組み合わせるFusionを行える。大きな変更はChanges Walkthroughで手順ごとに分解表示され、GitHubのissueやPRを起点にした作業、cronによるスケジュール実行にも対応する。",
+    "advantages": [
+      "1つのタスクを最大5モデルに並列実行し、結果比較や統合(Fusion)ができる",
+      "デスクトップ・ブラウザ/PWA・VS Code拡張の間でセッションを共有し、作業を継続できる",
+      "オープンソースかつ無料で、GitHubのissue/PR起点の作業やスケジュール実行にも対応する"
+    ],
+    "disadvantages": [
+      "エージェント実行部分をOpenCode SDKに依存しており、その制約や進化に影響を受ける",
+      "リモートアクセスはトンネルやリレー経由の接続とUIパスワード設定を前提とし、公開設定を誤ると意図しない範囲までアクセスが広がりうる",
+      "マルチモデル並列実行(Multi-run)は、モデルごとのAPI利用コストが単一モデル実行より増える"
+    ],
+    "comparisons": [
+      {
+        "slug": "claude-code",
+        "note": "Claude CodeがAnthropic純正モデルのみをターミナルから使うのに対し、OpenChamberは複数モデルを横断して並列実行でき、デスクトップ・ブラウザ・VS Codeを行き来できるという違いがある"
+      },
+      {
+        "slug": "cline",
+        "note": "ClineがVS Code拡張として動作するのに対し、OpenChamberはデスクトップアプリ・ブラウザ・VS Code拡張の複数クライアントで同一セッションを共有できるという違いがある"
+      }
+    ],
+    "relatedTerms": ["claude-code", "cline", "coding-agent", "mcp"],
+    "faq": [
+      {
+        "question": "OpenChamberはオープンソースか?",
+        "answer": "オープンソースで、コードはGitHub上で公開されている。利用自体も無料。"
+      },
+      {
+        "question": "OpenChamberはどのエージェントハーネスを使っている?",
+        "answer": "OpenCode SDKを基盤にしている。"
+      }
+    ],
+    "references": [
+      {
+        "type": "Official Website",
+        "label": "OpenChamber",
+        "url": "https://openchamber.dev/"
+      },
+      {
+        "type": "GitHub",
+        "label": "openchamber/openchamber",
+        "url": "https://github.com/openchamber/openchamber"
+      },
+      {
+        "type": "Documentation",
+        "label": "OpenChamber Docs",
+        "url": "https://docs.openchamber.dev/"
       }
     ]
   }
