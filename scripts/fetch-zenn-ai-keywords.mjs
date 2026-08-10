@@ -2,7 +2,7 @@ import { readFile, writeFile } from "node:fs/promises"
 
 const PAGES = 5
 const COUNT_PER_PAGE = 100
-const TOP_N = 50
+const TOP_N = 100
 
 const terms = JSON.parse(await readFile("data/terms.json", "utf8"))
 const knownKeywords = new Set(
