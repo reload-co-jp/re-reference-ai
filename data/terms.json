@@ -20120,7 +20120,8 @@
     "slug": "shadow-ai",
     "name": "シャドーAI",
     "aliases": [
-      "Shadow AI"
+      "Shadow AI",
+      "シャドゥAI"
     ],
     "tagline": "組織のIT部門の承認や管理を経ずに、従業員が業務で無断利用するAIツール",
     "category": "技術",
