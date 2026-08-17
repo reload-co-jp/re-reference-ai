@@ -4398,7 +4398,8 @@
       "computer-use",
       "structured-output",
       "code-interpreter",
-      "browser-use"
+      "browser-use",
+      "webmcp"
     ],
     "faq": [
       {
@@ -4562,7 +4563,9 @@
       "function-calling",
       "claude",
       "agentcore",
-      "fastmcp"
+      "fastmcp",
+      "cloudflare-os",
+      "webmcp"
     ],
     "faq": [
       {
@@ -16518,7 +16521,8 @@
       "code-interpreter",
       "guardrails",
       "human-in-the-loop",
-      "ai-agent"
+      "ai-agent",
+      "cloudflare-os"
     ],
     "faq": [
       {
@@ -16666,7 +16670,8 @@
     "relatedTerms": [
       "computer-use",
       "tool-calling",
-      "human-in-the-loop"
+      "human-in-the-loop",
+      "webmcp"
     ],
     "faq": [
       {
@@ -23837,7 +23842,7 @@
         "note": "ClineがVS Code拡張として動作するのに対し、OpenChamberはデスクトップアプリ・ブラウザ・VS Code拡張の複数クライアントで同一セッションを共有できるという違いがある"
       }
     ],
-    "relatedTerms": ["claude-code", "cline", "coding-agent", "mcp"],
+    "relatedTerms": ["claude-code", "cline", "coding-agent", "mcp", "cloudflare-os"],
     "faq": [
       {
         "question": "OpenChamberはオープンソースか?",
@@ -23863,6 +23868,136 @@
         "type": "Documentation",
         "label": "OpenChamber Docs",
         "url": "https://docs.openchamber.dev/"
+      }
+    ]
+  },
+  {
+    "slug": "cloudflare-os",
+    "name": "Cloudflare OS",
+    "tagline": "Cloudflare Workers上に構築された、企業の文脈と権限管理を組み込んだオープンソースのAIエージェントワークスペース",
+    "category": "エージェント",
+    "tags": ["エージェント基盤", "セキュリティ", "OSS"],
+    "summary": "Cloudflare OSは、Cloudflareが2026年8月に発表したオープンソースのAIエージェントワークスペース。ブラウザ上の会話から始まり、組織が用意した文脈やスキルを踏まえてドキュメント・アプリ・ワークフローへと発展させられる。(1)コードを書いて実行できる分離ランタイムを備えたエージェントワークスペース、(2)社内データやサービスへの安全なアクセスを管理する新しいセキュリティ・ガバナンス層、(3)ユーザー自身が作成・改造できる個人向けアプリのプラットフォーム、という3要素で構成される。Cloudflare Workersチーム自身が開発しており、Durable Objects・Dynamic Workers・Facetsといった最新のWorkers Runtime機能を全面的に活用する。workerd(Workersランタイム)自体がOSSであるため、Cloudflare上に限らず自社サーバーでも実行できる。AI Gatewayを介して任意のAIモデルプロバイダを利用でき、特定ベンダーへのロックインを避けられる。",
+    "background": "生成AIエージェントの社内活用が広がる一方、既存のAIツールは社内システムとの安全な連携や権限管理を後付けで実装する必要があり、開発者のボトルネックになりやすいという課題があった。CloudflareはCloudflare OSを自社の業務基盤として実際に運用しており、CEOのMatthew Princeは「既存のツールが必要な要件を満たさなかったため自ら構築した」と述べている。",
+    "history": "2026年8月5日、Cloudflareがプレスリリースとブログ記事でCloudflare OSを発表し、GitHub上でApache-2.0ライセンスのオープンソースソフトウェアとして公開した。",
+    "architecture": "Cloudflare Workers上に構築されており、Durable Objects・Dynamic Workers・Facetsを中核機能として利用する。各ワークスペースは1つのDurable Objectだ。各Gadgetはオンデマンドで起動するDynamic Workerであり、Facetとしてワークスペースに組み込まれ、Cloudflare OS本体とは別のSQLiteデータベースを持つ。ブラウザのクライアントとサーバー間の通信には、Cloudflareのオブジェクトケーパビリティ型RPCシステムであるCap'n Webを使う。外部サービスへのアクセスは「Gatekeeper」と呼ばれるサービス固有の仲介レイヤーが管理し、こちらもFacetとしてワークスペースに組み込まれる。",
+    "workflow": "利用はブラウザ上の会話から始まり、ユーザーが指示することでドキュメント・アプリ・自動化されたワークフローへと発展させられる。エージェントやGadgetは既定では外部リソースに一切アクセスできず、ユーザーがリンクを貼るかUIから選択して個別に「導入(introduce)」することで初めてアクセス権が発生する(capability-based access control)。副作用のある操作はGatekeeperが検知して人間の承認を求めるが、承認は非同期に行えるため、エージェントは承認待ちで即座に停止せず作業を継続できる。決まった手順のジョブはコードによる決定的なワークフローとして、オンデマンド・スケジュール・イベント駆動で実行でき、既存のMCPサーバーもMCP Server Portals経由で利用できる。",
+    "advantages": [
+      "エージェント・Gadgetは既定で外部リソースに一切アクセスできず、必要な範囲だけを明示的に「導入」するcapability-basedモデルのため、MCPサーバーを常時広く接続する方式より権限が絞り込まれる",
+      "各Gadget(ユーザーごとの個人アプリインスタンス)は専用サンドボックスと専用データベースを持つため、他ユーザーのデータ漏洩を構造的に防ぎつつ、ユーザー自身が自由に改造できる",
+      "workerd(Workersランタイム)自体がOSSのため、Cloudflare上だけでなく自社サーバーでも実行でき、AI GatewayでAIモデルプロバイダを切り替えられるためベンダーロックインを避けやすい"
+    ],
+    "disadvantages": [
+      "Durable Objects・Dynamic Workers・Facets・Cap'n WebといったCloudflare Workers由来の技術に強く依存した設計のため、Workersエコシステム外への移植や理解にはコストがかかる",
+      "外部サービスごとにGatekeeperを個別に用意・設定する必要があり、対応先が増えるほど導入・保守の手間が増える"
+    ],
+    "comparisons": [
+      {
+        "slug": "mcp",
+        "note": "MCPが個別ツールとの接続プロトコルであるのに対し、Cloudflare OSはMCPサーバーを含む複数リソースへのアクセスをGatekeeperで一元的にガバナンスする統合ワークスペース基盤という違いがある"
+      },
+      {
+        "slug": "openchamber",
+        "note": "OpenChamberが複数のAIモデルを横断実行するコーディング特化の開発環境であるのに対し、Cloudflare OSは社内システムへの権限管理を組み込んだ全社員向けのエージェント型ワークスペースであるという違いがある"
+      }
+    ],
+    "relatedTerms": ["mcp", "sandboxing", "openchamber"],
+    "faq": [
+      {
+        "question": "Cloudflare OSはオープンソースか?",
+        "answer": "Apache-2.0ライセンスでGitHub上に公開されている。ソースコードだけでなくworkerd(Cloudflare Workersランタイム)自体もOSSのため、Cloudflareに限らず自社サーバー上でも実行できる。"
+      },
+      {
+        "question": "Gatekeeperとは何か?",
+        "answer": "外部サービスへのアクセスを仲介するcapability-basedセキュリティ層。認可処理、アクセス範囲の限定、全操作のログ記録、副作用のある操作への人間承認(非同期のhuman-in-the-loop)を担う。"
+      },
+      {
+        "question": "Gadgetとは何か?",
+        "answer": "ユーザーごとに独立して動くプライベートなアプリインスタンス。Dynamic Worker Facetとしてサンドボックス化され専用のSQLiteデータベースを持ち、他ユーザーのデータにアクセスできない構造で、ユーザー自身がエージェントに改造を依頼できる。"
+      }
+    ],
+    "references": [
+      {
+        "type": "Blog",
+        "label": "Cloudflare OS: an open platform for agents, apps, and work",
+        "url": "https://blog.cloudflare.com/cloudflare-os/"
+      },
+      {
+        "type": "GitHub",
+        "label": "cloudflare/cloudflare-os",
+        "url": "https://github.com/cloudflare/cloudflare-os"
+      },
+      {
+        "type": "Official Website",
+        "label": "Cloudflare OS Is the First AI Workspace Built Around How Companies Actually Work",
+        "url": "https://www.cloudflare.com/press/press-releases/2026/cloudflare-os-is-the-first-ai-workspace-built-around-how-companies-actually-work/"
+      }
+    ]
+  },
+  {
+    "slug": "webmcp",
+    "name": "WebMCP",
+    "aliases": ["Web Model Context Protocol"],
+    "tagline": "Webページ自身がツールをブラウザ内のAIエージェントへ公開できる、W3C Web Machine Learning Community Groupが策定中のブラウザAPI仕様",
+    "category": "エージェント",
+    "tags": ["プロトコル", "ツール連携", "ブラウザ"],
+    "summary": "WebMCPは、Webページが自らの機能を「ツール」としてブラウザに公開し、ブラウザに組み込まれたAIエージェント(または埋め込まれたエージェント)がそれを呼び出せるようにするJavaScript APIの仕様。AnthropicのMCP(Model Context Protocol)から名称と語彙(tool・schema・parameter等)の着想を得ているが、アーキテクチャは別物だ。サーバー間通信を前提とするMCPに対し、WebMCPはオリジン(origin)・ブラウザの権限管理・DOM統合・タブのライフサイクルといったWebプラットフォーム固有の概念にネイティブ対応する。GoogleとMicrosoftのエンジニアが中心となり、W3CのWeb Machine Learning Community Groupで策定が進められている。",
+    "background": "AIプラットフォーム(Copilot・ChatGPT・Claude・Gemini等)は、MCPやOpenAPIのような「バックエンド統合」を通じて外部サービスのツールを呼び出せるようになってきた。しかしこの方式では、Web UIやブラウザ体験を経由せずエージェントが外部サービスのバックエンドと直接通信するため、UIが置き去りになって文脈が失われたり、開発者がユーザーの状態や認証情報をバックエンド統合ごとに複製する必要が生じたりする課題があった。WebMCPは、既存のクライアント側アプリケーションロジックとUIを再利用しながら、ユーザーとエージェントが同じWebインターフェース上で協調して作業できるようにする目的で提案された。",
+    "history": "2026年、GoogleとMicrosoftのエンジニアが中心となり、W3CのWeb Machine Learning Community GroupでWebMCPの仕様策定が始まった。2026年8月14日時点でDraft Community Group Reportとして公開されており、W3C Standard Trackにはまだ乗っていない。Chromeでは試験用フラグ経由でWebMCPの一部機能を利用できる。",
+    "architecture": "中核となるのは`document.modelContext`インターフェース。Webページは`registerTool()`を呼び出し、名前・説明文・JSON Schemaによる入力スキーマ・実行関数(`execute`)を持つツールをブラウザに登録する。ブラウザに組み込まれたAIエージェントは、`document.modelContext`経由でページが登録したツールを検出・実行し、UIの更新やAPI呼び出しをページ自身のロジックを通じて行う。アクセスはPermissions Policyの`tools`機能でオリジン単位に制御され、既定では同一オリジンの`Window`と同一オリジンのiframeのみ有効になる。`exposedTo`オプションを使うと、信頼する別オリジンのiframe(ページに埋め込まれたエージェント等)にも選択的にツールを共有できる。",
+    "workflow": "Webページはロード時に`document.modelContext.registerTool()`で自身のツールを登録する。ユーザーがエージェントに指示を出すと、エージェントはWebページが公開しているツール一覧を取得し、ユーザーの意図に合うツールをJSON Schemaに従った引数で呼び出す。ツールの`execute`関数はWebページの既存のクライアント側ロジックを再利用してUIを更新したりAPIを呼び出したりし、結果をエージェントに返す。ツールが不要になった場合は、登録時に渡した`AbortSignal`を中止して登録解除する。",
+    "codeExamples": [
+      {
+        "title": "ツールの登録(document.modelContext.registerTool)",
+        "language": "javascript",
+        "code": "await document.modelContext.registerTool({\n  name: \"add-todo\",\n  description: \"Add a new item to the user's active todo list\",\n  inputSchema: {\n    type: \"object\",\n    properties: {\n      text: { type: \"string\", description: \"The text content of the todo item\" }\n    },\n    required: [\"text\"]\n  },\n  async execute({ text }) {\n    // 既存のクライアント側ロジックを再利用してUIを更新\n    await addTodoItemToCollection(text);\n\n    return {\n      content: [\n        { type: \"text\", text: `Added todo item: \"${text}\" successfully.` }\n      ]\n    };\n  }\n});"
+      }
+    ],
+    "advantages": [
+      "ページ自身が用意した既存のクライアント側ロジックとUIをそのまま再利用でき、エージェント専用のバックエンド統合を別途用意する必要がない",
+      "オリジン単位のPermissions Policyでアクセスを制御し、既定では同一オリジンのみに限定されるため、アクセス範囲を絞り込みやすい",
+      "MCPと語彙(tool・schema・parameter)を共有しているため、既存のMCPエコシステムの知識をWebページ側のツール実装にも応用しやすい"
+    ],
+    "disadvantages": [
+      "2026年8月時点でDraft Community Group Reportの段階でありW3C Standard Trackに入っておらず、仕様変更の可能性がある",
+      "クロスオリジンのiframeへのツール共有や、複数オリジンをまたいだエージェントの状態の持ち運びに伴うセキュリティ・プライバシー上のリスクなど、仕様書内に未検討の項目が残っている",
+      "対応ブラウザが限定的で、現時点ではChromeが試験用フラグで一部サポートするのみ"
+    ],
+    "comparisons": [
+      {
+        "slug": "mcp",
+        "note": "MCPがサーバー間通信を前提にAIプラットフォームと外部サービスのバックエンドを繋ぐのに対し、WebMCPはWebページ自身がブラウザ内でツールを公開し、オリジンやDOM統合といったWebプラットフォーム固有の概念にネイティブ対応するという違いがある"
+      },
+      {
+        "slug": "browser-use",
+        "note": "Browser UseがAIエージェントによるDOM解析やクリックなど視覚的・自律的なブラウザ操作技術であるのに対し、WebMCPはWebページ側が明示的に登録したツールをエージェントが呼び出す、開発者主導の連携方式であるという違いがある"
+      }
+    ],
+    "relatedTerms": ["mcp", "browser-use", "tool-calling"],
+    "faq": [
+      {
+        "question": "WebMCPとMCP(Model Context Protocol)は同じものか?",
+        "answer": "名称と語彙(tool・schema・parameter等)を共有しているが別物。MCPはサーバー間通信を前提としたバックエンド統合のためのプロトコルで、WebMCPはWebページがブラウザ内のエージェントにツールを公開するためのJavaScript API仕様。"
+      },
+      {
+        "question": "WebMCPは誰が策定しているか?",
+        "answer": "GoogleとMicrosoftのエンジニアが中心となり、W3CのWeb Machine Learning Community Groupで策定している。2026年8月時点でDraft Community Group Reportの段階。"
+      },
+      {
+        "question": "WebMCPはどのブラウザで使えるか?",
+        "answer": "2026年8月時点でW3C Standard Trackの正式仕様ではなく、Chromeが試験用フラグで一部サポートしている段階。"
+      }
+    ],
+    "references": [
+      {
+        "type": "Specification",
+        "label": "WebMCP",
+        "url": "https://webmachinelearning.github.io/webmcp/"
+      },
+      {
+        "type": "GitHub",
+        "label": "webmachinelearning/webmcp",
+        "url": "https://github.com/webmachinelearning/webmcp"
       }
     ]
   }
