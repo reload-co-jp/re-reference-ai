@@ -13571,6 +13571,10 @@
       {
         "slug": "computer-use",
         "note": "Computer Useのように誤操作のリスクがある機能では、Human-in-the-Loopの確認ステップを組み合わせることが多い"
+      },
+      {
+        "slug": "rentahuman",
+        "note": "Human-in-the-LoopがAIの判断に人間が介在し監督・修正する仕組みであるのに対し、RentAHumanはAIエージェントが主体となって人間に物理世界のタスクを発注・依頼する、役割が逆転した仕組みという違いがある"
       }
     ],
     "relatedTerms": [
@@ -13580,7 +13584,8 @@
       "computer-use",
       "sandboxing",
       "browser-use",
-      "centaur-mode"
+      "centaur-mode",
+      "rentahuman"
     ],
     "faq": [
       {
@@ -24046,6 +24051,316 @@
       {
         "question": "ケンタウルス状態はAI万能論とどう違う？",
         "answer": "AI万能論がAIへの全面的な代替を志向するのに対し、ケンタウルス状態はAIと人間それぞれの強みを組み合わせることで成果を最大化する考え方であり、人間の判断や監督の役割を前提としている点が異なる。"
+      }
+    ]
+  },
+  {
+    "slug": "ros2",
+    "name": "ROS2",
+    "aliases": [
+      "Robot Operating System 2",
+      "ROS 2"
+    ],
+    "tagline": "ロボットアプリケーション開発向けのオープンソースミドルウェア/フレームワーク",
+    "category": "インフラ",
+    "tags": [
+      "フレームワーク",
+      "自律システム"
+    ],
+    "plainSummary": "ロボットのソフトウェアを作るためのオープンソースの土台。センサーやモーターを制御するプログラム同士をつなぐ役割を持つ。",
+    "summary": "ROS2(Robot Operating System 2)は、ロボットアプリケーションを開発するためのオープンソースミドルウェア/フレームワーク。\nセンサー入力・モーター制御・経路計画といった機能を担う個々のプログラム(ノード)を、パブリッシュ/サブスクライブ型のメッセージング、サービス(同期的なリクエスト/レスポンス)、アクション(非同期な長時間タスク)といった通信の仕組みで疎結合に連携させる。前身のROS(ROS1)がプロトタイピング・研究用途中心だったのに対し、ROS2は産業用途・商用製品での利用を念頭に、リアルタイム性、マルチロボット構成、セキュリティ、複数OSへの対応を強化して設計されている。",
+    "background": "ROS1は研究・プロトタイピング用途で広く普及した一方、単一マスターノード(roscore)への依存、リアルタイム制御の弱さ、マルチロボット構成のサポート不足、セキュリティ機構の欠如といった課題が、商用・産業用ロボットへの適用時に顕在化した。ROS2はこれらの課題を解決するため、通信層をDDS(Data Distribution Service)ベースの分散アーキテクチャに置き換えるなど、設計を刷新して開発された。",
+    "history": "2014年ごろ、Open Source Robotics Foundation(OSRF、現Open Robotics)によりROS2の開発が発表された。2017年12月、最初の正式ディストリビューションであるArdent Apaloneがリリースされた。以降、Foxy Fitzroy(2020年、LTS)、Humble Hawksbill(2022年、LTS)、Jazzy Jalisco(2024年、LTS)など、動物名を冠したディストリビューションが定期的にリリースされている。",
+    "architecture": "通信層にDDS(Data Distribution Service)を採用し、単一障害点となるマスターノードを持たない分散型のパブリッシュ/サブスクライブ通信を実現する。個々の処理単位である「ノード」がトピック(非同期メッセージング)、サービス(同期リクエスト/レスポンス)、アクション(進捗フィードバック付きの非同期タスク)を介して通信する。通信品質はQoS(Quality of Service)設定でトピックごとに調整可能で、SROS2によるアクセス制御・暗号化などのセキュリティ機構も備える。",
+    "advantages": [
+      "DDSベースの分散通信によりマスターノードへの単一障害点依存がなく、マルチロボット構成に対応しやすい",
+      "QoS設定によりネットワーク環境や用途に応じた通信の信頼性・リアルタイム性を調整できる",
+      "SROS2によるセキュリティ機構、Linux/Windows/macOSへの対応など商用・産業用途を意識した設計になっている"
+    ],
+    "disadvantages": [
+      "DDSレイヤーの導入により概念・設定項目が増え、ROS1と比べ学習コストが高い",
+      "DDS実装ベンダーによって挙動やパフォーマンス特性に差があり、選定・チューニングが必要になる場合がある",
+      "ROS1向けに蓄積された既存パッケージ・ノウハウの一部は移植作業が必要になる"
+    ],
+    "references": [
+      {
+        "type": "Official Website",
+        "label": "ROS 2",
+        "url": "https://www.ros.org/"
+      },
+      {
+        "type": "Documentation",
+        "label": "ROS 2 Documentation",
+        "url": "https://docs.ros.org/"
+      },
+      {
+        "type": "GitHub",
+        "label": "ros2/ros2",
+        "url": "https://github.com/ros2/ros2"
+      }
+    ],
+    "relatedTerms": [
+      "lerobot",
+      "openarm"
+    ]
+  },
+  {
+    "slug": "m5stack",
+    "name": "M5Stack",
+    "tagline": "ESP32ベースの積み木型オープンソースハードウェアで、IoT機器やロボット制御のプロトタイピングに使われるモジュール群",
+    "category": "インフラ",
+    "tags": [
+      "ハードウェア",
+      "エッジAI"
+    ],
+    "plainSummary": "ESP32チップを使った小型のマイコンボード。画面やセンサーなどの部品を積み木のように組み合わせ、IoT機器やロボットを手早く試作できる。",
+    "summary": "M5Stackは、中国・深圳のM5Stack Technologyが開発するオープンソースのモジュール型ハードウェアシリーズ。Espressif製のWi-Fi/Bluetoothチップ「ESP32」系SoCを搭載した本体「Core」(ディスプレイ・バッテリー・ボタンを内蔵)に、センサーやアクチュエータを備えた周辺パーツを組み合わせて使う。周辺パーツは「Unit」「Module」「Hat」といった種類に分かれ、Grove互換コネクタやピンヘッダで積み重ねて接続する。はんだ付け不要で部品を接続でき、ビジュアルプログラミング環境「UIFlow」、MicroPython、Arduino IDE、ESP-IDFなど複数の開発方法に対応する。低コストで組み立てられることから、IoT機器やセンサーノードのプロトタイピング、STEM教育、簡易なロボットの制御ボードとして使われている。",
+    "history": "2016年ごろ(2017年とする情報もある)、Jimmy LaiによりM5Stack Technologyが中国・深圳で設立され、ESP32ベースの積み木型オープンソースハードウェアの提供を開始した。2024年5月、ESP32を開発するEspressifがM5Stackを買収した。",
+    "architecture": "本体である「Core」シリーズ(Core2、CoreS3等)はESP32/ESP32-S3系SoCにディスプレイ・バッテリー・ボタンを内蔵する。拡張パーツは、センサーやアクチュエータ単体の「Unit」、Core下部に積み重ねる機能拡張の「Module」、小型の拡張基板である「Hat」に分かれ、いずれもGrove互換コネクタ(I2C/UART)やピンヘッダで接続する積み木型の構造を取る。開発はビジュアルプログラミングのUIFlow、MicroPython、Arduino IDE、ESP-IDFのいずれかで行える。",
+    "advantages": [
+      "はんだ付け不要でセンサーやディスプレイなどの部品を積み木のように組み合わせられ、試作までの時間を短縮できる",
+      "UIFlow(ビジュアルプログラミング)・MicroPython・Arduino IDE・ESP-IDFと複数の開発方法に対応し、初学者から上級者まで扱える",
+      "ディスプレイ・バッテリー・ボタンを内蔵した本体に部品を追加していく形式のため、単体でも動作確認しやすい"
+    ],
+    "disadvantages": [
+      "Raspberry Piなどのシングルボードコンピュータと比べ、ESP32のCPU性能・メモリ容量には限りがあり重い処理には向かない",
+      "M5Stack独自のコネクタ形状・積み重ね方式に依存するため、他社製パーツとの互換性は限定的",
+      "STEM教育・簡易IoT向けの設計であり、産業用途で求められる耐環境性や認証は別途検討が必要"
+    ],
+    "references": [
+      {
+        "type": "Official Website",
+        "label": "M5Stack",
+        "url": "https://m5stack.com/"
+      },
+      {
+        "type": "Documentation",
+        "label": "M5Stack Docs",
+        "url": "https://docs.m5stack.com/"
+      },
+      {
+        "type": "GitHub",
+        "label": "m5stack",
+        "url": "https://github.com/m5stack"
+      }
+    ]
+  },
+  {
+    "slug": "lerobot",
+    "name": "LeRobot",
+    "tagline": "Hugging Faceが開発する、模倣学習・強化学習によるロボット制御を実践的に扱うPyTorchベースのオープンソースライブラリ",
+    "category": "インフラ",
+    "tags": [
+      "フレームワーク",
+      "強化学習"
+    ],
+    "plainSummary": "ロボットにカメラやセンサーの情報から動作を学習させるためのオープンソースツール群。データ収集・学習・実機制御までを一貫して行える。",
+    "summary": "LeRobotは、Hugging Faceが提供するロボット学習向けのオープンソースライブラリ。PyTorchをベースに、模倣学習(ACT、Diffusion Policy、VQ-BeT等)、強化学習(TDMPC、HIL-SERL等)を実装済みのポリシーとして提供する。Vision-Language-Action(VLA)モデル(Pi0、Pi0Fast、Pi0.5、GR00T N1.7等)にも対応する。学習用スクリプトを1行実行するだけで訓練でき、制御ロジックをハードウェアの詳細から切り離す統一的な`Robot`クラスインターフェースを持つ。SO100、LeKiwi、Koch、HopeJR、OMX、EarthRover、Reachy2、OpenARM、Unitree G1、reBot B601といったロボットや、ゲームパッド・キーボード・スマートフォンをテレオペレーション(遠隔操作)デバイスとしてネイティブサポートする。加えて`lerobot_robot_`等の接頭辞を持つパッケージを自動検出するプラグイン機構を備える。これにより、UFACTORY xArm、Universal Robots UR5e、Franka、AgileX Piper、Trossen WidowX、ROS 2ブリッジなどサードパーティ製ハードウェアにも対応が広がっている。収集したデータはHugging Face Hub上で共有できる`LeRobotDataset`形式に統一されており、データセットや学習済みモデルを共有・再利用しやすい。ライセンスはApache License 2.0。",
+    "history": "2024年3月、Hugging FaceがTeslaの元スタッフサイエンティストRemi Cadeneを採用し、ロボティクスプロジェクトを開始。2024年5月、オープンソースロボット学習ライブラリLeRobotを公開した。",
+    "architecture": "ハードウェアの詳細を制御ロジックから切り離す`Robot`クラスインターフェースを中核に持ち、`robot.get_observation()`で観測を取得し、ポリシーが選択した行動を`robot.send_action()`で送るという共通のやり取りでロボットを制御する。データはHugging Face Hub上で共有できる`LeRobotDataset`形式に統一されており、模倣学習・強化学習・VLAモデルの訓練にそのまま利用できる。",
+    "advantages": [
+      "ACT・Diffusion Policy・VLAモデル(Pi0系、GR00T等)など複数の最新手法をPyTorchベースの共通インターフェースで扱え、手法の比較・切り替えがしやすい",
+      "Hugging Face Hubとの統合により、収集したデータセットや学習済みモデルを`LeRobotDataset`形式で共有・再利用しやすい",
+      "SO100等の低コストな入門用アームからOpenArm・Unitree G1といった高機能なロボットまで幅広いハードウェアをネイティブサポートし、プラグイン機構でさらに拡張できる"
+    ],
+    "disadvantages": [
+      "活発に開発が続くライブラリであり、APIやポリシー実装に破壊的変更が入る場合もある",
+      "ネイティブ対応外のハードウェアはサードパーティ製プラグインに依存するため、対応状況や品質にばらつきがある",
+      "実機ロボットでの学習・評価にはロボット本体やセンサー、テレオペレーション機材への追加投資が必要になる"
+    ],
+    "comparisons": [
+      {
+        "slug": "ros2",
+        "note": "ROS2がロボット間・ノード間の通信を担う汎用ミドルウェアであるのに対し、LeRobotはその上でロボット学習(データ収集・模倣学習・強化学習)に特化したPyTorchベースのライブラリという違いがある。ROS 2ブリッジ経由での連携にも対応する"
+      },
+      {
+        "slug": "openarm",
+        "note": "OpenArmがLeRobotにネイティブ対応するハードウェアの1つであるのに対し、LeRobotはOpenArm含む複数ロボットに共通のデータ収集・学習環境を提供するソフトウェア側という関係にある"
+      }
+    ],
+    "relatedTerms": [
+      "ros2",
+      "openarm"
+    ],
+    "references": [
+      {
+        "type": "GitHub",
+        "label": "huggingface/lerobot",
+        "url": "https://github.com/huggingface/lerobot"
+      },
+      {
+        "type": "Documentation",
+        "label": "LeRobot Documentation",
+        "url": "https://huggingface.co/docs/lerobot"
+      }
+    ]
+  },
+  {
+    "slug": "openarm",
+    "name": "OpenArm",
+    "tagline": "Enacticが開発する、フルオープンソースの双腕ヒューマノイドロボットアーム。接触の多い環境での物理AI研究向けに設計されている",
+    "category": "インフラ",
+    "tags": [
+      "ハードウェア",
+      "自律システム"
+    ],
+    "plainSummary": "人間の腕のように動く、設計図から制御ソフトまで公開されたロボットアーム。ロボットに動作をデータから学習させる研究に使われる。",
+    "summary": "OpenArmは、東京のEnactic, Inc.が開発するフルオープンソースの双腕ヒューマノイドロボットアーム。物理AI(Physical AI)研究や、物体との接触を伴う操作(contact-rich manipulation)への実運用を想定して設計されており、CAD・ファームウェア・制御コード・シミュレーションツール一式が公開されている。関節はコンプライアント(柔軟性を持つ)かつバックドライバブル(外力によって逆駆動できる)な設計で、リアルタイムの重力補償と双方向の力覚フィードバックにより、人間らしい滑らかなテレオペレーション(遠隔操作)と接触を伴うデータ収集を可能にする。モーター制御にはCAN-FDを使い、ROS 2向けのパッケージ(カメラ統合、ハードウェアの立ち上げ、MoveIt2)やHugging FaceのLeRobotとの統合も提供される。DIYキットまたは完成品として入手でき、公開当初は双腕1式で約6,500ドルという価格が示されていた。",
+    "background": "物理AI・ヒューマノイドロボットの研究では、実機での操作データ収集や手法の再現に使えるロボットアームが、非公開または高価であることが障壁となっていた。OpenArmは、設計・制御ソフトウェアを含め研究成果を再現しやすい形で公開すること(サイト上のキャッチコピーは「Making SOTA reproducible」)を掲げ、比較的低コストな研究グレードのハードウェアとして開発された。",
+    "history": "Enactic, Inc.は、Reazon Holdingsの社内研究開発部門Human Interaction Labからスピンアウトする形で、共同創業者兼CEOのHiroto Yamamotoにより2025年に東京で設立された。2025年2月にOpenArmの最初のベータ版が公開され、同年7月23日に正式公開された。その後、後継版のOpenArm 2.0が発表されている。",
+    "architecture": "双腕構成で片腕あたり7自由度(7-DOF)を持ち、コンプライアントかつバックドライバブルな関節にリアルタイムの重力補償と双方向の力覚フィードバックを組み合わせることで、接触を伴う操作の遠隔操作・データ収集に対応する。モーター制御にはCAN-FDとSocketCANドライバを用いる。ソフトウェア面ではROS 2向けパッケージ(カメラ統合、ハードウェアの立ち上げ、MoveIt2によるモーションプランニング)とHugging FaceのLeRobot統合が提供される。後継として、同じ運動学構造を持つ受動型(無アクチュエータ)の肩掛け型ティーチングデバイス「OpenArm KER」も発表されているが、2026年8月時点では未リリース。",
+    "advantages": [
+      "CAD・ファームウェア・制御コード・シミュレーションツールが一式公開されており、研究成果の再現や独自の改造がしやすい",
+      "コンプライアントかつバックドライバブルな関節と双方向の力覚フィードバックにより、接触を伴う操作の遠隔操作・データ収集に向く",
+      "ROS 2向けパッケージとLeRobot統合が提供されており、既存のロボット学習・制御エコシステムに組み込みやすい"
+    ],
+    "disadvantages": [
+      "完成品でも双腕1式で数千ドル規模の費用がかかり、DIYキットの場合は組み立ての手間もかかる",
+      "比較的新しいプロジェクトであり、対応ハードウェアやコミュニティの事例はまだ発展途上にある",
+      "CAN-FDやROS 2といった前提知識が必要で、導入の学習コストは低くない"
+    ],
+    "comparisons": [
+      {
+        "slug": "ros2",
+        "note": "ROS2はOpenArmが利用するロボット向け通信ミドルウェアであり、OpenArmはその上でカメラ統合やMoveIt2連携用のROS 2パッケージを提供するハードウェア側という関係にある"
+      },
+      {
+        "slug": "lerobot",
+        "note": "LeRobotがロボット学習向けのソフトウェアライブラリであるのに対し、OpenArmはLeRobotにネイティブ対応するハードウェア(双腕ヒューマノイドアーム)という違いがある"
+      }
+    ],
+    "relatedTerms": [
+      "ros2",
+      "lerobot"
+    ],
+    "references": [
+      {
+        "type": "Official Website",
+        "label": "OpenArm",
+        "url": "https://openarm.dev/"
+      },
+      {
+        "type": "GitHub",
+        "label": "enactic/openarm",
+        "url": "https://github.com/enactic/openarm"
+      },
+      {
+        "type": "Documentation",
+        "label": "OpenArm · Hugging Face (LeRobot integration)",
+        "url": "https://huggingface.co/docs/lerobot/openarm"
+      }
+    ]
+  },
+  {
+    "slug": "rentahuman",
+    "name": "RentAHuman",
+    "aliases": [
+      "Rent A Human"
+    ],
+    "tagline": "AIエージェントが実世界のタスクを人間に依頼し報酬を支払う、人間を労働力として扱うマーケットプレイス",
+    "category": "エージェント",
+    "tags": [
+      "自律システム",
+      "協調"
+    ],
+    "plainSummary": "AIエージェントが現実世界でしかできない作業(買い出しや撮影など)を、人にお金を払って頼めるサービス。人がAIを使うのではなく、AIが人を雇う逆転の発想。",
+    "summary": "RentAHuman(rentahuman.ai)は、AIエージェントが実世界のタスクをこなす人間を検索・依頼・支払いまで行えるマーケットプレイス。Alexander Liteploが2026年に創業し、Y Combinator 2026年春バッチに採択された、米サンフランシスコ拠点のスタートアップが運営する。人間がAIを使って作業を代行させる従来の方向性とは逆に、AIエージェントが人間に仕事を発注する構図を取る。AIエージェントはコード記述・メール作成・ソフトウェア操作・支払いといったデジタル世界の作業はこなせる一方、家事の記録(ロボット学習用データ収集)、店舗での写真撮影、動画撮影の人材手配、イベント運営、買い出し代行など、物理世界でしか行えない作業は実行できない。RentAHumanは、こうしたタスクをAPI経由で人間へ委託できる仕組みを用意し、このギャップを埋める。",
+    "background": "AIエージェントが自律的にこなせる作業の範囲はデジタル世界を中心に広がってきたが、物理世界での作業はエージェント自身では実行できない。RentAHumanは、この「AIが物理世界に触れられない」という制約に対し、人間を実行役として仲介するマーケットプレイスを用意することで対応した。",
+    "history": "2026年、Alexander LiteploがRentAHumanを創業し、Y Combinator 2026年春バッチに採択された。公開から2週間で登録者50万人、月間経常収益2万ドルに達したと報じられている。",
+    "workflow": "AIエージェントはAPI経由でタスク(内容・場所・報酬額)を投稿する。登録している人間はタスクを閲覧し、場所・スキル・単価をもとに応募する。エージェントは条件に合う人間を選び指示を送り、人間がタスクを完了すると報酬が支払われる。",
+    "advantages": [
+      "AIエージェントがデータ収集・撮影・買い出し・イベント運営といった物理世界のタスクを人間に委託でき、デジタル作業だけでは完結しないニーズに対応できる",
+      "タスクの投稿から人間の選定・支払いまでAPI経由で完結するため、人手を介した仲介の手間が小さい"
+    ],
+    "disadvantages": [
+      "実行結果の品質確認や安全性の担保は、エージェント側の指示内容や審査に依存する部分が大きい",
+      "報酬体系やタスクの需給によって人間側の参加インセンティブが変動しやすい",
+      "創業間もないサービスであり、長期的な信頼性や各国の労働規制への対応は未知数"
+    ],
+    "comparisons": [
+      {
+        "slug": "human-in-the-loop",
+        "note": "human-in-the-loopがAIの判断に人間が介在し監督・修正する仕組みであるのに対し、RentAHumanはAIエージェントが主体となって人間に物理世界のタスクを発注・依頼する、役割が逆転した仕組みという違いがある"
+      }
+    ],
+    "relatedTerms": [
+      "human-in-the-loop"
+    ],
+    "references": [
+      {
+        "type": "Official Website",
+        "label": "RentAHuman",
+        "url": "https://rentahuman.ai/"
+      },
+      {
+        "type": "Blog",
+        "label": "Rentahuman.ai Turns Humans Into On-Demand Labor For AI Agents (Forbes)",
+        "url": "https://www.forbes.com/sites/ronschmelzer/2026/02/05/when-ai-agents-start-hiring-humans-rentahumanai-turns-the-tables/"
+      }
+    ]
+  },
+  {
+    "slug": "foconet",
+    "name": "FocoNet",
+    "tagline": "複数観測点の地震波形データからTransformerで震源メカニズム（発震機構解）を推定する機械学習モデル",
+    "category": "モデル",
+    "tags": [
+      "Transformer",
+      "地震学"
+    ],
+    "plainSummary": "地震計の観測データをもとに、断層がどの向きにどう動いたか（発震機構解）をAIで推定するモデル。",
+    "summary": "FocoNetは、Xiaohan Song（スタンフォード大学）、Men-Andrin Meier（カリフォルニア工科大学）、William L. Ellsworth、Gregory C. Berozaが開発した、震源メカニズム（発震機構解）を推定するTransformerベースの機械学習モデル。地震波の初動極性（first-motion polarity）、P波とS波の振幅比、複数観測点のSNR（信号対雑音比）といった情報をTransformerエンコーダで統合し、観測点同士の関係性を学習する。従来のグリッドサーチ法と比べ、正解ラベルに対するKagan角度の誤差が平均7〜14度改善し、観測点数が少ない場合でも安定した精度を示す。ソースコードと学習済みモデル（FocoNet_Full・FocoNet_O・FocoNet_SPの3種）がGitHub上で公開されている。",
+    "history": "2026年、Xiaohan Songらが論文「FocoNet: Transformer-Based Focal-Mechanism Determination」を発表した。掲載誌はJournal of Geophysical Research: Machine Learning and Computation。",
+    "architecture": "各観測点の地震波形から得られる初動極性・P/S振幅比・SNRをトークンベクトルとして扱い、Transformerエンコーダで観測点間の関係性を学習することで震源メカニズムを推定する。使用する入力情報の組み合わせによって、FocoNet_Full・FocoNet_O・FocoNet_SPの3種のモデルが用意されている。",
+    "advantages": [
+      "従来のグリッドサーチ法と比べ、Kagan角度で平均7〜14度の精度改善が報告されている",
+      "観測点数が少ない状況でも、従来手法より安定した震源メカニズム推定結果を示す",
+      "初動極性・振幅比・SNRという複数種類の観測情報をTransformerで統合して扱える"
+    ],
+    "disadvantages": [
+      "地震波形データという専門分野に特化したモデルであり、他分野への汎用性はない",
+      "学習・評価には専用データセット（Zenodoで配布）とLinux環境が前提になっている",
+      "2026年公開の研究であり、実運用での検証事例はまだ少ない"
+    ],
+    "references": [
+      {
+        "type": "Research Paper",
+        "label": "FocoNet: Transformer-Based Focal-Mechanism Determination",
+        "url": "https://doi.org/10.1029/2025JH000879"
+      },
+      {
+        "type": "GitHub",
+        "label": "xhsongstanford/FocoNet",
+        "url": "https://github.com/xhsongstanford/FocoNet"
+      }
+    ]
+  },
+  {
+    "slug": "rpnet",
+    "name": "RPNet",
+    "tagline": "2枚の画像からカメラ間の相対姿勢（回転・並進ベクトル）をEnd-to-Endで直接推定するニューラルネットワーク",
+    "category": "モデル",
+    "tags": [
+      "画像認識",
+      "深層学習"
+    ],
+    "plainSummary": "2枚の写真を見比べて、撮影したカメラがどれだけ回転・移動したかを直接推定するAIモデル。",
+    "summary": "RPNetは、Sovann En、Alexis Lechervy、Frédéric Jurie（カーン大学）が提案した、2枚の画像から相対カメラ姿勢（回転・並進ベクトル）を直接推定するEnd-to-Endのニューラルネットワーク。カメラの内部・外部パラメータを必要とせず、画像ペアの生のピクセル情報だけから相対姿勢を推定する。SIFT＋RANSACに基づく従来手法はスケールを除いた並進ベクトルしか復元できないのに対し、RPNetはスケールを含むフルの並進ベクトルをEnd-to-Endで出力できるよう学習される。Cambridge Landmarkデータセットでの評価では、反復テクスチャやテクスチャレス領域を含む難しい画像において、従来手法より高精度かつ安定した結果を示した。",
+    "history": "2018年9月、Sovann En、Alexis Lechervy、Frédéric Jurieが論文「RPNet: an End-to-End Network for Relative Camera Pose Estimation」をarXivに公開した。同年のECCV Workshops（ドイツ・ミュンヘン）でも発表された。",
+    "advantages": [
+      "カメラの内部・外部パラメータを必要とせず、画像ペアだけから相対姿勢を推定できる",
+      "従来のSIFT＋RANSACに基づく手法と異なり、スケールを含むフルの並進ベクトルをEnd-to-Endで出力できる",
+      "反復テクスチャやテクスチャレス領域を含む難しい画像でも、従来手法より安定した結果を示す"
+    ],
+    "disadvantages": [
+      "論文での評価はCambridge Landmarkデータセットに限られており、他の環境での汎用性は論文内では検証されていない",
+      "2018年の研究であり、その後提案された手法との性能比較は論文には含まれていない"
+    ],
+    "references": [
+      {
+        "type": "Research Paper",
+        "label": "RPNet: an End-to-End Network for Relative Camera Pose Estimation",
+        "url": "https://arxiv.org/abs/1809.08402"
       }
     ]
   }
