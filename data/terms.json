@@ -383,7 +383,8 @@
       "llmo",
       "graphrag",
       "agentic-rag",
-      "retrieval-augmented-fine-tuning"
+      "retrieval-augmented-fine-tuning",
+      "question-answering"
     ],
     "faq": [
       {
@@ -2127,7 +2128,8 @@
       "large-language-model",
       "transformer",
       "word2vec",
-      "cosine-similarity"
+      "cosine-similarity",
+      "dense-vector"
     ],
     "faq": [
       {
@@ -3783,7 +3785,9 @@
     "name": "セマンティック検索",
     "aliases": [
       "Semantic Search",
-      "意味検索"
+      "意味検索",
+      "ベクトル検索",
+      "Vector Search"
     ],
     "tagline": "キーワードの一致ではなく、埋め込みベクトルによる意味的な類似度に基づいて検索する手法",
     "category": "技術",
@@ -4258,7 +4262,8 @@
       "orchestrator",
       "sandboxing",
       "code-interpreter",
-      "browser-use"
+      "browser-use",
+      "chatbot"
     ],
     "faq": [
       {
@@ -5326,7 +5331,8 @@
       "top-p",
       "top-k",
       "beam-search",
-      "speculative-decoding"
+      "speculative-decoding",
+      "autoregressive-generation"
     ],
     "faq": [
       {
@@ -6996,7 +7002,8 @@
     "relatedTerms": [
       "langchain",
       "retrieval-augmented-generation",
-      "chunking"
+      "chunking",
+      "question-answering"
     ],
     "faq": [
       {
@@ -8265,7 +8272,8 @@
     "relatedTerms": [
       "rouge",
       "precision",
-      "nlp"
+      "nlp",
+      "machine-translation"
     ],
     "faq": [
       {
@@ -8338,7 +8346,8 @@
     "relatedTerms": [
       "bleu",
       "recall",
-      "nlp"
+      "nlp",
+      "text-summarization"
     ],
     "faq": [
       {
@@ -10626,7 +10635,8 @@
     ],
     "relatedTerms": [
       "recurrent-neural-network",
-      "long-short-term-memory"
+      "long-short-term-memory",
+      "time-series-forecasting"
     ],
     "codeExamples": [
       {
@@ -11313,7 +11323,9 @@
       "clip",
       "grok",
       "vision-language-model",
-      "physical-ai"
+      "physical-ai",
+      "video-understanding",
+      "multimodal-dialogue"
     ],
     "faq": [
       {
@@ -12388,7 +12400,8 @@
       "stable-diffusion",
       "diffusion-llm",
       "latent-diffusion-model",
-      "diffusion-policy"
+      "diffusion-policy",
+      "image-generation"
     ],
     "faq": [
       {
@@ -13655,7 +13668,9 @@
     "name": "オーケストレーター",
     "aliases": [
       "Orchestrator",
-      "オーケストレータ"
+      "Orchestration",
+      "オーケストレータ",
+      "オーケストレーション"
     ],
     "tagline": "複数のAIエージェントやツールへタスクを振り分け、全体の進行を統括する管理役のコンポーネント",
     "category": "エージェント",
@@ -14285,7 +14300,8 @@
       "llmops",
       "prompt-caching",
       "opentelemetry",
-      "model-router"
+      "model-router",
+      "microservice"
     ],
     "faq": [
       {
@@ -16988,7 +17004,8 @@
       "hallucination",
       "instruction-tuning",
       "vla",
-      "physical-ai"
+      "physical-ai",
+      "video-understanding"
     ],
     "faq": [
       {
@@ -17392,7 +17409,8 @@
       "aider",
       "devin",
       "amazon-q-developer",
-      "tui"
+      "tui",
+      "code-generation"
     ],
     "faq": [
       {
@@ -18221,7 +18239,11 @@
       "diffusion-model",
       "gan",
       "foundation-model",
-      "multimodal"
+      "multimodal",
+      "chatbot",
+      "text-generation",
+      "image-generation",
+      "code-generation"
     ],
     "faq": [
       {
@@ -18934,6 +18956,7 @@
     "aliases": [
       "TTS",
       "Text-to-Speech",
+      "Speech Synthesis",
       "テキスト読み上げ"
     ],
     "tagline": "テキストから人間の音声を生成する技術。ニューラル方式の登場で自然さが向上した",
@@ -18974,7 +18997,8 @@
       "whisper",
       "deepfake",
       "multimodal",
-      "notebooklm"
+      "notebooklm",
+      "voice-cloning"
     ],
     "faq": [
       {
@@ -26548,6 +26572,474 @@
       {
         "slug": "needle-in-a-haystack",
         "note": "Needle in a Haystackは長文脈理解の限界を測定するための代表的な評価手法"
+      }
+    ]
+  },
+  {
+    "slug": "chatbot",
+    "name": "チャットボット",
+    "aliases": [
+      "Chatbot",
+      "会話ボット",
+      "対話システム",
+      "会話AI"
+    ],
+    "tagline": "テキストや音声を通じて人間と自動的に対話するソフトウェア",
+    "category": "技術",
+    "tags": [
+      "対話AI",
+      "生成AI"
+    ],
+    "summary": "チャットボットとは、テキストや音声を通じてユーザーと自動的に対話するソフトウェアを指す。\n初期のチャットボットはあらかじめ定義したパターンマッチングやルールベースの応答生成が中心だったが、統計的自然言語処理を経て、近年はLLMをベースにした自由度の高い対話が主流になっている。\nカスタマーサポートやFAQ対応、社内問い合わせ対応など、定型・非定型を問わず幅広い場面で利用が広がっている。",
+    "history": "チャットボットの起源としては、1966年にJoseph Weizenbaumが開発した「ELIZA」が知られる。パターンマッチングにより精神科医との対話を模した応答を返す初期の対話プログラムだった。",
+    "advantages": [
+      "24時間365日、人手を介さず一次対応ができる",
+      "定型的な問い合わせを自動化し、人的リソースをより複雑な対応へ振り向けられる"
+    ],
+    "disadvantages": [
+      "ルールベース設計では、想定外の質問に対応できないことがある",
+      "LLMベースの場合、ハルシネーションにより誤った回答を生成するリスクがある"
+    ],
+    "comparisons": [
+      {
+        "slug": "ai-agent",
+        "note": "チャットボットが主に対話応答に特化するのに対し、AIエージェントはツール呼び出しや外部システム操作を含む自律的なタスク遂行を担う"
+      }
+    ],
+    "relatedTerms": [
+      "large-language-model",
+      "ai-agent",
+      "generative-ai",
+      "hallucination",
+      "multimodal-dialogue"
+    ]
+  },
+  {
+    "slug": "text-generation",
+    "name": "テキスト生成",
+    "aliases": [
+      "Text Generation",
+      "文章生成"
+    ],
+    "tagline": "入力された文脈や指示に基づき、自然言語のテキストを生成するタスク",
+    "category": "技術",
+    "tags": [
+      "生成AI",
+      "自然言語処理"
+    ],
+    "summary": "テキスト生成とは、入力された文脈やプロンプトに基づいてLLMなどのモデルが自然言語の文章を生成するタスクを指す。\n記事の執筆や要約、翻訳、対話応答、コード生成など幅広いタスクの基盤となる能力であり、Transformerベースの言語モデルはトークンを1つずつ予測して系列を組み立てるデコーディングの仕組みで文章を生成する。\n生成結果の多様性や確実性は、TemperatureやTop-p、Top-kといったサンプリングパラメータによって調整できる。",
+    "relatedTerms": [
+      "large-language-model",
+      "decoding",
+      "generative-ai",
+      "temperature"
+    ],
+    "comparisons": [
+      {
+        "slug": "image-generation",
+        "note": "テキスト生成が自然言語の系列を出力するのに対し、画像生成は画素データなど視覚情報を出力する"
+      }
+    ]
+  },
+  {
+    "slug": "image-generation",
+    "name": "画像生成",
+    "aliases": [
+      "Image Generation",
+      "画像生成AI"
+    ],
+    "tagline": "テキストなどの入力から新しい画像を生成する技術",
+    "category": "技術",
+    "tags": [
+      "生成AI",
+      "画像生成"
+    ],
+    "summary": "画像生成とは、テキストプロンプトや既存の画像などを入力として、新しい画像を生成する技術を指す。\nGAN(敵対的生成ネットワーク)やVAEを経て、近年は拡散モデル(Diffusion Model)をベースにした手法が主流になっており、Stable DiffusionやMidjourney、FLUXなどのモデルがテキストから高品質な画像を生成できる。\nノイズから段階的に画像を復元していく拡散プロセスと、テキストの埋め込みによる条件付けを組み合わせることで、プロンプトの内容を反映した画像を生成する。",
+    "relatedTerms": [
+      "diffusion-model",
+      "stable-diffusion",
+      "midjourney",
+      "flux"
+    ],
+    "comparisons": [
+      {
+        "slug": "diffusion-model",
+        "note": "拡散モデルは画像生成を実現する代表的なアーキテクチャの1つであり、画像生成というタスク自体はGANなど他の生成方式でも実現され得る"
+      },
+      {
+        "slug": "text-generation",
+        "note": "画像生成が視覚データを出力するのに対し、テキスト生成は自然言語の系列を出力する"
+      }
+    ]
+  },
+  {
+    "slug": "code-generation",
+    "name": "コード生成",
+    "aliases": [
+      "Code Generation"
+    ],
+    "tagline": "自然言語の指示やコード文脈からソースコードを自動生成するタスク",
+    "category": "技術",
+    "tags": [
+      "コード生成",
+      "生成AI"
+    ],
+    "summary": "コード生成とは、自然言語による指示や既存のコード文脈をもとに、LLMなどがソースコードを自動的に生成するタスクを指す。\n関数やクラスの実装補完、テストコードの生成、他言語への変換、バグ修正案の提示など幅広い用途で利用される。\nGitHub CopilotやCursor、Codexといったコーディング支援ツール・エージェントは、このコード生成能力を中核機能として組み込んでいる。\n生成コードの品質は、HumanEvalやSWE-benchといったベンチマークで評価されることが多い。",
+    "relatedTerms": [
+      "coding-agent",
+      "github-copilot",
+      "codex",
+      "humaneval"
+    ],
+    "comparisons": [
+      {
+        "slug": "coding-agent",
+        "note": "コード生成がコードを出力するタスクそのものを指すのに対し、コーディングエージェントはコード生成に加えテスト実行やファイル操作など自律的な開発作業まで担う"
+      }
+    ]
+  },
+  {
+    "slug": "voice-cloning",
+    "name": "ボイスクローニング",
+    "aliases": [
+      "Voice Cloning",
+      "音声クローニング"
+    ],
+    "tagline": "数秒〜数十秒の音声サンプルから話者の声質・話し方を再現し、任意のテキストを読み上げさせる技術",
+    "category": "技術",
+    "tags": [
+      "音声合成",
+      "生成AI"
+    ],
+    "summary": "ボイスクローニングとは、特定の話者による数秒〜数十秒程度の音声サンプルから声質・抑揚・話し方の特徴を学習し、任意のテキストをその声で読み上げさせる技術を指す。\n音声合成(TTS)モデルの応用として発展し、少量のサンプルで話者性を再現できるゼロショット/Few-shotの手法が登場したことで、専門的な収録なしに個人の声を再現できるようになった。\nナレーションの多言語吹き替えや発話障害を持つ人の音声再建といった活用がある一方、本人の同意なく声を模倣し、なりすましや詐欺に悪用されるリスクが課題として指摘されている。",
+    "relatedTerms": [
+      "text-to-speech",
+      "deepfake",
+      "multimodal"
+    ],
+    "comparisons": [
+      {
+        "slug": "text-to-speech",
+        "note": "音声合成(TTS)がテキストから汎用的に音声を生成する技術であるのに対し、ボイスクローニングは特定話者の声質を再現することに特化した応用技術"
+      }
+    ]
+  },
+  {
+    "slug": "autoregressive-generation",
+    "name": "自己回帰生成",
+    "aliases": [
+      "Autoregressive Generation",
+      "自己回帰的生成"
+    ],
+    "tagline": "直前までに生成した出力系列を条件として、次の要素を1つずつ逐次予測しながら生成する方式",
+    "category": "技術",
+    "tags": [
+      "デコーディング",
+      "生成AI"
+    ],
+    "summary": "自己回帰生成とは、それまでに生成した出力系列を条件として、次のトークンや要素を1つずつ逐次的に予測しながら系列全体を組み立てていく生成方式を指す。\nLLMによるテキスト生成やRNN、一部の自己回帰型画像・音声生成モデルなどで使われる基本的なパラダイムであり、各ステップの出力が次のステップの入力の一部として使われる点が特徴。\n生成は1要素ずつ順番に進むため並列化しづらく、系列が長くなるほど推論時間は伸びやすい。この制約に対して、拡散モデルのように系列全体を並列的・段階的に生成する非自己回帰的な方式や、KVキャッシュや投機的デコーディングのような高速化技術が併用される。",
+    "relatedTerms": [
+      "decoding",
+      "large-language-model",
+      "text-generation",
+      "kv-cache",
+      "speculative-decoding"
+    ],
+    "comparisons": [
+      {
+        "slug": "diffusion-model",
+        "note": "自己回帰生成が出力系列を1要素ずつ逐次的に生成するのに対し、拡散モデルはノイズから全体を段階的に洗練していく並列的な生成方式"
+      }
+    ]
+  },
+  {
+    "slug": "microservice",
+    "name": "マイクロサービス",
+    "aliases": [
+      "Microservices",
+      "マイクロサービスアーキテクチャ"
+    ],
+    "tagline": "アプリケーションを独立してデプロイ・スケールできる小さなサービス群に分割するアーキテクチャスタイル",
+    "category": "インフラ",
+    "tags": [
+      "インフラ",
+      "分散処理"
+    ],
+    "summary": "マイクロサービスとは、1つの大きなアプリケーションを、それぞれ独立してデプロイ・スケール・開発できる小さなサービス群に分割して構築するアーキテクチャスタイルを指す。\n各サービスは特定の機能に責任を持ち、APIなどを介して互いに通信する。単一の巨大なコードベースとして構築するモノリシックアーキテクチャと対比され、サービスごとに異なる言語・技術スタックを選んだり、負荷の高いサービスだけを個別にスケールさせたりできる柔軟性が利点となる。\nLLMを使ったシステムでも、モデル推論サーバーやベクトルデータベース、オーケストレーターといった機能をそれぞれ独立したサービスとして構成し、LLM GatewayやModel Routerを介して連携させる設計がよく採られる。",
+    "advantages": [
+      "サービスごとに独立してデプロイ・スケールできるため、負荷の高い機能だけをスケールさせられる",
+      "サービス単位でチームや技術スタックを分けられ、大規模な開発の並行作業がしやすくなる"
+    ],
+    "disadvantages": [
+      "サービス間通信の分だけレイテンシやネットワーク障害への対応が必要になり、システム全体の複雑性が増す",
+      "分散したサービスをまたぐ処理のトレーシングやデバッグが、モノリシック構成に比べて難しくなる"
+    ],
+    "relatedTerms": [
+      "llm-gateway",
+      "model-router",
+      "opentelemetry",
+      "llmops"
+    ],
+    "comparisons": [
+      {
+        "slug": "llm-gateway",
+        "note": "LLM Gatewayは、複数のLLM系マイクロサービスやモデルプロバイダへのアクセスを一元化するAPIレイヤー"
+      }
+    ]
+  },
+  {
+    "slug": "dense-vector",
+    "name": "密ベクトル",
+    "aliases": [
+      "Dense Vector",
+      "Dense Embedding"
+    ],
+    "tagline": "ほとんどの次元が0以外の値を持ち、意味的な特徴を圧縮して表現する低〜中次元の実数値ベクトル",
+    "category": "技術",
+    "tags": [
+      "埋め込み",
+      "ベクトル検索"
+    ],
+    "summary": "密ベクトル(Dense Vector)とは、Embeddingモデルなどが出力する、ほとんどの次元が0以外の値を持つ、数百〜数千次元程度の実数値ベクトルを指す。\nTF-IDFやBM25が扱う疎ベクトル(Sparse Vector、語彙サイズと同程度の高次元で大部分の要素が0)とは対照的に、密ベクトルは各次元が特定の単語や概念と一対一に対応するわけではなく、複数の次元の組み合わせによって単語や文の意味的な特徴を圧縮して表現する。\nコサイン類似度などで密ベクトル同士の距離を測ることで、表記の違いを超えた意味的な近さに基づくセマンティック検索が可能になる。",
+    "relatedTerms": [
+      "embedding",
+      "semantic-search",
+      "tf-idf",
+      "bm25",
+      "cosine-similarity"
+    ],
+    "comparisons": [
+      {
+        "slug": "tf-idf",
+        "note": "TF-IDFは疎ベクトルを生成する統計的手法であるのに対し、Embeddingモデルは密ベクトルを生成し、各次元の組み合わせで意味的特徴を圧縮して表す"
+      }
+    ]
+  },
+  {
+    "slug": "machine-translation",
+    "name": "機械翻訳",
+    "aliases": [
+      "Machine Translation",
+      "MT"
+    ],
+    "tagline": "ある言語のテキストを別の言語のテキストへコンピュータが自動的に翻訳する技術",
+    "category": "技術",
+    "tags": [
+      "NLP",
+      "翻訳"
+    ],
+    "summary": "機械翻訳とは、ある言語で書かれたテキストを別の言語のテキストへコンピュータが自動的に変換する技術を指す。\n単語やフレーズを規則に基づいて置き換えるルールベース方式、大量の対訳コーパスから翻訳確率を統計的に学習する統計的機械翻訳(SMT)を経て、現在はニューラルネットワークによるニューラル機械翻訳(NMT)が主流になっている。\nSeq2SeqやTransformerに基づくエンコーダ・デコーダ構成のモデルが、文全体の文脈を踏まえた自然な訳文を生成する。近年はLLMそのものを翻訳タスクに用いる手法も広く使われている。",
+    "relatedTerms": [
+      "seq2seq",
+      "transformer",
+      "encoder",
+      "decoder",
+      "bleu",
+      "nlp"
+    ],
+    "comparisons": [
+      {
+        "slug": "bleu",
+        "note": "BLEUは機械翻訳の出力品質を参照訳との一致度で自動評価する代表的な指標"
+      }
+    ]
+  },
+  {
+    "slug": "question-answering",
+    "name": "質問応答システム",
+    "aliases": [
+      "Question Answering",
+      "QA",
+      "QAシステム"
+    ],
+    "tagline": "自然言語で書かれた質問に対し、文書や知識源をもとに回答を生成・抽出するシステム",
+    "category": "技術",
+    "tags": [
+      "NLP",
+      "RAG"
+    ],
+    "summary": "質問応答システム(QA)とは、自然言語で書かれた質問を入力として、関連する文書や知識源から回答を抽出・生成するシステムを指す。\nあらかじめ用意された文書集合の中から回答箇所を抜き出す抽出型と、モデルが文章として回答を新たに生成する生成型に大別される。\n近年はRAGのように、検索で取得した文書をLLMへ渡して回答を生成させる方式が主流になっており、社内文書検索やカスタマーサポートなど幅広い場面で利用される。",
+    "relatedTerms": [
+      "retrieval-augmented-generation",
+      "semantic-search",
+      "large-language-model",
+      "haystack"
+    ],
+    "comparisons": [
+      {
+        "slug": "retrieval-augmented-generation",
+        "note": "RAGは質問応答システムを実現するための代表的なアーキテクチャの1つであり、検索した文書をもとにLLMが回答を生成する"
+      }
+    ]
+  },
+  {
+    "slug": "text-summarization",
+    "name": "テキスト要約",
+    "aliases": [
+      "Text Summarization",
+      "文書要約"
+    ],
+    "tagline": "長い文章の要点を保持しながら短い文章へ圧縮するタスク",
+    "category": "技術",
+    "tags": [
+      "NLP",
+      "要約"
+    ],
+    "summary": "テキスト要約とは、長い文章や文書集合の要点を保持しながら、より短い文章へ変換するタスクを指す。\n原文中の重要な文をそのまま抜き出して並べる抽出型要約と、モデルが原文の内容を踏まえて新しい文章として要約を生成する生成型要約に大別される。\nLLMの登場以降は、原文の意味を理解した上で自然な文章として要約を生成する生成型要約が主流になっており、記事の要約や会議録の整理、NotebookLMのような資料要約ツールにも応用されている。",
+    "relatedTerms": [
+      "large-language-model",
+      "rouge",
+      "notebooklm"
+    ],
+    "comparisons": [
+      {
+        "slug": "rouge",
+        "note": "ROUGEは生成された要約と参照要約の語句の一致度から要約品質を自動評価する代表的な指標"
+      }
+    ]
+  },
+  {
+    "slug": "sentiment-analysis",
+    "name": "感情分析",
+    "aliases": [
+      "Sentiment Analysis",
+      "評判分析",
+      "Opinion Mining"
+    ],
+    "tagline": "文章に含まれる書き手の感情や評価の極性(ポジティブ・ネガティブなど)を推定するタスク",
+    "category": "技術",
+    "tags": [
+      "NLP",
+      "分類"
+    ],
+    "summary": "感情分析とは、レビューやSNS投稿などの文章から、書き手の感情や評価の極性(ポジティブ・ネガティブ・ニュートラルなど)を推定するタスクを指す。\n単語ごとの極性を辞書やルールで判定する手法から、機械学習・深層学習によるテキスト分類モデルを用いる手法へと発展してきた。\n商品レビューの評価集計やSNS上の評判モニタリング、カスタマーサポートでの問い合わせ内容の優先度付けなど、テキスト分類タスクの一種として幅広く利用される。",
+    "relatedTerms": [
+      "nlp",
+      "classification",
+      "large-language-model"
+    ],
+    "comparisons": [
+      {
+        "slug": "classification",
+        "note": "感情分析はテキストの感情極性を予測ラベルとする分類タスクの一種"
+      }
+    ]
+  },
+  {
+    "slug": "video-understanding",
+    "name": "動画理解",
+    "aliases": [
+      "Video Understanding",
+      "映像理解"
+    ],
+    "tagline": "動画中の物体・行動・場面展開などを認識し、内容を意味的に理解するタスク",
+    "category": "技術",
+    "tags": [
+      "マルチモーダル",
+      "画像認識"
+    ],
+    "summary": "動画理解とは、動画に含まれる物体やその動き、人物の行動、場面の展開といった情報を認識し、動画の内容を意味的に理解するタスクを指す。\n静止画を対象にする画像認識と異なり、フレーム間の時間的な変化や前後関係を捉える必要があり、行動認識や動画キャプション生成、動画に関する質問応答などのサブタスクに広がる。\n近年は、視覚と言語を統合的に扱うマルチモーダルモデルが動画のフレーム系列を入力として扱えるように拡張され、動画内容についての自然言語での説明や質問応答を行えるようになっている。",
+    "relatedTerms": [
+      "multimodal",
+      "vision-language-model",
+      "vision-transformer"
+    ],
+    "comparisons": [
+      {
+        "slug": "vision-language-model",
+        "note": "VLMは画像に加えて動画のフレーム系列を入力として扱えるよう拡張され、動画理解の基盤モデルとしても使われる"
+      }
+    ]
+  },
+  {
+    "slug": "multimodal-dialogue",
+    "name": "マルチモーダル対話",
+    "aliases": [
+      "Multimodal Dialogue"
+    ],
+    "tagline": "テキストに加えて画像・音声・動画など複数のモダリティを入出力に扱う対話",
+    "category": "技術",
+    "tags": [
+      "マルチモーダル",
+      "対話AI"
+    ],
+    "summary": "マルチモーダル対話とは、テキストだけでなく画像・音声・動画といった複数のモダリティを入力または出力に用いて行う対話を指す。\nユーザーが画像を提示しながら質問したり、音声で話しかけたりといった、テキスト単独の対話では扱えない情報を含むやり取りに対応できる点が特徴。\nマルチモーダルモデルの発展により、画像の内容について説明を求めたり、音声で受け答えしたりするチャットボットが実用化されている。",
+    "relatedTerms": [
+      "multimodal",
+      "chatbot",
+      "vision-language-model",
+      "text-to-speech"
+    ],
+    "comparisons": [
+      {
+        "slug": "chatbot",
+        "note": "チャットボットが主にテキストによる対話を扱うのに対し、マルチモーダル対話は画像・音声・動画など複数のモダリティを入出力に扱う"
+      }
+    ]
+  },
+  {
+    "slug": "anomaly-detection",
+    "name": "異常検知",
+    "aliases": [
+      "Anomaly Detection",
+      "外れ値検知"
+    ],
+    "tagline": "データの中から通常のパターンから逸脱した異常なデータ点や挙動を検出するタスク",
+    "category": "技術",
+    "tags": [
+      "機械学習",
+      "分類"
+    ],
+    "summary": "異常検知とは、データの中から通常のパターンから逸脱した異常なデータ点や挙動を検出するタスクを指す。\n正常データの分布や特徴を学習し、そこから大きく外れるデータを異常として検出する教師なし・半教師あり手法と、正常・異常のラベル付きデータで分類モデルを学習する教師あり手法がある。\n製造ラインの不良品検出、クレジットカードの不正利用検知、システムの障害予兆検知など、正常な状態が大部分を占め異常事例が少ないデータに対して広く応用される。",
+    "relatedTerms": [
+      "machine-learning",
+      "classification",
+      "time-series-forecasting"
+    ]
+  },
+  {
+    "slug": "recommendation-system",
+    "name": "推薦システム",
+    "aliases": [
+      "Recommendation System",
+      "レコメンドシステム",
+      "レコメンデーションエンジン"
+    ],
+    "tagline": "ユーザーの嗜好や行動履歴に基づき、関心を持ちそうなアイテムを推薦するシステム",
+    "category": "技術",
+    "tags": [
+      "機械学習",
+      "データ"
+    ],
+    "summary": "推薦システムとは、ユーザーの過去の行動履歴や嗜好データに基づいて、そのユーザーが関心を持ちそうな商品・コンテンツなどのアイテムを推薦するシステムを指す。\n似た嗜好を持つ他ユーザーの行動から推薦する協調フィルタリングと、アイテム自体の特徴に基づいて推薦するコンテンツベースフィルタリングが代表的な手法であり、両者を組み合わせたハイブリッド手法も広く使われる。\nECサイトの商品推薦や動画・音楽配信サービスのコンテンツ推薦など、幅広いサービスの中核機能として利用されている。",
+    "relatedTerms": [
+      "machine-learning",
+      "embedding",
+      "classification"
+    ]
+  },
+  {
+    "slug": "time-series-forecasting",
+    "name": "時系列予測",
+    "aliases": [
+      "Time Series Forecasting"
+    ],
+    "tagline": "過去から現在までの時系列データをもとに、将来の値や傾向を予測するタスク",
+    "category": "技術",
+    "tags": [
+      "機械学習",
+      "時系列データ"
+    ],
+    "summary": "時系列予測とは、時間の経過とともに観測された時系列データをもとに、将来の値や傾向を予測するタスクを指す。\n移動平均やARIMAといった統計的手法から、RNNやTransformerに基づく深層学習モデルまで幅広い手法が用いられ、季節性やトレンド、周期性といった時系列特有のパターンを捉えることが求められる。\n需要予測や株価・為替の予測、異常検知の前段としての将来値予測など、多様な分野で応用されている。",
+    "relatedTerms": [
+      "time-series-data",
+      "recurrent-neural-network",
+      "anomaly-detection"
+    ],
+    "comparisons": [
+      {
+        "slug": "time-series-data",
+        "note": "時系列データは時間順に並んだ観測値そのものを指す言葉であるのに対し、時系列予測はそのデータをもとに将来の値を予測するタスクを指す"
       }
     ]
   }
