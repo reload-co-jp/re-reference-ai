@@ -2527,7 +2527,8 @@
       "search-tree",
       "self-consistency",
       "tree-of-thought",
-      "test-time-scaling"
+      "test-time-scaling",
+      "reasoning-limitations"
     ],
     "faq": [
       {
@@ -12173,7 +12174,8 @@
       "emergent-abilities",
       "transformer",
       "pretraining",
-      "test-time-scaling"
+      "test-time-scaling",
+      "scaling-limits"
     ],
     "faq": [
       {
@@ -17136,7 +17138,8 @@
       "rotary-position-embedding",
       "sliding-window-attention",
       "retrieval-augmented-generation",
-      "kv-cache"
+      "kv-cache",
+      "long-context-limitations"
     ],
     "faq": [
       {
@@ -25465,7 +25468,8 @@
     "relatedTerms": [
       "few-shot",
       "meta-learning",
-      "curriculum-learning"
+      "curriculum-learning",
+      "train-eval-gap"
     ]
   },
   {
@@ -26422,6 +26426,128 @@
         "type": "Documentation",
         "label": "OWASP ASVS - Validation, Sanitization and Encoding",
         "url": "https://github.com/OWASP/ASVS/blob/master/4.0/en/0x13-V5-Validation-Sanitization-Encoding.md"
+      }
+    ]
+  },
+  {
+    "slug": "scaling-limits",
+    "name": "スケーリング限界",
+    "aliases": [
+      "Scaling Limits",
+      "スケーリングの壁"
+    ],
+    "tagline": "モデルサイズ・データ量・計算量を増やしても性能向上が鈍化・停滞する現象",
+    "category": "技術",
+    "tags": [
+      "スケーリング",
+      "評価"
+    ],
+    "summary": "モデル・データ・計算量を増やすほど性能が向上するスケーリング則(scaling-laws)は経験則にすぎず、実際には複数の限界に直面する。学習に使える高品質テキストデータの枯渇、計算コストの指数的増大、コスト対効果の悪化、特定タスクでの性能頭打ちなどが指摘される。2024年以降、次世代フロンティアモデルの性能向上幅が事前予測より小さいとする観測が相次ぎ、事前学習のスケーリングだけに依存しないアプローチ(推論時スケーリング、合成データ、アーキテクチャ改良など)への関心が高まった。",
+    "background": "パラメータ数と学習データ量を増やし続けるだけでは、今後も同じ効率で性能向上をもたらすとは限らないという問題意識から議論されるようになった概念で、test-time-scalingなど代替アプローチの提案背景にもなっている。",
+    "history": "2022年: Hoffmann et al.(DeepMind)が論文\"Training Compute-Optimal Large Language Models\"(Chinchilla)を発表。計算量に対しモデルサイズとデータ量をバランス良く増やす必要があると指摘し、巨大化偏重のスケーリングに疑問を投げかけた。2024年以降: フロンティアモデルの性能向上鈍化が業界内で広く議論されるようになった。",
+    "relatedTerms": [
+      "scaling-laws",
+      "test-time-scaling",
+      "emergent-abilities",
+      "data-contamination"
+    ],
+    "comparisons": [
+      {
+        "slug": "scaling-laws",
+        "note": "スケーリング則は性能向上の経験則を示すが、スケーリング限界はその効果が薄れる領域を指す"
+      },
+      {
+        "slug": "test-time-scaling",
+        "note": "事前学習のスケーリング限界を補う手段として、推論時の計算量を増やすアプローチが注目される"
+      }
+    ]
+  },
+  {
+    "slug": "reasoning-limitations",
+    "name": "推論能力の限界",
+    "aliases": [
+      "Reasoning Limitations"
+    ],
+    "tagline": "推論モデルでも複雑な論理的・数学的推論において精度が低下し、頑健性を欠く現象",
+    "category": "技術",
+    "tags": [
+      "推論",
+      "評価"
+    ],
+    "summary": "推論モデル(reasoning-model)は思考過程を生成することで複雑な問題への正答率を高める。ただし問題の複雑さが一定水準を超えると精度が急激に低下したり、数値や固有名詞を入れ替えるだけの表面的な問題設定の変更で誤答したりするなど、頑健性の乏しさが指摘されている。表面的なパターンマッチングに依存し、真に一般化した論理的推論をしていない可能性が研究で示されている。",
+    "history": "2024年: Mirzadeh et al.(Apple)が論文\"GSM-Symbolic\"で、数式中の数値や文の言い回しを変えるだけでLLMの数学的推論の正答率が大きく変動することを報告。2025年: Appleが論文\"The Illusion of Thinking\"で、推論モデルが一定以上の問題複雑度で正答率が崩壊する現象を報告。",
+    "relatedTerms": [
+      "reasoning-model",
+      "gpqa",
+      "arc-agi",
+      "chain-of-thought"
+    ],
+    "comparisons": [
+      {
+        "slug": "reasoning-model",
+        "note": "推論モデルは思考過程の生成により推論性能を高めるが、その能力には限界がある"
+      }
+    ]
+  },
+  {
+    "slug": "train-eval-gap",
+    "name": "訓練-評価乖離",
+    "aliases": [
+      "Train-Eval Gap",
+      "Train-Test Mismatch"
+    ],
+    "tagline": "学習時の性能指標と、実運用・評価時の性能とが一致しない現象",
+    "category": "技術",
+    "tags": [
+      "評価",
+      "機械学習"
+    ],
+    "summary": "モデルは学習データや検証セットで高い性能を示しても、実運用環境や異なる分布のデータでは性能低下することがある。原因として、ベンチマークデータが事前学習コーパスに混入するデータ汚染(data-contamination)、学習データの分布と実タスクの分布のずれ、ベンチマーク自体が実世界の使用パターンを十分に反映していないことなどが挙げられる。この乖離は、ベンチマークスコアの高さが実際の有用性を保証しない、という評価手法全体への懐疑にもつながっている。",
+    "relatedTerms": [
+      "data-contamination",
+      "generalization",
+      "overfitting",
+      "llm-as-a-judge"
+    ],
+    "comparisons": [
+      {
+        "slug": "data-contamination",
+        "note": "データ汚染は訓練-評価乖離を見えにくくする主要因の1つ"
+      },
+      {
+        "slug": "generalization",
+        "note": "汎化性能の低さは訓練-評価乖離の背景にある現象"
+      }
+    ]
+  },
+  {
+    "slug": "long-context-limitations",
+    "name": "長文脈理解の限界",
+    "aliases": [
+      "Long-Context Limitations",
+      "Lost in the Middle"
+    ],
+    "tagline": "コンテキストウィンドウが長くなるほど、入力中の情報を正確に参照・活用する精度が低下する現象",
+    "category": "技術",
+    "tags": [
+      "コンテキストウィンドウ",
+      "評価"
+    ],
+    "summary": "LLMは公称のコンテキストウィンドウ上限まで入力を受け付けられても、入力が長くなるほど途中に埋め込まれた情報を正確に取り出す精度は低下しやすい。特に入力の中央付近に配置された情報の参照精度が、先頭や末尾に比べて低くなる「Lost in the Middle」と呼ばれる現象が知られる。Needle in a Haystackのような評価手法は、この限界を可視化するために考案された。ウィンドウ長を伸ばす技術的進歩と、その全域を実際に活用できる能力とは別問題であることを示している。",
+    "history": "2023年: Liu et al.が論文\"Lost in the Middle: How Language Models Use Long Contexts\"を発表。入力中央部の情報参照精度が低下する現象を報告した。同年には、Greg Kamradt考案のNeedle in a Haystackテストが、長文脈内の情報検索精度を測る評価手法として広まった。",
+    "relatedTerms": [
+      "long-context",
+      "needle-in-a-haystack",
+      "context-window"
+    ],
+    "comparisons": [
+      {
+        "slug": "long-context",
+        "note": "ロングコンテキストは長い入力を処理する能力を指すが、その全域を精度良く活用できるとは限らない"
+      },
+      {
+        "slug": "needle-in-a-haystack",
+        "note": "Needle in a Haystackは長文脈理解の限界を測定するための代表的な評価手法"
       }
     ]
   }
