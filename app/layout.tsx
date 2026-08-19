@@ -1,6 +1,7 @@
 import { Metadata } from "next"
 import { Inter, Playfair_Display } from "next/font/google"
 import Link from "next/link"
+import { GoogleAdsense } from "components/analytics/google-adsense"
 import { GoogleAnalytics } from "components/analytics/google-analytics"
 import { Title } from "components/elements/layout"
 import { buildOrganizationJsonLd, organizationRef, toJsonLd } from "lib/json-ld"
@@ -90,6 +91,7 @@ const RootLayout = ({ children }: { children: React.ReactNode }) => {
     <html className={`${display.variable} ${body.variable}`} lang="ja">
       <body>
         <GoogleAnalytics />
+        <GoogleAdsense />
         <script
           dangerouslySetInnerHTML={{ __html: toJsonLd(websiteJsonLd) }}
           type="application/ld+json"
