@@ -1469,7 +1469,8 @@
       "transformer",
       "deep-learning",
       "alexnet",
-      "yolo"
+      "yolo",
+      "resnet"
     ],
     "faq": [
       {
@@ -1746,7 +1747,8 @@
       "encoder",
       "pretraining",
       "mlm",
-      "sentence-bert"
+      "sentence-bert",
+      "t5"
     ],
     "faq": [
       {
@@ -1835,7 +1837,10 @@
       "large-language-model",
       "bert",
       "machine-learning",
-      "pretraining"
+      "pretraining",
+      "meta-learning",
+      "multi-task-learning",
+      "continual-learning"
     ],
     "faq": [
       {
@@ -5853,6 +5858,7 @@
       "cohere",
       "stable-diffusion",
       "whisper",
+      "t5",
       "clip",
       "pretraining"
     ],
@@ -5960,7 +5966,10 @@
   {
     "slug": "gemini",
     "name": "Gemini",
-    "aliases": ["Google Gemini", "Bard"],
+    "aliases": [
+      "Google Gemini",
+      "Bard"
+    ],
     "tagline": "Googleが開発する、テキスト・画像・音声等を統合的に扱うマルチモーダル大規模言語モデルファミリー",
     "category": "モデル",
     "tags": [
@@ -6107,7 +6116,9 @@
   {
     "slug": "mistral",
     "name": "Mistral",
-    "aliases": ["Mistral AI"],
+    "aliases": [
+      "Mistral AI"
+    ],
     "tagline": "フランスのMistral AIが開発する、効率性を重視したオープンウェイトの大規模言語モデルファミリー",
     "category": "モデル",
     "tags": [
@@ -6170,7 +6181,9 @@
   {
     "slug": "deepseek",
     "name": "DeepSeek",
-    "aliases": ["DeepSeek AI"],
+    "aliases": [
+      "DeepSeek AI"
+    ],
     "tagline": "中国のDeepSeekが開発する、高いコスト効率と推論能力を特徴とするオープンウェイトの大規模言語モデルファミリー",
     "category": "モデル",
     "tags": [
@@ -7350,7 +7363,9 @@
   {
     "slug": "open-webui",
     "name": "Open WebUI",
-    "aliases": ["Ollama WebUI"],
+    "aliases": [
+      "Ollama WebUI"
+    ],
     "tagline": "OllamaやOpenAI互換APIと連携できる、セルフホスト型のオープンソースLLMチャットUI",
     "category": "インフラ",
     "tags": [
@@ -7626,7 +7641,9 @@
   {
     "slug": "tensorrt",
     "name": "TensorRT",
-    "aliases": ["NVIDIA TensorRT"],
+    "aliases": [
+      "NVIDIA TensorRT"
+    ],
     "tagline": "NVIDIA GPU上での推論を高速化する、NVIDIA製の推論最適化SDK",
     "category": "インフラ",
     "tags": [
@@ -9284,7 +9301,9 @@
   {
     "slug": "llmops",
     "name": "LLMOps",
-    "aliases": ["LLM Operations"],
+    "aliases": [
+      "LLM Operations"
+    ],
     "tagline": "LLMを組み込んだアプリケーションの開発・評価・デプロイ・運用を継続的に行うための一連のプラクティスと基盤",
     "category": "インフラ",
     "tags": [
@@ -9583,7 +9602,8 @@
       "gradient-descent",
       "backpropagation",
       "loss-function",
-      "reinforcement-learning"
+      "reinforcement-learning",
+      "supervised-learning"
     ],
     "faq": [
       {
@@ -14116,7 +14136,9 @@
   {
     "slug": "hugging-face",
     "name": "Hugging Face",
-    "aliases": ["HF"],
+    "aliases": [
+      "HF"
+    ],
     "tagline": "学習済みモデル・データセット・ライブラリを公開・共有するオープンソースのAIコミュニティプラットフォーム",
     "category": "インフラ",
     "tags": [
@@ -16775,7 +16797,8 @@
       "dpo",
       "monte-carlo-tree-search",
       "deep-learning",
-      "alignment"
+      "alignment",
+      "inverse-reinforcement-learning"
     ],
     "faq": [
       {
@@ -19048,7 +19071,8 @@
       "transformer",
       "convolutional-neural-network",
       "clip",
-      "self-attention"
+      "self-attention",
+      "resnet"
     ],
     "faq": [
       {
@@ -19414,7 +19438,9 @@
       "machine-learning",
       "bert",
       "contrastive-learning",
-      "foundation-model"
+      "foundation-model",
+      "supervised-learning",
+      "semi-supervised-learning"
     ],
     "faq": [
       {
@@ -20858,10 +20884,16 @@
   {
     "slug": "codex",
     "name": "Codex",
-    "aliases": ["OpenAI Codex", "Codex CLI"],
+    "aliases": [
+      "OpenAI Codex",
+      "Codex CLI"
+    ],
     "tagline": "OpenAIが提供する、ターミナルやクラウド上で自律的にコード生成・実行・修正するコーディングエージェント",
     "category": "エージェント",
-    "tags": ["コーディングエージェント", "コード生成"],
+    "tags": [
+      "コーディングエージェント",
+      "コード生成"
+    ],
     "plainSummary": "OpenAIが作った、指示に沿って自分でコードを書いて実行・修正までしてくれるAIツール。",
     "summary": "Codexは、OpenAIが提供するコーディングエージェント製品群の名称。\nターミナル上で動作するCodex CLIやChatGPT上のクラウド版など複数の形態で提供され、自然言語の指示を受けてリポジトリ内のコードを読み書きし、コマンド実行やテストを行いながらタスクを完了まで自律的に進める。\n名称は2021年にOpenAIが発表したコード生成特化モデル「Codex」に由来するが、そのモデル自体は2023年にAPI提供を終了しており、現在のCodexはエージェント型の製品として再展開されたもの。",
     "background": "初代Codexは2021年、GPT-3をGitHub上の公開コードでfine-tuningしたモデルとして発表され、GitHub Copilotの初期バックエンドに採用された。\n2023年にAPIが終了した後、OpenAIは2025年に「Codex」ブランドを、自律的にコードを実行・修正するエージェント型ツールとして再始動させた。",
@@ -20884,7 +20916,12 @@
         "note": "Codexがターミナル・クラウド上での自律的なタスク遂行を軸にするのに対し、GitHub Copilotはエディタ統合型のコード補完・チャットを軸にする"
       }
     ],
-    "relatedTerms": ["coding-agent", "gpt", "sandboxing", "github-copilot"],
+    "relatedTerms": [
+      "coding-agent",
+      "gpt",
+      "sandboxing",
+      "github-copilot"
+    ],
     "faq": [
       {
         "question": "2021年のCodexモデルと今のCodexは同じものか。",
@@ -20906,10 +20943,16 @@
   {
     "slug": "ai-dlc",
     "name": "AI-DLC",
-    "aliases": ["AI Development Life Cycle", "AI駆動開発ライフサイクル"],
+    "aliases": [
+      "AI Development Life Cycle",
+      "AI駆動開発ライフサイクル"
+    ],
     "tagline": "AIエージェントを開発ライフサイクル全体(要件定義・設計・実装・テスト)に組み込む開発プロセス手法",
     "category": "技術",
-    "tags": ["自動化", "協調"],
+    "tags": [
+      "自動化",
+      "協調"
+    ],
     "plainSummary": "要件定義から実装・テストまで、開発の各工程にAIを組み込んで進める開発手法。",
     "summary": "AI-DLC(AI Development Life Cycle)は、AWSが提唱する開発プロセスの枠組みで、要件定義・設計・実装・テストといったソフトウェア開発ライフサイクルの各工程に生成AIエージェントを組み込み、人間とAIが協調しながら開発を進める手法。\n従来のアジャイル開発が数週間単位のスプリントで進むのに対し、AI-DLCは人間が意思決定を行うチェックポイントを挟みつつ、AIエージェントが実装やテストの反復を高速に回すことで、開発サイクル全体の期間短縮を狙う。",
     "background": "コーディングエージェントの実用化が進む中、個々のコード生成にとどまらず要件定義やレビューを含む開発プロセス全体をAIとの協調作業として再設計する動きから生まれた概念。",
@@ -20928,14 +20971,21 @@
         "note": "仕様駆動開発が要件・仕様の記述に焦点を当てるのに対し、AI-DLCは開発ライフサイクル全体の進め方を再設計する、より広い枠組み"
       }
     ],
-    "relatedTerms": ["spec-driven-development", "vibe-coding", "coding-agent"]
+    "relatedTerms": [
+      "spec-driven-development",
+      "vibe-coding",
+      "coding-agent"
+    ]
   },
   {
     "slug": "cursor",
     "name": "Cursor",
     "tagline": "VS Codeをフォークし、チャットや複数ファイル編集などのAI機能をエディタに統合したAI IDE",
     "category": "インフラ",
-    "tags": ["コーディングエージェント", "コード生成"],
+    "tags": [
+      "コーディングエージェント",
+      "コード生成"
+    ],
     "plainSummary": "VS Codeを元に作られた、AIとチャットしながらコードを編集できるエディタ。",
     "summary": "Cursorは、Anysphereが開発するAI統合開発環境(AI IDE)。\nVS Codeをフォークし、コード補完に加えてチャットによる対話的な編集、プロジェクト内の複数ファイルにまたがる変更の提案・適用、ターミナルコマンドの実行などをエディタ上から直接行える点が特徴。\n2023年の公開以降、AI IDEという製品カテゴリを代表する存在として急速に普及した。",
     "background": "GitHub Copilotなどのコード補完拡張機能が広まる中、Anysphereはエディタそのものをフォークし、AIによる複数ファイル編集や対話的な支援をより深く統合する形でCursorを開発した。",
@@ -20958,7 +21008,11 @@
         "note": "CursorとWindsurfは、いずれもVS Codeを基盤としたAIネイティブIDEという点で共通する"
       }
     ],
-    "relatedTerms": ["ai-ide", "coding-agent", "windsurf"],
+    "relatedTerms": [
+      "ai-ide",
+      "coding-agent",
+      "windsurf"
+    ],
     "faq": [
       {
         "question": "CursorとVS Codeは何が違う?",
@@ -20980,10 +21034,15 @@
   {
     "slug": "claude-skills",
     "name": "Claude Skills",
-    "aliases": ["Agent Skills"],
+    "aliases": [
+      "Agent Skills"
+    ],
     "tagline": "特定タスク向けの指示・スクリプト・リソースをまとめ、該当タスク実行時にClaudeへ読み込ませる拡張機構",
     "category": "技術",
-    "tags": ["ツール連携", "自動化"],
+    "tags": [
+      "ツール連携",
+      "自動化"
+    ],
     "plainSummary": "決まった作業手順やスクリプトをまとめておき、必要なときだけClaudeに読み込ませる仕組み。",
     "summary": "Claude Skills(Agent Skills)は、Anthropicが提供する、特定タスクの実行手順・スクリプト・参考資料をひとまとまりのフォルダとしてパッケージ化し、必要な場面でClaudeへ動的に読み込ませる拡張機構。\n全ての情報を常にプロンプトへ含めるのではなく、タスクに関連するSkillだけを実行時に選択的に読み込む(プログレッシブディスクロージャー)ことで、コンテキストウィンドウを圧迫せずに専門的な作業手順をClaudeに与えられる。\nClaude appやClaude Code、API経由など複数の実行環境で共通して利用できる。",
     "background": "MCPがツールや外部データソースへの接続方式を標準化するのに対し、Skillsは「特定タスクをどのような手順で行うか」という手続き的知識をパッケージ化し再利用する目的で導入された。",
@@ -21002,7 +21061,12 @@
         "note": "MCPが外部ツール・データソースへの接続方法を標準化するのに対し、Skillsはタスク遂行の手順そのものをパッケージ化する"
       }
     ],
-    "relatedTerms": ["mcp", "claude", "coding-agent", "claude-md"],
+    "relatedTerms": [
+      "mcp",
+      "claude",
+      "coding-agent",
+      "claude-md"
+    ],
     "faq": [
       {
         "question": "Claude SkillsとMCPはどちらを使うべき?",
@@ -21031,7 +21095,10 @@
     "name": "CLAUDE.md",
     "tagline": "Claude Codeがプロジェクトの規約・構成・注意点を把握するために自動で読み込む、リポジトリ直下に置くMarkdown形式の指示ファイル",
     "category": "技術",
-    "tags": ["ツール連携", "自動化"],
+    "tags": [
+      "ツール連携",
+      "自動化"
+    ],
     "plainSummary": "そのプロジェクト固有のルールや注意点をAIエージェントに伝えるためのメモ書きファイル。",
     "summary": "CLAUDE.mdは、AnthropicのClaude Codeがセッション開始時に自動的に読み込む、リポジトリ直下(または上位ディレクトリ、ユーザーのホーム配下)に置くMarkdown形式の指示ファイル。\nビルド・テストコマンド、コーディング規約、ディレクトリ構成、注意すべき既知の落とし穴など、そのプロジェクト固有の文脈をあらかじめ記述しておくことで、Claudeが毎回コードベースを探索し直さずに作業を始められるようにする。\nプロジェクト全体で共有する内容はリポジトリにコミットし、個人設定は別ファイルに分けて管理する運用が一般的。",
     "background": "コーディングエージェントは会話ごとにコードベースの前提知識を持たない状態から作業を始めるため、都度同じ説明を繰り返す非効率が生じていた。CLAUDE.mdは、その前提知識をファイルとして永続化し、セッションをまたいで再利用する目的で導入された。",
@@ -21050,7 +21117,11 @@
         "note": "AGENTS.mdが複数のAIコーディングツール間で共通利用できる形式を目指すのに対し、CLAUDE.mdはClaude Code専用の指示ファイル"
       }
     ],
-    "relatedTerms": ["agents-md", "coding-agent", "claude-skills"],
+    "relatedTerms": [
+      "agents-md",
+      "coding-agent",
+      "claude-skills"
+    ],
     "faq": [
       {
         "question": "CLAUDE.mdはどこに置けばよい?",
@@ -21074,7 +21145,10 @@
     "name": "AGENTS.md",
     "tagline": "OpenAI CodexやCursorなど複数のAIコーディングツールが共通して読み込める、リポジトリ向けの標準指示ファイル形式",
     "category": "技術",
-    "tags": ["ツール連携", "相互運用性"],
+    "tags": [
+      "ツール連携",
+      "相互運用性"
+    ],
     "plainSummary": "どのAIコーディングツールを使っても同じ内容を読み込ませられるよう決めた、共通の指示ファイル形式。",
     "summary": "AGENTS.mdは、OpenAIが中心となりCursorやFactory等複数の企業が賛同して策定した、AIコーディングエージェント向けの共通指示ファイル形式。\nビルド・テストコマンド、コーディング規約、ディレクトリ構成といった内容を1つのファイルにまとめておくことで、Claude Code・Codex・Cursorなど複数のツールを併用する場合でも同じ指示ファイルを参照できるようにする。\nCLAUDE.mdのような特定ベンダー専用の指示ファイルが乱立する状況に対し、ツール間の相互運用性を確保することを狙いとしている。",
     "background": "コーディングエージェント/AI IDEの普及に伴い、ツールごとに異なる指示ファイル形式(CLAUDE.md等)が乱立し、複数ツールを併用する開発者が同じ内容を重複して管理する負担が生じていた。AGENTS.mdは、この重複を解消する共通フォーマットとして提案された。",
@@ -21093,7 +21167,11 @@
         "note": "CLAUDE.mdがClaude Code専用の指示ファイルであるのに対し、AGENTS.mdは複数ツールで共通利用できる形式を目指す"
       }
     ],
-    "relatedTerms": ["claude-md", "coding-agent", "ai-ide"],
+    "relatedTerms": [
+      "claude-md",
+      "coding-agent",
+      "ai-ide"
+    ],
     "faq": [
       {
         "question": "AGENTS.mdはREADME.mdと何が違う?",
@@ -21115,10 +21193,16 @@
   {
     "slug": "ppo",
     "name": "PPO",
-    "aliases": ["Proximal Policy Optimization", "近接方策最適化"],
+    "aliases": [
+      "Proximal Policy Optimization",
+      "近接方策最適化"
+    ],
     "tagline": "方策の更新幅をクリッピングで制限し安定した学習を実現する強化学習アルゴリズムで、RLHFの方策最適化段階で広く使われる",
     "category": "技術",
-    "tags": ["強化学習", "アライメント"],
+    "tags": [
+      "強化学習",
+      "アライメント"
+    ],
     "plainSummary": "AIの方針(方策)を一度に大きく変えすぎないよう制限しながら少しずつ改善する強化学習の手法。RLHFでよく使われる。",
     "summary": "PPO(Proximal Policy Optimization)は、OpenAIが2017年に発表した強化学習アルゴリズム。\n方策(モデルの挙動を決めるパラメータ)を更新する際、更新前後の方策の差が大きくなりすぎないようクリッピングした目的関数を用いることで、学習を安定させつつ効率的に方策を改善する。\nTRPO(Trust Region Policy Optimization)が信頼領域を制約として厳密に扱うのに対し、PPOはクリッピングという単純な仕組みで近い効果を得られるようにし、実装のしやすさと性能のバランスから広く普及した。\nRLHFでは、人間の選好データから学習した報酬モデルのスコアを最大化するようLLM本体(方策)を更新する段階で、PPOが標準的に使われてきた。",
     "background": "強化学習では、方策の更新幅が大きすぎると学習が不安定になったり性能が急激に悪化したりする問題があった。TRPOはこれを信頼領域による制約で解決したが計算コストが高く実装も複雑だった。PPOは、クリッピングという簡便な手法で同様の安定性を達成し、汎用強化学習アルゴリズムとして広く採用された。",
@@ -21141,7 +21225,13 @@
         "note": "GRPOはPPOの価値関数(クリティック)を省略し、グループ内の相対的な報酬から方策を最適化することで計算コストを削減した派生手法"
       }
     ],
-    "relatedTerms": ["rlhf", "reinforcement-learning", "grpo", "reward-model", "q-learning"],
+    "relatedTerms": [
+      "rlhf",
+      "reinforcement-learning",
+      "grpo",
+      "reward-model",
+      "q-learning"
+    ],
     "codeExamples": [
       {
         "title": "クリッピング付きサロゲート目的関数の実装例",
@@ -22518,7 +22608,10 @@
     "name": "Claude Code",
     "tagline": "Anthropicが提供する、ターミナル上で動作する自律型コーディングエージェント",
     "category": "エージェント",
-    "tags": ["コーディングエージェント", "コード生成"],
+    "tags": [
+      "コーディングエージェント",
+      "コード生成"
+    ],
     "plainSummary": "Anthropicが作った、ターミナルで動きコードを読み書き・実行してくれるAIツール。",
     "summary": "Claude Codeは、Anthropicが提供するCLI(コマンドラインインターフェース)型のコーディングエージェント。\nターミナル上で自然言語の指示を受け、リポジトリ内のファイル読み書き、コマンド実行、git操作等を自律的に行う。Claudeモデルを推論エンジンとして使用し、サブエージェントやスキル、フック等による拡張の仕組みを持つ。",
     "background": "コード補完型の支援ツールが普及する一方、リポジトリ全体を横断してタスクを自律的にこなせるエージェントへのニーズが高まった。Claude Codeは、Anthropicが自社のClaudeモデルの能力をターミナル上で引き出すエージェントハーネスとして開発した。",
@@ -22586,10 +22679,15 @@
   {
     "slug": "github-copilot",
     "name": "GitHub Copilot",
-    "aliases": ["Copilot"],
+    "aliases": [
+      "Copilot"
+    ],
     "tagline": "GitHubとMicrosoftが提供する、コード補完からチャット・自律的なコード編集までを担うAIペアプログラミングツール",
     "category": "エージェント",
-    "tags": ["コーディングエージェント", "コード生成"],
+    "tags": [
+      "コーディングエージェント",
+      "コード生成"
+    ],
     "plainSummary": "GitHubが作った、コードを書く時に提案・補完してくれるAIアシスタント。",
     "summary": "GitHub Copilotは、GitHubとMicrosoftが提供するAIコーディング支援ツール。\n2021年にVS Code拡張機能としてコード補完機能から提供が開始され、その後チャットによる対話的支援(Copilot Chat)、複数ファイルにまたがるタスクを自律的に進めるエージェントモード等へと機能を拡張してきた。初期モデルにはOpenAIのCodexが用いられていた。",
     "background": "AIによるコード補完が実用段階に入る中、GitHubはOpenAIの技術協力を得て、エディタ上でリアルタイムにコードを提案するAIペアプログラマーとしてCopilotを開発した。",
@@ -22618,7 +22716,12 @@
         "note": "GitHub Copilotが既存エディタへの拡張機能として提供されるのに対し、CursorはVS CodeをフォークしたスタンドアロンのAI IDEとして提供される"
       }
     ],
-    "relatedTerms": ["coding-agent", "codex", "ai-ide", "cursor"],
+    "relatedTerms": [
+      "coding-agent",
+      "codex",
+      "ai-ide",
+      "cursor"
+    ],
     "faq": [
       {
         "question": "GitHub Copilotの元になったモデルは?",
@@ -22645,10 +22748,15 @@
   {
     "slug": "windsurf",
     "name": "Windsurf",
-    "aliases": ["Codeium"],
+    "aliases": [
+      "Codeium"
+    ],
     "tagline": "AIエージェント機能「Cascade」を統合したAIネイティブの統合開発環境(IDE)",
     "category": "インフラ",
-    "tags": ["コーディングエージェント", "コード生成"],
+    "tags": [
+      "コーディングエージェント",
+      "コード生成"
+    ],
     "plainSummary": "AIと一緒にコードを書ける、Codeium社が開発したエディタ。",
     "summary": "Windsurfは、Codeium社が開発するAIネイティブの統合開発環境。\nVS Codeをベースに、複数ファイルにまたがる変更を自律的に提案・実行するエージェント機能「Cascade」を統合している点が特徴。",
     "background": "AI IDEという製品カテゴリが広がる中、Codeium社は自社のコード補完技術を基盤に、複数ファイルにまたがる変更を自律的に実行するエージェント機能を統合したエディタとしてWindsurfを開発した。",
@@ -22677,7 +22785,12 @@
         "note": "GitHub Copilotが既存エディタへの拡張機能であるのに対し、WindsurfはVS Codeをフォークし独自のエージェント機能を統合したスタンドアロンのAI IDEという違いがある"
       }
     ],
-    "relatedTerms": ["ai-ide", "cursor", "coding-agent", "github-copilot"],
+    "relatedTerms": [
+      "ai-ide",
+      "cursor",
+      "coding-agent",
+      "github-copilot"
+    ],
     "faq": [
       {
         "question": "WindsurfとCodeiumの関係は?",
@@ -22699,10 +22812,15 @@
   {
     "slug": "cline",
     "name": "Cline",
-    "aliases": ["Claude Dev"],
+    "aliases": [
+      "Claude Dev"
+    ],
     "tagline": "VS Code拡張機能として提供される、オープンソースの自律型コーディングエージェント",
     "category": "エージェント",
-    "tags": ["コーディングエージェント", "コード生成"],
+    "tags": [
+      "コーディングエージェント",
+      "コード生成"
+    ],
     "plainSummary": "VS Codeに追加できる、オープンソースの自律型AIコーディングツール。",
     "summary": "Clineは、VS Code拡張機能として提供されるオープンソースのコーディングエージェント。\nファイルの作成・編集、ターミナルコマンドの実行、ブラウザ操作等を自律的に行い、各ステップでの変更内容をユーザーが確認・承認できる仕組みを持つ。特定のモデル提供元に縛られず、Claude・GPT等複数のLLMを切り替えて利用できる。",
     "background": "VS Code拡張機能としてのコーディング支援が広まる中、Clineは特定のモデルベンダーに縛られずファイル操作・ターミナル実行・ブラウザ操作等を自律的に行えるオープンソースのエージェントとして開発された。",
@@ -22765,7 +22883,10 @@
     "name": "Aider",
     "tagline": "ターミナル上でgitと連携しながらペアプログラミングを行う、オープンソースのAIコーディングツール",
     "category": "エージェント",
-    "tags": ["コーディングエージェント", "コード生成"],
+    "tags": [
+      "コーディングエージェント",
+      "コード生成"
+    ],
     "plainSummary": "ターミナルで動く、gitと連携しながらコードを一緒に書いてくれるオープンソースツール。",
     "summary": "Aiderは、ターミナル上で動作するオープンソースのAIペアプログラミングツール。\nリポジトリ内のコードを解析した上で編集を提案・適用し、変更を自動的にgitコミットする点が特徴。複数のLLMプロバイダのモデルを切り替えて利用できる。",
     "background": "GUIを持つAI IDEが増える一方、Aiderは既存のターミナルワークフローとgitを軸に、シンプルな形でLLMとのペアプログラミングを行うツールとして開発された。",
@@ -22794,7 +22915,11 @@
         "note": "Aiderがgitと連携する対話的なペアプログラミングに重点を置くのに対し、Claude Codeはリポジトリ操作全般をより自律的に行うCLIエージェントという違いがある"
       }
     ],
-    "relatedTerms": ["coding-agent", "cline", "claude-code"],
+    "relatedTerms": [
+      "coding-agent",
+      "cline",
+      "claude-code"
+    ],
     "faq": [
       {
         "question": "Aiderはどのように変更を管理する?",
@@ -22821,10 +22946,15 @@
   {
     "slug": "devin",
     "name": "Devin",
-    "aliases": ["Devin AI"],
+    "aliases": [
+      "Devin AI"
+    ],
     "tagline": "Cognitionが開発した、タスクの計画から実装・デバッグまでを自律的に行うAIソフトウェアエンジニア",
     "category": "エージェント",
-    "tags": ["コーディングエージェント", "コード生成"],
+    "tags": [
+      "コーディングエージェント",
+      "コード生成"
+    ],
     "plainSummary": "Cognition社が作った、自分で計画を立ててコードを書き上げるAIエージェント。",
     "summary": "Devinは、Cognitionが開発するコーディングエージェント。\n独自のサンドボックス環境(開発環境・ブラウザ・ターミナル等)を持ち、タスクの計画立案からコード実装、テスト、デバッグまでの一連の作業を自律的に進める。「AIソフトウェアエンジニア」を謳って発表された。",
     "background": "コード生成にとどまらず、タスクの計画からデバッグまでを一貫して任せられる自律型のソフトウェアエンジニアへのニーズから、Cognitionは専用のサンドボックス環境を備えたエージェントとしてDevinを開発した。",
@@ -22849,7 +22979,11 @@
         "note": "Devinがタスクを渡すとより自律的に計画・実行まで進めるクラウド型エージェントであるのに対し、Claude Codeは対話的な指示のもとでターミナル上から動作するCLIツールという違いがある"
       }
     ],
-    "relatedTerms": ["coding-agent", "autonomous-agent", "claude-code"],
+    "relatedTerms": [
+      "coding-agent",
+      "autonomous-agent",
+      "claude-code"
+    ],
     "faq": [
       {
         "question": "Devinはどのような環境で動作する?",
@@ -22871,10 +23005,15 @@
   {
     "slug": "amazon-q-developer",
     "name": "Amazon Q Developer",
-    "aliases": ["Amazon CodeWhisperer"],
+    "aliases": [
+      "Amazon CodeWhisperer"
+    ],
     "tagline": "AWSが提供する、コード生成からレビュー・自律的なタスク実行までを担う開発者向けAIアシスタント",
     "category": "エージェント",
-    "tags": ["コーディングエージェント", "コード生成"],
+    "tags": [
+      "コーディングエージェント",
+      "コード生成"
+    ],
     "plainSummary": "AWSが作った、コードの提案からタスク自動化まで行う開発者向けAIツール。",
     "summary": "Amazon Q Developerは、AWSが提供する開発者向けAIアシスタント。\nコード補完・生成に加え、コードレビュー、脆弱性検出、ドキュメント作成、複数ステップのタスクを自律的に実行するエージェント機能等を備える。前身はコード補完ツール「Amazon CodeWhisperer」。",
     "background": "クラウド開発者向けのコード補完ツールが広がる中、AWSは自社サービスへの知識を組み込みつつ、コード生成からレビュー・移行支援までをカバーする開発者アシスタントとしてAmazon Q Developerを展開した。",
@@ -22899,7 +23038,10 @@
         "note": "Amazon Q Developerがコード提案に加えAWS移行支援等をカバーするのに対し、GitHub Copilotはコード補完・チャットを軸にした汎用的なコーディング支援ツールという違いがある"
       }
     ],
-    "relatedTerms": ["coding-agent", "github-copilot"],
+    "relatedTerms": [
+      "coding-agent",
+      "github-copilot"
+    ],
     "faq": [
       {
         "question": "Amazon Q Developerはどのエディタで使える?",
@@ -22921,10 +23063,15 @@
   {
     "slug": "semantic-kernel",
     "name": "Semantic Kernel",
-    "aliases": ["Microsoft Semantic Kernel"],
+    "aliases": [
+      "Microsoft Semantic Kernel"
+    ],
     "tagline": "Microsoftが提供する、LLMを既存アプリケーションへ統合するためのオープンソースSDK。マルチエージェントのオーケストレーション機能も備える",
     "category": "エージェント",
-    "tags": ["フレームワーク", "マルチエージェント"],
+    "tags": [
+      "フレームワーク",
+      "マルチエージェント"
+    ],
     "plainSummary": "Microsoftが作った、AIをアプリに組み込みやすくするSDK。複数のAIエージェントを協調させる機能もある。",
     "summary": "Semantic Kernelは、Microsoftが提供するオープンソースのSDK。\nLLMの呼び出しをプラグインとして既存の.NET・Python・Javaアプリケーションへ統合できる。エージェント機能として、複数のエージェントに役割を与え協調させるマルチエージェントオーケストレーションの仕組みも提供する。",
     "background": "既存のエンタープライズアプリケーションへLLMの機能を段階的に組み込みたいというニーズから、MicrosoftはLLM呼び出しをプラグイン化しつつ複数言語のエコシステムに対応するSDKとしてSemantic Kernelを開発した。",
@@ -22957,7 +23104,14 @@
         "note": "OpenAI Agents SDKがエージェント間のハンドオフという軽量な概念を中心に設計されるのに対し、Semantic Kernelはプラグインやプロセスの仕組みを含むより包括的なSDKという違いがある"
       }
     ],
-    "relatedTerms": ["multi-agent", "langgraph", "crewai", "autogen", "google-adk", "openai-agents-sdk"],
+    "relatedTerms": [
+      "multi-agent",
+      "langgraph",
+      "crewai",
+      "autogen",
+      "google-adk",
+      "openai-agents-sdk"
+    ],
     "faq": [
       {
         "question": "Semantic Kernelはどのプログラミング言語に対応する?",
@@ -22984,10 +23138,16 @@
   {
     "slug": "google-adk",
     "name": "Agent Development Kit",
-    "aliases": ["ADK", "Google ADK"],
+    "aliases": [
+      "ADK",
+      "Google ADK"
+    ],
     "tagline": "Googleが提供する、マルチエージェントシステムの構築・評価・デプロイを行うオープンソースフレームワーク",
     "category": "エージェント",
-    "tags": ["フレームワーク", "マルチエージェント"],
+    "tags": [
+      "フレームワーク",
+      "マルチエージェント"
+    ],
     "plainSummary": "Googleが作った、複数のAIエージェントを組み合わせたシステムを作るオープンソースツール。",
     "summary": "Agent Development Kit(ADK)は、Googleが提供するオープンソースフレームワーク。\n複数のエージェントを階層的に組み合わせるマルチエージェントシステムの構築・評価・デプロイまでを一貫してサポートする。Geminiに最適化されているが、他のモデルやフレームワークとの相互運用も意図して設計されている。",
     "background": "複数のエージェントを組み合わせた複雑なシステムを構築するニーズが高まる中、Googleは自社のGoogle Cloud・Geminiエコシステムと統合しやすいマルチエージェントフレームワークとしてADKを開発した。",
@@ -23016,7 +23176,13 @@
         "note": "いずれも比較的新しいベンダー製マルチエージェントフレームワークだが、ADKはエージェントの階層的な組み合わせを、OpenAI Agents SDKはエージェント間のハンドオフを中心概念に据える"
       }
     ],
-    "relatedTerms": ["multi-agent", "agentcore", "langgraph", "semantic-kernel", "openai-agents-sdk"],
+    "relatedTerms": [
+      "multi-agent",
+      "agentcore",
+      "langgraph",
+      "semantic-kernel",
+      "openai-agents-sdk"
+    ],
     "faq": [
       {
         "question": "ADKはGemini以外のモデルでも使える?",
@@ -23045,7 +23211,10 @@
     "name": "OpenAI Agents SDK",
     "tagline": "OpenAIが提供する、エージェント間のハンドオフ機能を備えた軽量なマルチエージェントフレームワーク",
     "category": "エージェント",
-    "tags": ["フレームワーク", "マルチエージェント"],
+    "tags": [
+      "フレームワーク",
+      "マルチエージェント"
+    ],
     "plainSummary": "OpenAIが作った、複数のAIエージェントに役割分担させタスクを引き継がせながら進める軽量ツール。",
     "summary": "OpenAI Agents SDKは、OpenAIが提供する軽量なマルチエージェントフレームワーク。\nエージェントごとに役割・ツール・指示を定義し、会話の途中で別のエージェントへ処理を引き継ぐ「ハンドオフ」の仕組みを中心に設計されている。実験的フレームワーク「Swarm」を前身とする。",
     "background": "複数のエージェントを協調させるフレームワークが増える中、OpenAIは実験的なSwarmでの知見を踏まえ、本番利用を想定した軽量なマルチエージェントSDKとしてAgents SDKを開発した。",
@@ -23074,7 +23243,13 @@
         "note": "いずれも比較的新しいベンダー製マルチエージェントフレームワークだが、OpenAI Agents SDKはエージェント間のハンドオフを、ADKはエージェントの階層的な組み合わせを中心概念に据える"
       }
     ],
-    "relatedTerms": ["multi-agent", "autogen", "function-calling", "semantic-kernel", "google-adk"],
+    "relatedTerms": [
+      "multi-agent",
+      "autogen",
+      "function-calling",
+      "semantic-kernel",
+      "google-adk"
+    ],
     "faq": [
       {
         "question": "OpenAI Agents SDKとSwarmの関係は?",
@@ -23103,7 +23278,10 @@
     "name": "Pinecone",
     "tagline": "フルマネージドで提供される、ベクトル検索に特化したクラウドデータベースサービス",
     "category": "インフラ",
-    "tags": ["ベクトルデータベース", "検索"],
+    "tags": [
+      "ベクトルデータベース",
+      "検索"
+    ],
     "plainSummary": "サーバー管理不要で使える、埋め込みベクトルの検索に特化したクラウドサービス。",
     "summary": "Pineconeは、Pinecone社が提供するフルマネージドのベクトルデータベースサービス。\nインフラの構築・運用を意識せずに、埋め込みベクトルの保存と近似最近傍探索によるベクトル検索をAPI経由で利用できる。RAGアプリケーションのバックエンドとして広く利用されている。",
     "background": "RAGアプリケーションの普及に伴い埋め込みベクトルを高速に検索するニーズが高まる一方、自前でインデックスを構築・運用するには専門知識とインフラ管理コストが必要だった。Pineconeは、こうした運用負荷を取り除くフルマネージド型のサービスとして開発された。",
@@ -23132,7 +23310,13 @@
         "note": "Pineconeが専用のベクトル検索サービスであるのに対し、pgvectorは既存のPostgreSQL上でベクトル検索する拡張機能という違いがある"
       }
     ],
-    "relatedTerms": ["vector-database", "embedding", "retrieval-augmented-generation", "weaviate", "pgvector"],
+    "relatedTerms": [
+      "vector-database",
+      "embedding",
+      "retrieval-augmented-generation",
+      "weaviate",
+      "pgvector"
+    ],
     "codeExamples": [
       {
         "title": "Pinecone Python SDKによるベクトル検索(概念例)",
@@ -23163,7 +23347,10 @@
     "name": "Weaviate",
     "tagline": "スキーマ定義とハイブリッド検索(ベクトル+キーワード)を備えたオープンソースのベクトルデータベース",
     "category": "インフラ",
-    "tags": ["ベクトルデータベース", "検索"],
+    "tags": [
+      "ベクトルデータベース",
+      "検索"
+    ],
     "plainSummary": "ベクトル検索とキーワード検索を組み合わせて使える、オープンソースのデータベース。",
     "summary": "Weaviateは、オープンソースで提供されるベクトルデータベース。\nベクトル同士の類似検索に加え、キーワードベースの検索を組み合わせたハイブリッド検索や、オブジェクト間の関連を扱うスキーマ定義の仕組みを備える。セルフホストとマネージドクラウドの両方の形態で利用できる。",
     "background": "ベクトル検索とキーワード検索を併用したいニーズや、オブジェクト間の関係を扱いたいニーズに応えるため、Weaviateはスキーマ定義とハイブリッド検索機能を備えたオープンソースのベクトルデータベースとして開発された。",
@@ -23192,7 +23379,13 @@
         "note": "いずれも大規模なベクトルデータを扱えるオープンソース製品だが、Weaviateはハイブリッド検索とスキーマ定義を、Milvusは分散処理によるスケールを重視する"
       }
     ],
-    "relatedTerms": ["vector-database", "hnsw", "embedding", "pinecone", "milvus"],
+    "relatedTerms": [
+      "vector-database",
+      "hnsw",
+      "embedding",
+      "pinecone",
+      "milvus"
+    ],
     "codeExamples": [
       {
         "title": "Weaviate Python Clientによるベクトル検索(概念例)",
@@ -23228,7 +23421,10 @@
     "name": "Milvus",
     "tagline": "大規模なベクトルデータの分散処理に対応したオープンソースのベクトルデータベース",
     "category": "インフラ",
-    "tags": ["ベクトルデータベース", "検索"],
+    "tags": [
+      "ベクトルデータベース",
+      "検索"
+    ],
     "plainSummary": "非常に多くのベクトルデータを扱えるよう作られた、オープンソースのデータベース。",
     "summary": "Milvusは、Zilliz社が開発するオープンソースのベクトルデータベース。\n数十億件規模のベクトルデータを分散アーキテクチャで処理できるよう設計されており、複数のインデックス手法(HNSW等)を選択して利用できる。LF AI & Data Foundationのプロジェクトとしても提供されている。",
     "background": "画像・テキスト等から生成される大量の埋め込みベクトルを、数十億件規模でも高速に検索したいというニーズから、Zillizは分散アーキテクチャを前提としたオープンソースのベクトルデータベースとしてMilvusを開発した。",
@@ -23257,7 +23453,13 @@
         "note": "Milvusが大規模分散処理に重点を置くのに対し、QdrantはRust実装による高速な検索性能とメタデータフィルタリングを特徴とする"
       }
     ],
-    "relatedTerms": ["vector-database", "hnsw", "embedding", "weaviate", "qdrant"],
+    "relatedTerms": [
+      "vector-database",
+      "hnsw",
+      "embedding",
+      "weaviate",
+      "qdrant"
+    ],
     "codeExamples": [
       {
         "title": "PyMilvus (MilvusClient) によるベクトル検索(概念例)",
@@ -23293,7 +23495,10 @@
     "name": "Qdrant",
     "tagline": "Rustで実装された、高速な検索性能とフィルタリング機能を特徴とするオープンソースのベクトルデータベース",
     "category": "インフラ",
-    "tags": ["ベクトルデータベース", "検索"],
+    "tags": [
+      "ベクトルデータベース",
+      "検索"
+    ],
     "plainSummary": "Rustで作られた、高速な検索とメタデータでの絞り込みが得意なベクトルデータベース。",
     "summary": "Qdrantは、Qdrant社が開発するオープンソースのベクトルデータベース。\nRustで実装されており、ベクトル類似検索とメタデータによるフィルタリングを組み合わせた検索性能を特徴とする。セルフホストとマネージドクラウドの両方の形態で利用できる。",
     "background": "高速な検索性能とメタデータによる柔軟な絞り込みを両立したいというニーズから、Qdrant社はRustで実装したオープンソースのベクトルデータベースとしてQdrantを開発した。",
@@ -23326,7 +23531,13 @@
         "note": "Qdrantが本番運用の高速な検索性能を重視するのに対し、Chromaはプロトタイピングのしやすさを重視した軽量なベクトルデータベース"
       }
     ],
-    "relatedTerms": ["vector-database", "embedding", "weaviate", "milvus", "chroma"],
+    "relatedTerms": [
+      "vector-database",
+      "embedding",
+      "weaviate",
+      "milvus",
+      "chroma"
+    ],
     "codeExamples": [
       {
         "title": "qdrant-clientによるベクトル検索(概念例)",
@@ -23360,10 +23571,15 @@
   {
     "slug": "chroma",
     "name": "Chroma",
-    "aliases": ["ChromaDB"],
+    "aliases": [
+      "ChromaDB"
+    ],
     "tagline": "アプリケーションに組み込みやすい、軽量なオープンソースのベクトルデータベース",
     "category": "インフラ",
-    "tags": ["ベクトルデータベース", "検索"],
+    "tags": [
+      "ベクトルデータベース",
+      "検索"
+    ],
     "plainSummary": "アプリに手軽に組み込める、軽量なオープンソースのベクトルデータベース。",
     "summary": "Chromaは、オープンソースで提供される軽量なベクトルデータベース。\nPythonアプリケーションへの組み込みやすさを重視して設計されており、少ないコードでベクトルの保存・類似検索を行える。プロトタイピングや小〜中規模のRAGアプリケーションで利用されることが多い。",
     "background": "RAGアプリケーションのプロトタイピングにおいて、専用インフラを構築せず手軽にベクトル検索を試したいというニーズから、Chromaはアプリケーションに直接組み込める軽量なベクトルデータベースとして開発された。",
@@ -23392,7 +23608,13 @@
         "note": "Chromaが手軽な組み込みやすさを重視するのに対し、Qdrantは高速な検索性能とフィルタリング機能を重視した本番運用向けの製品という違いがある"
       }
     ],
-    "relatedTerms": ["vector-database", "embedding", "retrieval-augmented-generation", "pinecone", "qdrant"],
+    "relatedTerms": [
+      "vector-database",
+      "embedding",
+      "retrieval-augmented-generation",
+      "pinecone",
+      "qdrant"
+    ],
     "codeExamples": [
       {
         "title": "ChromaによるRAG向けベクトル検索(概念例)",
@@ -23428,7 +23650,10 @@
     "name": "pgvector",
     "tagline": "PostgreSQLにベクトル型と類似検索機能を追加する、オープンソースの拡張機能",
     "category": "インフラ",
-    "tags": ["ベクトルデータベース", "検索"],
+    "tags": [
+      "ベクトルデータベース",
+      "検索"
+    ],
     "plainSummary": "PostgreSQLをベクトル検索に対応させる、オープンソースの拡張機能。",
     "summary": "pgvectorは、PostgreSQLへベクトル型データと類似検索機能を追加するオープンソースの拡張機能。\n既存のPostgreSQLデータベースにインストールするだけで、リレーショナルデータとベクトルデータを同一のデータベース内で扱えるようになる。専用のベクトルデータベースを別途構築せずに、既存のPostgreSQL運用基盤の中でベクトル検索したい場合に利用される。",
     "background": "多くのアプリケーションは既にPostgreSQLを運用基盤として利用しており、ベクトル検索のためだけに別のデータベースを追加導入する負担を避けたいというニーズがあった。pgvectorは、既存のPostgreSQL環境にベクトル型と類似検索機能を追加する拡張機能として開発された。",
@@ -23457,7 +23682,12 @@
         "note": "pgvectorがリレーショナルデータベースの拡張として提供されるのに対し、Weaviateはベクトル検索に特化した専用のデータベースという違いがある"
       }
     ],
-    "relatedTerms": ["vector-database", "embedding", "pinecone", "weaviate"],
+    "relatedTerms": [
+      "vector-database",
+      "embedding",
+      "pinecone",
+      "weaviate"
+    ],
     "codeExamples": [
       {
         "title": "pgvectorによるベクトル検索(概念例)",
@@ -23486,10 +23716,17 @@
   {
     "slug": "fable",
     "name": "Fable",
-    "aliases": ["Claude Fable 5", "Claude Fable"],
+    "aliases": [
+      "Claude Fable 5",
+      "Claude Fable"
+    ],
     "tagline": "Anthropicが2026年6月に発表した、Claudeファミリーの中でも「Mythosクラス」に位置づけられる最上位モデル",
     "category": "モデル",
-    "tags": ["Claude", "Anthropic", "クローズドウェイト"],
+    "tags": [
+      "Claude",
+      "Anthropic",
+      "クローズドウェイト"
+    ],
     "plainSummary": "Anthropicが2026年6月に公開した、これまでで最も高性能なClaudeモデル。",
     "summary": "Claude Fable 5とは、Anthropicが2026年6月9日に発表した、Claudeファミリーの中でも「Mythosクラス」と呼ばれる最上位の能力層に位置づけられるモデル。\nソフトウェアエンジニアリング・知識労働・ビジョン・科学研究など、ほぼ全てのベンチマークで当時のAI能力の最先端(state-of-the-art)を示すとされる。\nClaude CodeやClaude Managed Agentsのようなエージェントハーネス上で動作させた場合、数日にわたる長時間タスクを、計画立案・サブエージェントへの委任・自己検証をしながら自律的に継続できる点が特徴とされる。\nAPI・Amazon Bedrock・Google Cloud・Microsoft Foundry等、複数の経路で一般提供されている。",
     "background": "「Mythosクラス」は、通常のOpusクラスより上位に位置づけられる能力層で、特にサイバーセキュリティや研究生物学の領域で強力とされる。2026年4月には、限定配布のプレビュー版Claude Mythos Previewが「Project Glasswing」を通じて先行公開されていた。",
@@ -23515,7 +23752,13 @@
         "note": "発表時点でのベンチマーク性能から、フロンティアモデルの1つに位置づけられる"
       }
     ],
-    "relatedTerms": ["claude", "frontier-model", "foundation-model", "agentic-ai", "long-context"],
+    "relatedTerms": [
+      "claude",
+      "frontier-model",
+      "foundation-model",
+      "agentic-ai",
+      "long-context"
+    ],
     "faq": [
       {
         "question": "Mythosクラスとは?",
@@ -23689,10 +23932,15 @@
   {
     "slug": "graph-engineering",
     "name": "グラフエンジニアリング",
-    "aliases": ["Graph Engineering"],
+    "aliases": [
+      "Graph Engineering"
+    ],
     "tagline": "AIエージェントシステムを、ノードとエッジからなる明示的な実行グラフとして設計する実践",
     "category": "エージェント",
-    "tags": ["自律システム", "ワークフロー"],
+    "tags": [
+      "自律システム",
+      "ワークフロー"
+    ],
     "plainSummary": "AIエージェントの処理を、作業単位（ノード）とつながり（エッジ）の図として明示的に組み立てる設計のこと。",
     "summary": "グラフエンジニアリングとは、AIエージェントシステムをノード（作業単位）とエッジ（遷移）のつながりとして明示的に設計する実践を指す。\nここでのグラフはグラフ理論のグラフであり、棒グラフや折れ線グラフを指さない。ノードにはLLM呼び出しだけでなく、決定的なプログラムコード、評価器、人間の承認ステップも含まれ、エッジが次に実行するノードを決め、状態（state）がステップ間で情報を引き継ぐ。\n単一のエージェントループへ判断・状態・副作用が集中すると、途中からの再開や実行経路の監査が難しくなる。グラフエンジニアリングは、LLMへ任せる範囲とコードで確実に制御する範囲を線引きし、依存関係・並列化・責任境界をグラフ構造として外へ出す設計手法にあたる。\nプロンプトエンジニアリング（1回の応答の制御）、コンテキストエンジニアリング（モデルへ見せるデータの制御）、ループエンジニアリング（1つのエージェントの動作サイクルの制御）に続く層として整理され、下の層を置き換えるものではない。グラフの各ノードの内側では、従来どおりループ・コンテキスト・プロンプトの設計が必要になる。",
     "background": "初期のエージェント開発では、LLMへツール群を渡して次の行動をすべてLLMに決めさせる構成が主流だった。\nこの構成を実業務のシステムへ組み込むと、同じ処理を繰り返して停止しない、プロンプトへ書いた業務ルールが守られない、ステップを跨ぐ情報が失われるといった問題が起きやすい。\n1つのループを磨くだけでは足りず、LLM・コード・人間という性質の異なる実行主体をどう配置しどうつなぐかという構造自体が設計の論点になったことが、グラフエンジニアリングという呼称の背景にある。",
@@ -23835,7 +24083,11 @@
     "name": "OpenChamber",
     "tagline": "デスクトップ・ブラウザ・VS Codeを横断して使えるオープンソースのエージェント型開発環境",
     "category": "エージェント",
-    "tags": ["コーディングエージェント", "マルチモデル", "OSS"],
+    "tags": [
+      "コーディングエージェント",
+      "マルチモデル",
+      "OSS"
+    ],
     "summary": "OpenChamberは、AIコーディングエージェントを軸にした開発環境。macOS・Windows・Linux向けデスクトップアプリ、ブラウザ/PWA、VS Code拡張の3系統から同一セッションにアクセスでき、デスクトップを閉じてもエージェントの作業を継続させられる。\n1つのタスクを最大5モデルに並列実行させ、最も良い結果を採用したり複数モデルの成果を統合(Fusion)したりする機能や、大きな差分を意味のある単位に整理して見せるChanges Walkthrough、GitHubのissue/PRを起点に作業しチェック失敗をエージェントへ戻す機能等を備える。オープンソースで無料公開されており、エージェントハーネスにはOpenCode SDKを採用している。",
     "background": "コーディングエージェントの普及に伴い、単一モデル・単一クライアントでの利用に留まらず、複数モデルを比較しながらデスクトップ・ブラウザ・エディタを横断して同じ作業セッションを継続したいというニーズが生まれた。OpenChamberは、既存のオープンソースエージェントハーネスであるOpenCode SDKを基盤に、マルチモデル実行やクロスプラットフォームでのセッション共有に焦点を当てた開発環境として作られた。",
     "architecture": "エージェント実行部分はOpenCode SDK上に構築されており、CLIから`openchamber serve`でローカルにデーモンを起動し、Cloudflareトンネルやリレー(WebSocket)経由でブラウザ・モバイルからリモート接続する構成を取る。UIパスワードによるアクセス制御を備え、デスクトップアプリ・ブラウザ/PWA・VS Code拡張の各クライアントが同じセッション状態を共有する。",
@@ -23860,7 +24112,13 @@
         "note": "ClineがVS Code拡張として動作するのに対し、OpenChamberはデスクトップアプリ・ブラウザ・VS Code拡張の複数クライアントで同一セッションを共有できるという違いがある"
       }
     ],
-    "relatedTerms": ["claude-code", "cline", "coding-agent", "mcp", "cloudflare-os"],
+    "relatedTerms": [
+      "claude-code",
+      "cline",
+      "coding-agent",
+      "mcp",
+      "cloudflare-os"
+    ],
     "faq": [
       {
         "question": "OpenChamberはオープンソースか?",
@@ -23894,7 +24152,11 @@
     "name": "Cloudflare OS",
     "tagline": "Cloudflare Workers上に構築された、企業の文脈と権限管理を組み込んだオープンソースのAIエージェントワークスペース",
     "category": "エージェント",
-    "tags": ["エージェント基盤", "セキュリティ", "OSS"],
+    "tags": [
+      "エージェント基盤",
+      "セキュリティ",
+      "OSS"
+    ],
     "summary": "Cloudflare OSは、Cloudflareが2026年8月に発表したオープンソースのAIエージェントワークスペース。ブラウザ上の会話から始まり、組織が用意した文脈やスキルを踏まえてドキュメント・アプリ・ワークフローへと発展させられる。(1)コードを書いて実行できる分離ランタイムを備えたエージェントワークスペース、(2)社内データやサービスへの安全なアクセスを管理する新しいセキュリティ・ガバナンス層、(3)ユーザー自身が作成・改造できる個人向けアプリのプラットフォーム、という3要素で構成される。Cloudflare Workersチーム自身が開発しており、Durable Objects・Dynamic Workers・Facetsといった最新のWorkers Runtime機能を全面的に活用する。workerd(Workersランタイム)自体がOSSであるため、Cloudflare上に限らず自社サーバーでも実行できる。AI Gatewayを介して任意のAIモデルプロバイダを利用でき、特定ベンダーへのロックインを避けられる。",
     "background": "生成AIエージェントの社内活用が広がる一方、既存のAIツールは社内システムとの安全な連携や権限管理を後付けで実装する必要があり、開発者のボトルネックになりやすいという課題があった。CloudflareはCloudflare OSを自社の業務基盤として実際に運用しており、CEOのMatthew Princeは「既存のツールが必要な要件を満たさなかったため自ら構築した」と述べている。",
     "history": "2026年8月5日、Cloudflareがプレスリリースとブログ記事でCloudflare OSを発表し、GitHub上でApache-2.0ライセンスのオープンソースソフトウェアとして公開した。",
@@ -23919,7 +24181,11 @@
         "note": "OpenChamberが複数のAIモデルを横断実行するコーディング特化の開発環境であるのに対し、Cloudflare OSは社内システムへの権限管理を組み込んだ全社員向けのエージェント型ワークスペースであるという違いがある"
       }
     ],
-    "relatedTerms": ["mcp", "sandboxing", "openchamber"],
+    "relatedTerms": [
+      "mcp",
+      "sandboxing",
+      "openchamber"
+    ],
     "faq": [
       {
         "question": "Cloudflare OSはオープンソースか?",
@@ -23955,10 +24221,16 @@
   {
     "slug": "webmcp",
     "name": "WebMCP",
-    "aliases": ["Web Model Context Protocol"],
+    "aliases": [
+      "Web Model Context Protocol"
+    ],
     "tagline": "Webページ自身がツールをブラウザ内のAIエージェントへ公開できる、W3C Web Machine Learning Community Groupが策定中のブラウザAPI仕様",
     "category": "エージェント",
-    "tags": ["プロトコル", "ツール連携", "ブラウザ"],
+    "tags": [
+      "プロトコル",
+      "ツール連携",
+      "ブラウザ"
+    ],
     "summary": "WebMCPは、Webページが自らの機能を「ツール」としてブラウザに公開し、ブラウザに組み込まれたAIエージェント(または埋め込まれたエージェント)がそれを呼び出せるようにするJavaScript APIの仕様。AnthropicのMCP(Model Context Protocol)から名称と語彙(tool・schema・parameter等)の着想を得ているが、アーキテクチャは別物だ。サーバー間通信を前提とするMCPに対し、WebMCPはオリジン(origin)・ブラウザの権限管理・DOM統合・タブのライフサイクルといったWebプラットフォーム固有の概念にネイティブ対応する。GoogleとMicrosoftのエンジニアが中心となり、W3CのWeb Machine Learning Community Groupで策定が進められている。",
     "background": "AIプラットフォーム(Copilot・ChatGPT・Claude・Gemini等)は、MCPやOpenAPIのような「バックエンド統合」を通じて外部サービスのツールを呼び出せるようになってきた。しかしこの方式では、Web UIやブラウザ体験を経由せずエージェントが外部サービスのバックエンドと直接通信するため、UIが置き去りになって文脈が失われたり、開発者がユーザーの状態や認証情報をバックエンド統合ごとに複製する必要が生じたりする課題があった。WebMCPは、既存のクライアント側アプリケーションロジックとUIを再利用しながら、ユーザーとエージェントが同じWebインターフェース上で協調して作業できるようにする目的で提案された。",
     "history": "2026年、GoogleとMicrosoftのエンジニアが中心となり、W3CのWeb Machine Learning Community GroupでWebMCPの仕様策定が始まった。2026年8月14日時点でDraft Community Group Reportとして公開されており、W3C Standard Trackにはまだ乗っていない。Chromeでは試験用フラグ経由でWebMCPの一部機能を利用できる。",
@@ -23991,7 +24263,11 @@
         "note": "Browser UseがAIエージェントによるDOM解析やクリックなど視覚的・自律的なブラウザ操作技術であるのに対し、WebMCPはWebページ側が明示的に登録したツールをエージェントが呼び出す、開発者主導の連携方式であるという違いがある"
       }
     ],
-    "relatedTerms": ["mcp", "browser-use", "tool-calling"],
+    "relatedTerms": [
+      "mcp",
+      "browser-use",
+      "tool-calling"
+    ],
     "faq": [
       {
         "question": "WebMCPとMCP(Model Context Protocol)は同じものか?",
@@ -24385,7 +24661,10 @@
     "name": "Diffusion Policy",
     "tagline": "視覚観測を条件として、ロボットの行動系列を条件付き拡散モデルで生成する模倣学習の方策(ポリシー)",
     "category": "技術",
-    "tags": ["ロボティクス", "模倣学習"],
+    "tags": [
+      "ロボティクス",
+      "模倣学習"
+    ],
     "plainSummary": "カメラ映像などを手がかりに、ロボットが次にとる一連の動きをノイズ除去の繰り返しで生成する制御方法。",
     "summary": "Diffusion Policyは、ロボットの行動(action)系列そのものを拡散モデルの生成対象とみなし、視覚観測やロボットの状態を条件として条件付き拡散過程(条件付きDDPM)により行動系列を生成する模倣学習(imitation learning)の手法。単一の行動を1つだけ回帰的に予測する従来の明示的方策(explicit policy)とは異なり、複数の妥当な行動パターンが存在する多峰性(multimodal)なデモンストレーションデータを、生成モデルとして自然に表現できる点が特徴。推論時には、現在の観測を条件にランダムノイズから出発し、反復的なノイズ除去によって数ステップ先までの行動チャンク(action chunk)を生成する。生成したチャンクのうち先頭の数ステップだけを実行し、新しい観測を得て再度生成し直す receding horizon 方式をとることで、長期的な誤差の蓄積を抑えつつ滑らかな動作を実現する。物体操作(manipulation)タスクを中心に、模倣学習ベースのロボット方策として広く採用されており、Hugging Faceの[[lerobot]]でも実装済みポリシーの1つとして提供されている。",
     "background": "行動クローニング(behavior cloning)などの明示的方策は、観測から行動への写像を回帰問題として学習する。そのため、同じ観測に対して複数の妥当な行動(例: 障害物を左右どちらから避けてもよい)が存在する多峰性のデモンストレーションデータでは、複数モードの平均をとってしまい、どちらの行動としても不自然な出力になりやすいという課題があった。また単一ステップの行動だけを予測する方策は、実行時の誤差が時間とともに蓄積しやすい。Diffusion Policyは、行動系列の生成過程そのものを拡散モデルで表現し、この多峰性を扱えるようにした。さらに複数ステップ先までをまとめて予測する行動チャンキングと receding horizon 制御を組み合わせ、誤差の蓄積を抑える方向で設計された。",
@@ -24416,7 +24695,12 @@
         "note": "HG-DAggerが人間の介入区間のデータを反復収集し分布シフトに対処する対話的模倣学習アルゴリズムであるのに対し、Diffusion Policyは拡散モデルにより多峰性の行動分布を直接生成する模倣学習手法という違いがある"
       }
     ],
-    "relatedTerms": ["diffusion-model", "lerobot", "vla", "human-gated-dagger"],
+    "relatedTerms": [
+      "diffusion-model",
+      "lerobot",
+      "vla",
+      "human-gated-dagger"
+    ],
     "references": [
       {
         "type": "Research Paper",
@@ -24438,10 +24722,15 @@
   {
     "slug": "human-gated-dagger",
     "name": "HG-DAgger",
-    "aliases": ["Human-Gated DAgger"],
+    "aliases": [
+      "Human-Gated DAgger"
+    ],
     "tagline": "人間の専門家が自律ポリシー実行中に危険と判断した区間のみ制御を引き取り、その介入データだけを集約して再学習する対話的模倣学習アルゴリズム",
     "category": "技術",
-    "tags": ["模倣学習", "ロボティクス"],
+    "tags": [
+      "模倣学習",
+      "ロボティクス"
+    ],
     "plainSummary": "ロボットが自動で動いている間、人間が危ないと思った瞬間だけ操作を代わり、その代わった部分だけを学習データとして使う手法。",
     "summary": "HG-DAgger(Human-Gated DAgger)は、模倣学習アルゴリズムDAgger(Dataset Aggregation)を、人間の専門家が学習中のポリシーの挙動をリアルタイムで監視し、必要と判断した区間だけ制御を引き取る(gate)方式に変更した対話的模倣学習手法。標準的なDAggerは、学習中のポリシーが訪れた全ての状態に対して専門家が正しい行動ラベルを付与する必要があり、未熟なポリシーをそのまま実行し続けることに伴う安全上のリスクや、専門家によるラベル付け負荷が課題となっていた。HG-DAggerでは、専門家が危険と判断した場面でのみ制御を引き取り、その介入区間で得られた状態と行動のペアだけを集約データセットに追加してポリシーを再学習する。これにより、実機を用いた自律走行やロボット操作など、安全性が重要なタスクにDAggerを適用しやすくしている。",
     "background": "標準的なDAggerは、現在のポリシーを実環境で実行し、訪れた状態に対して専門家が正しい行動を都度ラベル付けすることで分布シフトに対処する。しかし実機のロボットや自動運転車では、未熟なポリシーをそのまま長時間実行させること自体が危険であり、また専門家が全訪問状態にラベルを付ける作業負荷も大きい。HG-DAggerは、人間が制御権を能動的に握る(gate)ことでポリシー実行を安全な範囲に留めつつ、介入区間のデータのみを収集する設計により、この2つの課題への対処を目的として提案された。",
@@ -24468,7 +24757,10 @@
         "note": "強化学習が環境からの報酬信号を用いてポリシーを学習するのに対し、HG-DAggerは人間の専門家による介入(実演)からポリシーを学習する模倣学習に分類される"
       }
     ],
-    "relatedTerms": ["diffusion-policy", "reinforcement-learning"],
+    "relatedTerms": [
+      "diffusion-policy",
+      "reinforcement-learning"
+    ],
     "references": [
       {
         "type": "Research Paper",
@@ -24485,10 +24777,16 @@
   {
     "slug": "ground-truth",
     "name": "正解データ",
-    "aliases": ["Ground Truth", "正解ラベル"],
+    "aliases": [
+      "Ground Truth",
+      "正解ラベル"
+    ],
     "tagline": "モデルの予測や生成結果を評価・学習する際に基準とする、正しいとされるデータやラベル",
     "category": "技術",
-    "tags": ["データ", "評価"],
+    "tags": [
+      "データ",
+      "評価"
+    ],
     "plainSummary": "AIの答え合わせに使う「本当の正解」のデータ。学習にもテストにも使われる。",
     "summary": "正解データ(Ground Truth)は、機械学習モデルの学習や評価において、モデルの予測・生成結果と比較する基準として用いる、実際に正しいとされるデータやラベルを指す。教師あり学習では、入力データに対応する正解データを人間のアノテーターが付与したり、既存の記録や観測から取得したりすることで訓練データセットを構築する。モデルの評価時には、テストデータに対する正解データとモデルの予測を突き合わせ、精度・適合率・再現率・F1スコアなどの評価指標を計算する。正解データ自体に誤りや偏りが含まれていると、モデルの学習結果や評価結果もその影響を受けるため、正解データの品質はモデル全体の性能を左右する重要な要素となる。",
     "background": "モデルの学習・評価を定量的に行うには、何が正しい出力かを示す基準が必要になる。正解データは、損失関数による誤差計算や評価指標の算出において、モデルの予測と比較する基準として位置づけられる。画像分類のクラスラベルのように明確な正解データが得られる分野もあれば、要約や対話生成のように唯一の正解が存在しないタスクもある。後者では、人間が作成した複数の参照解答を正解データとして扱う場合もある。",
@@ -24512,12 +24810,1019 @@
         "note": "F1スコアは、正解データとモデルの予測を突き合わせて計算する評価指標の1つ"
       }
     ],
-    "relatedTerms": ["loss-function", "f1", "precision", "recall", "machine-learning"],
+    "relatedTerms": [
+      "loss-function",
+      "f1",
+      "precision",
+      "recall",
+      "machine-learning"
+    ],
     "faq": [
       {
         "question": "正解データとラベルは同じ意味か？",
         "answer": "分類タスクでは各サンプルに付与された正解ラベルがそのまま正解データとなり、ほぼ同義で使われる。ただし物体検出のバウンディングボックスや画像のセグメンテーションマスクなど、単純なラベル1つでは表現できない正解データもある。"
       }
+    ]
+  },
+  {
+    "slug": "resnet",
+    "name": "ResNet",
+    "aliases": [
+      "Residual Network",
+      "残差ネットワーク"
+    ],
+    "tagline": "スキップ接続で勾配消失を回避し、非常に深いネットワークの学習を可能にした画像認識アーキテクチャ",
+    "category": "アーキテクチャ",
+    "tags": [
+      "画像認識",
+      "深層学習"
+    ],
+    "plainSummary": "層を飛び越える近道（スキップ接続）を設けることで、非常に層数の多いニューラルネットワークでも学習が崩れずに済むようにした画像認識モデル。",
+    "summary": "ResNet（Residual Network）とは、スキップ接続（shortcut connection）を導入し、非常に深いニューラルネットワークでも安定して学習できるようにした画像認識アーキテクチャを指す。\n層を重ねるほど精度が向上するとは限らず、深くしすぎると訓練誤差自体が悪化する劣化問題（degradation problem）が知られていた。ResNetは各層のブロックに入力をそのまま出力へ加算するスキップ接続を導入し、ブロックが学習すべき対象を出力そのものではなく入力との差分（残差）に置き換えることでこの問題を緩和した。\nこれにより152層に達するような非常に深いネットワークの学習が可能になり、ILSVRC 2015の画像分類・検出・セグメンテーション部門で優勝した。以降、画像認識分野の標準的なバックボーンとして広く使われ、Transformer系アーキテクチャの残差接続の設計にも影響を与えた。",
+    "history": "2015年12月にMicrosoft ResearchのHe Kaimingらが論文「Deep Residual Learning for Image Recognition」で発表し、同年のILSVRC 2015で優勝した。",
+    "architecture": "残差ブロック（residual block）を基本単位とし、各ブロックは入力に畳み込み層群を適用した結果と入力そのものを加算した和を次のブロックへ渡す（出力＝畳み込み結果＋入力の恒等写像）。この恒等写像によるショートカットにより、ブロックが何も学習しなくても入力をそのまま伝播でき、逆伝播時の勾配が消失しにくくなる。ResNet-18／34では2層の畳み込みからなる基本ブロック、ResNet-50／101／152ではチャネル数を絞ってから戻すボトルネックブロック（1×1・3×3・1×1の畳み込み）を用いる。",
+    "workflow": "入力画像に7×7畳み込みとプーリングを適用 → 複数の残差ブロックをステージごとに積み重ね、ステージが進むごとにチャネル数を増やし特徴マップの解像度を下げる → 各ブロック内で畳み込み結果を計算し入力と加算 → 最終層でグローバル平均プーリングを行い全結合層でクラス確率を出力する。",
+    "codeExamples": [
+      {
+        "title": "torchvisionでの事前学習済みResNetの利用",
+        "language": "python",
+        "code": "import torch\nfrom torchvision.models import resnet50, ResNet50_Weights\n\nmodel = resnet50(weights=ResNet50_Weights.DEFAULT)\nmodel.eval()\n\nx = torch.randn(1, 3, 224, 224)\nlogits = model(x)"
+      }
+    ],
+    "advantages": [
+      "スキップ接続により勾配消失が緩和され、100層を超える非常に深いネットワークでも学習が安定する",
+      "恒等写像を初期状態として持つため、層を追加しても性能が劣化しにくい",
+      "画像分類・物体検出・セグメンテーションなど幅広いタスクのバックボーンとして転用しやすい"
+    ],
+    "disadvantages": [
+      "層数が多いモデル（ResNet-152等）は依然として計算コストとメモリ消費が大きい",
+      "大規模データでの精度ではViT系のアーキテクチャに上回られる場合がある",
+      "畳み込みによる局所的な帰納バイアスを前提とするため、自己注意ベースのモデルと比べ長距離の依存関係を捉えにくい"
+    ],
+    "comparisons": [
+      {
+        "slug": "vision-transformer",
+        "note": "ResNetが畳み込みと残差接続で局所的な特徴を積み重ねるのに対し、ViTは自己注意で画像全体のパッチ間の関係を直接捉える"
+      },
+      {
+        "slug": "convolutional-neural-network",
+        "note": "ResNetはCNNの一種であり、通常のCNNに残差接続を加えることで非常に深い構成でも学習を安定させている"
+      }
+    ],
+    "relatedTerms": [
+      "convolutional-neural-network",
+      "vision-transformer"
+    ],
+    "faq": [
+      {
+        "question": "ResNetとCNNは何が違う？",
+        "answer": "ResNetはCNNの一種。通常の畳み込みネットワークに残差接続（スキップ接続）を加えることで、層を深くしても勾配消失や劣化問題が起きにくいようにした構成を指す。"
+      },
+      {
+        "question": "ResNet-50やResNet-152の数字は何を表す？",
+        "answer": "ネットワークの層数を表す。数字が大きいほど層が深く表現力は高まるが、計算コストとメモリ消費も増える。"
+      }
+    ],
+    "references": [
+      {
+        "type": "Research Paper",
+        "label": "Deep Residual Learning for Image Recognition (arXiv)",
+        "url": "https://arxiv.org/abs/1512.03385"
+      }
+    ]
+  },
+  {
+    "slug": "t5",
+    "name": "T5",
+    "aliases": [
+      "Text-to-Text Transfer Transformer"
+    ],
+    "tagline": "あらゆる自然言語処理タスクをテキスト入力からテキスト出力への変換として統一的に扱うGoogleのエンコーダ・デコーダ型言語モデル",
+    "category": "モデル",
+    "tags": [
+      "LLM",
+      "Google",
+      "事前学習"
+    ],
+    "plainSummary": "翻訳・要約・分類など種類の異なるタスクをすべて「テキストを入力してテキストを出力する」形式に統一し、1つの枠組みで扱えるようにしたGoogleの言語モデル。",
+    "summary": "T5（Text-to-Text Transfer Transformer）とは、翻訳・要約・分類・質問応答などあらゆる自然言語処理タスクをテキスト入力からテキスト出力への変換として統一的に扱うGoogleの言語モデルを指す。\n各タスクの入力先頭に「translate English to German:」のようなプレフィックスを付与することで、タスクごとに異なるモデル構造やヘッドを用意せずとも、単一のエンコーダ・デコーダ型Transformerで多様なタスクを処理できるようにした。\n事前学習にはWebクロールデータを大規模にクリーニングしたC4（Colossal Clean Crawled Corpus）を用い、モデル規模やデータ量、事前学習手法などの設計選択を体系的に比較した実験結果も合わせて報告された。\nBERTのようなエンコーダのみ、GPTのようなデコーダのみのモデルと異なり、標準的なエンコーダ・デコーダ構成を採用しており、その後のFlan-T5等の指示チューニング済み派生モデルの土台にもなっている。",
+    "history": "2019年10月にGoogleの研究者ら（Raffelら）が論文「Exploring the Limits of Transfer Learning with a Unified Text-to-Text Transformer」で発表した。",
+    "architecture": "標準的なエンコーダ・デコーダ型Transformerを採用する。エンコーダが入力テキストを処理して文脈表現を生成し、デコーダがその表現を参照しながら出力テキストを自己回帰的に生成する。あらゆるタスクの入力と出力を「テキストからテキストへ」という共通形式に統一しているため、分類タスクの出力もラベルを表す単語列として生成する。",
+    "workflow": "入力テキストの先頭にタスクを示すプレフィックス（例: “summarize:”）を付与する → エンコーダが入力全体を処理し文脈表現を得る → デコーダがその表現を参照しながら出力テキストを生成する。生成されたテキストをそのままタスクの出力として扱う。",
+    "advantages": [
+      "タスクごとに異なるモデル構造やヘッドを用意せず、単一のモデルと学習フレームワークで多様なタスクを扱える",
+      "テキスト生成として出力を統一しているため、新しいタスクへの拡張が入力プレフィックスの追加だけで済みやすい",
+      "C4データセットの構築や事前学習手法の比較実験など、後続研究が参照する体系的な知見を提供した"
+    ],
+    "disadvantages": [
+      "デコーダのみのモデルに比べ、少数ショットでの汎用的な対話・生成能力では近年のLLMに劣る場合がある",
+      "エンコーダ・デコーダ両方を持つ分、同規模のデコーダのみモデルより推論時の計算コストが大きくなりやすい",
+      "タスクごとのプレフィックス設計に依存するため、プレフィックスの設計次第で性能が変わる"
+    ],
+    "comparisons": [
+      {
+        "slug": "gpt",
+        "note": "GPTがデコーダのみで自己回帰的にテキストを生成するのに対し、T5はエンコーダ・デコーダ構成で入力全体を先に文脈化してから出力を生成する"
+      },
+      {
+        "slug": "bert",
+        "note": "BERTがエンコーダのみで文の理解（分類等）に特化するのに対し、T5はエンコーダ・デコーダで理解と生成の両方をテキスト生成として統一的に扱う"
+      }
+    ],
+    "relatedTerms": [
+      "transformer",
+      "gpt",
+      "bert"
+    ],
+    "faq": [
+      {
+        "question": "T5とBERT・GPTの違いは？",
+        "answer": "BERTはエンコーダのみで文の理解タスクに特化し、GPTはデコーダのみで自己回帰的なテキスト生成に特化する。T5はエンコーダ・デコーダの両方を持ち、理解系・生成系を問わずあらゆるタスクをテキスト入力からテキスト出力への変換として統一的に扱う。"
+      }
+    ],
+    "references": [
+      {
+        "type": "Research Paper",
+        "label": "Exploring the Limits of Transfer Learning with a Unified Text-to-Text Transformer (arXiv)",
+        "url": "https://arxiv.org/abs/1910.10683"
+      }
+    ]
+  },
+  {
+    "slug": "supervised-learning",
+    "name": "教師あり学習",
+    "aliases": [
+      "Supervised Learning"
+    ],
+    "tagline": "入力データと正解ラベルの対応関係を学習し、未知データのラベルを予測する機械学習の基本的な枠組み",
+    "category": "技術",
+    "tags": [
+      "機械学習",
+      "学習"
+    ],
+    "plainSummary": "問題と正解のペアをたくさん見せて、新しい問題にも正しい答えを出せるように学ばせる方法。",
+    "summary": "教師あり学習とは、入力とそれに対応する正解ラベル(教師信号)のペアからなるデータセットを用いて、入力から出力を予測する関数を学習する機械学習の枠組みを指す。\nモデルは訓練データに対する予測と正解ラベルとの誤差(損失)を最小化するようにパラメータを更新し、未知の入力に対しても妥当な出力を予測できるよう汎化することを目指す。\n出力が連続値か離散値かによって回帰と分類に大別され、線形回帰・決定木・ニューラルネットワークなど多様な手法がこの枠組みで用いられる。\n画像分類やスパム判定、需要予測など、正解データを用意しやすいタスクで広く使われる代表的な学習パラダイム。",
+    "history": "教師あり学習という枠組み自体は特定の1本の論文に起源を持つものではなく、パーセプトロン(1958年、Rosenblatt)をはじめとする初期の機械学習アルゴリズムの時代から、入力と正解の対を用いてパラメータを調整する学習方法として存在してきた。",
+    "workflow": "入力と正解ラベルの対からなる訓練データを用意する → モデルが入力から出力を予測する → 予測と正解ラベルの誤差を損失関数で計算する → 誤差を小さくする方向へモデルのパラメータを更新する → 検証データで汎化性能を確認しながら反復する。",
+    "advantages": [
+      "正解ラベルという明確な学習目標があるため、モデルの評価や改善の指針を立てやすい",
+      "回帰・分類など多様なタスクに適用でき、手法や実装例が豊富に蓄積されている",
+      "損失関数を通じて最適化すべき目的を数式として明確に定義できる"
+    ],
+    "disadvantages": [
+      "大量の正解ラベル付きデータを人手で用意するコストが高い",
+      "訓練データの分布に偏りがあると、未知データへの汎化性能が低下する",
+      "ラベル付けが難しい、または唯一の正解が存在しないタスクには適用しにくい"
+    ],
+    "comparisons": [
+      {
+        "slug": "reinforcement-learning",
+        "note": "教師あり学習が入力と正解ラベルの対から直接学習するのに対し、強化学習は報酬という間接的な信号をもとに試行錯誤で方策を学習する"
+      },
+      {
+        "slug": "self-supervised-learning",
+        "note": "教師あり学習が人手で付与した正解ラベルを用いるのに対し、自己教師あり学習はデータ自体から擬似的な正解ラベルを生成して学習する"
+      },
+      {
+        "slug": "semi-supervised-learning",
+        "note": "教師あり学習が全データに正解ラベルを必要とするのに対し、準教師あり学習は少量のラベル付きデータと大量のラベルなしデータを組み合わせて学習する"
+      }
+    ],
+    "relatedTerms": [
+      "machine-learning",
+      "reinforcement-learning",
+      "self-supervised-learning",
+      "semi-supervised-learning",
+      "deep-learning"
+    ],
+    "faq": [
+      {
+        "question": "教師あり学習と教師なし学習の違いは？",
+        "answer": "教師あり学習は入力と正解ラベルの対から学習するのに対し、教師なし学習は正解ラベルのないデータからクラスタリングや次元削減などパターンを見出す。"
+      }
+    ]
+  },
+  {
+    "slug": "semi-supervised-learning",
+    "name": "準教師あり学習",
+    "aliases": [
+      "Semi-Supervised Learning",
+      "半教師あり学習"
+    ],
+    "tagline": "少量のラベル付きデータと大量のラベルなしデータを組み合わせて学習する機械学習の枠組み",
+    "category": "技術",
+    "tags": [
+      "機械学習",
+      "学習"
+    ],
+    "plainSummary": "少しだけある正解付きデータと、大量の正解なしデータを組み合わせて、ラベル付けの手間を抑えつつ賢く学ばせる方法。",
+    "summary": "準教師あり学習(Semi-Supervised Learning)とは、少量のラベル付きデータと大量のラベルなしデータを組み合わせて学習する機械学習の枠組みを指す。\n教師あり学習が正解ラベル付きデータのみを用い、教師なし学習がラベルなしデータのみを扱うのに対し、準教師あり学習はその中間に位置し、ラベル付けのコストを抑えつつラベルなしデータが持つデータ分布の構造を活用して性能向上を図る。\nモデル自身の予測をラベルなしデータの疑似ラベルとして学習に用いる自己学習(self-training)や、入力に加えるノイズやデータ拡張の違いによらず同じ予測を出すよう促す一貫性正則化などの手法が代表的。\nラベル付きデータの収集が高コストな医療画像診断や、大量の未ラベルテキストが存在する自然言語処理などで活用される。",
+    "history": "ラベルなしデータを学習に活用する考え方自体は1960年代から研究されてきた。近年では、2020年にGoogleの研究者ら(Sohnら)が一貫性正則化に基づく手法FixMatchを発表し、性能向上を牽引した。",
+    "advantages": [
+      "ラベル付きデータのみを使う場合より少ないアノテーションコストで高い性能を狙える",
+      "ラベルなしデータを大量に用意しやすい分野で特に有効",
+      "自己学習や一貫性正則化など、既存の教師あり学習の枠組みに組み込みやすい手法が多い"
+    ],
+    "disadvantages": [
+      "疑似ラベルの誤りがそのまま学習に混入し、性能を悪化させるリスクがある",
+      "ラベルなしデータの分布がラベル付きデータの分布と大きく異なると効果が薄れる",
+      "一貫性正則化などの手法はハイパーパラメータの調整が性能に大きく影響する"
+    ],
+    "comparisons": [
+      {
+        "slug": "supervised-learning",
+        "note": "教師あり学習が全データにラベルを必要とするのに対し、準教師あり学習は少量のラベル付きデータと大量のラベルなしデータを組み合わせて学習する"
+      },
+      {
+        "slug": "self-supervised-learning",
+        "note": "自己教師あり学習がデータ自体から作った疑似タスクで表現を事前学習するのに対し、準教師あり学習は少量の正解ラベルと大量のラベルなしデータを直接1つのタスクの学習に組み合わせる"
+      }
+    ],
+    "relatedTerms": [
+      "supervised-learning",
+      "self-supervised-learning",
+      "machine-learning"
+    ],
+    "faq": [
+      {
+        "question": "準教師あり学習と自己教師あり学習の違いは？",
+        "answer": "自己教師あり学習はデータ自体から擬似的な正解ラベルを作り表現学習の事前学習に使うのに対し、準教師あり学習は少量の本物の正解ラベルと大量のラベルなしデータを1つのタスクの学習に直接組み合わせる点が異なる。"
+      }
+    ],
+    "references": [
+      {
+        "type": "Research Paper",
+        "label": "FixMatch: Simplifying Semi-Supervised Learning with Consistency and Confidence (arXiv)",
+        "url": "https://arxiv.org/abs/2001.07685"
+      }
+    ]
+  },
+  {
+    "slug": "curriculum-learning",
+    "name": "カリキュラム学習",
+    "aliases": [
+      "Curriculum Learning"
+    ],
+    "tagline": "簡単なサンプルから難しいサンプルへと順序立てて学習させることで、学習の効率や汎化性能を高める手法",
+    "category": "技術",
+    "tags": [
+      "機械学習",
+      "学習"
+    ],
+    "plainSummary": "人が易しい問題から難しい問題へと段階的に学ぶのと同様に、モデルにも簡単なサンプルから難しいサンプルへ順番に学習させる方法。",
+    "summary": "カリキュラム学習(Curriculum Learning)とは、人間が易しい内容から難しい内容へと段階的に学ぶのと同様に、機械学習モデルにも簡単なサンプルから難しいサンプルへと順序立てて学習させる手法を指す。\n全ての訓練データをランダムな順序で一様に学習させる通常の方法と異なり、サンプルの難易度(ノイズの少なさ、タスクの複雑さなど)に応じて学習の順序をあらかじめ設計、あるいは学習中に動的に調整する。\n難易度の低いサンプルから学習を始めることで良い初期解へ早く到達しやすくなり、収束の速さや最終的な汎化性能の向上が期待できるとされる。\nLLMの事前学習やロボット制御の強化学習など、学習が不安定になりやすい設定で応用される。",
+    "history": "2009年にBengioらが論文「Curriculum Learning」で、この考え方を機械学習の学習手法として体系的に提案した。",
+    "workflow": "訓練サンプルの難易度を何らかの基準(ノイズの少なさ、文長、タスクの複雑さ等)で評価する → 難易度の低いサンプルから学習を開始する → 学習の進行に応じて徐々に難易度の高いサンプルを学習に加えていく → 最終的に全難易度のサンプルを含めて学習を完了する。",
+    "advantages": [
+      "学習序盤の不安定さを避けやすく、収束の速さにもつながる場合がある",
+      "難しいサンプルにいきなり適応しようとして学習が破綻するリスクを抑えられる",
+      "難易度設計次第で最終的な汎化性能の向上も期待できる"
+    ],
+    "disadvantages": [
+      "サンプルの難易度をどう定義し測定するかの設計が難しく、タスクごとに試行錯誤が必要になる",
+      "難易度の順序付けが不適切だと、通常のランダム順序での学習より性能が悪化することもある",
+      "難易度評価や順序制御の実装分、学習パイプラインが複雑になる"
+    ],
+    "comparisons": [
+      {
+        "slug": "reinforcement-learning",
+        "note": "カリキュラム学習は強化学習において、簡単なタスク設定から難しいタスク設定へ段階的に難易度を上げる形でも応用される"
+      }
+    ],
+    "relatedTerms": [
+      "machine-learning",
+      "reinforcement-learning",
+      "meta-learning"
+    ],
+    "faq": [
+      {
+        "question": "カリキュラム学習の「難易度」は誰が決める？",
+        "answer": "ノイズの少なさや文長、タスクの複雑さなど、あらかじめ人間が設計した基準で難易度を決める場合と、学習中のモデル自身の予測誤差などをもとに動的に難易度を推定する場合がある。"
+      }
+    ]
+  },
+  {
+    "slug": "multi-task-learning",
+    "name": "マルチタスク学習",
+    "aliases": [
+      "Multi-Task Learning",
+      "MTL"
+    ],
+    "tagline": "複数の関連タスクを1つのモデルで同時に学習し、タスク間で知識を共有することで汎化性能を高める手法",
+    "category": "技術",
+    "tags": [
+      "機械学習",
+      "学習"
+    ],
+    "plainSummary": "関連するいくつかの課題を1つのモデルに同時に学ばせ、課題同士の知識を共有させてそれぞれの精度を高める方法。",
+    "summary": "マルチタスク学習(Multi-Task Learning)とは、複数の関連するタスクを1つのモデルで同時に学習させることで、タスク間で有用な特徴やパラメータを共有し、個別にタスクを学習する場合より高い汎化性能を目指す機械学習の手法を指す。\n典型的には、入力から特徴を抽出する層の大部分をタスク間で共有し、タスクごとに固有の出力層(ヘッド)を用意する構成をとる。\nある1つのタスクの学習が、関連する別タスクにとって有用な正則化として働き、データ量が少ないタスクの性能を補う効果(帰納バイアスの共有)が期待される。\n自然言語処理における複数タスクの同時学習や、自動運転における物体検出・セグメンテーション・深度推定の同時学習など幅広い分野で使われる。",
+    "history": "1997年にCaruanaが論文「Multitask Learning」でこの枠組みを体系的に提案した。",
+    "architecture": "入力から特徴を抽出する層をタスク間で共有する共有層(shared layers)と、各タスク固有の出力を計算するタスク別ヘッド(task-specific heads)から構成されることが多い。損失関数は各タスクの損失の重み付き和として定義され、この重み付けの設計がタスク間のバランスを左右する。",
+    "advantages": [
+      "関連タスク間で知識を共有でき、データ量が少ないタスクでも性能向上が見込める",
+      "タスク固有の過学習を抑える正則化効果が期待できる",
+      "複数タスクを1つのモデルで扱えるため推論時のパラメータ数やコストを抑えられる"
+    ],
+    "disadvantages": [
+      "タスク同士の関連性が低い場合、互いの学習を妨げ合う負の転移(negative transfer)が起こりうる",
+      "タスクごとの損失の重み付けの設計が難しく、性能がその設定に敏感な場合がある",
+      "1つのタスクのデータやラベルの変更が、他のタスクの性能にも影響する"
+    ],
+    "comparisons": [
+      {
+        "slug": "transfer-learning",
+        "note": "転移学習が別タスクで学習済みのモデルを新しいタスクへ転用するのに対し、マルチタスク学習は複数タスクを同時に学習して知識を共有する"
+      }
+    ],
+    "relatedTerms": [
+      "transfer-learning",
+      "machine-learning",
+      "meta-learning"
+    ],
+    "faq": [
+      {
+        "question": "マルチタスク学習で性能が悪化することはある？",
+        "answer": "タスク同士の関連性が低い場合に起こりうる。あるタスクの学習が別タスクを妨げる負の転移により、個別学習より性能低下を招くことがある。"
+      }
+    ]
+  },
+  {
+    "slug": "meta-learning",
+    "name": "メタ学習",
+    "aliases": [
+      "Meta-Learning",
+      "Learning to Learn"
+    ],
+    "tagline": "複数のタスクの学習経験から、新しいタスクに素早く適応するための学習の仕方自体を学習する枠組み",
+    "category": "技術",
+    "tags": [
+      "機械学習",
+      "学習"
+    ],
+    "plainSummary": "たくさんの課題を解いた経験をもとに、新しい課題にも少ない練習ですぐ対応できる「学び方」自体を身につけさせる方法。",
+    "summary": "メタ学習(Meta-Learning)とは、複数のタスクを学習する経験を通じて、新しい未知のタスクに少量のデータや少ない更新回数で素早く適応できるような「学習の仕方」自体を獲得することを目指す機械学習の枠組みを指す。\n通常の機械学習が1つのタスクに対してパラメータを最適化するのに対し、メタ学習は多数の関連タスクにまたがる学習(メタ訓練)を通じて、新しいタスクへの適応を効率化するモデルの初期値や更新則、あるいはタスク間で共通する構造を学習する。\n少数の事例からの学習を目指すFew-Shot Learningの実現手法の1つとしてよく用いられ、モデルの初期パラメータを新タスクへ少数ステップの勾配更新で適応しやすい位置に学習するMAML(Model-Agnostic Meta-Learning)が代表的な手法として知られる。",
+    "history": "「学習の仕方を学習する」という考え方自体は1987年のSchmidhuberの研究に遡るとされ、2017年にFinnらが提案したMAMLによって、ニューラルネットワークベースのメタ学習手法として広く知られるようになった。",
+    "advantages": [
+      "新しいタスクに対して少量のデータ・少ない更新回数で適応できる",
+      "タスクの共通構造を捉えることで、個別タスクを一から学習するより少ないデータ・学習時間で済む場合がある",
+      "Few-Shot Learningなどデータが乏しい設定への応用に適している"
+    ],
+    "disadvantages": [
+      "メタ訓練には多数の関連タスクを用意する必要があり、タスク自体の設計・収集コストが高い",
+      "メタ訓練時のタスク分布と、実際に適応させたい新タスクの分布が大きく異なると性能が低下する",
+      "MAML等の勾配ベース手法は勾配を通じた勾配計算(2階微分)が必要になり、計算コストが高くなりやすい"
+    ],
+    "comparisons": [
+      {
+        "slug": "transfer-learning",
+        "note": "転移学習が1つの学習済みモデルを新タスクへ転用するのに対し、メタ学習は多数のタスクにまたがる学習経験から新タスクへ素早く適応する能力自体を獲得する"
+      },
+      {
+        "slug": "multi-task-learning",
+        "note": "マルチタスク学習が複数タスクを同時に解けるモデルを学習するのに対し、メタ学習は未知の新タスクへの適応の速さを学習の目標に据える"
+      }
+    ],
+    "relatedTerms": [
+      "transfer-learning",
+      "multi-task-learning",
+      "machine-learning"
+    ],
+    "faq": [
+      {
+        "question": "メタ学習とFew-Shot Learningの関係は？",
+        "answer": "Few-Shot Learningは少数の事例だけから新しいタスクを学習する問題設定そのものを指し、メタ学習はその問題設定を解くための代表的なアプローチの1つに位置づけられる。"
+      }
+    ],
+    "references": [
+      {
+        "type": "Research Paper",
+        "label": "Model-Agnostic Meta-Learning for Fast Adaptation of Deep Networks (arXiv)",
+        "url": "https://arxiv.org/abs/1703.03400"
+      }
+    ]
+  },
+  {
+    "slug": "continual-learning",
+    "name": "連続学習",
+    "aliases": [
+      "Continual Learning",
+      "継続学習",
+      "Lifelong Learning"
+    ],
+    "tagline": "新しいタスクやデータを次々と学習しながら、過去に学習した知識を破壊的に忘れないようにする学習の枠組み",
+    "category": "技術",
+    "tags": [
+      "機械学習",
+      "学習"
+    ],
+    "plainSummary": "新しいことを学ぶたびに、以前学んだことを忘れてしまわないよう工夫しながら学習を続けていく方法。",
+    "summary": "連続学習(Continual Learning)とは、モデルが新しいタスクやデータを次々と学習していく状況で、過去に学習した知識やタスクの性能をできるだけ損なわずに、新しい知識を追加で獲得し続けることを目指す機械学習の枠組みを指す。\nニューラルネットワークは新しいタスクを学習する際、そのタスクに合わせてパラメータ全体を更新するため、以前学習したタスクの性能が大きく低下する破滅的忘却(catastrophic forgetting)と呼ばれる問題が起きやすい。\n連続学習では、重要なパラメータの変化を抑制する正則化ベースの手法、過去のデータの一部を保持・再学習するリプレイベースの手法、タスクごとにパラメータの一部を割り当てるアーキテクチャベースの手法などにより、この破滅的忘却を緩和しようとする。",
+    "history": "破滅的忘却という現象自体は1989年にMcCloskeyとCohenが指摘したことで知られる。これを緩和する連続学習の手法は2010年代以降、EWC(Elastic Weight Consolidation、2017年、DeepMind)などの提案を通じて活発に研究されるようになった。",
+    "advantages": [
+      "新しいタスクやデータが逐次到着する実運用環境に対応しやすい",
+      "過去のデータを全て保持し再学習し直す必要がなく、学習・ストレージのコストを抑えられる",
+      "破滅的忘却を緩和する各種手法により、複数タスクの性能をある程度両立できる"
+    ],
+    "disadvantages": [
+      "過去タスクの性能維持と新タスクの学習効率の間にトレードオフがあり、両立が難しい(安定性と可塑性のジレンマ)",
+      "タスクの切り替わりを明示的に検知できない設定では、手法の適用がより難しくなる",
+      "評価に複数タスクの逐次学習シナリオが必要で、通常の学習より検証コストが高い"
+    ],
+    "comparisons": [
+      {
+        "slug": "transfer-learning",
+        "note": "転移学習が1つの新タスクへの適応に主眼を置くのに対し、連続学習は複数タスクを次々と学習しながら過去の性能もあわせて維持することを目指す"
+      }
+    ],
+    "relatedTerms": [
+      "transfer-learning",
+      "machine-learning",
+      "meta-learning"
+    ],
+    "faq": [
+      {
+        "question": "破滅的忘却はなぜ起きる？",
+        "answer": "ニューラルネットワークは新しいタスクに合わせてパラメータ全体を更新するため、以前のタスクの性能を支えていたパラメータの値が上書きされ、そのタスクの性能が大きく低下してしまう。"
+      }
+    ],
+    "references": [
+      {
+        "type": "Research Paper",
+        "label": "Overcoming catastrophic forgetting in neural networks (arXiv)",
+        "url": "https://arxiv.org/abs/1612.00796"
+      }
+    ]
+  },
+  {
+    "slug": "inverse-reinforcement-learning",
+    "name": "逆強化学習",
+    "aliases": [
+      "Inverse Reinforcement Learning",
+      "IRL"
+    ],
+    "tagline": "専門家の行動データから、その行動の背後にある報酬関数を推定する強化学習の枠組み",
+    "category": "技術",
+    "tags": [
+      "強化学習",
+      "機械学習"
+    ],
+    "plainSummary": "お手本となる行動の記録から、「何を目的に行動しているか」を表す報酬の与え方を逆算して求める方法。",
+    "summary": "逆強化学習(Inverse Reinforcement Learning, IRL)とは、通常の強化学習とは逆に、専門家(人間や熟練したエージェント)の行動デモンストレーションを観測し、その行動を最適な方策として説明できるような報酬関数を推定する枠組みを指す。\n通常の強化学習では報酬関数が既知でそこから方策を学習するのに対し、逆強化学習では報酬関数自体が未知であり、専門家の行動という結果から逆算的に報酬関数を求める。\n得られた報酬関数を用いて改めて強化学習を行うことで、専門家の行動を模倣、あるいはそれを一般化した方策を得られる。\n自動運転やロボット操作のように、望ましい行動の報酬を人手で設計しにくいタスクにおいて、模倣学習の一種として活用される。",
+    "history": "2000年にNgとRussellが論文「Algorithms for Inverse Reinforcement Learning」で、この問題設定とアルゴリズムを定式化した。",
+    "advantages": [
+      "望ましい行動の報酬関数を人手で設計するのが難しいタスクでも、専門家のデモンストレーションから報酬を推定できる",
+      "推定した報酬関数は、専門家の行動の背後にある意図の解釈にも役立つ",
+      "得られた報酬関数を使って通常の強化学習を行い、専門家のデモンストレーションを超える性能を目指せる場合がある"
+    ],
+    "disadvantages": [
+      "複数の異なる報酬関数が同じ専門家の行動を説明できてしまう不良設定問題(ill-posed problem)がある",
+      "専門家のデモンストレーションデータの収集にコストがかかる",
+      "推定した報酬関数を用いた強化学習を別途行う必要があり、計算コストが高くなりやすい"
+    ],
+    "comparisons": [
+      {
+        "slug": "reinforcement-learning",
+        "note": "強化学習が既知の報酬関数から方策を学習するのに対し、逆強化学習は専門家の行動から未知の報酬関数を逆算的に推定する"
+      }
+    ],
+    "relatedTerms": [
+      "reinforcement-learning",
+      "machine-learning"
+    ],
+    "faq": [
+      {
+        "question": "逆強化学習と模倣学習(Imitation Learning)の違いは？",
+        "answer": "模倣学習が専門家の行動を直接模倣する方策を学習するのに対し、逆強化学習は専門家の行動の背後にある報酬関数をまず推定し、その報酬関数を使って改めて方策を学習する。ただし逆強化学習は模倣学習の一種に位置づけられることも多い。"
+      }
+    ]
+  },
+  {
+    "slug": "labeled-data",
+    "name": "ラベル付きデータ",
+    "aliases": [
+      "Labeled Data"
+    ],
+    "tagline": "正解ラベルが付与された学習データで、教師あり学習の基盤となるもの",
+    "category": "技術",
+    "tags": [
+      "教師あり学習",
+      "データ"
+    ],
+    "summary": "ラベル付きデータとは、入力(画像・テキスト・音声など)に対して正解となる出力(クラス名・数値・アノテーションなど)が付与された学習データ。\n教師あり学習ではこのラベルを教師信号として、モデルが入力からラベルを予測できるようにパラメータを最適化する。\nラベル付けは人手によるアノテーション作業を要することが多く、収集・付与コストが高いため、擬似ラベリングや半教師あり学習など、少量のラベル付きデータと大量のラベルなしデータを組み合わせる手法が発展してきた。\n分類・回帰・物体検出など、教師あり学習タスクの多くはラベル付きデータの質と量に性能が大きく依存する。",
+    "relatedTerms": [
+      "pseudo-labeling",
+      "annotation",
+      "classification",
+      "fine-tuning"
+    ]
+  },
+  {
+    "slug": "classification",
+    "name": "分類",
+    "aliases": [
+      "Classification"
+    ],
+    "tagline": "入力を事前に定義されたカテゴリのいずれかに割り当てる教師あり学習タスク",
+    "category": "技術",
+    "tags": [
+      "教師あり学習",
+      "分類"
+    ],
+    "summary": "分類は、入力データを有限個の離散カテゴリ(クラス)のいずれかに割り当てる教師あり学習タスク。\nスパムメール判定のような2値分類と、画像認識のクラス分けのような多クラス分類に大別される。\nロジスティック回帰・決定木・ニューラルネットワークなど様々なモデルが分類器として使われ、出力層にはSoftmaxやSigmoidを用いてクラスごとの確率を得ることが多い。\n評価には正解率のほか、クラス不均衡に強い適合率・再現率・F1スコアがよく用いられる。",
+    "relatedTerms": [
+      "logistic-regression",
+      "f1",
+      "precision",
+      "recall",
+      "cross-entropy"
+    ]
+  },
+  {
+    "slug": "clustering",
+    "name": "クラスタリング",
+    "aliases": [
+      "Clustering"
+    ],
+    "tagline": "ラベルなしデータを類似度に基づいてグループ分けする教師なし学習手法",
+    "category": "技術",
+    "tags": [
+      "教師なし学習",
+      "クラスタリング"
+    ],
+    "summary": "クラスタリングは、正解ラベルを与えずにデータ間の類似度や距離をもとに、似た性質を持つサンプル同士をグループ(クラスタ)へ分割する教師なし学習手法。\nk-meansのような分割型手法、階層的クラスタリング、密度に基づくDBSCANなど、多様なアルゴリズムが存在する。\n顧客セグメンテーションや異常検知、埋め込み空間の可視化・分析など、ラベル付けが困難または存在しないデータの構造を把握する用途で広く使われる。\n事前にクラスタ数を指定する必要があるか、データの密度分布からクラスタを自動発見できるかは手法ごとに異なる。",
+    "relatedTerms": [
+      "embedding",
+      "autoencoder"
+    ]
+  },
+  {
+    "slug": "policy-optimization",
+    "name": "方策最適化",
+    "aliases": [
+      "Policy Optimization"
+    ],
+    "tagline": "強化学習でエージェントの方策を報酬最大化に向けて直接改善する手法群",
+    "category": "技術",
+    "tags": [
+      "強化学習",
+      "方策"
+    ],
+    "summary": "方策最適化は、強化学習において行動を選ぶ方策(ポリシー)のパラメータを、期待報酬が最大になる方向へ直接更新していく手法群。\n価値関数を経由して間接的に行動を決める価値ベース手法(Q学習など)に対し、方策そのものを勾配法で最適化する点が特徴。\nPPOやGRPOなどはこの枠組みに属する代表的なアルゴリズムで、方策の更新幅を制限して学習を安定させる工夫が加えられている。\nLLMのRLHFにおいても、人間の好みを反映した報酬モデルの出力を最大化するように方策(言語モデル自体)を更新する形で応用されている。",
+    "relatedTerms": [
+      "ppo",
+      "grpo",
+      "q-learning",
+      "reward-model",
+      "rlhf"
+    ]
+  },
+  {
+    "slug": "reward-function",
+    "name": "報酬関数",
+    "aliases": [
+      "Reward Function"
+    ],
+    "tagline": "強化学習でエージェントの行動の良し悪しを数値化して与える関数",
+    "category": "技術",
+    "tags": [
+      "強化学習",
+      "報酬"
+    ],
+    "summary": "報酬関数は、強化学習においてエージェントが環境内で取った行動や到達した状態に対して、その望ましさを数値(スカラー値)として返す関数。\nエージェントはこの報酬の期待値を最大化するように方策を学習するため、報酬関数の設計はエージェントの挙動を直接左右する。\nゲームのスコアのように明示的な形で定義できる場合もあれば、LLMのRLHFでは人間の好みや評価から報酬モデルとして学習・推定される場合もある。\n報酬設計を誤ると、意図しない行動で報酬を稼ぐ「報酬ハッキング」に陥ることがある。",
+    "relatedTerms": [
+      "reward-model",
+      "rlhf",
+      "q-learning",
+      "policy-optimization"
+    ]
+  },
+  {
+    "slug": "preference-learning",
+    "name": "選好学習",
+    "aliases": [
+      "好み学習",
+      "人間の好み学習",
+      "Preference Learning"
+    ],
+    "tagline": "人間による選好(どちらが好ましいか)の比較データからモデルの挙動を学習する手法",
+    "category": "技術",
+    "tags": [
+      "アライメント",
+      "強化学習"
+    ],
+    "summary": "選好学習は、2つ以上の出力候補に対して人間が「どちらが好ましいか」を示した比較データをもとに、モデルの出力を人間の好みに沿うよう学習する手法。\n絶対的な正解ラベルではなく相対的な優劣の比較を教師信号とする点が特徴で、好ましさを直接数値化しにくいタスク(文章の自然さや有用性など)に適している。\nRLHFでは人間の選好データから報酬モデルを学習し、それを用いて方策最適化を行う。\nDPO(Direct Preference Optimization)のように、報酬モデルを介さず選好データから直接方策を最適化する手法も登場している。",
+    "relatedTerms": [
+      "rlhf",
+      "reward-model",
+      "alignment",
+      "policy-optimization"
+    ]
+  },
+  {
+    "slug": "generalization",
+    "name": "汎化性能",
+    "aliases": [
+      "般化能力",
+      "汎化能力",
+      "Generalization"
+    ],
+    "tagline": "学習に使っていない未知のデータに対してモデルが適切に予測できる能力",
+    "category": "技術",
+    "tags": [
+      "機械学習",
+      "評価"
+    ],
+    "summary": "汎化性能とは、モデルが学習データだけでなく、学習時に見ていない未知のデータに対しても精度を維持して予測できる能力を指す。\n学習データに過度に適合し未知データで性能が落ちる状態を過学習(オーバーフィッティング)、逆に学習データにすら十分適合できない状態を未学習(アンダーフィッティング)と呼び、汎化性能はその中間で最大化される。\n正則化・データ拡張・早期終了(early stopping)・ドロップアウトなどは汎化性能を高めるための代表的な手法。\nLLMにおいては、学習データにない指示やドメインへどれだけ適応できるかという文脈でも汎化性能が議論される。",
+    "relatedTerms": [
+      "few-shot",
+      "meta-learning",
+      "curriculum-learning"
+    ]
+  },
+  {
+    "slug": "prototypical-networks",
+    "name": "プロトタイプネットワーク",
+    "aliases": [
+      "Prototypical Networks"
+    ],
+    "tagline": "各クラスの代表点(プロトタイプ)との距離をもとに分類するfew-shot学習手法",
+    "category": "アーキテクチャ",
+    "tags": [
+      "few-shot学習",
+      "メタ学習"
+    ],
+    "summary": "プロトタイプネットワーク(Prototypical Networks)は、少数のラベル付き例(サポートセット)しか与えられないfew-shot学習向けに提案されたニューラルネットワークアーキテクチャ。\n埋め込み空間上でクラスごとのサポート例の平均ベクトルを「プロトタイプ」として計算し、新しい入力(クエリ)を各プロトタイプとの距離が最も近いクラスに分類する。\n複雑な分類器を学習する代わりに埋め込み空間の距離計算だけで分類するため、シンプルかつ計算効率が高い。\n少数ショット画像分類のベンチマークで、メタ学習ベースの他手法と並ぶ代表的アプローチとして扱われる。",
+    "relatedTerms": [
+      "meta-learning",
+      "few-shot",
+      "embedding"
+    ]
+  },
+  {
+    "slug": "pseudo-labeling",
+    "name": "擬似ラベリング",
+    "aliases": [
+      "Pseudo-labeling"
+    ],
+    "tagline": "ラベルなしデータにモデル自身の予測を仮のラベルとして付与し学習に利用する半教師あり学習手法",
+    "category": "技術",
+    "tags": [
+      "半教師あり学習",
+      "擬似ラベル"
+    ],
+    "summary": "擬似ラベリングは、少量のラベル付きデータで学習したモデルを使い、大量のラベルなしデータに対して予測し、その予測結果(確信度の高いもの)を仮の正解ラベル(擬似ラベル)として学習データに加える半教師あり学習の手法。\n人手によるアノテーションコストを抑えつつ、大量のラベルなしデータを活用してモデル性能を向上させられる点が利点。\n一方で、モデル自身の誤った予測を擬似ラベルとして再学習で使うと、誤りが増幅されやすい。\nそのため確信度の閾値設定や一貫性正則化を組み合わせ、信頼性の低い擬似ラベルを除外する。\n画像分類・音声認識など、ラベル付けコストが高いタスクで広く利用されている。",
+    "relatedTerms": [
+      "consistency-regularization",
+      "labeled-data"
+    ]
+  },
+  {
+    "slug": "consistency-regularization",
+    "name": "一貫性正則化",
+    "aliases": [
+      "Consistency Regularization"
+    ],
+    "tagline": "入力に摂動を加えても出力予測が一貫するようモデルを制約する半教師あり学習の正則化手法",
+    "category": "技術",
+    "tags": [
+      "半教師あり学習",
+      "正則化"
+    ],
+    "summary": "一貫性正則化は、同じ入力にノイズやデータ拡張などの摂動を加えた複数のバリエーションに対して、モデルの予測が一貫している(似た出力になる)ことを促す正則化手法。\nラベルなしデータに対してもこの一貫性損失を計算できるため、半教師あり学習でラベルなしデータを活用する代表的な手法の1つとなっている。\n擬似ラベリングと組み合わせ、確信度の高い予測のみを教師信号として一貫性を課すことで、誤った擬似ラベルによる学習の破綻を防ぐ工夫もよく用いられる。\nMixMatchやFixMatchなど、近年の半教師あり学習手法の多くがこの考え方を核としている。",
+    "relatedTerms": [
+      "pseudo-labeling"
+    ]
+  },
+  {
+    "slug": "task-difficulty",
+    "name": "タスク難易度",
+    "aliases": [
+      "Task Difficulty"
+    ],
+    "tagline": "モデルにとっての学習・推論の困難さを表す指標で、カリキュラム学習の設計に用いられる概念",
+    "category": "技術",
+    "tags": [
+      "カリキュラム学習",
+      "学習"
+    ],
+    "summary": "タスク難易度は、あるサンプルやタスクをモデルが学習・解答する際の困難さを表す概念で、損失の大きさ・不確実性・人間が定義した難易度ラベルなど様々な形で定量化される。\nカリキュラム学習では、易しいタスクから難しいタスクへ段階的に学習順序を設計することで、モデルの収束を速め、最終的な汎化性能を高めることを狙う。\n強化学習におけるカリキュラム設計や、LLMの指示チューニングでのデータ選別においても、タスク難易度の推定は学習効率を左右する要素として扱われる。",
+    "relatedTerms": [
+      "curriculum-learning",
+      "generalization"
+    ]
+  },
+  {
+    "slug": "experience-replay",
+    "name": "経験リプレイ",
+    "aliases": [
+      "Experience Replay"
+    ],
+    "tagline": "過去の行動履歴をバッファに蓄積し再利用することで強化学習の学習効率と安定性を高める手法",
+    "category": "技術",
+    "tags": [
+      "強化学習",
+      "サンプル効率"
+    ],
+    "summary": "経験リプレイは、強化学習エージェントが環境と相互作用して得た(状態・行動・報酬・次状態)の遷移をリプレイバッファに蓄積し、学習時にそこからランダムにサンプリングして再利用する手法。\n直近の経験だけを逐次利用する場合と比べ、時間的に相関の強いデータが連続して学習に使われることを防ぎ、学習を安定させる効果がある。\nDQN(Deep Q-Network)で導入されて以降、価値ベースの強化学習手法で広く使われる標準的な技術となった。\n優先度付きリプレイのように、学習への寄与が大きい経験を優先的にサンプリングする改良版も提案されている。",
+    "relatedTerms": [
+      "q-learning",
+      "catastrophic-forgetting"
+    ]
+  },
+  {
+    "slug": "simclr",
+    "name": "SimCLR",
+    "aliases": [
+      "Simple Framework for Contrastive Learning of Visual Representations"
+    ],
+    "tagline": "データ拡張と対照学習によって画像の表現をラベルなしで学習する自己教師あり学習フレームワーク",
+    "category": "モデル",
+    "tags": [
+      "対照学習",
+      "自己教師あり学習"
+    ],
+    "summary": "SimCLR(Simple Framework for Contrastive Learning of Visual Representations)は、Google Researchが発表した、ラベルなし画像から表現学習を行う自己教師あり学習フレームワーク。\n同じ画像に異なるデータ拡張(クロップ・色調変換など)を2通り適用した2枚を「正例ペア」、それ以外の画像を「負例」として扱い、正例ペアの埋め込みが近く、負例とは遠くなるよう対照学習(contrastive learning)で表現を学習する。\n大きなバッチサイズと強力なデータ拡張の組み合わせが性能に大きく寄与することを示し、以降の自己教師あり画像表現学習の設計に影響を与えた。\n学習した表現は少量のラベル付きデータでの線形評価やファインチューニングを通じて、下流の分類タスクに転用される。",
+    "relatedTerms": [
+      "contrastive-learning",
+      "clip",
+      "negative-sampling"
+    ]
+  },
+  {
+    "slug": "negative-sampling",
+    "name": "負例サンプリング",
+    "aliases": [
+      "Negative Sampling"
+    ],
+    "tagline": "全ての負例ではなく一部を無作為抽出して学習コストを抑える手法",
+    "category": "技術",
+    "tags": [
+      "対照学習",
+      "埋め込み"
+    ],
+    "summary": "負例サンプリングは、分類や表現学習において全ての負例(正解ではない候補)を計算対象とせず、その一部を無作為または戦略的にサンプリングして損失計算に使う手法。\nWord2Vecの学習では、語彙全体に対するSoftmaxの計算コストを避けるため、少数の負例単語をサンプリングして二値分類問題として近似する目的で導入された。\n対照学習(SimCLRやCLIPなど)でも、正例ペアに対して大量の負例との距離を離すことで表現を学習するが、負例の選び方や数が学習の質に大きく影響する。\n難しい負例(hard negative)を優先的にサンプリングすることで、表現の識別力をさらに高める工夫も広く行われている。",
+    "relatedTerms": [
+      "contrastive-learning",
+      "simclr",
+      "clip"
+    ]
+  },
+  {
+    "slug": "privacy-preserving-learning",
+    "name": "プライバシー保護学習",
+    "aliases": [
+      "Privacy-preserving Learning"
+    ],
+    "tagline": "個人情報や機密データを保護しながらモデルを学習するための技術群",
+    "category": "技術",
+    "tags": [
+      "プライバシー",
+      "分散学習"
+    ],
+    "summary": "プライバシー保護学習は、学習データに含まれる個人情報や機密情報が漏洩・特定されるリスクを抑えながら機械学習モデルを訓練するための技術の総称。\n代表的な手法として、学習データにノイズを加えて個々のサンプルの影響を統計的に隠す差分プライバシー(Differential Privacy)や、データを各拠点に置いたままモデルの更新のみを共有する連合学習(Federated Learning)がある。\n医療データや個人の対話履歴など、機密性の高いデータを扱う場面で、性能とプライバシー保護のトレードオフを管理する目的で用いられる。\nLLMにおいても、学習データの記憶(memorization)や、モデルの出力から学習データが復元されるリスクへの対策として関心が高まっている。",
+    "relatedTerms": [
+      "distributed-learning"
+    ]
+  },
+  {
+    "slug": "distributed-learning",
+    "name": "分散学習",
+    "aliases": [
+      "Distributed Learning",
+      "Distributed Training"
+    ],
+    "tagline": "複数のデバイスやマシンで計算を分担しモデルを学習させる手法",
+    "category": "インフラ",
+    "tags": [
+      "分散処理",
+      "学習"
+    ],
+    "summary": "分散学習は、1台のマシン・GPUでは扱いきれない大規模なモデルやデータセットを、複数のデバイスやノードに計算を分担させて学習する手法。\nミニバッチをデバイスごとに分割して同じモデルを並列に学習するデータ並列、モデル自体を複数デバイスに分割して配置するモデル並列、パイプライン状に層を分割するパイプライン並列などのアプローチがある。\nLLMのような数十億〜数兆パラメータ規模のモデルの事前学習では、これらを組み合わせたハイブリッドな分散学習が標準的に用いられる。\n通信オーバーヘッドの削減や勾配同期の効率化(All-Reduceなど)が、分散学習全体のスループットを左右する重要な要素となる。",
+    "relatedTerms": [
+      "pretraining"
+    ]
+  },
+  {
+    "slug": "model-compression",
+    "name": "モデル圧縮",
+    "aliases": [
+      "Model Compression"
+    ],
+    "tagline": "推論コストやモデルサイズを削減しつつ性能をできるだけ維持する技術の総称",
+    "category": "技術",
+    "tags": [
+      "モデル圧縮",
+      "軽量化"
+    ],
+    "summary": "モデル圧縮は、学習済みモデルの推論速度やメモリ使用量、モデルサイズを削減しつつ、可能な限り性能を維持することを目的とした技術の総称。\n重みを低ビット表現に変換する量子化、重要度の低い重みや層を取り除く枝刈り(プルーニング)、大きな教師モデルの挙動を小さな生徒モデルに学習させる知識蒸留などが代表的な手法として含まれる。\nエッジデバイスやモバイル環境での推論、大規模モデルの運用コスト削減など、計算資源が限られる場面で重要性が高い。\n圧縮率と精度低下のトレードオフをどう管理するかが、モデル圧縮手法を選定・組み合わせる際の主要な論点となる。",
+    "relatedTerms": [
+      "quantization",
+      "knowledge-distillation"
+    ]
+  },
+  {
+    "slug": "imitation-learning",
+    "name": "模倣学習",
+    "aliases": [
+      "Imitation Learning"
+    ],
+    "tagline": "専門家(人間など)の行動デモンストレーションから直接方策を学習する手法",
+    "category": "技術",
+    "tags": [
+      "強化学習",
+      "模倣学習"
+    ],
+    "summary": "模倣学習は、報酬関数を明示的に設計する代わりに、専門家(人間や既存の熟達した方策)が示した行動のデモンストレーションデータから、エージェントの方策を直接学習する手法。\n最も単純な形態である行動クローニング(Behavioral Cloning)は、状態から行動への写像を教師あり学習として学習する。\nただし、デモンストレーションで扱われなかった状況に直面すると、誤りが積み重なりやすいという弱点を持つ。\n逆強化学習(Inverse Reinforcement Learning)のように、デモンストレーションから背後にある報酬関数を推定し、それをもとに方策最適化を行うアプローチも用いられる。\n報酬設計が難しいロボット制御や自動運転などのタスクで、人間の実演データを活用する手段として利用される。",
+    "relatedTerms": [
+      "reward-function",
+      "policy-optimization",
+      "q-learning"
+    ]
+  },
+  {
+    "slug": "cross-entropy",
+    "name": "交差エントロピー",
+    "aliases": [
+      "Cross Entropy"
+    ],
+    "tagline": "2つの確率分布間のずれを測る指標で、分類モデルの損失関数として広く使われる",
+    "category": "技術",
+    "tags": [
+      "損失関数",
+      "分類"
+    ],
+    "summary": "交差エントロピーは、真の分布と予測分布という2つの確率分布間のずれ(距離に近い概念)を測る情報理論由来の指標。\n分類タスクでは、正解クラスを表すone-hot分布と、モデルが出力するクラスごとの予測確率分布との交差エントロピーを損失関数として最小化することで、モデルを正解クラスに高い確率を割り当てるよう学習させる。\n言語モデルの事前学習でも、次トークンの正解分布(one-hot)と予測分布との交差エントロピーが標準的な損失関数として用いられ、この損失の指数がPerplexity(パープレキシティ)として評価に使われる。\n数学的には負の対数尤度の期待値と一致し、最尤推定と交差エントロピー最小化は同じ最適化問題として扱える。",
+    "relatedTerms": [
+      "log-likelihood",
+      "perplexity",
+      "classification"
+    ]
+  },
+  {
+    "slug": "log-likelihood",
+    "name": "対数尤度",
+    "aliases": [
+      "Log-likelihood"
+    ],
+    "tagline": "モデルが観測データをどれだけよく説明できるかを対数スケールで表した指標",
+    "category": "技術",
+    "tags": [
+      "統計",
+      "損失関数"
+    ],
+    "summary": "対数尤度は、あるモデル(確率分布)のパラメータのもとで、観測されたデータが得られる確率(尤度)を対数スケールで表した量。\n尤度は複数サンプルの確率の積として計算されるため値が非常に小さくなりやすいが、対数を取ることで積を和に変換でき、数値計算上も扱いやすくなる。\n最尤推定(Maximum Likelihood Estimation)では、対数尤度を最大化するパラメータを探索することでモデルを学習し、この最大化は負の対数尤度(交差エントロピーと本質的に同じ量)の最小化と等価。\n言語モデルの学習・評価においても、モデルが正解トークン列に与える対数尤度の合計や平均が、学習の損失やPerplexity算出の基礎として使われる。",
+    "relatedTerms": [
+      "cross-entropy",
+      "perplexity"
+    ]
+  },
+  {
+    "slug": "human-evaluation",
+    "name": "人間評価",
+    "aliases": [
+      "Human Evaluation"
+    ],
+    "tagline": "自動評価指標だけでは測れないモデル出力の質を人間の判断で評価する手法",
+    "category": "評価",
+    "tags": [
+      "評価",
+      "アノテーション"
+    ],
+    "summary": "人間評価は、モデルの出力(文章の自然さ・有用性・安全性など)を人間の評価者が直接判断・採点する評価手法。\nBLEUやROUGEのような自動評価指標は計算コストを抑えられ再現性も高い一方、流暢さや文脈適合性、有害性のような質的な側面を十分に捉えられないことが多い。\nそのため人間評価は、補完的または最終的な判断基準として用いられる。\n2つのモデル出力のどちらが良いかを選ばせる選好比較(preference comparison)や、あらかじめ定義した基準に沿って点数を付ける採点式など、実施形式は様々。\nRLHFにおける報酬モデルの学習データや、LLMのベンチマークにおけるWin Rate算出の基盤としても、人間評価が用いられる。",
+    "relatedTerms": [
+      "subjective-evaluation",
+      "preference-learning",
+      "win-rate",
+      "rlhf"
+    ]
+  },
+  {
+    "slug": "annotation",
+    "name": "アノテーション",
+    "aliases": [
+      "Annotation"
+    ],
+    "tagline": "学習・評価用データに正解ラベルや付加情報を人手で付与する作業",
+    "category": "技術",
+    "tags": [
+      "データ",
+      "ラベリング"
+    ],
+    "summary": "アノテーションは、画像・テキスト・音声などの生データに対して、分類ラベル・境界ボックス・固有表現タグ・選好比較の判定といった正解情報や付加情報を人手(またはツール支援)で付与する作業。\n教師あり学習の学習データやモデル評価用データセットの多くは、アノテーション作業を経て作成される。\n作業量やコストが大きな課題となりやすく、複数の作業者による評価の一致度(inter-annotator agreement)の管理、クラウドソーシングの活用、擬似ラベリングによる作業量削減などの対策を実施する。\nLLMのRLHFにおいても、出力の優劣を判定する選好アノテーションが報酬モデル学習の基盤データとなる。",
+    "relatedTerms": [
+      "labeled-data",
+      "human-evaluation",
+      "preference-learning"
+    ]
+  },
+  {
+    "slug": "subjective-evaluation",
+    "name": "主観評価",
+    "aliases": [
+      "Subjective Evaluation"
+    ],
+    "tagline": "評価者個人の感覚や印象に基づいてモデル出力の質を判断する評価手法",
+    "category": "評価",
+    "tags": [
+      "評価",
+      "人間評価"
+    ],
+    "summary": "主観評価は、正解が一意に定まらない性質(自然さ・読みやすさ・満足度など)について、評価者個人の感覚や印象に基づいてモデル出力の質を判断する評価手法。\n人間評価の一種だが、事実の正誤のような客観的な基準ではなく、評価者ごとに感じ方が異なる主観的な尺度を扱う点が特徴。\n音声合成の自然さを評価するMOS(Mean Opinion Score)のように、複数の評価者のスコアを平均して尺度化する手法が広く使われる。\n評価者間のばらつきを抑えるため、評価基準の明文化や複数評価者によるスコアの平均・一致度確認が重要になる。",
+    "relatedTerms": [
+      "human-evaluation"
+    ]
+  },
+  {
+    "slug": "big-bench",
+    "name": "BIG-Bench",
+    "aliases": [
+      "Beyond the Imitation Game Benchmark"
+    ],
+    "tagline": "200を超える多様なタスクでLLMの能力と限界を測る大規模協働ベンチマーク",
+    "category": "評価",
+    "tags": [
+      "ベンチマーク",
+      "LLM"
+    ],
+    "summary": "BIG-Bench(Beyond the Imitation Game Benchmark)は、Googleを中心とする研究者コミュニティが協働で構築した、200を超える多様なタスクから成る大規模言語モデル評価用ベンチマーク。\n論理推論・常識推論・算数・言語理解・倫理的判断など幅広い分野のタスクを含み、モデルの能力を単一の指標ではなく多面的に測ることを目的としている。\n特に、モデルサイズの拡大に伴い性能が急激に向上する、あるいは逆に低下する創発的能力や逆スケーリング現象の観察に用いられたことで知られる。\n後継として、より難易度の高いタスクを厳選したBIG-Bench Hard(BBH)も広く使われている。",
+    "relatedTerms": [
+      "mmlu",
+      "truthfulqa"
+    ]
+  },
+  {
+    "slug": "ab-testing",
+    "name": "A/Bテスト",
+    "aliases": [
+      "A/B Testing"
+    ],
+    "tagline": "2つ以上のバリエーションをユーザーに提示し実際の反応の差を統計的に比較する評価手法",
+    "category": "評価",
+    "tags": [
+      "評価",
+      "実験"
+    ],
+    "summary": "A/Bテストは、比較したい2つ以上のバリエーション(モデル・機能・文言など)をユーザーへランダムに振り分けて提示し、クリック率・満足度・タスク成功率といった実際の反応の差を統計的に比較する評価手法。\nオフラインのベンチマークスコアだけでは捉えにくい、実際の利用環境でのユーザー体験や事業指標への影響を検証できる点が特徴。\nLLMを組み込んだ製品においても、プロンプトやモデルのバージョン変更が実際のユーザー満足度や継続利用率にどう影響するかを検証するために用いられる。\nサンプルサイズや統計的有意性の設計が不十分だと誤った結論を導きやすく、評価期間や指標の設計が重要になる。",
+    "relatedTerms": [
+      "human-evaluation",
+      "win-rate"
+    ]
+  },
+  {
+    "slug": "win-rate",
+    "name": "Win Rate",
+    "aliases": [
+      "勝率"
+    ],
+    "tagline": "2つのモデル出力を比較した際にどちらがより高い頻度で選好されたかを表す評価指標",
+    "category": "評価",
+    "tags": [
+      "評価指標",
+      "選好比較"
+    ],
+    "summary": "Win Rate(勝率)は、2つのモデル(またはモデルのバージョン)の出力をペアで比較し、一方がもう一方より好ましいと判定された割合を表す評価指標。\n判定は人間評価者による選好比較で行われる場合と、強力なLLMを評価者として用いるLLM-as-a-Judgeで行われる場合がある。\nベースラインモデルに対するWin Rateとして表現されることが多く、RLHFやDPOなどアライメント手法の効果を測る指標として、AlpacaEvalやMT-Benchなど多くのLLM評価ベンチマークで採用されている。\n単独のスコアではなく相対的な比較指標であるため、比較対象(ベースライン)や判定者の選び方によって結果が変わりうる点に注意が必要。",
+    "relatedTerms": [
+      "human-evaluation",
+      "preference-learning",
+      "rlhf"
+    ]
+  },
+  {
+    "slug": "evaluation-harmageddon",
+    "name": "Evaluation Harmageddon",
+    "aliases": [],
+    "tagline": "ベンチマークの汚染・飽和・再現性低下によりLLM評価の信頼性が揺らいでいる状況を指す語",
+    "category": "評価",
+    "tags": [
+      "評価",
+      "ベンチマーク"
+    ],
+    "summary": "Evaluation Harmageddonは、LLMの急速な進化に評価手法が追いついておらず、既存ベンチマークの汚染(学習データへの混入)・スコアの飽和・再現性の低さ・人間評価のコストと主観性といった問題が重なり、評価結果への信頼性そのものが揺らいでいる状況を指して使われる語。\nMMLUやBIG-Benchのような静的ベンチマークは、公開から時間が経つほど学習データへの意図しない混入(データ汚染)や、ベンチマークに最適化されすぎる過学習のリスクが指摘されている。\nこうした課題への対応として、非公開・動的に更新されるベンチマーク、LLM-as-a-Judge、Win Rateによる相対比較など、複数の評価アプローチを組み合わせる動きが広がっている。\n特定の団体が定めた公式な学術用語ではなく、評価手法の限界を議論する文脈で使われる表現である点に留意が必要。",
+    "relatedTerms": [
+      "data-contamination",
+      "mmlu",
+      "big-bench"
+    ]
+  },
+  {
+    "slug": "rlhf-evaluation",
+    "name": "RLHF Evaluation",
+    "aliases": [
+      "RLHF評価"
+    ],
+    "tagline": "RLHFで調整したモデルが実際に人間の好みや意図に沿っているかを検証する評価プロセス",
+    "category": "評価",
+    "tags": [
+      "評価",
+      "RLHF"
+    ],
+    "summary": "RLHF Evaluationは、人間のフィードバックによる強化学習(RLHF)で調整したモデルが、実際に人間の意図や好みに沿った出力を行えているかを検証する評価プロセスの総称。\n報酬モデル単体の精度評価(人間の選好データに対する予測一致率)、調整前後のモデル出力を比較するWin Rate、有用性・安全性・誠実さなど複数観点での人間評価を組み合わせて行われることが多い。\n報酬モデルのスコアを最大化しすぎることで、実際の人間の意図からずれた出力を高く評価してしまう報酬ハッキングが起きていないかの確認も、RLHF評価の重要な観点となる。\nTruthfulQAのような安全性・真実性に関するベンチマークも、RLHF調整の副作用を検証する評価の一部として併用されることがある。",
+    "relatedTerms": [
+      "rlhf",
+      "reward-model",
+      "win-rate",
+      "human-evaluation",
+      "truthfulqa"
     ]
   }
 ]
