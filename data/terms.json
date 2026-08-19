@@ -3015,7 +3015,8 @@
     "name": "知識蒸留",
     "aliases": [
       "Knowledge Distillation",
-      "蒸留"
+      "蒸留",
+      "教師-生徒学習"
     ],
     "tagline": "大規模な教師モデルの出力を模倣させることで、小規模な生徒モデルへ知識を移す学習手法",
     "category": "技術",
@@ -9465,7 +9466,8 @@
     "name": "Few-shot",
     "aliases": [
       "少数事例学習",
-      "Few-shot Learning"
+      "Few-shot Learning",
+      "フューショット適応"
     ],
     "tagline": "プロンプト内にタスクの入力・出力例をいくつか示すことで、追加学習なしにLLMへ望む出力形式を伝える手法",
     "category": "技術",
@@ -12246,7 +12248,8 @@
     "slug": "catastrophic-forgetting",
     "name": "破滅的忘却",
     "aliases": [
-      "Catastrophic Forgetting"
+      "Catastrophic Forgetting",
+      "カタストロフィック忘却"
     ],
     "tagline": "新しいタスクを追加学習した際に、以前学習していたタスクの性能が大きく低下してしまう現象",
     "category": "技術",
@@ -19458,7 +19461,8 @@
     "name": "対照学習",
     "aliases": [
       "Contrastive Learning",
-      "コントラスティブ学習"
+      "コントラスティブ学習",
+      "対比学習"
     ],
     "tagline": "似たデータの表現を近づけ、異なるデータの表現を遠ざけるように埋め込みを学習する方式",
     "category": "技術",
@@ -22401,7 +22405,8 @@
     "name": "MLM",
     "aliases": [
       "Masked Language Model",
-      "マスク化言語モデル"
+      "マスク化言語モデル",
+      "マスク言語モデリング"
     ],
     "tagline": "入力トークンの一部をランダムにマスクし、その単語を周囲の文脈から予測させることで双方向の言語表現を学習する事前学習手法",
     "category": "技術",
@@ -25061,7 +25066,8 @@
     "slug": "curriculum-learning",
     "name": "カリキュラム学習",
     "aliases": [
-      "Curriculum Learning"
+      "Curriculum Learning",
+      "学習順序"
     ],
     "tagline": "簡単なサンプルから難しいサンプルへと順序立てて学習させることで、学習の効率や汎化性能を高める手法",
     "category": "技術",
@@ -25106,7 +25112,8 @@
     "name": "マルチタスク学習",
     "aliases": [
       "Multi-Task Learning",
-      "MTL"
+      "MTL",
+      "タスク間共有表現"
     ],
     "tagline": "複数の関連タスクを1つのモデルで同時に学習し、タスク間で知識を共有することで汎化性能を高める手法",
     "category": "技術",
@@ -25151,7 +25158,8 @@
     "name": "メタ学習",
     "aliases": [
       "Meta-Learning",
-      "Learning to Learn"
+      "Learning to Learn",
+      "学習の学習"
     ],
     "tagline": "複数のタスクの学習経験から、新しいタスクに素早く適応するための学習の仕方自体を学習する枠組み",
     "category": "技術",
