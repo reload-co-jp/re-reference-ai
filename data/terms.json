@@ -2285,7 +2285,9 @@
       "large-language-model",
       "few-shot",
       "context-engineering",
-      "in-context-learning"
+      "in-context-learning",
+      "prompt-template",
+      "prompt-library"
     ],
     "faq": [
       {
@@ -2360,7 +2362,8 @@
       "prompt-engineering",
       "large-language-model",
       "prompt-injection",
-      "prompt-caching"
+      "prompt-caching",
+      "prompt-template"
     ],
     "faq": [
       {
@@ -3312,7 +3315,8 @@
       "mistral",
       "deepseek",
       "llama",
-      "mixture-of-depths"
+      "mixture-of-depths",
+      "sparsification"
     ],
     "faq": [
       {
@@ -9298,7 +9302,8 @@
     ],
     "relatedTerms": [
       "llmops",
-      "wandb"
+      "wandb",
+      "mlops"
     ],
     "faq": [
       {
@@ -9365,7 +9370,8 @@
       "mlflow",
       "hallucination",
       "retrieval-augmented-generation",
-      "llm-gateway"
+      "llm-gateway",
+      "mlops"
     ],
     "faq": [
       {
@@ -10636,7 +10642,8 @@
     "relatedTerms": [
       "recurrent-neural-network",
       "long-short-term-memory",
-      "time-series-forecasting"
+      "time-series-forecasting",
+      "arima"
     ],
     "codeExamples": [
       {
@@ -11325,7 +11332,8 @@
       "vision-language-model",
       "physical-ai",
       "video-understanding",
-      "multimodal-dialogue"
+      "multimodal-dialogue",
+      "multimodal-fusion"
     ],
     "faq": [
       {
@@ -25658,7 +25666,8 @@
     ],
     "summary": "分散学習は、1台のマシン・GPUでは扱いきれない大規模なモデルやデータセットを、複数のデバイスやノードに計算を分担させて学習する手法。\nミニバッチをデバイスごとに分割して同じモデルを並列に学習するデータ並列、モデル自体を複数デバイスに分割して配置するモデル並列、パイプライン状に層を分割するパイプライン並列などのアプローチがある。\nLLMのような数十億〜数兆パラメータ規模のモデルの事前学習では、これらを組み合わせたハイブリッドな分散学習が標準的に用いられる。\n通信オーバーヘッドの削減や勾配同期の効率化(All-Reduceなど)が、分散学習全体のスループットを左右する重要な要素となる。",
     "relatedTerms": [
-      "pretraining"
+      "pretraining",
+      "data-parallelism"
     ]
   },
   {
@@ -25676,7 +25685,9 @@
     "summary": "モデル圧縮は、学習済みモデルの推論速度やメモリ使用量、モデルサイズを削減しつつ、可能な限り性能を維持することを目的とした技術の総称。\n重みを低ビット表現に変換する量子化、重要度の低い重みや層を取り除く枝刈り(プルーニング)、大きな教師モデルの挙動を小さな生徒モデルに学習させる知識蒸留などが代表的な手法として含まれる。\nエッジデバイスやモバイル環境での推論、大規模モデルの運用コスト削減など、計算資源が限られる場面で重要性が高い。\n圧縮率と精度低下のトレードオフをどう管理するかが、モデル圧縮手法を選定・組み合わせる際の主要な論点となる。",
     "relatedTerms": [
       "quantization",
-      "knowledge-distillation"
+      "knowledge-distillation",
+      "pruning",
+      "sparsification"
     ]
   },
   {
@@ -26611,7 +26622,8 @@
       "ai-agent",
       "generative-ai",
       "hallucination",
-      "multimodal-dialogue"
+      "multimodal-dialogue",
+      "virtual-assistant"
     ]
   },
   {
@@ -26835,7 +26847,8 @@
       "encoder",
       "decoder",
       "bleu",
-      "nlp"
+      "nlp",
+      "neural-machine-translation"
     ],
     "comparisons": [
       {
@@ -26863,7 +26876,9 @@
       "retrieval-augmented-generation",
       "semantic-search",
       "large-language-model",
-      "haystack"
+      "haystack",
+      "knowledge-based-qa",
+      "open-domain-qa"
     ],
     "comparisons": [
       {
@@ -26889,7 +26904,9 @@
     "relatedTerms": [
       "large-language-model",
       "rouge",
-      "notebooklm"
+      "notebooklm",
+      "extractive-summarization",
+      "abstractive-summarization"
     ],
     "comparisons": [
       {
@@ -26916,7 +26933,9 @@
     "relatedTerms": [
       "nlp",
       "classification",
-      "large-language-model"
+      "large-language-model",
+      "polarity-detection",
+      "sentiment-classification"
     ],
     "comparisons": [
       {
@@ -26942,7 +26961,9 @@
     "relatedTerms": [
       "multimodal",
       "vision-language-model",
-      "vision-transformer"
+      "vision-transformer",
+      "action-recognition",
+      "spatiotemporal-features"
     ],
     "comparisons": [
       {
@@ -26968,7 +26989,8 @@
       "multimodal",
       "chatbot",
       "vision-language-model",
-      "text-to-speech"
+      "text-to-speech",
+      "visual-dialog"
     ],
     "comparisons": [
       {
@@ -26994,7 +27016,9 @@
     "relatedTerms": [
       "machine-learning",
       "classification",
-      "time-series-forecasting"
+      "time-series-forecasting",
+      "outlier-detection",
+      "novelty-detection"
     ]
   },
   {
@@ -27015,7 +27039,9 @@
     "relatedTerms": [
       "machine-learning",
       "embedding",
-      "classification"
+      "classification",
+      "collaborative-filtering",
+      "content-based-filtering"
     ]
   },
   {
@@ -27034,12 +27060,928 @@
     "relatedTerms": [
       "time-series-data",
       "recurrent-neural-network",
-      "anomaly-detection"
+      "anomaly-detection",
+      "arima"
     ],
     "comparisons": [
       {
         "slug": "time-series-data",
         "note": "時系列データは時間順に並んだ観測値そのものを指す言葉であるのに対し、時系列予測はそのデータをもとに将来の値を予測するタスクを指す"
+      },
+      {
+        "slug": "arima",
+        "note": "時系列予測はタスクそのものを指す言葉であるのに対し、ARIMAはそのタスクを解くための統計的手法の1つ"
+      }
+    ]
+  },
+  {
+    "slug": "arima",
+    "name": "ARIMA",
+    "aliases": [
+      "AutoRegressive Integrated Moving Average",
+      "自己回帰和分移動平均モデル"
+    ],
+    "tagline": "自己回帰・差分・移動平均を組み合わせて時系列データを予測する統計的モデル",
+    "category": "技術",
+    "tags": [
+      "系列モデリング",
+      "時系列データ"
+    ],
+    "plainSummary": "過去の値の傾向やばらつきから、将来の値を統計的に予測する時系列モデル。",
+    "summary": "ARIMA(AutoRegressive Integrated Moving Average)は、自己回帰(AR)・差分(I: Integrated)・移動平均(MA)という3つの要素を組み合わせた統計的な時系列予測モデル。\n自己回帰は過去の値そのものから現在の値を回帰的に予測する部分、移動平均は過去の予測誤差から現在の値を補正する部分、差分は非定常な時系列を差分によって定常化する処理をそれぞれ担う。\nモデルは自己回帰の次数・差分の階数・移動平均の次数という3つの整数パラメータによって定義される。\n季節性を持つ時系列にはSARIMA(Seasonal ARIMA)、外部変数を加えたものはARIMAXと呼ばれる拡張版も存在する。\n深層学習ベースの手法が普及する以前から、需要予測・経済指標の予測などで広く使われてきた統計モデル。",
+    "background": "経済指標や売上のような時系列データの多くは、値そのものにトレンドがあり平均や分散が時間とともに変化する非定常な性質を持ち、単純な回帰では扱いにくかった。\nARIMAは、差分によって時系列を定常化したうえで自己回帰・移動平均を適用することで、こうした非定常な時系列にも統一的な枠組みで対応できるよう整備された。",
+    "history": "1970年: George BoxとGwilym Jenkinsが著書「Time Series Analysis: Forecasting and Control」でARIMAモデルとそのパラメータ同定・推定手順(Box-Jenkins法)を体系化。",
+    "architecture": "ARIMAは、指定した階数だけ差分を取った系列に対し、自己回帰項(過去の値の線形結合)と移動平均項(過去の予測誤差の線形結合)を適用するモデル。\n自己回帰の次数・差分の階数・移動平均の次数という3つのパラメータは、自己相関関数(ACF)・偏自己相関関数(PACF)のプロットや、AIC・BICといった情報量規準を用いて選定される。",
+    "workflow": "時系列データの定常性を確認し、非定常であれば差分を取って定常化する → ACF・PACFのプロットから自己回帰・移動平均の次数の候補を絞り込む → 候補パラメータで学習し、AIC・BIC等で比較して決定する → 残差の白色雑音性を診断する → 学習済みモデルで将来値を予測する。",
+    "codeExamples": [
+      {
+        "title": "statsmodelsでARIMAモデルを学習・予測する",
+        "language": "python",
+        "code": "from statsmodels.tsa.arima.model import ARIMA\n\nmodel = ARIMA(series, order=(2, 1, 2))  # p=2, d=1, q=2\nfitted = model.fit()\nforecast = fitted.forecast(steps=7)"
+      }
+    ],
+    "advantages": [
+      "少ないデータ量・計算資源でも学習・予測が可能",
+      "パラメータやモデルの前提が明確で、予測結果の解釈がしやすい",
+      "定常性の低い時系列でも、差分によって扱いやすい形に変換できる"
+    ],
+    "disadvantages": [
+      "季節性や外部要因を扱うにはSARIMA・ARIMAX等への拡張が必要で、素のARIMAでは表現力に限界がある",
+      "非線形な依存関係やRNN・Transformerが捉えるような複雑なパターンは学習しにくい",
+      "各パラメータの選定に、系列ごとの分析・試行錯誤が必要になる場合がある"
+    ],
+    "comparisons": [
+      {
+        "slug": "time-series-forecasting",
+        "note": "時系列予測はタスクそのものを指す言葉であるのに対し、ARIMAはそのタスクを解くための統計的手法の1つ"
+      },
+      {
+        "slug": "recurrent-neural-network",
+        "note": "RNNは非線形な依存関係を学習できる深層学習モデルであるのに対し、ARIMAは線形な関係を前提とした統計モデル"
+      },
+      {
+        "slug": "hidden-markov-model",
+        "note": "どちらも深層学習以前から使われてきた統計的な系列モデルだが、ARIMAは連続値の予測、隠れマルコフモデルは離散的な隠れ状態の推定に主に使われる"
+      }
+    ],
+    "relatedTerms": [
+      "time-series-forecasting",
+      "time-series-data",
+      "recurrent-neural-network"
+    ],
+    "faq": [
+      {
+        "question": "ARIMAは今も使われている？",
+        "answer": "深層学習モデルに置き換えられる場面もあるが、データ量が少ない場合や、予測結果の解釈性が重視される需要予測・経済分析等では今も広く使われている。"
+      },
+      {
+        "question": "ARIMAとSARIMAの違いは？",
+        "answer": "SARIMA(Seasonal ARIMA)は、ARIMAに季節周期を持つ変動を扱う季節成分を追加した拡張版。週次・月次・年次といった周期性を持つ時系列に対応できる。"
+      }
+    ],
+    "references": [
+      {
+        "type": "Documentation",
+        "label": "statsmodels: ARIMA Model",
+        "url": "https://www.statsmodels.org/stable/generated/statsmodels.tsa.arima.model.ARIMA.html"
+      }
+    ]
+  },
+  {
+    "slug": "virtual-assistant",
+    "name": "バーチャルアシスタント",
+    "aliases": [
+      "Virtual Assistant",
+      "AIアシスタント"
+    ],
+    "tagline": "音声やテキストでの対話を通じて日常のタスク実行や情報検索を代行するAIシステム",
+    "category": "技術",
+    "tags": [
+      "対話AI",
+      "自動化"
+    ],
+    "summary": "バーチャルアシスタントとは、音声やテキストによる対話を通じて、スケジュール管理・情報検索・家電操作といった日常のタスクをユーザーに代わって遂行するAIシステムを指す。\nSiriやGoogle Assistant、Alexaのように、あらかじめ定義されたコマンドや意図(インテント)を認識して対応する処理に加え、近年はLLMを組み込むことで、より柔軟な自然文での指示にも対応できるようになっている。\n単発の質問応答にとどまらず、リマインダー設定やスマート家電の操作など、外部サービスと連携して実際の操作を代行する点が特徴。",
+    "relatedTerms": [
+      "chatbot",
+      "ai-agent"
+    ],
+    "comparisons": [
+      {
+        "slug": "chatbot",
+        "note": "チャットボットが主に対話そのものを目的とするのに対し、バーチャルアシスタントは対話を通じて実際のタスク実行や操作の代行を担う"
+      },
+      {
+        "slug": "ai-agent",
+        "note": "バーチャルアシスタントは主にユーザー向けの音声・対話インターフェースを指す語であるのに対し、AIエージェントはLLMを中核に自律的な計画・行動ループでタスクを遂行する、より汎用的な仕組みを指す"
+      }
+    ]
+  },
+  {
+    "slug": "knowledge-based-qa",
+    "name": "知識ベースQA",
+    "aliases": [
+      "Knowledge-based Question Answering",
+      "KB-QA"
+    ],
+    "tagline": "ナレッジグラフ等の構造化知識ベースを情報源として質問に回答するQA手法",
+    "category": "技術",
+    "tags": [
+      "NLP",
+      "知識"
+    ],
+    "summary": "知識ベースQAとは、ナレッジグラフやデータベースのような構造化された知識ベースを情報源として、自然言語の質問に対する回答を導く質問応答システムを指す。\n質問文をエンティティや関係を表すクエリ(SPARQL等)へ変換し、知識ベースを検索・推論して回答を得る手法が代表的。\n文書集合から回答箇所を探すオープンドメインQAと異なり、あらかじめ整理された事実関係を持つ知識ベースを直接検索するため、事実に基づいた正確な回答を得やすい一方、知識ベースに存在しない情報には答えられない。",
+    "relatedTerms": [
+      "question-answering",
+      "open-domain-qa"
+    ],
+    "comparisons": [
+      {
+        "slug": "question-answering",
+        "note": "知識ベースQAは、質問応答システムの中でも構造化された知識ベースを情報源とする手法"
+      },
+      {
+        "slug": "open-domain-qa",
+        "note": "知識ベースQAが構造化知識ベースを情報源とするのに対し、オープンドメインQAは幅広い文書集合を情報源とする"
+      }
+    ]
+  },
+  {
+    "slug": "open-domain-qa",
+    "name": "オープンドメインQA",
+    "aliases": [
+      "Open-domain Question Answering"
+    ],
+    "tagline": "特定分野に限らず幅広いトピックの質問に、大規模な文書集合から回答するQA手法",
+    "category": "技術",
+    "tags": [
+      "NLP",
+      "情報検索"
+    ],
+    "summary": "オープンドメインQAとは、特定の分野やドメインに限定せず、幅広いトピックについての質問に対し、大規模な文書集合(Webページやオンライン百科事典等)から回答を導く質問応答手法を指す。\n質問に関連する文書を検索するリトリーバーと、検索された文書から回答を抽出・生成するリーダー(または生成モデル)を組み合わせる2段階構成が代表的なアーキテクチャ。\nRAGはこの枠組みをLLMによる生成と組み合わせて発展させたものであり、社内文書検索やWeb検索を伴うチャットサービス等、幅広い場面でオープンドメインQAの考え方が使われている。",
+    "relatedTerms": [
+      "question-answering",
+      "retrieval-augmented-generation",
+      "knowledge-based-qa"
+    ],
+    "comparisons": [
+      {
+        "slug": "knowledge-based-qa",
+        "note": "オープンドメインQAが幅広い文書集合を情報源とするのに対し、知識ベースQAは構造化された知識ベースを情報源とする"
+      },
+      {
+        "slug": "retrieval-augmented-generation",
+        "note": "RAGは、オープンドメインQAの検索と生成を組み合わせる考え方を、LLMによる回答生成へ発展させたアーキテクチャ"
+      }
+    ]
+  },
+  {
+    "slug": "neural-machine-translation",
+    "name": "ニューラル機械翻訳",
+    "aliases": [
+      "Neural Machine Translation",
+      "NMT"
+    ],
+    "tagline": "ニューラルネットワークにより翻訳確率を学習し、文全体の文脈を踏まえた訳文を生成する機械翻訳手法",
+    "category": "技術",
+    "tags": [
+      "NLP",
+      "翻訳"
+    ],
+    "summary": "ニューラル機械翻訳(NMT)とは、ニューラルネットワークを用いて原言語の文から目的言語の文への変換を学習する機械翻訳の手法を指す。\n単語やフレーズ単位で翻訳確率を統計的に推定していた統計的機械翻訳(SMT)と異なり、文全体を1つの連続的な表現(ベクトル)へエンコードした上で、その表現から文脈を踏まえた訳文をデコードする点が特徴。\nSeq2SeqにAttention機構を組み合わせたモデルや、Transformerに基づくエンコーダ・デコーダ構成のモデルが代表的であり、現在の機械翻訳サービスの主流な実現方式になっている。",
+    "relatedTerms": [
+      "machine-translation",
+      "seq2seq",
+      "transformer"
+    ],
+    "comparisons": [
+      {
+        "slug": "machine-translation",
+        "note": "機械翻訳というタスク全体の中で、ニューラル機械翻訳はニューラルネットワークを用いる現在主流の実現手法を指す"
+      }
+    ]
+  },
+  {
+    "slug": "extractive-summarization",
+    "name": "抽出型要約",
+    "aliases": [
+      "Extractive Summarization"
+    ],
+    "tagline": "原文中の重要な文をそのまま抜き出して並べる要約手法",
+    "category": "技術",
+    "tags": [
+      "NLP",
+      "要約"
+    ],
+    "summary": "抽出型要約とは、原文の中から重要と判断した文や語句をそのまま抜き出し、それらを並べることで要約を作る手法を指す。\n各文の重要度をTF-IDFやグラフベースのアルゴリズム(TextRank等)、あるいは学習済みモデルのスコアで評価し、上位の文を選んで要約を構成する。\n原文の表現をそのまま使うため文法的に不自然な要約になりにくい一方、選んだ文をつなぎ合わせるだけでは文章として不自然になったり、原文に無い簡潔な言い換えができなかったりする制約がある。",
+    "relatedTerms": [
+      "text-summarization",
+      "abstractive-summarization"
+    ],
+    "comparisons": [
+      {
+        "slug": "text-summarization",
+        "note": "抽出型要約は、テキスト要約というタスクを実現する2つの代表的な手法の1つ"
+      },
+      {
+        "slug": "abstractive-summarization",
+        "note": "抽出型要約が原文の文をそのまま抜き出すのに対し、生成型要約はモデルが新しい文章として要約を生成する"
+      }
+    ]
+  },
+  {
+    "slug": "abstractive-summarization",
+    "name": "生成型要約",
+    "aliases": [
+      "Abstractive Summarization"
+    ],
+    "tagline": "原文の内容を理解した上でモデルが新しい文章として要約を生成する手法",
+    "category": "技術",
+    "tags": [
+      "NLP",
+      "要約"
+    ],
+    "summary": "生成型要約とは、原文の内容を理解した上で、原文に無い表現も含め、モデルが新しい文章として要約を生成する手法を指す。\nSeq2SeqやTransformerに基づくエンコーダ・デコーダモデル、近年はLLMが原文を読み込んだ上で要約文を生成する方式が主流であり、抽出型要約と異なり文をそのまま抜き出すのではなく、内容を要約し直した自然な文章を出力できる。\n一方で、原文に存在しない情報をもっともらしく生成してしまうハルシネーションのリスクを抱える。",
+    "relatedTerms": [
+      "text-summarization",
+      "extractive-summarization",
+      "large-language-model"
+    ],
+    "comparisons": [
+      {
+        "slug": "text-summarization",
+        "note": "生成型要約は、テキスト要約というタスクを実現する2つの代表的な手法の1つ"
+      },
+      {
+        "slug": "extractive-summarization",
+        "note": "生成型要約がモデルによる新しい文章の生成であるのに対し、抽出型要約は原文の文をそのまま抜き出して構成する"
+      }
+    ]
+  },
+  {
+    "slug": "polarity-detection",
+    "name": "極性検出",
+    "aliases": [
+      "Polarity Detection"
+    ],
+    "tagline": "文章に含まれる感情や評価の極性(ポジティブ・ネガティブ・ニュートラル)を判定するタスク",
+    "category": "技術",
+    "tags": [
+      "NLP",
+      "分類"
+    ],
+    "summary": "極性検出とは、文章に含まれる感情や評価の方向性、すなわちポジティブ・ネガティブ・ニュートラルといった極性を判定するタスクを指す。\n感情分析の中核をなす処理であり、単語ごとの極性を辞書やルールで判定する手法から、文全体を入力として極性ラベルを予測する分類モデルを用いる手法へと発展してきた。\n商品レビューの評価判定やSNS投稿の評判モニタリングなど、感情分析の応用の多くは、この極性検出の結果を土台にしている。",
+    "relatedTerms": [
+      "sentiment-analysis",
+      "sentiment-classification"
+    ],
+    "comparisons": [
+      {
+        "slug": "sentiment-analysis",
+        "note": "極性検出は、感情分析というタスクの中核をなすポジティブ・ネガティブ等の極性判定処理そのものを指す語"
+      },
+      {
+        "slug": "sentiment-classification",
+        "note": "極性検出と感情分類はいずれも文章を感情に関するラベルへ分類する点で近いが、極性検出はポジ・ネガ等の方向性判定を、感情分類は喜び・怒りなどより細かい感情カテゴリの判定を指すことが多い"
+      }
+    ]
+  },
+  {
+    "slug": "sentiment-classification",
+    "name": "感情分類",
+    "aliases": [
+      "Sentiment Classification"
+    ],
+    "tagline": "テキストを喜び・怒り・悲しみなどの感情カテゴリやポジ・ネガのラベルに分類するタスク",
+    "category": "技術",
+    "tags": [
+      "NLP",
+      "分類"
+    ],
+    "summary": "感情分類とは、テキストを喜び・怒り・悲しみ・驚きといった感情カテゴリや、ポジティブ・ネガティブといったラベルへ分類するタスクを指す。\n感情分析の実現手法の1つであり、テキスト分類モデルの入力に文章を、出力に感情ラベルを対応づけて学習する形で構築される。\n単純な2値・3値の極性判定にとどまらず、複数の感情カテゴリを同時に扱う多クラス分類・多ラベル分類として設計されることもある。",
+    "relatedTerms": [
+      "sentiment-analysis",
+      "polarity-detection"
+    ],
+    "comparisons": [
+      {
+        "slug": "sentiment-analysis",
+        "note": "感情分類は、感情分析というタスクを実現するためのテキスト分類的な手法"
+      },
+      {
+        "slug": "polarity-detection",
+        "note": "感情分類と極性検出はいずれも文章を感情に関するラベルへ分類する点で近いが、感情分類は喜び・怒りなどより細かい感情カテゴリの判定を、極性検出はポジ・ネガ等の方向性判定を指すことが多い"
+      }
+    ]
+  },
+  {
+    "slug": "action-recognition",
+    "name": "アクション認識",
+    "aliases": [
+      "Action Recognition",
+      "行動認識"
+    ],
+    "tagline": "動画中の人物の動作や行動をフレーム系列から認識するタスク",
+    "category": "技術",
+    "tags": [
+      "画像認識",
+      "系列モデリング"
+    ],
+    "summary": "アクション認識とは、動画に映る人物の動作や行動(歩く・座る・物を持ち上げる等)を、連続するフレームの系列から認識するタスクを指す。\n単一のフレームだけでは動作を判別できないことが多いため、フレーム間の時間的な変化を捉える必要があり、3D CNNやフレームごとの特徴をRNN・Transformerで系列的に処理するモデルなどが用いられる。\n監視カメラでの異常行動検知やスポーツ映像の分析、ジェスチャー操作の認識など、動画理解の代表的なサブタスクの1つとして応用されている。",
+    "relatedTerms": [
+      "video-understanding",
+      "spatiotemporal-features"
+    ],
+    "comparisons": [
+      {
+        "slug": "video-understanding",
+        "note": "アクション認識は、動画理解というタスクの中でも人物の動作・行動を認識するサブタスク"
+      }
+    ]
+  },
+  {
+    "slug": "spatiotemporal-features",
+    "name": "時空間特徴",
+    "aliases": [
+      "Spatiotemporal Features"
+    ],
+    "tagline": "動画データから空間的なパターンと時間的な変化を同時に捉えた特徴表現",
+    "category": "技術",
+    "tags": [
+      "画像認識",
+      "系列モデリング"
+    ],
+    "summary": "時空間特徴とは、動画データを対象に、各フレーム内の空間的なパターン(物体の形状・配置等)と、フレーム間の時間的な変化(動きの推移)を同時に捉えた特徴表現を指す。\n3D畳み込み(3D CNN)によりフレームの空間軸と時間軸をまとめて畳み込む手法や、フレームごとにCNNで空間特徴を抽出した後にRNN・Transformerで時間方向の依存関係を学習する2段階の手法などで獲得される。\nアクション認識や動画理解のタスクにおいて、動きの情報を明示的に捉えるための基盤的な特徴表現として利用される。",
+    "relatedTerms": [
+      "action-recognition",
+      "video-understanding"
+    ],
+    "comparisons": [
+      {
+        "slug": "action-recognition",
+        "note": "時空間特徴は、アクション認識のように動画中の動きを識別するタスクを支える基盤的な特徴表現"
+      }
+    ]
+  },
+  {
+    "slug": "visual-dialog",
+    "name": "視覚対話",
+    "aliases": [
+      "Visual Dialog",
+      "VisDial"
+    ],
+    "tagline": "画像を提示しながら複数ターンにわたり質問応答を行う対話タスク",
+    "category": "技術",
+    "tags": [
+      "マルチモーダル",
+      "対話AI"
+    ],
+    "summary": "視覚対話とは、1枚の画像を提示した状態で、その画像の内容について複数ターンにわたり質問と回答をやり取りする対話タスクを指す。\n単発の画像に対する質問応答(Visual Question Answering)と異なり、過去の質問・回答の履歴を踏まえた上で、文脈に沿った一貫性のある回答を続ける点に特徴がある。\nVLMの発展により、画像を見ながら複数回にわたり自然に受け答えするアシスタント的な用途で、この視覚対話の能力が活用されている。",
+    "relatedTerms": [
+      "multimodal-dialogue",
+      "vision-language-model"
+    ],
+    "comparisons": [
+      {
+        "slug": "multimodal-dialogue",
+        "note": "視覚対話は、画像を対象に複数ターンの質問応答を行う特定のタスクであるのに対し、マルチモーダル対話は画像・音声・動画など複数モダリティを扱う対話全般を指すより広い概念"
+      }
+    ]
+  },
+  {
+    "slug": "multimodal-fusion",
+    "name": "マルチモーダル融合",
+    "aliases": [
+      "Multimodal Fusion"
+    ],
+    "tagline": "複数モダリティの特徴表現を組み合わせ、単一の統合表現として扱う技術",
+    "category": "技術",
+    "tags": [
+      "マルチモーダル"
+    ],
+    "summary": "マルチモーダル融合とは、テキスト・画像・音声など複数のモダリティからそれぞれ抽出した特徴表現を組み合わせ、単一の統合表現として扱う技術を指す。\n各モダリティの特徴を早い段階で結合するearly fusion、それぞれ独立に処理した後で結果を統合するlate fusion、Attention機構等でモダリティ間の対応関係を学習しながら統合する手法などに大別される。\nマルチモーダルなモデルが複数の入力を横断して理解・生成する際の、内部的な統合処理として位置づけられる。",
+    "relatedTerms": [
+      "multimodal",
+      "vision-language-model"
+    ],
+    "comparisons": [
+      {
+        "slug": "multimodal",
+        "note": "マルチモーダルが複数モダリティを扱うAI全般を指す広い概念であるのに対し、マルチモーダル融合はその内部で特徴表現をどう統合するかという技術的な処理を指す"
+      }
+    ]
+  },
+  {
+    "slug": "outlier-detection",
+    "name": "外れ値検出",
+    "aliases": [
+      "Outlier Detection"
+    ],
+    "tagline": "データ分布から統計的に大きく逸脱した値を検出する手法",
+    "category": "技術",
+    "tags": [
+      "機械学習",
+      "分類"
+    ],
+    "summary": "外れ値検出とは、データ分布から統計的に大きく逸脱した値(外れ値)をデータ集合の中から検出する手法を指す。\n標準偏差や四分位範囲を用いる統計的な手法、データ点の密度や近傍との距離をもとに判定するkNN法・LOF(Local Outlier Factor)、木構造でデータを分割し孤立しやすさを評価するIsolation Forestなど、幅広い手法が用いられる。\n異常検知の要素技術としてしばしば使われ、外れ値を除去してデータの前処理に活用したり、外れ値そのものを不正やエラーの兆候として検出したりする用途がある。",
+    "relatedTerms": [
+      "anomaly-detection"
+    ],
+    "comparisons": [
+      {
+        "slug": "anomaly-detection",
+        "note": "外れ値検出はデータ分布から統計的に逸脱した値を検出する手法であり、異常検知はそれを含め、時系列の異常挙動やドメイン文脈上の異常も対象とするより広いタスクを指す"
+      }
+    ]
+  },
+  {
+    "slug": "novelty-detection",
+    "name": "ノベルティ検出",
+    "aliases": [
+      "Novelty Detection",
+      "新規性検出"
+    ],
+    "tagline": "学習データに存在しなかった未知のパターンを新規性として検出する手法",
+    "category": "技術",
+    "tags": [
+      "機械学習",
+      "分類"
+    ],
+    "summary": "ノベルティ検出とは、学習時に観測されたデータには存在しなかった、未知のパターンやクラスをデータの中から検出する手法を指す。\n正常データのみを用いて分布や特徴を学習し、その分布から外れる入力を新規なものとして検出する教師なし・半教師あり手法が中心となる。\n異常検知が主に不正やエラーといった好ましくない逸脱の検出に使われるのに対し、ノベルティ検出は新種の発見や未知クラスの検知など、必ずしも悪い意味を持たない新規性の検出に使われる場面が多い。",
+    "relatedTerms": [
+      "anomaly-detection",
+      "outlier-detection"
+    ],
+    "comparisons": [
+      {
+        "slug": "anomaly-detection",
+        "note": "異常検知が不正やエラーなど好ましくない逸脱の検出に主眼を置くのに対し、ノベルティ検出は未知クラスの発見など、必ずしも悪い意味を持たない新規性の検出に使われる"
+      }
+    ]
+  },
+  {
+    "slug": "collaborative-filtering",
+    "name": "協調フィルタリング",
+    "aliases": [
+      "Collaborative Filtering",
+      "CF"
+    ],
+    "tagline": "似た嗜好を持つ他ユーザーの行動履歴から推薦する手法",
+    "category": "技術",
+    "tags": [
+      "機械学習",
+      "データ"
+    ],
+    "summary": "協調フィルタリングとは、対象ユーザーと似た嗜好を持つ他のユーザーの行動履歴(評価・購買履歴等)をもとに、対象ユーザーが好みそうなアイテムを推薦する手法を指す。\nユーザー間の類似度をもとに推薦するユーザーベース、アイテム間の類似度をもとに推薦するアイテムベースのほか、ユーザー・アイテムの評価行列を低次元の潜在因子に分解する行列分解(Matrix Factorization)を用いる手法が広く使われる。\nアイテム自体の内容を必要とせず行動履歴のみから推薦できる一方、行動履歴の少ない新規ユーザー・新規アイテムへの推薦が難しいコールドスタート問題を抱える。",
+    "relatedTerms": [
+      "recommendation-system",
+      "content-based-filtering"
+    ],
+    "comparisons": [
+      {
+        "slug": "recommendation-system",
+        "note": "協調フィルタリングは、推薦システムを実現する代表的な手法の1つ"
+      },
+      {
+        "slug": "content-based-filtering",
+        "note": "協調フィルタリングが他ユーザーの行動履歴の類似性を利用するのに対し、コンテンツベースフィルタリングはアイテム自体の特徴の類似性を利用する"
+      }
+    ]
+  },
+  {
+    "slug": "content-based-filtering",
+    "name": "コンテンツベースフィルタリング",
+    "aliases": [
+      "Content-based Filtering",
+      "コンテンツベース"
+    ],
+    "tagline": "アイテム自体の特徴に基づき、ユーザーが過去に好んだものと似たアイテムを推薦する手法",
+    "category": "技術",
+    "tags": [
+      "機械学習",
+      "データ"
+    ],
+    "summary": "コンテンツベースフィルタリングとは、アイテム自体の特徴(ジャンル・タグ・説明文等)に基づき、ユーザーが過去に好んだアイテムと似た特徴を持つアイテムを推薦する手法を指す。\nアイテムの特徴をベクトル化し、ユーザーが高く評価したアイテムのベクトルとの類似度が高いアイテムを推薦する形で実現されることが多い。\n他ユーザーの行動履歴を必要としないため新規アイテムにも推薦しやすい一方、ユーザー自身の過去の嗜好へ推薦が偏りやすく、意外性を生みにくい制約を抱える。",
+    "relatedTerms": [
+      "recommendation-system",
+      "collaborative-filtering"
+    ],
+    "comparisons": [
+      {
+        "slug": "recommendation-system",
+        "note": "コンテンツベースフィルタリングは、推薦システムを実現する代表的な手法の1つ"
+      },
+      {
+        "slug": "collaborative-filtering",
+        "note": "コンテンツベースフィルタリングがアイテム自体の特徴の類似性を利用するのに対し、協調フィルタリングは他ユーザーの行動履歴の類似性を利用する"
+      }
+    ]
+  },
+  {
+    "slug": "tensor-operation",
+    "name": "テンソル演算",
+    "aliases": [
+      "Tensor Operation"
+    ],
+    "tagline": "多次元配列であるテンソルに対する加算・乗算・畳み込みなどの数値演算群。深層学習の計算基盤",
+    "category": "技術",
+    "tags": [
+      "深層学習",
+      "並列計算"
+    ],
+    "plainSummary": "AIモデル内部で大量の数値をまとめて処理する計算。GPUで並列に高速実行される。",
+    "summary": "テンソル演算とは、スカラー・ベクトル・行列を一般化した多次元配列(テンソル)に対して行う、加算・乗算・内積・畳み込みなどの数値計算を指す。ニューラルネットワークの順伝播・逆伝播は大量のテンソル演算の連続として表現でき、層ごとの重み行列と入力データの積和演算がその中心を占める。個々の要素の依存関係が薄く並列実行しやすいため、CPUよりも多数の演算コアを持つGPUやTPUとの相性がよく、CUDAのような並列計算プラットフォームやPyTorch・TensorFlowといったフレームワークは、テンソル演算をハードウェア上で効率よく実行するための抽象化層として機能する。モデルの学習・推論にかかる時間やコストの多くは、このテンソル演算の実行時間に左右される。",
+    "advantages": [
+      "多次元配列としてデータをまとめて扱えるため、ループを書かずに大量の数値計算を簡潔に表現できる",
+      "個々の演算が独立しやすく、GPU等の並列計算ハードウェア上で高いスループットを引き出しやすい",
+      "自動微分と組み合わせることで、逆伝播に必要な勾配計算を演算グラフから自動的に導出できる"
+    ],
+    "disadvantages": [
+      "行列やテンソルのサイズが大きくなるほどメモリ消費量が増え、GPUメモリの上限が制約になりやすい",
+      "演算の種類やテンソルの形状によっては並列化の恩恵を受けにくく、ハードウェアの性能を引き出せない場合がある"
+    ],
+    "comparisons": [
+      {
+        "slug": "cuda",
+        "note": "CUDAはテンソル演算をNVIDIA製GPU上で並列実行するためのプラットフォームであり、テンソル演算そのものではなく実行基盤にあたる"
+      },
+      {
+        "slug": "pytorch",
+        "note": "PyTorchはテンソル演算を扱うためのデータ構造(Tensor)とAPIを提供するフレームワークで、内部でCUDA等のバックエンドを呼び出す"
+      }
+    ],
+    "relatedTerms": [
+      "gpu",
+      "cuda",
+      "pytorch",
+      "neural-network",
+      "backpropagation"
+    ]
+  },
+  {
+    "slug": "prompt-library",
+    "name": "プロンプトライブラリ",
+    "aliases": [
+      "Prompt Library"
+    ],
+    "tagline": "目的別に作成・検証済みのプロンプトを蓄積し、チームや組織内で再利用できるようにした管理の仕組み",
+    "category": "技術",
+    "tags": [
+      "プロンプトエンジニアリング"
+    ],
+    "plainSummary": "よく使うAIへの指示文をまとめて保存し、必要なときに使い回せるようにした仕組み。",
+    "summary": "プロンプトライブラリとは、要約・分類・コード生成といった目的ごとに作成・検証済みのプロンプトを一箇所に蓄積し、名前やタグを付けて検索・再利用できるようにした仕組みを指す。個人のメモやドキュメントで管理する簡易なものから、バージョン管理・レビュー・利用実績のトラッキングまで備えた専用ツール上で運用するものまで幅の広い概念であり、多くの場合プロンプトテンプレートを単位として蓄積する。チームや組織でLLMを活用する場面が増えるにつれ、個々人が同じような指示文を毎回一から書き直す非効率や、有効なプロンプトが特定の担当者の手元にしか残らない属人化を避ける目的で整備されることが多い。",
+    "advantages": [
+      "有効性が確認済みのプロンプトを再利用でき、担当者ごとに品質がばらつくのを防ぎやすい",
+      "組織内で蓄積したプロンプトを検索・共有できるため、ゼロから指示文を書き直す手間を減らせる",
+      "バージョン管理と組み合わせれば、プロンプトの変更履歴や改善の経緯を追跡できる"
+    ],
+    "disadvantages": [
+      "モデルの更新やバージョン変更によって、蓄積したプロンプトの有効性は下がることがある",
+      "利用目的ごとに粒度や分類基準を整備する運用コストがかかり、放置すると陳腐化しやすい"
+    ],
+    "comparisons": [
+      {
+        "slug": "prompt-template",
+        "note": "プロンプトテンプレートは変数部分を持つ再利用可能な雛形そのものを指し、プロンプトライブラリはそうしたテンプレートを蓄積・管理する仕組みを指す"
+      },
+      {
+        "slug": "prompt-engineering",
+        "note": "プロンプトライブラリは、プロンプトエンジニアリングによって得られた知見や成果物を組織内で再利用可能な形に蓄積する取り組みの1つ"
+      }
+    ],
+    "relatedTerms": [
+      "prompt-template",
+      "variable-substitution",
+      "prompt-engineering",
+      "prompt-chaining"
+    ]
+  },
+  {
+    "slug": "variable-substitution",
+    "name": "変数置換",
+    "aliases": [
+      "Variable Substitution",
+      "Template Interpolation"
+    ],
+    "tagline": "テンプレート中のプレースホルダーを実際の値に差し替えて、動的にプロンプトや文章を組み立てる処理",
+    "category": "技術",
+    "tags": [
+      "プロンプトエンジニアリング",
+      "入力設計"
+    ],
+    "plainSummary": "文章中の空欄部分を、実際の値に自動で入れ替える処理。",
+    "summary": "変数置換とは、あらかじめ用意したテンプレート文字列中の`{{name}}`のようなプレースホルダーを、実行時に与えられた実際の値へ差し替える処理を指す。プロンプトテンプレートにおいては、ユーザーの入力・検索結果・過去の会話履歴などをプレースホルダーに埋め込むことで、固定のひな形から状況に応じたプロンプトを動的に組み立てる用途で使われる。多くのプロンプト管理ツールやテンプレートエンジンでは、単純な文字列置換だけでなく、条件分岐やループといった簡易なロジックを組み込める場合もある。",
+    "advantages": [
+      "プロンプトの固定部分と可変部分を分離でき、テンプレートの見通しと保守性が向上する",
+      "同じテンプレートを異なる入力値で使い回せるため、用途ごとにプロンプト全体を書き直す必要がない",
+      "変数名を明示することで、どの部分が動的に変化する箇所かをコード上で追いやすくなる"
+    ],
+    "disadvantages": [
+      "差し込む値に改行やクォートなど想定外の文字列を含むと、プロンプトの構造が崩れかねない",
+      "外部入力をそのまま変数置換すると、プロンプトインジェクションのリスクが生じうる"
+    ],
+    "comparisons": [
+      {
+        "slug": "prompt-template",
+        "note": "プロンプトテンプレートはプレースホルダーを含むひな形そのものを指し、変数置換はそのプレースホルダーを実際の値に差し替える処理を指す"
+      },
+      {
+        "slug": "prompt-injection",
+        "note": "変数置換で外部入力をそのままプロンプトへ差し込むと、意図しない指示が混入するプロンプトインジェクションにつながりうる"
+      }
+    ],
+    "relatedTerms": [
+      "prompt-template",
+      "prompt-library",
+      "prompt-injection",
+      "prompt-engineering"
+    ]
+  },
+  {
+    "slug": "prompt-template",
+    "name": "プロンプトテンプレート",
+    "aliases": [
+      "Prompt Template"
+    ],
+    "tagline": "変数部分をプレースホルダーとして残し、共通の指示や構成を再利用できる形にしたプロンプトのひな形",
+    "category": "技術",
+    "tags": [
+      "プロンプトエンジニアリング"
+    ],
+    "plainSummary": "空欄部分だけ入れ替えれば繰り返し使える、AIへの指示文のひな形。",
+    "summary": "プロンプトテンプレートとは、固定の指示文や出力形式の指定はそのままに、入力内容や条件によって変わる部分をプレースホルダーとして残した、再利用可能なプロンプトのひな形を指す。実行時には変数置換によってプレースホルダーへ実際の値が差し込まれ、完成した1つのプロンプトとしてLLMへ送られる。要約・分類・翻訳といった定型タスクを多数回・多様な入力で実行するアプリケーションでは、プロンプトをテンプレート化しておくことで、指示文の一貫性を保ちながら開発・保守の負担を抑えられる。LangChainなどのフレームワークは、こうしたテンプレートを扱うための専用のクラスやAPIを提供している。",
+    "advantages": [
+      "指示文の構成や出力形式の指定を毎回書き直さずに済み、プロンプトの一貫性を保ちやすい",
+      "変数部分だけを差し替えれば多様な入力に対応でき、アプリケーションへの組み込みが容易になる",
+      "テンプレート単位でA/Bテストや改善をしやすく、プロンプトの品質管理もしやすくなる"
+    ],
+    "disadvantages": [
+      "テンプレートを固定しすぎると、個別の入力に最適化されたプロンプトと比べて出力品質が劣りやすい",
+      "変数として差し込む値の長さや内容によっては、意図した文脈やトークン数の想定から外れることがある"
+    ],
+    "comparisons": [
+      {
+        "slug": "system-prompt",
+        "note": "システムプロンプトはモデルの振る舞い全体を規定する固定的な指示であり、プロンプトテンプレートはユーザー入力ごとに変数を差し替えて使うひな形という点で用途が異なる"
+      },
+      {
+        "slug": "prompt-chaining",
+        "note": "プロンプトチェイニングは複数のプロンプトを順につなげる手法であり、各段階のプロンプトをプロンプトテンプレートとして定義しておくことが多い"
+      }
+    ],
+    "relatedTerms": [
+      "variable-substitution",
+      "prompt-library",
+      "prompt-engineering",
+      "system-prompt",
+      "langchain"
+    ]
+  },
+  {
+    "slug": "mlops",
+    "name": "MLOps",
+    "aliases": [
+      "Machine Learning Operations"
+    ],
+    "tagline": "機械学習モデルの開発・検証・デプロイ・運用を継続的かつ再現可能な形で行うための一連のプラクティス",
+    "category": "インフラ",
+    "tags": [
+      "再現性",
+      "学習"
+    ],
+    "plainSummary": "機械学習モデルを作って終わりにせず、継続的に開発・運用していくための考え方や仕組み全般。",
+    "summary": "MLOpsとは、ソフトウェア開発におけるDevOpsの考え方を機械学習に適用し、モデルの開発・学習・検証・デプロイ・監視までの一連のプロセスを継続的かつ再現可能な形で回すための実践・体制・ツール群を指す。データやコードのバージョン管理、実験管理、自動化されたパイプラインによる学習・デプロイ、本番環境でのモデル性能やデータドリフトの監視といった要素を含み、モデルを1度作って終わりにするのではなく、継続的に改善・再学習していく運用を前提とする。LLMを組み込んだアプリケーション特有の課題(プロンプト管理・非決定的な出力の評価等)を扱う派生分野としてLLMOpsが位置づけられる。",
+    "advantages": [
+      "モデルの学習から本番デプロイまでのプロセスを自動化・標準化でき、リリースの速度と信頼性が向上する",
+      "データやモデルのバージョン管理を徹底することで、問題発生時に特定のバージョンへ切り戻しやすくなる",
+      "本番環境での性能劣化やデータドリフトを継続的に監視でき、モデルの再学習タイミングを判断しやすくなる"
+    ],
+    "disadvantages": [
+      "パイプラインや監視基盤の構築・維持に相応の初期投資と専門知識が必要になる",
+      "対象領域が広く、組織の規模やモデルの性質によって最適な実践やツールの組み合わせが変わる"
+    ],
+    "comparisons": [
+      {
+        "slug": "llmops",
+        "note": "LLMOpsはMLOpsの考え方をLLMを組み込んだアプリケーションに適用し、プロンプト管理や非決定的な出力の評価といったLLM特有の課題に対応したもの"
+      },
+      {
+        "slug": "deployment-pipeline",
+        "note": "デプロイメントパイプラインはMLOpsが扱う要素の1つで、学習済みモデルを本番環境へ自動的に配置する仕組みにあたる"
+      },
+      {
+        "slug": "mlflow",
+        "note": "MLflowはMLOpsを実践するための代表的なオープンソースツールの1つで、実験管理・モデル管理・デプロイの機能を提供する"
+      }
+    ],
+    "relatedTerms": [
+      "llmops",
+      "mlflow",
+      "deployment-pipeline",
+      "wandb"
+    ]
+  },
+  {
+    "slug": "deployment-pipeline",
+    "name": "デプロイメントパイプライン",
+    "aliases": [
+      "Deployment Pipeline",
+      "CI/CDパイプライン"
+    ],
+    "tagline": "モデルやアプリケーションを、ビルド・検証・本番環境への配置まで自動化された一連の工程で展開する仕組み",
+    "category": "インフラ",
+    "tags": [
+      "自動化",
+      "再現性"
+    ],
+    "plainSummary": "作ったモデルやアプリを、確認しながら自動で本番環境まで届ける一連の仕組み。",
+    "summary": "デプロイメントパイプラインとは、モデルやアプリケーションのコードを本番環境へ展開するまでの一連の工程を、ビルド・自動テスト・検証・段階的なリリースといったステップに分解し、自動化した仕組みを指す。ソフトウェア開発におけるCI/CDパイプラインの考え方を機械学習に適用したもので、機械学習の文脈ではモデルの学習・評価結果が一定の基準を満たしたことを確認したうえで推論用のサービングインフラへモデルを配置する、といった工程が含まれる。手作業でのデプロイと比べて、リリースの再現性を確保し、問題発生時の切り戻しを迅速に行える点が特徴となる。",
+    "advantages": [
+      "ビルドから本番配置までの工程が自動化されるため、手作業によるミスや作業のばらつきを減らせる",
+      "各段階でテストや検証を組み込むことで、品質基準を満たさない変更が本番環境へ流出するのを防ぎやすい",
+      "デプロイの手順がコードやパイプライン定義として残るため、再現性が高くロールバックも行いやすい"
+    ],
+    "disadvantages": [
+      "パイプラインの構築・維持自体に初期のセットアップコストがかかる",
+      "モデルの評価基準やロールアウト戦略の設計を誤ると、パイプラインは形骸化し、実質的なチェックが機能しなくなる"
+    ],
+    "comparisons": [
+      {
+        "slug": "mlops",
+        "note": "デプロイメントパイプラインはMLOpsが扱う要素の1つで、モデルを本番環境へ自動的に配置する工程を指す"
+      },
+      {
+        "slug": "llmops",
+        "note": "LLMを組み込んだアプリケーションでは、デプロイメントパイプラインにプロンプトやモデルのバージョン管理・評価結果の確認を組み込むことが多い"
+      }
+    ],
+    "relatedTerms": [
+      "mlops",
+      "llmops",
+      "mlflow"
+    ]
+  },
+  {
+    "slug": "pruning",
+    "name": "プルーニング",
+    "aliases": [
+      "Pruning",
+      "枝刈り"
+    ],
+    "tagline": "出力への寄与が小さいニューロン・重み・層を削減し、モデルサイズと推論コストを下げるモデル圧縮手法",
+    "category": "技術",
+    "tags": [
+      "モデル圧縮",
+      "軽量化"
+    ],
+    "plainSummary": "モデルの中であまり使われていない部分を削り、軽く・速くする手法。",
+    "summary": "プルーニングとは、学習済みニューラルネットワークの重み・ニューロン・層のうち、出力への寄与が小さい部分を削減し、モデルサイズと推論に必要な計算量を減らすモデル圧縮手法を指す。個々の重みを0に置き換える非構造化プルーニングと、ニューロンやアテンションヘッドといった単位ごとまとめて削減する構造化プルーニングに大別され、どの部分を削減対象とするかは重みの絶対値や勾配等を用いた重要度評価にもとづいて決定されることが多い。プルーニング後には、失われた精度を回復するために追加の微調整(ファインチューニング)をするのが一般的だ。",
+    "advantages": [
+      "モデルサイズと推論に必要な計算量を削減でき、メモリ使用量やレイテンシの改善につながる",
+      "重要度の低い部分から優先的に削減するため、削減幅を調整しながら精度低下を抑えやすい",
+      "量子化や知識蒸留といった他のモデル圧縮手法と組み合わせて使うことができる"
+    ],
+    "disadvantages": [
+      "削減しすぎると出力の精度が大きく低下し、追加の微調整でも回復しきれない場合がある",
+      "非構造化プルーニングは削減後の重みがスパースな行列になるため、一般的なハードウェア上では計算の高速化に直結しにくい"
+    ],
+    "comparisons": [
+      {
+        "slug": "quantization",
+        "note": "量子化が重みの数値表現のビット数を減らすのに対し、プルーニングは重みやニューロン自体を削減する点で異なるモデル圧縮手法"
+      },
+      {
+        "slug": "knowledge-distillation",
+        "note": "知識蒸留が大きなモデルの出力を模倣する小さなモデルを新たに学習させるのに対し、プルーニングは既存モデルの一部を直接削減する"
+      },
+      {
+        "slug": "sparsification",
+        "note": "プルーニングによって重みの多くが0になった状態は、モデルをスパース化した結果と捉えることができる"
+      }
+    ],
+    "relatedTerms": [
+      "model-compression",
+      "quantization",
+      "knowledge-distillation",
+      "sparsification",
+      "importance-scoring"
+    ]
+  },
+  {
+    "slug": "sparsification",
+    "name": "スパース化",
+    "aliases": [
+      "Sparsification"
+    ],
+    "tagline": "パラメータや計算グラフの大部分を0または未使用にし、実質的な計算量・メモリ使用量を削減する手法の総称",
+    "category": "技術",
+    "tags": [
+      "モデル圧縮",
+      "スパースモデル"
+    ],
+    "plainSummary": "モデルの中の多くの部分を「使わない」状態にして、計算量やメモリを減らす手法。",
+    "summary": "スパース化とは、ニューラルネットワークの重みや中間出力の大部分を0または未使用の状態にし、密な(dense)行列演算を前提とした場合よりも実質的な計算量・メモリ使用量を削減する手法の総称を指す。重みの多くを0にするプルーニングはスパース化の代表的な実現手段の1つであり、他にもMixture of Expertsのように入力ごとに一部のパラメータのみを活性化させる構造的なアプローチも、広義のスパース化に含まれる。スパース化の効果を実際の高速化につなげるには、スパースな行列演算に対応した専用のハードウェアやライブラリのサポートが必要になることが多い。",
+    "advantages": [
+      "パラメータ数に対して実質的に使用する計算量・メモリ量を減らせるため、モデルサイズを保ったまま推論コストを下げられる",
+      "Mixture of Expertsのように、入力ごとに必要な部分のみを活性化させることで、モデル全体の表現力を保ちながら計算量を抑えられる"
+    ],
+    "disadvantages": [
+      "非構造的なスパースパターンは、対応するハードウェアやライブラリがない環境では計算の高速化につながらない",
+      "スパース化の度合いを高めすぎると、密な演算と比べて精度が低下しやすい"
+    ],
+    "comparisons": [
+      {
+        "slug": "pruning",
+        "note": "プルーニングは重みを削減してスパース化を実現する具体的な手法の1つであり、スパース化はより広い概念にあたる"
+      },
+      {
+        "slug": "mixture-of-experts",
+        "note": "Mixture of Expertsは、入力ごとに一部のエキスパートのみを活性化させることで、モデル全体としてスパースな計算を実現するアーキテクチャ"
+      }
+    ],
+    "relatedTerms": [
+      "pruning",
+      "mixture-of-experts",
+      "model-compression",
+      "importance-scoring"
+    ]
+  },
+  {
+    "slug": "importance-scoring",
+    "name": "重要度評価",
+    "aliases": [
+      "Importance Scoring",
+      "Saliency Scoring"
+    ],
+    "tagline": "モデル内の重み・ニューロン・層が出力にどの程度寄与しているかを定量化し、削減対象の判断に用いる評価",
+    "category": "技術",
+    "tags": [
+      "モデル圧縮",
+      "評価指標"
+    ],
+    "plainSummary": "モデルのどの部分が結果にどれだけ影響しているかを数値化し、削ってよい部分を見極める評価。",
+    "summary": "重要度評価とは、ニューラルネットワークを構成する個々の重み・ニューロン・アテンションヘッド・層が、モデルの出力にどの程度寄与しているかを何らかの指標で定量化する評価を指す。重要度の指標には、重みの絶対値の大きさを用いる単純な方法から、損失関数に対する勾配や、その要素を取り除いた場合の出力への影響度(感度)を用いる方法まで幅がある。算出された重要度の低い要素から優先的に削減することで、精度低下を抑えながらプルーニングやスパース化を行える。どの重要度指標を採用するかによって、削減後のモデルの精度や、評価自体にかかる計算コストが変わる。",
+    "advantages": [
+      "削減による精度低下を抑えながらプルーニングやスパース化を行うための、客観的な判断基準を与える",
+      "重み単位・ニューロン単位・層単位など、目的に応じて異なる粒度で評価を設計できる"
+    ],
+    "disadvantages": [
+      "重要度の算出自体に、順伝播・逆伝播や感度分析といった追加の計算コストがかかりうる",
+      "採用する指標によって重要度の評価結果が異なり、削減対象の判断が指標依存になりやすい"
+    ],
+    "comparisons": [
+      {
+        "slug": "pruning",
+        "note": "プルーニングは重要度評価の結果にもとづいて、寄与の小さい重みやニューロンを実際に削減する処理にあたる"
+      },
+      {
+        "slug": "sparsification",
+        "note": "重要度評価は、スパース化においてどの要素を0または未使用にするかを決めるための判断材料として用いられる"
+      }
+    ],
+    "relatedTerms": [
+      "pruning",
+      "sparsification",
+      "model-compression"
+    ]
+  },
+  {
+    "slug": "data-parallelism",
+    "name": "データ並列",
+    "aliases": [
+      "Data Parallelism"
+    ],
+    "tagline": "モデルの複製を複数デバイスに配置し、ミニバッチを分割して並列に学習を進める分散学習手法",
+    "category": "技術",
+    "tags": [
+      "並列計算",
+      "学習"
+    ],
+    "summary": "データ並列は、分散学習における最も基本的な並列化手法の1つ。同一のモデルパラメータの複製(レプリカ)を複数のGPUやデバイスに配置し、1つのミニバッチをデバイス数に応じて分割してそれぞれのレプリカに割り当てる。\n各デバイスは割り当てられたサブバッチを使って独立に順伝播・逆伝播を計算し、得られた勾配をAll-Reduceなどの集団通信によってデバイス間で同期・平均化してからパラメータを更新する。これにより、全デバイスのモデルパラメータは常に同一の状態を保つ。\nPyTorchのDistributedDataParallel (DDP) やTensorFlowのMirroredStrategyなど、主要な深層学習フレームワークで標準的にサポートされる。\nモデル並列がモデル自体を複数デバイスに分割するのに対し、データ並列はモデル全体が1つのデバイスのメモリに収まることを前提とするため、モデルサイズが大きくなるとメモリ制約に直面しやすい。この制約に対処するため、勾配・オプティマイザ状態・パラメータをデバイス間で分割して保持するZeRO (Zero Redundancy Optimizer) のような手法も派生している。",
+    "advantages": [
+      "既存フレームワークの標準機能として利用でき、実装が比較的シンプル",
+      "デバイス数を増やすほどスループットが向上しやすく、スケールさせやすい"
+    ],
+    "disadvantages": [
+      "モデル全体が1デバイスのメモリに収まる必要があり、超大規模モデル単独では不十分になりやすい",
+      "デバイス数の増加とともに勾配同期の通信オーバーヘッドが大きくなる"
+    ],
+    "faq": [
+      {
+        "question": "モデル並列との違いは何ですか?",
+        "answer": "データ並列はモデルの複製を各デバイスに配置しバッチを分割するのに対し、モデル並列はモデル自体を複数デバイスに分割して配置する点が異なる。両者は組み合わせて使われることも多い。"
+      }
+    ],
+    "relatedTerms": [
+      "distributed-learning",
+      "pretraining",
+      "gpu"
+    ],
+    "references": [
+      {
+        "type": "Documentation",
+        "label": "PyTorch: DistributedDataParallel",
+        "url": "https://pytorch.org/docs/stable/notes/ddp.html"
       }
     ]
   }
