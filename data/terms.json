@@ -3221,7 +3221,9 @@
       "ptq",
       "qat",
       "gptq",
-      "awq"
+      "awq",
+      "quantization-aware-training",
+      "distortion-minimization"
     ],
     "faq": [
       {
@@ -3424,7 +3426,8 @@
       "grouped-query-attention",
       "multi-query-attention",
       "flash-attention",
-      "multi-head-latent-attention"
+      "multi-head-latent-attention",
+      "inference-optimization"
     ],
     "faq": [
       {
@@ -11857,7 +11860,8 @@
     "relatedTerms": [
       "gradient-descent",
       "backpropagation",
-      "loss-function"
+      "loss-function",
+      "hyperparameter-optimization"
     ],
     "faq": [
       {
@@ -21873,7 +21877,8 @@
     "relatedTerms": [
       "batch-inference",
       "kv-cache",
-      "vllm"
+      "vllm",
+      "inference-optimization"
     ],
     "faq": [
       {
@@ -25667,7 +25672,10 @@
     "summary": "分散学習は、1台のマシン・GPUでは扱いきれない大規模なモデルやデータセットを、複数のデバイスやノードに計算を分担させて学習する手法。\nミニバッチをデバイスごとに分割して同じモデルを並列に学習するデータ並列、モデル自体を複数デバイスに分割して配置するモデル並列、パイプライン状に層を分割するパイプライン並列などのアプローチがある。\nLLMのような数十億〜数兆パラメータ規模のモデルの事前学習では、これらを組み合わせたハイブリッドな分散学習が標準的に用いられる。\n通信オーバーヘッドの削減や勾配同期の効率化(All-Reduceなど)が、分散学習全体のスループットを左右する重要な要素となる。",
     "relatedTerms": [
       "pretraining",
-      "data-parallelism"
+      "data-parallelism",
+      "model-parallelism",
+      "pipeline-parallelism",
+      "gradient-checkpointing"
     ]
   },
   {
@@ -27778,7 +27786,8 @@
       "llmops",
       "mlflow",
       "deployment-pipeline",
-      "wandb"
+      "wandb",
+      "model-monitoring"
     ]
   },
   {
@@ -27975,7 +27984,10 @@
     "relatedTerms": [
       "distributed-learning",
       "pretraining",
-      "gpu"
+      "gpu",
+      "model-parallelism",
+      "pipeline-parallelism",
+      "batch-splitting"
     ],
     "references": [
       {
@@ -27984,5 +27996,374 @@
         "url": "https://pytorch.org/docs/stable/notes/ddp.html"
       }
     ]
+  },
+  {
+    "slug": "model-parallelism",
+    "name": "モデル並列",
+    "aliases": [
+      "Model Parallelism"
+    ],
+    "tagline": "モデル自体を複数デバイスに分割して配置し、単一デバイスのメモリに収まらない大規模モデルを学習・推論させる分散学習手法",
+    "category": "技術",
+    "tags": [
+      "並列計算",
+      "学習"
+    ],
+    "summary": "モデル並列は、モデルのパラメータ自体を複数のGPUやデバイスに分割して配置する分散学習手法。データ並列がモデルの複製を各デバイスに配置しバッチを分割するのに対し、モデル並列はモデル自体を分割するため、1つのデバイスのメモリに収まらないほど大規模なモデルの学習・推論に用いられる。\n分割方法には、層単位でモデルを縦に分割するパイプライン並列と、各層内の行列演算そのものを複数デバイスに分割するテンソル並列(層内並列)がある。テンソル並列はMegatron-LMで採用され、Transformerの注意機構やMLP層の行列積を分割して複数GPUで並列計算する。\nLLMの学習・推論では、モデル並列とデータ並列、パイプライン並列を組み合わせたハイブリッドな並列化が標準的に用いられる。",
+    "advantages": [
+      "単一デバイスのメモリに収まらない超大規模モデルを学習・推論できる",
+      "データ並列と組み合わせることでさらに大規模な分散学習が可能になる"
+    ],
+    "disadvantages": [
+      "デバイス間でモデルの中間出力をやり取りする通信が頻繁に発生し、通信オーバーヘッドが大きい",
+      "実装がデータ並列より複雑で、モデルの構造に応じた分割設計が必要"
+    ],
+    "faq": [
+      {
+        "question": "データ並列との違いは何ですか?",
+        "answer": "データ並列はモデルの複製を各デバイスに配置しバッチを分割するのに対し、モデル並列はモデル自体を複数デバイスに分割して配置する点が異なる。両者は組み合わせて使われることも多い。"
+      }
+    ],
+    "relatedTerms": [
+      "data-parallelism",
+      "pipeline-parallelism",
+      "distributed-learning",
+      "gpu",
+      "tensor-parallelism"
+    ],
+    "references": [
+      {
+        "type": "Research Paper",
+        "label": "Megatron-LM: Training Multi-Billion Parameter Language Models Using Model Parallelism",
+        "url": "https://arxiv.org/abs/1909.08053"
+      }
+    ]
+  },
+  {
+    "slug": "pipeline-parallelism",
+    "name": "パイプライン並列",
+    "aliases": [
+      "Pipeline Parallelism"
+    ],
+    "tagline": "モデルの層を複数のステージに分割し、ステージ間でマイクロバッチをパイプライン状に流して並列に学習する分散学習手法",
+    "category": "技術",
+    "tags": [
+      "並列計算",
+      "学習"
+    ],
+    "summary": "パイプライン並列は、モデルを層単位で複数のステージに分割し、各ステージを異なるデバイスに配置する分散学習手法。モデル並列の一種で、単一デバイスに収まらない大規模モデルの学習に用いられる。\n各ステージにはミニバッチをさらに細かく分割したマイクロバッチが順次流し込まれ、あるデバイスがステージNの計算を終えたマイクロバッチを次のデバイスに渡すのと並行して、次のマイクロバッチの計算に着手する。これによりデバイスの待機時間(パイプラインバブル)を減らし、単純な層分割よりデバイス利用率を高める。\n2019年にGoogleが発表した論文「GPipe: Efficient Training of Giant Neural Networks using Pipeline Parallelism」で提案された手法。",
+    "advantages": [
+      "層単位の分割のため実装がテンソル並列より単純",
+      "マイクロバッチ化によりデバイス間の通信量を抑えつつ並列度を高められる"
+    ],
+    "disadvantages": [
+      "パイプラインの最初と最後でデバイスの待機時間(バブル)が発生し、完全な利用率にはならない",
+      "ステージ間の計算量の偏りが大きいと、律速となるステージにボトルネックが生じる"
+    ],
+    "relatedTerms": [
+      "model-parallelism",
+      "data-parallelism",
+      "distributed-learning",
+      "micro-batch",
+      "bubble-minimization"
+    ],
+    "references": [
+      {
+        "type": "Research Paper",
+        "label": "GPipe: Efficient Training of Giant Neural Networks using Pipeline Parallelism",
+        "url": "https://arxiv.org/abs/1811.06965"
+      }
+    ]
+  },
+  {
+    "slug": "gradient-checkpointing",
+    "name": "勾配チェックポインティング",
+    "aliases": [
+      "Gradient Checkpointing",
+      "Activation Checkpointing"
+    ],
+    "tagline": "順伝播時の中間活性化の一部を保存せず、逆伝播時に再計算することでメモリ使用量を削減する学習手法",
+    "category": "技術",
+    "tags": [
+      "メモリ最適化",
+      "学習"
+    ],
+    "summary": "勾配チェックポインティングは、ニューラルネットワークの学習時に必要なメモリ使用量を削減する手法。通常の逆伝播では、順伝播時に計算した各層の中間活性化をすべて保持しておき、逆伝播時の勾配計算に使う。層数が多い、あるいは1層あたりの活性化が大きいモデルでは、この保持だけで大量のメモリを消費する。\n勾配チェックポインティングでは、一部の層(チェックポイント)の活性化のみを保持し、それ以外は逆伝播で必要になった時点で順伝播を部分的にやり直して再計算する。これによりメモリ使用量を削減できる一方、再計算の分だけ計算量と学習時間は増加する。\n2016年にChenらが発表した論文「Training Deep Nets with Sublinear Memory Cost」で提案された手法。PyTorchやTensorFlowなど主要フレームワークで標準的にサポートされる。",
+    "advantages": [
+      "学習時のメモリ使用量を削減でき、より大きなバッチサイズやモデルを扱える",
+      "モデル構造を変更せずに既存フレームワークの機能として適用できる"
+    ],
+    "disadvantages": [
+      "再計算が発生する分、学習にかかる計算時間が増加する(一般に20〜30%程度のオーバーヘッド)"
+    ],
+    "relatedTerms": [
+      "distributed-learning",
+      "gpu",
+      "pretraining",
+      "memory-efficiency"
+    ],
+    "references": [
+      {
+        "type": "Research Paper",
+        "label": "Training Deep Nets with Sublinear Memory Cost",
+        "url": "https://arxiv.org/abs/1604.06174"
+      }
+    ]
+  },
+  {
+    "slug": "quantization-aware-training",
+    "name": "量子化認識トレーニング",
+    "aliases": [
+      "Quantization-Aware Training",
+      "QAT"
+    ],
+    "tagline": "学習中に量子化による誤差をシミュレートし、量子化後の精度低下を抑えるよう重みを調整する学習手法",
+    "category": "技術",
+    "tags": [
+      "量子化",
+      "学習"
+    ],
+    "summary": "量子化認識トレーニング(QAT)は、モデルの重みや活性化を低ビット精度(int8など)に量子化することを前提に、その量子化による誤差を学習過程でシミュレートしながらパラメータを調整する手法。順伝播時に疑似量子化(fake quantization)を挿入して量子化後の値を模擬し、逆伝播では量子化誤差を考慮した勾配でパラメータを更新することで、量子化による精度低下を抑える。\n学習済みモデルに対して事後的に量子化を適用するポストトレーニング量子化(PTQ)と比較すると、QATは学習(または追加のファインチューニング)が必要な分コストは高いが、一般に量子化後の精度低下が小さい。\n2017年にGoogleのJacobらが発表した論文「Quantization and Training of Neural Networks for Efficient Integer-Arithmetic-Only Inference」で提案された手法。",
+    "advantages": [
+      "ポストトレーニング量子化より量子化後の精度低下を抑えやすい",
+      "推論時のメモリ使用量削減と高速化を両立できる"
+    ],
+    "disadvantages": [
+      "量子化を考慮した学習・ファインチューニングの計算コストが追加で発生する",
+      "疑似量子化の実装や対象レイヤーの選定に工夫が必要"
+    ],
+    "relatedTerms": [
+      "quantization"
+    ],
+    "references": [
+      {
+        "type": "Research Paper",
+        "label": "Quantization and Training of Neural Networks for Efficient Integer-Arithmetic-Only Inference",
+        "url": "https://arxiv.org/abs/1712.05877"
+      }
+    ]
+  },
+  {
+    "slug": "hyperparameter-optimization",
+    "name": "ハイパーパラメータ最適化",
+    "aliases": [
+      "Hyperparameter Optimization",
+      "HPO"
+    ],
+    "tagline": "学習率やバッチサイズなどモデルの性能を左右するハイパーパラメータの値を自動的に探索・選定する手法",
+    "category": "技術",
+    "tags": [
+      "チューニング",
+      "学習"
+    ],
+    "summary": "ハイパーパラメータ最適化は、学習率、バッチサイズ、層数、正則化係数など、学習によって直接更新されないハイパーパラメータの組み合わせを探索し、検証データでの性能が最も高くなる値を見つけるプロセス。\n代表的な手法として、あらかじめ指定した候補値の全組み合わせを試すグリッドサーチ、探索空間からランダムに値をサンプリングするランダムサーチ、過去の試行結果から次に試す値を確率モデルで推定するベイズ最適化がある。近年では、Optunaなどのフレームワークが、見込みの薄い試行を早期に打ち切る枝刈り(早期終了)を組み合わせた探索を提供している。\n探索対象のハイパーパラメータが多く、1回の学習コストが高いLLMなどの大規模モデルでは、探索コストそのものが大きな制約となるため、限られた試行回数で良い値に到達できる手法が重視される。",
+    "advantages": [
+      "人手による試行錯誤より体系的にモデル性能を向上させられる",
+      "ベイズ最適化などを使えば少ない試行回数で良い値に到達しやすい"
+    ],
+    "disadvantages": [
+      "1回の学習コストが高いモデルでは、探索全体にかかる計算コスト・時間が大きくなる",
+      "探索空間の設計(範囲・分布の選び方)が結果の質に影響する"
+    ],
+    "relatedTerms": [
+      "learning-rate",
+      "adam-optimizer",
+      "bayesian-optimization",
+      "grid-search"
+    ]
+  },
+  {
+    "slug": "batch-splitting",
+    "name": "バッチ分割",
+    "aliases": ["Batch Splitting"],
+    "tagline": "1回の学習ステップで扱うバッチをデバイスのメモリに収まる小さな単位へ分割し、順次または並列に処理する手法",
+    "category": "技術",
+    "tags": ["学習", "並列計算"],
+    "summary": "バッチ分割は、学習に使う1つのバッチをそのまま一括で処理するとGPUメモリに収まらない場合、より小さな単位へ分けて扱う手法の総称。分割したサブバッチを複数デバイスに配って同時に処理すればデータ並列となり、逆に1デバイス上で順番に処理して勾配を蓄積してから1回だけパラメータを更新すれば勾配累積(Gradient Accumulation)になる。パイプライン並列ではさらに細かく分割したマイクロバッチとして各ステージに流し込まれる。\nいずれの場合も、元のバッチサイズを保ったまま計算を小分けにすることで、メモリ制約下でも大きな実効バッチサイズでの学習を可能にする点が共通する。",
+    "advantages": [
+      "GPUメモリの制約を超える大きな実効バッチサイズでの学習が可能になる",
+      "データ並列・勾配累積・パイプライン並列など複数の分散学習手法の基礎として広く使われる"
+    ],
+    "disadvantages": [
+      "順次処理する場合(勾配累積)は分割数に応じて学習時間が増加する",
+      "分割方法によってはデバイス間の通信オーバーヘッドが増える"
+    ],
+    "relatedTerms": ["data-parallelism", "micro-batch", "pipeline-parallelism", "gradient-checkpointing"]
+  },
+  {
+    "slug": "tensor-parallelism",
+    "name": "テンソル並列",
+    "aliases": ["Tensor Parallelism", "テンソル並列化", "層内並列"],
+    "tagline": "各層内の行列演算そのものを複数デバイスに分割して並列計算する、層内並列とも呼ばれるモデル並列の一手法",
+    "category": "技術",
+    "tags": ["並列計算", "学習"],
+    "summary": "テンソル並列は、モデル並列の一種で、層単位ではなく各層内部の行列演算(重み行列)を複数のGPUに分割して並列計算する手法。Transformerの場合、Self-Attentionの各ヘッドやMLP層の行列積を列方向・行方向に分割し、各デバイスが部分的な計算を担当したうえで、必要な箇所でAll-Reduceなどの集団通信をして結果を合成する。\n層単位で分割するパイプライン並列と異なり、1つの層の計算自体を複数デバイスで同時に処理するため、デバイス間の通信頻度は高くなるが、パイプラインバブルのような待機時間は生じにくい。Megatron-LMで採用され、データ並列・パイプライン並列と組み合わせたハイブリッド並列がLLMの学習で標準的に用いられる。\n2019年にNVIDIAが発表した論文「Megatron-LM: Training Multi-Billion Parameter Language Models Using Model Parallelism」で提案された。",
+    "advantages": [
+      "1つの巨大な層(超大規模なAttentionやMLP)を複数デバイスで分割して処理できる",
+      "パイプライン並列のようなステージ間の待機時間(バブル)が生じにくい"
+    ],
+    "disadvantages": [
+      "層内の分割ごとに通信が発生するため、デバイス間通信の頻度・帯域要求が高い",
+      "高速なデバイス間接続(NVLinkなど)がない環境では通信オーバーヘッドが性能を制約しやすい"
+    ],
+    "relatedTerms": ["model-parallelism", "data-parallelism", "pipeline-parallelism", "gpu"],
+    "references": [
+      {
+        "type": "Research Paper",
+        "label": "Megatron-LM: Training Multi-Billion Parameter Language Models Using Model Parallelism",
+        "url": "https://arxiv.org/abs/1909.08053"
+      }
+    ]
+  },
+  {
+    "slug": "micro-batch",
+    "name": "マイクロバッチ",
+    "aliases": ["Micro-batch", "Microbatch"],
+    "tagline": "パイプライン並列においてミニバッチをさらに細かく分割した処理単位で、ステージ間の待機時間削減に使う",
+    "category": "技術",
+    "tags": ["並列計算", "学習"],
+    "summary": "マイクロバッチは、パイプライン並列の学習で使われる処理単位。1つのミニバッチをそのまま各パイプラインステージに流すと、あるステージの計算が終わるまで他のステージは待機することになり、その時間(パイプラインバブル)が大きくなる。そこでミニバッチをさらに細かいマイクロバッチへ分割し、各ステージへ順次流し込むことで、複数のマイクロバッチをパイプライン上で同時並行に処理する。\nマイクロバッチの数を増やすほどパイプラインの待機時間の割合は小さくなるが、1マイクロバッチあたりのサイズが小さくなりすぎるとデバイスの演算効率が低下するため、両者のバランスを取る必要がある。",
+    "advantages": [
+      "パイプライン並列でのデバイス待機時間(バブル)を減らし、利用率を高められる",
+      "マイクロバッチ数を調整することでメモリ使用量と演算効率のバランスを取れる"
+    ],
+    "disadvantages": [
+      "マイクロバッチが小さすぎると1回あたりの演算効率が落ち、オーバーヘッドが目立つ",
+      "スケジューリング方式によっては実装が複雑になる"
+    ],
+    "relatedTerms": ["pipeline-parallelism", "batch-splitting", "bubble-minimization"]
+  },
+  {
+    "slug": "bubble-minimization",
+    "name": "バブル最小化",
+    "aliases": ["Bubble Minimization", "パイプラインバブル削減"],
+    "tagline": "パイプライン並列でデバイスが計算開始・終了時に生じる待機時間(バブル)を、スケジューリング等の工夫で削減する取り組み",
+    "category": "技術",
+    "tags": ["並列計算", "学習"],
+    "summary": "パイプライン並列では、パイプラインの最初と最後で一部のデバイスが計算対象を持たずに待機する時間が生じる。これをパイプラインバブルと呼ぶ。パイプラインステージ数が多いほど、またマイクロバッチ数が少ないほど、バブルが全体の実行時間に占める割合は大きくなり、デバイスの利用率が低下する。\nバブル最小化は、この待機時間を減らすための工夫の総称。代表的な方法として、マイクロバッチ数を増やす・順伝播と逆伝播の実行順序を1F1B(One-Forward-One-Backward)方式にしてメモリ使用量を抑えつつバブルを減らす・複数ステージを交互に配置するインターリーブドスケジューリングを使う、といった手法がある。",
+    "advantages": [
+      "パイプライン並列でのデバイス利用率が向上し、学習スループットが高まる",
+      "マイクロバッチ数の調整など、比較的軽量な工夫で効果を得られる場合がある"
+    ],
+    "disadvantages": [
+      "バブルを無くすことは難しく、ステージ数や通信環境に応じたトレードオフが残る",
+      "1F1Bやインターリーブドスケジューリングなど高度な手法は実装が複雑になる"
+    ],
+    "relatedTerms": ["pipeline-parallelism", "micro-batch"]
+  },
+  {
+    "slug": "memory-efficiency",
+    "name": "メモリ効率化",
+    "aliases": ["Memory Efficiency"],
+    "tagline": "限られたGPU・デバイスメモリでより大きなモデルやバッチを学習・推論できるようにする技術群の総称",
+    "category": "技術",
+    "tags": ["メモリ最適化", "学習"],
+    "summary": "メモリ効率化は、モデルの学習・推論時に消費するメモリ量を削減し、限られたハードウェアリソースでより大きなモデルやバッチサイズ、より長いコンテキストを扱えるようにする技術の総称。\n学習時には、中間活性化を保持せず逆伝播時に再計算する勾配チェックポインティングが使われる。また、パラメータ・勾配・オプティマイザ状態をデバイス間で分割して保持するZeRO(Zero Redundancy Optimizer)や、低精度(FP16/BF16など)で計算するMixed Precision Trainingも用いられる。推論時には、KVキャッシュの圧縮や量子化によってメモリ使用量を抑える手法が使われる。\nいずれもモデルの精度低下と引き換えにメモリを節約する、あるいは計算時間の増加と引き換えにメモリを節約する、というトレードオフを伴うことが多い。",
+    "advantages": [
+      "限られたGPUメモリでより大きなモデル・バッチサイズ・コンテキスト長を扱えるようになる",
+      "既存モデルの構造を大きく変えずに適用できる手法が多い"
+    ],
+    "disadvantages": [
+      "再計算や通信の増加により、学習・推論にかかる時間が増えることもある",
+      "量子化など一部の手法は精度低下とのトレードオフを伴う"
+    ],
+    "relatedTerms": ["gradient-checkpointing", "quantization", "kv-cache", "data-parallelism"]
+  },
+  {
+    "slug": "inference-optimization",
+    "name": "推論最適化",
+    "aliases": ["Inference Optimization"],
+    "tagline": "学習済みモデルの推論時のレイテンシ・スループット・メモリ使用量を改善するための技術群の総称",
+    "category": "技術",
+    "tags": ["推論最適化", "サービング"],
+    "summary": "推論最適化は、学習済みモデルを実際に稼働させる際の応答速度(レイテンシ)・単位時間あたりの処理量(スループット)・使用メモリ量を改善するための技術の総称。\n代表的な手法として、計算済みのKey/Valueを再利用して再計算を省くKVキャッシュ、次トークンを軽量モデルによって先読みし本体モデルで検証する投機的デコーディング、複数リクエストのバッチを動的に組み替えて処理する継続的バッチ処理(Continuous Batching)がある。\n他にも、パラメータを低ビット幅で表現する量子化や、Attention計算のメモリアクセスを最適化するFlashAttentionなどが使われる。これらはvLLMやTensorRT-LLM、SGLangといった推論エンジンに組み込まれる形で提供されることが多い。",
+    "advantages": [
+      "同じハードウェアでより多くのリクエストを処理でき、サービング効率が向上する",
+      "レイテンシを下げることでユーザー体験が改善する"
+    ],
+    "disadvantages": [
+      "量子化など一部の手法は出力精度とのトレードオフを伴う",
+      "手法ごとに得意なワークロードが異なり、用途に応じた選定・チューニングが必要"
+    ],
+    "relatedTerms": ["kv-cache", "speculative-decoding", "quantization", "continuous-batching", "flash-attention"]
+  },
+  {
+    "slug": "distortion-minimization",
+    "name": "歪み最小化",
+    "aliases": ["Distortion Minimization"],
+    "tagline": "量子化などによって生じる出力の誤差(歪み)を最小化するよう、パラメータや量子化パラメータを最適化する手法",
+    "category": "技術",
+    "tags": ["量子化", "モデル圧縮"],
+    "summary": "歪み最小化は、モデル圧縮・量子化の文脈で、重みや活性化を低ビット表現へ変換した際に生じる出力の誤差(歪み)ができるだけ小さくなるよう、量子化のスケールやゼロ点、あるいは重み自体を最適化するアプローチ。単純に値を丸めるだけの量子化に比べ、層ごとの出力誤差を小さくするよう明示的に最適化することで、精度低下を抑えつつビット幅を下げられる。\n代表例として、GPTQは層ごとの重みを2次近似(Hessian)に基づいて逐次的に量子化し、量子化誤差を後続の未量子化重みに配分することで全体の歪みを最小化する。AWQは活性化の分布を考慮して重要な重みチャネルを保護することで歪みを抑える。",
+    "advantages": [
+      "単純な丸め込みによる量子化より低いビット幅でも精度低下を抑えやすい",
+      "追加の学習(再学習)なしで適用できる手法が多い"
+    ],
+    "disadvantages": [
+      "誤差の最適化計算にキャリブレーションデータや追加の計算コストが必要になる",
+      "モデルやタスクによって最適な最適化対象・手法が異なる"
+    ],
+    "relatedTerms": ["quantization", "gptq", "awq", "ptq", "qat"],
+    "references": [
+      {
+        "type": "Research Paper",
+        "label": "GPTQ: Accurate Post-Training Quantization for Generative Pre-trained Transformers",
+        "url": "https://arxiv.org/abs/2210.17323"
+      }
+    ]
+  },
+  {
+    "slug": "bayesian-optimization",
+    "name": "ベイズ最適化",
+    "aliases": ["Bayesian Optimization"],
+    "tagline": "過去の試行結果から目的関数を確率モデルで近似し、次に試す点を効率的に選びながら最適化するハイパーパラメータ探索手法",
+    "category": "技術",
+    "tags": ["チューニング", "学習"],
+    "summary": "ベイズ最適化は、ハイパーパラメータ最適化における探索手法の1つ。学習率やバッチサイズなどの組み合わせと、それに対する検証性能の関係を直接評価するにはコストがかかるため、ガウス過程などの確率モデルでこの関係(目的関数)を近似する。\nこれまでの試行結果を踏まえ、次にどの値を試すと最も情報が得られそうかを獲得関数(Expected Improvementなど)を使って決定する。グリッドサーチやランダムサーチが探索空間を網羅的・無作為に試すのに対し、ベイズ最適化は過去の結果を活用して有望な領域を優先的に探索するため、少ない試行回数で良い値に到達しやすい。1回の学習コストが高いLLMの学習・ファインチューニングなど、試行回数を抑えたい場面で用いられる。",
+    "advantages": [
+      "グリッドサーチやランダムサーチより少ない試行回数で良い値に到達しやすい",
+      "1回あたりの評価コストが高いタスクでも効率的に探索できる"
+    ],
+    "disadvantages": [
+      "確率モデルの構築・更新自体に計算コストがかかり、探索対象の次元が多いと効率が落ちやすい",
+      "並列に多数の試行を同時実行する場合、グリッドサーチほど単純には並列化しにくい"
+    ],
+    "relatedTerms": ["hyperparameter-optimization", "grid-search"]
+  },
+  {
+    "slug": "grid-search",
+    "name": "グリッドサーチ",
+    "aliases": ["Grid Search"],
+    "tagline": "あらかじめ指定したハイパーパラメータ候補値の全組み合わせを網羅的に試し、最良の組み合わせを探す最も基本的な探索手法",
+    "category": "技術",
+    "tags": ["チューニング", "学習"],
+    "summary": "グリッドサーチは、ハイパーパラメータ最適化における最も基本的な探索手法。各ハイパーパラメータについてあらかじめ候補値の一覧(グリッド)を決めておき、それらの全組み合わせをしらみつぶしに評価して、検証データでの性能が最も良い組み合わせを選ぶ。\n実装が単純で、各組み合わせの評価が互いに独立しているため並列実行しやすい一方、ハイパーパラメータの数や候補値の数が増えると組み合わせ数が指数的に増加し、探索コストが急激に大きくなる(次元の呪い)。この欠点を補う手法として、候補値からランダムに抽出して評価するランダムサーチや、過去の結果を活用するベイズ最適化がある。",
+    "advantages": [
+      "実装がシンプルで理解しやすく、各組み合わせを独立に並列評価できる",
+      "候補値の範囲を網羅的に評価するため、グリッドの粒度が十分細かければ見落としが少ない"
+    ],
+    "disadvantages": [
+      "ハイパーパラメータの数・候補値の数が増えると組み合わせ数が指数的に増加し、探索コストが膨大になる",
+      "重要でないハイパーパラメータにも同じ密度で試行を割り当ててしまい非効率になりやすい"
+    ],
+    "relatedTerms": ["hyperparameter-optimization", "bayesian-optimization"]
+  },
+  {
+    "slug": "model-monitoring",
+    "name": "モデルモニタリング",
+    "aliases": ["Model Monitoring"],
+    "tagline": "本番環境に配置したモデルの性能・入出力分布・データドリフトなどを継続的に観測し、劣化を早期に検知する運用プラクティス",
+    "category": "インフラ",
+    "tags": ["再現性", "学習"],
+    "summary": "モデルモニタリングは、本番環境にデプロイした機械学習モデルの振る舞いを継続的に観測する運用プラクティス。推論のレイテンシやエラー率といったシステム面の指標に加え、予測精度や入力データの分布が学習時から変化していないか(データドリフト・コンセプトドリフト)、出力の分布に偏りが生じていないかといったモデル固有の指標を監視対象とする。\nLLMを用いたアプリケーションでは、これに加えてハルシネーションの発生率やプロンプトの傾向変化、トークンコストの推移なども監視対象となることが多い。監視結果は、モデルの再学習や再デプロイのタイミングを判断する材料として使われ、MLOpsのパイプラインの一部として組み込まれる。",
+    "advantages": [
+      "本番環境での性能劣化やデータドリフトを早期に検知し、問題が深刻化する前に対処できる",
+      "再学習・再デプロイの要否・タイミングを判断する客観的な材料が得られる"
+    ],
+    "disadvantages": [
+      "監視基盤の構築・維持にコストがかかり、監視すべき指標の設計にはドメイン知識が必要",
+      "ドリフトを検知しても、原因の特定や対処には追加の分析が必要になることが多い"
+    ],
+    "relatedTerms": ["mlops", "wandb", "llmops"]
   }
 ]
