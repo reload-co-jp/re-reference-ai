@@ -384,7 +384,8 @@
       "graphrag",
       "agentic-rag",
       "retrieval-augmented-fine-tuning",
-      "question-answering"
+      "question-answering",
+      "grounding"
     ],
     "faq": [
       {
@@ -893,7 +894,8 @@
       "transformer",
       "recurrent-neural-network",
       "gpu",
-      "machine-learning"
+      "machine-learning",
+      "neuro-symbolic-ai"
     ],
     "faq": [
       {
@@ -1294,7 +1296,10 @@
       "llmo",
       "llm-as-a-judge",
       "truthfulqa",
-      "guardrails"
+      "guardrails",
+      "ai-literacy",
+      "critical-thinking",
+      "grounding"
     ],
     "faq": [
       {
@@ -2287,7 +2292,9 @@
       "context-engineering",
       "in-context-learning",
       "prompt-template",
-      "prompt-library"
+      "prompt-library",
+      "steering",
+      "meta-prompting"
     ],
     "faq": [
       {
@@ -2443,7 +2450,9 @@
       "react-prompting",
       "emergent-abilities",
       "self-consistency",
-      "tree-of-thought"
+      "tree-of-thought",
+      "reasoning",
+      "zero-shot-cot"
     ],
     "faq": [
       {
@@ -2533,7 +2542,8 @@
       "self-consistency",
       "tree-of-thought",
       "test-time-scaling",
-      "reasoning-limitations"
+      "reasoning-limitations",
+      "reasoning"
     ],
     "faq": [
       {
@@ -2907,7 +2917,11 @@
       "red-teaming",
       "dpo",
       "constitutional-ai",
-      "instruction-tuning"
+      "instruction-tuning",
+      "responsible-ai",
+      "value-learning",
+      "fairness",
+      "steering"
     ],
     "faq": [
       {
@@ -3082,7 +3096,8 @@
       "large-language-model",
       "phi",
       "edge-ai",
-      "model-extraction"
+      "model-extraction",
+      "prompt-distillation"
     ],
     "faq": [
       {
@@ -3318,7 +3333,9 @@
       "deepseek",
       "llama",
       "mixture-of-depths",
-      "sparsification"
+      "sparsification",
+      "router",
+      "sparse-activation"
     ],
     "faq": [
       {
@@ -4658,7 +4675,8 @@
     "relatedTerms": [
       "mcp",
       "multi-agent",
-      "ai-agent"
+      "ai-agent",
+      "inter-agent-communication"
     ],
     "faq": [
       {
@@ -4753,7 +4771,9 @@
       "crewai",
       "autogen",
       "orchestrator",
-      "subagent"
+      "subagent",
+      "inter-agent-communication",
+      "cooperation-strategy"
     ],
     "faq": [
       {
@@ -5042,7 +5062,8 @@
     "relatedTerms": [
       "chain-of-thought",
       "ai-agent",
-      "reasoning-model"
+      "reasoning-model",
+      "self-correction"
     ],
     "faq": [
       {
@@ -5264,7 +5285,8 @@
       "kv-cache",
       "quantization",
       "decoding",
-      "batch-inference"
+      "batch-inference",
+      "reasoning"
     ],
     "faq": [
       {
@@ -5339,7 +5361,9 @@
       "top-k",
       "beam-search",
       "speculative-decoding",
-      "autoregressive-generation"
+      "autoregressive-generation",
+      "constrained-generation",
+      "guided-generation"
     ],
     "faq": [
       {
@@ -8841,7 +8865,10 @@
       "prompt-hijacking",
       "adversarial-training",
       "output-filtering",
-      "input-sanitization"
+      "input-sanitization",
+      "responsible-ai",
+      "content-moderation",
+      "content-policy"
     ],
     "faq": [
       {
@@ -8982,7 +9009,11 @@
       "watermarking",
       "adversarial-example",
       "evasion-attack",
-      "adversarial-training"
+      "adversarial-training",
+      "responsible-ai",
+      "ai-auditing",
+      "adversarial-testing",
+      "penetration-testing"
     ],
     "faq": [
       {
@@ -9639,7 +9670,9 @@
       "backpropagation",
       "loss-function",
       "reinforcement-learning",
-      "supervised-learning"
+      "supervised-learning",
+      "symbolic-ai",
+      "inductive-reasoning"
     ],
     "faq": [
       {
@@ -9819,7 +9852,10 @@
       "cyc",
       "retrieval-augmented-generation",
       "vector-database",
-      "graphrag"
+      "graphrag",
+      "symbolic-ai",
+      "neuro-symbolic-ai",
+      "knowledge-representation"
     ],
     "faq": [
       {
@@ -9875,7 +9911,8 @@
     "relatedTerms": [
       "ontology",
       "transitivity",
-      "large-language-model"
+      "large-language-model",
+      "symbolic-ai"
     ],
     "faq": [
       {
@@ -13225,7 +13262,8 @@
       "rlhf",
       "alignment",
       "claude",
-      "guardrails"
+      "guardrails",
+      "steering"
     ],
     "faq": [
       {
@@ -14745,7 +14783,8 @@
       "in-context-learning",
       "few-shot",
       "prompt-engineering",
-      "instruction-tuning"
+      "instruction-tuning",
+      "zero-shot-cot"
     ],
     "faq": [
       {
@@ -14817,7 +14856,8 @@
       "chain-of-thought",
       "tree-of-thought",
       "temperature",
-      "reasoning-model"
+      "reasoning-model",
+      "self-correction"
     ],
     "faq": [
       {
@@ -14960,7 +15000,8 @@
       "synthetic-data",
       "instruction-tuning",
       "knowledge-distillation",
-      "few-shot"
+      "few-shot",
+      "meta-prompting"
     ],
     "faq": [
       {
@@ -16469,7 +16510,8 @@
     "relatedTerms": [
       "hallucination",
       "model-extraction",
-      "guardrails"
+      "guardrails",
+      "steganography"
     ],
     "faq": [
       {
@@ -17473,7 +17515,8 @@
     "relatedTerms": [
       "llm-gateway",
       "reasoning-model",
-      "small-language-model"
+      "small-language-model",
+      "router"
     ],
     "faq": [
       {
@@ -20178,7 +20221,8 @@
       "graphrag",
       "ontology",
       "retrieval-augmented-generation",
-      "semantic-search"
+      "semantic-search",
+      "knowledge-representation"
     ],
     "faq": [
       {
@@ -20336,7 +20380,13 @@
     "relatedTerms": [
       "mechanistic-interpretability",
       "guardrails",
-      "alignment"
+      "alignment",
+      "responsible-ai",
+      "ai-auditing",
+      "interpretability",
+      "transparency",
+      "human-centered-ai-design",
+      "neuro-symbolic-ai"
     ],
     "faq": [
       {
@@ -27742,7 +27792,8 @@
       "prompt-library",
       "prompt-engineering",
       "system-prompt",
-      "langchain"
+      "langchain",
+      "guided-generation"
     ]
   },
   {
@@ -27912,7 +27963,8 @@
       "pruning",
       "mixture-of-experts",
       "model-compression",
-      "importance-scoring"
+      "importance-scoring",
+      "sparse-activation"
     ]
   },
   {
@@ -28175,10 +28227,15 @@
   {
     "slug": "batch-splitting",
     "name": "バッチ分割",
-    "aliases": ["Batch Splitting"],
+    "aliases": [
+      "Batch Splitting"
+    ],
     "tagline": "1回の学習ステップで扱うバッチをデバイスのメモリに収まる小さな単位へ分割し、順次または並列に処理する手法",
     "category": "技術",
-    "tags": ["学習", "並列計算"],
+    "tags": [
+      "学習",
+      "並列計算"
+    ],
     "summary": "バッチ分割は、学習に使う1つのバッチをそのまま一括で処理するとGPUメモリに収まらない場合、より小さな単位へ分けて扱う手法の総称。分割したサブバッチを複数デバイスに配って同時に処理すればデータ並列となり、逆に1デバイス上で順番に処理して勾配を蓄積してから1回だけパラメータを更新すれば勾配累積(Gradient Accumulation)になる。パイプライン並列ではさらに細かく分割したマイクロバッチとして各ステージに流し込まれる。\nいずれの場合も、元のバッチサイズを保ったまま計算を小分けにすることで、メモリ制約下でも大きな実効バッチサイズでの学習を可能にする点が共通する。",
     "advantages": [
       "GPUメモリの制約を超える大きな実効バッチサイズでの学習が可能になる",
@@ -28188,15 +28245,27 @@
       "順次処理する場合(勾配累積)は分割数に応じて学習時間が増加する",
       "分割方法によってはデバイス間の通信オーバーヘッドが増える"
     ],
-    "relatedTerms": ["data-parallelism", "micro-batch", "pipeline-parallelism", "gradient-checkpointing"]
+    "relatedTerms": [
+      "data-parallelism",
+      "micro-batch",
+      "pipeline-parallelism",
+      "gradient-checkpointing"
+    ]
   },
   {
     "slug": "tensor-parallelism",
     "name": "テンソル並列",
-    "aliases": ["Tensor Parallelism", "テンソル並列化", "層内並列"],
+    "aliases": [
+      "Tensor Parallelism",
+      "テンソル並列化",
+      "層内並列"
+    ],
     "tagline": "各層内の行列演算そのものを複数デバイスに分割して並列計算する、層内並列とも呼ばれるモデル並列の一手法",
     "category": "技術",
-    "tags": ["並列計算", "学習"],
+    "tags": [
+      "並列計算",
+      "学習"
+    ],
     "summary": "テンソル並列は、モデル並列の一種で、層単位ではなく各層内部の行列演算(重み行列)を複数のGPUに分割して並列計算する手法。Transformerの場合、Self-Attentionの各ヘッドやMLP層の行列積を列方向・行方向に分割し、各デバイスが部分的な計算を担当したうえで、必要な箇所でAll-Reduceなどの集団通信をして結果を合成する。\n層単位で分割するパイプライン並列と異なり、1つの層の計算自体を複数デバイスで同時に処理するため、デバイス間の通信頻度は高くなるが、パイプラインバブルのような待機時間は生じにくい。Megatron-LMで採用され、データ並列・パイプライン並列と組み合わせたハイブリッド並列がLLMの学習で標準的に用いられる。\n2019年にNVIDIAが発表した論文「Megatron-LM: Training Multi-Billion Parameter Language Models Using Model Parallelism」で提案された。",
     "advantages": [
       "1つの巨大な層(超大規模なAttentionやMLP)を複数デバイスで分割して処理できる",
@@ -28206,7 +28275,12 @@
       "層内の分割ごとに通信が発生するため、デバイス間通信の頻度・帯域要求が高い",
       "高速なデバイス間接続(NVLinkなど)がない環境では通信オーバーヘッドが性能を制約しやすい"
     ],
-    "relatedTerms": ["model-parallelism", "data-parallelism", "pipeline-parallelism", "gpu"],
+    "relatedTerms": [
+      "model-parallelism",
+      "data-parallelism",
+      "pipeline-parallelism",
+      "gpu"
+    ],
     "references": [
       {
         "type": "Research Paper",
@@ -28218,10 +28292,16 @@
   {
     "slug": "micro-batch",
     "name": "マイクロバッチ",
-    "aliases": ["Micro-batch", "Microbatch"],
+    "aliases": [
+      "Micro-batch",
+      "Microbatch"
+    ],
     "tagline": "パイプライン並列においてミニバッチをさらに細かく分割した処理単位で、ステージ間の待機時間削減に使う",
     "category": "技術",
-    "tags": ["並列計算", "学習"],
+    "tags": [
+      "並列計算",
+      "学習"
+    ],
     "summary": "マイクロバッチは、パイプライン並列の学習で使われる処理単位。1つのミニバッチをそのまま各パイプラインステージに流すと、あるステージの計算が終わるまで他のステージは待機することになり、その時間(パイプラインバブル)が大きくなる。そこでミニバッチをさらに細かいマイクロバッチへ分割し、各ステージへ順次流し込むことで、複数のマイクロバッチをパイプライン上で同時並行に処理する。\nマイクロバッチの数を増やすほどパイプラインの待機時間の割合は小さくなるが、1マイクロバッチあたりのサイズが小さくなりすぎるとデバイスの演算効率が低下するため、両者のバランスを取る必要がある。",
     "advantages": [
       "パイプライン並列でのデバイス待機時間(バブル)を減らし、利用率を高められる",
@@ -28231,15 +28311,25 @@
       "マイクロバッチが小さすぎると1回あたりの演算効率が落ち、オーバーヘッドが目立つ",
       "スケジューリング方式によっては実装が複雑になる"
     ],
-    "relatedTerms": ["pipeline-parallelism", "batch-splitting", "bubble-minimization"]
+    "relatedTerms": [
+      "pipeline-parallelism",
+      "batch-splitting",
+      "bubble-minimization"
+    ]
   },
   {
     "slug": "bubble-minimization",
     "name": "バブル最小化",
-    "aliases": ["Bubble Minimization", "パイプラインバブル削減"],
+    "aliases": [
+      "Bubble Minimization",
+      "パイプラインバブル削減"
+    ],
     "tagline": "パイプライン並列でデバイスが計算開始・終了時に生じる待機時間(バブル)を、スケジューリング等の工夫で削減する取り組み",
     "category": "技術",
-    "tags": ["並列計算", "学習"],
+    "tags": [
+      "並列計算",
+      "学習"
+    ],
     "summary": "パイプライン並列では、パイプラインの最初と最後で一部のデバイスが計算対象を持たずに待機する時間が生じる。これをパイプラインバブルと呼ぶ。パイプラインステージ数が多いほど、またマイクロバッチ数が少ないほど、バブルが全体の実行時間に占める割合は大きくなり、デバイスの利用率が低下する。\nバブル最小化は、この待機時間を減らすための工夫の総称。代表的な方法として、マイクロバッチ数を増やす・順伝播と逆伝播の実行順序を1F1B(One-Forward-One-Backward)方式にしてメモリ使用量を抑えつつバブルを減らす・複数ステージを交互に配置するインターリーブドスケジューリングを使う、といった手法がある。",
     "advantages": [
       "パイプライン並列でのデバイス利用率が向上し、学習スループットが高まる",
@@ -28249,15 +28339,23 @@
       "バブルを無くすことは難しく、ステージ数や通信環境に応じたトレードオフが残る",
       "1F1Bやインターリーブドスケジューリングなど高度な手法は実装が複雑になる"
     ],
-    "relatedTerms": ["pipeline-parallelism", "micro-batch"]
+    "relatedTerms": [
+      "pipeline-parallelism",
+      "micro-batch"
+    ]
   },
   {
     "slug": "memory-efficiency",
     "name": "メモリ効率化",
-    "aliases": ["Memory Efficiency"],
+    "aliases": [
+      "Memory Efficiency"
+    ],
     "tagline": "限られたGPU・デバイスメモリでより大きなモデルやバッチを学習・推論できるようにする技術群の総称",
     "category": "技術",
-    "tags": ["メモリ最適化", "学習"],
+    "tags": [
+      "メモリ最適化",
+      "学習"
+    ],
     "summary": "メモリ効率化は、モデルの学習・推論時に消費するメモリ量を削減し、限られたハードウェアリソースでより大きなモデルやバッチサイズ、より長いコンテキストを扱えるようにする技術の総称。\n学習時には、中間活性化を保持せず逆伝播時に再計算する勾配チェックポインティングが使われる。また、パラメータ・勾配・オプティマイザ状態をデバイス間で分割して保持するZeRO(Zero Redundancy Optimizer)や、低精度(FP16/BF16など)で計算するMixed Precision Trainingも用いられる。推論時には、KVキャッシュの圧縮や量子化によってメモリ使用量を抑える手法が使われる。\nいずれもモデルの精度低下と引き換えにメモリを節約する、あるいは計算時間の増加と引き換えにメモリを節約する、というトレードオフを伴うことが多い。",
     "advantages": [
       "限られたGPUメモリでより大きなモデル・バッチサイズ・コンテキスト長を扱えるようになる",
@@ -28267,15 +28365,25 @@
       "再計算や通信の増加により、学習・推論にかかる時間が増えることもある",
       "量子化など一部の手法は精度低下とのトレードオフを伴う"
     ],
-    "relatedTerms": ["gradient-checkpointing", "quantization", "kv-cache", "data-parallelism"]
+    "relatedTerms": [
+      "gradient-checkpointing",
+      "quantization",
+      "kv-cache",
+      "data-parallelism"
+    ]
   },
   {
     "slug": "inference-optimization",
     "name": "推論最適化",
-    "aliases": ["Inference Optimization"],
+    "aliases": [
+      "Inference Optimization"
+    ],
     "tagline": "学習済みモデルの推論時のレイテンシ・スループット・メモリ使用量を改善するための技術群の総称",
     "category": "技術",
-    "tags": ["推論最適化", "サービング"],
+    "tags": [
+      "推論最適化",
+      "サービング"
+    ],
     "summary": "推論最適化は、学習済みモデルを実際に稼働させる際の応答速度(レイテンシ)・単位時間あたりの処理量(スループット)・使用メモリ量を改善するための技術の総称。\n代表的な手法として、計算済みのKey/Valueを再利用して再計算を省くKVキャッシュ、次トークンを軽量モデルによって先読みし本体モデルで検証する投機的デコーディング、複数リクエストのバッチを動的に組み替えて処理する継続的バッチ処理(Continuous Batching)がある。\n他にも、パラメータを低ビット幅で表現する量子化や、Attention計算のメモリアクセスを最適化するFlashAttentionなどが使われる。これらはvLLMやTensorRT-LLM、SGLangといった推論エンジンに組み込まれる形で提供されることが多い。",
     "advantages": [
       "同じハードウェアでより多くのリクエストを処理でき、サービング効率が向上する",
@@ -28285,15 +28393,26 @@
       "量子化など一部の手法は出力精度とのトレードオフを伴う",
       "手法ごとに得意なワークロードが異なり、用途に応じた選定・チューニングが必要"
     ],
-    "relatedTerms": ["kv-cache", "speculative-decoding", "quantization", "continuous-batching", "flash-attention"]
+    "relatedTerms": [
+      "kv-cache",
+      "speculative-decoding",
+      "quantization",
+      "continuous-batching",
+      "flash-attention"
+    ]
   },
   {
     "slug": "distortion-minimization",
     "name": "歪み最小化",
-    "aliases": ["Distortion Minimization"],
+    "aliases": [
+      "Distortion Minimization"
+    ],
     "tagline": "量子化などによって生じる出力の誤差(歪み)を最小化するよう、パラメータや量子化パラメータを最適化する手法",
     "category": "技術",
-    "tags": ["量子化", "モデル圧縮"],
+    "tags": [
+      "量子化",
+      "モデル圧縮"
+    ],
     "summary": "歪み最小化は、モデル圧縮・量子化の文脈で、重みや活性化を低ビット表現へ変換した際に生じる出力の誤差(歪み)ができるだけ小さくなるよう、量子化のスケールやゼロ点、あるいは重み自体を最適化するアプローチ。単純に値を丸めるだけの量子化に比べ、層ごとの出力誤差を小さくするよう明示的に最適化することで、精度低下を抑えつつビット幅を下げられる。\n代表例として、GPTQは層ごとの重みを2次近似(Hessian)に基づいて逐次的に量子化し、量子化誤差を後続の未量子化重みに配分することで全体の歪みを最小化する。AWQは活性化の分布を考慮して重要な重みチャネルを保護することで歪みを抑える。",
     "advantages": [
       "単純な丸め込みによる量子化より低いビット幅でも精度低下を抑えやすい",
@@ -28303,7 +28422,13 @@
       "誤差の最適化計算にキャリブレーションデータや追加の計算コストが必要になる",
       "モデルやタスクによって最適な最適化対象・手法が異なる"
     ],
-    "relatedTerms": ["quantization", "gptq", "awq", "ptq", "qat"],
+    "relatedTerms": [
+      "quantization",
+      "gptq",
+      "awq",
+      "ptq",
+      "qat"
+    ],
     "references": [
       {
         "type": "Research Paper",
@@ -28315,10 +28440,15 @@
   {
     "slug": "bayesian-optimization",
     "name": "ベイズ最適化",
-    "aliases": ["Bayesian Optimization"],
+    "aliases": [
+      "Bayesian Optimization"
+    ],
     "tagline": "過去の試行結果から目的関数を確率モデルで近似し、次に試す点を効率的に選びながら最適化するハイパーパラメータ探索手法",
     "category": "技術",
-    "tags": ["チューニング", "学習"],
+    "tags": [
+      "チューニング",
+      "学習"
+    ],
     "summary": "ベイズ最適化は、ハイパーパラメータ最適化における探索手法の1つ。学習率やバッチサイズなどの組み合わせと、それに対する検証性能の関係を直接評価するにはコストがかかるため、ガウス過程などの確率モデルでこの関係(目的関数)を近似する。\nこれまでの試行結果を踏まえ、次にどの値を試すと最も情報が得られそうかを獲得関数(Expected Improvementなど)を使って決定する。グリッドサーチやランダムサーチが探索空間を網羅的・無作為に試すのに対し、ベイズ最適化は過去の結果を活用して有望な領域を優先的に探索するため、少ない試行回数で良い値に到達しやすい。1回の学習コストが高いLLMの学習・ファインチューニングなど、試行回数を抑えたい場面で用いられる。",
     "advantages": [
       "グリッドサーチやランダムサーチより少ない試行回数で良い値に到達しやすい",
@@ -28328,15 +28458,23 @@
       "確率モデルの構築・更新自体に計算コストがかかり、探索対象の次元が多いと効率が落ちやすい",
       "並列に多数の試行を同時実行する場合、グリッドサーチほど単純には並列化しにくい"
     ],
-    "relatedTerms": ["hyperparameter-optimization", "grid-search"]
+    "relatedTerms": [
+      "hyperparameter-optimization",
+      "grid-search"
+    ]
   },
   {
     "slug": "grid-search",
     "name": "グリッドサーチ",
-    "aliases": ["Grid Search"],
+    "aliases": [
+      "Grid Search"
+    ],
     "tagline": "あらかじめ指定したハイパーパラメータ候補値の全組み合わせを網羅的に試し、最良の組み合わせを探す最も基本的な探索手法",
     "category": "技術",
-    "tags": ["チューニング", "学習"],
+    "tags": [
+      "チューニング",
+      "学習"
+    ],
     "summary": "グリッドサーチは、ハイパーパラメータ最適化における最も基本的な探索手法。各ハイパーパラメータについてあらかじめ候補値の一覧(グリッド)を決めておき、それらの全組み合わせをしらみつぶしに評価して、検証データでの性能が最も良い組み合わせを選ぶ。\n実装が単純で、各組み合わせの評価が互いに独立しているため並列実行しやすい一方、ハイパーパラメータの数や候補値の数が増えると組み合わせ数が指数的に増加し、探索コストが急激に大きくなる(次元の呪い)。この欠点を補う手法として、候補値からランダムに抽出して評価するランダムサーチや、過去の結果を活用するベイズ最適化がある。",
     "advantages": [
       "実装がシンプルで理解しやすく、各組み合わせを独立に並列評価できる",
@@ -28346,15 +28484,23 @@
       "ハイパーパラメータの数・候補値の数が増えると組み合わせ数が指数的に増加し、探索コストが膨大になる",
       "重要でないハイパーパラメータにも同じ密度で試行を割り当ててしまい非効率になりやすい"
     ],
-    "relatedTerms": ["hyperparameter-optimization", "bayesian-optimization"]
+    "relatedTerms": [
+      "hyperparameter-optimization",
+      "bayesian-optimization"
+    ]
   },
   {
     "slug": "model-monitoring",
     "name": "モデルモニタリング",
-    "aliases": ["Model Monitoring"],
+    "aliases": [
+      "Model Monitoring"
+    ],
     "tagline": "本番環境に配置したモデルの性能・入出力分布・データドリフトなどを継続的に観測し、劣化を早期に検知する運用プラクティス",
     "category": "インフラ",
-    "tags": ["再現性", "学習"],
+    "tags": [
+      "再現性",
+      "学習"
+    ],
     "summary": "モデルモニタリングは、本番環境にデプロイした機械学習モデルの振る舞いを継続的に観測する運用プラクティス。推論のレイテンシやエラー率といったシステム面の指標に加え、予測精度や入力データの分布が学習時から変化していないか(データドリフト・コンセプトドリフト)、出力の分布に偏りが生じていないかといったモデル固有の指標を監視対象とする。\nLLMを用いたアプリケーションでは、これに加えてハルシネーションの発生率やプロンプトの傾向変化、トークンコストの推移なども監視対象となることが多い。監視結果は、モデルの再学習や再デプロイのタイミングを判断する材料として使われ、MLOpsのパイプラインの一部として組み込まれる。",
     "advantages": [
       "本番環境での性能劣化やデータドリフトを早期に検知し、問題が深刻化する前に対処できる",
@@ -28364,6 +28510,2202 @@
       "監視基盤の構築・維持にコストがかかり、監視すべき指標の設計にはドメイン知識が必要",
       "ドリフトを検知しても、原因の特定や対処には追加の分析が必要になることが多い"
     ],
-    "relatedTerms": ["mlops", "wandb", "llmops"]
+    "relatedTerms": [
+      "mlops",
+      "wandb",
+      "llmops"
+    ]
+  },
+  {
+    "slug": "responsible-ai",
+    "name": "責任あるAI",
+    "aliases": [
+      "Responsible AI"
+    ],
+    "tagline": "AIシステムの設計・開発・運用に公平性・透明性・説明責任などの倫理原則を組み込むための考え方・実践の総称",
+    "category": "技術",
+    "tags": [
+      "安全性",
+      "信頼性"
+    ],
+    "plainSummary": "AIが人や社会に悪影響を与えないよう、公平さや透明性に配慮して作る・使うための取り組み",
+    "summary": "責任あるAI(Responsible AI)とは、AIシステムの設計・開発・運用の全工程において、公平性・透明性・説明責任・プライバシー保護・安全性・人間による監督といった倫理的原則を組み込むための考え方・実践の総称。\n特定の技術や手法を指す言葉ではなく、Explainable AI(説明可能AI)やGuardrails(ガードレール)、Red Teaming(レッドチーミング)、差分プライバシーといった個別の技術的手法を、組織のガバナンスプロセスやポリシーの中に位置づけて運用する枠組みとして機能する。\nGoogleやMicrosoftなど主要AI企業は自社のAI原則(AI Principles)を公表し、開発プロセスにレビューボードやリスク評価を組み込んでいる。\nまた、NISTのAI Risk Management FrameworkやEU AI Actのような公的な枠組み・法規制も、責任あるAIを実現するための具体的な指針や義務を提供している。",
+    "background": "深層学習モデルの実運用が広がるにつれ、採用選考や与信審査、医療診断などの意思決定にAIが用いられるようになり、バイアスによる差別的な判断や、判断根拠が不透明なブラックボックス問題、プライバシー侵害といった社会的リスクが顕在化した。\nこれらのリスクに技術面・組織面の両方から対処するため、責任あるAIという考え方が広まった。",
+    "history": "2018年: Googleが「AI at Google: our principles」を公表し、AI開発における7つの原則を提示。\n2019年: OECDが「AI原則(OECD AI Principles)」を採択し、各国政府のAI政策の基礎の1つとなる。\n2022年: Microsoftが「Responsible AI Standard v2」を公開し、開発プロセスに組み込む具体的な要件を提示。\n2023年: NISTが「AI Risk Management Framework(AI RMF 1.0)」を公開。\n2024年: EUが「AI Act」を成立させ、リスクベースの規制枠組みを法制化。",
+    "workflow": "AI原則の策定 → 開発時のリスクアセスメント → Explainable AIやGuardrailsによる技術的対策の実装 → Red TeamingやAI Auditingによる検証 → デプロイ後のモニタリング → 定期的な見直し。",
+    "advantages": [
+      "差別的な判断やバイアスによる被害を未然に防ぎ、社会的信頼を獲得しやすくなる",
+      "EU AI Act等の法規制への準拠を組織的に進めやすくなる",
+      "技術的対策だけでなく組織プロセスとして継続的に改善できる"
+    ],
+    "disadvantages": [
+      "明確な技術仕様がなく、組織により解釈・運用レベルにばらつきが生じる",
+      "レビューやガバナンスプロセスの追加により、開発スピードの低下を招く場合がある",
+      "原則の遵守状況を定量的に評価する指標の確立が難しい"
+    ],
+    "comparisons": [
+      {
+        "slug": "explainable-ai",
+        "note": "説明可能AIは、責任あるAIを実現するための技術的手段の1つ"
+      },
+      {
+        "slug": "guardrails",
+        "note": "ガードレールは、責任あるAIの安全性原則を実運用で担保する仕組みの1つ"
+      },
+      {
+        "slug": "red-teaming",
+        "note": "レッドチーミングは、責任あるAIの安全性を検証する手段として用いられる"
+      },
+      {
+        "slug": "ai-auditing",
+        "note": "AI監査は、責任あるAIの原則が実際に遵守されているかを検証するプロセス"
+      },
+      {
+        "slug": "privacy-preserving-learning",
+        "note": "プライバシー保護学習は、責任あるAIのプライバシー保護原則を実現する技術"
+      }
+    ],
+    "relatedTerms": [
+      "explainable-ai",
+      "guardrails",
+      "red-teaming",
+      "ai-auditing",
+      "privacy-preserving-learning",
+      "alignment",
+      "differential-privacy",
+      "ai-ethics",
+      "algorithmic-impact-assessment",
+      "transparency",
+      "transparency-report",
+      "ai-ethics-board",
+      "accountability",
+      "human-centered-ai-design",
+      "ai-literacy",
+      "content-policy",
+      "multi-stakeholder-governance",
+      "participatory-design",
+      "inclusive-design",
+      "digital-literacy",
+      "critical-thinking"
+    ],
+    "faq": [
+      {
+        "question": "責任あるAIとアライメントは何が違う？",
+        "answer": "アライメントは、モデルの出力を人間の意図に沿わせる技術的な調整工程を指す。\n責任あるAIは、それを含む組織のガバナンス・ポリシー・プロセス全体を包含する、より広い概念。"
+      },
+      {
+        "question": "責任あるAIに関する法規制にはどのようなものがある？",
+        "answer": "EUのAI Act、米国のNIST AI Risk Management Framework、各国のAI原則などが代表的。\n業界・地域ごとに義務化の範囲や罰則が異なる。"
+      }
+    ],
+    "references": [
+      {
+        "type": "Official Website",
+        "label": "Google AI Principles",
+        "url": "https://ai.google/principles/"
+      },
+      {
+        "type": "Documentation",
+        "label": "NIST AI Risk Management Framework (AI RMF 1.0)",
+        "url": "https://www.nist.gov/itl/ai-risk-management-framework"
+      },
+      {
+        "type": "Official Website",
+        "label": "OECD AI Principles",
+        "url": "https://oecd.ai/en/ai-principles"
+      }
+    ]
+  },
+  {
+    "slug": "ai-auditing",
+    "name": "AI監査",
+    "aliases": [
+      "AI Auditing",
+      "Algorithmic Audit"
+    ],
+    "tagline": "AIシステムのデータ・モデル・出力を体系的に検証し、バイアス・安全性・法令遵守などを評価するプロセス",
+    "category": "技術",
+    "tags": [
+      "評価",
+      "安全性"
+    ],
+    "plainSummary": "AIが公平・安全に動いているかを第三者や内部チームがチェックする仕組み",
+    "summary": "AI監査(AI Auditing)とは、AIシステムの設計・学習データ・モデル・出力を体系的に検証し、バイアス、安全性、透明性、プライバシー、法令遵守といった観点で評価するプロセス。\n内部の品質保証チームによる場合と、独立した第三者機関による場合があり、後者は特に独立監査(independent audit)と呼ばれる。\n監査の対象は学習データの偏りやモデルの判断根拠だけでなく、採用選考ツールや与信審査モデルなど、社会的影響が大きいAIシステムの実運用結果にも及ぶ。\n米ニューヨーク市のLocal Law 144のように、特定分野でのAI監査を法的に義務付ける規制も登場している。",
+    "background": "AIが採用・与信・医療診断など重要な意思決定に使われる場面が増えるにつれ、モデルが特定属性(性別・人種等)に対して不公平な判断をしていないか、開発者の主張通りの性能・安全性を備えているかを、外部から検証する必要性が高まった。\nソフトウェア全般の会計監査やセキュリティ監査の考え方をAIシステムに適用したものが、AI監査という実践として発展した。",
+    "history": "2016年: ProPublicaが再犯予測アルゴリズムCOMPASの人種的バイアスを報じた調査報道「Machine Bias」を公開し、アルゴリズム監査の必要性が広く認識される契機となった。\n2021年: NYC市議会が雇用選考AIツールへのバイアス監査を義務付ける「Local Law 144」を可決(施行は2023年7月)。\n2023年: NISTのAI Risk Management Frameworkが、AIシステムの検証・評価プロセスの一環としてAI監査の考え方を提示。\n2024年: EU AI Actが高リスクAIシステムに対する適合性評価(conformity assessment)を義務化。",
+    "workflow": "監査範囲・評価基準の設定 → 学習データセットの収集・前処理過程の確認 → モデルのバイアステスト(属性ごとの性能差分析等) → 出力のサンプリング検証・レッドチーミング → 監査結果のレポート化 → 是正措置の実施と再評価。",
+    "advantages": [
+      "バイアスや欠陥を実運用前・運用中に発見し、社会的な被害を未然に防げる",
+      "第三者による監査は組織の主張に客観的な裏付けを与え、信頼性向上につながる",
+      "法規制への準拠状況を可視化できる"
+    ],
+    "disadvantages": [
+      "監査基準や手法が業界横断で標準化されておらず、監査ごとに評価の質にばらつきがある",
+      "モデルや学習データの詳細な開示を伴うため、営業秘密や個人情報保護との両立が課題になる",
+      "継続的な監査には専門人材とコストが必要"
+    ],
+    "comparisons": [
+      {
+        "slug": "red-teaming",
+        "note": "レッドチーミングは攻撃者視点での脆弱性発見に重点を置く手法であり、AI監査はより広範な項目を体系的に検証するプロセス"
+      },
+      {
+        "slug": "responsible-ai",
+        "note": "AI監査は、責任あるAIの原則が実際に遵守されているかを検証する手段の1つ"
+      },
+      {
+        "slug": "explainable-ai",
+        "note": "説明可能AIの技術は、AI監査における判断根拠の検証を助ける"
+      },
+      {
+        "slug": "human-evaluation",
+        "note": "人間評価は、AI監査プロセスの一部として用いられることがある"
+      }
+    ],
+    "relatedTerms": [
+      "red-teaming",
+      "responsible-ai",
+      "explainable-ai",
+      "human-evaluation",
+      "alignment",
+      "guardrails",
+      "algorithmic-impact-assessment"
+    ],
+    "faq": [
+      {
+        "question": "AI監査とレッドチーミングは何が違う？",
+        "answer": "レッドチーミングは攻撃者の視点でモデルの脆弱性やジェイルブレイクを能動的に探る手法。\nAI監査はバイアス・性能・法令遵守など、より広い観点からシステム全体を体系的に検証するプロセス。\nレッドチーミングは、AI監査に組み込まれる手法の1つとして扱われることもある。"
+      },
+      {
+        "question": "AI監査は誰が行う？",
+        "answer": "開発組織内の品質保証・コンプライアンスチームが行う内部監査と、独立した第三者機関が行う外部監査(独立監査)の両方がある。\nNYCのLocal Law 144のように、法規制で独立監査が義務付けられるケースもある。"
+      }
+    ],
+    "references": [
+      {
+        "type": "Blog",
+        "label": "ProPublica: Machine Bias",
+        "url": "https://www.propublica.org/article/machine-bias-risk-assessments-in-criminal-sentencing"
+      },
+      {
+        "type": "Official Website",
+        "label": "NYC Local Law 144 (Automated Employment Decision Tools)",
+        "url": "https://www.nyc.gov/site/dca/about/automated-employment-decision-tools.page"
+      },
+      {
+        "type": "Documentation",
+        "label": "NIST AI Risk Management Framework (AI RMF 1.0)",
+        "url": "https://www.nist.gov/itl/ai-risk-management-framework"
+      }
+    ]
+  },
+  {
+    "slug": "adversarial-testing",
+    "name": "敵対的テスト",
+    "aliases": [
+      "Adversarial Testing"
+    ],
+    "tagline": "モデルを意図的に誤動作させる入力を用いて頑健性・安全性を検証するテスト手法",
+    "category": "技術",
+    "tags": [
+      "安全性",
+      "評価"
+    ],
+    "plainSummary": "AIをわざと間違えさせるような入力を試して、弱点がないか確かめるテスト。",
+    "summary": "敵対的テスト(Adversarial Testing)とは、モデルの判断を誤らせる、または望ましくない出力を引き起こすよう意図的に設計された入力を用いて、システムの頑健性や安全性を検証するテスト手法。\n画像分類モデルに微小なノイズを加えて誤分類を誘発する古典的な敵対的サンプルの手法から、LLMに対しジェイルブレイクや有害な出力を誘発するプロンプトを試す手法まで、対象領域に応じた形式で行われる。\nRed Teaming(レッドチーミング)が人間の攻撃者視点による探索的な検証を含む広い概念であるのに対し、敵対的テストはより体系的に設計されたテストケースの生成・実行に重点を置くことが多い。",
+    "history": "2014年、GoodfellowらがCNN画像分類器に対する敵対的サンプル(adversarial examples)の存在とその生成手法を示す論文を発表し、敵対的テストという考え方が広く注目されるきっかけとなった。",
+    "workflow": "テスト対象のモデル・タスクを決定 → 誤動作や有害出力を誘発する入力(敵対的サンプル)を生成 → モデルへ入力し出力を記録 → 想定と異なる挙動を分析 → 発見された弱点をモデルの改善やガードレールの強化へ反映。",
+    "advantages": [
+      "モデルの弱点を体系的なテストケースとして再現・記録できる",
+      "通常の評価データセットでは見逃されやすい頑健性の問題を発見できる"
+    ],
+    "disadvantages": [
+      "想定していない種類の攻撃パターンは、テストケースに含まれず見逃されることがある",
+      "敵対的サンプルの生成には専門知識と計算コストがかかる"
+    ],
+    "comparisons": [
+      {
+        "slug": "red-teaming",
+        "note": "レッドチーミングは人間主導の探索的な検証を含む広い概念、敵対的テストはより体系的なテストケースの実行を指すことが多い"
+      },
+      {
+        "slug": "adversarial-example",
+        "note": "敵対的テストは、敵対的サンプルを用いてモデルを検証する手法"
+      },
+      {
+        "slug": "adversarial-training",
+        "note": "敵対的テストで発見された弱点は、敵対的学習によるモデルの頑健化に活用されることがある"
+      }
+    ],
+    "relatedTerms": [
+      "red-teaming",
+      "adversarial-example",
+      "adversarial-training",
+      "guardrails"
+    ],
+    "references": [
+      {
+        "type": "Research Paper",
+        "label": "Explaining and Harnessing Adversarial Examples",
+        "url": "https://arxiv.org/abs/1412.6572"
+      }
+    ]
+  },
+  {
+    "slug": "penetration-testing",
+    "name": "ペネトレーションテスト",
+    "aliases": [
+      "Penetration Testing",
+      "ペンテスト"
+    ],
+    "tagline": "許可を得た上でシステムへの侵入・攻撃を模擬的に試み、セキュリティ上の脆弱性を発見する手法",
+    "category": "技術",
+    "tags": [
+      "安全性",
+      "評価"
+    ],
+    "plainSummary": "許可を得た専門家が実際にシステムへの侵入を試して、セキュリティの穴を見つけるテスト。",
+    "summary": "ペネトレーションテスト(Penetration Testing、通称ペンテスト)とは、許可を得た上で実際にシステムへの侵入や攻撃を模擬的に試み、セキュリティ上の脆弱性を発見・評価する手法。\n元々はネットワークやWebアプリケーションを対象とするサイバーセキュリティの伝統的な手法だが、近年はLLMアプリケーションやAIシステムを対象に、プロンプトインジェクションやモデル抽出攻撃、権限昇格といったAI特有の脅威も評価対象に含めるケースが増えている。\nOWASPが公開する「OWASP Top 10 for LLM Applications」のようなガイドラインは、LLMアプリケーションのペネトレーションテストにおける観点整理に用いられる。",
+    "history": "ペネトレーションテスト自体は1960年代後半の米国防総省関連のコンピュータセキュリティ評価に起源を持つとされる、サイバーセキュリティの古典的な手法。\n2023年、OWASPが「OWASP Top 10 for Large Language Model Applications」を公開し、LLMアプリケーションを対象としたセキュリティ評価の観点を整理した。",
+    "workflow": "テスト対象と許可範囲(スコープ)を合意 → 情報収集・偵察 → 既知の脆弱性や攻撃手法を用いた侵入の試行 → 発見した脆弱性の深刻度評価 → 結果を報告書にまとめ改善を提案。",
+    "advantages": [
+      "実際の攻撃手法を用いた検証により、理論上だけでなく実運用上悪用可能な脆弱性を発見できる",
+      "第三者による実施は、組織のセキュリティ対策に客観的な評価を与える"
+    ],
+    "disadvantages": [
+      "専門的なスキルを持つ実施者や時間的なコストが必要になる",
+      "テスト実施時点での脆弱性の検証にとどまり、継続的な安全性を保証するものではない"
+    ],
+    "comparisons": [
+      {
+        "slug": "red-teaming",
+        "note": "レッドチーミングはAIモデル自体の安全性に焦点を当てることが多いのに対し、ペネトレーションテストはシステム・インフラ全体のセキュリティ脆弱性を対象とする、より伝統的な手法"
+      },
+      {
+        "slug": "prompt-injection",
+        "note": "LLMアプリケーションを対象としたペネトレーションテストでは、プロンプトインジェクションが主要な検証項目の1つになる"
+      }
+    ],
+    "relatedTerms": [
+      "red-teaming",
+      "prompt-injection",
+      "guardrails"
+    ],
+    "references": [
+      {
+        "type": "Official Website",
+        "label": "OWASP Top 10 for Large Language Model Applications",
+        "url": "https://owasp.org/www-project-top-10-for-large-language-model-applications/"
+      }
+    ]
+  },
+  {
+    "slug": "value-learning",
+    "name": "価値学習",
+    "aliases": [
+      "Value Learning"
+    ],
+    "tagline": "人間の価値観や選好を明示的なルールでなくデータから帰納的に学習させる、AIアライメント研究のアプローチ",
+    "category": "技術",
+    "tags": [
+      "安全性",
+      "アライメント"
+    ],
+    "plainSummary": "AIに「何が良いことか」をルールとして教え込むのでなく、人間の行動や評価データから学ばせる考え方。",
+    "summary": "価値学習(Value Learning)とは、AIシステムに人間の価値観や選好を、明示的にルール化するのではなく、人間の行動や選好データから帰納的に学習させようとするアプローチ。\n人間の意図や価値観を事前にすべて列挙・記述するのは難しいという前提に立つ。\n複数の応答に対する人間の選好比較データから報酬モデルを学習する手法や、人間の行動観察から報酬関数を推定する逆強化学習(Inverse Reinforcement Learning)などが、価値学習の枠組みに位置づけられる。\nRLHFにおける報酬モデルの学習は、価値学習の考え方を実用化した代表例の1つとして扱われることがある。",
+    "history": "2000年、NgとRussellが逆強化学習(Inverse Reinforcement Learning)を定式化した論文を発表し、人間の行動観察から報酬関数を推定する手法の理論的基盤を示した。\nAIセーフティ研究の文脈での「価値学習」という用語は、2010年代半ば以降、人間の価値観をAIに学習させる問題として広く議論されるようになった。",
+    "advantages": [
+      "全ての望ましい振る舞いを人手でルール化する必要がなく、データから学習できる",
+      "文脈依存的で言語化しにくい人間の選好も、比較データを通じて反映しやすい"
+    ],
+    "disadvantages": [
+      "学習に用いる人間の選好データ自体に偏りがあると、その偏りがモデルへ反映される",
+      "人間の観察された行動が、必ずしも真の価値観を正確に反映しているとは限らない"
+    ],
+    "comparisons": [
+      {
+        "slug": "alignment",
+        "note": "価値学習は、アライメントを実現するための代表的なアプローチの1つ"
+      },
+      {
+        "slug": "rlhf",
+        "note": "RLHFにおける報酬モデルの学習は、価値学習の考え方を実用化した応用例の1つ"
+      }
+    ],
+    "relatedTerms": [
+      "alignment",
+      "rlhf",
+      "responsible-ai"
+    ],
+    "references": [
+      {
+        "type": "Research Paper",
+        "label": "Algorithms for Inverse Reinforcement Learning",
+        "url": "https://ai.stanford.edu/~ang/papers/icml00-irl.pdf"
+      }
+    ]
+  },
+  {
+    "slug": "ai-ethics",
+    "name": "AI倫理",
+    "aliases": [
+      "AI Ethics"
+    ],
+    "tagline": "AIの開発・利用が個人や社会に与える影響を、公平性・プライバシー・説明責任などの倫理的観点から検討する学際分野",
+    "category": "技術",
+    "tags": [
+      "安全性",
+      "信頼性"
+    ],
+    "plainSummary": "AIを作ったり使ったりすることが人や社会にどんな影響を与えるかを、公平さやプライバシーの観点から考える分野。",
+    "summary": "AI倫理(AI Ethics)とは、AIシステムの開発・利用が個人や社会に与える影響を、公平性、プライバシー、説明責任、人間の自律性の尊重といった倫理的観点から検討する学際的な研究・実践分野。\n哲学・法学・社会学等の知見を背景に、AIによる差別的な判断、雇用への影響、監視社会化のリスクといった問題を扱う。\nResponsible AI(責任あるAI)が組織における実践的な原則・プロセスを指すのに対し、AI倫理はより理論的・学術的な議論や規範の検討を含む、その基盤となる概念として位置づけられることが多い。",
+    "history": "2016年、IEEEが「Ethically Aligned Design」の取り組みを開始し、AI・自律システムの倫理的設計に関する議論を体系化した。\n2019年、EUの「AIに関するハイレベル専門家会議(HLEG)」が「Ethics Guidelines for Trustworthy AI」を公表し、信頼できるAIの要件を整理した。",
+    "advantages": [
+      "技術的な対策だけでは扱いきれない、社会的・倫理的な問題を議論する枠組みを提供する",
+      "多様な分野の知見を統合し、AIの長期的な影響を検討する視点を提供する"
+    ],
+    "disadvantages": [
+      "原則は多様な立場・文化によって解釈が分かれやすく、統一的な基準を定めにくい",
+      "抽象的な議論にとどまり、具体的な開発プロセスへの落とし込みは難しい場合がある"
+    ],
+    "comparisons": [
+      {
+        "slug": "responsible-ai",
+        "note": "AI倫理が理論的・規範的な議論を含む概念であるのに対し、責任あるAIはそれを組織の実践に落とし込んだ原則・プロセスを指す"
+      },
+      {
+        "slug": "alignment",
+        "note": "AI倫理で議論される価値観は、アライメントの技術的な調整目標の基盤となる"
+      },
+      {
+        "slug": "ai-ethics-board",
+        "note": "AI倫理が理論的・規範的な議論を扱うのに対し、AI倫理委員会はその原則を組織内で実際に審査・監督する機関"
+      },
+      {
+        "slug": "human-centered-ai-design",
+        "note": "人間中心AIデザインは、AI倫理で議論される原則を具体的な設計手法に落とし込んだもの"
+      }
+    ],
+    "relatedTerms": [
+      "responsible-ai",
+      "alignment",
+      "explainable-ai",
+      "fairness",
+      "accountability",
+      "ai-ethics-board",
+      "multi-stakeholder-governance",
+      "participatory-design"
+    ],
+    "references": [
+      {
+        "type": "Official Website",
+        "label": "Ethics Guidelines for Trustworthy AI (European Commission)",
+        "url": "https://digital-strategy.ec.europa.eu/en/library/ethics-guidelines-trustworthy-ai"
+      },
+      {
+        "type": "Official Website",
+        "label": "IEEE Ethically Aligned Design",
+        "url": "https://ethicsinaction.ieee.org/"
+      }
+    ]
+  },
+  {
+    "slug": "interpretability",
+    "name": "解釈可能性",
+    "aliases": [
+      "Interpretability"
+    ],
+    "tagline": "モデルの内部構造や判断過程を人間がどの程度理解できるかを表す性質、およびそれを高めるための研究分野",
+    "category": "技術",
+    "tags": [
+      "安全性",
+      "信頼性"
+    ],
+    "plainSummary": "AIの中身や判断の仕組みが、人にとってどれくらい分かりやすいかという性質。",
+    "summary": "解釈可能性(Interpretability)とは、機械学習モデルの内部構造や判断過程を人間がどの程度理解できるかを指す性質、およびそれを高めるための研究分野。\n決定木や線形回帰のようにモデル自体の構造が単純で、人間にも直接理解しやすい「本質的な解釈可能性」と、深層学習モデルのように複雑なモデルに対し事後的に説明を生成する「事後的な解釈可能性」に大別される。\nExplainable AI(説明可能AI)が個々の予測の根拠を人間に提示する技術・手法を指すのに対し、解釈可能性はモデルそのものが持つ理解しやすさという性質・研究分野を指す、より広い概念として位置づけられることが多い。\nMechanistic Interpretability(メカニスティック解釈可能性)は、解釈可能性研究の中でも内部回路レベルでの理解を目指す、より踏み込んだアプローチにあたる。",
+    "history": "解釈可能性という研究領域は、2016年にZachary C. Liptonが発表した論文「The Mythos of Model Interpretability」を通じて、その定義や必要性が広く議論されるようになった。",
+    "advantages": [
+      "モデルの判断過程を人間が検証できることで、誤りやバイアスの発見につながる",
+      "規制当局や利用者への説明責任を果たしやすくなる"
+    ],
+    "disadvantages": [
+      "精度と解釈可能性の間には、トレードオフが生じることもある",
+      "「解釈可能」の基準が定量化しにくく、研究間で評価方法が統一されていない"
+    ],
+    "comparisons": [
+      {
+        "slug": "explainable-ai",
+        "note": "解釈可能性はモデルの性質・研究分野を指すのに対し、説明可能AIは個々の予測の根拠を提示する技術・手法を指す"
+      },
+      {
+        "slug": "mechanistic-interpretability",
+        "note": "メカニスティック解釈可能性は、解釈可能性研究の中でも内部回路の解明を目指す一分野"
+      }
+    ],
+    "relatedTerms": [
+      "explainable-ai",
+      "mechanistic-interpretability",
+      "responsible-ai"
+    ],
+    "references": [
+      {
+        "type": "Research Paper",
+        "label": "The Mythos of Model Interpretability",
+        "url": "https://arxiv.org/abs/1606.03490"
+      }
+    ]
+  },
+  {
+    "slug": "transparency",
+    "name": "AI透明性",
+    "aliases": [
+      "Transparency",
+      "AI Transparency"
+    ],
+    "tagline": "AIシステムの仕組み・判断根拠・学習データ等を利害関係者へ開示し理解可能にする性質・取り組み",
+    "category": "技術",
+    "tags": [
+      "安全性",
+      "信頼性"
+    ],
+    "plainSummary": "AIがどう動いていて、何のデータで学習されたかを、利用者にも分かるように開示すること。",
+    "summary": "AI透明性(Transparency)とは、AIシステムの動作の仕組みや学習に使われたデータ、判断の根拠などを、利用者や規制当局などの利害関係者が理解できる形で開示する性質・取り組みを指す。\nモデルカードやデータシートによる学習データ・性能の開示、システムプロンプトの公開、AIが生成したコンテンツであることの明示など、様々な形で実践される。\nEU AI Actは、AIシステムの種類やリスクレベルに応じて透明性に関する要件を定めており、利用者へAIとの対話であることを通知する義務や、学習データの概要を開示する義務などが含まれる。",
+    "history": "2019年、EUのHLEG(AIに関するハイレベル専門家会議)が公表した「Ethics Guidelines for Trustworthy AI」で、透明性は信頼できるAIの要件の1つとして位置づけられた。\n2024年成立のEU AI Actでは、特定のAIシステムに対する透明性義務が法制化された。",
+    "advantages": [
+      "利用者がAIの限界やリスクを理解した上で利用しやすくなる",
+      "規制当局や第三者による検証を受けやすくなり、信頼性の向上につながる"
+    ],
+    "disadvantages": [
+      "モデルの詳細な開示は、営業秘密や悪用リスクとのトレードオフになる場合がある",
+      "開示された情報が専門知識のない利用者には理解しにくいことがある"
+    ],
+    "comparisons": [
+      {
+        "slug": "explainable-ai",
+        "note": "透明性は開示・情報提供全般を指す広い概念、説明可能AIは判断根拠を説明する技術"
+      },
+      {
+        "slug": "transparency-report",
+        "note": "透明性レポートは、透明性を実践する具体的な文書の1つ"
+      },
+      {
+        "slug": "accountability",
+        "note": "透明性は情報開示そのものを指し、説明責任は開示を前提とした責任の所在・体制を指す"
+      }
+    ],
+    "relatedTerms": [
+      "explainable-ai",
+      "transparency-report",
+      "responsible-ai",
+      "ai-ethics",
+      "accountability"
+    ],
+    "references": [
+      {
+        "type": "Official Website",
+        "label": "Ethics Guidelines for Trustworthy AI (European Commission)",
+        "url": "https://digital-strategy.ec.europa.eu/en/library/ethics-guidelines-trustworthy-ai"
+      }
+    ]
+  },
+  {
+    "slug": "homomorphic-encryption",
+    "name": "同型暗号",
+    "aliases": [
+      "Homomorphic Encryption",
+      "準同型暗号"
+    ],
+    "tagline": "データを暗号化したまま計算し、復号後に平文で計算した場合と同じ結果を得られる暗号方式",
+    "category": "技術",
+    "tags": [
+      "プライバシー",
+      "セキュリティ"
+    ],
+    "plainSummary": "データを暗号化したまま計算できる技術。計算結果を復号すると、元のデータで計算したのと同じ答えになる。",
+    "summary": "同型暗号(Homomorphic Encryption)とは、データを暗号化した状態のまま加算や乗算などの演算ができ、その暗号化されたままの計算結果を復号すると、平文のまま計算した場合と同じ結果が得られる暗号方式。\n加算のみ、あるいは乗算のみといった限定的な演算のみ可能な部分準同型暗号と、任意の演算を組み合わせられる完全準同型暗号(Fully Homomorphic Encryption, FHE)に分類される。\n機械学習の文脈では、機密性の高いデータをクラウド上のモデルに送信して推論させる際、データを復号せずに計算できるため、プライバシーを保護しながらAIサービスを利用する手段として研究されている。",
+    "history": "1978年、RivestらがRSA暗号の考案とあわせて、暗号化したまま演算するという「準同型暗号」の概念を提唱。\n2009年、Craig Gentryが博士論文で初めて実用可能な完全準同型暗号(FHE)の構成法を発表し、任意の演算を暗号化したまま行える方式を実現した。",
+    "advantages": [
+      "データを復号せずに計算できるため、第三者にデータの中身を見せずに処理を委託できる",
+      "医療・金融など機密性の高いデータをクラウド上のAIモデルで扱う際のプライバシー保護に活用できる"
+    ],
+    "disadvantages": [
+      "平文での計算に比べ、演算・通信のコストが非常に大きく実用上の速度が課題になる",
+      "対応できる演算の種類や回数が方式によって制限される場合がある"
+    ],
+    "comparisons": [
+      {
+        "slug": "differential-privacy",
+        "note": "差分プライバシーが統計結果からの個人特定を防ぐのに対し、同型暗号は暗号化した状態での計算そのものを可能にする"
+      },
+      {
+        "slug": "privacy-preserving-learning",
+        "note": "同型暗号は、プライバシー保護学習を実現するための技術の1つ"
+      }
+    ],
+    "relatedTerms": [
+      "differential-privacy",
+      "privacy-preserving-learning",
+      "responsible-ai"
+    ],
+    "references": [
+      {
+        "type": "Research Paper",
+        "label": "On Data Banks and Privacy Homomorphisms",
+        "url": "https://luca-giuzzi.unibs.it/corsi/Support/papers-1/RAD78.pdf"
+      },
+      {
+        "type": "Research Paper",
+        "label": "Fully Homomorphic Encryption Using Ideal Lattices",
+        "url": "https://www.cs.cmu.edu/~odonnell/hits09/gentry-homomorphic-encryption.pdf"
+      }
+    ]
+  },
+  {
+    "slug": "content-moderation",
+    "name": "コンテンツモデレーション",
+    "aliases": [
+      "Content Moderation"
+    ],
+    "tagline": "ユーザー生成コンテンツやAIの生成物から、暴力的表現やヘイトスピーチなどの有害なコンテンツを検出・排除する取り組み",
+    "category": "技術",
+    "tags": [
+      "安全性",
+      "LLM"
+    ],
+    "plainSummary": "SNSやAIが出す文章・画像から、暴力的・不適切な内容を見つけて取り除く取り組み。",
+    "summary": "コンテンツモデレーション(Content Moderation)とは、プラットフォーム上のユーザー生成コンテンツや生成AIの出力に含まれる、暴力的表現・ヘイトスピーチ・性的コンテンツ・誤情報などの有害な内容を検出する取り組みを指す。\n検出した内容は削除・警告・非表示などの形で対応する。\n従来はSNS等における人手やルールベースのフィルタリングが中心だったが、生成AIの普及に伴い、LLMやマルチモーダルモデルの出力を対象としたコンテンツモデレーションも重要性を増している。\nOpenAIのModeration APIのように、有害コンテンツの検出に特化したモデルをAPIとして提供するサービスも登場している。\nGuardrails(ガードレール)が入出力全般を対象とする広い安全対策の枠組みであるのに対し、コンテンツモデレーションは有害コンテンツの検出・排除に焦点を当てた取り組みとして位置づけられる。",
+    "history": "生成AI文脈での明確な起点は特定しがたいが、2022年にOpenAIが「Moderation API」を無償公開し、テキストの有害性を検出するモデルを提供したことが、LLM出力に対するコンテンツモデレーションの普及の契機の1つとなった。",
+    "advantages": [
+      "有害コンテンツをユーザーへ届く前に検出・遮断でき、プラットフォームの安全性を高められる",
+      "専用APIの利用により、自前でモデルを構築せずとも一定の検出精度を得られる"
+    ],
+    "disadvantages": [
+      "文脈やニュアンスの判断が難しく、誤検知・見逃しの両方が起こりうる",
+      "言語や文化圏によって「有害」の基準が異なり、単一の基準では対応しきれない場合がある"
+    ],
+    "comparisons": [
+      {
+        "slug": "guardrails",
+        "note": "コンテンツモデレーションは、ガードレールが担う機能の1つとして組み込まれることが多い"
+      },
+      {
+        "slug": "red-teaming",
+        "note": "レッドチーミングで発見された有害な出力パターンは、コンテンツモデレーションの改善に反映されることがある"
+      },
+      {
+        "slug": "content-policy",
+        "note": "コンテンツポリシーは許可・禁止を定めた方針、コンテンツモデレーションはその方針を実施する技術的プロセス"
+      }
+    ],
+    "relatedTerms": [
+      "guardrails",
+      "red-teaming",
+      "responsible-ai",
+      "content-policy",
+      "community-standards"
+    ],
+    "references": [
+      {
+        "type": "Documentation",
+        "label": "OpenAI Moderation API",
+        "url": "https://platform.openai.com/docs/guides/moderation"
+      }
+    ]
+  },
+  {
+    "slug": "algorithmic-impact-assessment",
+    "name": "アルゴリズム影響評価",
+    "aliases": [
+      "Algorithmic Impact Assessment",
+      "AIA"
+    ],
+    "tagline": "AIシステムの導入前に、人権・公平性・社会への影響を体系的に評価する手続き",
+    "category": "技術",
+    "tags": [
+      "評価",
+      "安全性"
+    ],
+    "plainSummary": "AIを実際に使い始める前に、社会や個人への悪影響がないかをあらかじめチェックする手続き。",
+    "summary": "アルゴリズム影響評価(Algorithmic Impact Assessment, AIA)とは、AIシステムを導入・運用する前に、そのシステムが個人や社会に与えうる影響(差別的な判断のリスク、プライバシーへの影響、権利侵害の可能性等)を体系的に評価する手続き。\n環境影響評価(Environmental Impact Assessment)の考え方をAIシステムに応用したもので、公共機関がAIを調達・導入する際の説明責任を果たす手段として、一部の国・自治体で制度化されている。\nEU AI Actにおける高リスクAIシステムへの適合性評価(conformity assessment)や基本的人権影響評価(Fundamental Rights Impact Assessment)も、アルゴリズム影響評価と近い性質を持つ制度として位置づけられる。",
+    "history": "2019年、カナダ政府が「自動意思決定に関する指令(Directive on Automated Decision-Making)」を発効し、政府機関が自動意思決定システムを導入する際にAlgorithmic Impact Assessmentツールを用いた評価を義務付けた。\n2024年、EU AI Actが高リスクAIシステムを対象に基本的人権影響評価の実施を義務付けた。",
+    "advantages": [
+      "AIシステムの導入前にリスクを洗い出し、事後対応ではなく予防的な対策を取りやすくなる",
+      "評価結果の公開により、行政機関等の説明責任を果たしやすくなる"
+    ],
+    "disadvantages": [
+      "評価項目や深刻度の判定基準が制度・地域によって異なり、標準化が進んでいない",
+      "評価自体に専門知識と時間がかかり、導入のスピードを遅らせる要因になりうる"
+    ],
+    "comparisons": [
+      {
+        "slug": "ai-auditing",
+        "note": "アルゴリズム影響評価が導入前の事前評価であるのに対し、AI監査は運用中・運用後の検証も含む"
+      },
+      {
+        "slug": "responsible-ai",
+        "note": "アルゴリズム影響評価は、責任あるAIの原則を制度的な手続きとして実装したものの1つ"
+      }
+    ],
+    "relatedTerms": [
+      "ai-auditing",
+      "responsible-ai",
+      "ai-ethics"
+    ],
+    "references": [
+      {
+        "type": "Official Website",
+        "label": "Directive on Automated Decision-Making (Government of Canada)",
+        "url": "https://www.tbs-sct.canada.ca/pol/doc-eng.aspx?id=32592"
+      }
+    ]
+  },
+  {
+    "slug": "transparency-report",
+    "name": "透明性レポート",
+    "aliases": [
+      "Transparency Report"
+    ],
+    "tagline": "企業が自社サービスにおけるデータ開示要請・コンテンツ削除・AI利用状況等を定期的に公表する報告書",
+    "category": "技術",
+    "tags": [
+      "評価",
+      "安全性"
+    ],
+    "plainSummary": "企業が自社サービスでどんなデータ開示要請やコンテンツ削除、AI利用があったかを定期的に公表する報告書。",
+    "summary": "透明性レポート(Transparency Report)とは、企業がユーザーデータへの政府からの開示要請件数、コンテンツの削除件数、AIシステムの利用状況やその影響といった情報を、定期的に公表する報告書。\n元々は政府からのデータ開示要請件数を公表する目的で始まり、SNS事業者を中心にコンテンツモデレーションの実施状況を開示する目的でも広く採用されるようになった。\n生成AIの普及に伴い、AnthropicやOpenAI等のAI企業も、モデルの安全性評価結果や利用ポリシー違反への対応状況などを開示する透明性レポートを公表するようになっている。",
+    "history": "2010年、Googleが透明性レポートを公開し、各国政府からのユーザーデータ開示要請件数の公表を開始した。",
+    "advantages": [
+      "企業の意思決定プロセスや対応状況を外部から検証可能にし、信頼性の向上につながる",
+      "業界横断で開示件数を比較でき、規制当局や研究者による分析の材料になる"
+    ],
+    "disadvantages": [
+      "開示する項目や粒度が企業ごとに異なり、横並びでの比較は難しい場合がある",
+      "レポートの作成・公表には継続的な社内プロセスの整備が必要になる"
+    ],
+    "comparisons": [
+      {
+        "slug": "transparency",
+        "note": "透明性レポートは、AI透明性の原則を実践する具体的な文書の1つ"
+      },
+      {
+        "slug": "ai-auditing",
+        "note": "透明性レポートが企業自身による自己報告であるのに対し、AI監査は独立した第三者による検証を伴う場合が多い"
+      }
+    ],
+    "relatedTerms": [
+      "transparency",
+      "ai-auditing",
+      "content-moderation"
+    ],
+    "references": [
+      {
+        "type": "Blog",
+        "label": "Google Transparency Report",
+        "url": "https://transparencyreport.google.com/"
+      }
+    ]
+  },
+  {
+    "slug": "steganography",
+    "name": "ステガノグラフィー",
+    "aliases": [
+      "Steganography"
+    ],
+    "tagline": "データや画像の中に他の情報を人に気づかれない形で埋め込み隠す技術",
+    "category": "技術",
+    "tags": [
+      "セキュリティ",
+      "LLM"
+    ],
+    "plainSummary": "画像や文章の中に、別の情報をこっそり隠して埋め込む技術。",
+    "summary": "ステガノグラフィー(Steganography)とは、画像・音声・テキストなどのデータの中に、別の情報を人間に気づかれない形で埋め込み隠す技術。\n暗号化がメッセージの内容を読めなくすることを目的とするのに対し、ステガノグラフィーはメッセージの存在自体を隠すことを目的とする点で異なる。\nAI分野では、Digital Watermarking(電子透かし)がステガノグラフィーの技術的な応用の1つとして位置づけられ、生成AIが出力したテキストや画像に検出可能な情報を埋め込む手法として利用される。\n一方で敵対的な用途として、ステガノグラフィーを用いてプロンプトインジェクション攻撃の指示を画像内に隠す手法も研究されている。",
+    "history": "「ステガノグラフィー」という語は、1499年にヨハネス・トリテミウスが執筆した「Steganographia」に由来するとされる、暗号技術の中でも古い分野の1つ。",
+    "advantages": [
+      "情報の存在自体を第三者に気づかれにくくできる",
+      "生成AIの文脈では、コンテンツへAI生成の痕跡を目立たないよう埋め込む用途に応用できる"
+    ],
+    "disadvantages": [
+      "埋め込んだ情報は、画像の圧縮や加工によって破損・消失しやすい",
+      "プロンプトインジェクション等、悪意ある指示を隠す目的で悪用されるリスクがある"
+    ],
+    "comparisons": [
+      {
+        "slug": "watermarking",
+        "note": "電子透かしは、ステガノグラフィーの技術をAI生成コンテンツの検出に応用したものの1つ"
+      },
+      {
+        "slug": "prompt-injection",
+        "note": "ステガノグラフィーは、プロンプトインジェクションの指示を画像等に隠す攻撃手法にも応用されうる"
+      }
+    ],
+    "relatedTerms": [
+      "watermarking",
+      "prompt-injection",
+      "guardrails"
+    ]
+  },
+  {
+    "slug": "fairness",
+    "name": "公平性",
+    "aliases": [
+      "Fairness",
+      "AIフェアネス"
+    ],
+    "tagline": "AIモデルの予測や判断が、性別・人種等の属性によって不当に偏らないことを求める性質・研究領域",
+    "category": "技術",
+    "tags": [
+      "安全性",
+      "信頼性"
+    ],
+    "plainSummary": "AIの判断が、性別や人種などによって不公平に偏らないようにすること。",
+    "summary": "公平性(Fairness)とは、AIモデルの予測や判断結果が、性別・人種・年齢等の属性によって不当に偏らないことを求める性質、およびそれを実現・評価するための研究領域を指す。\n採用選考や与信審査、量刑予測等、人の処遇に影響する場面でAIが用いられる中、学習データやモデルに含まれるバイアスが特定の集団への不利益な判断につながる懸念から重要視されている。\n公平性の定義には複数の立場がある。属性グループ間で予測結果の分布を揃えるグループフェアネス(demographic parityやequalized odds等の指標)や、似た個人には似た判断を下すことを求める個人フェアネス等が提案されている。ただし、複数の指標を同時に満たすことは数学的に困難な場合があり、どの定義を優先するかは応用領域ごとの判断が必要となる。",
+    "background": "学習データには社会に存在する既存の偏りが反映されやすく、AIモデルがその偏りを学習・増幅することで、特定の属性の集団に不利益な判断を下すリスクが指摘されてきた。\n2016年、ProPublicaが再犯予測アルゴリズムCOMPASにおける人種間の予測精度の差を報じたことが、機械学習の公平性への社会的関心を大きく高めるきっかけとなった。",
+    "history": "2011年、Dworkらが論文「Fairness Through Awareness」(2012年ITCS発表)で個人フェアネスの形式的な定義を提示し、機械学習における公平性研究の基礎の1つを築いた。\n2016年のProPublicaによるCOMPAS報道以降、公平性指標の研究や、公平性を考慮した学習手法の開発が急速に進んだ。",
+    "advantages": [
+      "特定の属性への不当な差別を防ぎ、AIシステムへの信頼性を高められる",
+      "公平性指標を用いることで、モデルの偏りを定量的に評価・可視化できる"
+    ],
+    "disadvantages": [
+      "複数の公平性指標を同時に満たすことは数学的に不可能な場合があり、トレードオフの判断が必要になる",
+      "何をもって公平とするかは社会的・文化的な価値観に依存し、単一の技術的基準では解決しきれない"
+    ],
+    "comparisons": [
+      {
+        "slug": "ai-ethics",
+        "note": "公平性はAI倫理が扱う論点の1つであり、技術的な指標・手法として具体化したもの"
+      },
+      {
+        "slug": "alignment",
+        "note": "公平性は主に判断結果の偏りに焦点を当てる一方、アライメントは人間の意図・価値観全般への適合をより広く扱う"
+      },
+      {
+        "slug": "inclusive-design",
+        "note": "公平性はモデルの判断結果における属性間の偏りに焦点を当て、インクルーシブデザインはシステム全体の設計プロセスで多様な利用者を包摂する視点を持つ"
+      }
+    ],
+    "relatedTerms": [
+      "ai-ethics",
+      "alignment",
+      "transparency",
+      "inclusive-design"
+    ],
+    "references": [
+      {
+        "type": "Research Paper",
+        "label": "Fairness Through Awareness",
+        "url": "https://arxiv.org/abs/1104.3913"
+      }
+    ]
+  },
+  {
+    "slug": "accountability",
+    "name": "説明責任",
+    "aliases": [
+      "Accountability",
+      "AIアカウンタビリティ"
+    ],
+    "tagline": "AIシステムの判断やその影響について、開発者・運用者が責任を負い説明できる状態を確保する原則",
+    "category": "技術",
+    "tags": [
+      "安全性",
+      "信頼性"
+    ],
+    "plainSummary": "AIが下した判断について、作った側や使う側がきちんと説明し責任を持てるようにすること。",
+    "summary": "説明責任(Accountability)とは、AIシステムの判断やその結果生じる影響について、開発者・提供者・運用者が責任の所在を明確にし、誤りや疑義が生じた際に説明できる状態を確保する原則を指す。\nAIの判断過程がブラックボックス化しやすいことから、誰がどの範囲まで責任を負うのかが曖昧になりやすく、誤った判断や不利益が生じた際の是正・救済を難しくする懸念がある。\n実践上は、判断根拠を追跡できる記録(監査ログ)の保持、人間による最終確認や介入の仕組み(human-in-the-loop)、問題発生時の責任分担を明文化した体制整備等を通じて確保される。\n透明性(Transparency)がAIの仕組みや根拠を開示すること自体を指すのに対し、説明責任はその開示を前提として、誰が責任を負い是正するかという体制・原則を指す点で区別される。",
+    "history": "2019年、EUのAIに関するハイレベル専門家会議(HLEG)が公表した「Ethics Guidelines for Trustworthy AI」で、説明責任は信頼できるAIを構成する要件の1つとして明記された。",
+    "advantages": [
+      "問題発生時に責任の所在が明確になり、是正や救済につながりやすくなる",
+      "開発・運用プロセスの記録が整備され、内部統制やガバナンスの向上に寄与する"
+    ],
+    "disadvantages": [
+      "AIの判断に開発者・提供者・利用者等の複数の主体が関与する場合、責任分担の線引きが難しい",
+      "説明責任を果たすための監査ログ整備等は、追加の開発・運用コストを伴う"
+    ],
+    "comparisons": [
+      {
+        "slug": "transparency",
+        "note": "透明性が情報開示そのものを指すのに対し、説明責任は開示を前提とした責任の所在・体制を指す"
+      },
+      {
+        "slug": "ai-ethics",
+        "note": "説明責任はAI倫理の主要な要件の1つとして位置づけられる"
+      }
+    ],
+    "relatedTerms": [
+      "transparency",
+      "ai-ethics",
+      "responsible-ai"
+    ],
+    "references": [
+      {
+        "type": "Official Website",
+        "label": "Ethics Guidelines for Trustworthy AI (European Commission)",
+        "url": "https://digital-strategy.ec.europa.eu/en/library/ethics-guidelines-trustworthy-ai"
+      }
+    ]
+  },
+  {
+    "slug": "steering",
+    "name": "ステアリング",
+    "aliases": [
+      "Steering",
+      "Activation Steering",
+      "Model Steering"
+    ],
+    "tagline": "モデル内部の活性化を直接操作し、出力のスタイルや性質を狙った方向へ誘導する技術",
+    "category": "技術",
+    "tags": [
+      "安全性",
+      "LLM"
+    ],
+    "plainSummary": "モデル内部の計算過程に直接手を加えて、出力の傾向を狙った方向に誘導する技術。",
+    "summary": "ステアリング(Steering)とは、プロンプトの書き換えではなく、モデル内部の活性化(activation)に対して特定のベクトルを加算・調整することで、出力のスタイルや性質、話題への言及傾向等を狙った方向へ誘導する技術を指す。\n解釈可能性研究において、特定の概念に対応する内部特徴(feature)が事前に特定できている場合、その特徴に対応する方向へ活性化を人為的に強めることで、モデルの挙動を直接操作できる。\nプロンプトエンジニアリングが入力側からモデルの出力を間接的に誘導するのに対し、ステアリングはモデル内部へ直接介入する点で異なり、有害な出力の抑制や特定の振る舞いの強調等、アライメントや安全性向上の手法としても研究されている。",
+    "history": "2024年5月、Anthropicが論文「Scaling Monosemanticity: Extracting Interpretable Features from Claude 3 Sonnet」を公表した。抽出した内部特徴を用いてモデルの出力を操作する例として、特定の概念に強く言及するよう誘導した「Golden Gate Claude」のデモも公開した。",
+    "advantages": [
+      "再学習やプロンプト変更を伴わずに、モデルの出力傾向を直接調整できる",
+      "解釈可能性研究で得られた内部構造の理解を、実際の挙動制御に応用できる"
+    ],
+    "disadvantages": [
+      "操作対象の特徴を事前に特定する必要があり、対象モデルの内部構造への深い理解が前提となる",
+      "過度な操作は、意図しない副作用や出力品質の低下を招く場合がある"
+    ],
+    "comparisons": [
+      {
+        "slug": "prompt-engineering",
+        "note": "プロンプトエンジニアリングは入力側からの間接的な誘導、ステアリングはモデル内部への直接的な介入"
+      },
+      {
+        "slug": "alignment",
+        "note": "ステアリングは、アライメントを実現するための実装手段の1つとして研究されている"
+      }
+    ],
+    "relatedTerms": [
+      "alignment",
+      "prompt-engineering",
+      "constitutional-ai"
+    ],
+    "references": [
+      {
+        "type": "Research Paper",
+        "label": "Scaling Monosemanticity: Extracting Interpretable Features from Claude 3 Sonnet",
+        "url": "https://transformer-circuits.pub/2024/scaling-monosemanticity/index.html"
+      }
+    ]
+  },
+  {
+    "slug": "ai-ethics-board",
+    "name": "AI倫理委員会",
+    "aliases": [
+      "AI Ethics Board",
+      "AI Ethics Committee"
+    ],
+    "tagline": "組織内でAIの開発・運用に伴う倫理的リスクを審査・監督するために設置される委員会",
+    "category": "技術",
+    "tags": [
+      "安全性",
+      "ガバナンス"
+    ],
+    "plainSummary": "会社などの組織内で、AIの開発や利用が倫理的に問題ないかをチェックする委員会。",
+    "summary": "AI倫理委員会(AI Ethics Board)とは、企業や研究機関等の組織内に設置され、AIシステムの開発・導入・運用に伴う倫理的リスクを審査・監督する役割を担う委員会を指す。\n新たなAI製品・機能のリリース前審査、既存システムの継続的なモニタリング、倫理原則に反する事案が生じた際の対応方針の検討等を担うことが多く、法務・倫理・技術等、複数分野の専門家で構成されることが多い。\nAI倫理が理論的・規範的な議論を扱う分野であるのに対し、AI倫理委員会はその原則を組織内の意思決定プロセスへ落とし込み、実際に審査・監督する機関として位置づけられる。",
+    "advantages": [
+      "リリース前審査を通じ、倫理的リスクを事前に発見・是正しやすくなる",
+      "組織として一貫した倫理判断の基準・体制を持つことができる"
+    ],
+    "disadvantages": [
+      "委員会の審査が形式化し、実効性を伴わない儀礼的な手続きにとどまる場合がある",
+      "審査プロセスの追加により、開発・リリースの意思決定が遅くなりやすい"
+    ],
+    "comparisons": [
+      {
+        "slug": "ai-ethics",
+        "note": "AI倫理が理論的・規範的な議論を扱うのに対し、AI倫理委員会はその原則を組織内で実際に審査・監督する機関"
+      },
+      {
+        "slug": "responsible-ai",
+        "note": "AI倫理委員会は、責任あるAIの原則を組織内で実践するための体制の1つとして機能する"
+      },
+      {
+        "slug": "multi-stakeholder-governance",
+        "note": "AI倫理委員会は組織内部の審査機関、マルチステークホルダーガバナンスは組織の枠を超えた多様な主体による協議の枠組み"
+      }
+    ],
+    "relatedTerms": [
+      "ai-ethics",
+      "responsible-ai",
+      "accountability",
+      "multi-stakeholder-governance"
+    ]
+  },
+  {
+    "slug": "human-centered-ai-design",
+    "name": "人間中心AIデザイン",
+    "aliases": [
+      "Human-Centered AI Design",
+      "HCAI"
+    ],
+    "tagline": "AIシステムの設計において、性能だけでなく人間のニーズ・能力・信頼を中心に据える設計思想・手法",
+    "category": "技術",
+    "tags": [
+      "安全性",
+      "ユーザーインターフェース"
+    ],
+    "plainSummary": "AIを作るとき、性能だけでなく人が使いやすく信頼できることを中心に考える設計の考え方。",
+    "summary": "人間中心AIデザイン(Human-Centered AI Design)とは、AIシステムの設計においてモデルの性能向上のみを追求するのではなく、利用者のニーズ・能力・信頼、そして人間による制御可能性を中心に据える設計思想・手法を指す。\n自動化の度合いを高めることと、人間による理解・制御を保つことは必ずしも両立しないというジレンマ(自動化と人間制御のパラドックス)を踏まえ、AIを人間の能力を代替するものではなく拡張・補助するものとして位置づける立場を取ることが多い。\n具体的には、AIの判断根拠を利用者が把握できるUIの設計、誤った出力を利用者が容易に修正・拒否できる仕組み、責任の所在を明確にした人間の関与ポイントの設計等が含まれる。",
+    "history": "2020年、Ben Shneidermanが著書『Human-Centered AI』(Oxford University Press)で、高い自動化と高い人間制御を両立させる設計原則を体系的に提示し、人間中心AIデザインの議論の中心的な参照点となった。",
+    "advantages": [
+      "利用者の信頼や理解を得やすい設計となり、AIシステムの実運用における受容性が高まる",
+      "人間による監督・介入の余地を残すことで、誤った自動判断による被害を抑えやすい"
+    ],
+    "disadvantages": [
+      "人間の関与を前提とする分、完全自動化と比べて処理速度や効率は低下しやすい",
+      "何を『人間中心』とするかの具体的な設計基準は応用領域ごとの検討が必要で、標準化しにくい"
+    ],
+    "comparisons": [
+      {
+        "slug": "explainable-ai",
+        "note": "説明可能AIは判断根拠を提示する技術、人間中心AIデザインはそれを含むより広い設計思想全体を指す"
+      },
+      {
+        "slug": "ai-ethics",
+        "note": "人間中心AIデザインは、AI倫理で議論される人間の自律性尊重等の原則を具体的な設計手法に落とし込んだもの"
+      },
+      {
+        "slug": "participatory-design",
+        "note": "人間中心AIデザインは設計思想全体を指し、参加型設計は当事者を設計プロセスに直接関与させる具体的な実践手法"
+      },
+      {
+        "slug": "inclusive-design",
+        "note": "インクルーシブデザインは、人間中心AIデザインが重視する利用者中心の視点を多様性・包摂性の観点から具体化したもの"
+      }
+    ],
+    "relatedTerms": [
+      "explainable-ai",
+      "ai-ethics",
+      "responsible-ai",
+      "participatory-design",
+      "inclusive-design"
+    ]
+  },
+  {
+    "slug": "ai-literacy",
+    "name": "AIリテラシー",
+    "aliases": [
+      "AI Literacy"
+    ],
+    "tagline": "AIの仕組み・能力・限界・リスクを理解し、適切に利用・評価するために必要な知識と能力",
+    "category": "技術",
+    "tags": [
+      "安全性",
+      "AI教育"
+    ],
+    "plainSummary": "AIがどんな仕組みで、何が得意で何が苦手かを理解し、正しく使いこなす力。",
+    "summary": "AIリテラシー(AI Literacy)とは、AIシステムの基本的な仕組みや能力、限界、およびそれに伴うリスクを理解し、日常業務や生活の中でAIを適切に利用・評価するために必要な知識と能力を指す。\nAIを開発する専門家だけでなく、AIを利用する従業員や一般市民が対象となる点が特徴で、ハルシネーションのようなAI特有の限界を理解した上で出力を鵜呑みにせず検証する姿勢や、AIに入力すべきでない機密情報を判断する能力等が含まれる。\nAI技術が急速に社会へ浸透する中、専門知識を持たない利用者が誤った利用によって不利益を被るリスクを減らすため、企業や教育機関でのAIリテラシー教育の重要性が高まっている。",
+    "history": "2024年8月に施行されたEU AI Act第4条は、AIシステムの提供者・利用者に対し、自組織の従業員等が十分なAIリテラシーを持つよう確保する努力義務を定めた。",
+    "advantages": [
+      "AIの限界を理解した上での利用により、誤った出力への過信や機密情報の入力を防ぎやすくなる",
+      "組織全体でAI活用の質が向上し、生産性向上につながりやすい"
+    ],
+    "disadvantages": [
+      "AI技術の急速な変化に教育内容が追いつかず、継続的な更新が必要になる",
+      "リテラシー教育の効果を定量的に測定・評価する基準が確立されていない"
+    ],
+    "comparisons": [
+      {
+        "slug": "ai-ethics",
+        "note": "AIリテラシーは利用者側の知識・能力に焦点を当てる一方、AI倫理は開発・利用全般の規範的な議論を扱う"
+      },
+      {
+        "slug": "digital-literacy",
+        "note": "デジタルリテラシーはデジタル技術全般を対象とする広い概念、AIリテラシーはAI固有の仕組みや限界の理解に焦点を当てたその一部"
+      }
+    ],
+    "relatedTerms": [
+      "ai-ethics",
+      "hallucination",
+      "responsible-ai",
+      "digital-literacy",
+      "critical-thinking"
+    ],
+    "references": [
+      {
+        "type": "Official Website",
+        "label": "EU Artificial Intelligence Act (Regulation (EU) 2024/1689)",
+        "url": "https://eur-lex.europa.eu/eli/reg/2024/1689/oj"
+      }
+    ]
+  },
+  {
+    "slug": "content-policy",
+    "name": "コンテンツポリシー",
+    "aliases": [
+      "Content Policy",
+      "Usage Policy"
+    ],
+    "tagline": "AIサービスが許可・禁止する利用方法やコンテンツの種類を定めた運用方針",
+    "category": "技術",
+    "tags": [
+      "安全性",
+      "利用規約"
+    ],
+    "plainSummary": "AIサービスで、何を使ってよく何がだめかを定めたルール。",
+    "summary": "コンテンツポリシー(Content Policy)とは、AIサービスの提供者が、利用者に許可される利用方法や、生成・入力してはならないコンテンツの種類を定めた運用方針を指す。\n暴力的・性的な表現、ヘイトスピーチ、違法行為の助長、個人情報の不正な取り扱い等、禁止対象となる利用が具体的に列挙されることが多く、違反した場合の対応(警告・アカウント停止等)も併せて定められる。\nコンテンツポリシーが『何が許可・禁止されるか』を定めた方針・規約であるのに対し、コンテンツモデレーションはその方針に基づき実際に有害な入出力を検出・排除する技術的な実施プロセスを指す点で区別される。",
+    "advantages": [
+      "利用者に対し、許可される利用範囲を事前に明示でき、誤用や悪用を抑止しやすい",
+      "違反時の対応方針が明確になり、サービス運営の一貫性を保ちやすい"
+    ],
+    "disadvantages": [
+      "ポリシーの文言が抽象的な場合、個別の利用が違反に該当するかを判断しにくいことがある",
+      "技術の進展や新たな悪用手口に応じて、継続的な見直し・更新が必要になる"
+    ],
+    "comparisons": [
+      {
+        "slug": "content-moderation",
+        "note": "コンテンツポリシーは許可・禁止を定めた方針、コンテンツモデレーションはその方針を実施する技術的プロセス"
+      },
+      {
+        "slug": "guardrails",
+        "note": "ガードレールは、コンテンツポリシーで定めた制約をシステム的に強制する実装手段の1つ"
+      },
+      {
+        "slug": "community-standards",
+        "note": "コンテンツポリシーは事業者による利用方針を指し、コミュニティ基準は利用者コミュニティ内での行動規範という性格が強い"
+      }
+    ],
+    "relatedTerms": [
+      "content-moderation",
+      "guardrails",
+      "responsible-ai",
+      "community-standards"
+    ]
+  },
+  {
+    "slug": "constrained-generation",
+    "name": "制約付き生成",
+    "aliases": [
+      "Constrained Generation",
+      "Constrained Decoding",
+      "制約付きデコーディング"
+    ],
+    "tagline": "LLMの生成時に、文法・正規表現・スキーマ等の制約に従うトークンのみを候補とすることで出力形式を保証する技術の総称",
+    "category": "技術",
+    "tags": [
+      "デコーディング",
+      "LLM"
+    ],
+    "plainSummary": "AIが答えを作るとき、決まったルールに合うトークンしか選ばせないようにして、出力形式を守らせる技術。",
+    "summary": "制約付き生成(Constrained Generation)とは、LLMが各デコードステップでトークンを生成する際、文法規則・正規表現・JSON Schema等の制約に基づき、許容されるトークン集合をあらかじめ絞り込むことで、制約に違反する出力が生成されないことを保証する技術の総称。\nプロンプトによる指示のみでは形式違反が起こりうる問題を、デコード処理そのものへの介入によって解決するアプローチであり、JSON Schemaへの準拠を保証するStructured Output、正規表現に従う生成、コンテキストフリー文法(CFG)に従うコード生成等、幅広い応用の基盤になっている。\nOutlinesやguidance、llama.cppのgrammar機能等のOSSライブラリで実装が提供されている。",
+    "background": "プロンプトのみでフォーマットを指示する方法は、モデルが指示を無視したり不完全な出力を生成したりするリスクを伴う。\n制約付き生成は、生成過程そのものに制約を組み込むことで、出力形式の保証を実現するために発展した。",
+    "advantages": [
+      "出力形式の違反を構造的に防止でき、後続処理でのパースエラーを削減できる",
+      "プロンプトによる指示だけに頼らず、確実性の高い形式保証を実現できる"
+    ],
+    "disadvantages": [
+      "制約チェックの計算コストにより、生成速度が低下しやすい",
+      "複雑な制約(文法規則)の定義・保守にコストが発生する"
+    ],
+    "comparisons": [
+      {
+        "slug": "structured-output",
+        "note": "Structured OutputはJSON Schemaへの準拠に特化した機能、制約付き生成は文法・正規表現等も含むより広い技術の総称"
+      },
+      {
+        "slug": "guided-generation",
+        "note": "ガイド付き生成はテンプレートで生成の流れ自体を導く手法、制約付き生成はトークン候補を制約する技術という点でアプローチが異なる"
+      }
+    ],
+    "relatedTerms": [
+      "structured-output",
+      "guided-generation",
+      "decoding"
+    ]
+  },
+  {
+    "slug": "guided-generation",
+    "name": "ガイド付き生成",
+    "aliases": [
+      "Guided Generation"
+    ],
+    "tagline": "テンプレートやプレースホルダーを用いて、LLMの生成の流れそのものを事前定義した構造に沿って進行させる技術",
+    "category": "技術",
+    "tags": [
+      "デコーディング",
+      "LLM"
+    ],
+    "plainSummary": "あらかじめ用意した雛形の空欄をAIに埋めさせる形で、答えの作られ方そのものを導く技術。",
+    "summary": "ガイド付き生成(Guided Generation)とは、固定文字列・プレースホルダー・条件分岐等を含むテンプレートをあらかじめ定義し、LLMがそのテンプレートの空所を埋める形で生成を進める手法。\nトークン候補を制約する制約付き生成と異なり、生成プロセス自体をテンプレートの構造に沿って段階的に進行させる点に特徴がある。\nMicrosoftのguidanceライブラリやLangChainのプロンプトテンプレート機構等が代表的な実装で、固定部分の再生成を省略できるためレイテンシ削減にもつながる。",
+    "background": "自由形式の生成に任せると、出力の一部が期待した構造から逸脱したり、不要な冗長さが生じたりする課題があった。\nガイド付き生成は、あらかじめ定義したテンプレートに沿って生成を導くことで、この課題に対応する目的で発展した。",
+    "advantages": [
+      "テンプレートの固定部分を再生成する必要がなく、生成のレイテンシを削減できる",
+      "出力の構造をテンプレートとして明示的に管理でき、意図した形式からの逸脱を防ぎやすい"
+    ],
+    "disadvantages": [
+      "テンプレートの設計・保守にコストがかかり、想定外の入力パターンへの対応は難しい場合がある",
+      "柔軟な自由形式の応答が求められる用途には不向きな場合がある"
+    ],
+    "comparisons": [
+      {
+        "slug": "constrained-generation",
+        "note": "制約付き生成はトークン候補自体を制約する技術、ガイド付き生成はテンプレートで生成の流れを導く手法という点でアプローチが異なる"
+      },
+      {
+        "slug": "prompt-template",
+        "note": "プロンプトテンプレートは入力側の雛形、ガイド付き生成は出力の生成過程そのものをテンプレートに沿って進行させる"
+      }
+    ],
+    "relatedTerms": [
+      "constrained-generation",
+      "structured-output",
+      "prompt-template"
+    ]
+  },
+  {
+    "slug": "multi-stakeholder-governance",
+    "name": "マルチステークホルダーガバナンス",
+    "aliases": [
+      "Multi-stakeholder Governance"
+    ],
+    "tagline": "政府・企業・市民社会・学術機関等、多様な利害関係者が協働してAIガバナンスの意思決定に関わる統治モデル",
+    "category": "技術",
+    "tags": [
+      "安全性",
+      "ガバナンス"
+    ],
+    "plainSummary": "AIのルール作りを、政府や企業だけでなく市民や研究者など様々な立場の人が一緒に話し合って決める仕組み。",
+    "summary": "マルチステークホルダーガバナンスとは、AIの開発・利用に関するルール形成やリスク管理を、政府や企業のみで単独に決めるのではなく、市民社会・学術機関・利用者コミュニティ等、多様な利害関係者が対等な立場で協議・意思決定に参加する統治モデルを指す。\n単一主体による規制や自主規制の限界(専門知識の偏り、利益相反、正当性の欠如等)を補うことを狙いとし、政策形成の透明性と実効性を高める手段として、国際機関やAIガバナンスに関する議論で採用されている。\nインターネットガバナンス分野で確立されたマルチステークホルダーモデルの考え方を、AIガバナンスへ応用したものと位置づけられる。",
+    "advantages": [
+      "多様な立場の意見を反映することで、政策・ルールの正当性と実効性を高めやすい",
+      "単一主体の利害や専門知識の偏りによる意思決定の歪みを補正しやすい"
+    ],
+    "disadvantages": [
+      "関係者が多いほど合意形成に時間がかかり、意思決定の迅速性を欠く場合がある",
+      "参加者間の交渉力の差により、実質的な発言力に偏りが生じやすい"
+    ],
+    "comparisons": [
+      {
+        "slug": "ai-ethics-board",
+        "note": "AI倫理委員会は組織内部の審査機関、マルチステークホルダーガバナンスは組織の枠を超えた多様な主体による協議の枠組み"
+      }
+    ],
+    "relatedTerms": [
+      "ai-ethics-board",
+      "ai-ethics",
+      "responsible-ai"
+    ]
+  },
+  {
+    "slug": "participatory-design",
+    "name": "参加型設計",
+    "aliases": [
+      "Participatory Design"
+    ],
+    "tagline": "システムの設計プロセスに、実際の利用者や影響を受ける当事者を直接関与させる設計手法",
+    "category": "技術",
+    "tags": [
+      "安全性",
+      "ユーザーインターフェース"
+    ],
+    "plainSummary": "システムを作る過程に、実際に使う人や影響を受ける人自身に加わってもらう設計のやり方。",
+    "summary": "参加型設計(Participatory Design)とは、システムやサービスの設計プロセスに、開発者だけでなく実際の利用者やその影響を受ける当事者を直接関与させ、設計の初期段階から意見を反映させる設計手法を指す。\n1970年代の北欧諸国において、労働者が自らの職場で使う情報システムの設計に参加する運動として発展した経緯を持ち、現在ではAIシステムの設計においても、開発者だけでは把握しきれない利用文脈やリスクを当事者の視点から取り込む手法として応用されている。\n人間中心AIデザインが設計思想全体を指す概念であるのに対し、参加型設計はその実践手法の1つとして位置づけられる。",
+    "history": "1970年代、スカンジナビア諸国において労働組合が主導する形で、職場の情報システム設計に労働者自身が参加する「スカンジナビアモデル」の実践が始まり、参加型設計の起源として位置づけられている。",
+    "advantages": [
+      "実際の利用者の視点を設計に反映でき、開発者だけでは気づきにくい課題やリスクを早期に発見しやすい",
+      "当事者の関与により、完成したシステムへの受容性・納得感が高まりやすい"
+    ],
+    "disadvantages": [
+      "多様な当事者の招集・調整に時間とコストがかかる",
+      "参加者の意見が対立する場合、設計方針を決定しにくくなることがある"
+    ],
+    "comparisons": [
+      {
+        "slug": "human-centered-ai-design",
+        "note": "人間中心AIデザインは設計思想全体を指し、参加型設計は当事者を設計プロセスに直接関与させる具体的な実践手法"
+      }
+    ],
+    "relatedTerms": [
+      "human-centered-ai-design",
+      "inclusive-design",
+      "ai-ethics"
+    ]
+  },
+  {
+    "slug": "inclusive-design",
+    "name": "インクルーシブデザイン",
+    "aliases": [
+      "Inclusive Design"
+    ],
+    "tagline": "年齢・障害・文化的背景等の異なる幅広い利用者が使えることを前提に設計するデザイン手法",
+    "category": "技術",
+    "tags": [
+      "安全性",
+      "ユーザーインターフェース"
+    ],
+    "plainSummary": "年齢や障害、文化の違いにかかわらず、幅広い人が使えることを前提にシステムを設計する考え方。",
+    "summary": "インクルーシブデザインとは、年齢・身体的能力・言語・文化的背景等が異なる幅広い利用者を対象とし、特定の利用者を排除しないことを前提にシステムやサービスを設計する手法を指す。\n平均的な利用者像を想定して後から例外対応を追加するのではなく、設計の初期段階から多様な利用者の存在を前提とする点に特徴がある。\nAIシステムでは、特定の属性の利用者に対する認識精度の低下や、特定の言語・文化圏への偏りといった課題への対策としても重要視される。\n公平性がモデルの判断結果における偏りに焦点を当てるのに対し、インクルーシブデザインはシステム全体の設計プロセスにおいて多様な利用者を包摂する、より広い視点を持つ。",
+    "advantages": [
+      "幅広い利用者層に対応できるシステムとなり、利用機会の格差を減らせる",
+      "特定の属性の利用者を想定から漏らすことで生じる、後戻りの大きい設計上の欠陥を防ぎやすい"
+    ],
+    "disadvantages": [
+      "対応すべき利用者像の幅が広がる分、設計・検証の工数が増加する",
+      "すべての利用者層を同時に満たす設計は難しく、優先順位の判断が必要になる"
+    ],
+    "comparisons": [
+      {
+        "slug": "fairness",
+        "note": "公平性はモデルの判断結果における属性間の偏りに焦点を当て、インクルーシブデザインはシステム全体の設計プロセスで多様な利用者を包摂する視点を持つ"
+      },
+      {
+        "slug": "human-centered-ai-design",
+        "note": "インクルーシブデザインは、人間中心AIデザインが重視する利用者中心の視点を多様性・包摂性の観点から具体化したもの"
+      }
+    ],
+    "relatedTerms": [
+      "fairness",
+      "human-centered-ai-design",
+      "participatory-design"
+    ]
+  },
+  {
+    "slug": "digital-literacy",
+    "name": "デジタルリテラシー",
+    "aliases": [
+      "Digital Literacy"
+    ],
+    "tagline": "デジタル機器・サービスを適切に活用し、情報の真偽を判断・評価する能力",
+    "category": "技術",
+    "tags": [
+      "安全性",
+      "AI教育"
+    ],
+    "plainSummary": "パソコンやスマホ、ネットのサービスを使いこなし、出てきた情報が正しいか見極める力。",
+    "summary": "デジタルリテラシーとは、コンピュータやインターネット、各種デジタルサービスを活用して情報を検索・作成・共有する基本的な能力に加え、得られた情報の信頼性を評価し安全に利用する能力を指す。\nAI以前から情報教育の文脈で用いられてきた概念だが、生成AIの普及に伴い、AIが生成した情報と人が作成した情報を区別する視点や、AIサービスの利用可否の判断もデジタルリテラシーの一部として扱われるようになっている。\nAIリテラシーがAI固有の仕組み・限界の理解に焦点を当てるのに対し、デジタルリテラシーはAIを含むデジタル技術全般を対象とする、より広い概念として位置づけられる。",
+    "advantages": [
+      "デジタル技術全般を安全かつ効果的に活用でき、情報格差の是正につながる",
+      "誤情報・偽情報を見分ける判断力が身につき、オンライン上のリスクを回避しやすくなる"
+    ],
+    "disadvantages": [
+      "対象とする技術・サービスの範囲が広く、教育内容の体系化が難しい",
+      "デジタル環境へのアクセス自体に格差がある場合、リテラシー教育の効果が限定的になる"
+    ],
+    "comparisons": [
+      {
+        "slug": "ai-literacy",
+        "note": "デジタルリテラシーはデジタル技術全般を対象とする広い概念、AIリテラシーはAI固有の仕組みや限界の理解に焦点を当てたその一部"
+      }
+    ],
+    "relatedTerms": [
+      "ai-literacy",
+      "critical-thinking"
+    ]
+  },
+  {
+    "slug": "critical-thinking",
+    "name": "批判的思考",
+    "aliases": [
+      "Critical Thinking"
+    ],
+    "tagline": "AIの出力を含む情報を鵜呑みにせず、根拠や妥当性を検証しながら評価・判断する思考態度",
+    "category": "技術",
+    "tags": [
+      "安全性",
+      "AI教育"
+    ],
+    "plainSummary": "AIの答えをそのまま信じず、根拠が正しいかを自分で確かめながら判断する考え方。",
+    "summary": "批判的思考とは、提示された情報や主張を無条件に受け入れるのではなく、その根拠や論理的妥当性、情報源の信頼性を検証しながら評価・判断する思考態度を指す。\n教育学における一般的な概念だが、生成AIの普及に伴い注目度が高まっている。\nAIの出力にはハルシネーションのような誤りが含まれうることを前提に、内容を鵜呑みにせず事実確認や再検証する姿勢として、AIリテラシー教育の中核的な要素の1つに位置づけられている。\nAIリテラシーがAIの仕組みや限界に関する知識を指すのに対し、批判的思考はその知識を実際の判断・行動に活かすための思考プロセスという性格が強い。",
+    "advantages": [
+      "AIの誤った出力や偏った情報を鵜呑みにせず、事実確認を経た上で意思決定できる",
+      "情報源の信頼性を見極める習慣が身につき、誤情報の拡散を防ぎやすくなる"
+    ],
+    "disadvantages": [
+      "すべての出力を都度検証する姿勢は、AI活用による効率化のメリットを一部相殺する場合がある",
+      "批判的思考の水準を客観的に測定・評価する基準の確立が難しい"
+    ],
+    "comparisons": [
+      {
+        "slug": "ai-literacy",
+        "note": "AIリテラシーはAIの仕組み・限界に関する知識を指し、批判的思考はその知識を実際の判断に活かす思考プロセス"
+      }
+    ],
+    "relatedTerms": [
+      "ai-literacy",
+      "hallucination",
+      "digital-literacy"
+    ]
+  },
+  {
+    "slug": "community-standards",
+    "name": "コミュニティ基準",
+    "aliases": [
+      "Community Standards",
+      "Community Guidelines"
+    ],
+    "tagline": "プラットフォームの利用者コミュニティ内で許容される行動やコンテンツの範囲を定めた自主的な行動規範",
+    "category": "技術",
+    "tags": [
+      "安全性",
+      "利用規約"
+    ],
+    "plainSummary": "SNSなどで、利用者同士が守るべき行動やコンテンツの範囲を定めたルール。",
+    "summary": "コミュニティ基準とは、SNSやオンラインプラットフォームにおいて、利用者コミュニティ内で許容される行動やコンテンツの範囲を定めた自主的な行動規範を指す。\n事業者が一方的に定めるコンテンツポリシーと近い性格を持つが、コミュニティ基準はしばしば利用者からの通報やコミュニティの慣習を反映しながら運用され、違反判定にコミュニティメンバーが関与する仕組みを持つ場合もある。\n生成AIサービスにおいても、AIとの対話や生成物の共有機能を持つプラットフォームで、利用者間のやり取りに関するコミュニティ基準を定める場合がある。",
+    "comparisons": [
+      {
+        "slug": "content-policy",
+        "note": "コンテンツポリシーは事業者による利用方針を指し、コミュニティ基準は利用者コミュニティ内での行動規範という性格が強く、運用に利用者が関与する場合もある"
+      },
+      {
+        "slug": "content-moderation",
+        "note": "コミュニティ基準は許容される行動を定めた規範、コンテンツモデレーションはその基準に基づき違反を検出・排除する実施プロセス"
+      }
+    ],
+    "relatedTerms": [
+      "content-policy",
+      "content-moderation"
+    ]
+  },
+  {
+    "slug": "reasoning",
+    "name": "Reasoning",
+    "aliases": [
+      "論理的推論",
+      "推論能力"
+    ],
+    "tagline": "モデルが単純な入力→出力変換でなく、複数ステップの論理的思考を経て結論に至る能力・プロセス",
+    "category": "技術",
+    "tags": [
+      "推論",
+      "LLM"
+    ],
+    "plainSummary": "AIが答えを一発で出すのでなく、筋道を立てて考えて結論にたどり着く力のこと。",
+    "summary": "Reasoning(推論)とは、LLMが単純なパターンマッチング的な入力→出力変換ではなく、複数の中間ステップを経て論理的に結論を導く能力・プロセスを指す。\n計算処理としての「推論(Inference)」――学習済みモデルへ入力を与え出力を計算する処理全般――とは区別される概念で、こちらはモデルがどれだけ筋道立てて考えられるかという能力面を指す言葉として使われる。\n数学の証明、コーディング、論理パズル、複数ステップの計画立案など、単一の直感的な応答では解けないタスクの遂行能力の指標として語られることが多い。\nChain-of-ThoughtやTree of Thoughtのようなプロンプティング手法や、強化学習で推論過程を内部化した推論モデルは、いずれもこのReasoning能力を引き出す・向上させるためのアプローチとして位置付けられる。",
+    "background": "初期のLLMは次のトークンを直接予測するため、複雑な問題に対して途中の思考過程を省略し誤った結論に飛びつきやすいという課題があった。\nこの課題への対処として、プロンプト上で推論過程を明示的に出力させる手法や、推論過程自体を学習対象とする手法が発展し、Reasoningはこれらの手法・モデルの性能を測る中心的な観点として扱われるようになった。",
+    "advantages": [
+      "複数ステップの複雑な問題に対する正答率を高められる",
+      "推論過程が可視化されることで、モデルの判断根拠を人間が検証しやすくなる"
+    ],
+    "disadvantages": [
+      "推論に要するトークン数・計算時間が増え、コストとレイテンシが増加する",
+      "生成される推論過程が実際の内部計算を正確に反映しているとは限らず、もっともらしいが誤った理由付けをする場合がある"
+    ],
+    "comparisons": [
+      {
+        "slug": "inference",
+        "note": "「推論(Inference)」が学習済みモデルへ入力を与え出力を計算する処理全般を指すのに対し、Reasoningはその中でも複数ステップの論理的思考を経て結論に至る能力・プロセスを指す"
+      },
+      {
+        "slug": "chain-of-thought",
+        "note": "Chain-of-Thoughtは、Reasoning能力を引き出すための代表的なプロンプティング手法"
+      },
+      {
+        "slug": "reasoning-model",
+        "note": "推論モデルは、Reasoning能力を強化学習等で内部化するよう最適化されたLLM"
+      }
+    ],
+    "relatedTerms": [
+      "inference",
+      "chain-of-thought",
+      "reasoning-model",
+      "tree-of-thought",
+      "self-consistency",
+      "test-time-scaling"
+    ],
+    "faq": [
+      {
+        "question": "「推論(Inference)」と「Reasoning」は同じ？",
+        "answer": "日本語ではどちらも「推論」と訳されがちだが別概念。Inferenceは学習済みモデルへ入力を与え出力を計算する処理全般を指し、Reasoningは複数ステップの論理的思考を経て結論に至る能力・プロセスを指す。"
+      },
+      {
+        "question": "Reasoning能力はどう測る？",
+        "answer": "数学(GSM8K、AIME等)やコーディング(SWE-bench等)、論理パズルなど、複数ステップの思考を要するベンチマークの正答率で評価されることが多い。"
+      }
+    ]
+  },
+  {
+    "slug": "grounding",
+    "name": "Grounding",
+    "aliases": [
+      "グラウンディング",
+      "根拠付け"
+    ],
+    "tagline": "LLMの出力を検証可能な外部の事実情報やデータに結び付け、幻覚を抑え信頼性を高める性質・手法",
+    "category": "技術",
+    "tags": [
+      "信頼性",
+      "LLM"
+    ],
+    "plainSummary": "AIの答えを、実際のデータや情報源にちゃんと基づかせること。根拠のない出まかせを防ぐ。",
+    "summary": "Grounding(グラウンディング)とは、LLMの出力を、検証可能な外部の事実情報・データ・文脈に結び付けることを指す。\nLLMは学習データに含まれる統計的なパターンから尤もらしい文章を生成するため、その内容が実際の事実と一致しているとは限らず、事実と異なる情報をもっともらしく生成してしまうハルシネーションが課題となる。\nGroundingは、検索によって取得した文書やユーザーが提供したデータ、外部ツールの実行結果などを根拠として出力を生成させることで、この問題を軽減する考え方・手法群を指す。\nRetrieval-Augmented Generation(RAG)は、Groundingを実現する代表的な手法の1つで、外部知識ソースから関連情報を検索し、それをプロンプトに含めたうえで回答を生成させる。\n生成された回答に出典・引用元を明示させることも、Groundingを高める実践として広く行われる。",
+    "background": "LLM単体では、パラメータに埋め込まれた学習時点の知識に基づいて応答を生成するため、学習データにない最新情報や社内固有の情報には対応できず、また事実と異なる内容を自信ありげに生成してしまう場合がある。\nこの課題に対処するため、外部の情報源を明示的に参照させ、出力の根拠を事実に結び付けるGroundingという考え方が重視されるようになった。",
+    "history": "1990年、認知科学者Stevan HarnadがSymbol Grounding Problem(記号接地問題)を提唱し、記号システムがどのように実世界の意味と結び付くかという問題を提起した。これがGroundingという語の学術的な起源の1つ。\n2020年、Lewisらが Retrieval-Augmented Generation(RAG)を提案し、外部知識の検索結果を根拠として言語モデルの出力を生成する手法を発表。LLM時代のGroundingの代表的な実現手法として広く普及した。",
+    "advantages": [
+      "ハルシネーションを抑え、事実に基づいた回答の精度を高められる",
+      "出典を明示させることで、回答の検証・追跡が容易になる",
+      "学習データにない最新情報や社内固有情報にも対応できる"
+    ],
+    "disadvantages": [
+      "根拠となる情報源自体が誤っている・古い場合、その誤りをそのまま反映してしまう",
+      "検索や外部ツール呼び出しの分だけレイテンシとコストが増加する"
+    ],
+    "comparisons": [
+      {
+        "slug": "retrieval-augmented-generation",
+        "note": "RAGは、外部知識の検索結果を根拠として出力させることでGroundingを実現する代表的な手法"
+      },
+      {
+        "slug": "hallucination",
+        "note": "Groundingが出力を事実情報に結び付ける手法・性質を指すのに対し、ハルシネーションは根拠のない誤った情報が生成される現象そのものを指す"
+      }
+    ],
+    "relatedTerms": [
+      "retrieval-augmented-generation",
+      "hallucination",
+      "structured-output",
+      "llm-as-a-judge"
+    ],
+    "faq": [
+      {
+        "question": "GroundingとRAGは同じ？",
+        "answer": "RAGはGroundingを実現する代表的な手法の1つ。Grounding自体はより広い概念で、検索以外にもツール実行結果やユーザー提供データを根拠にする手法も含む。"
+      },
+      {
+        "question": "Groundingを高めるとハルシネーションはなくなる？",
+        "answer": "根拠となる情報源の質や、モデルが根拠を正しく参照して回答を生成できているかに左右されるため、なくなるとは限らない。Groundingはハルシネーションを軽減する手段の1つという位置付け。"
+      }
+    ],
+    "references": [
+      {
+        "type": "Research Paper",
+        "label": "Retrieval-Augmented Generation for Knowledge-Intensive NLP Tasks",
+        "url": "https://arxiv.org/abs/2005.11401"
+      }
+    ]
+  },
+  {
+    "slug": "symbolic-ai",
+    "name": "Symbolic AI",
+    "aliases": [
+      "記号主義AI",
+      "GOFAI",
+      "記号的AI"
+    ],
+    "tagline": "知識を明示的な記号・ルールとして表現し、論理的な推論規則に基づいて処理する古典的なAIアプローチ",
+    "category": "技術",
+    "tags": [
+      "人工知能",
+      "知識"
+    ],
+    "plainSummary": "知識を「もし〜なら〜」のようなルールや記号で表し、論理的に処理する昔からのAIの作り方。",
+    "summary": "Symbolic AI(記号主義AI)とは、知識を人間が理解できる明示的な記号(シンボル)やルールとして表現し、論理的な推論規則に基づいて処理するAIのアプローチ。\n「GOFAI(Good Old-Fashioned AI)」とも呼ばれ、1950年代から1980年代にかけてAI研究の主流であった。\nオントロジーによる概念の階層構造の定義や、if-thenルールの集合として知識を記述するエキスパートシステム、述語論理に基づく自動定理証明などが代表的な実装形態。\n出力に至る推論過程を明示的なルール適用として追跡できるため説明可能性が高い一方、あらゆる知識をルールとして人手で記述する必要があり、現実世界の曖昧さや例外への対応、大規模な知識の網羅に限界があった。\n2010年代以降のディープラーニングの台頭により主流ではなくなったが、その説明可能性や論理的厳密性は、統計的な学習を主体とするニューラルネットワークが苦手とする領域を補うものとして、ニューロシンボリックAIなどの形で再評価されている。",
+    "background": "人間の知的活動は記号操作によって説明できるという物理記号システム仮説(Newell & Simon)を理論的な土台として、AI研究の初期には知識を明示的な記号とルールで表現し、論理演算によって推論するアプローチが主流だった。",
+    "history": "1956年、Allen NewellとHerbert Simonが、記号操作により定理を証明するプログラムLogic Theoristを発表。Symbolic AIの先駆けとされる。\n1985年、哲学者John HaugelandがGOFAI(Good Old-Fashioned AI)という呼称を著書『Artificial Intelligence: The Very Idea』で用い、記号処理に基づく古典的AIアプローチを指す語として広まった。\n2010年代以降、ディープラーニングの性能向上により、Symbolic AIはAI研究の主流の座をニューラルネットワークに譲った。",
+    "advantages": [
+      "推論過程がルール適用として明示的に追跡でき、説明可能性が高い",
+      "論理的に厳密で、一貫性のある結論を保証しやすい"
+    ],
+    "disadvantages": [
+      "現実世界のあらゆる知識・例外をルールとして人手で記述する必要があり、スケールしにくい",
+      "曖昧さやノイズを含むデータ、未知のパターンへの対応が苦手"
+    ],
+    "comparisons": [
+      {
+        "slug": "machine-learning",
+        "note": "Symbolic AIが明示的なルール・記号処理に基づくのに対し、機械学習はデータからパターンを統計的に学習するアプローチ"
+      },
+      {
+        "slug": "ontology",
+        "note": "オントロジーは、Symbolic AIにおいて概念・関係を形式的に表現する代表的な知識表現手法"
+      },
+      {
+        "slug": "cyc",
+        "note": "Cycは、常識知識を大規模なルール・公理群としてエンコードした代表的なSymbolic AIプロジェクト"
+      },
+      {
+        "slug": "neuro-symbolic-ai",
+        "note": "ニューロシンボリックAIは、Symbolic AIの論理的推論・説明可能性とニューラルネットワークの学習能力を組み合わせるアプローチ"
+      }
+    ],
+    "relatedTerms": [
+      "ontology",
+      "cyc",
+      "neuro-symbolic-ai",
+      "explainable-ai",
+      "machine-learning",
+      "deductive-reasoning",
+      "formal-logic",
+      "knowledge-representation"
+    ],
+    "faq": [
+      {
+        "question": "Symbolic AIは今も使われている？",
+        "answer": "エキスパートシステムやルールベースの検証・制約チェックなど、ルールが明確なドメインでは今も使われている。近年はニューラルネットワークと組み合わせるニューロシンボリックAIとしての再評価も進んでいる。"
+      },
+      {
+        "question": "なぜディープラーニングに主流の座を奪われた？",
+        "answer": "あらゆる知識・例外を人手でルール化するのはスケールに限界があった一方、ディープラーニングは大量のデータから自動的にパターンを学習でき、画像認識・自然言語処理など曖昧さを含むタスクで高い性能を示したため。"
+      }
+    ]
+  },
+  {
+    "slug": "neuro-symbolic-ai",
+    "name": "Neuro-symbolic AI",
+    "aliases": [
+      "ニューロシンボリックAI",
+      "神経記号統合AI"
+    ],
+    "tagline": "ニューラルネットワークの学習能力と、記号主義AIの論理推論・説明可能性を組み合わせるAIアプローチ",
+    "category": "技術",
+    "tags": [
+      "人工知能",
+      "知識"
+    ],
+    "plainSummary": "AIの「データから学ぶ力」と「ルールに基づき論理的に考える力」を組み合わせるアプローチ。",
+    "summary": "Neuro-symbolic AI(ニューロシンボリックAI)とは、ニューラルネットワークによる統計的なパターン学習と、Symbolic AI(記号主義AI)による論理的な記号処理・推論を組み合わせるAIアプローチ。\nニューラルネットワークは大量のデータから柔軟にパターンを学習できる一方、推論過程がブラックボックスになりやすく、論理的な一貫性や厳密なルールの遵守を保証しにくいという弱点がある。\n逆にSymbolic AIは論理的に厳密で説明可能性が高い一方、あらゆる知識をルールとして人手で記述する必要があり、曖昧なデータへの対応やスケールに限界がある。\nNeuro-symbolic AIは、この双方の長所を組み合わせることを目指すアプローチ。\n例えばニューラルネットワークで知覚・パターン認識し、その出力を記号的な推論エンジンで論理的に検証・処理する構成が代表的。",
+    "background": "ディープラーニングの性能向上に伴い、画像認識や自然言語処理などの分野でニューラルネットワークが主流となったが、論理的な一貫性が求められるタスクや、少ないデータからの汎化、判断根拠の説明可能性においてはSymbolic AI的なアプローチの強みが再評価されるようになった。",
+    "history": "1990年代から、ニューラルネットワークと記号処理を統合する研究がNeuro-symbolic Learning and Reasoning(NeSy)といった名称で行われてきた。\n2020年代のLLMブームに伴い、統計的な学習に基づくLLMの論理的推論の弱さやハルシネーション問題への対処として、記号的な検証・推論エンジンと組み合わせるアプローチが改めて注目を集めている。",
+    "advantages": [
+      "ニューラルネットワークの柔軟なパターン学習と、記号処理の論理的厳密性・説明可能性を両立できる",
+      "少ないデータや既存の知識・ルールを活用した推論が可能"
+    ],
+    "disadvantages": [
+      "ニューラル部分と記号部分をどう統合するかの設計が複雑で、汎用的な手法が確立されていない",
+      "記号側のルール・知識ベースの整備には人手のコストがかかる"
+    ],
+    "comparisons": [
+      {
+        "slug": "symbolic-ai",
+        "note": "Neuro-symbolic AIは、Symbolic AIの論理推論・説明可能性をニューラルネットワークの学習能力と組み合わせるアプローチ"
+      },
+      {
+        "slug": "deep-learning",
+        "note": "Neuro-symbolic AIは、深層学習単体の弱点である論理的一貫性・説明可能性の低さを、記号処理と組み合わせることで補おうとするアプローチ"
+      }
+    ],
+    "relatedTerms": [
+      "symbolic-ai",
+      "ontology",
+      "deep-learning",
+      "explainable-ai",
+      "differentiable-reasoning"
+    ],
+    "faq": [
+      {
+        "question": "具体的にどんなタスクで使われる？",
+        "answer": "数学の定理証明、プログラム合成、論理的な整合性検証が必要なタスクなど、ニューラルネットワーク単体では論理的な一貫性を保証しにくい領域で研究・活用が進んでいる。"
+      }
+    ]
+  },
+  {
+    "slug": "self-correction",
+    "name": "Self-correction",
+    "aliases": [
+      "自己修正",
+      "自己訂正"
+    ],
+    "tagline": "LLMが自ら生成した出力の誤りを検出し、訂正する能力・アプローチ全般を指す概念",
+    "category": "技術",
+    "tags": [
+      "推論",
+      "LLM"
+    ],
+    "plainSummary": "AIが自分の出した答えの間違いに自分で気づいて直すこと。",
+    "summary": "Self-correction(自己修正)とは、LLMが自ら生成した出力を検証し、誤りを検出したうえで訂正するアプローチ・能力全般を指す概念。\n出力を生成した後にモデル自身(または別のモデル)にその内容を批評させ、指摘を踏まえて再生成させるリフレクションや、複数の候補を生成して整合性の高いものを選ぶSelf-Consistencyなど、様々な具体的な手法がSelf-correctionの実現方法として提案されている。\n一方で、外部からのフィードバック(テスト実行結果や検索による事実確認、人間からのフィードバックなど)を伴わない場合、モデルが内部知識だけで自らの誤りに気付き訂正するのは容易でないとする研究結果も報告されている。\n特に、外部の根拠なしにモデル自身の判断だけで推論の誤りを訂正しようとすると、かえって正しい答えを誤った答えに書き換えてしまう場合があることも指摘されている。",
+    "background": "LLMは一度誤った推論や事実誤認を含む出力を生成しても、それに気付かず、あるいは誤りをそのまま正当化する説明を続けてしまうことがある。\nこの課題に対し、生成後に出力を見直し訂正する仕組みを設けることで、最終的な出力の品質を高めようとする研究がSelf-correctionとして進められてきた。",
+    "history": "2023年、Madaanらが、モデル自身に出力へのフィードバックを生成させ、それを基に反復的に出力を改善するSelf-Refineを提案。\n同2023年、Huangらが「Large Language Models Cannot Self-Correct Reasoning Yet」を発表。\n外部からの根拠(正解ラベル等)なしに、モデルが自身の推論の誤りを内在的に修正するのは難しい場合があることを実験的に示し、Self-correctionの限界について議論を喚起した。",
+    "advantages": [
+      "外部ツールや人手を介さず、生成後に出力の品質を追加で高められる場合がある",
+      "テスト実行結果や検索結果など外部の検証手段と組み合わせることで、より確実な誤り訂正が可能"
+    ],
+    "disadvantages": [
+      "外部からの根拠を伴わない場合、モデルが自身の誤りに気付けず、訂正が効果的に機能しないことがある",
+      "訂正の試行を重ねる分だけ出力トークン数と推論コストが増加する"
+    ],
+    "comparisons": [
+      {
+        "slug": "reflection",
+        "note": "リフレクションは、Self-correctionを実現する代表的な具体的手法の1つで、出力を振り返り批評したうえで再生成する"
+      },
+      {
+        "slug": "self-consistency",
+        "note": "Self-Consistencyは、複数の推論過程を生成し多数決で答えを選ぶことで誤りを軽減する手法で、Self-correctionとは異なり生成後の見直し・訂正は行わない"
+      }
+    ],
+    "relatedTerms": [
+      "reflection",
+      "self-consistency",
+      "chain-of-thought",
+      "reasoning-model",
+      "llm-as-a-judge"
+    ],
+    "faq": [
+      {
+        "question": "Self-correctionとリフレクションは同じ？",
+        "answer": "リフレクションはSelf-correctionを実現する具体的な手法の1つ。Self-correctionはより広い概念で、モデルが自らの誤りを検出・訂正する能力・アプローチ全般を指す。"
+      },
+      {
+        "question": "LLMは本当に自分の間違いに気付ける？",
+        "answer": "外部からの検証手段(テストの実行結果、検索による事実確認など)がある場合は効果的に機能するが、モデルの内部知識のみに頼る自己修正には限界があるとする研究結果も報告されている。"
+      }
+    ],
+    "references": [
+      {
+        "type": "Research Paper",
+        "label": "Self-Refine: Iterative Refinement with Self-Feedback",
+        "url": "https://arxiv.org/abs/2303.17651"
+      },
+      {
+        "type": "Research Paper",
+        "label": "Large Language Models Cannot Self-Correct Reasoning Yet",
+        "url": "https://arxiv.org/abs/2310.01798"
+      }
+    ]
+  },
+  {
+    "slug": "meta-prompting",
+    "name": "Meta-prompting",
+    "aliases": [
+      "メタプロンプティング"
+    ],
+    "tagline": "LLM自身がタスクに適したプロンプトを設計・生成・改善する手法",
+    "category": "技術",
+    "tags": [
+      "プロンプトエンジニアリング",
+      "LLM"
+    ],
+    "plainSummary": "AIに「どんな質問をすればいいか」自体を考えさせ、プロンプト作りをAI任せにする手法。",
+    "summary": "Meta-prompting(メタプロンプティング)とは、LLM自身がタスクに適したプロンプトを設計・生成・改善する手法。\n人間がタスクごとにプロンプトを手作業で試行錯誤して作り込むのではなく、タスクの内容や過去の実行結果をLLMに与え、より効果的なプロンプトそのものをLLMに生成・修正させるアプローチを指す。\nタスクの構造やフォーマットに着目し、具体的な内容の細部にとらわれない汎用的な「足場(scaffolding)」としてプロンプトを設計させる考え方が代表的。\n複数の専門家的な役割を演じるサブタスクへタスクを分解させ、それらを統括させる構成など、いくつかのバリエーションも提案されている。\nプロンプトエンジニアリングの作業自体を自動化・効率化する手法として位置付けられる。",
+    "background": "効果的なプロンプトの設計には試行錯誤とドメイン知識が必要で、タスクごとに人手で作り込むにはコストがかかる。\nこの課題に対し、プロンプト設計というタスク自体をLLMに委ねることで、人手によるプロンプトエンジニアリングの負担を減らそうとする流れの中でMeta-promptingが提案された。",
+    "history": "2024年、SuzgunとKalaiが「Meta-Prompting: Enhancing Language Models with Task-Agnostic Scaffolding」を発表し、タスクの内容に依存しない汎用的な足場としてプロンプトを構成するMeta-promptingの手法を提案。",
+    "advantages": [
+      "タスクごとのプロンプトを人手で作り込む手間を減らせる",
+      "タスクの内容に依存しない汎用的なプロンプト構造を再利用しやすい"
+    ],
+    "disadvantages": [
+      "プロンプト生成自体にLLMの追加呼び出しが必要になり、コストとレイテンシが増加する",
+      "生成されたプロンプトが必ずしも人手で設計したものより高品質とは限らない"
+    ],
+    "comparisons": [
+      {
+        "slug": "prompt-engineering",
+        "note": "Meta-promptingは、プロンプト設計というタスク自体をLLMに行わせる、プロンプトエンジニアリングの自動化アプローチ"
+      },
+      {
+        "slug": "self-instruct",
+        "note": "Self-Instructがモデル自身に学習用の指示データを生成させる手法であるのに対し、Meta-promptingは推論時にタスク遂行用のプロンプト自体を生成・改善させる手法"
+      }
+    ],
+    "relatedTerms": [
+      "prompt-engineering",
+      "prompt-chaining",
+      "self-instruct",
+      "in-context-learning"
+    ],
+    "faq": [
+      {
+        "question": "Meta-promptingとプロンプトチェイニングの違いは？",
+        "answer": "プロンプトチェイニングは、あらかじめ人間が設計した複数のプロンプトを順番に実行する手法。Meta-promptingは、そのプロンプト自体の設計・生成をLLMに行わせる点が異なる。"
+      }
+    ],
+    "references": [
+      {
+        "type": "Research Paper",
+        "label": "Meta-Prompting: Enhancing Language Models with Task-Agnostic Scaffolding",
+        "url": "https://arxiv.org/abs/2401.12954"
+      }
+    ]
+  },
+  {
+    "slug": "inter-agent-communication",
+    "name": "エージェント間通信",
+    "aliases": [
+      "Inter-agent Communication",
+      "Agent Communication"
+    ],
+    "tagline": "複数のAIエージェントが情報や意図をやり取りし、タスクを連携して遂行するための通信の仕組み",
+    "category": "エージェント",
+    "tags": [
+      "エージェント",
+      "協調"
+    ],
+    "plainSummary": "複数のAIエージェント同士が、情報やお願いごとをやり取りするための仕組み。",
+    "summary": "エージェント間通信(Inter-agent Communication)とは、複数のAIエージェントが互いにメッセージ・状態・タスク依頼をやり取りし、連携してタスクを遂行するための通信の仕組みを指す。\n共有のメッセージキューやブラックボード(共有メモリ領域)を介して情報を交換する方式や、A2Aのような標準プロトコルに基づきエージェント同士が直接メッセージを送受信する方式など、実装形態は様々。\nエージェントが互いの内部実装を知らなくても連携できるよう、やり取りするメッセージの形式・意味を標準化することが、異なるベンダー・フレームワークで構築されたエージェント同士の相互運用性を高めるうえで重要になる。",
+    "background": "単一のエージェントだけでは扱いきれない複雑なタスクを、役割の異なる複数のエージェントに分担させるマルチエージェント構成が広がるにつれ、エージェント同士が情報やタスクの進捗を適切にやり取りする仕組みの重要性が高まった。",
+    "advantages": [
+      "各エージェントが専門領域に集中しつつ、必要な情報だけを他のエージェントと共有できる",
+      "標準化された通信方式を採用することで、異なるベンダー・フレームワークのエージェント同士も連携できる"
+    ],
+    "disadvantages": [
+      "エージェント数が増えるほど、通信量とメッセージの整合性を保つための調整コストが増加する",
+      "通信プロトコルやメッセージ形式の設計次第で、連携の柔軟性や拡張性が左右される"
+    ],
+    "comparisons": [
+      {
+        "slug": "a2a",
+        "note": "A2Aは、エージェント間通信を異なるベンダー・フレームワーク間でも成立させるための標準プロトコルの1つ"
+      },
+      {
+        "slug": "multi-agent",
+        "note": "マルチエージェントが複数エージェントによる協調・分業のアーキテクチャ全般を指すのに対し、エージェント間通信はその協調を支える通信の仕組みそのものを指す"
+      }
+    ],
+    "relatedTerms": [
+      "a2a",
+      "multi-agent",
+      "mcp",
+      "agent-memory"
+    ],
+    "faq": [
+      {
+        "question": "エージェント間通信とMCPの違いは？",
+        "answer": "MCPは主にエージェントと外部ツール・データソースとの接続を標準化するプロトコル。エージェント間通信は、エージェント同士がメッセージやタスクをやり取りする仕組みを指し、A2Aのようなエージェント間専用のプロトコルが対応する。"
+      }
+    ]
+  },
+  {
+    "slug": "cooperation-strategy",
+    "name": "協力戦略",
+    "aliases": [
+      "Cooperation Strategy",
+      "協調戦略"
+    ],
+    "tagline": "複数のAIエージェントが目標達成のため、役割分担・情報共有・意思決定をどのように行うかを設計する方法論",
+    "category": "エージェント",
+    "tags": [
+      "エージェント",
+      "協調"
+    ],
+    "plainSummary": "複数のAIエージェントが力を合わせて働くとき、誰が何を担当しどう決めるかのやり方。",
+    "summary": "協力戦略(Cooperation Strategy)とは、マルチエージェントシステムにおいて、複数のAIエージェントがタスク達成のために役割分担・情報共有・意思決定をどのように行うかを設計する方法論を指す。\n1つの司令塔役のエージェントが全体を統括し、他のエージェントへタスクを割り振る中央集権的な構成や、エージェント同士が対等な立場で交渉・合意形成しながら進める分散的な構成など、いくつかの設計パターンが存在する。\nどの協力戦略を採るかによって、システム全体の柔軟性・耐障害性・調整コストが変わるため、タスクの性質やエージェント数に応じた設計が求められる。",
+    "background": "複数のエージェントを組み合わせるだけでは、各エージェントが独立に動いてしまい、タスク全体として一貫した成果につながらない場合がある。\nこの課題に対処するため、エージェント同士がどのように連携・分業し、矛盾なく1つの目標へ向かうかを設計する協力戦略という考え方が重視されるようになった。",
+    "advantages": [
+      "タスクの性質に応じた役割分担により、単一エージェントより効率的にタスクを処理できる場合がある",
+      "分散的な戦略を採ることで、一部のエージェントに障害が起きても全体が止まりにくくなる"
+    ],
+    "disadvantages": [
+      "エージェント間の調整・合意形成にかかるオーバーヘッドが、単一エージェント構成より増加する",
+      "中央集権的な戦略では、統括役のエージェントがボトルネック・単一障害点になりやすい"
+    ],
+    "comparisons": [
+      {
+        "slug": "multi-agent",
+        "note": "マルチエージェントが複数エージェントによる協調アーキテクチャそのものを指すのに対し、協力戦略はその協調をどう設計するかという方法論を指す"
+      },
+      {
+        "slug": "orchestrator",
+        "note": "オーケストレーターは、協力戦略のうち中央集権的な構成で全体を統括する役割を担うエージェント"
+      }
+    ],
+    "relatedTerms": [
+      "multi-agent",
+      "orchestrator",
+      "planner",
+      "inter-agent-communication"
+    ]
+  },
+  {
+    "slug": "zero-shot-cot",
+    "name": "ゼロショットCoT",
+    "aliases": [
+      "Zero-shot Chain-of-Thought",
+      "Zero-shot CoT"
+    ],
+    "tagline": "推論過程の例を示すことなく「ステップバイステップで考えて」等の指示だけで段階的な推論を引き出すプロンプティング手法",
+    "category": "技術",
+    "tags": [
+      "推論",
+      "プロンプトエンジニアリング"
+    ],
+    "plainSummary": "「順を追って考えて」と一言添えるだけで、AIに段階的に考えさせる方法。例文は不要。",
+    "summary": "ゼロショットCoT(Zero-shot Chain-of-Thought)とは、推論過程を示す例(few-shotの例文)を用意することなく、「ステップバイステップで考えてください」といった単純な指示文を加えるだけで、LLMに段階的に推論させるプロンプティング手法。\n通常のChain-of-Thoughtが問題と回答例を含むfew-shotプロンプトを必要とするのに対し、ゼロショットCoTはタスクごとに例文を用意する手間なく、指示文1つで同様の効果を狙える点が特徴。\nfew-shot CoTと比べると精度で劣る場合があるものの、プロンプトの作成コストが低く、様々なタスクに手軽に適用できる。",
+    "background": "few-shot CoTはタスクごとに推論過程を含む例文を用意する必要があり、プロンプト設計のコストがかかる。\nこの手間を省きつつ段階的推論の効果を得る方法として、指示文のみで推論過程を引き出すゼロショットCoTが提案された。",
+    "history": "2022年、KojimaらがLarge Language Models are Zero-Shot Reasonersを発表し、「Let's think step by step」という指示文を追加するだけで、few-shotの例文なしにLLMの推論精度が向上することを示した。",
+    "advantages": [
+      "タスクごとに例文を用意する必要がなく、プロンプト作成のコストが低い",
+      "様々なタスクへ同じ指示文を汎用的に適用できる"
+    ],
+    "disadvantages": [
+      "タスクによっては、few-shot CoTに精度で劣る場合がある",
+      "モデルの性能や規模によって効果の出方にばらつきがある"
+    ],
+    "comparisons": [
+      {
+        "slug": "chain-of-thought",
+        "note": "Chain-of-Thoughtは推論過程の例文を示すfew-shot方式を含む広い概念で、ゼロショットCoTはそのうち例文なしで指示文のみにより推論を引き出す手法"
+      },
+      {
+        "slug": "few-shot",
+        "note": "few-shotがタスクの例をいくつか示す手法であるのに対し、ゼロショットCoTは例を示さず指示文のみで段階的推論を引き出す"
+      }
+    ],
+    "relatedTerms": [
+      "chain-of-thought",
+      "few-shot",
+      "zero-shot",
+      "reasoning"
+    ],
+    "faq": [
+      {
+        "question": "ゼロショットCoTとChain-of-Thoughtは別物？",
+        "answer": "ゼロショットCoTは、Chain-of-Thoughtというプロンプティング手法群のうち、例文を示さず指示文のみで段階的推論を引き出すバリエーションの1つ。"
+      }
+    ],
+    "references": [
+      {
+        "type": "Research Paper",
+        "label": "Large Language Models are Zero-Shot Reasoners",
+        "url": "https://arxiv.org/abs/2205.11916"
+      }
+    ]
+  },
+  {
+    "slug": "deductive-reasoning",
+    "name": "演繹推論",
+    "aliases": [
+      "Deductive Reasoning"
+    ],
+    "tagline": "一般的な前提・規則から、論理的に必然的な結論を導き出す推論の形式",
+    "category": "技術",
+    "tags": [
+      "推論",
+      "人工知能"
+    ],
+    "plainSummary": "『AならばB』のような一般ルールから、個別の結論を確実に導き出す考え方。",
+    "summary": "演繹推論(Deductive Reasoning)とは、一般的な前提や規則から出発し、論理的に必然的な結論を導き出す推論の形式。\n『すべての人間は死ぬ』『ソクラテスは人間である』という前提から『ソクラテスは死ぬ』という結論を導くように、前提さえ正しければ結論も必ず正しいと保証される点が特徴。\nSymbolic AIにおける自動定理証明やルールベースのエキスパートシステムは、演繹推論を計算機上で実装した代表例。\n一方、新しい仮説や一般法則そのものを生み出すことはできず、既に与えられた前提の範囲内で結論を導く推論形式である点で、帰納推論やアブダクションとは性質が異なる。",
+    "comparisons": [
+      {
+        "slug": "inductive-reasoning",
+        "note": "演繹推論が一般的な前提から必然的な結論を導くのに対し、帰納推論は個別の事例から一般的な規則を推測する"
+      },
+      {
+        "slug": "abduction",
+        "note": "アブダクションが観察された事実から最も尤もらしい説明(仮説)を推測するのに対し、演繹推論は前提から必然的に導かれる結論を得る"
+      },
+      {
+        "slug": "symbolic-ai",
+        "note": "Symbolic AIの自動定理証明やエキスパートシステムは、演繹推論をルール適用として計算機上で実装した代表例"
+      }
+    ],
+    "relatedTerms": [
+      "inductive-reasoning",
+      "abduction",
+      "formal-logic",
+      "symbolic-ai",
+      "reasoning"
+    ]
+  },
+  {
+    "slug": "inductive-reasoning",
+    "name": "帰納推論",
+    "aliases": [
+      "Inductive Reasoning"
+    ],
+    "tagline": "個別の事例や観測データから、一般的な規則やパターンを推測する推論の形式",
+    "category": "技術",
+    "tags": [
+      "推論",
+      "機械学習"
+    ],
+    "plainSummary": "いくつかの具体例から、共通するルールやパターンを推測する考え方。",
+    "summary": "帰納推論(Inductive Reasoning)とは、個別の事例や観測データから、それらに共通する一般的な規則やパターンを推測する推論の形式。\n多数の事例から法則を導くため、演繹推論と異なり前提が正しくても結論が必ず正しいとは保証されず、新しい事例によって覆される可能性を持つ。\n機械学習は、大量の学習データという個別の事例から入力と出力の間にある一般的なパターン(モデルのパラメータ)を推測するという意味で、帰納推論の一種と位置付けられることが多い。",
+    "comparisons": [
+      {
+        "slug": "deductive-reasoning",
+        "note": "帰納推論が個別の事例から一般的な規則を推測するのに対し、演繹推論は一般的な前提から必然的な結論を導く"
+      },
+      {
+        "slug": "machine-learning",
+        "note": "機械学習は、大量の事例データから一般的なパターンを推測するという点で、帰納推論の一種と位置付けられる"
+      }
+    ],
+    "relatedTerms": [
+      "deductive-reasoning",
+      "abduction",
+      "machine-learning",
+      "reasoning"
+    ]
+  },
+  {
+    "slug": "abduction",
+    "name": "アブダクション",
+    "aliases": [
+      "Abduction",
+      "Abductive Reasoning",
+      "仮説形成推論"
+    ],
+    "tagline": "観察された事実に対して、それを最もよく説明できる仮説を推測する推論の形式",
+    "category": "技術",
+    "tags": [
+      "推論",
+      "人工知能"
+    ],
+    "plainSummary": "起きた出来事を見て、『たぶんこれが原因だろう』と一番もっともらしい説明を考える推論。",
+    "summary": "アブダクション(Abduction)とは、観察された事実に対して、それを最もよく説明できる仮説を推測する推論の形式。\n哲学者Charles Sanders Peirceが、演繹推論・帰納推論と並ぶ第三の推論形式として提唱した。\n『芝生が濡れている』という観察に対し『雨が降った』という仮説を立てるように、確実な結論ではなく最も尤もらしい説明を導く点が特徴。\n医療診断における鑑別診断や、デバッグにおける原因推定など、限られた手がかりから説明・原因を推測するタスクと親和性が高い。\n演繹推論のように結論の正しさが保証されるわけではなく、後から新しい事実が判明すれば仮説が覆ることもある。",
+    "history": "19世紀末、哲学者Charles Sanders Peirceが、演繹推論・帰納推論と並ぶ第三の推論形式としてアブダクションを提唱した。",
+    "comparisons": [
+      {
+        "slug": "deductive-reasoning",
+        "note": "演繹推論が前提から必然的な結論を導くのに対し、アブダクションは観察された事実から最も尤もらしい説明(仮説)を推測する"
+      },
+      {
+        "slug": "inductive-reasoning",
+        "note": "帰納推論が多数の事例から一般的な規則を導くのに対し、アブダクションは限られた観察から最も尤もらしい単一の説明を推測する"
+      }
+    ],
+    "relatedTerms": [
+      "deductive-reasoning",
+      "inductive-reasoning",
+      "reasoning"
+    ]
+  },
+  {
+    "slug": "formal-logic",
+    "name": "形式論理",
+    "aliases": [
+      "Formal Logic"
+    ],
+    "tagline": "推論の妥当性を、命題の内容ではなく記号と規則による厳密な構造として扱う論理学の体系",
+    "category": "技術",
+    "tags": [
+      "人工知能",
+      "知識"
+    ],
+    "plainSummary": "『AならばB』のような論理関係を、記号とルールで正確に表す学問。",
+    "summary": "形式論理(Formal Logic)とは、推論の妥当性を、命題の具体的な内容ではなく記号と規則による厳密な構造として扱う論理学の体系。\n命題論理・述語論理などがあり、真偽が定まる命題を記号で表現し、AND・OR・NOT・含意といった論理演算子や量化子(すべての・存在する等)を用いて、前提から結論が妥当に導かれるかを機械的に検証できるようにする。\nSymbolic AIにおける自動定理証明やエキスパートシステム、オントロジーによる知識表現は、いずれも形式論理を計算機上での知識表現・推論の基盤として利用している。",
+    "comparisons": [
+      {
+        "slug": "symbolic-ai",
+        "note": "Symbolic AIは、形式論理に基づく記号処理・推論規則を用いて知識を表現・処理するAIアプローチ"
+      },
+      {
+        "slug": "ontology",
+        "note": "オントロジーは、形式論理(述語論理等)を用いて概念間の関係を厳密に定義する知識表現手法"
+      }
+    ],
+    "relatedTerms": [
+      "symbolic-ai",
+      "ontology",
+      "deductive-reasoning",
+      "knowledge-representation"
+    ]
+  },
+  {
+    "slug": "knowledge-representation",
+    "name": "知識表現",
+    "aliases": [
+      "Knowledge Representation"
+    ],
+    "tagline": "AIが推論・判断に利用できる形で、知識を計算機上に表現する方法論の総称",
+    "category": "技術",
+    "tags": [
+      "知識",
+      "人工知能"
+    ],
+    "plainSummary": "AIが使える形で、知識をコンピュータの中にどう表すかという考え方。",
+    "summary": "知識表現(Knowledge Representation)とは、AIが推論・判断に利用できる形で、現実世界の知識を計算機上に表現する方法論の総称。\n形式論理に基づく述語やルールとして表現する手法、概念間の関係を階層構造で定義するオントロジー、エンティティと関係をグラフ構造で表現する知識グラフなどが代表的。\n大量のテキストから学習した埋め込みベクトルとして暗黙的に知識を保持するニューラルネットワーク的手法も含め、Symbolic AIの時代から現在に至るまで様々なアプローチが提案されてきた。\nどのような形式で知識を表現するかによって、推論の正確さ・説明可能性・スケーラビリティ・更新のしやすさといった特性が変わる。",
+    "comparisons": [
+      {
+        "slug": "ontology",
+        "note": "オントロジーは、知識表現の代表的な手法の1つで、概念・関係を階層構造として形式的に定義する"
+      },
+      {
+        "slug": "knowledge-graph",
+        "note": "知識グラフは、知識表現の一形態で、エンティティと関係をグラフ構造として具体的に格納したもの"
+      },
+      {
+        "slug": "symbolic-ai",
+        "note": "Symbolic AIは、知識表現を記号・ルールとして明示的に構築し、論理的な推論規則で処理するアプローチ"
+      }
+    ],
+    "relatedTerms": [
+      "ontology",
+      "knowledge-graph",
+      "symbolic-ai",
+      "formal-logic"
+    ]
+  },
+  {
+    "slug": "neural-logic-programming",
+    "name": "神経論理プログラミング",
+    "aliases": [
+      "Neural Logic Programming",
+      "Neural LP"
+    ],
+    "tagline": "知識グラフの補完などのタスクで、論理ルールをニューラルネットワークにより微分可能な形で学習する手法",
+    "category": "技術",
+    "tags": [
+      "知識",
+      "深層学習"
+    ],
+    "plainSummary": "『AならばB』のような論理ルールを、ニューラルネットワークの学習で自動的に見つける手法。",
+    "summary": "神経論理プログラミング(Neural Logic Programming)とは、知識グラフの補完(欠けている関係の推測)などのタスクにおいて、論理ルールをニューラルネットワークにより微分可能な形で学習する手法。\n従来のSymbolic AI的な論理プログラミングでは、ルールを人手で設計するか離散的な探索によって発見する必要があった。\n神経論理プログラミングは、ルールの構造とその信頼度を勾配降下法で最適化可能な連続値のパラメータとして表現することで、データから自動的にルールを学習できるようにする。\n知識グラフ内のエンティティ間の関係パス(推論チェーン)を辿りながら、そのパスがどれだけ有効な推論ルールとなり得るかを学習する構成が代表的。",
+    "history": "2017年、Yangらが「Differentiable Learning of Logic Rules for Knowledge Base Reasoning」を発表し、知識ベースの推論のための論理ルールを微分可能な形で学習する手法を提案した。",
+    "comparisons": [
+      {
+        "slug": "symbolic-ai",
+        "note": "Symbolic AIがルールを人手または離散探索で構築するのに対し、神経論理プログラミングはルールを微分可能なパラメータとしてデータから学習する"
+      },
+      {
+        "slug": "knowledge-graph",
+        "note": "神経論理プログラミングは、知識グラフの欠けている関係を補完するタスク等に適用される"
+      }
+    ],
+    "relatedTerms": [
+      "knowledge-graph",
+      "symbolic-ai",
+      "differentiable-reasoning"
+    ]
+  },
+  {
+    "slug": "differentiable-reasoning",
+    "name": "微分可能推論",
+    "aliases": [
+      "Differentiable Reasoning"
+    ],
+    "tagline": "論理的な推論の過程を、勾配降下法で最適化可能な微分可能な演算として表現するアプローチ",
+    "category": "技術",
+    "tags": [
+      "知識",
+      "深層学習"
+    ],
+    "plainSummary": "論理的に考える処理を、ニューラルネットワークのように勾配で学習できる形にする方法。",
+    "summary": "微分可能推論(Differentiable Reasoning)とは、記号的な論理推論の過程を、勾配降下法で最適化可能な連続値の演算として表現するアプローチ。\n従来のSymbolic AIによる推論は離散的な記号操作であり、ニューラルネットワークの学習に用いる誤差逆伝播法とは相性が悪かった。\n微分可能推論は、論理演算(AND・OR等)やルールの適用を、確率値やソフトな重み付けを用いた連続的な演算に置き換える。\nこれにより推論の過程全体をニューラルネットワークの一部として組み込み、エンドツーエンドで学習できるようにする。\n神経論理プログラミングなどが代表的な研究例。",
+    "background": "Symbolic AIの厳密な論理推論と、ニューラルネットワークの学習能力を組み合わせたいというニューロシンボリックAIの目標に対し、両者を橋渡しする技術的な手段として微分可能推論が発展した。",
+    "comparisons": [
+      {
+        "slug": "neuro-symbolic-ai",
+        "note": "微分可能推論は、ニューロシンボリックAIが目指す論理推論とニューラルネットワークの統合を実現する技術的アプローチの1つ"
+      },
+      {
+        "slug": "neural-logic-programming",
+        "note": "神経論理プログラミングは、微分可能推論の考え方を知識グラフの補完タスクに応用した代表的な手法"
+      },
+      {
+        "slug": "symbolic-ai",
+        "note": "Symbolic AIの離散的な記号操作による推論に対し、微分可能推論はそれを連続的な演算に置き換え勾配降下法で学習可能にする"
+      }
+    ],
+    "relatedTerms": [
+      "neuro-symbolic-ai",
+      "neural-logic-programming",
+      "symbolic-ai",
+      "backpropagation"
+    ]
+  },
+  {
+    "slug": "sparse-activation",
+    "name": "スパース活性化",
+    "aliases": [
+      "Sparse Activation"
+    ],
+    "tagline": "入力ごとにネットワークの一部のパラメータ・ユニットだけを選択的に計算に使う仕組み",
+    "category": "アーキテクチャ",
+    "tags": [
+      "深層学習",
+      "スパースモデル"
+    ],
+    "plainSummary": "AIが計算するとき、モデル全体でなく必要な一部分だけを働かせる仕組み。",
+    "summary": "スパース活性化(Sparse Activation)とは、ニューラルネットワークにおいて、入力ごとにモデル全体のパラメータやユニットのうち一部だけを選択的に計算に使う仕組みを指す。\n通常のニューラルネットワーク(密なモデル)では1回の推論で全てのパラメータが計算に関与するのに対し、スパース活性化を採るモデルでは、ルーター(ゲーティングネットワーク)等の仕組みによって入力トークンごとに必要な一部分のみが活性化・計算される。\nMixture of Expertsは、複数の専門家サブネットワークのうち一部だけを選択的に使うことでスパース活性化を実現する代表的なアーキテクチャで、総パラメータ数を増やして表現力を高めつつ、1トークンあたりの実際の計算量(有効パラメータ数)を抑えられる点が特徴。",
+    "comparisons": [
+      {
+        "slug": "mixture-of-experts",
+        "note": "MoEは、専門家サブネットワークの一部だけを選択的に使うことでスパース活性化を実現する代表的なアーキテクチャ"
+      },
+      {
+        "slug": "router",
+        "note": "ルーター(ゲーティングネットワーク)は、スパース活性化においてどのパラメータ・ユニットを計算に使うかを決定する仕組み"
+      }
+    ],
+    "relatedTerms": [
+      "mixture-of-experts",
+      "router",
+      "sparsification"
+    ]
+  },
+  {
+    "slug": "router",
+    "name": "ルーター",
+    "aliases": [
+      "Router",
+      "ゲーティングネットワーク",
+      "Gating Network",
+      "ゲーティング",
+      "Gating"
+    ],
+    "tagline": "MoEなどのスパースなニューラルネットワークで、入力ごとにどの専門家・ユニットへ処理を振り分けるかを決定する仕組み",
+    "category": "アーキテクチャ",
+    "tags": [
+      "深層学習",
+      "スパースモデル"
+    ],
+    "plainSummary": "AIモデルの中で、入力ごとに『どの担当(専門家)に処理させるか』を決める仕組み。",
+    "summary": "ルーター(Router、ゲーティングネットワークとも呼ばれる)とは、Mixture of Expertsなどのスパースなニューラルネットワークにおいて、入力トークンごとにどの専門家サブネットワーク・ユニットへ処理を振り分けるかを決定する仕組み。\n入力を受け取り、各専門家に対するスコア(確率)を計算したうえで、スコア上位の専門家を選択して処理を割り当てるTop-k方式が広く使われる。\nルーターの学習が不安定になると、一部の専門家だけに処理が偏る負荷の偏りが生じやすく、これを防ぐための補助的な損失関数(load balancing loss)を導入する工夫がしばしば行われる。\n複数のLLM間でリクエストを振り分けるModel Routerとは異なり、こちらは単一モデル内部のトークンレベルでの計算経路の選択を担う。",
+    "background": "モデルの表現力を高めるために専門家サブネットワークを増やすほど、全専門家を毎回計算するのは計算コストが増大する。\nこの課題に対処するため、入力ごとに必要な専門家だけを選択的に使うスパース活性化を実現する仕組みとしてルーターが導入された。",
+    "advantages": [
+      "専門家ネットワークの一部だけを計算すればよく、モデル全体の計算コストを抑えられる",
+      "専門家ごとに異なるパターンを専門化して学習させることで、表現力を高められる"
+    ],
+    "disadvantages": [
+      "特定の専門家に処理が偏る負荷の偏りが起きやすく、学習の安定化に工夫が必要",
+      "ルーターの選択が離散的であるため、学習時の勾配伝播に工夫(補助損失等)が必要になる"
+    ],
+    "comparisons": [
+      {
+        "slug": "mixture-of-experts",
+        "note": "ルーターは、MoEアーキテクチャにおいて各トークンをどの専門家に送るかを決定する中核的な構成要素"
+      },
+      {
+        "slug": "model-router",
+        "note": "Model Routerが複数のLLM間でリクエストを振り分ける仕組みであるのに対し、こちらのルーターは単一モデル内部のトークンレベルでの計算経路を選択する仕組み"
+      },
+      {
+        "slug": "sparse-activation",
+        "note": "ルーターは、スパース活性化を実現するための具体的な選択メカニズム"
+      }
+    ],
+    "relatedTerms": [
+      "mixture-of-experts",
+      "sparse-activation",
+      "model-router"
+    ],
+    "faq": [
+      {
+        "question": "ルーターとModel Routerは同じもの？",
+        "answer": "名前は似ているが別物。ルーター(ゲーティングネットワーク)はMoEモデル内部でトークンごとに専門家を選択する仕組み。Model Routerは、複数の異なるLLM間でリクエストそのものを振り分ける仕組みを指す。"
+      }
+    ]
+  },
+  {
+    "slug": "prompt-distillation",
+    "name": "プロンプト蒸留",
+    "aliases": [
+      "Prompt Distillation",
+      "Context Distillation"
+    ],
+    "tagline": "詳細な指示・例を含むプロンプトへの応答パターンを、プロンプトなしでも再現できるようモデル自体に学習させる手法",
+    "category": "技術",
+    "tags": [
+      "モデル圧縮",
+      "プロンプトエンジニアリング"
+    ],
+    "plainSummary": "長い指示文を毎回与える代わりに、その指示に従った振る舞いをモデル自体に覚え込ませる手法。",
+    "summary": "プロンプト蒸留(Prompt Distillation)とは、詳細な指示や例を含む長いプロンプトを与えたときのモデルの応答パターンを、そのプロンプトなしでも再現できるよう、モデル自体のパラメータに学習させる手法。\n知識蒸留が、大きな教師モデルの出力(振る舞い)を小さな生徒モデルに学習させる手法であるのに対し、プロンプト蒸留はプロンプトあり・なしの2通りの出力を比較する。\nそれによって、プロンプトが持つ効果自体を同一モデル(あるいは別モデル)のパラメータの中に埋め込もうとする。\n推論のたびに長いプロンプトをコンテキストに含める必要がなくなるため、入力トークン数の削減による推論コストの低減や、システムプロンプトの内容を外部から見えにくくする効果が期待できる。",
+    "comparisons": [
+      {
+        "slug": "knowledge-distillation",
+        "note": "知識蒸留が教師モデルの出力を生徒モデルに学習させる手法であるのに対し、プロンプト蒸留は特定のプロンプトが持つ効果をモデル自体のパラメータに学習させる手法"
+      },
+      {
+        "slug": "fine-tuning",
+        "note": "プロンプト蒸留は、プロンプトによる振る舞いの変化を学習データとして、ファインチューニングの一種として実施されることが多い"
+      },
+      {
+        "slug": "system-prompt",
+        "note": "プロンプト蒸留は、システムプロンプトなど固定的に使われるプロンプトの効果をモデルに埋め込み、実行時にそのプロンプトを省略できるようにする手法として使われる"
+      }
+    ],
+    "relatedTerms": [
+      "knowledge-distillation",
+      "fine-tuning",
+      "system-prompt",
+      "prompt-engineering"
+    ]
   }
 ]
