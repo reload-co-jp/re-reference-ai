@@ -3005,7 +3005,8 @@
       "rlvr",
       "reward-model",
       "rlaif",
-      "ppo"
+      "ppo",
+      "feedback-optimization"
     ],
     "faq": [
       {
@@ -3238,7 +3239,8 @@
       "gptq",
       "awq",
       "quantization-aware-training",
-      "distortion-minimization"
+      "distortion-minimization",
+      "computational-efficiency"
     ],
     "faq": [
       {
@@ -3335,7 +3337,9 @@
       "mixture-of-depths",
       "sparsification",
       "router",
-      "sparse-activation"
+      "sparse-activation",
+      "computational-efficiency",
+      "conditional-computation"
     ],
     "faq": [
       {
@@ -3444,7 +3448,8 @@
       "multi-query-attention",
       "flash-attention",
       "multi-head-latent-attention",
-      "inference-optimization"
+      "inference-optimization",
+      "latency-optimization"
     ],
     "faq": [
       {
@@ -4356,7 +4361,8 @@
       "ai-agent",
       "autonomous-agent",
       "multi-agent",
-      "tool-calling"
+      "tool-calling",
+      "tool-using-ai"
     ],
     "faq": [
       {
@@ -4435,7 +4441,8 @@
       "structured-output",
       "code-interpreter",
       "browser-use",
-      "webmcp"
+      "webmcp",
+      "tool-using-ai"
     ],
     "faq": [
       {
@@ -4601,7 +4608,9 @@
       "agentcore",
       "fastmcp",
       "cloudflare-os",
-      "webmcp"
+      "webmcp",
+      "agent-network",
+      "ecosystem-ai"
     ],
     "faq": [
       {
@@ -4676,7 +4685,8 @@
       "mcp",
       "multi-agent",
       "ai-agent",
-      "inter-agent-communication"
+      "inter-agent-communication",
+      "agent-network"
     ],
     "faq": [
       {
@@ -4773,7 +4783,8 @@
       "orchestrator",
       "subagent",
       "inter-agent-communication",
-      "cooperation-strategy"
+      "cooperation-strategy",
+      "agent-network"
     ],
     "faq": [
       {
@@ -5436,7 +5447,8 @@
       "decoding",
       "kv-cache",
       "small-language-model",
-      "inference"
+      "inference",
+      "latency-optimization"
     ],
     "faq": [
       {
@@ -5899,7 +5911,8 @@
       "whisper",
       "t5",
       "clip",
-      "pretraining"
+      "pretraining",
+      "gpt-4v"
     ],
     "faq": [
       {
@@ -5977,7 +5990,8 @@
       "computer-use",
       "grok",
       "cohere",
-      "fable"
+      "fable",
+      "claude-opus"
     ],
     "faq": [
       {
@@ -12236,7 +12250,9 @@
       "transformer",
       "pretraining",
       "test-time-scaling",
-      "scaling-limits"
+      "scaling-limits",
+      "phase-transition",
+      "computational-efficiency"
     ],
     "faq": [
       {
@@ -12302,7 +12318,8 @@
       "chain-of-thought",
       "reasoning-model",
       "agi",
-      "in-context-learning"
+      "in-context-learning",
+      "phase-transition"
     ],
     "faq": [
       {
@@ -13109,7 +13126,8 @@
       "alignment",
       "instruction-tuning",
       "fine-tuning",
-      "reinforcement-learning"
+      "reinforcement-learning",
+      "feedback-optimization"
     ],
     "faq": [
       {
@@ -16892,7 +16910,8 @@
       "monte-carlo-tree-search",
       "deep-learning",
       "alignment",
-      "inverse-reinforcement-learning"
+      "inverse-reinforcement-learning",
+      "trajectory-learning"
     ],
     "faq": [
       {
@@ -17059,7 +17078,9 @@
       "instruction-tuning",
       "vla",
       "physical-ai",
-      "video-understanding"
+      "video-understanding",
+      "multimodal-llm",
+      "gpt-4v"
     ],
     "faq": [
       {
@@ -19840,7 +19861,8 @@
       "constitutional-ai",
       "llm-as-a-judge",
       "synthetic-data",
-      "alignment"
+      "alignment",
+      "feedback-optimization"
     ],
     "faq": [
       {
@@ -21928,7 +21950,8 @@
       "batch-inference",
       "kv-cache",
       "vllm",
-      "inference-optimization"
+      "inference-optimization",
+      "latency-optimization"
     ],
     "faq": [
       {
@@ -24815,7 +24838,8 @@
       "diffusion-model",
       "lerobot",
       "vla",
-      "human-gated-dagger"
+      "human-gated-dagger",
+      "large-scale-behavior-cloning"
     ],
     "references": [
       {
@@ -25764,7 +25788,9 @@
     "relatedTerms": [
       "reward-function",
       "policy-optimization",
-      "q-learning"
+      "q-learning",
+      "large-scale-behavior-cloning",
+      "trajectory-learning"
     ]
   },
   {
@@ -30616,7 +30642,8 @@
     "relatedTerms": [
       "mixture-of-experts",
       "router",
-      "sparsification"
+      "sparsification",
+      "conditional-computation"
     ]
   },
   {
@@ -30663,7 +30690,8 @@
     "relatedTerms": [
       "mixture-of-experts",
       "sparse-activation",
-      "model-router"
+      "model-router",
+      "conditional-computation"
     ],
     "faq": [
       {
@@ -30706,6 +30734,554 @@
       "fine-tuning",
       "system-prompt",
       "prompt-engineering"
+    ]
+  },
+  {
+    "slug": "tool-using-ai",
+    "name": "ツール使用AI",
+    "aliases": [
+      "Tool-using AI",
+      "Tool Use"
+    ],
+    "tagline": "LLMが外部ツールの呼び出し方自体を学習・獲得し、必要な場面で自律的にツールを活用する能力・性質",
+    "category": "エージェント",
+    "tags": [
+      "ツール連携",
+      "エージェント"
+    ],
+    "summary": "Tool-using AIは、LLMが外部ツール(API・関数・検索エンジンなど)を状況に応じて自律的に選択・呼び出す能力を持つAIシステム全般を指す総称。\nTool CallingやFunction Callingが「LLMがツールを呼び出すための技術的な仕組み・APIインターフェース」を指すのに対し、Tool-using AIはその能力を備えたAIシステム自体、あるいはそうした性質を指す、より広い言葉として使われる。\nReActのように推論とツール呼び出しを交互に行うエージェントや、Computer UseのようにGUI操作自体をツール的に扱うエージェントなど、ツール使用を中核とするAIシステム全般が含まれる。",
+    "history": "2023年2月、Meta AIが論文「Toolformer」で、LLM自身が外部API呼び出しのタイミングと方法を自己学習する手法を提案し、Tool-using AIという方向性の初期の代表例となった。\n以降、Tool CallingのAPI標準化(2023年)やReActプロンプティングと組み合わさる形で、実用的なAIエージェントの基盤能力として定着した。",
+    "comparisons": [
+      {
+        "slug": "tool-calling",
+        "note": "Tool Callingは、Tool-using AIを実現するための技術的なAPI呼び出しの仕組み"
+      },
+      {
+        "slug": "agentic-ai",
+        "note": "エージェンティックAIは、Tool-using AIを含むより広い自律的タスク遂行能力を指す概念"
+      }
+    ],
+    "relatedTerms": [
+      "tool-calling",
+      "function-calling",
+      "ai-agent",
+      "react-prompting",
+      "computer-use"
+    ]
+  },
+  {
+    "slug": "multimodal-llm",
+    "name": "マルチモーダルLLM",
+    "aliases": [
+      "Multimodal LLM",
+      "MLLM"
+    ],
+    "tagline": "テキストに加え画像・音声・動画など複数モダリティの入出力を単一モデルで扱える大規模言語モデル",
+    "category": "モデル",
+    "tags": [
+      "マルチモーダル",
+      "LLM"
+    ],
+    "summary": "マルチモーダルLLMは、従来テキストのみを扱っていたLLMを拡張し、画像・音声・動画といった複数種類のデータ(モダリティ)を入力または出力として扱えるようにしたモデル。\n画像を理解して質問へ答えるVision-Language Model(VLM)的な使い方に加え、音声入出力やリアルタイムの映像理解まで対応するモデルも含む、より広い呼び方。\nGPT-4o・Gemini・Claudeなどの主要なフロンティアモデルは、テキスト中心の設計から出発しつつ、画像や音声の理解を統合したマルチモーダルLLMとして提供されている。",
+    "history": "2023年9月、OpenAIがGPT-4に画像入力機能を追加したGPT-4Vを公開し、広く使われるLLMへのマルチモーダル対応の代表例となった。\n2023年12月、Googleはテキストだけでなく画像・音声を含む形で初期から設計したGeminiを発表し、マルチモーダルLLMという呼び方が広まった。",
+    "comparisons": [
+      {
+        "slug": "vision-language-model",
+        "note": "Vision-Language Modelは画像と言語の理解に特化した用語で、マルチモーダルLLMはさらに音声・動画等も含む広い呼び方"
+      },
+      {
+        "slug": "multimodal",
+        "note": "マルチモーダルはモデル全般の性質を指す形容語で、マルチモーダルLLMはそれをLLMに適用した具体的なモデル区分"
+      }
+    ],
+    "relatedTerms": [
+      "vision-language-model",
+      "multimodal",
+      "clip",
+      "gpt",
+      "gemini",
+      "claude",
+      "gpt-4v"
+    ]
+  },
+  {
+    "slug": "agent-network",
+    "name": "エージェントネットワーク",
+    "aliases": [
+      "Agent Network"
+    ],
+    "tagline": "複数のAIエージェントが相互に発見・接続し、タスクやメッセージをやり取りするネットワーク構造",
+    "category": "エージェント",
+    "tags": [
+      "マルチエージェント",
+      "協調"
+    ],
+    "summary": "エージェントネットワークは、複数のAIエージェントが単一のアプリケーション内に閉じず、ネットワークを介して相互に発見・接続し、タスクの委譲やメッセージ交換をする仕組み・構造を指す。\nMulti-Agentは「複数エージェントが協調するアーキテクチャ」全般を指すのに対し、Agent Networkはその中でも異なる組織・ベンダーが提供するエージェント同士を、A2Aのようなプロトコルで疎結合に接続する、より分散的でネットワーク的な構成を強調する言葉。",
+    "comparisons": [
+      {
+        "slug": "multi-agent",
+        "note": "Multi-Agentは複数エージェントが協調するアーキテクチャ全般を指し、Agent Networkはそれがネットワーク越しに分散した構成を指す"
+      },
+      {
+        "slug": "a2a",
+        "note": "A2Aは、Agent Networkを構成するエージェント同士の相互接続を可能にする標準プロトコル"
+      }
+    ],
+    "relatedTerms": [
+      "multi-agent",
+      "a2a",
+      "inter-agent-communication",
+      "mcp",
+      "orchestrator"
+    ]
+  },
+  {
+    "slug": "feedback-optimization",
+    "name": "フィードバック最適化",
+    "aliases": [
+      "Feedback Optimization"
+    ],
+    "tagline": "人間や別のAIからのフィードバック(評価・報酬信号)をもとにモデルの出力を望ましい方向へ調整する学習手法の総称",
+    "category": "技術",
+    "tags": [
+      "強化学習",
+      "学習"
+    ],
+    "summary": "フィードバック最適化は、モデルが生成した出力に対する評価やフィードバック(人間の選好判断、報酬モデルのスコア、AIによる評価など)を学習信号として用い、モデルのパラメータや出力傾向を望ましい方向へ調整していく学習手法全般を指す総称。\nRLHF(人間のフィードバックを用いる強化学習)やRLAIF(AIのフィードバックを用いる手法)、DPO(選好データを直接最適化に用いる手法)など、フィードバックの取得元や最適化アルゴリズムの違いによって複数の具体的な手法に分かれる。",
+    "comparisons": [
+      {
+        "slug": "rlhf",
+        "note": "RLHFは、人間のフィードバックを報酬モデル経由で用いるフィードバック最適化の代表的手法"
+      },
+      {
+        "slug": "dpo",
+        "note": "DPOは、報酬モデルを介さず選好データを直接方策最適化に用いるフィードバック最適化の手法"
+      },
+      {
+        "slug": "rlaif",
+        "note": "RLAIFは、人間の代わりにAIによる評価をフィードバックとして用いる手法"
+      }
+    ],
+    "relatedTerms": [
+      "rlhf",
+      "dpo",
+      "rlaif",
+      "reward-model",
+      "reward-hacking",
+      "alignment"
+    ]
+  },
+  {
+    "slug": "latency-optimization",
+    "name": "レイテンシ最適化",
+    "aliases": [
+      "Latency Optimization"
+    ],
+    "tagline": "LLMの応答速度(初回トークン生成までの時間や生成全体の所要時間)を短縮するための各種技術の総称",
+    "category": "インフラ",
+    "tags": [
+      "推論最適化",
+      "スループット"
+    ],
+    "summary": "レイテンシ最適化は、LLM推論において、リクエストを送ってから応答が返るまでの遅延時間を短縮するための各種技術の総称。\nSpeculative Decodingのように生成トークン数自体を減らすアプローチ、Continuous Batchingのようにサーバー側のリクエスト処理効率を上げるアプローチ、KVキャッシュや量子化のようにモデルの計算・メモリ負荷を減らすアプローチなどが含まれる。\n目的は共通するが、アプローチの異なる複数の技術によって実現される。\nスループット最適化がバッチ全体の処理量最大化を目的とするのに対し、レイテンシ最適化は個々のリクエストへの応答の速さを重視する点で異なる。",
+    "comparisons": [
+      {
+        "slug": "speculative-decoding",
+        "note": "Speculative Decodingは、生成トークン数を実質的に減らしてレイテンシを短縮する具体的な手法の1つ"
+      },
+      {
+        "slug": "continuous-batching",
+        "note": "Continuous Batchingは主にスループット向上を目的とするが、待ち時間短縮を通じてレイテンシ改善にも寄与する"
+      },
+      {
+        "slug": "kv-cache",
+        "note": "KVキャッシュは、過去の計算結果を再利用してレイテンシを下げる基盤的な仕組み"
+      }
+    ],
+    "relatedTerms": [
+      "speculative-decoding",
+      "continuous-batching",
+      "kv-cache",
+      "inference-optimization",
+      "quantization",
+      "flash-attention"
+    ]
+  },
+  {
+    "slug": "large-scale-behavior-cloning",
+    "name": "大規模行動クローニング",
+    "aliases": [
+      "Large-scale Behavior Cloning"
+    ],
+    "tagline": "大量の人間の実演データを収集し、単純な教師あり学習で状態から行動へのマッピングを模倣させるロボット方策学習の手法",
+    "category": "技術",
+    "tags": [
+      "模倣学習",
+      "ロボティクス"
+    ],
+    "summary": "大規模行動クローニングは、テレオペレーションによるロボット操作データなど人間の実演を大量に収集し、観測された状態から対応する行動を予測するよう教師あり学習で方策(ポリシー)を学習させる手法。\nBehavior Cloning自体は模倣学習の中で最も単純な手法として古くから知られていた。\n収集データ規模を大きく増やし、Diffusion Policyのような表現力の高い方策モデルと組み合わせることで、多様なタスク・環境へ汎化するロボット基盤モデルを構築するアプローチとして2020年代に再注目されている。\n単純なBehavior Cloningは実行時に生じる誤差の蓄積(Covariate Shift)に弱いという課題があり、DAggerのように実行中の介入データを取り込む手法や、拡散モデルで行動分布そのものを表現する手法が、その弱点を補う形で発展してきた。",
+    "history": "Behavior Cloning自体は1989年、自動運転を模倣学習で行うALVINNの研究に遡る初期の手法。\n2020年代に入り、大量の実演データと大規模ニューラルネットワークを組み合わせる「大規模化」の潮流が、RT-1・RT-2やDiffusion Policyといったロボット基盤モデルの形で本格化した。",
+    "comparisons": [
+      {
+        "slug": "imitation-learning",
+        "note": "模倣学習は行動クローニングを含む、実演データから方策を学ぶ手法全般の上位概念"
+      },
+      {
+        "slug": "diffusion-policy",
+        "note": "Diffusion Policyは、行動クローニングを拡散モデルで実現する具体的な方策アーキテクチャ"
+      },
+      {
+        "slug": "human-gated-dagger",
+        "note": "Human-gated DAggerは、単純な行動クローニングの誤差蓄積問題を、実行中の人間介入データで補う発展形"
+      }
+    ],
+    "relatedTerms": [
+      "imitation-learning",
+      "diffusion-policy",
+      "human-gated-dagger",
+      "vla",
+      "ground-truth",
+      "trajectory-learning"
+    ]
+  },
+  {
+    "slug": "ecosystem-ai",
+    "name": "エコシステムAI",
+    "aliases": [
+      "Ecosystem AI"
+    ],
+    "tagline": "単一のモデルではなく、複数のモデル・ツール・エージェントが相互接続し合うことで機能する、AI技術群全体の相互依存的な構成",
+    "category": "技術",
+    "tags": [
+      "相互運用性",
+      "エージェント基盤"
+    ],
+    "summary": "エコシステムAIは、単一の大規模モデルの性能ではなく、複数のモデル・ツール・データソース・エージェントがMCPやA2Aのような標準プロトコルを介して相互接続し合うことで、全体として機能・進化していくAI技術群の構成を指す言葉。\n特定ベンダーの単一プロダクトではなく、異なる開発者・組織が提供する複数のコンポーネントの組み合わせによって1つの価値を生み出す、相互運用性を重視した視点として使われる。",
+    "comparisons": [
+      {
+        "slug": "mcp",
+        "note": "MCPは、エコシステムAIを構成するモデルとツールの接続方法を標準化するプロトコル"
+      },
+      {
+        "slug": "agent-network",
+        "note": "Agent Networkは、エコシステムAIの中でも特にエージェント同士の相互接続に焦点を当てた構造"
+      }
+    ],
+    "relatedTerms": [
+      "mcp",
+      "a2a",
+      "agent-network",
+      "multi-agent"
+    ]
+  },
+  {
+    "slug": "phase-transition",
+    "name": "相転移",
+    "aliases": [
+      "Phase Transition"
+    ],
+    "tagline": "モデル規模が臨界点(閾値)を超えた際、性能や能力が連続的でなく急激に変化する現象を、物理学の相転移になぞらえた呼び方",
+    "category": "技術",
+    "tags": [
+      "スケーリング",
+      "LLM"
+    ],
+    "summary": "相転移は、物理学において水が氷から液体、液体から気体へと温度変化に応じて不連続に状態を変えるプロセスを指す概念を、LLMのスケーリングに伴う挙動変化を説明する比喩として転用した言葉。\nモデルサイズや学習データ量を徐々に増やしていくと、ある地点までは性能はなだらかに向上するだけにとどまる。\n特定の臨界的な規模を超えた瞬間には、不連続な変化が起きることもある。\nこの瞬間、小規模モデルには見られなかった新しい能力が急激に獲得されたかのように観測される。\n相転移は、この急激な変化パターンそのものを指す比喩表現。\nその結果として実際に獲得される新しい能力を指す言葉としてEmergent Abilities(創発的能力)が使われ、両者はセットで語られることが多い。",
+    "comparisons": [
+      {
+        "slug": "emergent-abilities",
+        "note": "創発的能力は相転移によって現れる具体的な新しい能力を指し、相転移はその急激な変化パターン自体を指す比喩表現"
+      },
+      {
+        "slug": "scaling-laws",
+        "note": "スケーリング則はモデル規模と性能の滑らかな関係を説明する経験則であり、相転移はその関係から外れる不連続な変化を指す"
+      }
+    ],
+    "relatedTerms": [
+      "emergent-abilities",
+      "scaling-laws",
+      "large-language-model",
+      "in-context-learning"
+    ]
+  },
+  {
+    "slug": "gpt-4v",
+    "name": "GPT-4V",
+    "aliases": [
+      "GPT-4 Vision",
+      "GPT-4 with Vision"
+    ],
+    "tagline": "GPT-4に画像入力・理解機能を追加した、OpenAIのマルチモーダルモデルバリアント",
+    "category": "モデル",
+    "tags": [
+      "マルチモーダル",
+      "画像認識"
+    ],
+    "summary": "GPT-4Vは、OpenAIのGPT-4にVision(画像理解)機能を追加したモデルバリアントで、テキストに加えて画像を入力として受け取り、画像の内容説明・画像に関する質問応答・画像内のテキスト読み取りなどができるようにしたモデル。\nそれまでテキスト専用だったGPT-4を、画像とテキストを組み合わせて理解できるマルチモーダルモデルへ拡張したもので、以降のGPT-4o等、テキストと画像(さらに音声)を統合的に扱う後継モデルの足がかりとなった。",
+    "history": "2023年9月、OpenAIがGPT-4に画像入力機能を追加したGPT-4Vを一般提供開始。\n2023年3月のGPT-4発表時点でVision機能はテクニカルレポートで予告されていたが、実際の一般提供は同年9月まで持ち越された。",
+    "comparisons": [
+      {
+        "slug": "gpt",
+        "note": "GPTはOpenAIのモデルファミリー全体を指し、GPT-4Vはその中で画像入力へ対応を広げた具体的なバリアント"
+      },
+      {
+        "slug": "multimodal-llm",
+        "note": "GPT-4Vは、テキストと画像を扱うマルチモーダルLLMの代表的な初期の実例"
+      },
+      {
+        "slug": "vision-language-model",
+        "note": "GPT-4Vは、画像と言語を同時に理解するVision-Language Modelの一種"
+      }
+    ],
+    "relatedTerms": [
+      "gpt",
+      "multimodal-llm",
+      "vision-language-model",
+      "clip"
+    ]
+  },
+  {
+    "slug": "claude-opus",
+    "name": "Claude Opus",
+    "tagline": "Anthropicが提供するClaudeモデルファミリーの中で、最も高い性能を重視して設計された最上位モデルライン",
+    "category": "モデル",
+    "tags": [
+      "LLM",
+      "Anthropic"
+    ],
+    "summary": "Claude Opusは、Anthropicが提供するClaudeモデルファミリーにおいて、応答速度よりも推論の質・複雑なタスクへの対応力を重視して設計された最上位グレードのモデルライン。\n同ファミリーには、速度と性能のバランスを取ったSonnet、軽量で高速なHaikuといった他のグレードも存在し、Opusはその中で最も高い性能を求める用途に向けたモデルとして位置づけられている。",
+    "history": "2024年3月、AnthropicはClaude 3ファミリーの一部として、最上位モデルのClaude 3 Opusを発表。\n以降、Opusという名称はClaudeファミリーの最上位グレードを表すラインとして、複数世代にわたり継続的に提供されている。",
+    "comparisons": [
+      {
+        "slug": "claude",
+        "note": "Claudeはモデルファミリー全体を指し、Claude OpusはそのうちClaude最上位グレードのモデルライン"
+      }
+    ],
+    "relatedTerms": [
+      "claude",
+      "gpt",
+      "alignment"
+    ]
+  },
+  {
+    "slug": "computational-efficiency",
+    "name": "計算効率",
+    "aliases": [
+      "Computational Efficiency"
+    ],
+    "tagline": "同じ性能をより少ない計算量・メモリ・時間で達成できるかを表す、モデルの学習・推論における効率性の指標",
+    "category": "技術",
+    "tags": [
+      "モデル圧縮",
+      "推論最適化"
+    ],
+    "summary": "計算効率は、モデルの学習や推論において、一定の性能を達成するために必要な計算量(FLOPs)・メモリ使用量・処理時間がどれだけ少なく済むかを表す概念。\nモデルサイズを大きくすれば性能は向上しやすいが、その分だけ計算コストも増大するため、限られた計算資源のもとでいかに高い性能を引き出すかという観点から多様なアプローチが追求されている。\n具体的には、量子化・知識蒸留・プルーニングといったモデル圧縮技術、Mixture of Expertsのように入力ごとに使用するパラメータを絞る条件付き計算の設計、Speculative Decodingのような推論高速化技術などが挙げられる。\nScaling Lawsの文脈では、同じ計算予算(Compute Budget)のもとでモデルサイズと学習データ量をどう配分すれば損失を最小化できるかという計算効率の最適化も、重要な研究テーマになっている。",
+    "comparisons": [
+      {
+        "slug": "quantization",
+        "note": "量子化は、モデルの重みを低ビット化することで計算効率を高める代表的な手法の1つ"
+      },
+      {
+        "slug": "mixture-of-experts",
+        "note": "MoEは、条件付き計算によって一部の専門家のみを使うことでパラメータ数当たりの計算効率を高めるアーキテクチャ"
+      },
+      {
+        "slug": "scaling-laws",
+        "note": "スケーリング則は、限られた計算予算のもとでモデルサイズとデータ量をどう配分すれば計算効率よく性能を高められるかを扱う経験則"
+      }
+    ],
+    "relatedTerms": [
+      "quantization",
+      "knowledge-distillation",
+      "pruning",
+      "mixture-of-experts",
+      "scaling-laws",
+      "inference-optimization"
+    ]
+  },
+  {
+    "slug": "trajectory-learning",
+    "name": "軌跡学習",
+    "aliases": [
+      "Trajectory Learning"
+    ],
+    "tagline": "エージェントが環境内で観測した状態と取った行動の時系列(軌跡)データから、方策や環境のダイナミクスを学習する手法の総称",
+    "category": "技術",
+    "tags": [
+      "模倣学習",
+      "強化学習"
+    ],
+    "summary": "軌跡学習は、エージェントが環境と相互作用する中で得られる、状態と行動の時系列データ(軌跡・トラジェクトリ)を学習データとして使い、方策や環境のダイナミクスを学習する手法全般を指す言葉。\n人間の実演から集めた軌跡を教師データとして方策を模倣させるBehavior Cloningのような模倣学習の手法や、エージェント自身が環境を探索しながら収集した軌跡を報酬信号と組み合わせて方策を改善していく強化学習の手法など、軌跡データの使い方によって複数のアプローチに分かれる。\nロボティクスの分野では、カメラ映像や関節角度といったセンサーデータと、それに対応する制御コマンドの軌跡を大量に収集する。\nDiffusion Policyのような表現力の高いモデルでこれらの軌跡を学習させ、多様なタスクに対応できる方策を構築するアプローチが広がっている。",
+    "comparisons": [
+      {
+        "slug": "imitation-learning",
+        "note": "模倣学習は、専門家の軌跡データから直接方策を学ぶ軌跡学習の代表的な一形態"
+      },
+      {
+        "slug": "large-scale-behavior-cloning",
+        "note": "大規模行動クローニングは、大量に収集した軌跡データを教師あり学習で模倣させる、軌跡学習の具体的な手法"
+      },
+      {
+        "slug": "reinforcement-learning",
+        "note": "強化学習は、エージェント自身が収集した軌跡と報酬信号を組み合わせて方策を改善する、軌跡学習の別のアプローチ"
+      }
+    ],
+    "relatedTerms": [
+      "imitation-learning",
+      "large-scale-behavior-cloning",
+      "diffusion-policy",
+      "reinforcement-learning",
+      "vla"
+    ]
+  },
+  {
+    "slug": "conditional-computation",
+    "name": "条件付き計算",
+    "aliases": [
+      "Conditional Computation"
+    ],
+    "tagline": "入力ごとにネットワークの一部だけを選択的に計算に使うことで、パラメータ数を増やしても計算コストを抑える設計思想",
+    "category": "アーキテクチャ",
+    "tags": [
+      "スパースモデル",
+      "並列計算"
+    ],
+    "summary": "条件付き計算は、ニューラルネットワークの全パラメータを毎回の計算に使うのではなく、入力の内容に応じて一部のサブネットワークやパラメータだけを選択的に使う設計思想を指す。\nモデル全体のパラメータ数を増やして表現力・記憶容量を高めつつ、実際の計算(推論・学習の各ステップ)で使うパラメータ数を抑えることで、パラメータ数当たりの計算コストを抑えられる点が主な狙い。\nMixture of Expertsは、条件付き計算の考え方を専門家サブネットワークの選択という形で具体化した代表的なアーキテクチャ。\nどのサブネットワークを使うかを決めるRouter(ゲーティングネットワーク)と組み合わせて実現される。",
+    "history": "条件付き計算という考え方は、2013年頃のYoshua Bengioらによる研究で、ニューラルネットワークの一部のみを確率的に活性化させる手法として論じられたことに遡る。\n2017年、Google BrainのShazeerらが論文「Outrageously Large Neural Networks」でMixture of Expertsに条件付き計算を組み合わせ、大規模なスパースモデルとして実用化する道を開いた。",
+    "comparisons": [
+      {
+        "slug": "mixture-of-experts",
+        "note": "MoEは、条件付き計算という設計思想を専門家サブネットワークの選択的活性化という形で具体化した代表的なアーキテクチャ"
+      },
+      {
+        "slug": "sparse-activation",
+        "note": "スパース活性化は、条件付き計算によって実現される、入力ごとに一部のユニットだけが活性化する状態そのものを指す"
+      },
+      {
+        "slug": "router",
+        "note": "ルーター(ゲーティングネットワーク)は、条件付き計算においてどのサブネットワークを使うかを決定する仕組み"
+      }
+    ],
+    "relatedTerms": [
+      "mixture-of-experts",
+      "sparse-activation",
+      "router"
+    ]
+  },
+  {
+    "slug": "automated-content-creation",
+    "name": "自動コンテンツ生成",
+    "aliases": [
+      "Automated Content Creation"
+    ],
+    "tagline": "AIがブログ記事・広告文・画像などのコンテンツを自動的に生成する取り組み",
+    "category": "技術",
+    "tags": [
+      "生成AI",
+      "自動化"
+    ],
+    "relatedTerms": [
+      "generative-ai",
+      "code-generation"
+    ]
+  },
+  {
+    "slug": "personalized-learning",
+    "name": "個別最適化学習",
+    "aliases": [
+      "Personalized Learning",
+      "Adaptive Learning"
+    ],
+    "tagline": "AIが学習者ごとの理解度や進捗に応じて教材・難易度を自動調整する教育手法",
+    "category": "技術",
+    "tags": [
+      "自動化"
+    ]
+  },
+  {
+    "slug": "medical-diagnosis-assistance",
+    "name": "医療診断支援",
+    "aliases": [
+      "Medical Diagnosis Assistance",
+      "Diagnostic AI"
+    ],
+    "tagline": "画像診断やカルテ情報の解析によって医師の診断を補助するAI技術",
+    "category": "技術",
+    "tags": [
+      "画像認識"
+    ]
+  },
+  {
+    "slug": "virtual-try-on",
+    "name": "バーチャル試着",
+    "aliases": [
+      "Virtual Try-on",
+      "VTO"
+    ],
+    "tagline": "AIが衣服やアクセサリーを利用者の画像・映像上に合成し試着体験を提供する技術",
+    "category": "技術",
+    "tags": [
+      "画像認識",
+      "マルチモーダル"
+    ]
+  },
+  {
+    "slug": "digital-twin",
+    "name": "デジタルツイン",
+    "aliases": [
+      "Digital Twin"
+    ],
+    "tagline": "現実の設備やプロセスをデータで再現し、シミュレーションや予測に用いる仮想モデル",
+    "category": "技術",
+    "tags": [
+      "自動化"
+    ]
+  },
+  {
+    "slug": "intelligent-document-processing",
+    "name": "インテリジェント・ドキュメント処理",
+    "aliases": [
+      "Intelligent Document Processing",
+      "IDP"
+    ],
+    "tagline": "OCRとAIを組み合わせ、書類から情報を自動的に抽出・分類・構造化する技術",
+    "category": "技術",
+    "tags": [
+      "自動化",
+      "情報検索"
+    ]
+  },
+  {
+    "slug": "automated-customer-support",
+    "name": "自動カスタマーサポート",
+    "aliases": [
+      "Automated Customer Support"
+    ],
+    "tagline": "チャットボットやAIエージェントが問い合わせ対応を自動的に行う仕組み",
+    "category": "技術",
+    "tags": [
+      "自動化"
+    ],
+    "relatedTerms": [
+      "ai-agent",
+      "tool-calling"
+    ]
+  },
+  {
+    "slug": "real-time-translation",
+    "name": "リアルタイム翻訳",
+    "aliases": [
+      "Real-time Translation",
+      "同時翻訳"
+    ],
+    "tagline": "発話や文章をほぼ遅延なく別言語へ翻訳し続ける機械翻訳の応用形態",
+    "category": "技術",
+    "tags": [
+      "翻訳"
+    ],
+    "relatedTerms": [
+      "machine-translation",
+      "neural-machine-translation"
     ]
   }
 ]
