@@ -9,7 +9,7 @@ import { TimelineCard } from "components/timeline/timeline-card"
 import { getComparisonsForTerm } from "lib/comparisons"
 import { getFileGitDates } from "lib/git-dates"
 import { organizationRef, toJsonLd } from "lib/json-ld"
-import { SITE_NAME, SITE_OG_IMAGE_URL, SITE_URL } from "lib/site"
+import { SITE_NAME, SITE_URL } from "lib/site"
 import {
   getCategorySlug,
   getRelatedTerms,
@@ -29,6 +29,15 @@ export const generateStaticParams = () => terms.map((term) => ({ slug: term.slug
 
 type Props = { params: Promise<{ slug: string }> }
 
+const buildTitle = (term: Term) => {
+  const otherAliases = term.aliases?.filter((alias) => alias !== term.name) ?? []
+  const titleAlias =
+    otherAliases.find((alias) => /[ぁ-んァ-ヶ一-龠]/.test(alias)) ?? otherAliases[0]
+  return titleAlias && term.name.length + titleAlias.length <= 22
+    ? `${term.name}（${titleAlias}）とは`
+    : `${term.name}とは`
+}
+
 export const generateMetadata = async ({ params }: Props): Promise<Metadata> => {
   const { slug } = await params
   const term = getTermBySlug(slug)
@@ -38,12 +47,7 @@ export const generateMetadata = async ({ params }: Props): Promise<Metadata> => 
   }
 
   const otherAliases = term.aliases?.filter((alias) => alias !== term.name) ?? []
-  const titleAlias =
-    otherAliases.find((alias) => /[ぁ-んァ-ヶ一-龠]/.test(alias)) ?? otherAliases[0]
-  const title =
-    titleAlias && term.name.length + titleAlias.length <= 22
-      ? `${term.name}（${titleAlias}）とは`
-      : `${term.name}とは`
+  const title = buildTitle(term)
   const aliasNote =
     otherAliases.length > 0 ? `${otherAliases.slice(0, 2).join("・")}とも呼ばれる。` : ""
   const description = truncate(
@@ -51,7 +55,6 @@ export const generateMetadata = async ({ params }: Props): Promise<Metadata> => 
     120,
   )
   const url = `${SITE_URL}/terms/${term.slug}/`
-  const image = SITE_OG_IMAGE_URL
 
   return {
     title,
@@ -66,12 +69,11 @@ export const generateMetadata = async ({ params }: Props): Promise<Metadata> => 
       description,
       type: "article",
       url,
-      images: [image],
       siteName: SITE_NAME,
       locale: "ja_JP",
     },
     category: term.category,
-    twitter: { title, description, images: [image] },
+    twitter: { title, description },
   }
 }
 
@@ -79,24 +81,41 @@ const buildJsonLd = (term: Term, relatedTerms: Term[]) => {
   const url = `${SITE_URL}/terms/${term.slug}/`
   const categoryUrl = `${SITE_URL}/categories/${getCategorySlug(term.category)}/`
   const description = term.plainSummary ?? term.summary ?? term.tagline
-  const image = SITE_OG_IMAGE_URL
+  const image = `${SITE_URL}/terms/${term.slug}/opengraph-image`
   const gitDates = getFileGitDates("data/terms.json")
   const datePublished = gitDates.datePublished
   const dateModified = term.updatedAt ?? gitDates.dateModified
 
-  const definedTermArticle = {
+  const mentions =
+    relatedTerms.length > 0
+      ? relatedTerms.map((related) => ({
+          "@type": "DefinedTerm",
+          name: related.name,
+          url: `${SITE_URL}/terms/${related.slug}/`,
+        }))
+      : undefined
+
+  const definedTerm = {
     "@context": "https://schema.org",
-    "@type": ["TechArticle", "DefinedTerm"],
+    "@type": "DefinedTerm",
     name: term.name,
-    headline: term.name,
     alternateName: term.aliases,
     description,
     url,
-    image,
     about: term.name,
     keywords: term.tags?.join(", "),
     inDefinedTermSet: `${SITE_URL}/`,
     termCode: term.category,
+    ...(mentions && { mentions }),
+  }
+
+  const techArticle = {
+    "@context": "https://schema.org",
+    "@type": "TechArticle",
+    headline: term.name,
+    description,
+    url,
+    image,
     mainEntityOfPage: url,
     datePublished,
     dateModified,
@@ -107,13 +126,6 @@ const buildJsonLd = (term: Term, relatedTerms: Term[]) => {
       name: SITE_NAME,
       url: `${SITE_URL}/`,
     },
-    ...(relatedTerms.length > 0 && {
-      mentions: relatedTerms.map((related) => ({
-        "@type": "DefinedTerm",
-        name: related.name,
-        url: `${SITE_URL}/terms/${related.slug}/`,
-      })),
-    }),
   }
 
   const breadcrumbList = {
@@ -140,7 +152,7 @@ const buildJsonLd = (term: Term, relatedTerms: Term[]) => {
       })),
     }
 
-  return [definedTermArticle, breadcrumbList, faqPage].filter(Boolean)
+  return [definedTerm, techArticle, breadcrumbList, faqPage].filter(Boolean)
 }
 
 const TermPage: FC<Props> = async ({ params }) => {
@@ -181,7 +193,7 @@ const TermPage: FC<Props> = async ({ params }) => {
         }}
       >
         <Badge style={{ marginBottom: "1rem" }}>{term.category}</Badge>
-        <h1 style={{ fontSize: "2.25rem", margin: 0 }}>{term.name}とは</h1>
+        <h1 style={{ fontSize: "2.25rem", margin: 0 }}>{buildTitle(term)}</h1>
         {term.aliases && term.aliases.length > 0 && (
           <p
             style={{
