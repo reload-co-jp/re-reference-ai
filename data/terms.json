@@ -22781,6 +22781,10 @@
       {
         "slug": "openchamber",
         "note": "Claude CodeがAnthropic純正モデルのみをターミナルから使うのに対し、OpenChamberは複数モデルを横断して並列実行でき、デスクトップ・ブラウザ・VS Codeを行き来できるという違いがある"
+      },
+      {
+        "slug": "opencode",
+        "note": "Claude CodeがAnthropic純正モデルに限定されるのに対し、OpenCodeは複数のLLMプロバイダを切り替えられるオープンソースツールという違いがある"
       }
     ],
     "relatedTerms": [
@@ -22790,7 +22794,8 @@
       "harness-engineering",
       "mcp",
       "tui",
-      "openchamber"
+      "openchamber",
+      "opencode"
     ],
     "faq": [
       {
@@ -22988,6 +22993,10 @@
         "note": "Clineがオープンソースで複数のLLMプロバイダを切り替えられるのに対し、Claude CodeはAnthropic純正のCLIツールという違いがある"
       },
       {
+        "slug": "opencode",
+        "note": "ClineがVS Code拡張機能として提供されるのに対し、OpenCodeはターミナル上で動作するスタンドアロンのCLIツールという違いがある"
+      },
+      {
         "slug": "openchamber",
         "note": "ClineがVS Code拡張として動作するのに対し、OpenChamberはデスクトップアプリ・ブラウザ・VS Code拡張の複数クライアントで同一セッションを共有できるという違いがある"
       }
@@ -22997,7 +23006,8 @@
       "tool-calling",
       "aider",
       "claude-code",
-      "openchamber"
+      "openchamber",
+      "opencode"
     ],
     "faq": [
       {
@@ -31282,6 +31292,70 @@
     "relatedTerms": [
       "machine-translation",
       "neural-machine-translation"
+    ]
+  },
+  {
+    "slug": "opencode",
+    "name": "OpenCode",
+    "tagline": "SSTが開発する、Go言語製のオープンソース・ターミナル型コーディングエージェント",
+    "category": "エージェント",
+    "tags": [
+      "コーディングエージェント",
+      "TUI"
+    ],
+    "plainSummary": "SST社が作った、ターミナルで動くオープンソースのAIコーディングエージェント。",
+    "summary": "OpenCodeは、SSTが開発するオープンソースのターミナル型コーディングエージェント。\nGo言語で実装されており、Bubble Teaベースのターミナル UI(TUI)クライアントを持つ。クライアント/サーバー型のアーキテクチャを採用し、TUIをはじめ複数のクライアントから同一のエージェントセッションに接続できる構成を取る。特定のモデル提供元に縛られず、Anthropic・OpenAI・Google等複数のLLMプロバイダのモデルを切り替えて利用できる。",
+    "background": "ターミナル型コーディングエージェントが広がる中、SSTは自社のインフラ構築ツール群での開発経験を踏まえ、特定のモデルベンダーに縛られずローカル環境で動作するオープンソースのコーディングエージェントとしてOpenCodeを開発した。",
+    "history": "2025年: SSTがGo言語製のオープンソースコーディングエージェント「OpenCode」を公開。",
+    "advantages": [
+      "オープンソースであり、利用するLLMプロバイダを自由に選択・切り替えられる",
+      "クライアント/サーバー型の構成により、TUI以外のクライアントからも同一セッションに接続できる",
+      "特定ベンダーへの依存が少なく、ローカル環境での実行・カスタマイズがしやすい"
+    ],
+    "disadvantages": [
+      "モデル選択の自由度が高い分、性能や挙動が選択したモデルに左右される",
+      "オープンソースであるため、商用製品のような手厚いサポート体制は前提とならない",
+      "GUIを持たないため、ターミナル操作に不慣れなユーザーには学習コストがかかる"
+    ],
+    "comparisons": [
+      {
+        "slug": "coding-agent",
+        "note": "OpenCodeはオープンソースかつマルチモデル対応のコーディングエージェントの1つ"
+      },
+      {
+        "slug": "claude-code",
+        "note": "Claude CodeがAnthropic純正モデルに限定されるのに対し、OpenCodeは複数のLLMプロバイダを切り替えられるオープンソースツールという違いがある"
+      },
+      {
+        "slug": "cline",
+        "note": "ClineがVS Code拡張機能として提供されるのに対し、OpenCodeはターミナル上で動作するスタンドアロンのCLIツールという違いがある"
+      }
+    ],
+    "relatedTerms": [
+      "coding-agent",
+      "claude-code",
+      "cline",
+      "tui",
+      "mcp",
+      "harness-engineering",
+      "aider"
+    ],
+    "faq": [
+      {
+        "question": "OpenCodeはどのLLMを使える?",
+        "answer": "特定のモデルに固定されず、Anthropic・OpenAI・Google等複数のLLMプロバイダのモデルを切り替えて利用できる。"
+      },
+      {
+        "question": "OpenCodeはどの言語で実装されている?",
+        "answer": "Go言語で実装されており、ターミナルUIにはBubble Teaが使われている。"
+      }
+    ],
+    "references": [
+      {
+        "type": "GitHub",
+        "label": "sst/opencode",
+        "url": "https://github.com/sst/opencode"
+      }
     ]
   }
 ]
