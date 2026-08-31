@@ -3096,6 +3096,7 @@
       "quantization",
       "large-language-model",
       "phi",
+      "orca",
       "edge-ai",
       "model-extraction",
       "prompt-distillation"
@@ -6418,12 +6419,17 @@
       {
         "slug": "gemma",
         "note": "PhiとGemmaは、いずれも大手ベンダーが公開する代表的な軽量オープンウェイトモデルファミリー"
+      },
+      {
+        "slug": "orca",
+        "note": "OrcaとPhiはいずれもMicrosoft Researchが公開した小規模言語モデルだが、Phiが学習データの質（教科書的なデータ）を重視するのに対し、Orcaは大規模モデルの推論過程を模倣する学習手法に重点を置く"
       }
     ],
     "relatedTerms": [
       "small-language-model",
       "knowledge-distillation",
-      "gemma"
+      "gemma",
+      "orca"
     ],
     "faq": [
       {
@@ -17423,7 +17429,8 @@
       "cursor",
       "windsurf",
       "github-copilot",
-      "tui"
+      "tui",
+      "orca-ide"
     ],
     "faq": [
       {
@@ -18017,7 +18024,8 @@
       "coding-agent",
       "ai-ide",
       "spec-driven-development",
-      "prompt-engineering"
+      "prompt-engineering",
+      "over-engineering"
     ],
     "faq": [
       {
@@ -18069,7 +18077,8 @@
       "vibe-coding",
       "coding-agent",
       "ai-ide",
-      "context-engineering"
+      "context-engineering",
+      "over-engineering"
     ],
     "faq": [
       {
@@ -22795,7 +22804,8 @@
       "mcp",
       "tui",
       "openchamber",
-      "opencode"
+      "opencode",
+      "orca-ide"
     ],
     "faq": [
       {
@@ -31355,6 +31365,140 @@
         "type": "GitHub",
         "label": "sst/opencode",
         "url": "https://github.com/sst/opencode"
+      }
+    ]
+  },
+  {
+    "slug": "over-engineering",
+    "name": "オーバーエンジニアリング",
+    "aliases": ["Over-Engineering", "過剰設計"],
+    "tagline": "現時点で必要な要件を超えて、将来の変更や拡張性を過度に見込み、必要以上に複雑な設計・実装をするアンチパターン",
+    "category": "技術",
+    "tags": ["ソフトウェア設計", "アンチパターン"],
+    "plainSummary": "「まだ使わない将来の要件」に備えすぎて、シンプルに作れるものを無駄に複雑にしてしまう設計上の失敗。",
+    "summary": "オーバーエンジニアリングとは、現時点で必要な要件を超えて将来の変更や拡張性を過度に見込み、必要以上に複雑な設計・実装をするアンチパターンになる。\n抽象化レイヤーの多用、汎用化しすぎた設定機構、使われる見込みの薄い拡張ポイントの用意などが典型で、開発初期の生産性低下・可読性の悪化・保守コストの増大を招く。\n対義的な設計原則としてYAGNI（You Aren't Gonna Need It、それは必要にならない）やKISS（Keep It Simple, Stupid）が挙げられ、必要になった時点で拡張する漸進的な設計が推奨される。\nAIコーディングエージェントが大量のコードを高速生成できる時代においては、エージェントが要求されていない抽象化や汎用機構を自発的に作り込んでしまうケースも指摘されており、レビューやプロンプトでの制約付けが必要な論点として議論されている。",
+    "advantages": [
+      "（設計として意図された場合）将来の要件変化に備えた拡張が容易になる可能性がある"
+    ],
+    "disadvantages": [
+      "実装・レビューにかかる工数が増え、開発速度が落ちる",
+      "抽象化やレイヤーが増えることでコードの見通しが悪化し、可読性・保守性が下がる",
+      "使われない拡張ポイントや設定項目がテスト範囲や不具合の温床になる",
+      "見込んだ将来の要件が実際には発生せず、投資が無駄になることが多い"
+    ],
+    "relatedTerms": ["vibe-coding", "spec-driven-development"],
+    "faq": [
+      {
+        "question": "オーバーエンジニアリングとYAGNIの関係は。",
+        "answer": "YAGNI（You Aren't Gonna Need It）は「今必要でない機能は作らない」という設計原則で、オーバーエンジニアリングを避けるための代表的な指針として引き合いに出される。"
+      },
+      {
+        "question": "オーバーエンジニアリングとリファクタリングの違いは。",
+        "answer": "リファクタリングは既存コードの挙動を変えずに構造を改善する作業であるのに対し、オーバーエンジニアリングは設計・実装の時点で不要な複雑さを先回りして作り込んでしまう問題を指す。"
+      }
+    ]
+  },
+  {
+    "slug": "orca",
+    "name": "Orca",
+    "tagline": "GPT-4が生成する詳細な推論過程を模倣学習させることで、小規模ながら高い推論能力を目指したMicrosoft Researchの言語モデル",
+    "category": "モデル",
+    "tags": ["LLM", "SLM", "オープンウェイト"],
+    "plainSummary": "GPT-4の「答えだけ」でなく「考え方の過程」をまねて学習させることで、小さいモデルでも推論力を高めようとしたMicrosoftのAIモデル。",
+    "summary": "OrcaとはMicrosoft Researchが開発した言語モデルで、GPT-4が生成する段階的な説明・推論過程(explanation trace)を模倣学習させる「Explanation Tuning」という手法によって、小規模なモデルでも高い推論能力を獲得することを狙った研究成果になる。\n従来の指示チューニングは、GPT系モデルの出力（最終的な回答のみ）を教師データとして模倣する手法が主流だったが、この方法では大規模モデルが内部で行っている段階的な思考過程までは学習しにくいという課題があった。Orcaは、GPT-4に「なぜその答えになるのか」を説明させたデータで学習することで、この課題への対処を試みた。\n後継のOrca 2では、タスクに応じて段階的な推論・直接回答・情報を思い出してから生成する等、異なる解法戦略を使い分ける能力を学習させる「Cautious Reasoning」という考え方が導入された。",
+    "history": "2023年6月、Microsoft Researchが論文「Orca: Progressive Learning from Complex Explanation Traces of GPT-4」でOrca（LLaMA-13Bをベースとした13Bパラメータモデル）を発表。\n2023年11月には後継の論文「Orca 2: Teaching Small Language Models How to Reason」とともにOrca 2（Llama 2の7B・13Bをベースとしたモデル）が発表され、モデルの重みがHugging Face上で公開された。",
+    "architecture": "LLaMA・Llama 2をベースモデルとし、GPT-4が生成した詳細な説明・推論トレースを教師データとして追加学習させるExplanation Tuningの手法を採る。Orca 2では、学習時にシステムプロンプトを取り除く「Prompt Erasing」により、モデルが状況に応じて自ら推論戦略を選べるよう訓練する。",
+    "advantages": [
+      "最終的な回答だけでなく段階的な推論過程を模倣学習することで、同規模の他モデルと比べて推論・複雑な指示への追従性能の向上が報告されている",
+      "Orca 2はモデルの重みが公開されており、ローカル環境での検証や研究に利用できる"
+    ],
+    "disadvantages": [
+      "学習データの生成にGPT-4のAPI利用が必要で、再現には相応のコストがかかる",
+      "研究成果としての位置づけが強く、商用プロダクトとして継続的に提供されるモデルファミリーではない"
+    ],
+    "comparisons": [
+      {
+        "slug": "phi",
+        "note": "OrcaとPhiはいずれもMicrosoft Researchが公開した小規模言語モデルだが、Phiが学習データの質（教科書的なデータ）を重視するのに対し、Orcaは大規模モデルの推論過程を模倣する学習手法に重点を置く"
+      },
+      {
+        "slug": "knowledge-distillation",
+        "note": "Orcaは、大規模モデル（GPT-4）の出力だけでなく推論過程まで小規模モデルに学習させる、知識蒸留を発展させたアプローチと位置づけられる"
+      }
+    ],
+    "relatedTerms": ["phi", "knowledge-distillation", "instruction-tuning", "small-language-model"],
+    "faq": [
+      {
+        "question": "OrcaとAlpacaのような指示チューニングモデルの違いは。",
+        "answer": "Alpacaのような従来の指示チューニングは、GPT系モデルの最終的な出力のみを教師データとするのに対し、Orcaは出力に至るまでの段階的な説明・推論過程まで学習データに含める点が異なる。"
+      },
+      {
+        "question": "Orcaのモデルはどこで入手できるのか。",
+        "answer": "Orca 2の重みはMicrosoftによってHugging Face上で公開されている。初代Orcaについては論文で手法が示されたが、モデル自体は公式には広く配布されていない。"
+      }
+    ],
+    "references": [
+      {
+        "type": "Research Paper",
+        "label": "Orca: Progressive Learning from Complex Explanation Traces of GPT-4",
+        "url": "https://arxiv.org/abs/2306.02707"
+      },
+      {
+        "type": "Research Paper",
+        "label": "Orca 2: Teaching Small Language Models How to Reason",
+        "url": "https://arxiv.org/abs/2311.11045"
+      }
+    ]
+  },
+  {
+    "slug": "orca-ide",
+    "name": "Orca",
+    "aliases": ["Orca IDE", "Orca ADE"],
+    "tagline": "複数のコーディングエージェントを独立したgitワークツリー上で並行実行できる、Stably AIが開発するオープンソースのエージェント開発環境(ADE)",
+    "category": "インフラ",
+    "tags": ["コーディングエージェント", "開発ツール"],
+    "plainSummary": "Claude CodeやCodexなど複数のAIコーディングエージェントを、ブランチごとに分けた作業領域で同時に走らせて管理できる開発環境。",
+    "summary": "Orcaとは、Stably AIが開発する、複数のコーディングエージェントを並行して運用するためのエージェント開発環境(ADE: Agent Development Environment)。\nClaude Code・Codex・Gemini・OpenCode・GitHub Copilot等25種類以上のCLIコーディングエージェントをあらかじめ組み込み設定で用意し、各エージェントを独立したgitワークツリー上で同時に走らせることで、複数のブランチ・タスクを衝突なく並行して進められる。\nGPUを使ったGhostty系ターミナル、組み込みのファイルエディタ、Chromiumを埋め込んだプレビュー機能(Design Mode)、SSH経由のリモートワークツリー実行等を備え、単なるターミナルラッパーにとどまらず、エージェント運用を1つの環境に統合することを目指す。\nソースコードはMITライセンスで公開されており、macOS・Windows・Linuxのデスクトップ版に加え、iOS・Androidのモバイル向けコンパニオンアプリも提供されている。",
+    "advantages": [
+      "25種類以上のコーディングエージェントをあらかじめ設定済みで利用でき、既存のサブスクリプションを持ち込んで併用できる",
+      "各エージェントが独立したgitワークツリーで動くため、複数タスク・複数ブランチを並行して進めやすい",
+      "macOS・Windows・Linuxに対応し、MITライセンスでソースコードが公開されている"
+    ],
+    "disadvantages": [
+      "複数エージェントを同時実行する分、各エージェントのサブスクリプション・API利用料が積み重なりやすい",
+      "比較的新しいプロダクトで、Cursor・Clineのような先行ツールと比べるとエコシステムや実績はまだ薄い"
+    ],
+    "comparisons": [
+      {
+        "slug": "ai-ide",
+        "note": "単一のエージェントを組み込んだAI IDEが多い中、Orcaは複数のエージェントを並行ワークツリーで運用する点に重点を置く"
+      },
+      {
+        "slug": "claude-code",
+        "note": "Claude CodeのようなCLIエージェント自体を提供するのではなく、それらを並行運用する上位のオーケストレーション環境としてOrcaは位置づけられる"
+      }
+    ],
+    "relatedTerms": ["ai-ide", "claude-code", "coding-agent", "multi-agent", "mcp"],
+    "faq": [
+      {
+        "question": "Orcaはどんなコーディングエージェントに対応しているか。",
+        "answer": "Claude Code、Codex、Cursor CLI、Gemini、GitHub Copilot、OpenCode等25種類以上のCLIエージェントを標準搭載し、それ以外の任意のCLIエージェントも追加設定で組み込める。"
+      },
+      {
+        "question": "Orcaの利用料金は。",
+        "answer": "ソフトウェア自体は無料・オープンソース(MIT)で提供され、利用者が持ち込む各コーディングエージェントのサブスクリプションやAPI利用料は別途必要になる。"
+      }
+    ],
+    "references": [
+      {
+        "type": "Official Website",
+        "label": "Orca",
+        "url": "https://www.onorca.dev/"
+      },
+      {
+        "type": "GitHub",
+        "label": "stablyai/orca",
+        "url": "https://github.com/stablyai/orca"
       }
     ]
   }
