@@ -1756,5 +1756,378 @@
         "answer": "エージェント同士の柔軟な対話パターンを重視する場合や特定モデルに依存したくない場合はAutoGenが向く。OpenAIのモデル・APIを前提にシンプルなハンドオフの仕組みで組み立てたい場合はOpenAI Agents SDKが向く。"
       }
     ]
+  },
+  {
+    "slug": "function-calling-vs-tool-calling",
+    "left": "function-calling",
+    "right": "tool-calling",
+    "summary": "Function CallingはOpenAIが最初に導入した、LLMに外部関数の呼び出し内容を構造化データとして出力させる仕組みの名称。Tool Callingは、対象を関数に限らずAPI・検索・コード実行等のツール全般に広げた、より一般的・業界横断的な呼び方。実装としての仕組みはほぼ同一で、名称の由来と適用範囲の広さが異なる。",
+    "quickSummary": [
+      "Function Callingは2023年6月にOpenAIが導入した、関数の名前・引数を構造化データとして出力させる仕組みの名称。",
+      "Tool Callingは、関数に限らずAPI・検索・コード実行等を含む、より広い対象を指す業界横断的な呼び方。",
+      "実装上の違いはほぼなく、呼び出しの要否判断・引数生成・実行はアプリケーション側が担う点は共通。",
+      "OpenAIの文脈ではFunction Calling、複数プロバイダやMCP等を含む一般的な文脈ではTool Callingが使われやすい。"
+    ],
+    "table": [
+      {
+        "item": "Purpose",
+        "left": "LLMに関数呼び出しの内容を構造化データとして出力させる",
+        "right": "LLMに外部の関数・API・ツール全般の呼び出しを判断・出力させる、より広い概念"
+      },
+      {
+        "item": "Originator",
+        "left": "OpenAI",
+        "right": "OpenAIのFunction Callingが起点、業界横断で使用"
+      },
+      {
+        "item": "Release",
+        "left": "2023年6月",
+        "right": "2023年6月以降、業界標準的な呼称として定着"
+      },
+      {
+        "item": "Scope",
+        "left": "「関数(function)」呼び出しに限定した名称",
+        "right": "関数に限らずAPI・検索・コード実行等ツール全般を含む名称"
+      },
+      {
+        "item": "Provider Adoption",
+        "left": "主にOpenAI系ドキュメントで使用",
+        "right": "OpenAI・Anthropic等複数プロバイダで共通に使用"
+      }
+    ],
+    "architecture": {
+      "left": "呼び出し可能な関数の名前・説明・JSON Schemaをリクエストに含め、LLMが該当する関数名と引数をJSON形式で出力する。実行はアプリケーション側が担う。",
+      "right": "対象を関数に限らずツール一般に拡張した同型の仕組み。LLMがツール名と引数を構造化データで出力し、アプリケーションが実行結果を返す点はFunction Callingと同じ。"
+    },
+    "features": [
+      {
+        "feature": "構造化データ(JSON)での出力",
+        "left": true,
+        "right": true
+      },
+      {
+        "feature": "関数以外のツール(検索・コード実行等)も対象",
+        "left": "名称上は関数中心",
+        "right": true
+      },
+      {
+        "feature": "1レスポンス内での複数呼び出し指定",
+        "left": true,
+        "right": true
+      },
+      {
+        "feature": "業界横断的な呼称としての普及",
+        "left": false,
+        "right": true
+      },
+      {
+        "feature": "MCP等のプロトコルとの併用",
+        "left": true,
+        "right": true
+      }
+    ],
+    "advantages": {
+      "left": [
+        "OpenAIの公式ドキュメント・実装例が豊富",
+        "「関数」という具体的な単位に対応づけて説明しやすい"
+      ],
+      "right": [
+        "関数に限らずAPI・検索・コード実行等を包含する名称でエージェント全般に適用しやすい",
+        "OpenAI以外のプロバイダ(Anthropic等)を含めた説明で使いやすい"
+      ]
+    },
+    "disadvantages": {
+      "left": [
+        "名称が「関数」に限定され、検索やコード実行等より広いツール概念を説明する際に狭く感じられる",
+        "OpenAI発の名称であるため他プロバイダの文脈では読み替えが必要になることがある"
+      ],
+      "right": [
+        "Function Callingより名称が新しく、初出の文脈(OpenAI)を知らないと経緯が伝わりにくい",
+        "「ツール」の範囲が曖昧で、指す対象がAPIなのかMCPサーバーなのか文脈依存になりやすい"
+      ]
+    },
+    "bestUseCases": {
+      "left": "OpenAIのAPIドキュメントに沿って実装する場合や、特定の関数呼び出しを明確に説明したい場合。",
+      "right": "複数のLLMプロバイダを横断して説明する場合や、API呼び出し以外(検索・コード実行等)も含めてツール連携全般を語りたい場合。"
+    },
+    "migration": "実装としては同一の仕組みであるため、コードの移行は基本的に不要。OpenAI APIでもパラメータ名としてtools/tool_callsが使われており、名称としてもTool Callingへの統一が進んでいる。複数プロバイダに対応するアプリケーションを説明する際は、より一般的なTool Callingという呼称に統一するとよい。",
+    "faq": [
+      {
+        "question": "Function CallingとTool Callingはどちらを使うべき?",
+        "answer": "実装上の違いはほとんどないため、OpenAI APIの話をする場合はFunction Calling、複数プロバイダやMCP等を含む一般的な文脈ではTool Callingと使い分けるとよい。"
+      },
+      {
+        "question": "OpenAIのAPIでも今はtoolsという名称?",
+        "answer": "OpenAIのChat Completions API/Responses APIでは、パラメータ名としてtools・tool_callsが使われており、呼称としてもTool Callingへの統一が進んでいる。"
+      }
+    ],
+    "references": [
+      {
+        "type": "Documentation",
+        "label": "OpenAI: Function calling",
+        "url": "https://platform.openai.com/docs/guides/function-calling"
+      },
+      {
+        "type": "Documentation",
+        "label": "Anthropic: Tool use with Claude",
+        "url": "https://docs.claude.com/en/docs/agents-and-tools/tool-use/overview"
+      }
+    ]
+  },
+  {
+    "slug": "mcp-vs-tool-calling",
+    "left": "mcp",
+    "right": "tool-calling",
+    "summary": "MCP(Model Context Protocol)はLLMアプリケーションと外部ツール・データソースの接続方法を標準化するオープンプロトコル、Tool CallingはLLMが個々のツール呼び出しの要否と引数を判断し構造化データとして出力する仕組み。MCPはツールの提供・発見・接続という上位レイヤーを標準化し、Tool Callingはその標準化されたツールを実際に呼び出す下位レイヤーの動作にあたる。両者は代替関係ではなく組み合わせて使われる。",
+    "quickSummary": [
+      "Tool Callingは、LLMがどの関数・ツールをどんな引数で呼ぶかを判断し構造化データとして出力する仕組み。",
+      "MCPは、Tool Callingで呼び出す対象のツールやデータソースをどう提供・発見・接続するかを標準化するプロトコル。",
+      "MCPサーバーが提供するツールも、最終的にはTool Callingの仕組みを通じてLLMから呼び出される。",
+      "小規模で単一アプリ内完結ならTool Callingのみで十分、複数アプリからツールを再利用したいならMCPが向く。"
+    ],
+    "table": [
+      {
+        "item": "Purpose",
+        "left": "ツール・データソースの提供・接続方法の標準化",
+        "right": "個々のツール呼び出しの要否判断・引数生成"
+      },
+      {
+        "item": "Developer",
+        "left": "Anthropic",
+        "right": "OpenAI発、業界横断で使用"
+      },
+      {
+        "item": "Release",
+        "left": "2024年11月",
+        "right": "2023年6月"
+      },
+      {
+        "item": "Layer",
+        "left": "ツール提供・接続レイヤー(プロトコル)",
+        "right": "個々の呼び出しレイヤー(LLMの出力形式)"
+      },
+      {
+        "item": "Communication",
+        "left": "JSON-RPCによるクライアント-サーバー通信",
+        "right": "単一のAPIリクエスト/レスポンス内での構造化出力"
+      },
+      {
+        "item": "Reusability",
+        "left": "1つのMCPサーバーを複数のLLMアプリから再利用可能",
+        "right": "呼び出し定義は通常アプリケーションごとに個別実装"
+      }
+    ],
+    "architecture": {
+      "left": "ツール・リソースを提供するMCPサーバーと、それを利用するMCPクライアント(LLMアプリケーション)から構成され、JSON-RPCで通信する。サーバーが公開する複数のツールを、クライアント側が必要に応じて選択・呼び出す。",
+      "right": "呼び出し可能なツールの名前・説明・引数スキーマをLLMへ提示し、LLMが必要なツールと引数を構造化データとして出力する。アプリケーション側が実際の実行を担う点までを含む、1回のやり取りの仕組み。"
+    },
+    "features": [
+      {
+        "feature": "ツール・データソースの標準化された提供方法",
+        "left": true,
+        "right": false
+      },
+      {
+        "feature": "複数アプリからのサーバー再利用",
+        "left": true,
+        "right": false
+      },
+      {
+        "feature": "個々の呼び出しの引数生成",
+        "left": "MCPクライアント経由でTool Callingの仕組みに委ねる",
+        "right": true
+      },
+      {
+        "feature": "JSON-RPCによる通信",
+        "left": true,
+        "right": false
+      },
+      {
+        "feature": "単体で完結する呼び出しの仕組み",
+        "left": false,
+        "right": true
+      }
+    ],
+    "advantages": {
+      "left": [
+        "一度実装したMCPサーバーを複数のLLMアプリケーションから再利用できる",
+        "ツール・データ連携の実装を標準化し、開発・保守の重複を減らせる"
+      ],
+      "right": [
+        "専用サーバーを用意せず、APIリクエスト内で完結する軽量な仕組みで導入できる",
+        "主要なLLMプロバイダで共通のパターンとして提供されており実装の再利用がしやすい"
+      ]
+    },
+    "disadvantages": {
+      "left": [
+        "MCPサーバーの実装・ホスティングという追加のインフラが必要になる",
+        "比較的新しい仕様でエコシステムやセキュリティのベストプラクティスが発展途上"
+      ],
+      "right": [
+        "ツールの提供・発見方法自体は標準化されないため、連携先が増えるとアプリケーションごとの個別実装が増えやすい",
+        "ツールの説明や引数スキーマの設計が不十分だと誤った呼び出しが起きやすい"
+      ]
+    },
+    "bestUseCases": {
+      "left": "GitHub・Slack・社内データベース等、複数のLLMアプリケーションから共通のツール・データソースを再利用したい場合。",
+      "right": "単一のアプリケーション内で完結する、少数の関数・APIをLLMから呼び出したい場合。"
+    },
+    "migration": "既存のTool Calling実装をMCP化する場合、個々の関数定義をMCPサーバーのツールとして再実装し、アプリケーション側はMCPクライアントとしてサーバーに接続する形に置き換える。FastMCP等のSDKを使うと、既存の関数へデコレータを追加する程度でMCPサーバー化できる場合が多い。",
+    "faq": [
+      {
+        "question": "MCPを使えばTool Callingは不要になる?",
+        "answer": "いいえ。MCPが標準化するのはツールの提供・接続方法であり、LLMがツールを実際に呼び出す際の仕組みとしてTool Callingは引き続き使われる。MCPクライアントは内部でTool Callingの仕組みを用いてMCPサーバーのツールを呼び出す。"
+      },
+      {
+        "question": "小規模なアプリケーションでもMCPを使うべき?",
+        "answer": "単一アプリ内で完結する少数のツールであれば、MCPサーバーを別途用意するオーバーヘッドに見合わないことが多く、通常のTool Callingで十分な場合が多い。"
+      }
+    ],
+    "references": [
+      {
+        "type": "Official Website",
+        "label": "Model Context Protocol",
+        "url": "https://modelcontextprotocol.io/"
+      },
+      {
+        "type": "Blog",
+        "label": "Anthropic: Introducing the Model Context Protocol",
+        "url": "https://www.anthropic.com/news/model-context-protocol"
+      },
+      {
+        "type": "Documentation",
+        "label": "OpenAI: Function calling",
+        "url": "https://platform.openai.com/docs/guides/function-calling"
+      }
+    ]
+  },
+  {
+    "slug": "bert-vs-large-language-model",
+    "left": "bert",
+    "right": "large-language-model",
+    "summary": "BERTはTransformerのエンコーダのみを用い、双方向の文脈参照によって文の理解に特化した事前学習済みモデル。LLM(大規模言語モデル)は、GPT系に代表されるデコーダのみの自己回帰型アーキテクチャを中心に、テキスト生成を含む幅広いタスクをこなす大規模モデルの総称。BERTも広義にはLLMの一種と位置づけられることがあるが、一般的な文脈でLLMという場合は生成能力を持つGPT系以降のモデルを指すことが多く、両者は「理解特化」と「生成中心の汎用モデル」という異なる方向性を代表する存在として対比される。",
+    "quickSummary": [
+      "BERTはTransformerのエンコーダのみを使い、双方向の文脈参照によって文の理解(分類・検索・NER等)に強みを持つ。",
+      "LLM(GPT系等)はデコーダのみの自己回帰型アーキテクチャが主流で、テキスト生成を中心に幅広いタスクを単一モデルでこなす。",
+      "パラメータ規模もBERTは数億程度、近年のLLMは数十億〜数兆規模と大きく異なる。",
+      "分類・検索等の理解タスクにはBERT系埋め込みモデル、対話・生成・エージェント的タスクにはLLMが向く。"
+    ],
+    "table": [
+      {
+        "item": "Purpose",
+        "left": "文の意味理解(分類・NER・質問応答等)",
+        "right": "テキスト生成を中心とした汎用タスク全般"
+      },
+      {
+        "item": "Developer",
+        "left": "Google",
+        "right": "OpenAI・Anthropic・Google・Meta等複数企業"
+      },
+      {
+        "item": "Release",
+        "left": "2018年",
+        "right": "2018年頃に呼称が定着、2020年GPT-3以降本格普及"
+      },
+      {
+        "item": "Architecture",
+        "left": "Transformer Encoder-only",
+        "right": "Transformer Decoder-onlyが主流"
+      },
+      {
+        "item": "Training Objective",
+        "left": "Masked Language Model(MLM) + Next Sentence Prediction(NSP)",
+        "right": "次トークン予測(自己回帰)"
+      },
+      {
+        "item": "Typical Parameter Scale",
+        "left": "1億〜3億程度(base/large)",
+        "right": "数十億〜数兆規模"
+      }
+    ],
+    "architecture": {
+      "left": "Transformerのエンコーダ層のみを積み重ね、入力トークン全体を双方向に参照して各トークンの文脈依存表現を計算する。MLMとNSPという2つの事前学習タスクでラベルなしテキストから汎用表現を獲得し、タスクごとにファインチューニングして利用する。",
+      "right": "多くはTransformerのデコーダのみのスタックを用い、次に来る単語を予測するタスクを通じて学習する。事前学習後に指示チューニングやアライメントを経て、単一モデルのまま文章生成・要約・翻訳・対話・コード生成など幅広いタスクに対応する。"
+    },
+    "features": [
+      {
+        "feature": "双方向の文脈参照",
+        "left": true,
+        "right": "モデルにより異なる(GPT系は基本的に一方向)"
+      },
+      {
+        "feature": "テキスト生成",
+        "left": false,
+        "right": true
+      },
+      {
+        "feature": "ファインチューニング前提の利用",
+        "left": true,
+        "right": "instruction tuning等を経て汎用利用も可能"
+      },
+      {
+        "feature": "few-shot/zero-shotでの汎化",
+        "left": "限定的",
+        "right": true
+      },
+      {
+        "feature": "対話・エージェント用途への適用",
+        "left": false,
+        "right": true
+      }
+    ],
+    "advantages": {
+      "left": [
+        "双方向の文脈を同時に参照するため文の意味理解を要するタスクで高精度",
+        "モデルサイズが比較的小さく、推論コストを抑えやすい",
+        "分類・検索用の埋め込み生成に広く使われ枯れた実績がある"
+      ],
+      "right": [
+        "単一モデルで生成・要約・翻訳・対話など幅広いタスクに汎化できる",
+        "few-shot・zero-shotで新しいタスクにも対応しやすい",
+        "ツール呼び出しやエージェント的な用途への拡張が進んでいる"
+      ]
+    },
+    "disadvantages": {
+      "left": [
+        "エンコーダのみの構造のため自己回帰的な文章生成には向かない",
+        "入力系列長の制約(512トークン程度)があり長文処理に工夫が必要"
+      ],
+      "right": [
+        "学習・推論の計算コストとエネルギーコストが高い",
+        "ハルシネーション(事実誤認)を起こしやすい"
+      ]
+    },
+    "bestUseCases": {
+      "left": "テキスト分類・固有表現認識・検索用の埋め込み生成など、文の意味理解が中心となるタスク。",
+      "right": "対話・文章生成・要約・コード生成・AIエージェントなど、生成能力を要する幅広いタスク。"
+    },
+    "migration": "分類・検索タスクをLLM(生成モデル)だけで置き換える必要はなく、BERT系の軽量な埋め込みモデルを検索・分類部分に、LLMを生成・対話部分に使い分けて組み合わせる構成(例: RAGにおける検索はBERT系埋め込み、回答生成はLLM)が一般的。",
+    "faq": [
+      {
+        "question": "BERTはLLMに含まれる?",
+        "answer": "パラメータ数や事前学習という観点では広義のLLMに含めて説明されることもあるが、一般的にLLMという場合は生成能力を持つGPT系以降のモデルを指すことが多く、文脈によって扱いが分かれる。"
+      },
+      {
+        "question": "BERTは今も使われている?",
+        "answer": "生成タスクでは自己回帰型LLMが主流だが、テキスト分類・検索用の埋め込み生成・固有表現認識など理解系タスクの基盤モデルとして、軽量な派生モデル(DistilBERT等)を含め今も広く使われている。"
+      }
+    ],
+    "references": [
+      {
+        "type": "Research Paper",
+        "label": "BERT: Pre-training of Deep Bidirectional Transformers for Language Understanding",
+        "url": "https://arxiv.org/abs/1810.04805"
+      },
+      {
+        "type": "Research Paper",
+        "label": "Attention Is All You Need",
+        "url": "https://arxiv.org/abs/1706.03762"
+      },
+      {
+        "type": "Documentation",
+        "label": "Hugging Face: BERT",
+        "url": "https://huggingface.co/docs/transformers/model_doc/bert"
+      }
+    ]
   }
 ]
