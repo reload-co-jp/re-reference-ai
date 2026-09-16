@@ -2129,5 +2129,565 @@
         "url": "https://huggingface.co/docs/transformers/model_doc/bert"
       }
     ]
+  },
+  {
+    "slug": "aider-vs-cline",
+    "left": "aider",
+    "right": "cline",
+    "summary": "Aiderはターミナル上でgitと連携しながらペアプログラミングを行うオープンソースのAIコーディングツール。Clineは VS Code拡張機能として提供されるオープンソースの自律型コーディングエージェント。いずれも特定のモデル提供元に縛られず複数のLLMを切り替えて利用できるが、動作環境と自律性の度合いが異なる。",
+    "quickSummary": [
+      "Aiderはターミナル上で動作するCLIツール、Clineは VS Code拡張機能として動作するGUIツール。",
+      "Aiderは編集内容を自動的にgitコミットとして記録するのに対し、Clineは各操作ステップでの変更内容をユーザーが確認・承認する仕組みを持つ。",
+      "Clineはファイル編集に加えターミナルコマンド実行・ブラウザ操作まで幅広いツール呼び出しに対応する。",
+      "両者とも複数のLLMプロバイダのモデルを切り替えて利用できるオープンソースツール。"
+    ],
+    "table": [
+      {
+        "item": "Purpose",
+        "left": "ターミナル上でのgit連携型AIペアプログラミング",
+        "right": "VS Code上での自律型コーディングエージェント"
+      },
+      {
+        "item": "Interface",
+        "left": "CLI(ターミナル)",
+        "right": "VS Code拡張機能(GUI)"
+      },
+      {
+        "item": "Open Source",
+        "left": "オープンソース",
+        "right": "オープンソース"
+      },
+      {
+        "item": "対応モデル",
+        "left": "複数LLMプロバイダのモデルを切り替え可能",
+        "right": "複数LLMプロバイダのモデルを切り替え可能"
+      },
+      {
+        "item": "ツール呼び出し範囲",
+        "left": "リポジトリ内のファイル編集・gitコミットが中心",
+        "right": "ファイル編集・ターミナルコマンド実行・ブラウザ操作まで対応"
+      }
+    ],
+    "architecture": {
+      "left": "リポジトリ内のコードを解析した上で編集を提案・適用し、変更を自動的にgitコミットするCLIベースの設計。対話的なペアプログラミングに主眼を置く。",
+      "right": "VS Code拡張機能として動作し、ファイル操作・ターミナルコマンド・ブラウザ操作等を自律的に実行する。各ステップでの変更内容をユーザーが確認・承認できる仕組みを備える。"
+    },
+    "features": [
+      {
+        "feature": "自動gitコミット",
+        "left": true,
+        "right": "限定的(明示的な自動コミットは主機能ではない)"
+      },
+      {
+        "feature": "ステップごとの変更確認・承認",
+        "left": "限定的(diff確認が中心)",
+        "right": true
+      },
+      {
+        "feature": "ブラウザ操作",
+        "left": false,
+        "right": true
+      },
+      {
+        "feature": "マルチLLMプロバイダ対応",
+        "left": true,
+        "right": true
+      }
+    ],
+    "advantages": {
+      "left": [
+        "編集内容を自動的にgitコミットとして記録し、変更履歴を追いやすい",
+        "CLIに慣れた開発者にとって既存のワークフローに組み込みやすい"
+      ],
+      "right": [
+        "ファイル編集からブラウザ操作まで幅広いツール呼び出しに対応する",
+        "各操作ステップでの変更内容をユーザーが確認できるため、意図しない変更を把握しやすい"
+      ]
+    },
+    "disadvantages": {
+      "left": [
+        "GUIを持たずターミナル操作が前提となるため、慣れが必要になる",
+        "ブラウザ操作等、Clineが対応する幅広いツール呼び出しには対応しない"
+      ],
+      "right": [
+        "VS Code拡張機能という形態上、エディタ本体の機能や制約に依存する",
+        "モデル選択の自由度が高い分、性能や挙動がモデル選択に左右される"
+      ]
+    },
+    "bestUseCases": {
+      "left": "gitワークフローに組み込んだ対話的なペアプログラミングを行いたい、CLI操作に慣れた開発者向けのプロジェクト。",
+      "right": "VS Code上でファイル編集からブラウザ操作まで含む幅広いタスクを自律的にこなさせたい開発者向けのプロジェクト。"
+    },
+    "migration": "AiderからClineへ移行する場合、CLI中心の対話フローをVS Code拡張のUI上での承認フローに置き換える必要がある。逆にClineからAiderへ移行する場合、ブラウザ操作等GUI依存の機能はgit連携中心のCLIワークフローに合わせて縮小することになる。",
+    "faq": [
+      {
+        "question": "AiderとCline、どちらを選ぶべき?",
+        "answer": "gitと連携したCLI中心のペアプログラミングを好むならAider、VS Code上でファイル編集からブラウザ操作まで含む幅広いタスクを自律的に任せたいならClineが向いている。"
+      }
+    ],
+    "references": [
+      {
+        "type": "Official Website",
+        "label": "Aider",
+        "url": "https://aider.chat"
+      },
+      {
+        "type": "GitHub",
+        "label": "cline/cline",
+        "url": "https://github.com/cline/cline"
+      }
+    ]
+  },
+  {
+    "slug": "openai-agents-sdk-vs-google-adk",
+    "left": "openai-agents-sdk",
+    "right": "google-adk",
+    "summary": "OpenAI Agents SDKは、OpenAIが提供する、エージェント間のハンドオフ機能を備えた軽量なマルチエージェントフレームワーク。Agent Development Kit(ADK)は、Googleが提供する、マルチエージェントシステムの構築・評価・デプロイを行うオープンソースフレームワーク。いずれも比較的新しいベンダー製フレームワークだが、中心概念と統合先のエコシステムが異なる。",
+    "quickSummary": [
+      "OpenAI Agents SDKはエージェント間の「ハンドオフ」という軽量な概念を中心に設計される。",
+      "ADKはエージェントの階層的な組み合わせによるマルチエージェントシステムの構築を中心に据える。",
+      "OpenAI Agents SDKはOpenAIのモデル・APIとの親和性が高く、ADKはGoogle Cloud・Geminiのエコシステムと統合しやすい。",
+      "ADKは評価(Evaluation)機能を組み込みで備え、開発から評価までを一貫して行える点が特徴。"
+    ],
+    "table": [
+      {
+        "item": "Purpose",
+        "left": "エージェント間のハンドオフによる軽量なマルチエージェント構築",
+        "right": "エージェントの階層的組み合わせによるマルチエージェントシステムの構築・評価・デプロイ"
+      },
+      {
+        "item": "Developer",
+        "left": "OpenAI",
+        "right": "Google"
+      },
+      {
+        "item": "Open Source",
+        "left": "オープンソース",
+        "right": "オープンソース"
+      },
+      {
+        "item": "中心概念",
+        "left": "ハンドオフ(エージェント間の処理引き継ぎ)",
+        "right": "エージェントの階層的な組み合わせ"
+      },
+      {
+        "item": "主な統合先",
+        "left": "OpenAIのモデル・API",
+        "right": "Google Cloud・Geminiのエコシステム"
+      },
+      {
+        "item": "評価機能",
+        "left": "限定的",
+        "right": "組み込みのEvaluation機能を提供"
+      }
+    ],
+    "architecture": {
+      "left": "エージェントごとに役割・ツール・指示を定義し、会話の途中で別のエージェントへ処理を引き継ぐハンドオフの仕組みを中心に設計される。実験的フレームワーク「Swarm」を前身とする。",
+      "right": "複数のエージェントを階層的に組み合わせる構成を採用し、構築から評価・デプロイまでを一貫してサポートする。Geminiに最適化されているが、他のモデルやフレームワークとの相互運用も意図する。"
+    },
+    "features": [
+      {
+        "feature": "エージェント間のハンドオフ",
+        "left": true,
+        "right": "階層的な組み合わせとして実現(ハンドオフは中心概念ではない)"
+      },
+      {
+        "feature": "エージェントの階層的な組み合わせ",
+        "left": "限定的",
+        "right": true
+      },
+      {
+        "feature": "組み込みの評価(Evaluation)機能",
+        "left": false,
+        "right": true
+      },
+      {
+        "feature": "ガードレール・トレーシング等の本番運用機能",
+        "left": true,
+        "right": "限定的(発展途上)"
+      }
+    ],
+    "advantages": {
+      "left": [
+        "ハンドオフという単純な概念でマルチエージェントの処理フローを組み立てられる",
+        "ガードレールやトレーシング等、本番運用を意識した機能を備える"
+      ],
+      "right": [
+        "エージェントの階層的な組み合わせによりマルチエージェントシステムを構造化しやすい",
+        "評価(Evaluation)機能を組み込みで備え、開発から評価までを一貫して行える"
+      ]
+    },
+    "disadvantages": {
+      "left": [
+        "OpenAI以外のモデルを利用する場合、対応状況の確認が必要になる",
+        "より複雑な状態管理を要するワークフローには他フレームワークとの組み合わせが必要になる場合がある"
+      ],
+      "right": [
+        "最適化の中心はGeminiモデルであり、他モデル利用時には機能差を考慮する必要がある",
+        "比較的新しいフレームワークであり、エコシステムや事例が発展途上にある"
+      ]
+    },
+    "bestUseCases": {
+      "left": "OpenAIのモデル・APIを主軸に、エージェント間の処理引き継ぎを軽量に組み立てたいプロジェクト。",
+      "right": "Google Cloud・Geminiのエコシステムを活用しつつ、構築から評価まで一貫した体制でマルチエージェントシステムを開発したいプロジェクト。"
+    },
+    "migration": "OpenAI Agents SDKからADKへ移行する場合、ハンドオフ単位で設計していた処理フローをエージェントの階層構造として再設計する必要がある。逆方向の場合は、階層構造をハンドオフの連鎖として単純化することになる。",
+    "faq": [
+      {
+        "question": "OpenAI Agents SDKとADK、どちらを選ぶべき?",
+        "answer": "OpenAIのモデル・APIを中心に軽量なマルチエージェント構成を組みたい場合はOpenAI Agents SDKが向いている。Google Cloud・Geminiのエコシステムを活用し、評価機能まで含めて一貫した開発体制を求める場合はADKが向いている。"
+      }
+    ],
+    "references": [
+      {
+        "type": "Documentation",
+        "label": "OpenAI Agents SDK Documentation",
+        "url": "https://openai.github.io/openai-agents-python/"
+      },
+      {
+        "type": "Documentation",
+        "label": "Agent Development Kit Documentation",
+        "url": "https://google.github.io/adk-docs/"
+      }
+    ]
+  },
+  {
+    "slug": "langgraph-vs-google-adk",
+    "left": "langgraph",
+    "right": "google-adk",
+    "summary": "LangGraphは、LangChainのチームが開発した、状態遷移をグラフとして定義し複雑なマルチエージェントアプリケーションを構築するフレームワーク。Agent Development Kit(ADK)は、Googleが提供する、マルチエージェントシステムの構築・評価・デプロイを行うオープンソースフレームワーク。いずれもマルチエージェントシステムの構築を目的とするが、制御方式と統合先のエコシステムが異なる。",
+    "quickSummary": [
+      "LangGraphはグラフ構造による明示的な状態遷移の制御を軸にする。",
+      "ADKはエージェントの階層的な組み合わせと、Google Cloud・Geminiとの統合を軸にする。",
+      "LangGraphはLangChain・LangSmithとのエコシステム連携に強みを持つ。",
+      "ADKは評価(Evaluation)機能を組み込みで備える点が特徴。"
+    ],
+    "table": [
+      {
+        "item": "Purpose",
+        "left": "グラフベースの状態遷移によるマルチエージェントワークフロー構築",
+        "right": "エージェントの階層的組み合わせによるマルチエージェントシステムの構築・評価・デプロイ"
+      },
+      {
+        "item": "Developer",
+        "left": "LangChain, Inc.",
+        "right": "Google"
+      },
+      {
+        "item": "Open Source",
+        "left": "オープンソース",
+        "right": "オープンソース"
+      },
+      {
+        "item": "制御方式",
+        "left": "ノードとエッジによる明示的なグラフ構造",
+        "right": "エージェントの階層的な組み合わせ"
+      },
+      {
+        "item": "主な統合先",
+        "left": "LangChain、LangSmith等のLangChainエコシステム",
+        "right": "Google Cloud・Geminiのエコシステム"
+      },
+      {
+        "item": "評価機能",
+        "left": "限定的(LangSmith等外部ツールとの連携が前提)",
+        "right": "組み込みのEvaluation機能を提供"
+      }
+    ],
+    "architecture": {
+      "left": "処理フローをノードとエッジからなるグラフとして定義し、条件分岐・ループ・複数エージェント間の状態共有を明示的に表現する。状態を永続化する仕組みも備える。",
+      "right": "複数のエージェントを階層的に組み合わせる構成を採用し、構築から評価・デプロイまでを一貫してサポートする。Geminiに最適化されているが、他のモデルやフレームワークとの相互運用も意図する。"
+    },
+    "features": [
+      {
+        "feature": "グラフによる明示的な状態遷移制御",
+        "left": true,
+        "right": "限定的(階層的な組み合わせが中心)"
+      },
+      {
+        "feature": "エージェントの階層的な組み合わせ",
+        "left": "限定的",
+        "right": true
+      },
+      {
+        "feature": "状態の永続化・再開",
+        "left": true,
+        "right": "限定的"
+      },
+      {
+        "feature": "組み込みの評価(Evaluation)機能",
+        "left": false,
+        "right": true
+      }
+    ],
+    "advantages": {
+      "left": [
+        "条件分岐・ループ・並列処理など、複雑な制御フローを明示的なグラフとして表現できる",
+        "状態の永続化機能により、処理の途中経過を保存し後から再開できる"
+      ],
+      "right": [
+        "エージェントの階層的な組み合わせによりマルチエージェントシステムを構造化しやすい",
+        "評価(Evaluation)機能を組み込みで備え、開発から評価までを一貫して行える"
+      ]
+    },
+    "disadvantages": {
+      "left": [
+        "単純なタスクに対しては、グラフ構造を定義する分オーバーヘッドが大きく感じられやすい",
+        "グラフが複雑になるほど、状態遷移の全体像を把握するための設計・可視化の工夫が必要になる"
+      ],
+      "right": [
+        "最適化の中心はGeminiモデルであり、他モデル利用時には機能差を考慮する必要がある",
+        "ドキュメントや実践例がLangChain・LangGraph等の先行フレームワークと比べまだ少ない"
+      ]
+    },
+    "bestUseCases": {
+      "left": "分岐・ループ・人間の承認を含む複雑なエージェントワークフローや、既にLangChainエコシステムを利用しているプロジェクト。",
+      "right": "Google Cloud・Geminiのエコシステムを活用しつつ、構築から評価まで一貫した体制でマルチエージェントシステムを開発したいプロジェクト。"
+    },
+    "migration": "LangGraphからADKへ移行する場合、グラフのノード・エッジとして定義していた処理をエージェントの階層構造として再設計する必要がある。逆方向の場合は、階層構造を明示的なグラフのノード・エッジとして分解することになる。",
+    "faq": [
+      {
+        "question": "LangGraphとADK、どちらを選ぶべき?",
+        "answer": "分岐・ループを含む複雑なワークフローを細かく制御したい、またはLangChainエコシステムを活用したい場合はLangGraphが向いている。Google Cloud・Geminiのエコシステムを活用し、評価機能まで含めて一貫した開発体制を求める場合はADKが向いている。"
+      }
+    ],
+    "references": [
+      {
+        "type": "Official Website",
+        "label": "LangGraph",
+        "url": "https://www.langchain.com/langgraph"
+      },
+      {
+        "type": "Documentation",
+        "label": "Agent Development Kit Documentation",
+        "url": "https://google.github.io/adk-docs/"
+      }
+    ]
+  },
+  {
+    "slug": "semantic-kernel-vs-openai-agents-sdk",
+    "left": "semantic-kernel",
+    "right": "openai-agents-sdk",
+    "summary": "Semantic Kernelは、Microsoftが提供する、LLMを既存アプリケーションへ統合するためのオープンソースSDK。マルチエージェントのオーケストレーション機能も備える。OpenAI Agents SDKは、OpenAIが提供する、エージェント間のハンドオフ機能を備えた軽量なマルチエージェントフレームワーク。いずれもベンダー製のマルチエージェント対応SDKだが、設計の包括性と中心概念が異なる。",
+    "quickSummary": [
+      "Semantic KernelはLLM統合SDKの一部としてマルチエージェント機能を提供する、より包括的なSDK。",
+      "OpenAI Agents SDKはエージェント間の「ハンドオフ」という軽量な概念を中心に設計される。",
+      "Semantic Kernelは.NET・Python・Java等複数言語のエコシステムに対応し、エンタープライズ統合に重点を置く。",
+      "OpenAI Agents SDKはOpenAIのモデル・APIとの親和性が高く、ガードレールやトレーシング等本番運用を意識した機能を備える。"
+    ],
+    "table": [
+      {
+        "item": "Purpose",
+        "left": "LLM統合SDKの一部としてのマルチエージェントオーケストレーション",
+        "right": "エージェント間のハンドオフによる軽量なマルチエージェント構築"
+      },
+      {
+        "item": "Developer",
+        "left": "Microsoft",
+        "right": "OpenAI"
+      },
+      {
+        "item": "Open Source",
+        "left": "オープンソース",
+        "right": "オープンソース"
+      },
+      {
+        "item": "対応言語",
+        "left": ".NET、Python、Java",
+        "right": "Python"
+      },
+      {
+        "item": "主な統合先",
+        "left": "既存の.NET・Python・Javaアプリケーション、エンタープライズ環境",
+        "right": "OpenAIのモデル・API"
+      },
+      {
+        "item": "スコープ",
+        "left": "プラグイン・プロセス等を含む包括的なSDK",
+        "right": "ハンドオフを中心とした軽量なフレームワーク"
+      }
+    ],
+    "architecture": {
+      "left": "LLMの呼び出しをプラグインとして既存アプリケーションへ統合する設計を土台に、複数のエージェントへ役割を与え協調させるマルチエージェントオーケストレーションの仕組みを提供する。",
+      "right": "エージェントごとに役割・ツール・指示を定義し、会話の途中で別のエージェントへ処理を引き継ぐハンドオフの仕組みを中心に設計される。実験的フレームワーク「Swarm」を前身とする。"
+    },
+    "features": [
+      {
+        "feature": "既存アプリへのプラグイン形式でのLLM統合",
+        "left": true,
+        "right": false
+      },
+      {
+        "feature": "エージェント間のハンドオフ",
+        "left": "限定的",
+        "right": true
+      },
+      {
+        "feature": "複数言語(.NET/Python/Java)対応",
+        "left": true,
+        "right": false
+      },
+      {
+        "feature": "ガードレール・トレーシング等の本番運用機能",
+        "left": "限定的(発展途上)",
+        "right": true
+      }
+    ],
+    "advantages": {
+      "left": [
+        ".NET・Python・Java等、複数言語のエコシステムに対応する",
+        "既存のエンタープライズアプリケーションへLLM機能を組み込みやすい"
+      ],
+      "right": [
+        "ハンドオフという単純な概念でマルチエージェントの処理フローを組み立てられる",
+        "ガードレールやトレーシング等、本番運用を意識した機能を備える"
+      ]
+    },
+    "disadvantages": {
+      "left": [
+        "マルチエージェント関連の機能は比較的新しく、ベストプラクティスが発展途上にある",
+        "プラグイン・エージェント関連のAPI変更頻度が高く、追従コストがかかる"
+      ],
+      "right": [
+        "OpenAI以外のモデルを利用する場合、対応状況の確認が必要になる",
+        "より複雑な状態管理を要するワークフローには他フレームワークとの組み合わせが必要になる場合がある"
+      ]
+    },
+    "bestUseCases": {
+      "left": "既存の.NET・Python・Javaアプリケーションへエンタープライズ向けにLLM機能を統合したいプロジェクト。",
+      "right": "OpenAIのモデル・APIを主軸に、エージェント間の処理引き継ぎを軽量に組み立てたいプロジェクト。"
+    },
+    "migration": "Semantic KernelからOpenAI Agents SDKへ移行する場合、プラグイン・プロセスとして定義していた処理をハンドオフ単位のエージェントとして再設計する必要がある。逆方向の場合は、ハンドオフの連鎖をプラグインやプロセスの仕組みへ統合し直す。",
+    "faq": [
+      {
+        "question": "Semantic KernelとOpenAI Agents SDK、どちらを選ぶべき?",
+        "answer": ".NET・Java等を含む複数言語のエンタープライズ環境へLLM機能を統合したい場合はSemantic Kernelが向いている。OpenAIのモデル・APIを中心に軽量なマルチエージェント構成を組みたい場合はOpenAI Agents SDKが向いている。"
+      }
+    ],
+    "references": [
+      {
+        "type": "Documentation",
+        "label": "Semantic Kernel Documentation",
+        "url": "https://learn.microsoft.com/en-us/semantic-kernel/overview/"
+      },
+      {
+        "type": "Documentation",
+        "label": "OpenAI Agents SDK Documentation",
+        "url": "https://openai.github.io/openai-agents-python/"
+      }
+    ]
+  },
+  {
+    "slug": "crewai-vs-semantic-kernel",
+    "left": "crewai",
+    "right": "semantic-kernel",
+    "summary": "CrewAIは、役割を与えた複数のAIエージェントに協調してタスクを遂行させるPythonのマルチエージェントフレームワーク。Semantic Kernelは、Microsoftが提供する、LLMを既存アプリケーションへ統合するためのオープンソースSDKで、マルチエージェントのオーケストレーション機能も備える。いずれもマルチエージェント構成を扱うが、専用フレームワークとSDKの一部という設計の位置づけが異なる。",
+    "quickSummary": [
+      "CrewAIは役割(role)・目標(goal)・タスク(task)の宣言的な定義に特化したマルチエージェント専用フレームワーク。",
+      "Semantic KernelはLLM統合SDKの一部としてマルチエージェント機能を提供する、より包括的なSDK。",
+      "CrewAIは学習コストが低く、マルチエージェントの試作を素早く行える。",
+      "Semantic Kernelは.NET・Python・Java等複数言語に対応し、既存のエンタープライズアプリケーションへの統合に強みを持つ。"
+    ],
+    "table": [
+      {
+        "item": "Purpose",
+        "left": "役割ベースのマルチエージェント協調タスクの実行",
+        "right": "LLM統合SDKの一部としてのマルチエージェントオーケストレーション"
+      },
+      {
+        "item": "Developer",
+        "left": "CrewAI, Inc.",
+        "right": "Microsoft"
+      },
+      {
+        "item": "Open Source",
+        "left": "オープンソース",
+        "right": "オープンソース"
+      },
+      {
+        "item": "対応言語",
+        "left": "Python",
+        "right": ".NET、Python、Java"
+      },
+      {
+        "item": "スコープ",
+        "left": "マルチエージェント専用フレームワーク",
+        "right": "プラグイン・プロセス等を含む包括的なLLM統合SDK"
+      },
+      {
+        "item": "主な統合先",
+        "left": "CrewAI Enterprise、各種LLMプロバイダ",
+        "right": "既存の.NET・Python・Javaアプリケーション、エンタープライズ環境"
+      }
+    ],
+    "architecture": {
+      "left": "エージェントに役割(role)・目標(goal)・背景(backstory)を与え、タスク(task)を順次または階層的に処理させるプロセス指向のアーキテクチャを採用する。",
+      "right": "LLMの呼び出しをプラグインとして既存アプリケーションへ統合する設計を土台に、複数のエージェントへ役割を与え協調させるマルチエージェントオーケストレーションの仕組みを提供する。"
+    },
+    "features": [
+      {
+        "feature": "役割ベースの宣言的なマルチエージェント設計",
+        "left": true,
+        "right": "限定的(SDKの一機能として提供)"
+      },
+      {
+        "feature": "既存アプリへのプラグイン形式でのLLM統合",
+        "left": false,
+        "right": true
+      },
+      {
+        "feature": "複数言語(.NET/Python/Java)対応",
+        "left": false,
+        "right": true
+      },
+      {
+        "feature": "マルチエージェントに特化した設計",
+        "left": true,
+        "right": "限定的(SDK全体の一部)"
+      }
+    ],
+    "advantages": {
+      "left": [
+        "役割ベースのマルチエージェントシステムを、比較的簡潔なコードで構築できる",
+        "LangChain等より学習コストが低く、マルチエージェントの試作を素早く行える"
+      ],
+      "right": [
+        ".NET・Python・Java等、複数言語のエコシステムに対応する",
+        "既存のエンタープライズアプリケーションへLLM機能を組み込みやすい"
+      ]
+    },
+    "disadvantages": {
+      "left": [
+        "複雑な条件分岐やループを伴うワークフローの表現は、LangGraph等のグラフベースのフレームワークと比べ柔軟性に制約が生じやすい",
+        "細かい制御フローを記述したい高度なユースケースでは、抽象度の高さが制約になる場合がある"
+      ],
+      "right": [
+        "マルチエージェント関連の機能は比較的新しく、ベストプラクティスが発展途上にある",
+        "プラグイン・エージェント関連のAPI変更頻度が高く、追従コストがかかる"
+      ]
+    },
+    "bestUseCases": {
+      "left": "役割分担が明確なタスク(リサーチ→執筆→レビュー等)を素早く自動化したいプロジェクトや、マルチエージェント開発の学習コストを抑えたい場合。",
+      "right": "既存の.NET・Python・Javaアプリケーションへエンタープライズ向けにLLM機能とマルチエージェント機能を統合したいプロジェクト。"
+    },
+    "migration": "CrewAIからSemantic Kernelへ移行する場合、role/task単位で定義していた処理をSemantic Kernelのプラグイン・エージェントオーケストレーションの仕組みに置き換える必要がある。逆方向の場合は、既存のプラグイン統合をCrewAIの役割ベースの構成へ単純化する。",
+    "faq": [
+      {
+        "question": "CrewAIとSemantic Kernel、どちらを選ぶべき?",
+        "answer": "役割分担が明確なタスクを素早く自動化したい場合はCrewAIが向いている。既存の.NET・Python・Javaアプリケーションへエンタープライズ向けにLLM機能を統合したい場合はSemantic Kernelが向いている。"
+      }
+    ],
+    "references": [
+      {
+        "type": "Official Website",
+        "label": "CrewAI",
+        "url": "https://www.crewai.com/"
+      },
+      {
+        "type": "Documentation",
+        "label": "Semantic Kernel Documentation",
+        "url": "https://learn.microsoft.com/en-us/semantic-kernel/overview/"
+      }
+    ]
   }
 ]

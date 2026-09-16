@@ -6970,6 +6970,10 @@
       {
         "slug": "semantic-kernel",
         "note": "LangGraphがグラフ構造による明示的な状態遷移の制御を軸にするのに対し、Semantic KernelはLLM統合SDKの一部としてマルチエージェント機能を提供する"
+      },
+      {
+        "slug": "google-adk",
+        "note": "LangGraphと同様マルチエージェントシステムの構築を目的とするが、ADKはGoogle Cloud・Geminiとの統合を軸に設計されている"
       }
     ],
     "relatedTerms": [
@@ -7122,6 +7126,10 @@
       {
         "slug": "autogen",
         "note": "CrewAIとAutoGenは、いずれも複数のAIエージェントを協調させるためのフレームワーク"
+      },
+      {
+        "slug": "semantic-kernel",
+        "note": "CrewAIが役割ベースのマルチエージェント専用フレームワークであるのに対し、Semantic KernelはLLM統合SDKの一部としてマルチエージェント機能を提供する"
       }
     ],
     "relatedTerms": [
@@ -23261,6 +23269,10 @@
       {
         "slug": "openai-agents-sdk",
         "note": "OpenAI Agents SDKがエージェント間のハンドオフという軽量な概念を中心に設計されるのに対し、Semantic Kernelはプラグインやプロセスの仕組みを含むより包括的なSDKという違いがある"
+      },
+      {
+        "slug": "crewai",
+        "note": "CrewAIが役割ベースのマルチエージェント専用フレームワークであるのに対し、Semantic KernelはLLM統合SDKの一部としてマルチエージェント機能を提供する"
       }
     ],
     "relatedTerms": [
