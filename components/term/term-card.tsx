@@ -10,34 +10,51 @@ export const TermCard: FC<{ term: TermSummaryCard }> = ({ term }) => (
     style={{ color: "inherit", textDecoration: "none" }}
   >
     <Card className="term-card" style={{ height: "100%" }}>
-      <div>
-        <h3 style={{ fontSize: "1.05rem", margin: 0 }}>{term.name}</h3>
-        {term.aliases && term.aliases.length > 0 && (
-          <p
-            style={{
-              color: "var(--color-text-muted)",
-              fontSize: ".8rem",
-              margin: ".25rem 0 0",
-            }}
-          >
-            {term.aliases.join(" / ")}
-          </p>
-        )}
-      </div>
-      <p
+      <div
         style={{
-          color: "var(--color-text-muted)",
-          fontSize: ".85rem",
-          margin: ".75rem 0 1rem",
+          display: "flex",
+          flexDirection: "column",
+          height: "100%",
+          justifyContent: "space-between",
         }}
       >
-        {term.tagline}
-      </p>
-      <div style={{ display: "flex", flexWrap: "wrap", gap: ".375rem" }}>
-        <Badge>{term.category}</Badge>
-        {term.tags.map((tag) => (
-          <Badge key={tag}>{tag}</Badge>
-        ))}
+        <div>
+          <h3 style={{ fontSize: "1.05rem", margin: 0 }}>{term.name}</h3>
+          {term.aliases && term.aliases.length > 0 && (
+            <p
+              style={{
+                color: "var(--color-text-muted)",
+                fontSize: ".8rem",
+                margin: ".25rem 0 0",
+              }}
+            >
+              {term.aliases.join(" / ")}
+            </p>
+          )}
+        </div>
+        <p
+          style={{
+            color: "var(--color-text-muted)",
+            fontSize: ".85rem",
+            margin: ".75rem 0 1rem",
+          }}
+        >
+          {term.tagline}
+        </p>
+        <div
+          style={{
+            display: "flex",
+            flexWrap: "wrap",
+            gap: ".375rem",
+            justifyContent: "right",
+            alignContent: "flex-end",
+          }}
+        >
+          <Badge>{term.category}</Badge>
+          {term.tags.map((tag) => (
+            <Badge key={tag}>{tag}</Badge>
+          ))}
+        </div>
       </div>
     </Card>
   </Link>
