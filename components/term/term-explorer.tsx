@@ -20,17 +20,17 @@ const matchesQuery = (term: TermSummaryCard, query: string): boolean => {
   return haystack.includes(normalized)
 }
 
-export const TermExplorer: FC<{ categories: string[]; terms: TermSummaryCard[] }> = ({
-  categories,
-  terms,
-}) => {
+export const TermExplorer: FC<{
+  categories: string[]
+  terms: TermSummaryCard[]
+}> = ({ categories, terms }) => {
   const [selectedCategory, setSelectedCategory] = useState<string | null>(null)
   const [query, setQuery] = useState("")
 
   const filteredTerms = terms.filter(
     (term) =>
       (!selectedCategory || term.category === selectedCategory) &&
-      matchesQuery(term, query),
+      matchesQuery(term, query)
   )
 
   return (
@@ -100,7 +100,9 @@ export const TermExplorer: FC<{ categories: string[]; terms: TermSummaryCard[] }
                     background: isSelected
                       ? "var(--color-accent)"
                       : "var(--color-accent-dim)",
-                    color: isSelected ? "#0a0f0c" : "var(--color-accent-bright)",
+                    color: isSelected
+                      ? "#0a0f0c"
+                      : "var(--color-accent-bright)",
                     fontSize: ".85rem",
                     padding: ".4rem .9rem",
                   }}
@@ -136,7 +138,7 @@ export const TermExplorer: FC<{ categories: string[]; terms: TermSummaryCard[] }
             style={{
               display: "grid",
               gap: "1.25rem",
-              gridTemplateColumns: "repeat(auto-fill, minmax(15rem, 1fr))",
+              gridTemplateColumns: "repeat(auto-fill, minmax(20rem, 1fr))",
             }}
           >
             {filteredTerms.map((term) => (
