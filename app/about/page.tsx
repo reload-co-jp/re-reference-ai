@@ -8,6 +8,7 @@ import {
   SITE_NAME,
   SITE_OG_IMAGE_URL,
   SITE_PUBLISHER_NAME,
+  SITE_PUBLISHER_URL,
   SITE_URL,
 } from "lib/site"
 
@@ -27,7 +28,11 @@ export const metadata: Metadata = {
     siteName: SITE_NAME,
     locale: "ja_JP",
   },
-  twitter: { title: TITLE, description: DESCRIPTION, images: [SITE_OG_IMAGE_URL] },
+  twitter: {
+    title: TITLE,
+    description: DESCRIPTION,
+    images: [SITE_OG_IMAGE_URL],
+  },
 }
 
 const breadcrumbList = {
@@ -35,13 +40,18 @@ const breadcrumbList = {
   "@type": "BreadcrumbList",
   itemListElement: [
     { "@type": "ListItem", position: 1, name: SITE_NAME, item: `${SITE_URL}/` },
-    { "@type": "ListItem", position: 2, name: TITLE, item: `${SITE_URL}/about/` },
+    {
+      "@type": "ListItem",
+      position: 2,
+      name: TITLE,
+      item: `${SITE_URL}/about/`,
+    },
   ],
 }
 
-const ROWS: { label: string; value: string }[] = [
+const ROWS: { label: string; value: string; url?: string }[] = [
   { label: "サイト名", value: `${SITE_NAME}（RRA）` },
-  { label: "運営", value: SITE_PUBLISHER_NAME },
+  { label: "運営", value: SITE_PUBLISHER_NAME, url: SITE_PUBLISHER_URL },
   { label: "サイト概要", value: SITE_DESCRIPTION },
 ]
 
@@ -79,7 +89,20 @@ const AboutPage: FC = () => (
             >
               {row.label}
             </dt>
-            <dd style={{ flex: "1 1 20rem", lineHeight: 1.8, margin: 0 }}>{row.value}</dd>
+            <dd style={{ flex: "1 1 20rem", lineHeight: 1.8, margin: 0 }}>
+              {row.url ? (
+                <a
+                  href={row.url}
+                  rel="noopener noreferrer"
+                  style={{ color: "var(--color-accent)" }}
+                  target="_blank"
+                >
+                  {row.value}
+                </a>
+              ) : (
+                row.value
+              )}
+            </dd>
           </div>
         ))}
       </dl>
