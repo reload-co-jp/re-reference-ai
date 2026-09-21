@@ -4865,7 +4865,8 @@
       "ai-agent",
       "chain-of-thought",
       "multi-agent",
-      "orchestrator"
+      "orchestrator",
+      "automated-planning"
     ],
     "faq": [
       {
@@ -31690,6 +31691,140 @@
         "label": "RLCD: Reinforcement Learning from Contrastive Distillation for Language Model Alignment (arXiv)",
         "url": "https://arxiv.org/abs/2307.12950"
       }
+    ]
+  },
+  {
+    "slug": "p-problem",
+    "name": "P問題",
+    "aliases": [
+      "P",
+      "PTIME",
+      "多項式時間クラス"
+    ],
+    "tagline": "決定性チューリング機械が多項式時間内に解ける決定問題全体からなる計算複雑性クラス",
+    "category": "技術",
+    "tags": [
+      "計算複雑性理論",
+      "アルゴリズム"
+    ],
+    "summary": "P問題(クラスP)とは、入力サイズnに対して多項式時間O(n^k)(kは定数)で解を求めるアルゴリズムが存在する決定問題全体の集合を指す、計算複雑性理論における基本的な問題クラスの1つ。\nソート、最短経路探索(ダイクストラ法)、線形計画法、素数判定などがPに属する代表的な問題として知られる。\n計算複雑性理論では、多項式時間で解けることを「効率的に解ける」ことの目安とするCobham-Edmondsのテーゼに基づき、Pは実用上処理可能な問題のクラスとみなされる。\nP⊆NPであることは証明されているが、NPに属する全ての問題が多項式時間で解けるか(P=NP)は未解決であり、クレイ数学研究所が懸賞金を懸ける7つのミレニアム懸賞問題の1つとなっている。",
+    "history": "1965年、Alan CobhamとJack Edmondsがそれぞれ独立に発表した論文で、多項式時間アルゴリズムの存在を計算の「効率性」の基準として提唱したことが、Pの概念の起点とされる。",
+    "comparisons": [
+      {
+        "slug": "np-problem",
+        "note": "Pは解を多項式時間で求められる問題のクラス、NPは解の検証のみ多項式時間で可能な問題のクラス(P⊆NPだが、P=NPかは未解決)"
+      }
+    ],
+    "relatedTerms": [
+      "np-problem",
+      "feasible-solution",
+      "constraint-propagation"
+    ]
+  },
+  {
+    "slug": "np-problem",
+    "name": "NP問題",
+    "aliases": [
+      "NP",
+      "Nondeterministic Polynomial Time"
+    ],
+    "tagline": "非決定性チューリング機械が多項式時間で解け、与えられた解の正しさも多項式時間で検証できる決定問題の集合",
+    "category": "技術",
+    "tags": [
+      "計算複雑性理論",
+      "アルゴリズム"
+    ],
+    "summary": "NP問題(クラスNP)とは、非決定性チューリング機械上で多項式時間内に解ける決定問題全体の集合。実用的には、ある解の候補が与えられたとき、それが正しい解であるかを多項式時間で検証できる問題のクラスとして理解される。\n巡回セールスマン問題の判定版、充足可能性問題(SAT)、部分和問題などがNPに属する代表例。\nNPに属する問題の中でも、NP内の全ての問題を多項式時間で還元できる最も難しい問題群を「NP完全」と呼び、SATはNP完全性が最初に証明された問題として知られる。\nP⊆NPは自明に成り立つが、NPに属する問題が全て多項式時間で解けるか(P=NP)は未解決の問題。",
+    "history": "1971年、Stephen CookがNP完全性の概念とSATがNP完全であることを示した論文「The Complexity of Theorem Proving Procedures」を発表。同時期にLeonid Levinも独立に同様の結果を示したことから、この定理はCook-Levinの定理と呼ばれる。1972年にはRichard KarpがNP完全な21個の問題を示し、NP完全性の概念を広めた。",
+    "comparisons": [
+      {
+        "slug": "p-problem",
+        "note": "NPは解の検証のみ多項式時間で可能な問題のクラス、Pは解を求めること自体が多項式時間で可能な問題のクラス"
+      }
+    ],
+    "relatedTerms": [
+      "p-problem",
+      "constraint-propagation",
+      "feasible-solution"
+    ]
+  },
+  {
+    "slug": "feasible-solution",
+    "name": "実行可能解",
+    "aliases": [
+      "Feasible Solution",
+      "許容解"
+    ],
+    "tagline": "最適化問題や制約充足問題において、与えられた全ての制約条件を満たす解",
+    "category": "技術",
+    "tags": [
+      "最適化",
+      "制約充足"
+    ],
+    "summary": "実行可能解とは、数理最適化や制約充足問題において、問題に課された全ての制約条件(等式制約・不等式制約など)を満たす変数の値の組を指す。実行可能解全体が作る集合を「実行可能領域(feasible region)」と呼ぶ。\n最適化問題を解く際は、まず制約を満たす実行可能解を1つ以上見つけ(実行可能性の判定)、その上で目的関数を最小化(または最大化)する実行可能解、すなわち最適解を探索する、という2段階で捉えられることが多い。\n制約を1つでも満たさない解は「実行不可能解(infeasible solution)」と呼ばれ、実行可能領域が空(実行可能解を1つも持たない)問題は「実行不可能(infeasible)」と呼ばれる。\n組合せ最適化問題では、実行可能解を求めること自体がNP困難となることもあり、その場合は制約伝播やバックトラック探索などの手法で実行可能解を探索する。",
+    "comparisons": [
+      {
+        "slug": "np-problem",
+        "note": "組合せ最適化問題では、実行可能解を1つ求めること自体がNP困難となる場合がある"
+      }
+    ],
+    "relatedTerms": [
+      "constraint-propagation",
+      "np-problem",
+      "automated-planning"
+    ]
+  },
+  {
+    "slug": "automated-planning",
+    "name": "自動計画",
+    "aliases": [
+      "Automated Planning",
+      "AIプランニング",
+      "オートメイテッドプランニング"
+    ],
+    "tagline": "初期状態から目標状態に至るまでの行動系列を、エージェントが自動的に生成するAIの一分野",
+    "category": "エージェント",
+    "tags": [
+      "計画",
+      "自動化"
+    ],
+    "summary": "自動計画(Automated Planning)とは、エージェントの初期状態と達成したい目標状態、利用可能な行動の集合が与えられたとき、初期状態から目標状態に至る行動系列(計画)を自動的に生成する、AI研究の一分野。\n各行動は実行の前提となる条件(前提条件)と、実行後に環境へ与える変化(効果)によって記述され、計画問題はこれらの行動を目標達成まで探索的に組み合わせる問題として定式化される。\n代表的な計画問題の記述言語にPDDL(Planning Domain Definition Language)があり、International Planning Competitionなどで標準的に用いられている。\n近年はLLMをプランナーとして用い、自然言語の目標からサブタスクの手順を生成させるアプローチも広がっているが、古典的な自動計画は行動の前提条件・効果を形式的に記述し、健全性・完全性が保証された探索アルゴリズムで計画を導出する点に特徴がある。",
+    "history": "1971年、Richard FikesとNils NilssonがSTRIPS(Stanford Research Institute Problem Solver)を発表し、行動の前提条件と効果を用いて計画問題を形式化する枠組みを示したことが、自動計画研究の出発点とされる。",
+    "comparisons": [
+      {
+        "slug": "planner",
+        "note": "自動計画はAI研究分野そのものを指し、プランナーはエージェント内でその計画立案を担う構成要素を指す"
+      }
+    ],
+    "relatedTerms": [
+      "planner",
+      "constraint-propagation",
+      "feasible-solution"
+    ]
+  },
+  {
+    "slug": "constraint-propagation",
+    "name": "制約伝播",
+    "aliases": [
+      "Constraint Propagation"
+    ],
+    "tagline": "制約充足問題において、変数の取り得る値の範囲を制約に基づき絞り込み、矛盾を早期に検出する手法",
+    "category": "技術",
+    "tags": [
+      "制約充足",
+      "探索アルゴリズム"
+    ],
+    "summary": "制約伝播(Constraint Propagation)とは、制約充足問題(CSP: Constraint Satisfaction Problem)を解く際に、各変数が取り得る値の候補(定義域)を、変数間の制約に基づいて反復的に絞り込んでいく手法。ある変数の定義域が絞られると、それに関連する制約を通じて他の変数の定義域にも影響が伝播していく。\n絞り込みの過程でいずれかの変数の定義域が空になった場合は、その時点で解が存在しない(矛盾)ことを検出でき、探索木の枝刈りに利用できる。\nアーク整合性(arc consistency)を実現するAC-3アルゴリズムなどが代表的な制約伝播アルゴリズムであり、バックトラック探索と組み合わせて用いることで、数独やスケジューリング、自動計画など組合せ最適化問題の探索空間を削減できる。",
+    "comparisons": [
+      {
+        "slug": "feasible-solution",
+        "note": "制約伝播は実行可能解の探索空間を絞り込むための手法の1つ"
+      }
+    ],
+    "relatedTerms": [
+      "feasible-solution",
+      "automated-planning",
+      "np-problem"
     ]
   }
 ]
