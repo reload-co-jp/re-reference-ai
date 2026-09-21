@@ -3010,6 +3010,7 @@
       "rlvr",
       "reward-model",
       "rlaif",
+      "rlcd",
       "ppo",
       "feedback-optimization"
     ],
@@ -19944,7 +19945,8 @@
       "reward-hacking",
       "rlvr",
       "alignment",
-      "llm-as-a-judge"
+      "llm-as-a-judge",
+      "rlcd"
     ],
     "faq": [
       {
@@ -31630,6 +31632,63 @@
         "type": "Documentation",
         "label": "TypeSafe AI Docs",
         "url": "https://docs.typesafe.ai/"
+      }
+    ]
+  },
+  {
+    "slug": "rlcd",
+    "name": "RLCD",
+    "aliases": [
+      "Reinforcement Learning from Contrastive Distillation",
+      "対照的蒸留による強化学習"
+    ],
+    "tagline": "正負の属性を対比させたプロンプトで出力ペアを生成し、それを選好データとして報酬モデルを学習する手法",
+    "category": "技術",
+    "tags": [
+      "強化学習",
+      "アライメント"
+    ],
+    "plainSummary": "望ましい特徴を強めたプロンプトと、望ましくない特徴を強めたプロンプトの両方でモデルに答えさせ、その差分を「良い回答・悪い回答」のペアとして学習に使う手法。",
+    "summary": "RLCD（Reinforcement Learning from Contrastive Distillation）とは、同じ入力に対して望ましい属性を強調した正のプロンプトと、望ましくない属性を強調した負のプロンプトをそれぞれ与えてモデルに応答を生成させる手法を指す。\n生成した応答ペアを選好データとして、報酬モデルを学習する。\nRLAIFのように別のAIモデルに応答を評価（judge）させる工程を必要とせず、対照的なプロンプト設計だけで選好ペアを直接生成する点が特徴。\n生成した選好ペアで報酬モデルを学習した後は、RLHFと同様に強化学習（PPO等）で方策モデルを最適化する。\n評価役モデルのバイアスが選好データに増幅されて伝わるリスクを避けやすい一方、正負プロンプトの設計品質に選好データの質が左右される。",
+    "background": "RLAIFは評価役となる別のAIモデルによるスコアリングを必要とし、評価役自体のバイアスが選好データへ増幅されて伝わるリスクや、評価用モデルの用意・実行コストが課題だった。RLCDは評価役モデルを介さず、対照的な属性プロンプトから直接選好ペアを生成する手法として提案された。",
+    "history": "2023年7月にarXivで発表された論文「RLCD: Reinforcement Learning from Contrastive Distillation for Language Model Alignment」（arXiv:2307.12950）で提唱された。",
+    "workflow": "入力に正負の属性プロンプトをそれぞれ付加し応答を生成させる → 正プロンプトの応答を選好応答、負プロンプトの応答を非選好応答として選好ペアを構築する（判定用モデル不要） → 選好ペアで報酬モデルを学習する → 報酬モデルで強化学習（PPO等）し方策モデルを最適化する。",
+    "advantages": [
+      "評価役となる別のAIモデルによるスコアリングを必要とせず、対照的プロンプトのみで選好ペアを生成できるため、RLAIFで課題となる評価役モデルのバイアス伝播リスクを避けやすい",
+      "人間ラベルの収集コストをかけずに選好データを自動生成できる"
+    ],
+    "disadvantages": [
+      "正負のプロンプト設計（属性の対比の与え方）の品質に選好データの質が左右されやすい",
+      "評価役モデルを使わないため、生成モデル自体の能力を超えた評価軸を学習させるのは難しい"
+    ],
+    "comparisons": [
+      {
+        "slug": "rlaif",
+        "note": "RLAIFは別のAIモデルが応答を評価して選好データを作るのに対し、RLCDは正負の属性プロンプトの対比によって出力ペア自体を選好データとして直接生成する（評価役モデルを必要としない）"
+      },
+      {
+        "slug": "rlhf",
+        "note": "RLHFは人間による選好ラベルを使うのに対し、RLCDは対照的プロンプトから生成した出力ペアを合成的な選好データとして使う"
+      }
+    ],
+    "relatedTerms": [
+      "rlhf",
+      "rlaif",
+      "constitutional-ai",
+      "reward-model",
+      "dpo"
+    ],
+    "faq": [
+      {
+        "question": "RLCDはRLAIFとどう違う？",
+        "answer": "RLAIFは別のAIモデル（評価役）が応答を評価して選好ラベルを付けるのに対し、RLCDは望ましい属性・望ましくない属性を強調する対比プロンプトを使って選好ペア自体を直接生成するため、評価用の別モデルを必要としない。"
+      }
+    ],
+    "references": [
+      {
+        "type": "Research Paper",
+        "label": "RLCD: Reinforcement Learning from Contrastive Distillation for Language Model Alignment (arXiv)",
+        "url": "https://arxiv.org/abs/2307.12950"
       }
     ]
   }
