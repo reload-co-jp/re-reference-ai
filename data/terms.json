@@ -2139,7 +2139,8 @@
       "transformer",
       "word2vec",
       "cosine-similarity",
-      "dense-vector"
+      "dense-vector",
+      "feature-space"
     ],
     "faq": [
       {
@@ -10408,7 +10409,8 @@
     "relatedTerms": [
       "logistic-regression",
       "decision-tree",
-      "machine-learning"
+      "machine-learning",
+      "feature-space"
     ],
     "codeExamples": [
       {
@@ -26943,7 +26945,8 @@
       "semantic-search",
       "tf-idf",
       "bm25",
-      "cosine-similarity"
+      "cosine-similarity",
+      "feature-space"
     ],
     "comparisons": [
       {
@@ -31825,6 +31828,41 @@
       "feasible-solution",
       "automated-planning",
       "np-problem"
+    ]
+  },
+  {
+    "slug": "feature-space",
+    "name": "特徴量空間",
+    "aliases": [
+      "特徴空間",
+      "Feature Space"
+    ],
+    "tagline": "データを特徴量の組(ベクトル)として表したときに、各データ点が配置される多次元空間",
+    "category": "技術",
+    "tags": [
+      "機械学習",
+      "埋め込み"
+    ],
+    "summary": "特徴量空間(Feature Space)とは、データを複数の特徴量(身長・体重、画素値、単語の出現頻度など)の組として表現したときに、各特徴量を1つの軸とみなして構成される多次元のベクトル空間。個々のデータは、この空間上の1点(特徴ベクトル)として表される。\n機械学習の多くの手法は、特徴量空間上での点どうしの距離や位置関係を利用する。たとえば分類では空間を分割する決定境界を学習し、クラスタリングでは近くに集まる点をまとめ、類似検索ではコサイン類似度などでベクトル間の近さを測る。\n深層学習では、ニューラルネットワークの隠れ層が入力を別の特徴量空間へ写像していると捉えられる。学習によって意味的に近いデータが近くに配置されるよう構成された空間は、埋め込み空間や潜在空間とも呼ばれる。\nまた、SVMのカーネル法のように、元の空間では線形分離できないデータを高次元の特徴量空間へ写像して分離可能にする考え方もある。一方で、次元が増えるほどデータが疎になり距離の差が小さくなる「次元の呪い」が生じるため、特徴選択や次元削減で空間を扱いやすくする工夫も行われる。",
+    "comparisons": [
+      {
+        "slug": "embedding",
+        "note": "埋め込みは、データを学習済みの特徴量空間上のベクトルとして表現したもの"
+      },
+      {
+        "slug": "dense-vector",
+        "note": "密ベクトルは特徴量空間上の点を表す表現形式の1つ"
+      }
+    ],
+    "relatedTerms": [
+      "embedding",
+      "dense-vector",
+      "cosine-similarity",
+      "svm",
+      "clustering",
+      "classification",
+      "hidden-layer",
+      "machine-learning"
     ]
   }
 ]
