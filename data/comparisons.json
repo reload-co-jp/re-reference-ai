@@ -2689,5 +2689,909 @@
         "url": "https://learn.microsoft.com/en-us/semantic-kernel/overview/"
       }
     ]
+  },
+  {
+    "slug": "fine-tuning-vs-lora",
+    "left": "fine-tuning",
+    "right": "lora",
+    "summary": "ファインチューニングは事前学習済みモデルを追加学習して特定タスクやドメインへ適応させる手法の総称、LoRAはその実現方法の1つで、元の重みを凍結したまま低ランク行列の差分だけを学習するパラメータ効率的手法(PEFT)。両者は対立する選択肢ではなく、「全パラメータを更新するフルファインチューニング」と「LoRAによる部分的な更新」の比較として捉えるのが実態に近い。",
+    "quickSummary": [
+      "ファインチューニングは追加学習によるモデル適応の総称で、LoRAはその中の手法の1つ。",
+      "フルファインチューニングは全パラメータを更新するため、大量のGPUメモリと計算資源を必要とする。",
+      "LoRAは元の重みを凍結し、低ランク行列の差分だけを学習するため、学習パラメータ数とGPUメモリを抑えられる。",
+      "限られた計算資源でLLMを特定タスク向けに調整する場合は、LoRA(またはQLoRA)が第一候補になる。"
+    ],
+    "table": [
+      {
+        "item": "Purpose",
+        "left": "事前学習済みモデルを特定タスク・ドメインへ適応させる",
+        "right": "少ない学習パラメータとGPUメモリでファインチューニングを行う"
+      },
+      {
+        "item": "Scope",
+        "left": "追加学習によるモデル適応の総称(フル更新・PEFTを含む)",
+        "right": "ファインチューニング手法の1つ(PEFTの代表例)"
+      },
+      {
+        "item": "Originator",
+        "left": "特定の提案者はない(転移学習の一般的な手法)",
+        "right": "Microsoftの研究チーム"
+      },
+      {
+        "item": "Release",
+        "left": "LLM文脈では2018年前後(ULMFiT/BERT)から普及",
+        "right": "2021年(論文発表)"
+      },
+      {
+        "item": "Open Source",
+        "left": "実装(Hugging Face Transformers等)はオープンソースのものが多い",
+        "right": "公式実装・Hugging Face PEFTがオープンソースで公開"
+      },
+      {
+        "item": "Programming Language",
+        "left": "Python(PyTorch/Hugging Face Transformers等)が主流",
+        "right": "Python(Hugging Face PEFT等)が主流"
+      }
+    ],
+    "architecture": {
+      "left": "事前学習済みモデルの重みを、タスク・ドメイン固有のデータセットで追加学習して更新する。フルファインチューニングでは全パラメータが更新対象になる。",
+      "right": "元の重み行列を凍結したまま、各層に小さな低ランク行列のペア(A・B)を追加し、その差分のみを学習する。学習後は低ランク行列の積を元の重みに加算してマージでき、推論時の追加遅延は発生しない。"
+    },
+    "features": [
+      {
+        "feature": "更新するパラメータ",
+        "left": "全パラメータ(フルファインチューニングの場合)",
+        "right": "追加した低ランク行列のみ"
+      },
+      {
+        "feature": "必要なGPUメモリ",
+        "left": "大きい",
+        "right": "小さい"
+      },
+      {
+        "feature": "用途別アダプタの切り替え",
+        "left": false,
+        "right": true
+      },
+      {
+        "feature": "推論時の追加遅延",
+        "left": "なし",
+        "right": "なし(重みへマージした場合)"
+      },
+      {
+        "feature": "量子化との組み合わせ(QLoRA)",
+        "left": false,
+        "right": true
+      }
+    ],
+    "advantages": {
+      "left": [
+        "全パラメータを更新するため、モデルの振る舞いを大きく変える適応にも対応できる",
+        "特定ドメイン(医療・法律など)への特化や文体の統一に使える"
+      ],
+      "right": [
+        "GPT-3(1750億パラメータ)の例では、学習パラメータ数を約1万分の1、GPUメモリ使用量を約3分の1に削減したと報告されている",
+        "学習結果が小さなアダプタとして保存され、用途ごとに切り替えて使える",
+        "QLoRAと組み合わせれば、さらに少ないGPUメモリで大規模モデルを学習できる"
+      ]
+    },
+    "disadvantages": {
+      "left": [
+        "フルファインチューニングは計算資源・GPUメモリのコストが大きい",
+        "汎用能力を失う破滅的忘却のリスクがある",
+        "タスク固有の厳選された学習データが必要"
+      ],
+      "right": [
+        "低ランクという制約があるため、適応の自由度はフルファインチューニングより限られる",
+        "ランクや適用する層などのハイパーパラメータ選択が結果に影響する"
+      ]
+    },
+    "bestUseCases": {
+      "left": "十分な計算資源があり、モデルの振る舞いを大きく変える必要がある場合や、ベースモデルそのものを新しいドメイン向けに作り直したい場合。",
+      "right": "個人や小規模チームが限られたGPU資源でLLMを特定タスクへ適応させる場合や、1つのベースモデルに対して用途別のアダプタを複数運用したい場合。"
+    },
+    "migration": "フルファインチューニングからLoRAへ切り替える場合、学習データセットはそのまま流用できる。まずLoRAで要件を満たせるか検証し、性能が不足する場合にランクの引き上げや適用層の拡大、フルファインチューニングを検討する進め方が一般的。",
+    "faq": [
+      {
+        "question": "LoRAとファインチューニングは別物?",
+        "answer": "別物ではない。LoRAはファインチューニングを効率的に行うための手法の1つであり、比較の対象は「全パラメータを更新するフルファインチューニング」と「LoRAによる部分的な更新」になる。"
+      },
+      {
+        "question": "LoRAで学習したモデルは推論が遅くなる?",
+        "answer": "学習した低ランク行列の積を元の重みに加算してマージすれば、推論時に追加の遅延は発生しない。マージせずにアダプタとして切り替えて使う運用も可能。"
+      }
+    ],
+    "references": [
+      {
+        "type": "Research Paper",
+        "label": "LoRA: Low-Rank Adaptation of Large Language Models",
+        "url": "https://arxiv.org/abs/2106.09685"
+      },
+      {
+        "type": "GitHub",
+        "label": "Hugging Face PEFT",
+        "url": "https://github.com/huggingface/peft"
+      },
+      {
+        "type": "Documentation",
+        "label": "OpenAI Fine-tuning Guide",
+        "url": "https://platform.openai.com/docs/guides/fine-tuning"
+      }
+    ]
+  },
+  {
+    "slug": "retrieval-augmented-generation-vs-graphrag",
+    "left": "retrieval-augmented-generation",
+    "right": "graphrag",
+    "summary": "RAGは質問に関連する文書の断片をベクトル検索などで取得し、プロンプトに含めてLLMに回答させる手法。GraphRAGはRAGの発展形で、あらかじめ文書群からエンティティと関係を抽出してナレッジグラフを構築し、グラフとコミュニティ要約を介して検索・生成する。特定の事実を尋ねる質問には通常のRAG、文書全体を俯瞰する質問や複数文書にまたがる関係を問う質問にはGraphRAGが向く。",
+    "quickSummary": [
+      "RAGは文書をチャンクに分割し、質問に近いチャンクを検索してLLMに渡す。",
+      "GraphRAGは文書群からエンティティと関係を抽出したナレッジグラフを検索に使う。",
+      "特定の事実を尋ねる質問には通常のRAGで十分なことが多い。",
+      "「全体としてどのようなテーマが議論されているか」のような俯瞰的な質問にはGraphRAGが強い。",
+      "GraphRAGはインデックス構築時にLLMでの抽出・要約が必要なため、構築コストが大きい。"
+    ],
+    "table": [
+      {
+        "item": "Purpose",
+        "left": "外部知識に基づく回答の根拠づけ・最新化",
+        "right": "文書全体を俯瞰する質問や、複数文書にまたがる関係を踏まえた回答"
+      },
+      {
+        "item": "Developer",
+        "left": "手法(Lewisらが提案)",
+        "right": "Microsoft Research"
+      },
+      {
+        "item": "Release",
+        "left": "2020年(論文発表)",
+        "right": "2024年(論文・オープンソース実装公開)"
+      },
+      {
+        "item": "Open Source",
+        "left": "実装(LangChain・Haystack等)はオープンソースのものが多い",
+        "right": "Microsoftがオープンソース実装(microsoft/graphrag)を公開"
+      },
+      {
+        "item": "中心概念",
+        "left": "チャンクと埋め込みベクトル",
+        "right": "エンティティ・関係のナレッジグラフとコミュニティ要約"
+      }
+    ],
+    "architecture": {
+      "left": "文書をチャンクに分割して埋め込みベクトルへ変換し、ベクトルデータベースに格納する。クエリ時は質問に類似した上位のチャンクを検索し、プロンプトのコンテキストとしてLLMに渡して回答を生成させる。",
+      "right": "文書群からLLMでエンティティ(人物・組織・概念など)と関係を抽出してナレッジグラフを構築し、関連の深いエンティティのまとまり(コミュニティ)ごとに要約を作成しておく。クエリ時は質問の抽象度に応じてグラフやコミュニティ要約を参照し、回答を生成する。"
+    },
+    "features": [
+      {
+        "feature": "特定の事実を尋ねる質問",
+        "left": true,
+        "right": true
+      },
+      {
+        "feature": "文書全体を俯瞰する質問",
+        "left": false,
+        "right": true
+      },
+      {
+        "feature": "インデックス構築時のLLM呼び出し",
+        "left": "不要(埋め込み生成のみ)",
+        "right": "必要(エンティティ・関係抽出と要約)"
+      },
+      {
+        "feature": "文書追加時の更新コスト",
+        "left": "小さい",
+        "right": "大きい"
+      }
+    ],
+    "advantages": {
+      "left": [
+        "構成が比較的単純で、構築・運用の知見やツールが豊富",
+        "文書の追加・更新が容易で、知識を最新化しやすい",
+        "特定の事実を尋ねる質問に強い"
+      ],
+      "right": [
+        "複数の文書にまたがる関係性を踏まえた回答ができる",
+        "コミュニティ要約により、文書全体を俯瞰する質問に対応しやすい"
+      ]
+    },
+    "disadvantages": {
+      "left": [
+        "質問に近いチャンクを個別に取り出すため、文書全体の要約や俯瞰的な質問に弱い",
+        "検索精度が回答品質全体のボトルネックになる"
+      ],
+      "right": [
+        "インデックス構築時にLLMでの抽出・要約が必要で、コストと時間がかかる",
+        "文書の追加・更新時にグラフや要約の再構築が必要になる",
+        "エンティティ・関係の抽出精度が結果に影響する"
+      ]
+    },
+    "bestUseCases": {
+      "left": "社内規程やマニュアルなど、特定の事実や手順を調べる質問が中心のチャットボット・ドキュメント検索。",
+      "right": "大量の報告書・議事録・調査資料などから、全体の傾向や主要テーマ、組織や人物の関係を把握したい分析用途。"
+    },
+    "migration": "GraphRAGは通常のRAGを置き換えるものではなく、俯瞰的な質問への対応が必要な場合に追加する選択肢となる。まずベクトル検索型のRAGで要件を満たせるか確認し、文書をまたぐ質問で精度が不足する場合にGraphRAGの導入を検討するとよい。両者を併用し、質問の種類に応じて検索方式を切り替える構成も取れる。",
+    "faq": [
+      {
+        "question": "GraphRAGは通常のRAGより常に優れている?",
+        "answer": "常に優れているわけではない。特定の事実を尋ねる質問では通常のRAGで十分なことが多く、GraphRAGはインデックス構築のコストも大きい。文書全体を俯瞰する質問が多い場合に効果を発揮する。"
+      },
+      {
+        "question": "GraphRAGにはグラフデータベースが必要?",
+        "answer": "必須ではない。Microsoftのオープンソース実装はエンティティ・関係・コミュニティ要約をファイルとして出力する構成を取る。規模や運用要件に応じてグラフデータベースと組み合わせることもできる。"
+      }
+    ],
+    "references": [
+      {
+        "type": "Research Paper",
+        "label": "Retrieval-Augmented Generation for Knowledge-Intensive NLP Tasks",
+        "url": "https://arxiv.org/abs/2005.11401"
+      },
+      {
+        "type": "Research Paper",
+        "label": "From Local to Global: A Graph RAG Approach to Query-Focused Summarization",
+        "url": "https://arxiv.org/abs/2404.16130"
+      },
+      {
+        "type": "GitHub",
+        "label": "microsoft/graphrag",
+        "url": "https://github.com/microsoft/graphrag"
+      }
+    ]
+  },
+  {
+    "slug": "chatbot-vs-ai-agent",
+    "left": "chatbot",
+    "right": "ai-agent",
+    "summary": "チャットボットはテキストや音声を通じてユーザーと自動的に対話するソフトウェア、AIエージェントはLLMを中核に計画立案とツール呼び出しを繰り返し、目標達成まで複数ステップのタスクを自律的に遂行するシステム。チャットボットが「質問に答える」ことを主な役割とするのに対し、AIエージェントは「タスクを実行する」ことを主な役割とする。",
+    "quickSummary": [
+      "チャットボットは対話による応答が主な役割で、1回の入力に1回の応答を返す使い方が基本。",
+      "AIエージェントは「観測 → 計画 → 行動 → 結果の観測」のループを繰り返し、目標達成までタスクを続ける。",
+      "AIエージェントはツール呼び出しやWeb操作、コード実行など外部システムへの操作を伴う。",
+      "LLMベースのチャットボットにツール呼び出しを加えると、両者の境界は連続的になる。"
+    ],
+    "table": [
+      {
+        "item": "Purpose",
+        "left": "ユーザーとの対話による質問応答・案内",
+        "right": "目標に向けた複数ステップのタスクの自律的な遂行"
+      },
+      {
+        "item": "Release",
+        "left": "1966年(ELIZA)",
+        "right": "LLMベースのものは2022〜2023年頃(ReAct・AutoGPT等)から普及"
+      },
+      {
+        "item": "Architecture",
+        "left": "ルールベース・パターンマッチング、または近年はLLMによる応答生成",
+        "right": "LLMを推論エンジンとし、計画・ツール呼び出し・記憶を組み合わせたループ構造"
+      },
+      {
+        "item": "Interface",
+        "left": "チャット画面・音声インターフェース",
+        "right": "チャット画面に加え、API・ブラウザ・ファイル・コード実行環境などの外部ツール"
+      }
+    ],
+    "architecture": {
+      "left": "ユーザーの入力を受け取り、ルール・パターンマッチング、またはLLMによる生成で応答を返す。1回の入力に対して1回の応答を返す構成が基本。",
+      "right": "LLMが目標と現在の状況から次の行動を決め、ツール呼び出しで外部システムを操作し、その結果を観測して次の行動を決める。このループを目標達成または終了条件を満たすまで繰り返す。"
+    },
+    "features": [
+      {
+        "feature": "自然言語での対話",
+        "left": true,
+        "right": true
+      },
+      {
+        "feature": "外部ツール・APIの呼び出し",
+        "left": "一部(構成による)",
+        "right": true
+      },
+      {
+        "feature": "複数ステップの計画と実行",
+        "left": false,
+        "right": true
+      },
+      {
+        "feature": "外部システムへの操作(書き込み等)",
+        "left": false,
+        "right": true
+      }
+    ],
+    "advantages": {
+      "left": [
+        "構成が単純で、挙動を予測・制御しやすい",
+        "FAQ対応や問い合わせ対応など、定型的な用途に導入しやすい"
+      ],
+      "right": [
+        "調査・コード修正・データ処理など、LLM単体では完結しないタスクを遂行できる",
+        "途中結果を観測して計画を修正しながら処理を進められる"
+      ]
+    },
+    "disadvantages": {
+      "left": [
+        "外部システムの操作を伴うタスクは基本的に実行できない",
+        "ルールベースの場合、想定外の質問への対応が難しい"
+      ],
+      "right": [
+        "ステップ数が増えるほど誤りが蓄積しやすく、挙動の予測が難しい",
+        "LLM呼び出しの回数が増えるため、コストと処理時間が大きくなる",
+        "外部システムを操作するため、権限管理や安全対策が必要になる"
+      ]
+    },
+    "bestUseCases": {
+      "left": "カスタマーサポート、FAQ対応、社内問い合わせ対応など、質問に答えることが主目的の用途。",
+      "right": "Web調査とレポート作成、コードベースの修正、複数システムをまたぐ業務処理など、複数の手順と外部ツールの操作を必要とする用途。"
+    },
+    "migration": "既存のLLMベースのチャットボットは、ツール呼び出しを追加することで段階的にエージェント的な機能を持たせられる。最初は参照系(検索・閲覧)のツールに限定し、書き込みや外部送信を伴う操作は人間の承認を挟むなど、権限を段階的に広げる進め方が安全。",
+    "faq": [
+      {
+        "question": "ChatGPTはチャットボット?AIエージェント?",
+        "answer": "対話形式で応答する点ではチャットボットだが、Web検索やコード実行などのツールを使って複数ステップの処理を行う機能も備えており、エージェント的な振る舞いも持つ。LLMベースのサービスでは両者の境界は連続的になっている。"
+      },
+      {
+        "question": "チャットボットをAIエージェントにするには何が必要?",
+        "answer": "外部ツールを呼び出す仕組み(Function Calling等)、結果を観測して次の行動を決めるループ、必要に応じた記憶の仕組みが必要になる。あわせて、ツールの権限管理や実行前の確認といった安全対策も求められる。"
+      }
+    ],
+    "references": [
+      {
+        "type": "Research Paper",
+        "label": "ReAct: Synergizing Reasoning and Acting in Language Models",
+        "url": "https://arxiv.org/abs/2210.03629"
+      },
+      {
+        "type": "Blog",
+        "label": "Anthropic: Building Effective Agents",
+        "url": "https://www.anthropic.com/engineering/building-effective-agents"
+      }
+    ]
+  },
+  {
+    "slug": "generative-ai-vs-large-language-model",
+    "left": "generative-ai",
+    "right": "large-language-model",
+    "summary": "生成AIはテキスト・画像・音声・動画・コードなどの新しいコンテンツを生成できるAIの総称、LLMは大規模なテキストコーパスで学習し言語を予測・生成するニューラルネットワーク。LLMは生成AIの一種であり、生成AIには画像生成の拡散モデルなどLLM以外の技術も含まれる。両者は並列の選択肢ではなく、包含関係にある。",
+    "quickSummary": [
+      "生成AIはコンテンツを生成するAIの総称で、LLMはその中のテキスト(言語)を扱うモデル。",
+      "生成AIには、画像生成の拡散モデルや音声合成モデルなど、LLM以外の技術も含まれる。",
+      "LLMはTransformerに基づき、次のトークンを予測するタスクで学習される。",
+      "近年はテキスト以外の入力も扱うマルチモーダルLLMが増え、両者の重なりが大きくなっている。"
+    ],
+    "table": [
+      {
+        "item": "Scope",
+        "left": "コンテンツを生成するAI全般の総称",
+        "right": "言語を予測・生成するモデル(生成AIの一種)"
+      },
+      {
+        "item": "対象データ",
+        "left": "テキスト・画像・音声・動画・コードなど",
+        "right": "主にテキスト(マルチモーダルLLMは画像等の入力にも対応)"
+      },
+      {
+        "item": "代表的な技術",
+        "left": "LLM、拡散モデル、GAN、VAEなど",
+        "right": "Transformer(デコーダ型が主流)"
+      },
+      {
+        "item": "代表例",
+        "left": "ChatGPT、Stable Diffusion、Midjourneyなど",
+        "right": "GPT、Claude、Gemini、Llamaなど"
+      },
+      {
+        "item": "Release",
+        "left": "2022年のStable Diffusion・ChatGPT公開を境に一般へ普及",
+        "right": "2018年のGPT・BERT以降に大規模事前学習が定着"
+      }
+    ],
+    "architecture": {
+      "left": "生成対象によって技術が異なる。テキスト生成ではLLM、画像生成では拡散モデル、そのほかGANやVAEなどの生成モデルが使われる。",
+      "right": "Transformerアーキテクチャに基づき、大規模なコーパスで次のトークンを予測するタスクを繰り返して学習する。指示チューニングやRLHFで対話・指示追従の能力を高めたモデルが広く使われている。"
+    },
+    "features": [
+      {
+        "feature": "テキスト生成",
+        "left": true,
+        "right": true
+      },
+      {
+        "feature": "画像生成",
+        "left": true,
+        "right": "モデルによる(テキスト生成が主)"
+      },
+      {
+        "feature": "特定の技術・アーキテクチャを指す",
+        "left": false,
+        "right": true
+      }
+    ],
+    "advantages": {
+      "left": [
+        "テキスト・画像・音声など、用途に応じて多様な生成技術を選べる",
+        "文章作成・デザイン・コード生成など幅広い業務に適用できる"
+      ],
+      "right": [
+        "単一の汎用モデルで文章生成・要約・翻訳・コード生成・対話など幅広いタスクをこなせる",
+        "自然言語による指示で操作でき、タスクごとの専用モデルを必要としない"
+      ]
+    },
+    "disadvantages": {
+      "left": [
+        "生成物の著作権や、ディープフェイクなどの悪用に関する課題がある",
+        "総称であるため、議論の対象となる技術があいまいになりやすい"
+      ],
+      "right": [
+        "事実に基づかない内容をもっともらしく生成するハルシネーションが起こる",
+        "学習時点以降の情報や企業固有の情報を持たない"
+      ]
+    },
+    "bestUseCases": {
+      "left": "画像・音声・動画を含むコンテンツ制作や、生成技術全般の活用方針を検討する場面で使う用語。",
+      "right": "文章作成、要約、翻訳、コード生成、対話、AIエージェントの推論エンジンなど、言語を扱うタスク全般。"
+    },
+    "migration": "両者は包含関係にあるため、乗り換えの関係にはない。「生成AIを導入する」という検討の中で、テキストを扱う用途ではLLMを、画像生成では拡散モデルを選ぶ、というように用途ごとに具体的な技術を選定する。",
+    "faq": [
+      {
+        "question": "LLMと生成AIは同じ意味?",
+        "answer": "同じではない。生成AIはコンテンツを生成するAIの総称で、LLMはその中でテキスト(言語)を扱うモデルを指す。画像生成に使われる拡散モデルは生成AIだが、LLMではない。"
+      },
+      {
+        "question": "ChatGPTは生成AI?LLM?",
+        "answer": "どちらにも当てはまる。ChatGPTはGPTシリーズのLLMを基盤とする対話サービスであり、テキストを生成するため生成AIの一種でもある。"
+      }
+    ],
+    "references": [
+      {
+        "type": "Research Paper",
+        "label": "Attention Is All You Need",
+        "url": "https://arxiv.org/abs/1706.03762"
+      },
+      {
+        "type": "Research Paper",
+        "label": "Language Models are Few-Shot Learners",
+        "url": "https://arxiv.org/abs/2005.14165"
+      }
+    ]
+  },
+  {
+    "slug": "embedding-vs-vector-database",
+    "left": "embedding",
+    "right": "vector-database",
+    "summary": "Embeddingはテキストや画像などのデータを、意味的な近さを反映した実数ベクトルへ変換した表現、ベクトルデータベースはその埋め込みベクトルを大量に格納し、類似するベクトルを高速に検索できるよう設計されたデータベース。Embeddingが「データをどう表現するか」、ベクトルデータベースが「その表現をどう保存・検索するか」を担い、RAGやセマンティック検索では両者を組み合わせて使う。",
+    "quickSummary": [
+      "Embeddingはデータを意味的な特徴を反映したベクトルへ変換した「表現」。",
+      "ベクトルデータベースは埋め込みベクトルを保存し、類似検索する「インフラ」。",
+      "Embeddingは埋め込みモデルで生成し、ベクトルデータベースは近似最近傍探索(ANN)で検索を高速化する。",
+      "RAGでは、文書をEmbeddingに変換してベクトルデータベースに格納し、質問のEmbeddingで類似文書を検索する。"
+    ],
+    "table": [
+      {
+        "item": "Purpose",
+        "left": "データの意味的な特徴を数値ベクトルとして表現する",
+        "right": "大量の埋め込みベクトルを保存し、高速に類似検索する"
+      },
+      {
+        "item": "Layer",
+        "left": "データ表現(埋め込みモデルの出力)",
+        "right": "ストレージ・検索インフラ"
+      },
+      {
+        "item": "代表例",
+        "left": "OpenAIのtext-embeddingシリーズ、Sentence-BERTなど",
+        "right": "Pinecone、Weaviate、Milvus、Qdrant、Chroma、pgvectorなど"
+      },
+      {
+        "item": "Release",
+        "left": "2013年(word2vec)以降に普及",
+        "right": "2019年(Milvus公開)以降、専用製品が相次いで登場"
+      }
+    ],
+    "architecture": {
+      "left": "埋め込みモデルが単語・文・画像などを数百〜数千次元の固定長ベクトルへ変換する。意味が近いデータほどベクトル空間上で近い位置に配置され、コサイン類似度などで関連度を計算できる。",
+      "right": "埋め込みベクトルとメタデータを格納し、HNSWやIVFなどの近似最近傍探索(ANN)インデックスによって、大規模なベクトル集合から類似ベクトルを高速に検索する。"
+    },
+    "features": [
+      {
+        "feature": "データのベクトル化",
+        "left": true,
+        "right": "一部製品は埋め込みモデル連携機能を持つ"
+      },
+      {
+        "feature": "ベクトルの永続化",
+        "left": false,
+        "right": true
+      },
+      {
+        "feature": "大規模な類似検索の高速化",
+        "left": false,
+        "right": true
+      },
+      {
+        "feature": "メタデータによる絞り込み",
+        "left": false,
+        "right": true
+      }
+    ],
+    "advantages": {
+      "left": [
+        "言い換えや表記ゆれがあっても意味的な類似度を計算できる",
+        "検索・レコメンデーション・クラスタリングなど多くの応用の基盤になる"
+      ],
+      "right": [
+        "大規模なベクトル集合から類似ベクトルを高速に検索できる",
+        "メタデータフィルタやハイブリッド検索など、実運用に必要な機能を備える製品が多い"
+      ]
+    },
+    "disadvantages": {
+      "left": [
+        "次元数が大きいほどストレージ・計算コストが増える",
+        "埋め込みモデルを変更すると、既存データのベクトルを再生成する必要がある"
+      ],
+      "right": [
+        "近似最近傍探索のため、厳密な最近傍を返さない場合もある",
+        "既存のデータベースとは別にインフラの運用が必要になる(pgvector等の拡張機能を除く)"
+      ]
+    },
+    "bestUseCases": {
+      "left": "文章の類似度計算、クラスタリング、分類の特徴量など、ベクトル表現そのものを使う用途。件数が少なければメモリ上で全件比較するだけでも検索できる。",
+      "right": "RAGの文書検索、大規模なセマンティック検索、レコメンデーションなど、大量のベクトルを継続的に保存・検索する用途。"
+    },
+    "migration": "両者は役割が異なるため、組み合わせて使う。埋め込みモデルを変更した場合はベクトルの次元数や分布が変わるため、ベクトルデータベース内の既存データをすべて新しいモデルで再生成する必要がある。",
+    "faq": [
+      {
+        "question": "Embeddingを使うにはベクトルデータベースが必須?",
+        "answer": "必須ではない。件数が少なければ、メモリ上やFaissなどのライブラリで類似検索できる。データ量が多い場合や、永続化・更新・メタデータでの絞り込みが必要な場合にベクトルデータベースが有効になる。"
+      },
+      {
+        "question": "ベクトルデータベースはEmbeddingを生成する?",
+        "answer": "基本的には生成しない。Embeddingは埋め込みモデルで生成し、ベクトルデータベースはそれを格納・検索する。ただし、埋め込みモデルとの連携機能を備え、データ登録時に自動でベクトル化できる製品もある。"
+      }
+    ],
+    "references": [
+      {
+        "type": "Documentation",
+        "label": "OpenAI Embeddings",
+        "url": "https://platform.openai.com/docs/guides/embeddings"
+      },
+      {
+        "type": "Research Paper",
+        "label": "Efficient Estimation of Word Representations in Vector Space",
+        "url": "https://arxiv.org/abs/1301.3781"
+      },
+      {
+        "type": "GitHub",
+        "label": "facebookresearch/faiss",
+        "url": "https://github.com/facebookresearch/faiss"
+      }
+    ]
+  },
+  {
+    "slug": "transformer-vs-large-language-model",
+    "left": "transformer",
+    "right": "large-language-model",
+    "summary": "Transformerは自己注意機構(Self-Attention)で系列中のトークン間の関係をモデル化するニューラルネットワークアーキテクチャ、LLMはそのアーキテクチャを大規模なパラメータ数とコーパスで学習した言語モデル。Transformerが「設計図」、LLMがその設計図に基づいて大規模に学習された「モデル」という関係にある。",
+    "quickSummary": [
+      "Transformerはニューラルネットワークのアーキテクチャ(構造)を指す。",
+      "LLMはTransformerを大規模なパラメータ数とコーパスで学習した言語モデルを指す。",
+      "TransformerはLLM以外にも、画像(Vision Transformer)・音声・マルチモーダルなどに使われる。",
+      "現在の代表的なLLM(GPT・Claude・Gemini・Llama等)は、いずれもTransformerに基づく。"
+    ],
+    "table": [
+      {
+        "item": "Scope",
+        "left": "ニューラルネットワークのアーキテクチャ",
+        "right": "Transformerを大規模に学習した言語モデル"
+      },
+      {
+        "item": "Originator",
+        "left": "Vaswaniら(Google)",
+        "right": "特定の提案者はない(GPT・BERT以降に呼称が定着)"
+      },
+      {
+        "item": "Release",
+        "left": "2017年(「Attention Is All You Need」)",
+        "right": "2018年のGPT・BERT以降に普及"
+      },
+      {
+        "item": "適用領域",
+        "left": "自然言語処理・画像・音声・マルチモーダルなど",
+        "right": "主に言語(マルチモーダルLLMは画像等の入力にも対応)"
+      },
+      {
+        "item": "代表例",
+        "left": "エンコーダ・デコーダ型、エンコーダ型(BERT)、デコーダ型(GPT)の各構成",
+        "right": "GPT、Claude、Gemini、Llamaなど"
+      }
+    ],
+    "architecture": {
+      "left": "自己注意機構で系列内の全トークンペア間の関連度を一度に計算し、離れた位置にある単語同士の依存関係も直接捉える。RNNの逐次処理を用いないため、学習を系列長方向に並列化できる。",
+      "right": "主にデコーダのみのTransformerを採用し、大規模なコーパスで次のトークンを予測するタスクで事前学習する。その後、指示チューニングやRLHFで対話・指示追従の能力を高める。"
+    },
+    "features": [
+      {
+        "feature": "学習済みの重みを持つ",
+        "left": false,
+        "right": true
+      },
+      {
+        "feature": "言語以外のデータへの適用",
+        "left": true,
+        "right": "マルチモーダルLLMのみ"
+      },
+      {
+        "feature": "単体で文章生成に使える",
+        "left": false,
+        "right": true
+      }
+    ],
+    "advantages": {
+      "left": [
+        "学習を並列化でき、GPUクラスタでの大規模学習を現実的にした",
+        "離れた位置にあるトークン同士の依存関係を直接捉えられる",
+        "言語・画像・音声など幅広いデータに応用できる"
+      ],
+      "right": [
+        "単一のモデルで文章生成・要約・翻訳・コード生成など幅広いタスクをこなせる",
+        "パラメータ数と学習データ量の増加に応じて性能が向上する(スケーリング則)"
+      ]
+    },
+    "disadvantages": {
+      "left": [
+        "自己注意の計算量が系列長の2乗に比例し、長い入力で計算コストが増える"
+      ],
+      "right": [
+        "学習と推論に大規模な計算資源が必要",
+        "ハルシネーションが起こる",
+        "学習時点以降の情報を持たない"
+      ]
+    },
+    "bestUseCases": {
+      "left": "新しいモデルの設計・研究や、画像・音声などを含む様々なタスク向けのモデル構築で基盤となるアーキテクチャ。",
+      "right": "文章作成、要約、翻訳、コード生成、対話、AIエージェントの推論エンジンなど、言語を扱うアプリケーション。"
+    },
+    "migration": "両者は抽象度が異なるため、乗り換えの関係にはない。LLMを利用する立場ではTransformerの内部構造を意識する場面は少ないが、コンテキスト長の制約や推論コストといったLLMの特性の多くはTransformerの設計に由来する。",
+    "faq": [
+      {
+        "question": "LLMはすべてTransformerで作られている?",
+        "answer": "現在の代表的なLLMの多くはTransformerに基づく。ただし、Mambaのような状態空間モデルなど、Transformer以外のアーキテクチャやそれとの組み合わせで構築された言語モデルも研究・公開されている。"
+      },
+      {
+        "question": "BERTはLLM?",
+        "answer": "BERTはエンコーダのみのTransformerを大規模に事前学習した言語モデルで、大規模事前学習の流れを作ったモデルの1つ。ただし文章生成を主目的とせず、現在一般に「LLM」と呼ばれる生成型のモデルとは区別されることが多い。"
+      }
+    ],
+    "references": [
+      {
+        "type": "Research Paper",
+        "label": "Attention Is All You Need",
+        "url": "https://arxiv.org/abs/1706.03762"
+      },
+      {
+        "type": "Research Paper",
+        "label": "Language Models are Few-Shot Learners",
+        "url": "https://arxiv.org/abs/2005.14165"
+      }
+    ]
+  },
+  {
+    "slug": "supervised-learning-vs-reinforcement-learning",
+    "left": "supervised-learning",
+    "right": "reinforcement-learning",
+    "summary": "教師あり学習は入力と正解ラベルのペアから入力と出力の対応関係を学習する枠組み、強化学習はエージェントが環境との試行錯誤を通じて、長期的な報酬の合計を最大化する方策を学習する枠組み。教師あり学習は「正解」が直接与えられるのに対し、強化学習は行動の良し悪しが報酬という間接的な信号としてのみ伝えられる。LLMの開発では、事前学習後の指示チューニングに教師あり学習、RLHFなどのアライメントに強化学習が使われる。",
+    "quickSummary": [
+      "教師あり学習は入力と正解ラベルのペアから学習する。",
+      "強化学習は行動の結果として得られる報酬から、試行錯誤で方策を学習する。",
+      "教師あり学習は正解データを用意しやすい分類・回帰に向く。",
+      "強化学習は正解を定義しにくく、一連の行動の結果で評価する課題(ゲーム・ロボット制御等)に向く。",
+      "LLMでは教師ありの指示チューニングと、強化学習によるRLHFが組み合わせて使われる。"
+    ],
+    "table": [
+      {
+        "item": "Purpose",
+        "left": "入力から正解の出力を予測する関数を学習する",
+        "right": "長期的な報酬の合計を最大化する行動の選び方(方策)を学習する"
+      },
+      {
+        "item": "学習信号",
+        "left": "正解ラベル(教師信号)",
+        "right": "報酬"
+      },
+      {
+        "item": "データ",
+        "left": "事前に用意したラベル付きデータセット",
+        "right": "エージェントが環境と相互作用して得る経験"
+      },
+      {
+        "item": "代表的な手法",
+        "left": "線形回帰、決定木、ニューラルネットワークなど",
+        "right": "Q学習、方策勾配法、Actor-Critic法など"
+      },
+      {
+        "item": "Release",
+        "left": "パーセプトロン(1958年)をはじめとする初期の機械学習から存在",
+        "right": "1950年代の動的計画法を起源とし、1988年のTD学習、1989年のQ学習で発展"
+      }
+    ],
+    "architecture": {
+      "left": "訓練データに対するモデルの予測と正解ラベルとの誤差(損失)を計算し、損失が小さくなるようにパラメータを更新する。出力が連続値なら回帰、離散値なら分類になる。",
+      "right": "エージェントが現在の状態を観測して行動を選び、環境から報酬と次の状態を受け取る。このループを繰り返しながら、将来にわたる報酬の合計が最大になるよう方策や価値関数を更新する。"
+    },
+    "features": [
+      {
+        "feature": "正解ラベルが必要",
+        "left": true,
+        "right": false
+      },
+      {
+        "feature": "報酬の設計が必要",
+        "left": false,
+        "right": true
+      },
+      {
+        "feature": "探索と活用のトレードオフ",
+        "left": false,
+        "right": true
+      },
+      {
+        "feature": "一連の行動(逐次的な意思決定)の学習",
+        "left": false,
+        "right": true
+      }
+    ],
+    "advantages": {
+      "left": [
+        "正解が明確なため、学習を安定させやすく評価もしやすい",
+        "画像分類・スパム判定・需要予測など幅広いタスクで実績がある"
+      ],
+      "right": [
+        "正解を直接定義しにくい課題でも、報酬を設計すれば学習できる",
+        "一連の行動の結果として良い戦略を獲得でき、人間を上回る方策を見つけることもある"
+      ]
+    },
+    "disadvantages": {
+      "left": [
+        "大量のラベル付きデータが必要で、アノテーションのコストがかかる",
+        "学習データの範囲外の入力に弱い"
+      ],
+      "right": [
+        "学習に大量の試行が必要で、サンプル効率が低い",
+        "報酬設計を誤ると、意図しない方法で報酬を最大化する行動を学習することがある",
+        "学習が不安定になりやすい"
+      ]
+    },
+    "bestUseCases": {
+      "left": "画像分類、スパム判定、需要予測、LLMの指示チューニングなど、入力と正解の対を用意できるタスク。",
+      "right": "ゲームのプレイ、ロボット制御、推薦システムの最適化、LLMのRLHFによるアライメントなど、行動の結果を報酬で評価できる課題。"
+    },
+    "migration": "両者は排他的な関係になく、組み合わせて使われることが多い。LLMの開発では、教師あり学習(指示チューニング)でまず望ましい応答形式を学習させ、その後に強化学習(RLHF等)で人間の選好に沿うよう調整する流れが標準的になっている。",
+    "faq": [
+      {
+        "question": "教師あり学習と強化学習の最大の違いは?",
+        "answer": "学習に使う信号の違い。教師あり学習は入力ごとに正解ラベルが与えられるのに対し、強化学習では正解は与えられず、行動の結果として得られる報酬のみを手がかりに学習する。"
+      },
+      {
+        "question": "教師なし学習とはどう違う?",
+        "answer": "教師なし学習は正解ラベルや報酬を使わず、データそのものの構造(クラスタや分布など)を学習する枠組み。教師あり学習・強化学習と並ぶ機械学習の代表的な枠組みの1つ。"
+      }
+    ],
+    "references": [
+      {
+        "type": "Official Website",
+        "label": "Reinforcement Learning: An Introduction (Sutton & Barto)",
+        "url": "http://incompleteideas.net/book/the-book.html"
+      },
+      {
+        "type": "Research Paper",
+        "label": "Training language models to follow instructions with human feedback",
+        "url": "https://arxiv.org/abs/2203.02155"
+      }
+    ]
+  },
+  {
+    "slug": "large-language-model-vs-gpt",
+    "left": "large-language-model",
+    "right": "gpt",
+    "summary": "LLMは大規模なテキストコーパスで学習し言語を予測・生成するモデルの総称、GPTはOpenAIが開発するLLMのモデルファミリーの名称。GPTはLLMの一種であり、ClaudeやGemini、LlamaなどもLLMに含まれる。GPTはLLMという概念を広く一般に普及させた代表的なモデルファミリーの1つとなっている。",
+    "quickSummary": [
+      "LLMは大規模言語モデルの総称で、特定の製品や開発元を指さない。",
+      "GPTはOpenAIが開発するLLMのモデルファミリーの名称。",
+      "GPTはデコーダのみのTransformerを採用し、重みを公開しないクローズドウェイトのモデルとしてAPIやChatGPTを通じて提供される。",
+      "LLMにはGPTのほか、Claude・Gemini・Llama・Mistralなどが含まれる。"
+    ],
+    "table": [
+      {
+        "item": "Scope",
+        "left": "大規模言語モデルの総称",
+        "right": "OpenAIのLLMモデルファミリー"
+      },
+      {
+        "item": "Developer",
+        "left": "特定の開発元はない(OpenAI・Anthropic・Google・Meta等)",
+        "right": "OpenAI"
+      },
+      {
+        "item": "Release",
+        "left": "2018年のGPT・BERT以降に呼称が定着",
+        "right": "2018年(GPT-1)"
+      },
+      {
+        "item": "License",
+        "left": "モデルにより異なる(クローズドウェイト・オープンウェイト)",
+        "right": "クローズドウェイト(API・サービス経由で提供)"
+      },
+      {
+        "item": "API",
+        "left": "各開発元が提供",
+        "right": "OpenAI API"
+      }
+    ],
+    "architecture": {
+      "left": "Transformerアーキテクチャに基づき、大規模なコーパスで次のトークンを予測するタスクで学習する。具体的な構成(デコーダのみ、MoE等)はモデルごとに異なる。",
+      "right": "デコーダのみのTransformerを採用し、大量のテキストコーパスでの事前学習と、その後の指示チューニング・RLHFによるアライメントを経て提供される。"
+    },
+    "features": [
+      {
+        "feature": "特定の製品・開発元を指す",
+        "left": false,
+        "right": true
+      },
+      {
+        "feature": "オープンウェイトのモデルを含む",
+        "left": true,
+        "right": "主力モデルはクローズドウェイト"
+      },
+      {
+        "feature": "ChatGPTの基盤モデル",
+        "left": "GPTのみ",
+        "right": true
+      }
+    ],
+    "advantages": {
+      "left": [
+        "用途・コスト・ライセンスに応じて多様なモデルから選べる",
+        "オープンウェイトのモデルならローカル環境での実行や独自の追加学習もできる"
+      ],
+      "right": [
+        "ChatGPTやOpenAI APIを通じて広く使われ、利用事例や周辺ツールが豊富",
+        "マルチモーダル対応や推論能力の強化が世代ごとに進められている"
+      ]
+    },
+    "disadvantages": {
+      "left": [
+        "モデルごとに性能・料金・利用条件が異なり、比較検討が必要"
+      ],
+      "right": [
+        "重みが公開されないため、ローカル実行や内部の検証ができない",
+        "OpenAIのサービスに依存する"
+      ]
+    },
+    "bestUseCases": {
+      "left": "特定の製品に限らず、言語モデル全般の性質や技術を説明・比較する場面で使う用語。",
+      "right": "OpenAIのAPIやChatGPTを利用するアプリケーション、GPTシリーズの性能・機能を前提とするシステム。"
+    },
+    "migration": "GPTから他のLLMへ乗り換える場合、APIの仕様やプロンプトへの反応、ツール呼び出しの形式がモデルごとに異なるため、プロンプトの調整と出力品質の再評価が必要になる。複数のLLMを切り替えられる抽象化レイヤー(LangChain等)を使うと移行しやすい。",
+    "faq": [
+      {
+        "question": "GPTとLLMは同じ意味?",
+        "answer": "同じではない。LLMは大規模言語モデルの総称で、GPTはOpenAIが開発するLLMのモデルファミリーの名称。ClaudeやGeminiもLLMだが、GPTではない。"
+      },
+      {
+        "question": "GPTとChatGPTの違いは?",
+        "answer": "GPTはモデルファミリーの名称で、ChatGPTはGPTシリーズのモデルを基盤としてOpenAIが提供する対話サービスの名称。"
+      }
+    ],
+    "references": [
+      {
+        "type": "Research Paper",
+        "label": "Language Models are Few-Shot Learners",
+        "url": "https://arxiv.org/abs/2005.14165"
+      },
+      {
+        "type": "Official Website",
+        "label": "OpenAI",
+        "url": "https://openai.com/"
+      }
+    ]
   }
 ]
