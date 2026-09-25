@@ -170,9 +170,14 @@ const RootLayout = ({ children }: { children: React.ReactNode }) => {
           }}
         >
           <p style={{ margin: 0 }}>&copy; Reload</p>
-          <Link href="/about/" style={{ color: "var(--color-text-muted)" }}>
-            運営者情報
-          </Link>
+          <div style={{ display: "flex", gap: "1rem" }}>
+            <Link href="/tags/" style={{ color: "var(--color-text-muted)" }}>
+              タグ一覧
+            </Link>
+            <Link href="/about/" style={{ color: "var(--color-text-muted)" }}>
+              運営者情報
+            </Link>
+          </div>
         </footer>
       </body>
     </html>

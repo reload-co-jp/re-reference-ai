@@ -9,6 +9,7 @@ import { VersionBadge } from "components/elements/version-badge"
 import { TimelineView } from "components/timeline/timeline-view"
 import { getFileGitDates } from "lib/git-dates"
 import { organizationRef, toJsonLd } from "lib/json-ld"
+import { applySeo } from "lib/seo"
 import { SITE_NAME, SITE_OG_IMAGE_URL, SITE_URL } from "lib/site"
 import { linkifyTermMentions } from "lib/term-links"
 import { getTermBySlug } from "lib/terms"
@@ -38,7 +39,7 @@ export const generateMetadata = async ({ params }: Props): Promise<Metadata> => 
       .map((s) => getTermBySlug(s)?.name)
       .filter((n): n is string => Boolean(n))[0] ?? timeline.category
 
-  return {
+  return applySeo({
     title,
     description,
     alternates: { canonical: url },
@@ -63,7 +64,7 @@ export const generateMetadata = async ({ params }: Props): Promise<Metadata> => 
     },
     category: timeline.category,
     twitter: { title, description, images: [SITE_OG_IMAGE_URL] },
-  }
+  }, timeline.seo)
 }
 
 const buildJsonLd = (timeline: Timeline) => {

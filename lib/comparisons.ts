@@ -1,3 +1,4 @@
+import { SEO } from "lib/seo"
 import { FaqItem, getTermBySlug, Reference } from "lib/terms"
 
 export type ComparisonTableRow = {
@@ -27,6 +28,7 @@ export type Comparison = {
   migration?: string
   faq?: FaqItem[]
   references?: Reference[]
+  seo?: SEO
   updatedAt?: string
 }
 

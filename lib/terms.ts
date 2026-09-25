@@ -1,3 +1,5 @@
+import { SEO } from "lib/seo"
+
 export type ReferenceType =
   | "Official Website"
   | "Documentation"
@@ -55,6 +57,7 @@ export type Term = {
   relatedTerms?: string[]
   faq?: FaqItem[]
   references?: Reference[]
+  seo?: SEO
   updatedAt?: string
 }
 
@@ -111,6 +114,48 @@ export const getRelatedTerms = (term: Term): Term[] =>
   (term.relatedTerms ?? [])
     .map((slug) => getTermBySlug(slug))
     .filter((t): t is Term => Boolean(t))
+
+const RELATED_TERM_LIMIT = 12
+const RELATED_TERM_MIN_SCORE = 3
+
+const getTermText = (term: Term): string =>
+  [
+    term.plainSummary,
+    term.summary,
+    term.background,
+    term.history,
+    term.architecture,
+    term.workflow,
+    ...(term.advantages ?? []),
+    ...(term.disadvantages ?? []),
+  ]
+    .filter(Boolean)
+    .join("\n")
+
+// 関連度: 同一タグ(1件ごと+3) > 明示的な関連用語(+3) > 本文中での言及(+2) > 同一カテゴリ(+1)
+// 同一カテゴリのみの用語は関連が薄いため除外する
+export const getRankedRelatedTerms = (term: Term, limit = RELATED_TERM_LIMIT): Term[] => {
+  const explicit = new Set(term.relatedTerms ?? [])
+  const text = getTermText(term)
+  return terms
+    .filter((candidate) => candidate.slug !== term.slug)
+    .map((candidate, index) => {
+      const sharedTags = candidate.tags.filter((tag) => term.tags.includes(tag)).length
+      const mentioned = [candidate.name, ...(candidate.aliases ?? [])].some(
+        (name) => name.length >= 3 && text.includes(name),
+      )
+      const score =
+        sharedTags * 3 +
+        (explicit.has(candidate.slug) ? 3 : 0) +
+        (mentioned ? 2 : 0) +
+        (candidate.category === term.category ? 1 : 0)
+      return { candidate, index, score }
+    })
+    .filter(({ score }) => score >= RELATED_TERM_MIN_SCORE)
+    .sort((a, b) => b.score - a.score || a.index - b.index)
+    .slice(0, limit)
+    .map(({ candidate }) => candidate)
+}
 
 export const getZennArticles = (term: Term): ZennArticle[] =>
   zennArticlesBySlug[term.slug] ?? []
@@ -183,6 +228,10 @@ const TAG_SLUGS: Record<string, string> = {
   多言語: "multilingual",
   探索アルゴリズム: "search-algorithm",
   知識: "knowledge",
+  // 生成AI は既存URL /tags/ai/ を維持。対話AI・AI教育は ASCII 化で "ai" に衝突するため個別に割り当てる
+  生成AI: "ai",
+  対話AI: "conversational-ai",
+  AI教育: "ai-education",
   転移学習: "transfer-learning",
   入力設計: "input-design",
   評価: "evaluation",
@@ -232,3 +281,29 @@ const categoryDescriptions = categoryDescriptionsData as Record<string, string>
 
 export const getCategoryDescription = (category: string): string | undefined =>
   categoryDescriptions[category]
+
+// 用語数が少ないタグページは内容が薄いため noindex にし、sitemap・タグ一覧から外す
+export const MIN_TERMS_FOR_TAG_INDEX = 3
+
+export const isTagIndexable = (tag: string): boolean =>
+  getTermsByTag(tag).length >= MIN_TERMS_FOR_TAG_INDEX
+
+export const getIndexableTags = (): string[] => getAllTags().filter(isTagIndexable)
+
+// タグ名と一致する用語(例: タグ「RAG」→ 用語RAG)があれば、そのタグの中心用語として扱う
+export const getTermForTag = (tag: string): Term | undefined =>
+  terms.find((term) => term.name === tag || term.aliases?.includes(tag))
+
+export const getCoOccurringTags = (tag: string, limit = 12): string[] => {
+  const counts = new Map<string, number>()
+  getTermsByTag(tag).forEach((term) =>
+    term.tags.forEach((other) => {
+      if (other !== tag) counts.set(other, (counts.get(other) ?? 0) + 1)
+    }),
+  )
+  return Array.from(counts.entries())
+    .filter(([other]) => isTagIndexable(other))
+    .sort((a, b) => b[1] - a[1])
+    .slice(0, limit)
+    .map(([other]) => other)
+}

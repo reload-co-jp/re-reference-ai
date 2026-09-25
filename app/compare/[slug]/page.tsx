@@ -10,6 +10,7 @@ import { ComparisonTable } from "components/comparison/comparison-table"
 import { FeatureTable } from "components/comparison/feature-table"
 import { getFileGitDates } from "lib/git-dates"
 import { organizationRef, toJsonLd } from "lib/json-ld"
+import { applySeo } from "lib/seo"
 import { SITE_NAME, SITE_OG_IMAGE_URL, SITE_URL } from "lib/site"
 import { linkifyTermMentions } from "lib/term-links"
 import { getTermBySlug } from "lib/terms"
@@ -38,11 +39,11 @@ export const generateMetadata = async ({ params }: Props): Promise<Metadata> => 
   }
 
   const { left: leftName, right: rightName } = getComparisonTermNames(comparison)
-  const title = `${leftName} vs ${rightName}`
+  const title = `${leftName}と${rightName}の違い`
   const description = truncate(comparison.summary, 120)
   const url = `${SITE_URL}/compare/${comparison.slug}/`
 
-  return {
+  return applySeo({
     title,
     description,
     alternates: { canonical: url },
@@ -66,7 +67,7 @@ export const generateMetadata = async ({ params }: Props): Promise<Metadata> => 
       locale: "ja_JP",
     },
     twitter: { title, description, images: [SITE_OG_IMAGE_URL] },
-  }
+  }, comparison.seo)
 }
 
 const buildJsonLd = (comparison: Comparison, leftName: string, rightName: string) => {

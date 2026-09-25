@@ -10,6 +10,7 @@
     "lint:text": "node scripts/lint-terms-text.mjs",
     "fetch:zenn-ai-keywords": "node scripts/fetch-zenn-ai-keywords.mjs",
     "build": "next build",
+    "check:seo": "node scripts/check-seo.mjs",
     "start": "next start",
     "format": "prettier --write .",
     "typecheck": "tsc --noEmit"

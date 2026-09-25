@@ -4,14 +4,18 @@ import Link from "next/link"
 import { notFound } from "next/navigation"
 import { Breadcrumb } from "components/elements/breadcrumb"
 import { Badge, Container, Section, SectionTitle } from "components/elements/layout"
+import { ArticleCard } from "components/article/article-card"
 import { ComparisonCard } from "components/comparison/comparison-card"
 import { TimelineCard } from "components/timeline/timeline-card"
+import { getArticlesForTerm } from "lib/articles"
 import { getComparisonsForTerm } from "lib/comparisons"
 import { getFileGitDates } from "lib/git-dates"
 import { organizationRef, toJsonLd } from "lib/json-ld"
+import { applySeo } from "lib/seo"
 import { SITE_NAME, SITE_URL } from "lib/site"
 import {
   getCategorySlug,
+  getRankedRelatedTerms,
   getRelatedTerms,
   getTagSlug,
   getTermBySlug,
@@ -56,7 +60,7 @@ export const generateMetadata = async ({ params }: Props): Promise<Metadata> => 
   )
   const url = `${SITE_URL}/terms/${term.slug}/`
 
-  return {
+  return applySeo({
     title,
     description,
     alternates: {
@@ -74,7 +78,7 @@ export const generateMetadata = async ({ params }: Props): Promise<Metadata> => 
     },
     category: term.category,
     twitter: { title, description },
-  }
+  }, term.seo)
 }
 
 const buildJsonLd = (term: Term, relatedTerms: Term[]) => {
@@ -164,6 +168,8 @@ const TermPage: FC<Props> = async ({ params }) => {
   }
 
   const relatedTerms = getRelatedTerms(term)
+  const rankedRelatedTerms = getRankedRelatedTerms(term)
+  const relatedArticles = getArticlesForTerm(term.slug)
   const zennArticles = getZennArticles(term)
   const relatedTimelines = getTimelinesForTerm(term.slug)
   const relatedComparisons = getComparisonsForTerm(term.slug)
@@ -356,11 +362,11 @@ const TermPage: FC<Props> = async ({ params }) => {
       )}
 
       {/* Related Terms */}
-      {relatedTerms.length > 0 && (
+      {rankedRelatedTerms.length > 0 && (
         <Section>
-          <SectionTitle>関連用語</SectionTitle>
+          <SectionTitle>関連する用語</SectionTitle>
           <div style={{ display: "flex", flexWrap: "wrap", gap: ".5rem" }}>
-            {relatedTerms.map((related) => (
+            {rankedRelatedTerms.map((related) => (
               <Link
                 key={related.slug}
                 href={`/terms/${related.slug}/`}
@@ -443,6 +449,24 @@ const TermPage: FC<Props> = async ({ params }) => {
           >
             {relatedComparisons.map((comparison) => (
               <ComparisonCard key={comparison.slug} comparison={comparison} />
+            ))}
+          </div>
+        </Section>
+      )}
+
+      {/* Related Articles */}
+      {relatedArticles.length > 0 && (
+        <Section>
+          <SectionTitle>関連する特集記事</SectionTitle>
+          <div
+            style={{
+              display: "grid",
+              gap: "1.25rem",
+              gridTemplateColumns: "repeat(auto-fill, minmax(15rem, 1fr))",
+            }}
+          >
+            {relatedArticles.map((article) => (
+              <ArticleCard key={article.slug} article={article} />
             ))}
           </div>
         </Section>

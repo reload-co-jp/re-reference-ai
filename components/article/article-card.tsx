@@ -18,7 +18,7 @@ export const ArticleCard: FC<{ article: ArticleSummaryCard }> = ({ article }) =>
       </p>
       <div style={{ display: "flex", flexWrap: "wrap", gap: ".375rem" }}>
         <Badge>{article.category}</Badge>
-        <Badge>{article.modelSlugs.length}モデル</Badge>
+        {article.modelSlugs.length > 0 && <Badge>{article.modelSlugs.length}モデル</Badge>}
       </div>
     </Card>
   </Link>

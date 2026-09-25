@@ -99,6 +99,7 @@ pnpm dev        # 開発サーバー
 pnpm build      # 静的ビルド（全ページ生成）
 pnpm lint       # ESLint
 pnpm lint:text  # terms.json内の日本語文章チェック（textlint）
+pnpm check:seo  # build後のout/を走査し内部リンク切れ・title/description/canonical/OGP欠落・canonical重複を検出（CIでも実行）
 pnpm typecheck  # TypeScript型チェック
 pnpm format     # Prettier
 ```

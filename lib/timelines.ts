@@ -1,3 +1,4 @@
+import { SEO } from "lib/seo"
 import { FaqItem, Reference } from "lib/terms"
 
 export type TimelineEvent = {
@@ -26,6 +27,7 @@ export type Timeline = {
   relatedTerms?: string[]
   faq?: FaqItem[]
   references?: Reference[]
+  seo?: SEO
   updatedAt?: string
 }
 

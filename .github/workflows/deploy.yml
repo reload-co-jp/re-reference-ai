@@ -38,6 +38,9 @@ jobs:
       - name: Build application
         run: pnpm build
 
+      - name: Check internal links and SEO metadata
+        run: pnpm check:seo
+
       - name: Upload artifact
         uses: actions/upload-pages-artifact@v3
         with:

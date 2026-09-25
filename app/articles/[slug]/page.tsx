@@ -7,10 +7,20 @@ import { ModelComparisonTable } from "components/article/model-comparison-table"
 import { Breadcrumb } from "components/elements/breadcrumb"
 import { Badge, Container, Section, SectionTitle } from "components/elements/layout"
 import { ReferenceList } from "components/elements/reference-list"
+import { TermCard } from "components/term/term-card"
 import { TimelineView } from "components/timeline/timeline-view"
-import { Article, articles, getArticleBySlug, getArticleModels } from "lib/articles"
+import { ComparisonCard } from "components/comparison/comparison-card"
+import {
+  Article,
+  articles,
+  getArticleBySlug,
+  getArticleModels,
+  getArticleTermSlugs,
+} from "lib/articles"
+import { comparisons } from "lib/comparisons"
 import { getFileGitDates } from "lib/git-dates"
 import { organizationRef, toJsonLd } from "lib/json-ld"
+import { applySeo } from "lib/seo"
 import { SITE_NAME, SITE_OG_IMAGE_URL, SITE_URL } from "lib/site"
 import { linkifyTermMentions } from "lib/term-links"
 import { getTermBySlug } from "lib/terms"
@@ -34,7 +44,7 @@ export const generateMetadata = async ({ params }: Props): Promise<Metadata> => 
   const description = truncate(article.description, 120)
   const url = `${SITE_URL}/articles/${article.slug}/`
 
-  return {
+  return applySeo({
     title,
     description,
     alternates: { canonical: url },
@@ -56,12 +66,11 @@ export const generateMetadata = async ({ params }: Props): Promise<Metadata> => 
     },
     category: article.category,
     twitter: { title, description, images: [SITE_OG_IMAGE_URL] },
-  }
+  }, article.seo)
 }
 
 const buildJsonLd = (article: Article) => {
   const url = `${SITE_URL}/articles/${article.slug}/`
-  const models = getArticleModels(article)
   const gitDates = getFileGitDates("data/articles.json")
   const datePublished = gitDates.datePublished
   const dateModified = article.updatedAt ?? gitDates.dateModified
@@ -83,11 +92,14 @@ const buildJsonLd = (article: Article) => {
       name: SITE_NAME,
       url: `${SITE_URL}/`,
     },
-    mentions: models.map((model) => ({
-      "@type": "DefinedTerm",
-      name: model.name,
-      url: `${SITE_URL}/terms/${model.slug}/`,
-    })),
+    mentions: getArticleTermSlugs(article)
+      .map((termSlug) => getTermBySlug(termSlug))
+      .filter((term): term is NonNullable<typeof term> => Boolean(term))
+      .map((term) => ({
+        "@type": "DefinedTerm",
+        name: term.name,
+        url: `${SITE_URL}/terms/${term.slug}/`,
+      })),
   }
 
   const breadcrumbList = {
@@ -144,6 +156,10 @@ const ArticlePage: FC<Props> = async ({ params }) => {
   const developerByModelSlug =
     article.comparisonRows.find((row) => row.item === "開発元")?.values ?? {}
 
+  const articleTermSlugs = new Set(getArticleTermSlugs(article))
+  const relatedComparisons = comparisons.filter(
+    (comparison) => articleTermSlugs.has(comparison.left) && articleTermSlugs.has(comparison.right),
+  )
   const otherArticles = articles.filter((a) => a.slug !== article.slug)
   const jsonLdBlocks = buildJsonLd(article)
 
@@ -185,7 +201,37 @@ const ArticlePage: FC<Props> = async ({ params }) => {
         </p>
       </Section>
 
+      {/* Sections (pillar content) */}
+      {article.sections?.map((section) => {
+        const sectionTerms = (section.terms ?? [])
+          .map((s) => getTermBySlug(s))
+          .filter((t): t is NonNullable<typeof t> => Boolean(t))
+        return (
+          <Section key={section.heading}>
+            <SectionTitle>{section.heading}</SectionTitle>
+            <p style={{ lineHeight: 1.8, whiteSpace: "pre-line" }}>
+              {linkifyTermMentions(section.body, "")}
+            </p>
+            {sectionTerms.length > 0 && (
+              <div
+                style={{
+                  display: "grid",
+                  gap: "1.25rem",
+                  gridTemplateColumns: "repeat(auto-fill, minmax(15rem, 1fr))",
+                  marginTop: "1.25rem",
+                }}
+              >
+                {sectionTerms.map((term) => (
+                  <TermCard key={term.slug} term={term} />
+                ))}
+              </div>
+            )}
+          </Section>
+        )
+      })}
+
       {/* Models */}
+      {models.length > 0 && (
       <Section>
         <SectionTitle>モデル一覧</SectionTitle>
         <ol
@@ -251,6 +297,7 @@ const ArticlePage: FC<Props> = async ({ params }) => {
           })}
         </ol>
       </Section>
+      )}
 
       {/* Comparison */}
       {article.comparisonRows.length > 0 && (
@@ -281,6 +328,24 @@ const ArticlePage: FC<Props> = async ({ params }) => {
               >
                 <Badge style={{ fontSize: ".85rem", padding: ".4rem .9rem" }}>{term.name}</Badge>
               </Link>
+            ))}
+          </div>
+        </Section>
+      )}
+
+      {/* Related Comparisons */}
+      {relatedComparisons.length > 0 && (
+        <Section>
+          <SectionTitle>関連する比較</SectionTitle>
+          <div
+            style={{
+              display: "grid",
+              gap: "1.25rem",
+              gridTemplateColumns: "repeat(auto-fill, minmax(15rem, 1fr))",
+            }}
+          >
+            {relatedComparisons.map((comparison) => (
+              <ComparisonCard key={comparison.slug} comparison={comparison} />
             ))}
           </div>
         </Section>
