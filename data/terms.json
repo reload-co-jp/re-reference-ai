@@ -6517,7 +6517,8 @@
       "gemini",
       "phi",
       "small-language-model",
-      "ornith"
+      "ornith",
+      "diffusion-gemma"
     ],
     "faq": [
       {
@@ -14393,7 +14394,8 @@
       "prompt-caching",
       "opentelemetry",
       "model-router",
-      "microservice"
+      "microservice",
+      "openrouter"
     ],
     "faq": [
       {
@@ -17383,7 +17385,8 @@
     "relatedTerms": [
       "large-language-model",
       "diffusion-model",
-      "decoding"
+      "decoding",
+      "diffusion-gemma"
     ],
     "faq": [
       {
@@ -17562,7 +17565,8 @@
       "llm-gateway",
       "reasoning-model",
       "small-language-model",
-      "router"
+      "router",
+      "openrouter"
     ],
     "faq": [
       {
@@ -31863,6 +31867,123 @@
       "classification",
       "hidden-layer",
       "machine-learning"
+    ]
+  },
+  {
+    "slug": "diffusion-gemma",
+    "name": "DiffusionGemma",
+    "aliases": [
+      "Diffusion Gemma"
+    ],
+    "tagline": "Gemma 4のMoEアーキテクチャをベースに、離散拡散でテキストをブロック単位に並列生成するGoogle DeepMindの実験的オープンウェイトモデル",
+    "category": "モデル",
+    "tags": [
+      "LLM",
+      "オープンウェイト",
+      "デコーディング"
+    ],
+    "summary": "DiffusionGemmaは、Google DeepMindが公開した実験的なオープンウェイトのDiffusion LLM。\nGemma 4の26B A4B Mixture-of-Experts(MoE)アーキテクチャをベースとし、テキスト・画像・動画を入力として受け取り、テキストを出力するマルチモーダルモデル。\n従来のGemmaが1トークンずつ順番に生成する自己回帰型であるのに対し、DiffusionGemmaは離散拡散(discrete diffusion)によって生成する。プレースホルダートークンで埋めたブロック(キャンバス)を用意し、確定したトークンを手がかりに残りを繰り返し修正しながら、256トークン単位で並列にノイズ除去していく。ブロック自体は順に生成するため、ブロック単位の自己回帰と拡散を組み合わせた方式といえる。\nデコード処理のボトルネックがメモリ帯域から計算へ移るため、専用GPU上では既存のGemmaモデルと比べて最大4倍の生成速度を示し、単一のNVIDIA H100で毎秒1,000トークン以上を出力できるとされる。\n総パラメータ数は26Bだが推論時に活性化するのは3.8Bのみで、量子化すれば18GB程度のVRAMを持つコンシューマ向けGPUにも収まる。\nブロック内のトークン同士が双方向に参照し合えるため、インライン編集やコードの穴埋め(infilling)など、前後の文脈を同時に扱うタスクと相性が良い。\n一方で出力品質は標準のGemma 4より低く、Googleは品質を最優先する用途には標準のGemma 4を推奨している。ライセンスはApache 2.0。",
+    "history": "2026年6月10日: Google DeepMindがDiffusionGemmaを発表し、実験的モデルとしてApache 2.0ライセンスで重みを公開。同時にvLLM・MLX・Hugging Face Transformersでの推論サポートが提供された。",
+    "advantages": [
+      "専用GPU上で既存のGemmaモデルと比べて最大4倍の生成速度",
+      "MoE構成で推論時の活性パラメータが3.8Bと少なく、量子化すればコンシューマ向けGPUでも動作する",
+      "ブロック内で双方向に参照するため、コードの穴埋めやインライン編集に向く",
+      "Apache 2.0ライセンスのオープンウェイトで、ファインチューニングやローカル運用が可能"
+    ],
+    "disadvantages": [
+      "出力品質は標準のGemma 4より低い",
+      "実験的モデルという位置付けで、本番用途には標準のGemma 4が推奨されている"
+    ],
+    "comparisons": [
+      {
+        "slug": "gemma",
+        "note": "Gemmaは自己回帰型でトークンを順に生成するのに対し、DiffusionGemmaは拡散によってブロック単位で並列生成する"
+      },
+      {
+        "slug": "diffusion-llm",
+        "note": "Diffusion LLMは生成方式の総称で、DiffusionGemmaはGoogleがオープンウェイトで公開したその実装の1つ"
+      }
+    ],
+    "relatedTerms": [
+      "gemma",
+      "diffusion-llm",
+      "mixture-of-experts",
+      "diffusion-model",
+      "local-llm",
+      "vllm"
+    ],
+    "references": [
+      {
+        "type": "Blog",
+        "label": "DiffusionGemma: 4x faster text generation (Google)",
+        "url": "https://blog.google/innovation-and-ai/technology/developers-tools/diffusion-gemma-faster-text-generation/"
+      },
+      {
+        "type": "Documentation",
+        "label": "DiffusionGemma model overview (Google AI for Developers)",
+        "url": "https://ai.google.dev/gemma/docs/diffusiongemma"
+      },
+      {
+        "type": "Official Website",
+        "label": "google/diffusiongemma-26B-A4B-it (Hugging Face)",
+        "url": "https://huggingface.co/google/diffusiongemma-26B-A4B-it"
+      }
+    ]
+  },
+  {
+    "slug": "openrouter",
+    "name": "OpenRouter",
+    "tagline": "数百種類のLLMを複数プロバイダから単一のOpenAI互換APIで呼び出せるモデルルーティングサービス",
+    "category": "インフラ",
+    "tags": [
+      "API",
+      "インフラ"
+    ],
+    "summary": "OpenRouterは、OpenAI・Anthropic・Google・Meta・Mistral・DeepSeekなど多数のプロバイダが提供するLLMを、単一のAPIエンドポイントから利用できるようにするサービス。\nAPIはOpenAI互換の形式で提供されており、既存のOpenAI SDKのbase_urlをOpenRouterに向け、モデル名を「プロバイダ名/モデル名」の形式で指定するだけで、様々なモデルを切り替えて呼び出せる。\n同じモデルを複数のプロバイダがホストしている場合、リクエストごとにコストや可用性を考慮して送信先を選び、障害時には別のプロバイダへ自動でフォールバックする。\n利用料金はOpenRouter上のクレジットでまとめて支払う仕組みのため、プロバイダごとに個別のアカウントやAPIキーを用意する必要がない。\nまた、モデルやアプリケーションごとのトークン使用量を集計したランキングを公開しており、どのモデルが実際に使われているかを把握する指標としても参照されている。\n自前でLLM Gatewayを構築・運用せずに複数モデルを比較・併用したい開発者向けの、ホスティング型の選択肢として広く使われている。",
+    "history": "2023年: Alex AtallahとLouis Vichyがニューヨークで創業。\n2025年: Andreessen Horowitz主導のシードラウンドとMenlo Ventures主導のシリーズAで、合計約4,000万ドルを調達。\n2026年5月: CapitalG主導のシリーズBで1億1,300万ドルを調達し、評価額は約13億ドルに。\n2026年8月: Stripeが70億ドル超でOpenRouterを買収することで合意したと報じられる。",
+    "codeExamples": [
+      {
+        "title": "OpenAI SDKからOpenRouter経由でモデルを呼び出す",
+        "language": "python",
+        "code": "from openai import OpenAI\n\nclient = OpenAI(\n    base_url=\"https://openrouter.ai/api/v1\",\n    api_key=\"<OPENROUTER_API_KEY>\",\n)\n\ncompletion = client.chat.completions.create(\n    model=\"anthropic/claude-sonnet-5\",\n    messages=[{\"role\": \"user\", \"content\": \"こんにちは\"}],\n)\n\nprint(completion.choices[0].message.content)"
+      }
+    ],
+    "advantages": [
+      "1つのAPIキーとOpenAI互換APIで多数のプロバイダのモデルを切り替えられる",
+      "プロバイダ障害時の自動フォールバックにより可用性を確保しやすい",
+      "支払いをクレジットに一本化でき、プロバイダごとの契約が不要"
+    ],
+    "disadvantages": [
+      "リクエストが第三者のサービスを経由するため、データの取り扱いやレイテンシを考慮する必要がある",
+      "プロバイダと直接契約する場合と比べ、利用できる機能や料金体系に差異が生じる場合もある"
+    ],
+    "comparisons": [
+      {
+        "slug": "llm-gateway",
+        "note": "LLM Gatewayは自社で構築・運用する構成も含む一般的な概念で、OpenRouterはそれをホスティング型のサービスとして提供するもの"
+      },
+      {
+        "slug": "bedrock",
+        "note": "BedrockはAWS上で複数の基盤モデルを提供するマネージドサービスで、OpenRouterは特定のクラウドに依存せず多数のプロバイダを横断する"
+      }
+    ],
+    "relatedTerms": [
+      "llm-gateway",
+      "model-router",
+      "bedrock",
+      "large-language-model"
+    ],
+    "references": [
+      {
+        "type": "Official Website",
+        "label": "OpenRouter",
+        "url": "https://openrouter.ai/"
+      },
+      {
+        "type": "Documentation",
+        "label": "OpenRouter Quickstart Guide",
+        "url": "https://openrouter.ai/docs/quickstart"
+      }
     ]
   }
 ]
