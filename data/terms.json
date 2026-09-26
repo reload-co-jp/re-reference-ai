@@ -17513,7 +17513,8 @@
       "devin",
       "amazon-q-developer",
       "tui",
-      "code-generation"
+      "code-generation",
+      "opencode"
     ],
     "faq": [
       {
@@ -23100,7 +23101,8 @@
     "relatedTerms": [
       "coding-agent",
       "cline",
-      "claude-code"
+      "claude-code",
+      "opencode"
     ],
     "faq": [
       {
@@ -31335,16 +31337,16 @@
   {
     "slug": "opencode",
     "name": "OpenCode",
-    "tagline": "SSTが開発する、Go言語製のオープンソース・ターミナル型コーディングエージェント",
+    "tagline": "SSTが開発する、TypeScript製のオープンソース・ターミナル型コーディングエージェント",
     "category": "エージェント",
     "tags": [
       "コーディングエージェント",
       "TUI"
     ],
     "plainSummary": "SST社が作った、ターミナルで動くオープンソースのAIコーディングエージェント。",
-    "summary": "OpenCodeは、SSTが開発するオープンソースのターミナル型コーディングエージェント。\nGo言語で実装されており、Bubble Teaベースのターミナル UI(TUI)クライアントを持つ。クライアント/サーバー型のアーキテクチャを採用し、TUIをはじめ複数のクライアントから同一のエージェントセッションに接続できる構成を取る。特定のモデル提供元に縛られず、Anthropic・OpenAI・Google等複数のLLMプロバイダのモデルを切り替えて利用できる。",
+    "summary": "OpenCodeは、SSTが開発するオープンソースのターミナル型コーディングエージェント。\nTypeScriptで実装されており、ターミナル UI(TUI)クライアントを持つ。クライアント/サーバー型のアーキテクチャを採用し、TUIをはじめ複数のクライアントから同一のエージェントセッションに接続できる構成を取る。特定のモデル提供元に縛られず、Anthropic・OpenAI・Google等複数のLLMプロバイダのモデルを切り替えて利用できる。",
     "background": "ターミナル型コーディングエージェントが広がる中、SSTは自社のインフラ構築ツール群での開発経験を踏まえ、特定のモデルベンダーに縛られずローカル環境で動作するオープンソースのコーディングエージェントとしてOpenCodeを開発した。",
-    "history": "2025年: SSTがGo言語製のオープンソースコーディングエージェント「OpenCode」を公開。",
+    "history": "2025年: SSTがオープンソースコーディングエージェント「OpenCode」を公開。",
     "advantages": [
       "オープンソースであり、利用するLLMプロバイダを自由に選択・切り替えられる",
       "クライアント/サーバー型の構成により、TUI以外のクライアントからも同一セッションに接続できる",
@@ -31385,14 +31387,14 @@
       },
       {
         "question": "OpenCodeはどの言語で実装されている?",
-        "answer": "Go言語で実装されており、ターミナルUIにはBubble Teaが使われている。"
+        "answer": "TypeScriptで実装されている。"
       }
     ],
     "references": [
       {
         "type": "GitHub",
-        "label": "sst/opencode",
-        "url": "https://github.com/sst/opencode"
+        "label": "anomalyco/opencode",
+        "url": "https://github.com/anomalyco/opencode"
       }
     ]
   },
