@@ -73,7 +73,7 @@ const websiteJsonLd = {
   "@context": "https://schema.org",
   "@type": "WebSite",
   name: SITE_NAME,
-  alternateName: "RRA",
+  alternateName: ["RRA", SITE_TAGLINE_JA, "AI用語辞典", "AI辞典"],
   description: SITE_DESCRIPTION,
   url: SITE_URL,
   publisher: organizationRef,

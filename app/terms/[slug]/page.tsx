@@ -12,7 +12,7 @@ import { getComparisonsForTerm } from "lib/comparisons"
 import { getFileGitDates } from "lib/git-dates"
 import { organizationRef, toJsonLd } from "lib/json-ld"
 import { applySeo } from "lib/seo"
-import { SITE_NAME, SITE_URL } from "lib/site"
+import { SITE_NAME, SITE_TAGLINE_JA, SITE_URL } from "lib/site"
 import {
   getCategorySlug,
   getRankedRelatedTerms,
@@ -67,7 +67,7 @@ export const generateMetadata = async ({ params }: Props): Promise<Metadata> => 
       canonical: url,
       types: { "text/markdown": `${SITE_URL}/terms/${term.slug}/markdown` },
     },
-    keywords: [term.name, ...(term.aliases ?? []), term.category, ...term.tags],
+    keywords: [term.name, ...(term.aliases ?? []), term.category, ...term.tags, "AI用語", "AI辞典"],
     openGraph: {
       title,
       description,
@@ -108,7 +108,11 @@ const buildJsonLd = (term: Term, relatedTerms: Term[]) => {
     url,
     about: term.name,
     keywords: term.tags?.join(", "),
-    inDefinedTermSet: `${SITE_URL}/`,
+    inDefinedTermSet: {
+      "@type": "DefinedTermSet",
+      name: `${SITE_NAME} ${SITE_TAGLINE_JA}`,
+      url: `${SITE_URL}/`,
+    },
     termCode: term.category,
     ...(mentions && { mentions }),
   }

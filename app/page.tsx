@@ -69,7 +69,7 @@ const Page: FC = () => {
             maxWidth: "32rem",
           }}
         >
-          AI・LLM・機械学習領域の一次情報を集約した技術リファレンス
+          {SITE_DESCRIPTION}
         </p>
       </Section>
 
