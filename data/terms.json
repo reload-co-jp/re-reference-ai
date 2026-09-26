@@ -13742,7 +13742,8 @@
       "sandboxing",
       "browser-use",
       "centaur-mode",
-      "rentahuman"
+      "rentahuman",
+      "automated-decision-making"
     ],
     "faq": [
       {
@@ -14395,7 +14396,8 @@
       "opentelemetry",
       "model-router",
       "microservice",
-      "openrouter"
+      "openrouter",
+      "omniroute"
     ],
     "faq": [
       {
@@ -20441,7 +20443,8 @@
       "interpretability",
       "transparency",
       "human-centered-ai-design",
-      "neuro-symbolic-ai"
+      "neuro-symbolic-ai",
+      "automated-decision-making"
     ],
     "faq": [
       {
@@ -20535,7 +20538,8 @@
       "guardrails",
       "red-teaming",
       "frontier-model",
-      "foundation-model"
+      "foundation-model",
+      "automated-decision-making"
     ],
     "faq": [
       {
@@ -29225,7 +29229,8 @@
     "relatedTerms": [
       "ai-auditing",
       "responsible-ai",
-      "ai-ethics"
+      "ai-ethics",
+      "automated-decision-making"
     ],
     "references": [
       {
@@ -31973,7 +31978,8 @@
       "llm-gateway",
       "model-router",
       "bedrock",
-      "large-language-model"
+      "large-language-model",
+      "omniroute"
     ],
     "references": [
       {
@@ -31985,6 +31991,130 @@
         "type": "Documentation",
         "label": "OpenRouter Quickstart Guide",
         "url": "https://openrouter.ai/docs/quickstart"
+      }
+    ]
+  },
+  {
+    "slug": "omniroute",
+    "name": "OmniRoute",
+    "tagline": "多数のLLMプロバイダを単一のOpenAI互換エンドポイントにまとめ、自動フォールバックやルーティングを行うオープンソースのAIゲートウェイ",
+    "category": "インフラ",
+    "tags": [
+      "API",
+      "インフラ"
+    ],
+    "summary": "OmniRouteは、OpenAI・Anthropic・Google・DeepSeekなど多数のLLMプロバイダを、ローカルまたは自前サーバー上で動く1つのエンドポイントに集約するセルフホスト型のAIゲートウェイ。MITライセンスのオープンソースとしてGitHubで公開されている。\n起動するとデフォルトで `http://localhost:20128/v1` にOpenAI互換APIが立ち上がり、Claude Code・Codex・Cursor・Cline・OpenCodeなどのコーディングエージェントやOpenAI SDKのbase_urlをここに向ける。これだけで背後のモデルを切り替えて利用できる。OpenAI形式に加え、ClaudeやGemini、Responses API形式のリクエストも受け付ける。\n複数のプロバイダやモデルを「コンボ」としてまとめ、クォータ切れやエラーが起きた際に別の接続先へ自動でフォールバックする。無料枠を持つプロバイダやサブスクリプション型のコーディングプランも接続先として登録でき、`auto` モデルを指定すると利用可能な接続先をOmniRouteが選ぶ。\nこのほか、プロンプトのトークンを削減する圧縮機能、Webダッシュボードでの使用量・コストの可視化、MCPサーバーやA2Aサーバーとしての機能、CLIからの設定機能などを備える。\nホスティング型のOpenRouterと異なり、APIキーやリクエストを自分の環境内で管理できる点が特徴。",
+    "history": "OmniRouteは、diegosouzapwがGitHub上に公開したプロジェクト。オープンソースのLLMルーター「9router」のフォークとして始まった。GoのプロジェクトであるCLIProxyAPIをTypeScriptへ移植する形で機能を取り込み、その後TypeScriptで全面的に書き直されている。",
+    "architecture": "Node.js上で動作するNext.jsアプリケーションとして実装され、APIサーバーと管理用Webダッシュボードを1つのプロセスで提供する。設定や使用履歴はSQLiteに保存される。\nクライアントからのリクエストは `/v1` 配下のエンドポイントで受け取り、指定されたモデル名やコンボ設定に従って送信先のプロバイダを選び、各プロバイダのAPI形式に変換して転送する。送信先が失敗した場合は、コンボ内の次の候補に切り替えてリクエストを再送する。",
+    "codeExamples": [
+      {
+        "title": "npmでインストールして起動する",
+        "language": "bash",
+        "code": "npm i -g omniroute\nomniroute\n# ダッシュボード: http://localhost:20128"
+      },
+      {
+        "title": "OpenAI互換APIとして呼び出す",
+        "language": "bash",
+        "code": "curl http://localhost:20128/v1/chat/completions \\\n  -H \"Content-Type: application/json\" \\\n  -d '{\"model\":\"auto\",\"messages\":[{\"role\":\"user\",\"content\":\"Hello!\"}]}'"
+      }
+    ],
+    "advantages": [
+      "セルフホストで動くため、APIキーやリクエストを自分の環境内で管理できる",
+      "複数プロバイダをコンボにまとめ、クォータ切れや障害時に自動でフォールバックできる",
+      "OpenAI互換のエンドポイントを提供するため、既存のコーディングエージェントやSDKから設定変更のみで利用できる"
+    ],
+    "disadvantages": [
+      "サーバーの運用やアップデートを利用者自身で行う必要がある",
+      "無料枠やサブスクリプションの利用可否は各プロバイダの規約や提供状況に左右される"
+    ],
+    "comparisons": [
+      {
+        "slug": "openrouter",
+        "note": "OpenRouterはクレジット課金のホスティング型サービスで、OmniRouteは自前の環境で動かし、各プロバイダのAPIキーやアカウントを登録して使うセルフホスト型のゲートウェイ"
+      },
+      {
+        "slug": "llm-gateway",
+        "note": "LLM Gatewayは複数モデルへのアクセスを仲介する仕組みの総称で、OmniRouteはその実装の1つ"
+      }
+    ],
+    "relatedTerms": [
+      "llm-gateway",
+      "openrouter",
+      "model-router",
+      "coding-agent",
+      "claude-code",
+      "mcp",
+      "a2a"
+    ],
+    "references": [
+      {
+        "type": "GitHub",
+        "label": "diegosouzapw/OmniRoute",
+        "url": "https://github.com/diegosouzapw/OmniRoute"
+      },
+      {
+        "type": "Official Website",
+        "label": "OmniRoute",
+        "url": "https://omniroute.online/"
+      }
+    ]
+  },
+  {
+    "slug": "automated-decision-making",
+    "name": "自動意思決定",
+    "aliases": [
+      "Automated Decision-Making",
+      "ADM",
+      "自動化された意思決定"
+    ],
+    "tagline": "人間の関与なしに、アルゴリズムやAIが個人に関する判断を下す仕組み",
+    "category": "技術",
+    "tags": [
+      "規制",
+      "安全性"
+    ],
+    "summary": "自動意思決定(Automated Decision-Making, ADM)とは、人間が実質的に関与せず、アルゴリズムや機械学習モデルなどの自動処理だけで個人に関する判断を下すこと。\nローンの審査、採用時の書類選考、保険料の算定、行政による給付の判定などが代表的な例で、個人の特徴や行動を分析して評価・予測するプロファイリングと組み合わせて使われることが多い。\n大量の判断を一貫した基準で高速に処理できる一方、判断の根拠が本人に見えにくく、学習データに含まれる偏りが差別的な結果につながるおそれがある。\nそのため法規制の対象となっており、EUの一般データ保護規則(GDPR)第22条は、法的効果やそれに類する重大な影響を生じる判断を、自動処理のみに基づいて受けない権利を定めている。\n例外として自動意思決定が認められる場合でも、人間による介入を求める権利、自分の見解を表明する権利、判断に異議を申し立てる権利といった保護措置が求められる。\n実務上は、最終判断に人間が関与するHuman-in-the-Loopの設計や、判断理由を示す説明可能AIの技術、導入前のアルゴリズム影響評価などが対策として用いられる。",
+    "history": "1995年、EUのデータ保護指令(Directive 95/46/EC)第15条が、自動処理のみに基づく個人に関する決定(automated individual decisions)を受けない権利を定めた。\n2016年にGDPRが採択され、2018年5月の適用開始とともに、第22条がプロファイリングを含む自動意思決定の規律を引き継いだ。\n2019年、カナダ政府が「自動意思決定に関する指令(Directive on Automated Decision-Making)」を発効し、政府機関が自動意思決定システムを導入する際の影響評価を義務付けた。\n2023年12月、EU司法裁判所はSCHUFA事件(C-634/21)において、信用スコアが第三者の契約判断を実質的に左右する場合、スコアの算出自体がGDPR第22条の自動意思決定に当たると判断した。",
+    "advantages": [
+      "大量の判断を一貫した基準で高速に処理できる",
+      "担当者ごとの判断のばらつきを抑えられる"
+    ],
+    "disadvantages": [
+      "判断の根拠が本人に見えにくく、説明や異議申し立てが難しくなりやすい",
+      "学習データに含まれる偏りが、差別的な判断として再生産されるおそれがある",
+      "GDPRなどの規制により、人間の関与や説明の仕組みを用意する必要がある"
+    ],
+    "comparisons": [
+      {
+        "slug": "human-in-the-loop",
+        "note": "Human-in-the-Loopは判断の過程に人間を組み込む設計で、自動処理のみに基づく判断を避けるための手段として用いられる"
+      },
+      {
+        "slug": "algorithmic-impact-assessment",
+        "note": "アルゴリズム影響評価は、自動意思決定システムを導入する前に個人や社会への影響を評価する手続き"
+      }
+    ],
+    "relatedTerms": [
+      "human-in-the-loop",
+      "explainable-ai",
+      "algorithmic-impact-assessment",
+      "eu-ai-act",
+      "fairness",
+      "accountability",
+      "transparency",
+      "ai-auditing",
+      "responsible-ai"
+    ],
+    "references": [
+      {
+        "type": "Specification",
+        "label": "Regulation (EU) 2016/679 (GDPR)",
+        "url": "https://eur-lex.europa.eu/eli/reg/2016/679/oj"
+      },
+      {
+        "type": "Official Website",
+        "label": "Directive on Automated Decision-Making (Government of Canada)",
+        "url": "https://www.tbs-sct.canada.ca/pol/doc-eng.aspx?id=32592"
       }
     ]
   }
