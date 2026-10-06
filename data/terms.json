@@ -247,6 +247,8 @@
       }
     ],
     "relatedTerms": [
+      "feed-forward-network",
+      "multi-head-attention",
       "large-language-model",
       "fine-tuning",
       "neural-network",
@@ -1374,6 +1376,7 @@
       }
     ],
     "relatedTerms": [
+      "vocabulary",
       "large-language-model",
       "transformer",
       "corpus",
@@ -5377,6 +5380,7 @@
       }
     ],
     "relatedTerms": [
+      "greedy-decoding",
       "temperature",
       "top-p",
       "top-k",
@@ -5532,6 +5536,7 @@
       }
     ],
     "relatedTerms": [
+      "greedy-decoding",
       "decoding",
       "temperature",
       "top-k",
@@ -8052,6 +8057,7 @@
       }
     ],
     "relatedTerms": [
+      "helm",
       "humaneval",
       "large-language-model",
       "arena",
@@ -8339,6 +8345,7 @@
       }
     ],
     "relatedTerms": [
+      "bertscore",
       "rouge",
       "precision",
       "nlp",
@@ -8413,6 +8420,7 @@
       }
     ],
     "relatedTerms": [
+      "bertscore",
       "bleu",
       "recall",
       "nlp",
@@ -10781,6 +10789,8 @@
       }
     ],
     "relatedTerms": [
+      "multi-head-attention",
+      "masking",
       "attention",
       "transformer",
       "rotary-position-embedding",
@@ -11934,6 +11944,7 @@
       }
     ],
     "relatedTerms": [
+      "batch-size",
       "gradient-descent",
       "backpropagation",
       "loss-function",
@@ -12203,6 +12214,8 @@
       }
     ],
     "relatedTerms": [
+      "subword",
+      "out-of-vocabulary",
       "token",
       "large-language-model",
       "nlp",
@@ -12270,6 +12283,7 @@
       }
     ],
     "relatedTerms": [
+      "parameter",
       "large-language-model",
       "emergent-abilities",
       "transformer",
@@ -13221,6 +13235,7 @@
       }
     ],
     "relatedTerms": [
+      "instruction-following",
       "fine-tuning",
       "rlhf",
       "dpo",
@@ -14541,6 +14556,7 @@
       }
     ],
     "relatedTerms": [
+      "multi-head-attention",
       "multi-query-attention",
       "self-attention",
       "kv-cache",
@@ -16262,6 +16278,7 @@
       }
     ],
     "relatedTerms": [
+      "gradient-clipping",
       "residual-connection",
       "long-short-term-memory",
       "activation-function",
@@ -19778,6 +19795,7 @@
       }
     ],
     "relatedTerms": [
+      "prompt-tuning",
       "lora",
       "qlora",
       "fine-tuning",
@@ -20226,6 +20244,9 @@
       "学習後に語彙やトークナイザーを変更するのが難しく、モデル設計の初期段階で決定する必要がある"
     ],
     "relatedTerms": [
+      "subword",
+      "vocabulary",
+      "padding",
       "token",
       "byte-pair-encoding",
       "n-gram",
@@ -21756,6 +21777,7 @@
       }
     ],
     "relatedTerms": [
+      "surrogate-model",
       "machine-learning"
     ],
     "references": [
@@ -21984,6 +22006,7 @@
       }
     ],
     "relatedTerms": [
+      "padding",
       "batch-inference",
       "kv-cache",
       "vllm",
@@ -22608,6 +22631,7 @@
       }
     ],
     "relatedTerms": [
+      "masking",
       "bert",
       "pretraining",
       "self-supervised-learning"
@@ -25953,6 +25977,7 @@
     ],
     "summary": "BIG-Bench(Beyond the Imitation Game Benchmark)は、Googleを中心とする研究者コミュニティが協働で構築した、200を超える多様なタスクから成る大規模言語モデル評価用ベンチマーク。\n論理推論・常識推論・算数・言語理解・倫理的判断など幅広い分野のタスクを含み、モデルの能力を単一の指標ではなく多面的に測ることを目的としている。\n特に、モデルサイズの拡大に伴い性能が急激に向上する、あるいは逆に低下する創発的能力や逆スケーリング現象の観察に用いられたことで知られる。\n後継として、より難易度の高いタスクを厳選したBIG-Bench Hard(BBH)も広く使われている。",
     "relatedTerms": [
+      "helm",
       "mmlu",
       "truthfulqa"
     ]
@@ -28298,6 +28323,7 @@
       "探索空間の設計(範囲・分布の選び方)が結果の質に影響する"
     ],
     "relatedTerms": [
+      "surrogate-model",
       "learning-rate",
       "adam-optimizer",
       "bayesian-optimization",
@@ -28392,6 +28418,7 @@
       "スケジューリング方式によっては実装が複雑になる"
     ],
     "relatedTerms": [
+      "batch-size",
       "pipeline-parallelism",
       "batch-splitting",
       "bubble-minimization"
@@ -28539,6 +28566,7 @@
       "並列に多数の試行を同時実行する場合、グリッドサーチほど単純には並列化しにくい"
     ],
     "relatedTerms": [
+      "surrogate-model",
       "hyperparameter-optimization",
       "grid-search"
     ]
@@ -31570,6 +31598,7 @@
       }
     ],
     "relatedTerms": [
+      "feed-forward-network",
       "neural-network",
       "convolutional-neural-network",
       "activation-function",
@@ -32116,6 +32145,570 @@
         "label": "Directive on Automated Decision-Making (Government of Canada)",
         "url": "https://www.tbs-sct.canada.ca/pol/doc-eng.aspx?id=32592"
       }
+    ]
+  },
+  {
+    "slug": "surrogate-model",
+    "name": "サロゲートモデル",
+    "aliases": [
+      "Surrogate Model",
+      "代理モデル",
+      "メタモデル"
+    ],
+    "tagline": "計算コストの高いシミュレーションや目的関数を、入出力データから学習した軽量なモデルで近似して代用する手法",
+    "category": "技術",
+    "tags": [
+      "機械学習",
+      "チューニング"
+    ],
+    "summary": "サロゲートモデルは、評価に時間やコストがかかる関数(数値シミュレーション、実験、モデルの学習結果など)を、少数の入出力データから構築した近似モデルで置き換える手法。元の関数を直接何度も評価する代わりに、近似モデルの予測値を使って探索や解析を進める。\n近似にはガウス過程回帰(クリギング)、多項式による応答曲面、ランダムフォレスト、ニューラルネットワークなどが使われる。代表的な用途はベイズ最適化で、ハイパーパラメータと検証性能の関係をガウス過程などのサロゲートモデルで近似し、次に試す点を選ぶ。ほかにも、流体解析や構造解析など1回の計算に数時間かかるシミュレーションの代替、デジタルツインやソフトセンサーでの高速な予測、複雑なモデルの挙動を単純なモデルで近似して説明する説明可能AIの手法(LIMEなど)にも使われる。\n近似の精度はサンプル数と配置に左右されるため、実験計画法で入力点を選び、予測の不確実性が大きい領域に追加サンプルを足しながらモデルを更新する運用が一般的。",
+    "history": "サロゲートモデルの源流は、Box と Wilson が1951年に発表した応答曲面法(Response Surface Methodology)で、実験結果を多項式で近似して最適条件を探る考え方として広まった。1998年には Jones らが、クリギング(ガウス過程)によるサロゲートモデルと期待改善量を組み合わせた EGO(Efficient Global Optimization)を発表した。以降、評価コストの高いブラックボックス関数を最適化する手法として普及した。",
+    "advantages": [
+      "高コストなシミュレーションや実験の評価回数を減らせる",
+      "近似モデルは高速に評価できるため、最適化や感度分析で大量の候補を試せる",
+      "ガウス過程などを使えば予測値と併せて不確実性も得られ、追加サンプルの選択に使える"
+    ],
+    "disadvantages": [
+      "学習データの範囲外では近似精度が大きく落ちやすい",
+      "入力の次元が多いと、十分な精度を得るために必要なサンプル数が急増する",
+      "近似誤差により、元の関数とは異なる最適解を示す場合がある"
+    ],
+    "relatedTerms": [
+      "bayesian-optimization",
+      "hyperparameter-optimization",
+      "digital-twin",
+      "ai-soft-sensor",
+      "explainable-ai",
+      "machine-learning"
+    ],
+    "references": [
+      {
+        "type": "Research Paper",
+        "label": "Efficient Global Optimization of Expensive Black-Box Functions (Jones et al., 1998)",
+        "url": "https://doi.org/10.1023/A:1008306431147"
+      },
+      {
+        "type": "Documentation",
+        "label": "Gaussian Processes (scikit-learn)",
+        "url": "https://scikit-learn.org/stable/modules/gaussian_process.html"
+      }
+    ]
+  },
+  {
+    "slug": "feed-forward-network",
+    "name": "Feed-Forward Network",
+    "aliases": [
+      "FFN",
+      "フィードフォワードネットワーク",
+      "順伝播型ネットワーク"
+    ],
+    "tagline": "Transformerの各層でトークン単位に適用される、2層の全結合層と活性化関数からなるサブレイヤー",
+    "category": "アーキテクチャ",
+    "tags": [
+      "Transformer",
+      "深層学習"
+    ],
+    "summary": "Feed-Forward Network(FFN)は、入力から出力へ一方向にだけ情報が流れるニューラルネットワークの総称。LLMの文脈では、Transformerの各層でSelf-Attentionの後に置かれるサブレイヤーを指すことが多い。\nTransformerのFFNは、トークンの位置ごとに同じ重みを独立に適用する(position-wise)構造で、次元を一度広げる線形変換、活性化関数、元の次元に戻す線形変換の順に処理する。原論文では中間層の次元をモデル次元の4倍とし、活性化関数にReLUを使っていた。その後のモデルでは、GELUやSwiGLUを使う例が多い。\nSelf-Attentionがトークン間の関係を混ぜ合わせるのに対し、FFNは各トークンの表現を個別に変換する役割を持つ。FFNはモデルのパラメータの多くを占める。そのためMixture of ExpertsではこのFFNを複数のエキスパートに分割し、トークンごとに一部だけを動かして計算量を抑える。",
+    "history": "Transformer内のposition-wiseなFFNは、2017年にVaswaniらが論文「Attention Is All You Need」で提案した構成の一部として登場した。",
+    "relatedTerms": [
+      "transformer",
+      "self-attention",
+      "fully-connected-layer",
+      "activation-function",
+      "mixture-of-experts",
+      "residual-connection"
+    ],
+    "references": [
+      {
+        "type": "Research Paper",
+        "label": "Attention Is All You Need (Vaswani et al., 2017)",
+        "url": "https://arxiv.org/abs/1706.03762"
+      }
+    ]
+  },
+  {
+    "slug": "multi-head-attention",
+    "name": "Multi-Head Attention",
+    "aliases": [
+      "MHA",
+      "マルチヘッドアテンション"
+    ],
+    "tagline": "Attentionを複数のヘッドに分けて並列に計算し、異なる観点の関係を同時に捉えて結合する仕組み",
+    "category": "アーキテクチャ",
+    "tags": [
+      "Transformer",
+      "深層学習"
+    ],
+    "summary": "Multi-Head Attentionは、Attentionの計算を複数の「ヘッド」に分けて並列に実行し、その結果を連結して線形変換する仕組み。Transformerの中核となる構成要素。\n各ヘッドは入力をそれぞれ別の重みでQuery・Key・Valueに射影し、低い次元の空間でScaled Dot-Product Attentionを計算する。ヘッドごとに異なる射影を学習するため、構文的な関係、近い位置への注目、意味的な対応関係など、異なる種類の関係を別々のヘッドが捉えられる。ヘッド数を増やしても各ヘッドの次元を小さくするため、全体の計算量は単一ヘッドのAttentionと同程度に収まる。\n推論時にはヘッドごとにKeyとValueをKVキャッシュに保持する必要がある。メモリ使用量を減らす派生として、KeyとValueをヘッド間で共有するMulti-Query AttentionやGrouped-Query Attention、低ランクに圧縮するMulti-Head Latent Attentionが提案されている。",
+    "history": "2017年にVaswaniらが論文「Attention Is All You Need」でTransformerの構成要素として提案した。",
+    "advantages": [
+      "複数の種類の関係を異なるヘッドで同時に捉えられる",
+      "ヘッドごとの計算を並列に実行できる"
+    ],
+    "disadvantages": [
+      "推論時にヘッドごとのKey・ValueをKVキャッシュに保持するため、長い入力ではメモリ使用量が大きい",
+      "系列長に対して計算量が二乗で増える性質は単一ヘッドのAttentionと変わらない"
+    ],
+    "relatedTerms": [
+      "attention",
+      "self-attention",
+      "transformer",
+      "multi-query-attention",
+      "grouped-query-attention",
+      "multi-head-latent-attention",
+      "kv-cache"
+    ],
+    "references": [
+      {
+        "type": "Research Paper",
+        "label": "Attention Is All You Need (Vaswani et al., 2017)",
+        "url": "https://arxiv.org/abs/1706.03762"
+      },
+      {
+        "type": "Documentation",
+        "label": "torch.nn.MultiheadAttention (PyTorch)",
+        "url": "https://pytorch.org/docs/stable/generated/torch.nn.MultiheadAttention.html"
+      }
+    ]
+  },
+  {
+    "slug": "gradient-clipping",
+    "name": "勾配クリッピング",
+    "aliases": [
+      "Gradient Clipping"
+    ],
+    "tagline": "勾配の大きさに上限を設け、勾配爆発による学習の発散を防ぐ手法",
+    "category": "技術",
+    "tags": [
+      "学習",
+      "深層学習"
+    ],
+    "summary": "勾配クリッピングは、誤差逆伝播で求めた勾配の大きさが閾値を超えた場合に、勾配を縮小してからパラメータを更新する手法。勾配が極端に大きくなる「勾配爆発」によって、1回の更新でパラメータが大きく動き、損失が発散するのを防ぐ。\n主な方式は2つある。1つはパラメータ全体の勾配ベクトルのノルムが閾値を超えたとき、ノルムが閾値に収まるよう全体を同じ比率で縮小するノルムクリッピング。もう1つは勾配の各要素を指定範囲に切り詰める値クリッピングで、こちらは勾配の向きが変わる。\nもともとは長い系列を扱うRNNの学習で問題になった勾配爆発への対策として広まった。現在もTransformerベースのLLMの事前学習やファインチューニングで、ノルムの上限を1.0程度に設定して使われることが多い。",
+    "history": "2013年にPascanu、Mikolov、BengioがRNNの学習の難しさを分析した論文「On the difficulty of training recurrent neural networks」で、勾配ノルムのクリッピングを勾配爆発への対策として示し、広く知られるようになった。",
+    "advantages": [
+      "勾配爆発による損失の発散を抑え、学習を安定させられる",
+      "実装が単純で、PyTorchなど主要なフレームワークに標準で用意されている"
+    ],
+    "disadvantages": [
+      "勾配消失には効果がない",
+      "閾値が小さすぎると更新量が過度に抑えられ、学習が遅くなる"
+    ],
+    "relatedTerms": [
+      "vanishing-gradient",
+      "backpropagation",
+      "gradient-descent",
+      "recurrent-neural-network",
+      "bptt",
+      "learning-rate"
+    ],
+    "references": [
+      {
+        "type": "Research Paper",
+        "label": "On the difficulty of training recurrent neural networks (Pascanu et al., 2013)",
+        "url": "https://arxiv.org/abs/1211.5063"
+      },
+      {
+        "type": "Documentation",
+        "label": "torch.nn.utils.clip_grad_norm_ (PyTorch)",
+        "url": "https://pytorch.org/docs/stable/generated/torch.nn.utils.clip_grad_norm_.html"
+      }
+    ]
+  },
+  {
+    "slug": "greedy-decoding",
+    "name": "グリーディデコーディング",
+    "aliases": [
+      "Greedy Decoding",
+      "貪欲法デコーディング",
+      "Greedy Search"
+    ],
+    "tagline": "各ステップで確率が最も高いトークンを1つだけ選び続ける、決定的なテキスト生成方式",
+    "category": "技術",
+    "tags": [
+      "デコーディング",
+      "推論"
+    ],
+    "summary": "グリーディデコーディングは、自己回帰型の言語モデルがテキストを生成する際、各ステップで次トークンの確率分布から最も確率の高いトークンを選ぶ方式。サンプリングを行わないため、同じモデル・同じ入力からは同じ出力が得られる。\n計算は各ステップで最大値を取るだけなので軽く、分類的な回答や構造化出力、評価の再現性を確保したい場面で使われる。多くのAPIでは、temperatureを0にするとこれと近い挙動になる。\n一方で、各ステップで局所的に最も良い選択をするだけなので、文全体として確率が最も高い系列になるとは限らない。また、同じ語句を繰り返す出力に陥りやすい。系列全体で良い候補を探す場合はビームサーチ、多様な出力が欲しい場合はTop-kやTop-pなどのサンプリングが使われる。",
+    "advantages": [
+      "計算が軽く、実装が単純",
+      "同じ入力に対して同じ出力が得られ、再現性を確保しやすい"
+    ],
+    "disadvantages": [
+      "系列全体で最も確率の高い出力になるとは限らない",
+      "同じ語句の繰り返しや単調な文章になりやすい"
+    ],
+    "relatedTerms": [
+      "decoding",
+      "beam-search",
+      "temperature",
+      "top-k",
+      "top-p",
+      "autoregressive-generation"
+    ],
+    "references": [
+      {
+        "type": "Documentation",
+        "label": "Generation strategies (Hugging Face Transformers)",
+        "url": "https://huggingface.co/docs/transformers/generation_strategies"
+      }
+    ]
+  },
+  {
+    "slug": "batch-size",
+    "name": "バッチサイズ",
+    "aliases": [
+      "Batch Size"
+    ],
+    "tagline": "1回のパラメータ更新や推論でまとめて処理するデータサンプルの数",
+    "category": "技術",
+    "tags": [
+      "学習",
+      "チューニング"
+    ],
+    "summary": "バッチサイズは、学習時に1回のパラメータ更新でまとめて使うサンプル数を表すハイパーパラメータ。ミニバッチ勾配降下法では、バッチ内のサンプルの損失から勾配を平均して求め、その勾配でパラメータを更新する。\nバッチサイズを大きくすると勾配の推定が安定し、GPUの並列計算も活かしやすい。ただし必要なメモリが増え、学習率など他のハイパーパラメータとの調整も必要になる。小さくすると勾配のばらつきが増え、更新回数あたりの計算は軽くなる。\nGPUメモリに収まらない大きさのバッチで学習したい場合は、複数のマイクロバッチの勾配を足し合わせてから更新する勾配累積が使われる。LLMの事前学習では、バッチサイズをサンプル数ではなくトークン数で表すこともある。推論でも、複数のリクエストをまとめて処理する単位としてバッチサイズという言葉が使われる。",
+    "advantages": [
+      "大きくするとGPUの並列計算を活かしやすく、勾配の推定も安定する",
+      "勾配累積と組み合わせれば、メモリに収まらない大きさのバッチも扱える"
+    ],
+    "disadvantages": [
+      "大きくするほど必要なメモリが増える",
+      "変更すると学習率などの再調整が必要になることが多い"
+    ],
+    "relatedTerms": [
+      "gradient-descent",
+      "learning-rate",
+      "micro-batch",
+      "hyperparameter-optimization",
+      "batch-normalization",
+      "batch-inference"
+    ]
+  },
+  {
+    "slug": "masking",
+    "name": "マスキング",
+    "aliases": [
+      "Masking",
+      "Attention Mask",
+      "アテンションマスク"
+    ],
+    "tagline": "Attentionの計算で特定の位置を参照させないようにしたり、学習時にトークンを隠して予測対象にしたりする処理",
+    "category": "技術",
+    "tags": [
+      "Transformer",
+      "学習"
+    ],
+    "summary": "マスキングは、Transformerでモデルに見せる情報を制御する処理の総称。主に次の3つの意味で使われる。\n1つ目はパディングマスク。バッチ内の長さを揃えるために追加したパディングトークンを、Attentionの計算で参照しないようにする。\n2つ目は因果マスク(Causal Mask)。GPTのようなデコーダー型モデルで、各トークンが自分より後ろのトークンを参照できないようにする。これにより、学習時に全位置を並列に計算しながら、次トークン予測の条件を守れる。\n3つ目はBERTなどのMasked Language Modelingでの入力マスク。入力の一部のトークンを[MASK]などに置き換え、元のトークンを予測させる形で事前学習する。\nAttentionのマスクは、参照させたくない位置のスコアに大きな負の値を加えてからSoftmaxを計算し、その位置の重みをほぼ0にする方法で実装されることが多い。",
+    "relatedTerms": [
+      "self-attention",
+      "attention",
+      "padding",
+      "mlm",
+      "bert",
+      "decoder",
+      "autoregressive-generation"
+    ]
+  },
+  {
+    "slug": "padding",
+    "name": "パディング",
+    "aliases": [
+      "Padding"
+    ],
+    "tagline": "長さの異なる系列をバッチにまとめるため、短い系列の末尾や先頭に特殊トークンを詰めて長さを揃える処理",
+    "category": "技術",
+    "tags": [
+      "トークナイゼーション",
+      "学習"
+    ],
+    "summary": "パディングは、長さの異なる複数の系列をテンソルとしてまとめて処理するために、短い系列にパディングトークン(PADトークン)を追加して長さを揃える処理。GPUでバッチ処理をするには、バッチ内の系列を同じ長さにそろえる必要がある。\nパディングトークンは意味を持たないため、Attentionの計算ではマスクで参照対象から外し、損失の計算でも除外する。トークンを末尾に詰める右パディングが一般的だが、デコーダー型モデルでバッチ生成をする場合は、生成を続ける末尾の位置を揃えるため先頭に詰める左パディングが使われることもある。\nパディングが多いほど無駄な計算が増えるため、似た長さの系列をまとめるバケッティングや、複数の系列を連結して詰めるパッキング、推論サーバーでのContinuous Batchingなど、パディングを減らす工夫が使われる。なお、CNNで画像の端に値を足して出力サイズを調整する処理もパディングと呼ばれる。",
+    "relatedTerms": [
+      "masking",
+      "batch-size",
+      "tokenization",
+      "token",
+      "continuous-batching"
+    ]
+  },
+  {
+    "slug": "subword",
+    "name": "サブワード",
+    "aliases": [
+      "Subword",
+      "サブワード分割"
+    ],
+    "tagline": "単語と文字の中間の単位でテキストを分割し、語彙数を抑えながら未知語にも対応するトークン化の考え方",
+    "category": "技術",
+    "tags": [
+      "トークナイゼーション",
+      "NLP"
+    ],
+    "summary": "サブワードは、単語をさらに細かく分けた部分文字列の単位。また、その単位でテキストをトークンに分割する方式を指す。頻出する単語は1トークンのまま扱い、出現頻度の低い単語は複数の部分に分けて表す。例えば「unhappiness」を「un」「happi」「ness」のように分割する。\n単語単位の分割では語彙に含まれない単語(未知語)を扱えず、文字単位では系列が長くなりすぎる。サブワード分割はその中間をとり、限られた語彙数であらゆる文字列を表現できる。\n代表的なアルゴリズムに、頻出する文字の組を繰り返し統合するByte Pair Encoding(BPE)、Googleが開発したWordPiece、確率モデルで分割を選ぶUnigram言語モデルがある。SentencePieceは、空白で単語を区切らない日本語なども含め、生のテキストから直接BPEやUnigramのモデルを学習できるツール。GPT系やLlama、BERTなど、現在のLLMの多くがサブワード分割を採用している。",
+    "history": "ニューラル機械翻訳での利用は、2016年にSennrichらがBPEで単語をサブワードに分割する手法を発表したことで広まった。2018年にはKudoがUnigram言語モデルによる分割を、KudoとRichardsonがSentencePieceを発表した。",
+    "advantages": [
+      "限られた語彙数で未知語を含むあらゆる文字列を表現できる",
+      "単語単位より語彙を小さく、文字単位より系列を短く保てる"
+    ],
+    "disadvantages": [
+      "人間にとって意味の切れ目と一致しない分割になることがある",
+      "学習データに少ない言語では1単語あたりのトークン数が増え、コンテキストを多く消費しやすい"
+    ],
+    "relatedTerms": [
+      "byte-pair-encoding",
+      "tokenization",
+      "token",
+      "vocabulary",
+      "out-of-vocabulary"
+    ],
+    "references": [
+      {
+        "type": "Research Paper",
+        "label": "Neural Machine Translation of Rare Words with Subword Units (Sennrich et al., 2016)",
+        "url": "https://arxiv.org/abs/1508.07909"
+      },
+      {
+        "type": "GitHub",
+        "label": "google/sentencepiece",
+        "url": "https://github.com/google/sentencepiece"
+      }
+    ]
+  },
+  {
+    "slug": "vocabulary",
+    "name": "語彙",
+    "aliases": [
+      "Vocabulary",
+      "ボキャブラリー",
+      "Vocab"
+    ],
+    "tagline": "トークナイザーとモデルが扱えるトークンの集合と、各トークンに割り当てたIDの対応表",
+    "category": "技術",
+    "tags": [
+      "トークナイゼーション",
+      "NLP"
+    ],
+    "summary": "語彙(Vocabulary)は、トークナイザーが出力しうるトークンの一覧と、それぞれに割り当てられた整数IDの対応表。テキストはトークナイザーで語彙中のトークンIDの列に変換され、モデルはそのIDを埋め込み層でベクトルに変換して処理する。出力側では、語彙の全トークンに対する確率分布をSoftmaxで計算し、次のトークンを選ぶ。\n語彙に含まれるトークンの数を語彙サイズと呼ぶ。語彙サイズを大きくすると、1つのテキストを少ないトークン数で表せるため系列が短くなるが、埋め込み層と出力層のパラメータが増える。例えばGPT-2は約5万、Llama 3は約12.8万の語彙を持つ。多言語に対応するモデルほど大きな語彙を持つ傾向がある。\n語彙は通常、学習コーパスからBPEなどのサブワード分割アルゴリズムで作られる。[PAD]や[BOS]、[EOS]などの特殊トークンも語彙の一部として登録される。",
+    "relatedTerms": [
+      "token",
+      "tokenization",
+      "subword",
+      "byte-pair-encoding",
+      "embedding",
+      "softmax",
+      "out-of-vocabulary"
+    ]
+  },
+  {
+    "slug": "out-of-vocabulary",
+    "name": "OOV",
+    "aliases": [
+      "Out-of-Vocabulary",
+      "未知語",
+      "語彙外"
+    ],
+    "tagline": "モデルやトークナイザーの語彙に含まれていない単語。また、それにより入力を正しく表現できない問題",
+    "category": "技術",
+    "tags": [
+      "トークナイゼーション",
+      "NLP"
+    ],
+    "summary": "OOV(Out-of-Vocabulary)は、語彙に含まれていない単語、またはそうした単語が入力に現れる問題を指す。単語単位で語彙を作るモデルでは、学習時に出現しなかった単語や新語、固有名詞、タイプミスなどがOOVになり、[UNK]のような未知語トークンにまとめて置き換えられる。その結果、単語の情報が失われ、翻訳や分類の精度が落ちる。\nword2vecなど単語単位の埋め込みでも、語彙外の単語にはベクトルを割り当てられない。文字のn-gramから単語ベクトルを合成するfastTextなどは、この問題への対策の1つ。\n現在のLLMの多くは、BPEなどのサブワード分割やバイト単位まで分解できるトークナイザーを使う。そのため、どんな文字列も既知のトークンの組み合わせで表現でき、OOVはほぼ発生しない。ただし、学習データにほとんど含まれない単語は細かく分割され、意味を捉えにくくなる問題は残る。",
+    "relatedTerms": [
+      "vocabulary",
+      "subword",
+      "byte-pair-encoding",
+      "tokenization",
+      "word2vec"
+    ]
+  },
+  {
+    "slug": "instruction-following",
+    "name": "指示追従",
+    "aliases": [
+      "Instruction Following",
+      "インストラクションフォローイング"
+    ],
+    "tagline": "自然言語で与えられた指示の内容や制約を理解し、それに沿った出力を返すモデルの能力",
+    "category": "評価",
+    "tags": [
+      "アライメント",
+      "LLM"
+    ],
+    "summary": "指示追従(Instruction Following)は、ユーザーやシステムプロンプトで与えられた指示に従って応答する、LLMの能力を指す。「300字以内で」「箇条書きで」「JSON形式で」といった形式の制約や、口調、扱う範囲の指定などを守れるかどうかが問われる。\n事前学習だけのモデルは、入力の続きを予測するように学習されているため、指示を与えても続きの文章を書いてしまうことがある。指示と応答の組で学習する指示チューニングや、人間の好みを反映させるRLHFなどの事後学習によって、指示追従能力が高められる。\n評価には、検証可能な制約を含む指示への準拠率を自動で測るIFEvalなどのベンチマークが使われる。複数の指示が組み合わさった場合や、長い会話の途中で与えられた指示、システムプロンプトとユーザーの指示が矛盾する場合の扱いは、現在も課題になっている。",
+    "relatedTerms": [
+      "instruction-tuning",
+      "rlhf",
+      "alignment",
+      "system-prompt",
+      "structured-output",
+      "post-training"
+    ],
+    "references": [
+      {
+        "type": "Research Paper",
+        "label": "Instruction-Following Evaluation for Large Language Models (Zhou et al., 2023)",
+        "url": "https://arxiv.org/abs/2311.07911"
+      }
+    ]
+  },
+  {
+    "slug": "bertscore",
+    "name": "BERTScore",
+    "aliases": [
+      "バートスコア"
+    ],
+    "tagline": "BERTなどの文脈埋め込みを使い、生成文と参照文のトークン同士の意味的な類似度で品質を測る自動評価指標",
+    "category": "評価",
+    "tags": [
+      "評価指標",
+      "NLP"
+    ],
+    "summary": "BERTScoreは、機械翻訳や要約などで生成された文と人手による参照文を比較する自動評価指標。BLEUやROUGEが単語やn-gramの表層的な一致を数えるのに対し、BERTScoreは事前学習済みモデルで得た文脈埋め込みを使って意味の近さを測る。\n計算では、生成文と参照文の各トークンを文脈埋め込みに変換し、トークン間のコサイン類似度を求める。生成文の各トークンについて参照文で最も類似度が高いトークンとの類似度を平均したものを適合率、逆方向の平均を再現率とし、両者からF1を算出する。まれな単語を重視するためにIDFで重み付けする設定もある。\n言い換えや同義語を含む文でも高く評価できるため、表層一致の指標より人手評価との相関が高いと報告されている。一方で、スコアは使う埋め込みモデルや層に依存し、事実の誤りや論理の破綻を必ずしも検出できない。",
+    "history": "2019年にZhangらが論文「BERTScore: Evaluating Text Generation with BERT」をarXivで公開し、2020年のICLRで発表した。",
+    "advantages": [
+      "言い換えや同義語を含む文も意味の近さで評価できる",
+      "参照文があれば自動で計算でき、追加の人手評価が不要"
+    ],
+    "disadvantages": [
+      "スコアが使う埋め込みモデルや層によって変わり、異なる設定間で比較しにくい",
+      "事実の誤りや論理的な矛盾を見逃すことがある",
+      "参照文が必要で、正解が1つに定まらないタスクには向かない"
+    ],
+    "relatedTerms": [
+      "bleu",
+      "rouge",
+      "bert",
+      "embedding",
+      "cosine-similarity",
+      "llm-as-a-judge"
+    ],
+    "references": [
+      {
+        "type": "Research Paper",
+        "label": "BERTScore: Evaluating Text Generation with BERT (Zhang et al., 2019)",
+        "url": "https://arxiv.org/abs/1904.09675"
+      },
+      {
+        "type": "GitHub",
+        "label": "Tiiiger/bert_score",
+        "url": "https://github.com/Tiiiger/bert_score"
+      }
+    ]
+  },
+  {
+    "slug": "helm",
+    "name": "HELM",
+    "aliases": [
+      "Holistic Evaluation of Language Models"
+    ],
+    "tagline": "スタンフォード大学CRFMが開発した、多数のシナリオと複数の評価軸で言語モデルを横断的に評価するフレームワーク",
+    "category": "評価",
+    "tags": [
+      "ベンチマーク",
+      "LLM"
+    ],
+    "summary": "HELM(Holistic Evaluation of Language Models)は、スタンフォード大学のCenter for Research on Foundation Models(CRFM)が開発した言語モデルの評価フレームワーク。単一のベンチマークの正答率だけでモデルを比べるのではなく、質問応答、要約、情報検索、感情分析などの多数の「シナリオ」に対して、正確性だけでなく、キャリブレーション、頑健性、公平性、バイアス、有害性、効率など複数の指標で評価する点が特徴。\n多数のモデルを同じプロンプトと条件で評価し、結果をWebサイトのリーダーボードで公開している。評価用のコードはオープンソースで、利用者が自分でモデルやシナリオを追加して評価できる。\nその後、最新モデル向けのHELM Capabilitiesや、安全性に焦点を当てたHELM Safety、画像と言語を扱うモデル向けのVHELMなど、目的別のリーダーボードにも展開されている。",
+    "history": "2022年にLiangらスタンフォード大学CRFMの研究者が論文「Holistic Evaluation of Language Models」を公開した。",
+    "advantages": [
+      "正確性以外に公平性や頑健性、有害性なども含めて比較できる",
+      "多数のモデルを同じ条件で評価するため、結果を比較しやすい",
+      "評価コードが公開されており、評価を再現・拡張できる"
+    ],
+    "disadvantages": [
+      "シナリオと指標が多く、全体を実行するには計算コストがかかる",
+      "公開されたベンチマークの問題が学習データに含まれると、スコアが実力より高く出るおそれがある"
+    ],
+    "relatedTerms": [
+      "mmlu",
+      "big-bench",
+      "mt-bench",
+      "truthfulqa",
+      "fairness",
+      "data-contamination"
+    ],
+    "references": [
+      {
+        "type": "Research Paper",
+        "label": "Holistic Evaluation of Language Models (Liang et al., 2022)",
+        "url": "https://arxiv.org/abs/2211.09110"
+      },
+      {
+        "type": "Official Website",
+        "label": "HELM (Stanford CRFM)",
+        "url": "https://crfm.stanford.edu/helm/"
+      },
+      {
+        "type": "GitHub",
+        "label": "stanford-crfm/helm",
+        "url": "https://github.com/stanford-crfm/helm"
+      }
+    ]
+  },
+  {
+    "slug": "prompt-tuning",
+    "name": "プロンプトチューニング",
+    "aliases": [
+      "Prompt Tuning",
+      "ソフトプロンプト",
+      "Soft Prompt Tuning"
+    ],
+    "tagline": "モデル本体の重みを固定したまま、入力の先頭に付ける学習可能な埋め込みベクトルだけを学習してタスクに適応させる手法",
+    "category": "技術",
+    "tags": [
+      "ファインチューニング",
+      "PEFT"
+    ],
+    "summary": "プロンプトチューニングは、パラメータ効率の良いファインチューニング(PEFT)手法の1つ。人間が書く自然言語のプロンプトの代わりに、入力トークンの埋め込みの前に「ソフトプロンプト」と呼ばれる学習可能なベクトル列を付け加え、そのベクトルだけを誤差逆伝播で学習する。モデル本体の重みは更新しない。\n学習するパラメータはソフトプロンプトの長さ×埋め込み次元だけなので、タスクごとに保存するデータが非常に小さく、1つのモデルを複数のタスクで共有できる。モデルの規模が大きくなるほど、全パラメータのファインチューニングに近い性能が得られると報告されている。\n類似手法に、入力層だけでなく各層のAttentionにも学習可能なベクトルを追加するPrefix Tuningや、P-Tuningがある。なお、日本語の記事では、プロンプトの文面を試行錯誤して改善する作業をプロンプトチューニングと呼ぶこともあるが、これはプロンプトエンジニアリングに近い意味での用法。",
+    "history": "2021年にLester、Al-Rfou、ConstantがGoogleでの研究として論文「The Power of Scale for Parameter-Efficient Prompt Tuning」を発表した。同年にはLiとLiangがPrefix Tuningを発表している。",
+    "advantages": [
+      "学習するパラメータが非常に少なく、タスクごとの保存容量が小さい",
+      "モデル本体を共有したまま、複数のタスクに切り替えられる"
+    ],
+    "disadvantages": [
+      "小規模なモデルでは全パラメータのファインチューニングより性能が劣りやすい",
+      "学習したソフトプロンプトは人間が読める文章ではなく、内容を解釈しにくい"
+    ],
+    "relatedTerms": [
+      "peft",
+      "lora",
+      "fine-tuning",
+      "prompt-engineering",
+      "embedding"
+    ],
+    "references": [
+      {
+        "type": "Research Paper",
+        "label": "The Power of Scale for Parameter-Efficient Prompt Tuning (Lester et al., 2021)",
+        "url": "https://arxiv.org/abs/2104.08691"
+      },
+      {
+        "type": "Research Paper",
+        "label": "Prefix-Tuning: Optimizing Continuous Prompts for Generation (Li and Liang, 2021)",
+        "url": "https://arxiv.org/abs/2101.00190"
+      }
+    ]
+  },
+  {
+    "slug": "parameter",
+    "name": "パラメータ",
+    "aliases": [
+      "Parameter",
+      "モデルパラメータ",
+      "重み"
+    ],
+    "tagline": "ニューラルネットワークが学習によって獲得する重みとバイアスの値。LLMの規模を表す指標としても使われる",
+    "category": "モデル",
+    "tags": [
+      "LLM",
+      "深層学習"
+    ],
+    "summary": "パラメータは、ニューラルネットワーク内の重みやバイアスなど、学習によって値が調整される数値。学習では、損失を小さくするように勾配降下法でパラメータを更新し、推論では学習済みのパラメータを使って入力から出力を計算する。人間が学習前に設定する学習率やバッチサイズなどのハイパーパラメータとは区別される。\nLLMでは、パラメータの総数がモデルの規模を示す指標として使われ、「7B」「70B」はそれぞれ70億、700億個のパラメータを持つことを表す。例えばGPT-3は1750億パラメータを持つ。スケーリング則の研究では、パラメータ数、学習データ量、計算量を増やすほど損失は下がる傾向にあると示されている。\nただし、性能はパラメータ数だけでは決まらず、学習データの質や量、学習方法にも左右される。また、パラメータ数が多いほど推論に必要なメモリと計算量が増える。量子化でパラメータを低いビット数で表したり、Mixture of Expertsで推論時に一部のパラメータだけを使ったりして、そのコストを抑える手法がある。",
+    "relatedTerms": [
+      "large-language-model",
+      "scaling-laws",
+      "hyperparameter-optimization",
+      "quantization",
+      "mixture-of-experts",
+      "small-language-model"
     ]
   }
 ]
