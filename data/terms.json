@@ -159,7 +159,10 @@
       "arena",
       "scaling-laws",
       "emergent-abilities",
-      "pretraining"
+      "pretraining",
+      "benchmark",
+      "hallucination-rate",
+      "open-weight-model"
     ],
     "faq": [
       {
@@ -387,7 +390,8 @@
       "agentic-rag",
       "retrieval-augmented-fine-tuning",
       "question-answering",
-      "grounding"
+      "grounding",
+      "llamaindex"
     ],
     "faq": [
       {
@@ -488,7 +492,8 @@
       "dpo",
       "catastrophic-forgetting",
       "retrieval-augmented-fine-tuning",
-      "pretraining"
+      "pretraining",
+      "role-prompting"
     ],
     "faq": [
       {
@@ -1959,7 +1964,8 @@
       "npu",
       "phi",
       "gemma",
-      "edge-ai"
+      "edge-ai",
+      "on-device-ai"
     ],
     "faq": [
       {
@@ -2225,7 +2231,8 @@
       "large-language-model",
       "context-window",
       "few-shot",
-      "in-context-learning"
+      "in-context-learning",
+      "user-prompt"
     ],
     "faq": [
       {
@@ -4373,7 +4380,8 @@
       "autonomous-agent",
       "multi-agent",
       "tool-calling",
-      "tool-using-ai"
+      "tool-using-ai",
+      "autogpt"
     ],
     "faq": [
       {
@@ -8349,7 +8357,8 @@
       "rouge",
       "precision",
       "nlp",
-      "machine-translation"
+      "machine-translation",
+      "accuracy"
     ],
     "faq": [
       {
@@ -18316,7 +18325,8 @@
       "alignment",
       "reasoning-model",
       "large-language-model",
-      "arc-agi"
+      "arc-agi",
+      "asi"
     ],
     "faq": [
       {
@@ -19125,7 +19135,8 @@
       "deepfake",
       "multimodal",
       "notebooklm",
-      "voice-cloning"
+      "voice-cloning",
+      "voice-ai"
     ],
     "faq": [
       {
@@ -20560,7 +20571,8 @@
       "red-teaming",
       "frontier-model",
       "foundation-model",
-      "automated-decision-making"
+      "automated-decision-making",
+      "ai-governance"
     ],
     "faq": [
       {
@@ -29210,7 +29222,8 @@
       "red-teaming",
       "responsible-ai",
       "content-policy",
-      "community-standards"
+      "community-standards",
+      "toxicity"
     ],
     "references": [
       {
@@ -29396,7 +29409,8 @@
       "ai-ethics",
       "alignment",
       "transparency",
-      "inclusive-design"
+      "inclusive-design",
+      "ai-bias"
     ],
     "references": [
       {
@@ -30987,7 +31001,8 @@
       "kv-cache",
       "inference-optimization",
       "quantization",
-      "flash-attention"
+      "flash-attention",
+      "throughput"
     ]
   },
   {
@@ -32709,6 +32724,485 @@
       "quantization",
       "mixture-of-experts",
       "small-language-model"
+    ]
+  },
+  {
+    "slug": "llamaindex",
+    "name": "LlamaIndex",
+    "aliases": [
+      "GPT Index",
+      "ラマインデックス"
+    ],
+    "tagline": "社内文書などの外部データをLLMにつなぎ、RAGアプリケーションを構築するためのデータフレームワーク",
+    "category": "技術",
+    "tags": [
+      "RAG",
+      "フレームワーク"
+    ],
+    "summary": "LlamaIndexは、LLMと外部データを接続するためのオープンソースのフレームワーク。PDF・Webページ・データベース・SaaSなどからデータを読み込むコネクタ、文書をチャンクに分割して埋め込みベクトルに変換するインデックス作成、質問に応じて関連チャンクを検索してLLMに渡すクエリエンジンをひと通り備えており、RAGアプリケーションを少ないコードで組み立てられる。\nPythonとTypeScriptの実装があり、ベクトルデータベースや埋め込みモデル、LLMのプロバイダーを差し替えられる。近年はRAGに加えて、ツールを使うエージェントや複数ステップの処理を記述するワークフローの機能も提供している。LangChainと用途が重なる部分もある。LlamaIndexは、データの取り込み・インデックス化・検索に関する機能を特に充実させている。",
+    "history": "2022年11月にJerry Liuが「GPT Index」という名前で公開し、のちにLlamaIndexへ改名した。2023年には開発元として同名の企業が設立されている。",
+    "advantages": [
+      "データの読み込みから検索・回答生成までを少ないコードで組み立てられる",
+      "多数のデータコネクタやベクトルデータベースとの連携が用意されている"
+    ],
+    "disadvantages": [
+      "抽象化の層が多く、内部で何が起きているかを追いにくい場合がある",
+      "開発が速くAPIの変更が多いため、バージョン更新時に修正が必要になりやすい"
+    ],
+    "relatedTerms": [
+      "retrieval-augmented-generation",
+      "langchain",
+      "haystack",
+      "vector-database",
+      "chunking",
+      "embedding"
+    ],
+    "references": [
+      {
+        "type": "Official Website",
+        "label": "LlamaIndex",
+        "url": "https://www.llamaindex.ai/"
+      },
+      {
+        "type": "GitHub",
+        "label": "run-llama/llama_index",
+        "url": "https://github.com/run-llama/llama_index"
+      }
+    ]
+  },
+  {
+    "slug": "autogpt",
+    "name": "AutoGPT",
+    "aliases": [
+      "Auto-GPT"
+    ],
+    "tagline": "目標を与えるとGPT-4が自らタスクを分解・実行・評価するループを回す、自律型AIエージェントの初期の代表例",
+    "category": "エージェント",
+    "tags": [
+      "自律エージェント",
+      "オープンソース"
+    ],
+    "summary": "AutoGPTは、ユーザーが自然言語で与えた目標に向けて、LLMが行動を自動で繰り返すオープンソースのプログラム。LLMは次に取る行動を考えてWeb検索やファイル操作などのコマンドを実行し、その結果を踏まえて次の行動を決める。人間が1ステップずつ指示しなくてもタスクを進める「自律型エージェント」のイメージを広く知らしめた。\n一方で、同じ行動を繰り返して先に進まない、途中で目標から逸れる、APIの利用料がかさむといった課題も多く指摘された。こうした経験は、その後のエージェント開発で計画・記憶・人間による確認を重視する流れにつながった。現在のプロジェクトは、エージェントをブロックの組み合わせで構築・運用するプラットフォームへと方向を変えている。",
+    "history": "2023年3月にToran Bruce Richards(Significant Gravitas)がGitHubで公開した。公開直後にGitHubのスター数が急増し、同時期のBabyAGIとともに自律型エージェントへの関心を高めた。",
+    "disadvantages": [
+      "行動のループが収束せず、同じ処理を繰り返すことがある",
+      "LLMの呼び出し回数が多く、コストが読みにくい"
+    ],
+    "relatedTerms": [
+      "autonomous-agent",
+      "ai-agent",
+      "agent-memory",
+      "planner",
+      "gpt",
+      "tool-calling"
+    ],
+    "references": [
+      {
+        "type": "GitHub",
+        "label": "Significant-Gravitas/AutoGPT",
+        "url": "https://github.com/Significant-Gravitas/AutoGPT"
+      }
+    ]
+  },
+  {
+    "slug": "benchmark",
+    "name": "ベンチマーク",
+    "aliases": [
+      "Benchmark",
+      "評価ベンチマーク"
+    ],
+    "tagline": "共通の問題セットと採点方法でAIモデルの性能を測り、モデル同士を比較するための標準テスト",
+    "category": "評価",
+    "tags": [
+      "評価",
+      "LLM"
+    ],
+    "summary": "ベンチマークは、決まった問題セットと採点基準を用意し、複数のモデルを同じ条件で評価するためのテスト。LLMでは、知識を問うMMLU、プログラミング能力を測るHumanEval、算数の文章題を解くGSM8K、実際のGitHubのissueを修正させるSWE-benchなど、能力ごとに多数のベンチマークが作られている。\nスコアは数値で比べやすい反面、特定のベンチマークで高得点でも実際の業務で役立つとは限らない。テスト問題が学習データに混入する「データ汚染」や、スコアを上げるための過剰な最適化、上位モデルの得点が上限に張り付いて差が出なくなる「飽和」といった問題もある。そのため、新しい難問のベンチマークの作成や、人間の投票によるArenaのような評価方法、自社業務に合わせた独自の評価セットの整備も行われている。",
+    "disadvantages": [
+      "スコアが高くても、実際の利用場面での性能を保証しない",
+      "問題が学習データに含まれると、スコアが実力以上に高く出る"
+    ],
+    "relatedTerms": [
+      "mmlu",
+      "humaneval",
+      "gsm8k",
+      "swe-bench",
+      "data-contamination",
+      "helm",
+      "arena"
+    ]
+  },
+  {
+    "slug": "accuracy",
+    "name": "正解率",
+    "aliases": [
+      "Accuracy",
+      "精度",
+      "正答率"
+    ],
+    "tagline": "全予測のうち正しく当たった割合を表す、分類やベンチマークの最も基本的な評価指標",
+    "category": "評価",
+    "tags": [
+      "評価指標",
+      "分類"
+    ],
+    "summary": "正解率(Accuracy)は、予測した件数全体のうち正解と一致した件数の割合。二値分類では、真陽性(TP)・真陰性(TN)・偽陽性(FP)・偽陰性(FN)を用いて (TP+TN)/(TP+TN+FP+FN) で計算する。LLMのベンチマークでも、選択式問題で正答した割合を正解率として報告することが多い。\n計算が簡単で直感的に理解しやすい一方、クラスの偏りが大きいデータでは実態を表さない。たとえば陽性が1%しかないデータで常に「陰性」と予測すると、正解率は99%になるが陽性を1件も見つけられない。このような場合は適合率(Precision)・再現率(Recall)・F1スコアなどを併せて確認する。なお、日本語の「精度」は正解率を指す場合と適合率を指す場合があり、文脈に注意が必要。",
+    "codeExamples": [
+      {
+        "title": "scikit-learnで正解率を計算する",
+        "language": "python",
+        "code": "from sklearn.metrics import accuracy_score\n\ny_true = [1, 0, 1, 1, 0]\ny_pred = [1, 0, 0, 1, 0]\nprint(accuracy_score(y_true, y_pred))  # 0.8"
+      }
+    ],
+    "advantages": [
+      "計算が簡単で、意味を直感的に理解しやすい"
+    ],
+    "disadvantages": [
+      "クラスの偏りが大きいデータでは、性能を過大に見せてしまう"
+    ],
+    "relatedTerms": [
+      "precision",
+      "recall",
+      "f1",
+      "classification",
+      "benchmark"
+    ]
+  },
+  {
+    "slug": "toxicity",
+    "name": "毒性",
+    "aliases": [
+      "Toxicity",
+      "有害性"
+    ],
+    "tagline": "AIの出力に含まれる暴言・差別・脅迫などの有害な表現の度合いと、それを測る評価の観点",
+    "category": "評価",
+    "tags": [
+      "安全性",
+      "評価指標"
+    ],
+    "summary": "毒性(Toxicity)は、文章に含まれる侮辱・差別的な表現・脅迫・卑猥な表現など、相手を傷つけたり不快にさせたりする要素の度合いを指す。LLMはWeb上の大量のテキストで事前学習されるため、学習データに含まれる有害な表現を再現してしまうことがある。\n評価では、有害な出力を誘発しやすいプロンプトを与え、生成文を毒性判定の分類器でスコア化し、閾値を超えた出力の割合などを測る。判定にはGoogleのJigsawが提供するPerspective APIなどが使われてきた。対策としては、RLHFなどのアライメントで有害な出力を避けるよう学習させる方法や、入出力をフィルタリングするガードレール、コンテンツモデレーションの仕組みが組み合わされる。\n何を有害とみなすかは文化・言語・文脈によって異なり、分類器自体が特定の方言や属性に関する語を過剰に有害と判定する偏りも指摘されている。",
+    "history": "2020年にGehmanらが論文「RealToxicityPrompts」を発表し、言語モデルが有害な文章を生成する傾向を大規模に測定する評価データセットを公開した。",
+    "relatedTerms": [
+      "content-moderation",
+      "guardrails",
+      "output-filtering",
+      "red-teaming",
+      "alignment",
+      "ai-bias"
+    ],
+    "references": [
+      {
+        "type": "Research Paper",
+        "label": "RealToxicityPrompts: Evaluating Neural Toxic Degeneration in Language Models (Gehman et al., 2020)",
+        "url": "https://arxiv.org/abs/2009.11462"
+      }
+    ]
+  },
+  {
+    "slug": "ai-bias",
+    "name": "AIバイアス",
+    "aliases": [
+      "Bias",
+      "AI Bias",
+      "アルゴリズムバイアス"
+    ],
+    "tagline": "学習データや設計の偏りにより、AIが性別・人種・年齢などの属性によって不公平な出力や判断をしてしまう問題",
+    "category": "技術",
+    "tags": [
+      "公平性",
+      "AI倫理"
+    ],
+    "summary": "AIバイアスは、AIモデルの出力や判断が特定の属性をもつ人々に対して系統的に偏る問題。原因の多くは学習データにあり、社会に存在する偏見や、特定の集団のデータが少ないといった偏りをモデルがそのまま学習してしまう。ラベル付けの基準や評価指標の選び方、利用場面の設計から生じることもある。\nLLMでは、職業と性別を結び付けたステレオタイプな文章を生成する、特定の言語や文化圏の視点に偏った回答をする、といった形で現れる。採用・融資・医療など人に影響する判断でAIを使う場合、問題はより重大になる。\n主な対策は、学習データの見直し、属性ごとの性能差の測定、アライメントによる出力の調整、導入前の影響評価など。ただし「公平」の定義は複数あり、すべてを同時に満たせない場合もあるため、用途に応じてどの基準を重視するかを決める必要がある。",
+    "relatedTerms": [
+      "fairness",
+      "ai-ethics",
+      "responsible-ai",
+      "algorithmic-impact-assessment",
+      "ai-auditing",
+      "toxicity"
+    ],
+    "references": [
+      {
+        "type": "Research Paper",
+        "label": "BBQ: A Hand-Built Bias Benchmark for Question Answering (Parrish et al., 2021)",
+        "url": "https://arxiv.org/abs/2110.08193"
+      }
+    ]
+  },
+  {
+    "slug": "throughput",
+    "name": "スループット",
+    "aliases": [
+      "Throughput"
+    ],
+    "tagline": "単位時間あたりにシステムが処理できる量で、LLM推論では1秒あたりの生成トークン数やリクエスト数で表す性能指標",
+    "category": "インフラ",
+    "tags": [
+      "推論",
+      "性能指標"
+    ],
+    "summary": "スループットは、システムが一定時間内に処理できる仕事の量。LLMの推論サーバーでは、1秒あたりに生成できるトークン数(tokens/s)や、1秒あたりに処理できるリクエスト数で測ることが多い。1件のリクエストに応答するまでの時間を表すレイテンシと並ぶ、推論基盤の基本的な性能指標。\nスループットとレイテンシはトレードオフの関係になりやすい。複数のリクエストをまとめて処理するバッチサイズを大きくするとGPUの利用効率が上がりスループットは向上するが、1件あたりの待ち時間は長くなりがち。vLLMなどの推論エンジンは、連続バッチング(Continuous Batching)やKVキャッシュのメモリ管理を工夫して、レイテンシを抑えつつスループットを高めている。\n同じGPUでより多くのトークンを処理できれば1トークンあたりのコストが下がるため、サービスの運用コストにも直結する。",
+    "relatedTerms": [
+      "latency-optimization",
+      "continuous-batching",
+      "batch-inference",
+      "kv-cache",
+      "vllm",
+      "inference-optimization"
+    ]
+  },
+  {
+    "slug": "hallucination-rate",
+    "name": "ハルシネーション率",
+    "aliases": [
+      "Hallucination Rate",
+      "幻覚率"
+    ],
+    "tagline": "LLMの出力のうち、事実と異なる内容や根拠のない内容を含むものの割合を表す評価指標",
+    "category": "評価",
+    "tags": [
+      "ハルシネーション",
+      "評価指標"
+    ],
+    "summary": "ハルシネーション率は、LLMが生成した回答のうち、事実誤認や与えられた資料に書かれていない内容(ハルシネーション)を含むものがどの程度あるかを示す指標。業務でLLMを使う際の信頼性の目安として重視される。\n測り方は評価の目的によって異なる。与えた文書の要約や、RAGで検索した資料に基づく回答が資料と食い違っていないかを判定する方法と、一般的な知識に関する質問への回答が事実として正しいかを判定する方法がある。判定には人手による確認のほか、専用の分類モデルやLLM-as-a-Judgeが使われる。\n数値は評価データ・判定方法・タスクによって大きく変わるため、異なる評価間の比較には注意が必要。自社の用途に近いデータで測ることが実務上は重要になる。",
+    "relatedTerms": [
+      "hallucination",
+      "truthfulqa",
+      "grounding",
+      "llm-as-a-judge",
+      "retrieval-augmented-generation",
+      "benchmark"
+    ],
+    "references": [
+      {
+        "type": "GitHub",
+        "label": "vectara/hallucination-leaderboard",
+        "url": "https://github.com/vectara/hallucination-leaderboard"
+      }
+    ]
+  },
+  {
+    "slug": "asi",
+    "name": "ASI",
+    "aliases": [
+      "Artificial Superintelligence",
+      "人工超知能",
+      "超知能"
+    ],
+    "tagline": "科学・創造性・社会的判断などほぼすべての分野で人間の知能を大きく上回るとされる、仮説上のAI",
+    "category": "技術",
+    "tags": [
+      "AGI",
+      "AI安全性"
+    ],
+    "summary": "ASI(Artificial Superintelligence、人工超知能)は、人間と同程度の汎用的な知能をもつAGIをさらに超え、ほぼすべての知的作業で最も優れた人間を大きく上回る知能をもつAIを指す概念。現時点では実現しておらず、仮説上の存在として議論されている。\nAIが自分自身の設計を改良し、その改良されたAIがさらに優れたAIを作るという連鎖によって、知能が急速に高まる「知能爆発」の考え方とあわせて語られることが多い。ASIが人間の意図と異なる目標を追求した場合の危険性は、AIアライメントやAI安全性の研究が取り組む中心的な問題の1つになっている。\n実現時期や実現可能性については専門家の間でも見解が大きく分かれている。",
+    "history": "1965年にI. J. Goodが論文「Speculations Concerning the First Ultraintelligent Machine」で、人間を超える「超知能機械」と知能爆発の考え方を示した。2014年にはNick Bostromが著書『Superintelligence』で超知能のリスクを論じ、この語が広く知られるようになった。",
+    "relatedTerms": [
+      "agi",
+      "alignment",
+      "frontier-model",
+      "value-learning",
+      "responsible-ai"
+    ]
+  },
+  {
+    "slug": "ai-governance",
+    "name": "AIガバナンス",
+    "aliases": [
+      "AI Governance"
+    ],
+    "tagline": "組織や社会がAIを安全かつ適切に利用するために、ルール・体制・リスク管理の仕組みを整えて運用すること",
+    "category": "技術",
+    "tags": [
+      "ガバナンス",
+      "規制"
+    ],
+    "summary": "AIガバナンスは、AIの開発・導入・運用に伴うリスクを管理し、法令や倫理に沿って活用するための枠組み。企業では、AI利用のポリシー策定、利用してよいツールやデータの範囲の決定、責任者や審査の体制づくり、リスク評価、導入後のモニタリングや監査などが含まれる。\n生成AIの普及により、機密情報の入力による情報漏えい、ハルシネーションによる誤情報、著作権侵害、従業員による無許可のAI利用(シャドーAI)など、管理すべきリスクが広がった。各国でも規制やガイドラインの整備が進んでおり、EUのAI法(EU AI Act)、米国NISTのAIリスクマネジメントフレームワーク(AI RMF)、AIマネジメントシステムの国際規格ISO/IEC 42001などが参照される。\n禁止事項を並べるだけでは現場での活用が進まないため、リスクの大きさに応じて管理の強さを変える考え方が一般的になっている。",
+    "relatedTerms": [
+      "eu-ai-act",
+      "responsible-ai",
+      "ai-auditing",
+      "shadow-ai",
+      "ai-ethics-board",
+      "model-card"
+    ],
+    "references": [
+      {
+        "type": "Official Website",
+        "label": "NIST AI Risk Management Framework",
+        "url": "https://www.nist.gov/itl/ai-risk-management-framework"
+      },
+      {
+        "type": "Specification",
+        "label": "ISO/IEC 42001:2023 Artificial intelligence — Management system",
+        "url": "https://www.iso.org/standard/81230.html"
+      }
+    ]
+  },
+  {
+    "slug": "on-device-ai",
+    "name": "オンデバイスAI",
+    "aliases": [
+      "On-device AI",
+      "デバイス上AI"
+    ],
+    "tagline": "クラウドにデータを送らず、スマートフォンやPCなどの端末上でAIモデルを動かして推論する技術",
+    "category": "インフラ",
+    "tags": [
+      "推論",
+      "エッジ"
+    ],
+    "summary": "オンデバイスAIは、スマートフォン・PC・家電などの端末自体でAIモデルを動かす方式。入力データを外部のサーバーへ送らずに処理できるため、プライバシーを保護しやすく、通信の遅延がなく、オフラインでも動作するといった利点がある。\n端末の計算能力やメモリ、バッテリーには制約があるため、パラメータ数の少ない小規模言語モデル(SLM)を用いたり、量子化などでモデルを圧縮したりする工夫が必要になる。近年はスマートフォンやPCのプロセッサにNPUと呼ばれるAI処理用の回路が搭載され、端末上でLLMを動かす事例も増えている。\n大きなモデルが必要な処理はクラウドに任せ、軽い処理は端末で行うといった、オンデバイスとクラウドを組み合わせる構成もとられる。工場の機器やネットワーク側の装置も含めて端末の近くで処理する考え方は、エッジAIと呼ばれる。",
+    "advantages": [
+      "データを外部に送らないため、プライバシーを保護しやすい",
+      "通信の遅延がなく、オフラインでも動作する"
+    ],
+    "disadvantages": [
+      "端末の性能の制約から、大規模なモデルは動かしにくい",
+      "モデルの更新を端末ごとに配布する必要がある"
+    ],
+    "relatedTerms": [
+      "edge-ai",
+      "small-language-model",
+      "npu",
+      "quantization",
+      "local-llm",
+      "tinyml"
+    ]
+  },
+  {
+    "slug": "open-weight-model",
+    "name": "オープンウェイトモデル",
+    "aliases": [
+      "Open Weight Model",
+      "オープンモデル",
+      "オープンソースLLM"
+    ],
+    "tagline": "学習済みの重み(パラメータ)が公開され、誰でもダウンロードして手元の環境で実行や追加学習ができるAIモデル",
+    "category": "モデル",
+    "tags": [
+      "LLM",
+      "オープンソース"
+    ],
+    "summary": "オープンウェイトモデルは、学習済みモデルの重みファイルが公開されているモデル。MetaのLlama、Mistral AIのモデル、AlibabaのQwen、DeepSeek、GoogleのGemmaなどが代表例で、Hugging Faceなどから入手して自社のサーバーやPCで動かせる。APIでしか使えないモデルと違い、データを外部へ送らずに運用できる。ファインチューニングで自社向けの調整も可能。\n日本語では「オープンソースLLM」と呼ばれることも多いが、重みが公開されていても、学習データや学習コードは非公開のことが多く、ライセンスで商用利用や利用者数に条件が付く場合もある。そのため、オープンソースの定義を満たさないモデルを区別して「オープンウェイト」と呼ぶことが増えている。Open Source Initiative(OSI)は2024年に、AIシステムがオープンソースとみなされる条件を「Open Source AI Definition」として公表した。\n利用時は、モデルごとのライセンス条件を確認する必要がある。",
+    "advantages": [
+      "自社環境で運用でき、データを外部へ送らずに済む",
+      "ファインチューニングや量子化などで用途に合わせて調整できる"
+    ],
+    "disadvantages": [
+      "推論用のGPUなどの計算資源を自前で用意・運用する必要がある",
+      "商用利用などの条件をライセンスで定めているモデルがある"
+    ],
+    "relatedTerms": [
+      "llama",
+      "mistral",
+      "qwen",
+      "deepseek",
+      "gemma",
+      "hugging-face",
+      "local-llm"
+    ],
+    "references": [
+      {
+        "type": "Official Website",
+        "label": "The Open Source AI Definition (Open Source Initiative)",
+        "url": "https://opensource.org/ai/open-source-ai-definition"
+      }
+    ]
+  },
+  {
+    "slug": "voice-ai",
+    "name": "音声AI",
+    "aliases": [
+      "Voice AI",
+      "ボイスAI"
+    ],
+    "tagline": "人の音声を聞き取って理解し、音声で応答する、音声によるやり取りを担うAIの総称",
+    "category": "技術",
+    "tags": [
+      "音声",
+      "マルチモーダル"
+    ],
+    "summary": "音声AIは、音声認識・言語理解・音声合成を組み合わせ、人と音声で対話するAIの総称。音声アシスタント、コールセンターの自動応答、会議の文字起こし、通訳などで使われる。\n従来の構成は、音声認識(Speech-to-Text)で文字に変換し、LLMなどで応答文を作り、音声合成(Text-to-Speech)で読み上げる3段階のパイプラインだった。この方式は部品を差し替えやすい一方、段階ごとに遅延が積み重なり、声の抑揚や感情といった情報が文字化の段階で失われる。近年は音声を直接入出力できるマルチモーダルモデルが登場し、相手の発話に割り込んだり、間を置かずに応答したりする、より自然な会話が可能になってきた。2024年にはOpenAIが、音声で低遅延の対話を実現するRealtime APIを公開している。\n実用化にあたっては、応答の遅延、雑音や話者の重なりへの対応、なりすましにつながる声のクローン悪用への対策などが課題になる。",
+    "relatedTerms": [
+      "text-to-speech",
+      "whisper",
+      "multimodal",
+      "voice-cloning",
+      "virtual-assistant",
+      "streaming"
+    ],
+    "references": [
+      {
+        "type": "Blog",
+        "label": "Introducing the Realtime API (OpenAI)",
+        "url": "https://openai.com/index/introducing-the-realtime-api/"
+      }
+    ]
+  },
+  {
+    "slug": "user-prompt",
+    "name": "ユーザープロンプト",
+    "aliases": [
+      "User Prompt",
+      "ユーザーメッセージ"
+    ],
+    "tagline": "対話の中でユーザーがLLMに入力する個々の質問や指示",
+    "category": "技術",
+    "tags": [
+      "プロンプト"
+    ],
+    "summary": "ユーザープロンプトは、チャットなどでユーザーがその都度LLMに入力する質問や依頼の文章。チャット形式のLLM APIでは、メッセージに「system」「user」「assistant」などの役割(ロール)が付けられ、ユーザープロンプトは「user」ロールのメッセージとして渡される。\nAIの役割や口調、守るべきルールなど対話全体に共通する前提はシステムプロンプトに書き、個別の依頼内容はユーザープロンプトに書く、という使い分けが一般的。多くのモデルはシステムプロンプトの指示をユーザープロンプトより優先するよう学習されている。\nユーザープロンプトには、ユーザーが貼り付けた文書やWebページの内容が含まれることもある。そこに紛れ込んだ悪意ある指示でモデルの動作を乗っ取るプロンプトインジェクションへの対策が、アプリケーション開発では重要になる。",
+    "codeExamples": [
+      {
+        "title": "Anthropic APIでシステムプロンプトとユーザープロンプトを渡す",
+        "language": "python",
+        "code": "import anthropic\n\nclient = anthropic.Anthropic()\nmessage = client.messages.create(\n    model=\"claude-sonnet-5-5\",\n    max_tokens=1024,\n    system=\"あなたは社内ヘルプデスクの担当者です。\",\n    messages=[{\"role\": \"user\", \"content\": \"VPNに接続できません。\"}],\n)\nprint(message.content[0].text)"
+      }
+    ],
+    "relatedTerms": [
+      "system-prompt",
+      "prompt",
+      "prompt-engineering",
+      "prompt-template",
+      "prompt-injection"
+    ]
+  },
+  {
+    "slug": "role-prompting",
+    "name": "ロールプロンプティング",
+    "aliases": [
+      "Role Prompting",
+      "ペルソナプロンプト",
+      "Persona Prompting",
+      "ロールプレイプロンプト"
+    ],
+    "tagline": "「あなたは経験豊富な弁護士です」のように、LLMに特定の役割や人物像を与えて応答の観点や口調を方向付けるプロンプト技法",
+    "category": "技術",
+    "tags": [
+      "プロンプト",
+      "プロンプトエンジニアリング"
+    ],
+    "summary": "ロールプロンプティングは、プロンプトの中でLLMに担ってほしい役割(ロール)や人物像(ペルソナ)を指定する技法。「あなたはセキュリティの専門家として、このコードをレビューしてください」のように書くことで、回答の観点・専門用語の使い方・口調などを役割に沿ったものへ寄せる。システムプロンプトに書かれることが多い。\n口調や文体、想定読者に合わせた説明の仕方を揃えるのには効果を発揮しやすい。一方、役割を与えるだけで正答率などの性能が向上するかについては研究によって結果が分かれており、効果がほとんど見られないという報告もある。役割の指定に加えて、目的・前提条件・出力形式などを具体的に書くことが重要とされる。\nまた、架空の人物になりきらせることで安全上の制約を回避させようとするジェイルブレイクの手口にも使われるため、アプリケーション側での対策が必要になる。",
+    "relatedTerms": [
+      "prompt-engineering",
+      "system-prompt",
+      "user-prompt",
+      "few-shot",
+      "jailbreak"
+    ],
+    "references": [
+      {
+        "type": "Research Paper",
+        "label": "Better Zero-Shot Reasoning with Role-Play Prompting (Kong et al., 2023)",
+        "url": "https://arxiv.org/abs/2308.07702"
+      },
+      {
+        "type": "Research Paper",
+        "label": "Is \"A Helpful Assistant\" the Best Role for Large Language Models? (Zheng et al., 2023)",
+        "url": "https://arxiv.org/abs/2311.10054"
+      }
     ]
   }
 ]
