@@ -1,9 +1,12 @@
 "use client"
 
-import { FC, useState } from "react"
+import { FC, Fragment, useState } from "react"
+import { InArticleAd } from "components/analytics/display-ad"
 import { Badge, Section, SectionTitle } from "components/elements/layout"
 import { TermCard } from "components/term/term-card"
 import { TermSummaryCard } from "lib/terms"
+
+const AD_INTERVAL = 6
 
 const matchesQuery = (term: TermSummaryCard, query: string): boolean => {
   const normalized = query.trim().toLowerCase()
@@ -141,8 +144,11 @@ export const TermExplorer: FC<{
               gridTemplateColumns: "repeat(auto-fill, minmax(20rem, 1fr))",
             }}
           >
-            {filteredTerms.map((term) => (
-              <TermCard key={term.slug} term={term} />
+            {filteredTerms.map((term, i) => (
+              <Fragment key={term.slug}>
+                <TermCard term={term} />
+                {(i + 1) % AD_INTERVAL === 0 && <InArticleAd style={{ gridColumn: "1 / -1" }} />}
+              </Fragment>
             ))}
           </div>
         ) : (
