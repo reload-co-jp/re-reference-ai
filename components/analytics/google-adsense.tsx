@@ -1,7 +1,7 @@
 import { FC } from "react"
 import Script from "next/script"
 
-const ADSENSE_CLIENT_ID = "ca-pub-6542845006087970"
+export const ADSENSE_CLIENT_ID = "ca-pub-6542845006087970"
 
 export const GoogleAdsense: FC = () => {
   if (process.env.NODE_ENV !== "production") {

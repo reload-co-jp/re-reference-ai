@@ -2,6 +2,7 @@ import { Metadata } from "next"
 import { FC } from "react"
 import Link from "next/link"
 import { notFound } from "next/navigation"
+import { DisplayAd } from "components/analytics/display-ad"
 import { Breadcrumb } from "components/elements/breadcrumb"
 import { Badge, Container, Section, SectionTitle } from "components/elements/layout"
 import { ReferenceList } from "components/elements/reference-list"
@@ -249,6 +250,8 @@ const ComparePage: FC<Props> = async ({ params }) => {
         </Section>
       )}
 
+      <DisplayAd />
+
       {/* Advantages */}
       {comparison.advantages && (
         <Section>
@@ -376,6 +379,8 @@ const ComparePage: FC<Props> = async ({ params }) => {
           ))}
         </Section>
       )}
+
+      <DisplayAd />
 
       {/* References */}
       {comparison.references && comparison.references.length > 0 && (

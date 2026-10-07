@@ -2,6 +2,7 @@ import { Metadata } from "next"
 import { FC } from "react"
 import Link from "next/link"
 import { notFound } from "next/navigation"
+import { DisplayAd } from "components/analytics/display-ad"
 import { Breadcrumb } from "components/elements/breadcrumb"
 import { Badge, Container, Section, SectionTitle } from "components/elements/layout"
 import { ArticleCard } from "components/article/article-card"
@@ -316,6 +317,8 @@ const TermPage: FC<Props> = async ({ params }) => {
         </Section>
       )}
 
+      <DisplayAd />
+
       {/* Advantages */}
       {term.advantages && term.advantages.length > 0 && (
         <Section>
@@ -399,6 +402,8 @@ const TermPage: FC<Props> = async ({ params }) => {
           ))}
         </Section>
       )}
+
+      <DisplayAd />
 
       {/* References */}
       {term.references && term.references.length > 0 && (

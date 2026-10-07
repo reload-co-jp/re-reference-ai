@@ -4,6 +4,7 @@ import Link from "next/link"
 import { notFound } from "next/navigation"
 import { ArticleCard } from "components/article/article-card"
 import { ModelComparisonTable } from "components/article/model-comparison-table"
+import { DisplayAd } from "components/analytics/display-ad"
 import { Breadcrumb } from "components/elements/breadcrumb"
 import { Badge, Container, Section, SectionTitle } from "components/elements/layout"
 import { ReferenceList } from "components/elements/reference-list"
@@ -230,6 +231,8 @@ const ArticlePage: FC<Props> = async ({ params }) => {
         )
       })}
 
+      <DisplayAd />
+
       {/* Models */}
       {models.length > 0 && (
       <Section>
@@ -365,6 +368,8 @@ const ArticlePage: FC<Props> = async ({ params }) => {
           ))}
         </Section>
       )}
+
+      <DisplayAd />
 
       {/* References */}
       {article.references && article.references.length > 0 && (
