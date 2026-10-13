@@ -6301,7 +6301,8 @@
       "reasoning-model",
       "rlhf",
       "large-language-model",
-      "grpo"
+      "grpo",
+      "deepseek-harness"
     ],
     "faq": [
       {
@@ -9558,7 +9559,9 @@
       "guardrails",
       "agent-memory",
       "context-engineering",
-      "graph-engineering"
+      "graph-engineering",
+      "pi-coding-agent",
+      "deepseek-harness"
     ],
     "comparisons": [
       {
@@ -17542,7 +17545,8 @@
       "amazon-q-developer",
       "tui",
       "code-generation",
-      "opencode"
+      "opencode",
+      "pi-coding-agent"
     ],
     "faq": [
       {
@@ -22869,7 +22873,8 @@
       "tui",
       "openchamber",
       "opencode",
-      "orca-ide"
+      "orca-ide",
+      "pi-coding-agent"
     ],
     "faq": [
       {
@@ -31426,7 +31431,8 @@
       "tui",
       "mcp",
       "harness-engineering",
-      "aider"
+      "aider",
+      "pi-coding-agent"
     ],
     "faq": [
       {
@@ -33202,6 +33208,91 @@
         "type": "Research Paper",
         "label": "Is \"A Helpful Assistant\" the Best Role for Large Language Models? (Zheng et al., 2023)",
         "url": "https://arxiv.org/abs/2311.10054"
+      }
+    ]
+  },
+  {
+    "slug": "pi-coding-agent",
+    "name": "Pi",
+    "aliases": [
+      "pi-coding-agent",
+      "Pi Coding Agent"
+    ],
+    "tagline": "最小限のシステムプロンプトとツールで構成された、ターミナル上で動作するオープンソースのコーディングエージェント",
+    "category": "エージェント",
+    "tags": [
+      "コーディングエージェント",
+      "オープンソース"
+    ],
+    "plainSummary": "必要最低限の機能だけを持たせた、ターミナルで使うAIコーディング用のツール。",
+    "summary": "Piは、libGDXの作者として知られるMario Zechnerが開発するオープンソースのコーディングエージェント。TypeScriptで実装され、ターミナル上で動作する。\nシステムプロンプトと組み込みツールを最小限に絞る設計方針をとり、ファイルの読み取り・書き込み・編集とシェルコマンドの実行といった基本的なツールを中心にエージェントループを構成する。機能を追加したい場合は拡張機能などで利用者側が組み込む。\n複数のLLMプロバイダーを共通のAPIで扱うライブラリやTUIライブラリと合わせてモノレポ「pi-mono」として公開されており、エージェントの中核部分を他のアプリケーションに組み込むハーネスとしても使われている。",
+    "comparisons": [
+      {
+        "slug": "claude-code",
+        "note": "Claude Codeが多機能な組み込みツールと詳細なシステムプロンプトを備えるのに対し、Piは最小構成を出発点とし、必要な機能を利用者が足していく設計をとる"
+      }
+    ],
+    "relatedTerms": [
+      "coding-agent",
+      "harness-engineering",
+      "claude-code",
+      "opencode",
+      "tui",
+      "deepseek-harness"
+    ],
+    "references": [
+      {
+        "type": "GitHub",
+        "label": "badlogic/pi-mono",
+        "url": "https://github.com/badlogic/pi-mono"
+      }
+    ]
+  },
+  {
+    "slug": "deepseek-harness",
+    "name": "DeepSeek Harness",
+    "aliases": [
+      "DSH",
+      "dsh"
+    ],
+    "tagline": "DeepSeekが開発する、あらゆる機能をプラグインとして構成するオープンソースのエージェントハーネス",
+    "category": "エージェント",
+    "tags": [
+      "エージェント",
+      "オープンソース",
+      "プラグイン"
+    ],
+    "plainSummary": "DeepSeekが公開している、AIエージェントを動かすための土台となるソフトウェア。機能の追加や差し替えをプラグイン単位で行える。",
+    "summary": "DeepSeek Harness（コマンド名 dsh）は、DeepSeekが開発するオープンソースのエージェントハーネス。MITライセンスで公開されている。\n「everything is a plugin（すべてはプラグイン）」というアーキテクチャをとり、プラグインフレームワークのCordisを基盤としている。Cordisの設計は論文「A Programming Paradigm for Spatiotemporal Composability」で説明されている。サードパーティ製のプラグインはGitHubのトピック dsh-plugin で探せる。\nNode.js環境で npx @deepseek-ai/dsh web を実行するとWeb UIが起動し、既定では http://127.0.0.1:3080 で利用できる。\n現在はdeveloper preview（開発者プレビュー）の段階にあり、今後も互換性を壊す変更を加えると明示されている。",
+    "codeExamples": [
+      {
+        "title": "npmから起動する",
+        "language": "bash",
+        "code": "npx @deepseek-ai/dsh web"
+      }
+    ],
+    "relatedTerms": [
+      "deepseek",
+      "harness-engineering",
+      "ai-agent",
+      "coding-agent",
+      "pi-coding-agent"
+    ],
+    "references": [
+      {
+        "type": "GitHub",
+        "label": "deepseek-ai/deepseek-harness",
+        "url": "https://github.com/deepseek-ai/deepseek-harness"
+      },
+      {
+        "type": "Documentation",
+        "label": "DeepSeek Harness Documentation",
+        "url": "https://deepseek-harness.github.io/deepseek-harness/"
+      },
+      {
+        "type": "Research Paper",
+        "label": "A Programming Paradigm for Spatiotemporal Composability",
+        "url": "https://arxiv.org/abs/2608.25512"
       }
     ]
   }
