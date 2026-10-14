@@ -493,7 +493,8 @@
       "catastrophic-forgetting",
       "retrieval-augmented-fine-tuning",
       "pretraining",
-      "role-prompting"
+      "role-prompting",
+      "targeted-fine-tuning"
     ],
     "faq": [
       {
@@ -1082,7 +1083,9 @@
       "npu",
       "rocm",
       "triton-inference-server",
-      "ray"
+      "ray",
+      "coprocessor",
+      "igpu"
     ],
     "faq": [
       {
@@ -3258,7 +3261,8 @@
       "awq",
       "quantization-aware-training",
       "distortion-minimization",
-      "computational-efficiency"
+      "computational-efficiency",
+      "exl2"
     ],
     "faq": [
       {
@@ -5769,7 +5773,9 @@
       "gpu",
       "cuda",
       "npu",
-      "large-language-model"
+      "large-language-model",
+      "edge-tpu",
+      "coprocessor"
     ],
     "faq": [
       {
@@ -5861,7 +5867,9 @@
       "quantization",
       "small-language-model",
       "edge-ai",
-      "intelligent-vision-sensor"
+      "intelligent-vision-sensor",
+      "edge-tpu",
+      "coprocessor"
     ],
     "faq": [
       {
@@ -6703,7 +6711,8 @@
       "open-webui",
       "quantization",
       "gguf",
-      "local-llm"
+      "local-llm",
+      "ollama-cloud"
     ],
     "faq": [
       {
@@ -6852,7 +6861,8 @@
       "quantization",
       "gpu",
       "gguf",
-      "local-llm"
+      "local-llm",
+      "igpu"
     ],
     "faq": [
       {
@@ -7638,7 +7648,8 @@
       "llama-cpp",
       "ollama",
       "lm-studio",
-      "local-llm"
+      "local-llm",
+      "exl2"
     ],
     "faq": [
       {
@@ -7705,7 +7716,9 @@
     "relatedTerms": [
       "pytorch",
       "tensorrt",
-      "inference"
+      "inference",
+      "openvino",
+      "core-ml"
     ],
     "faq": [
       {
@@ -7782,7 +7795,8 @@
       "cuda",
       "onnx",
       "quantization",
-      "gpu"
+      "gpu",
+      "openvino"
     ],
     "faq": [
       {
@@ -8779,7 +8793,9 @@
       "prompt-injection",
       "alignment",
       "red-teaming",
-      "prompt-hijacking"
+      "prompt-hijacking",
+      "uncensored-model",
+      "abliteration"
     ],
     "faq": [
       {
@@ -11549,7 +11565,10 @@
       "mediapipe",
       "tinyml",
       "intelligent-vision-sensor",
-      "ai-presence-sensor"
+      "ai-presence-sensor",
+      "iot-gateway",
+      "edge-tpu",
+      "single-board-computer"
     ]
   },
   {
@@ -13542,7 +13561,9 @@
       "instruction-tuning",
       "knowledge-distillation",
       "fine-tuning",
-      "self-instruct"
+      "self-instruct",
+      "wizardlm",
+      "nous-hermes"
     ],
     "faq": [
       {
@@ -15075,7 +15096,8 @@
       "instruction-tuning",
       "knowledge-distillation",
       "few-shot",
-      "meta-prompting"
+      "meta-prompting",
+      "wizardlm"
     ],
     "faq": [
       {
@@ -17661,7 +17683,9 @@
       "llama-cpp",
       "gguf",
       "quantization",
-      "open-webui"
+      "open-webui",
+      "mini-pc",
+      "ollama-cloud"
     ],
     "faq": [
       {
@@ -17952,7 +17976,8 @@
       "vision-language-model",
       "multimodal",
       "autonomous-agent",
-      "vla"
+      "vla",
+      "autonomous-mobile-robot"
     ],
     "faq": [
       {
@@ -20532,7 +20557,8 @@
       "explainable-ai",
       "alignment",
       "grokking",
-      "neural-network"
+      "neural-network",
+      "abliteration"
     ],
     "faq": [
       {
@@ -21639,7 +21665,8 @@
     "relatedTerms": [
       "edge-ai",
       "quantization",
-      "knowledge-distillation"
+      "knowledge-distillation",
+      "edge-tpu"
     ],
     "faq": [
       {
@@ -21700,7 +21727,8 @@
     "relatedTerms": [
       "npu",
       "edge-ai",
-      "ai-presence-sensor"
+      "ai-presence-sensor",
+      "automated-optical-inspection"
     ],
     "references": [
       {
@@ -22581,7 +22609,8 @@
     "relatedTerms": [
       "corpus",
       "synthetic-data",
-      "pretraining"
+      "pretraining",
+      "unfiltered-dataset-collection"
     ],
     "faq": [
       {
@@ -22715,7 +22744,8 @@
       "ptq",
       "awq",
       "quantization",
-      "int4"
+      "int4",
+      "exl2"
     ],
     "codeExamples": [
       {
@@ -24621,7 +24651,8 @@
     ],
     "relatedTerms": [
       "lerobot",
-      "openarm"
+      "openarm",
+      "autonomous-mobile-robot"
     ]
   },
   {
@@ -27198,7 +27229,8 @@
       "classification",
       "time-series-forecasting",
       "outlier-detection",
-      "novelty-detection"
+      "novelty-detection",
+      "automated-optical-inspection"
     ]
   },
   {
@@ -29510,7 +29542,8 @@
     "relatedTerms": [
       "alignment",
       "prompt-engineering",
-      "constitutional-ai"
+      "constitutional-ai",
+      "abliteration"
     ],
     "references": [
       {
@@ -31510,7 +31543,7 @@
         "note": "Orcaは、大規模モデル（GPT-4）の出力だけでなく推論過程まで小規模モデルに学習させる、知識蒸留を発展させたアプローチと位置づけられる"
       }
     ],
-    "relatedTerms": ["phi", "knowledge-distillation", "instruction-tuning", "small-language-model"],
+    "relatedTerms": ["phi", "knowledge-distillation", "instruction-tuning", "small-language-model", "dolphin"],
     "faq": [
       {
         "question": "OrcaとAlpacaのような指示チューニングモデルの違いは。",
@@ -33074,7 +33107,8 @@
       "npu",
       "quantization",
       "local-llm",
-      "tinyml"
+      "tinyml",
+      "core-ml"
     ]
   },
   {
@@ -33107,7 +33141,10 @@
       "deepseek",
       "gemma",
       "hugging-face",
-      "local-llm"
+      "local-llm",
+      "uncensored-model",
+      "dolphin",
+      "nous-hermes"
     ],
     "references": [
       {
@@ -33294,6 +33331,589 @@
         "label": "A Programming Paradigm for Spatiotemporal Composability",
         "url": "https://arxiv.org/abs/2608.25512"
       }
+    ]
+  },
+  {
+    "slug": "autonomous-mobile-robot",
+    "name": "自律移動ロボット",
+    "aliases": [
+      "AMR",
+      "Autonomous Mobile Robot"
+    ],
+    "tagline": "センサーで周囲を認識し、自ら経路を決めて移動するロボット",
+    "category": "技術",
+    "tags": [
+      "ロボティクス",
+      "フィジカルAI"
+    ],
+    "plainSummary": "人が操作したり床に誘導線を引いたりしなくても、周りの様子を見ながら自分で道を選んで目的地まで動けるロボット。",
+    "summary": "自律移動ロボット(AMR: Autonomous Mobile Robot)とは、LiDARやカメラ、IMU、車輪の回転量(オドメトリ)などのセンサー情報から周囲の環境と自己位置を把握し、目的地までの経路を自ら計画して移動するロボットのこと。\n主な構成要素は、地図の作成と自己位置推定を同時に行うSLAM、地図上で目的地までの経路を求める大域的な経路計画、人や障害物を避けながら速度指令を決める局所的な経路計画(障害物回避)の3つ。\n床に敷設した磁気テープやガイドに沿って走る無人搬送車(AGV)と比べ、走行ルートの変更にインフラ工事が要らず、障害物があれば迂回できる点が異なる。\n物流倉庫や工場での搬送、施設内の配膳・清掃・警備などで使われている。ソフトウェア基盤としてはROS 2と、そのナビゲーションスタックであるNav2が広く用いられる。\n近年は、画像や言語を扱う基盤モデルを移動ロボットの認識・行動決定に取り入れる研究も進んでおり、フィジカルAIの一領域として扱われることもある。",
+    "history": "1966年から1972年にかけて米国SRIで開発されたShakeyが、自らの行動を推論しながら移動する初期の移動ロボットとして知られる。",
+    "relatedTerms": [
+      "physical-ai",
+      "ros2",
+      "edge-ai",
+      "automated-planning",
+      "vla",
+      "world-model"
+    ],
+    "references": [
+      {
+        "type": "Documentation",
+        "label": "Nav2 Documentation",
+        "url": "https://docs.nav2.org/"
+      }
+    ]
+  },
+  {
+    "slug": "automated-optical-inspection",
+    "name": "自動光学検査",
+    "aliases": [
+      "AOI",
+      "Automated Optical Inspection"
+    ],
+    "tagline": "カメラで撮影した画像から製品の欠陥を自動で検出する外観検査の手法・装置",
+    "category": "技術",
+    "tags": [
+      "画像認識",
+      "製造"
+    ],
+    "plainSummary": "工場で作った製品をカメラで撮影し、傷や部品の付け忘れなどを機械が自動で見つける検査。",
+    "summary": "自動光学検査(AOI: Automated Optical Inspection)とは、カメラと照明で対象物を撮影し、画像処理によって欠陥の有無を自動で判定する外観検査の手法、またはその装置のこと。\n代表的な用途はプリント基板(PCB)の実装工程で、部品の欠品・位置ずれ・極性の誤り、はんだのブリッジや不足などを検出する。半導体ウェハ、ディスプレイパネル、金属部品や樹脂成形品の傷・汚れの検査にも使われる。\n従来は良品画像との比較(テンプレートマッチング)や、寸法・輝度のしきい値によるルールベースの判定が中心だった。ルールベースの判定は照明条件や製品のばらつきに弱く、良品を不良と判定する「虚報(見過ぎ)」が多くなりやすい。近年は深層学習による画像分類・物体検出や、良品画像のみで学習する異常検知を組み合わせ、判定精度を高める取り組みが広がっている。\n平面画像で判定する2D AOIのほか、部品の高さやはんだの形状を立体的に計測する3D AOIもある。",
+    "relatedTerms": [
+      "anomaly-detection",
+      "intelligent-vision-sensor",
+      "edge-ai"
+    ]
+  },
+  {
+    "slug": "iot-gateway",
+    "name": "IoTゲートウェイ",
+    "aliases": [
+      "IoT Gateway"
+    ],
+    "tagline": "現場のセンサーや機器とクラウドの間に立ち、通信の中継・変換やデータの前処理を担う機器",
+    "category": "インフラ",
+    "tags": [
+      "IoT",
+      "エッジAI"
+    ],
+    "plainSummary": "工場や建物にあるたくさんのセンサーのデータを集めて、インターネットの向こうのサーバーへ送り届ける中継役の機器。",
+    "summary": "IoTゲートウェイとは、センサーや機器などのIoTデバイスとクラウド・社内サーバーの間に設置され、データの中継を担う機器またはソフトウェアのこと。\n現場側ではBLE、Zigbee、LoRaWANなどの無線規格や、Modbus、OPC UAといった産業用プロトコルでデバイスとつながり、上位側ではMQTTやHTTPSなどでクラウドへデータを送る。この間のプロトコル変換が主な役割のひとつ。\nほかに、データの集約・間引き・フィルタリング、通信断の際の一時保存(バッファリング)、デバイスの認証や通信の暗号化、ファームウェア更新の配信なども受け持つ。\n近年はゲートウェイ上で機械学習モデルを動かし、異常検知や画像認識をその場で行うエッジAIの実行環境として使われる例も増えている。データ量の削減や応答の遅延短縮、クラウドに生データを送らないことによるプライバシー保護を目的とする。",
+    "relatedTerms": [
+      "edge-ai",
+      "tinyml",
+      "anomaly-detection",
+      "single-board-computer"
+    ]
+  },
+  {
+    "slug": "edge-tpu",
+    "name": "Edge TPU",
+    "aliases": [
+      "Coral Edge TPU"
+    ],
+    "tagline": "Googleが開発した、エッジデバイスで機械学習の推論を低消費電力で実行するための専用チップ",
+    "category": "インフラ",
+    "tags": [
+      "ハードウェア",
+      "エッジAI"
+    ],
+    "plainSummary": "Googleが作った小さなAI用チップ。カメラや小型機器の中で、少ない電力で画像認識などを動かせる。",
+    "summary": "Edge TPUとは、Googleが開発した、エッジデバイス上でニューラルネットワークの推論に特化したASIC。データセンター向けのTPUを、小型・低消費電力の用途向けに設計したもの。\nGoogleのCoralブランドから、USB接続のアクセラレータ、開発ボード、M.2やMini PCIe形式のモジュールなどとして提供されている。公称性能は4 TOPS(INT8)で、消費電力あたり2 TOPS/Wとされる。\n実行できるのは8ビット整数に量子化したTensorFlow Liteモデルで、Edge TPU Compilerでコンパイルしてから使う。Edge TPUが対応していない演算はCPU側で実行されるため、モデル構成によっては速度が出ない。\n画像分類や物体検出、姿勢推定などのビジョン系モデルを、クラウドに画像を送らずに機器内で処理する用途に使われる。",
+    "history": "2018年7月、GoogleがGoogle Cloud Next '18でEdge TPUを発表した。",
+    "relatedTerms": [
+      "tpu",
+      "npu",
+      "edge-ai",
+      "quantization",
+      "tinyml",
+      "coprocessor"
+    ],
+    "references": [
+      {
+        "type": "Official Website",
+        "label": "Coral",
+        "url": "https://coral.ai/"
+      }
+    ]
+  },
+  {
+    "slug": "single-board-computer",
+    "name": "シングルボードコンピュータ",
+    "aliases": [
+      "SBC",
+      "Single Board Computer"
+    ],
+    "tagline": "CPU・メモリ・入出力端子などを1枚の基板に載せた小型コンピュータ",
+    "category": "インフラ",
+    "tags": [
+      "ハードウェア",
+      "エッジAI"
+    ],
+    "plainSummary": "手のひらほどの基板1枚にパソコンの主要な部品をまとめた小さなコンピュータ。電子工作や機器の制御によく使われる。",
+    "summary": "シングルボードコンピュータ(SBC)とは、CPU(SoC)、メモリ、ストレージの接続口、USBやネットワーク、GPIOなどの入出力を1枚の基板上にまとめた小型のコンピュータのこと。\nLinuxなどの汎用OSが動作し、GPIOを通じてセンサーやモーターを直接制御できるため、教育・試作・組み込み機器・IoTゲートウェイなどに使われる。代表例にRaspberry Piがある。\nAI用途では、NPUやGPUを内蔵したSBCや、Edge TPUのようなアクセラレータを外付けした構成で、画像認識などの推論を機器内で実行するエッジAIの基盤として使われる。NVIDIAのJetsonシリーズの開発キットも、GPUを統合したモジュールを載せたボードとしてこの用途で広く使われている。\n一方で、メモリ容量や演算性能はPCに比べて小さく、大きなモデルを動かすには量子化や軽量なモデルの選択が必要になる。",
+    "relatedTerms": [
+      "edge-ai",
+      "npu",
+      "edge-tpu",
+      "iot-gateway",
+      "mini-pc",
+      "quantization"
+    ]
+  },
+  {
+    "slug": "mini-pc",
+    "name": "ミニPC",
+    "aliases": [
+      "Mini PC"
+    ],
+    "tagline": "一般的なデスクトップPCより小さい筐体に収めた小型のPC",
+    "category": "インフラ",
+    "tags": [
+      "ハードウェア",
+      "ローカルLLM"
+    ],
+    "plainSummary": "手のひらから弁当箱ほどの大きさに収まったパソコン。置き場所を取らず、普通のパソコンと同じように使える。",
+    "summary": "ミニPCとは、一般的なタワー型デスクトップPCより小さい筐体に、ノートPC向けなどの省電力なCPUを搭載した小型PCのこと。代表例にIntel NUCやAppleのMac miniがある。\nシングルボードコンピュータと異なり、x86などのPC向けプロセッサーと汎用OSをそのまま使えるため、オフィス用の端末やホームサーバー、店舗のサイネージ、工場の制御端末などで使われる。\nAI用途では、NPUを内蔵したプロセッサーや、CPUとGPUが大容量のメモリを共有するユニファイドメモリ構成の製品が増え、ローカルLLMの実行環境として選ばれることがある。LLMの推論ではメモリ容量と帯域が性能を左右するため、拡張GPUを載せにくいミニPCでは、搭載メモリの量が動かせるモデルの大きさを決める。",
+    "relatedTerms": [
+      "local-llm",
+      "ollama",
+      "npu",
+      "gpu",
+      "single-board-computer",
+      "igpu"
+    ]
+  },
+  {
+    "slug": "coprocessor",
+    "name": "コプロセッサ",
+    "aliases": [
+      "Coprocessor",
+      "コプロセッサー"
+    ],
+    "tagline": "CPUを補助し、特定の種類の処理を肩代わりして高速に実行するプロセッサー",
+    "category": "インフラ",
+    "tags": [
+      "ハードウェア",
+      "並列計算"
+    ],
+    "plainSummary": "メインの頭脳であるCPUの横で、計算の一部を専門に引き受ける補助のプロセッサー。",
+    "summary": "コプロセッサとは、主プロセッサーであるCPUを補助し、浮動小数点演算や暗号処理、画像処理など特定の処理を肩代わりして実行するプロセッサーのこと。\nCPUが汎用的な命令を逐次処理するのに対し、コプロセッサは対象とする処理に特化した回路を持ち、同じ処理をより高速・低消費電力で実行できる。\n初期の代表例は浮動小数点演算を担うFPUで、かつてはCPUとは別のチップとして提供されていたが、現在はCPUに統合されている。\nAIの分野では、GPU、NPU、TPU、Edge TPUなど、行列演算を高速に実行するアクセラレータがコプロセッサの役割を担う。CPUがプログラム全体の制御やデータを準備し、ニューラルネットワークの演算をアクセラレータに任せる構成が一般的。",
+    "history": "1980年にIntelが発表した8087は、8086系CPUの浮動小数点演算を担うコプロセッサの代表例として知られる。",
+    "relatedTerms": [
+      "gpu",
+      "npu",
+      "tpu",
+      "edge-tpu"
+    ]
+  },
+  {
+    "slug": "openvino",
+    "name": "OpenVINO",
+    "aliases": [
+      "OpenVINO Toolkit",
+      "Open Visual Inference and Neural network Optimization"
+    ],
+    "tagline": "Intelが開発する、学習済みモデルを最適化してIntel製ハードウェアで推論するためのオープンソースのツールキット",
+    "category": "インフラ",
+    "tags": [
+      "推論最適化",
+      "Intel"
+    ],
+    "plainSummary": "Intelが公開している、AIのモデルをIntelのCPUやGPU、NPUで速く動かすためのソフトウェア。",
+    "summary": "OpenVINOとは、Intelが開発するオープンソースの推論最適化・実行ツールキット。Apache License 2.0で公開されている。\nPyTorch、TensorFlow、ONNX、PaddlePaddleなどで作成したモデルを読み込み、独自の中間表現(IR)に変換・最適化したうえで、IntelのCPU、内蔵・外付けGPU、NPUなどで推論する。デバイス名を指定するだけで実行先を切り替えられる。\nモデル圧縮のためのNNCF(Neural Network Compression Framework)を使った量子化や、LLM・画像生成モデルの推論を扱うOpenVINO GenAIも提供されている。\n名称はOpen Visual Inference and Neural network Optimizationの略で、当初はコンピュータビジョン向けの推論を主な対象としていた。現在は自然言語処理や音声、生成AIのモデルも対象にしている。",
+    "codeExamples": [
+      {
+        "title": "インストール",
+        "language": "bash",
+        "code": "pip install openvino"
+      },
+      {
+        "title": "ONNXモデルをCPUで推論用にコンパイルする",
+        "language": "python",
+        "code": "import openvino as ov\n\ncore = ov.Core()\ncompiled_model = core.compile_model(\"model.onnx\", \"CPU\")"
+      }
+    ],
+    "relatedTerms": [
+      "onnx",
+      "tensorrt",
+      "npu",
+      "quantization",
+      "edge-ai",
+      "inference-optimization",
+      "core-ml"
+    ],
+    "references": [
+      {
+        "type": "GitHub",
+        "label": "openvinotoolkit/openvino",
+        "url": "https://github.com/openvinotoolkit/openvino"
+      },
+      {
+        "type": "Documentation",
+        "label": "OpenVINO Documentation",
+        "url": "https://docs.openvino.ai/"
+      }
+    ]
+  },
+  {
+    "slug": "core-ml",
+    "name": "Core ML",
+    "aliases": [
+      "CoreML"
+    ],
+    "tagline": "Appleが提供する、iPhoneやMacなどのデバイス上で機械学習モデルを実行するためのフレームワーク",
+    "category": "インフラ",
+    "tags": [
+      "オンデバイスAI",
+      "Apple"
+    ],
+    "plainSummary": "AppleがiPhoneやMac向けに用意している、AIのモデルを端末の中で動かすための仕組み。",
+    "summary": "Core MLとは、Appleが提供する機械学習モデルの実行フレームワーク。iOS、iPadOS、macOS、watchOS、tvOS、visionOSのアプリから、学習済みモデルをデバイス上で実行できる。\nモデルは.mlmodelまたは.mlpackage形式で扱い、PyTorchやTensorFlowで作成したモデルはPythonパッケージのcoremltoolsで変換する。coremltoolsは量子化や枝刈りなどのモデル圧縮にも対応している。\n実行時はCPU、GPU、Neural Engine(Apple製チップのNPU)のどれを使うかをCore MLが選び、処理を割り振る。推論がデバイス内で完結するため、データを外部へ送る必要がなく、ネットワーク接続がない状態でも動作する。\n画像認識や自然言語処理など用途別の上位フレームワーク(Vision、Natural Languageなど)も、内部でCore MLのモデルを利用できる。",
+    "history": "2017年6月、AppleがWWDC 2017でCore MLを発表し、iOS 11から利用可能になった。",
+    "relatedTerms": [
+      "on-device-ai",
+      "npu",
+      "onnx",
+      "quantization",
+      "edge-ai",
+      "openvino"
+    ],
+    "references": [
+      {
+        "type": "Documentation",
+        "label": "Core ML | Apple Developer Documentation",
+        "url": "https://developer.apple.com/documentation/coreml"
+      },
+      {
+        "type": "GitHub",
+        "label": "apple/coremltools",
+        "url": "https://github.com/apple/coremltools"
+      }
+    ]
+  },
+  {
+    "slug": "ollama-cloud",
+    "name": "Ollama Cloud",
+    "aliases": [
+      "Ollamaクラウドモデル",
+      "Ollama cloud models"
+    ],
+    "tagline": "OllamaのコマンドやAPIのまま、Ollamaのクラウド上で大きなモデルを実行できるサービス",
+    "category": "インフラ",
+    "tags": [
+      "推論",
+      "API"
+    ],
+    "plainSummary": "自分のPCでは動かせない大きなAIモデルを、いつものOllamaの使い方のままインターネット越しに動かせるサービス。",
+    "summary": "Ollama Cloudとは、ローカルLLM実行ツールのOllamaから、Ollamaが運用するクラウド上のモデルを利用できるサービス。\nローカルのGPUやメモリでは動かせない大規模なオープンウェイトモデルを、ローカルモデルと同じ ollama run コマンドやAPIで実行できる。クラウドで動くモデルは gpt-oss:120b-cloud のように名前に -cloud が付き、利用前に ollama signin でOllamaのアカウントにサインインする。\nローカルのOllamaを経由せず、APIキーを使って ollama.com のAPIを直接呼び出すこともできる。\n既存のOllama対応アプリケーションやツールから、接続先やモデル名を変えるだけでクラウドのモデルに切り替えられる点が特徴。一方で、推論はローカルではなくクラウドで行われるため、データが外部に送信される点や、利用量に上限がある点に注意が必要。",
+    "history": "2025年9月、Ollamaがクラウドモデルをプレビュー版として発表した。",
+    "codeExamples": [
+      {
+        "title": "サインインしてクラウドモデルを実行する",
+        "language": "bash",
+        "code": "ollama signin\nollama run gpt-oss:120b-cloud"
+      }
+    ],
+    "relatedTerms": [
+      "ollama",
+      "local-llm",
+      "open-weight-model"
+    ],
+    "references": [
+      {
+        "type": "Blog",
+        "label": "Cloud models · Ollama Blog",
+        "url": "https://ollama.com/blog/cloud-models"
+      },
+      {
+        "type": "Documentation",
+        "label": "Ollama Cloud",
+        "url": "https://docs.ollama.com/cloud"
+      }
+    ]
+  },
+  {
+    "slug": "uncensored-model",
+    "name": "アンセンサードモデル",
+    "aliases": [
+      "Uncensored model",
+      "無検閲モデル"
+    ],
+    "tagline": "安全性のための応答拒否や出力制限を取り除いたLLM",
+    "category": "モデル",
+    "tags": [
+      "LLM",
+      "安全性",
+      "オープンウェイト"
+    ],
+    "plainSummary": "ふつうのAIが断るような質問にも答えるように、断る仕組みを外して作り直したAIモデル。",
+    "summary": "アンセンサードモデル(Uncensored model)とは、LLMに組み込まれた有害な依頼への応答拒否や出力の制限を、追加の学習やモデルの改変によって取り除いたモデルのこと。主にオープンウェイトモデルを元に、個人や開発者コミュニティが作成・公開している。\n作り方には大きく2つある。1つは、指示チューニング用のデータセットから応答拒否や道徳的な注意書きを含む例を除き、そのデータでファインチューニングする方法。もう1つは、モデル内部で応答拒否を担う方向(refusal direction)を特定し、重みからその成分を取り除く方法で、abliterationと呼ばれる。\n創作や研究、レッドチーミングなどで、元のモデルが過剰に応答を拒否する問題を避ける目的で使われる。一方で、危険な情報の生成など悪用のリスクがあり、利用する側でガードレールを設ける責任を負う。改変版の利用には、元のモデルのライセンスや利用規約も適用される。",
+    "history": "2023年5月、Eric Hartfordがブログ記事「Uncensored Models」で、応答拒否を含む学習例を除いたデータセットでファインチューニングする手法と、その手法で作成したモデルを公開した。",
+    "relatedTerms": [
+      "open-weight-model",
+      "alignment",
+      "jailbreak",
+      "guardrails",
+      "fine-tuning",
+      "local-llm",
+      "red-teaming",
+      "abliteration",
+      "targeted-fine-tuning",
+      "unfiltered-dataset-collection",
+      "dolphin",
+      "wizardlm"
+    ],
+    "references": [
+      {
+        "type": "Blog",
+        "label": "Uncensored Models - Eric Hartford",
+        "url": "https://erichartford.com/uncensored-models"
+      },
+      {
+        "type": "Research Paper",
+        "label": "Refusal in Language Models Is Mediated by a Single Direction",
+        "url": "https://arxiv.org/abs/2406.11717"
+      }
+    ]
+  },
+  {
+    "slug": "abliteration",
+    "name": "Abliteration",
+    "aliases": [
+      "アブリテレーション"
+    ],
+    "tagline": "LLM内部で応答拒否を担う方向を特定し、重みからその成分を取り除くことで拒否行動を無効化する手法",
+    "category": "技術",
+    "tags": [
+      "安全性",
+      "LLM",
+      "解釈可能性"
+    ],
+    "plainSummary": "AIの頭の中にある「断る」働きの部分を見つけて、そこだけを消してしまう改造方法。",
+    "summary": "Abliterationとは、LLMが有害な依頼を断る応答拒否(refusal)の振る舞いを、追加学習なしで取り除く手法。ablate(除去する)とobliterate(消し去る)を合わせた造語。\n有害な指示と無害な指示をそれぞれ多数モデルに入力し、残差ストリーム上の活性化の平均の差を取ると、応答拒否に対応する1本の方向ベクトル(refusal direction)が得られる。推論時に各層の活性化からこの方向の成分を射影で取り除く方法と、同じ操作を重み行列に対して行い(重みの直交化)、改変済みのモデルとして保存する方法がある。\n学習データやGPUによるファインチューニングを必要とせず、比較的少ない計算量で適用できるため、オープンウェイトモデルからアンセンサードモデルを作る手段として広まった。一方で、応答拒否以外の能力がわずかに低下する場合があり、性能を回復させるためにDPOなどで追加学習を行う例もある。\n安全性のための制約をモデルから外す手法であり、悪用のリスクを伴う。",
+    "history": "2024年に発表された論文「Refusal in Language Models Is Mediated by a Single Direction」(Arditiら)が、応答拒否が単一の方向で表現されることと、その方向の除去で拒否を無効化できることを示し、この手法の基礎となった。同年6月、Maxime LabonneがHugging Faceのブログ記事で手順を解説し、広く知られるようになった。",
+    "relatedTerms": [
+      "uncensored-model",
+      "steering",
+      "mechanistic-interpretability",
+      "open-weight-model",
+      "alignment",
+      "jailbreak"
+    ],
+    "references": [
+      {
+        "type": "Research Paper",
+        "label": "Refusal in Language Models Is Mediated by a Single Direction",
+        "url": "https://arxiv.org/abs/2406.11717"
+      },
+      {
+        "type": "Blog",
+        "label": "Uncensor any LLM with abliteration",
+        "url": "https://huggingface.co/blog/mlabonne/abliteration"
+      }
+    ]
+  },
+  {
+    "slug": "targeted-fine-tuning",
+    "name": "ターゲットファインチューニング",
+    "aliases": [
+      "Targeted Fine-Tuning"
+    ],
+    "tagline": "モデルの特定の振る舞いや能力だけを変えることを狙い、絞り込んだデータで行うファインチューニング",
+    "category": "技術",
+    "tags": [
+      "ファインチューニング",
+      "学習"
+    ],
+    "plainSummary": "AIモデルの全体ではなく、直したい癖や伸ばしたい能力の一点に絞って追加で学習させる方法。",
+    "summary": "ターゲットファインチューニング(Targeted Fine-Tuning)とは、モデル全体の汎用的な性能向上ではなく、特定の振る舞い・能力・知識だけを変えることを目的に、その目的に合わせて絞り込んだデータで行うファインチューニングのこと。\n例として、特定の話題での応答スタイルの修正、過剰な応答拒否の緩和や逆に拒否すべき依頼への対応の強化、特定ドメインの知識の追加などがある。アンセンサードモデルの作成で、応答拒否を含まないデータを使って拒否の振る舞いを弱めるのも、この一種と言える。\n対象外の能力を保つため、学習するパラメータをLoRAなどで一部に限定したり、学習データに汎用的な例を混ぜたりする工夫が使われる。データが偏るほど破滅的忘却によって他の能力が損なわれやすくなる点に注意が必要。\n厳密に定義された専門用語ではなく、目的を絞ったファインチューニング全般を指して使われる。",
+    "relatedTerms": [
+      "fine-tuning",
+      "lora",
+      "catastrophic-forgetting",
+      "instruction-tuning",
+      "uncensored-model"
+    ]
+  },
+  {
+    "slug": "unfiltered-dataset-collection",
+    "name": "フィルタリングなしのデータセット収集",
+    "aliases": [
+      "Unfiltered Dataset Collection",
+      "未フィルタリングデータ収集"
+    ],
+    "tagline": "安全性や品質による除外処理を行わずに、学習用のデータを集めること",
+    "category": "技術",
+    "tags": [
+      "データ",
+      "学習",
+      "安全性"
+    ],
+    "plainSummary": "AIの学習用データを集めるときに、有害な内容や質の低い内容をふるい落とさず、そのまま集めること。",
+    "summary": "フィルタリングなしのデータセット収集(Unfiltered Dataset Collection)とは、LLMなどの学習用データを集める際に、有害表現・個人情報・低品質な文章などを除外するフィルタリングを行わない、または最小限にとどめて収集すること。\n通常の事前学習では、Common Crawlのようなウェブクロールデータから重複の除去、品質の低い文書や有害な文書の除外、個人情報の削除などを経てコーパスを作る。指示チューニング用のデータでも、応答拒否や安全上の注意書きを含む例を残すかどうかでモデルの振る舞いが変わる。\nフィルタリングを省いたデータは、有害表現の検出器の学習や、元のデータ分布をそのまま分析する研究、アンセンサードモデルの作成などに使われることがある。一方で、学習したモデルは有害な内容や個人情報、偏見を含む出力をしやすくなる。著作権やライセンス上の問題を含むデータが混入するリスクもある。\n特定の手法名ではなく、データ収集の方針を表す言い回しとして使われる。",
+    "relatedTerms": [
+      "corpus",
+      "common-crawl",
+      "pretraining",
+      "uncensored-model",
+      "data-poisoning",
+      "synthetic-data"
+    ]
+  },
+  {
+    "slug": "exl2",
+    "name": "EXL2",
+    "aliases": [
+      "ExLlamaV2形式"
+    ],
+    "tagline": "推論ライブラリExLlamaV2が使う、層ごとに異なるビット数を割り当てられるLLMの量子化形式",
+    "category": "技術",
+    "tags": [
+      "量子化",
+      "ファイル形式"
+    ],
+    "plainSummary": "AIモデルを小さく圧縮して保存する形式の一つ。GPUで速く動かすことを重視している。",
+    "summary": "EXL2とは、turboderpが開発するGPU向けのLLM推論ライブラリExLlamaV2で使われる量子化形式。\nGPTQと同様に、少量のキャリブレーションデータを使って量子化の誤差が小さくなるように重みを変換する。2・3・4・5・6・8ビットの量子化を層や行列ごとに組み合わせられ、モデル全体の平均ビット数(bpw: bits per weight)を2.5や4.65のように小数単位で指定できる点が特徴。重要度の高い部分に多くのビットを割り当てることで、同じサイズでも誤差を抑えられる。\nGPUのVRAM容量に合わせて細かくサイズを調整できるため、ローカル環境で大きなモデルを動かす用途で使われる。CPUでの推論も想定したGGUFに対し、EXL2はGPUでの推論を前提にしている。\nExLlamaV2のほか、text-generation-webuiやTabbyAPIなどのツールから利用できる。",
+    "relatedTerms": [
+      "quantization",
+      "gptq",
+      "gguf",
+      "awq",
+      "gpu",
+      "local-llm"
+    ],
+    "references": [
+      {
+        "type": "GitHub",
+        "label": "turboderp/exllamav2",
+        "url": "https://github.com/turboderp/exllamav2"
+      }
+    ]
+  },
+  {
+    "slug": "dolphin",
+    "name": "Dolphin",
+    "aliases": [
+      "Dolphinモデル"
+    ],
+    "tagline": "Eric Hartfordらが公開している、応答拒否を取り除いたデータで学習したオープンウェイトLLMのシリーズ",
+    "category": "モデル",
+    "tags": [
+      "LLM",
+      "オープンウェイト",
+      "安全性"
+    ],
+    "plainSummary": "既存の公開AIモデルを元に、断る振る舞いを減らすように学習し直して公開されているAIモデルのシリーズ。",
+    "summary": "Dolphinとは、Eric Hartfordと、彼が中心となるCognitive Computationsが公開しているLLMのシリーズ。Llama、Mistral、Mixtral、Qwenなど、公開されている各種のベースモデルをファインチューニングして作られている。\n学習データは、MicrosoftのOrcaの論文にならい、強力なモデルによる段階的な説明を含む応答を集めたもの。そこから応答拒否や道徳的な注意書きを含む例を取り除いており、アンセンサードモデルの代表例として知られる。\nモデル自体に安全性の制約がほとんどないため、公開元は、サービスに組み込む場合は利用者側でアライメントやガードレールを設けるよう求めている。モデルはHugging Faceで公開され、GGUF形式などに変換されたものがOllamaなどのローカル実行ツールからも利用できる。",
+    "relatedTerms": [
+      "uncensored-model",
+      "orca",
+      "open-weight-model",
+      "fine-tuning",
+      "mistral",
+      "guardrails"
+    ],
+    "references": [
+      {
+        "type": "Official Website",
+        "label": "Cognitive Computations (Hugging Face)",
+        "url": "https://huggingface.co/cognitivecomputations"
+      }
+    ]
+  },
+  {
+    "slug": "wizardlm",
+    "name": "WizardLM",
+    "aliases": [
+      "Evol-Instruct"
+    ],
+    "tagline": "LLMに指示文を段階的に複雑化させるEvol-Instructの生成データを学習したLLMのシリーズ",
+    "category": "モデル",
+    "tags": [
+      "LLM",
+      "合成データ",
+      "オープンウェイト"
+    ],
+    "plainSummary": "AI自身に練習問題をどんどん難しく書き換えさせ、その問題で学習させたAIモデル。",
+    "summary": "WizardLMとは、MicrosoftとPeking Universityの研究者らが発表した、Evol-Instructという手法による指示データを使ってLLaMAをファインチューニングしたモデル、およびそのシリーズ。\nEvol-Instructは、少数の初期指示をもとに難易度と多様性の高い指示データを自動で作る手法。LLMに制約の追加・推論ステップの増加・具体化などで指示をより複雑に書き換えさせる「深さ方向の進化」と、新しい話題の指示を生み出させる「幅方向の進化」を繰り返す。人手で複雑な指示を書くコストを減らせる。\n同じ手法をコード生成や数学に適用したWizardCoderやWizardMathも公開された。また、WizardLMの学習データから応答拒否を含む例を除いたアンセンサード版もコミュニティで作られた。",
+    "history": "2023年4月、論文「WizardLM: Empowering Large Language Models to Follow Complex Instructions」でEvol-InstructとWizardLMが発表された。",
+    "relatedTerms": [
+      "synthetic-data",
+      "self-instruct",
+      "instruction-tuning",
+      "llama",
+      "uncensored-model"
+    ],
+    "references": [
+      {
+        "type": "Research Paper",
+        "label": "WizardLM: Empowering Large Language Models to Follow Complex Instructions",
+        "url": "https://arxiv.org/abs/2304.12244"
+      }
+    ]
+  },
+  {
+    "slug": "nous-hermes",
+    "name": "Nous Hermes",
+    "aliases": [
+      "Hermes",
+      "Nous-Hermes"
+    ],
+    "tagline": "Nous Researchが公開している、オープンウェイトのベースモデルをファインチューニングしたLLMのシリーズ",
+    "category": "モデル",
+    "tags": [
+      "LLM",
+      "オープンウェイト",
+      "合成データ"
+    ],
+    "plainSummary": "研究グループのNous Researchが、公開されているAIモデルを元に学習し直して配布しているAIモデルのシリーズ。",
+    "summary": "Nous Hermes(Hermes)とは、AI研究グループのNous Researchが公開しているLLMのシリーズ。LLaMAやLlama 2、Llama 3.1、Mistralなど、公開されているベースモデルをファインチューニングして作られている。\n学習データの多くは、強力なモデルが生成した合成データ。システムプロンプトやロールプレイの指示に従いやすいこと、応答拒否が少なく、利用者の側で振る舞いを細かく制御できることを重視している。\nHermes 2以降では、ChatMLのプロンプト形式や、関数呼び出し(function calling)、JSON形式での構造化出力にも対応している。Hermes 3では、Llama 3.1の8B・70B・405Bをベースにしたモデルが公開され、技術レポートも出ている。",
+    "relatedTerms": [
+      "open-weight-model",
+      "synthetic-data",
+      "llama",
+      "function-calling",
+      "system-prompt",
+      "fine-tuning"
+    ],
+    "references": [
+      {
+        "type": "Official Website",
+        "label": "Nous Research",
+        "url": "https://nousresearch.com/"
+      },
+      {
+        "type": "Research Paper",
+        "label": "Hermes 3 Technical Report",
+        "url": "https://arxiv.org/abs/2408.11857"
+      }
+    ]
+  },
+  {
+    "slug": "igpu",
+    "name": "iGPU",
+    "aliases": [
+      "Integrated GPU",
+      "内蔵GPU",
+      "統合GPU"
+    ],
+    "tagline": "CPUと同じチップやパッケージに統合され、メインメモリを共有して動作するGPU",
+    "category": "インフラ",
+    "tags": [
+      "ハードウェア",
+      "ローカルLLM"
+    ],
+    "plainSummary": "CPUに組み込まれているGPU。グラフィックボードを追加しなくても、画面表示や一部のAI処理をこなせる。",
+    "summary": "iGPU(Integrated GPU、内蔵GPU)とは、CPUと同じチップやパッケージに統合されたGPUのこと。独立したグラフィックボードとして搭載するdGPU(Discrete GPU)と対になる言葉。IntelのCoreプロセッサーに内蔵されたIntel Graphics(Arc)、AMDのRyzenプロセッサーのRadeon Graphics、AppleのMシリーズチップのGPUなどがある。\n専用のVRAMを持たず、システムのメインメモリをCPUと共有して使う。そのため、消費電力や発熱、コストを抑えられる一方、演算性能とメモリ帯域はハイエンドのdGPUに比べて低い。\nローカルLLMの用途では、メインメモリを大きく割り当てられることが利点になる。dGPUのVRAMに収まらない大きなモデルでも、メモリさえ足りれば読み込める。生成速度はメモリ帯域に左右されるため、大容量・広帯域のユニファイドメモリを備えたAppleのMシリーズや、AMDのRyzen AI Maxシリーズなどが選ばれることがある。\nllama.cppのVulkanやMetalのバックエンド、IntelのOpenVINOなどを使ってiGPUで推論できる。",
+    "relatedTerms": [
+      "gpu",
+      "npu",
+      "mini-pc",
+      "local-llm",
+      "llama-cpp",
+      "openvino"
     ]
   }
 ]
