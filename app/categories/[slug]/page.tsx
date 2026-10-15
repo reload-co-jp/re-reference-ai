@@ -1,6 +1,7 @@
 import { Metadata } from "next"
 import { FC } from "react"
 import { notFound } from "next/navigation"
+import { DisplayAd } from "components/analytics/display-ad"
 import { Breadcrumb } from "components/elements/breadcrumb"
 import { Container, Section, SectionTitle } from "components/elements/layout"
 import { TermCard } from "components/term/term-card"
@@ -116,6 +117,8 @@ const CategoryPage: FC<Props> = async ({ params }) => {
           ))}
         </div>
       </Section>
+
+      <DisplayAd />
     </Container>
   )
 }

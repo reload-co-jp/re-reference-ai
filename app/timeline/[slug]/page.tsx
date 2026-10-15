@@ -2,6 +2,7 @@ import { Metadata } from "next"
 import { FC } from "react"
 import Link from "next/link"
 import { notFound } from "next/navigation"
+import { DisplayAd } from "components/analytics/display-ad"
 import { Breadcrumb } from "components/elements/breadcrumb"
 import { Badge, Container, Section, SectionTitle } from "components/elements/layout"
 import { ReferenceList } from "components/elements/reference-list"
@@ -216,6 +217,8 @@ const TimelinePage: FC<Props> = async ({ params }) => {
         <TimelineView events={eventsWithLinks} termNames={termNames} />
       </Section>
 
+      <DisplayAd />
+
       {/* Major Versions */}
       {timeline.majorVersions && timeline.majorVersions.length > 0 && (
         <Section>
@@ -263,6 +266,8 @@ const TimelinePage: FC<Props> = async ({ params }) => {
           ))}
         </Section>
       )}
+
+      <DisplayAd />
 
       {/* References */}
       {timeline.references && timeline.references.length > 0 && (

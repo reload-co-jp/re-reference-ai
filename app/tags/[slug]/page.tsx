@@ -3,6 +3,7 @@ import { FC } from "react"
 import Link from "next/link"
 import { notFound } from "next/navigation"
 import { ArticleCard } from "components/article/article-card"
+import { DisplayAd } from "components/analytics/display-ad"
 import { ComparisonCard } from "components/comparison/comparison-card"
 import { Breadcrumb } from "components/elements/breadcrumb"
 import {
@@ -207,6 +208,8 @@ const TagPage: FC<Props> = async ({ params }) => {
           </div>
         </Section>
       ))}
+
+      <DisplayAd />
 
       {relatedComparisons.length > 0 && (
         <Section>
