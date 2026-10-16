@@ -4634,7 +4634,8 @@
       "cloudflare-os",
       "webmcp",
       "agent-network",
-      "ecosystem-ai"
+      "ecosystem-ai",
+      "reverse-engineer-anything"
     ],
     "faq": [
       {
@@ -18409,7 +18410,8 @@
       "chatbot",
       "text-generation",
       "image-generation",
-      "code-generation"
+      "code-generation",
+      "tripo-ai"
     ],
     "faq": [
       {
@@ -33914,6 +33916,99 @@
       "local-llm",
       "llama-cpp",
       "openvino"
+    ]
+  },
+  {
+    "slug": "reverse-engineer-anything",
+    "name": "REA",
+    "aliases": [
+      "Reverse Engineer Anything",
+      "morluto/rea"
+    ],
+    "tagline": "AIコーディングエージェントが既存アプリの挙動や実装を調べるための、リバースエンジニアリング用CLI兼MCPサーバー",
+    "category": "エージェント",
+    "tags": [
+      "リバースエンジニアリング",
+      "MCP",
+      "コーディングエージェント"
+    ],
+    "plainSummary": "ソースコードが手元にないアプリでも、AIエージェントが中身を調べて機能を再現できるようにする道具。",
+    "summary": "REA(Reverse Engineer Anything)は、Claude CodeなどのAIコーディングエージェントに既存ソフトウェアを調査させるためのオープンソースのツール。CLIとMCPサーバーとして提供され、エージェントはMCP経由で解析機能を呼び出す。\n対象はネイティブバイナリ、JavaScriptやElectronのアプリ、.NETアセンブリ、AndroidのAPK、Webサイトなど。新しい解析技術を実装したものではなく、Ghidra、Hopper、IDAといった既存のリバースエンジニアリングツールとエージェントをつなぐコネクターの役割を持つ。解析はローカルで実行される。\n調査結果を「seen(直接観測し出典を示せるもの)」「inferred(コードやデータから推測されるが未確認のもの)」「unknown(判断できなかったもの)」の3つに分類して出力する。エージェントが推測を事実として扱うことを避ける仕組みになっている。\nライセンスはMIT。公式の配布元はGitHubのmorluto/rea、rea.tools、npmのrea-agentsパッケージで、名前を騙った偽のインストーラーがマルウェアとして報告されているため、入手元の確認が必要。",
+    "history": "2026年4月14日にGitHubのmorluto/reaリポジトリとして公開された。2026年10月ごろにGitHub上で急速にスター数を伸ばし、注目を集めた。",
+    "disadvantages": [
+      "既存ツールの接続役であり、解析能力そのものはGhidraやIDAなど連携先のツールに依存する",
+      "スクリーンショットを見て挙動を推測するだけでも、REAなしのエージェントで近い結果を得られる場合がある",
+      "非公式の配布物にマルウェアが含まれていた報告があり、入手元を公式に限る必要がある",
+      "ソフトウェアのリバースエンジニアリングは利用規約やライセンスで制限されている場合があり、利用前に確認が必要"
+    ],
+    "relatedTerms": [
+      "mcp",
+      "coding-agent",
+      "claude-code",
+      "ai-agent",
+      "tool-calling"
+    ],
+    "references": [
+      {
+        "type": "GitHub",
+        "label": "morluto/rea",
+        "url": "https://github.com/morluto/rea"
+      },
+      {
+        "type": "Official Website",
+        "label": "rea.tools",
+        "url": "https://rea.tools"
+      },
+      {
+        "type": "Blog",
+        "label": "Reverse Engineer Anything: What the Viral GitHub Repo Actually Does (UX Planet)",
+        "url": "https://uxplanet.org/reverse-engineer-anything-what-the-viral-github-repo-actually-does-c5ea949123a5"
+      }
+    ]
+  },
+  {
+    "slug": "tripo-ai",
+    "name": "Tripo AI",
+    "aliases": [
+      "Tripo",
+      "Tripo3D"
+    ],
+    "tagline": "VASTが開発する、テキストや画像から3Dモデルを生成するAIサービス",
+    "category": "モデル",
+    "tags": [
+      "3D生成",
+      "生成AI"
+    ],
+    "plainSummary": "文章や写真を入力すると、ゲームや3Dプリントに使える3Dモデルを自動で作ってくれるAIサービス。",
+    "summary": "Tripo AIは、香港に本拠を置くVASTが開発する3Dモデル生成サービス。テキストのプロンプトや2D画像を入力すると、ポリゴンメッシュとテクスチャを持つ3Dモデルを数秒から数十秒で生成する。\n生成したモデルはGLB、OBJ、STLなどの形式で書き出せ、Blender、Maya、Unity、Unreal Engine向けのプラグインも提供されている。ゲームやXR向けのアセット制作、3Dプリント用のデータ作成などに使われる。\nWebアプリのほか、開発者向けのAPIも提供している。モデルの世代ごとに改良が進められ、Tripo P2.0では四角形ポリゴン(クアッドメッシュ)での生成に対応したとされる。\nVASTは研究チームとしてオープンソースの3D生成モデルも公開しており、Stability AIと共同開発した画像から3Dを生成するTripoSRが知られている。",
+    "history": "VASTは2023年3月に設立され、同社の主力製品としてTripo AIが開発された。2024年3月にはStability AIと共同でオープンソースのTripoSRを公開した。",
+    "disadvantages": [
+      "生成されるメッシュの形状やトポロジーは入力によってばらつきがあり、用途によっては手作業での修正が必要になる",
+      "クローズドなサービスであり、モデルの内部構造や学習データは公開されていない"
+    ],
+    "relatedTerms": [
+      "generative-ai",
+      "image-generation",
+      "diffusion-model",
+      "midjourney",
+      "stable-diffusion"
+    ],
+    "references": [
+      {
+        "type": "Official Website",
+        "label": "Tripo AI",
+        "url": "https://www.tripo3d.ai"
+      },
+      {
+        "type": "GitHub",
+        "label": "VAST-AI-Research/TripoSR",
+        "url": "https://github.com/VAST-AI-Research/TripoSR"
+      },
+      {
+        "type": "Blog",
+        "label": "Vast's Tripo AI brings generative AI to 3D modeling (KrASIA)",
+        "url": "https://www.kr-asia.com/vasts-tripo-ai-brings-generative-ai-to-3d-modeling"
+      }
     ]
   }
 ]
