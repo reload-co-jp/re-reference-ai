@@ -59,3 +59,16 @@ a {
 .search-button:hover {
   background: var(--color-accent-bright);
 }
+
+:focus-visible {
+  outline: 2px solid var(--color-accent-bright);
+  outline-offset: 2px;
+}
+
+.term-card-link:focus-visible .term-card {
+  border-color: var(--color-accent);
+}
+
+.term-suggestion[aria-selected="true"] {
+  background: var(--color-surface-hover);
+}

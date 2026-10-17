@@ -10,7 +10,7 @@ import { ComparisonCard } from "components/comparison/comparison-card"
 import { TimelineCard } from "components/timeline/timeline-card"
 import { getArticlesForTerm } from "lib/articles"
 import { getComparisonsForTerm } from "lib/comparisons"
-import { getFileGitDates } from "lib/git-dates"
+import { getTermGitDates } from "lib/git-dates"
 import { organizationRef, toJsonLd } from "lib/json-ld"
 import { applySeo } from "lib/seo"
 import { SITE_NAME, SITE_TAGLINE_JA, SITE_URL } from "lib/site"
@@ -82,14 +82,20 @@ export const generateMetadata = async ({ params }: Props): Promise<Metadata> => 
   }, term.seo)
 }
 
+const getTermDates = (term: Term) => {
+  const gitDates = getTermGitDates(term.slug)
+  return {
+    datePublished: gitDates.datePublished,
+    dateModified: term.updatedAt ?? gitDates.dateModified,
+  }
+}
+
 const buildJsonLd = (term: Term, relatedTerms: Term[]) => {
   const url = `${SITE_URL}/terms/${term.slug}/`
   const categoryUrl = `${SITE_URL}/categories/${getCategorySlug(term.category)}/`
   const description = term.plainSummary ?? term.summary ?? term.tagline
   const image = `${SITE_URL}/terms/${term.slug}/opengraph-image`
-  const gitDates = getFileGitDates("data/terms.json")
-  const datePublished = gitDates.datePublished
-  const dateModified = term.updatedAt ?? gitDates.dateModified
+  const { datePublished, dateModified } = getTermDates(term)
 
   const mentions =
     relatedTerms.length > 0
@@ -179,6 +185,7 @@ const TermPage: FC<Props> = async ({ params }) => {
   const relatedTimelines = getTimelinesForTerm(term.slug)
   const relatedComparisons = getComparisonsForTerm(term.slug)
   const jsonLdBlocks = buildJsonLd(term, relatedTerms)
+  const { dateModified } = getTermDates(term)
 
   return (
     <Container>
@@ -236,6 +243,11 @@ const TermPage: FC<Props> = async ({ params }) => {
             </Link>
           ))}
         </div>
+        {dateModified && (
+          <p style={{ color: "var(--color-text-muted)", fontSize: ".8rem", marginTop: "1rem" }}>
+            最終更新: <time dateTime={dateModified}>{dateModified}</time>
+          </p>
+        )}
       </Section>
 
       {/* Plain summary */}

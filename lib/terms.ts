@@ -132,10 +132,13 @@ const getTermText = (term: Term): string =>
     .filter(Boolean)
     .join("\n")
 
-// 関連度: 同一タグ(1件ごと+3) > 明示的な関連用語(+3) > 本文中での言及(+2) > 同一カテゴリ(+1)
+// 関連度: 同一タグ(1件ごと+3) > 明示的な関連用語・比較対象(双方向, +3) > 本文中での言及(+2) > 同一カテゴリ(+1)
 // 同一カテゴリのみの用語は関連が薄いため除外する
 export const getRankedRelatedTerms = (term: Term, limit = RELATED_TERM_LIMIT): Term[] => {
-  const explicit = new Set(term.relatedTerms ?? [])
+  const explicit = new Set([
+    ...(term.relatedTerms ?? []),
+    ...(term.comparisons ?? []).map((comparison) => comparison.slug),
+  ])
   const text = getTermText(term)
   return terms
     .filter((candidate) => candidate.slug !== term.slug)
@@ -146,7 +149,11 @@ export const getRankedRelatedTerms = (term: Term, limit = RELATED_TERM_LIMIT): T
       )
       const score =
         sharedTags * 3 +
-        (explicit.has(candidate.slug) ? 3 : 0) +
+        (explicit.has(candidate.slug) ||
+        candidate.relatedTerms?.includes(term.slug) ||
+        candidate.comparisons?.some((comparison) => comparison.slug === term.slug)
+          ? 3
+          : 0) +
         (mentioned ? 2 : 0) +
         (candidate.category === term.category ? 1 : 0)
       return { candidate, index, score }
