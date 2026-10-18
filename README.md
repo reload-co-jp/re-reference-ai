@@ -99,10 +99,14 @@ pnpm dev        # 開発サーバー
 pnpm build      # 静的ビルド（全ページ生成）
 pnpm lint       # ESLint
 pnpm lint:text  # terms.json内の日本語文章チェック（textlint）
-pnpm check:seo  # build後のout/を走査し内部リンク切れ・title/description/canonical/OGP欠落・canonical重複を検出（CIでも実行）
+pnpm check:seo  # build後のout/を走査し内部リンク切れ・title/description/canonical/OGP欠落・canonical重複・H1数・title/description重複・孤立ページを検出（CIでも実行）
+pnpm audit:terms # 用語データの品質監査（定義過少・重複・別名不整合・リンク切れ・出典欠落・時点依存記述・断定表現・孤立タグ）。--slug / --rule / --json で絞り込み
+pnpm test       # 監査スクリプトのテスト（node:test）
 pnpm typecheck  # TypeScript型チェック
 pnpm format     # Prettier
 ```
+
+`summary` がない用語ページは本文が整うまで noindex とし、sitemap から除外する（`isTermIndexable`）。
 
 `pnpm lint:text` は `textlint-rule-preset-ja-technical-writing` と `@textlint-ja/textlint-rule-preset-ai-writing` を使い、助詞の連続・冗長表現・AI特有の誇張表現などを検出する。
 

@@ -424,7 +424,13 @@
         "title": "OpenAIがMCPを採用",
         "description": "OpenAIがAgents SDK・Responses API・ChatGPTデスクトップアプリを含む製品群でMCPへの対応を発表。",
         "organizations": ["OpenAI"],
-        "references": [],
+        "references": [
+          {
+            "type": "Documentation",
+            "label": "OpenAI Agents SDK: Model context protocol (MCP)",
+            "url": "https://openai.github.io/openai-agents-python/mcp/"
+          }
+        ],
         "relatedTerms": ["mcp", "gpt"]
       },
       {
@@ -440,7 +446,18 @@
         "title": "Linux Foundationへ移管",
         "description": "AnthropicがMCPを、Linux Foundation傘下の基金であるAgentic AI Foundation(AAIF)へ寄贈。主要AIベンダー横断での採用がさらに加速した。",
         "organizations": ["Anthropic", "Linux Foundation"],
-        "references": [],
+        "references": [
+          {
+            "type": "Official Website",
+            "label": "Anthropic: Donating MCP to the Agentic AI Foundation",
+            "url": "https://www.anthropic.com/news/donating-the-model-context-protocol-and-establishing-of-the-agentic-ai-foundation"
+          },
+          {
+            "type": "Official Website",
+            "label": "Linux Foundation Announces the Formation of the Agentic AI Foundation (AAIF)",
+            "url": "https://www.linuxfoundation.org/press/linux-foundation-announces-the-formation-of-the-agentic-ai-foundation"
+          }
+        ],
         "relatedTerms": ["mcp"]
       }
     ],
@@ -479,7 +496,13 @@
         "title": "Claude 2発表",
         "description": "コンテキストウィンドウを拡大し、API提供も開始したClaude 2を発表。",
         "organizations": ["Anthropic"],
-        "references": [],
+        "references": [
+          {
+            "type": "Official Website",
+            "label": "Anthropic: Claude 2",
+            "url": "https://www.anthropic.com/news/claude-2"
+          }
+        ],
         "relatedTerms": ["claude", "context-window"]
       },
       {
@@ -487,7 +510,13 @@
         "title": "Claude 3ファミリー発表",
         "description": "Opus・Sonnet・Haikuの3サイズで構成されるClaude 3を発表し、以降の世代で踏襲されるサイズ体系を確立。画像入力への対応も追加された。",
         "organizations": ["Anthropic"],
-        "references": [],
+        "references": [
+          {
+            "type": "Official Website",
+            "label": "Anthropic: Introducing the next generation of Claude",
+            "url": "https://www.anthropic.com/news/claude-3-family"
+          }
+        ],
         "relatedTerms": ["claude", "vision-language-model"]
       },
       {
@@ -495,7 +524,13 @@
         "title": "Claude 3.5 Sonnet発表",
         "description": "Claude 3 Opusを上回る性能を示したClaude 3.5 Sonnetを発表。コード生成結果をリアルタイムにプレビューできるArtifacts機能も同時公開。",
         "organizations": ["Anthropic"],
-        "references": [],
+        "references": [
+          {
+            "type": "Official Website",
+            "label": "Anthropic: Introducing Claude 3.5 Sonnet",
+            "url": "https://www.anthropic.com/news/claude-3-5-sonnet"
+          }
+        ],
         "relatedTerms": ["claude"]
       },
       {
@@ -503,7 +538,13 @@
         "title": "Computer Useベータ公開",
         "description": "Claude 3.5 Sonnet(新版)とClaude 3.5 Haikuを発表。カーソル操作やクリック等でPC画面を直接操作できるComputer Use機能を公開ベータとして追加。",
         "organizations": ["Anthropic"],
-        "references": [],
+        "references": [
+          {
+            "type": "Official Website",
+            "label": "Anthropic: Introducing computer use, a new Claude 3.5 Sonnet, and Claude 3.5 Haiku",
+            "url": "https://www.anthropic.com/news/3-5-models-and-computer-use"
+          }
+        ],
         "relatedTerms": ["claude", "computer-use"]
       },
       {
@@ -511,7 +552,13 @@
         "title": "Claude Codeリサーチプレビュー公開",
         "description": "ターミナル上で動作するコーディングエージェントClaude Codeを、Claude 3.7 Sonnetとともにリサーチプレビューとして公開。",
         "organizations": ["Anthropic"],
-        "references": [],
+        "references": [
+          {
+            "type": "Official Website",
+            "label": "Anthropic: Claude 3.7 Sonnet and Claude Code",
+            "url": "https://www.anthropic.com/news/claude-3-7-sonnet"
+          }
+        ],
         "relatedTerms": ["claude", "coding-agent"]
       },
       {
@@ -519,7 +566,13 @@
         "title": "Claude Opus 4・Sonnet 4発表",
         "description": "Claude 4世代となるClaude Opus 4とClaude Sonnet 4を発表。",
         "organizations": ["Anthropic"],
-        "references": [],
+        "references": [
+          {
+            "type": "Official Website",
+            "label": "Anthropic: Introducing Claude 4",
+            "url": "https://www.anthropic.com/news/claude-4"
+          }
+        ],
         "relatedTerms": ["claude"]
       },
       {
@@ -527,7 +580,13 @@
         "title": "Claude Sonnet 5発表",
         "description": "Claudeファミリーの最新モデルとしてClaude Sonnet 5を発表。",
         "organizations": ["Anthropic"],
-        "references": [],
+        "references": [
+          {
+            "type": "Official Website",
+            "label": "Anthropic: Introducing Claude Sonnet 5",
+            "url": "https://www.anthropic.com/news/claude-sonnet-5"
+          }
+        ],
         "relatedTerms": ["claude"]
       }
     ],

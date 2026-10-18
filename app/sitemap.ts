@@ -2,7 +2,14 @@ import { MetadataRoute } from "next"
 import { articles } from "lib/articles"
 import { comparisons } from "lib/comparisons"
 import { SITE_URL } from "lib/site"
-import { categories, getCategorySlug, getIndexableTags, getTagSlug, terms } from "lib/terms"
+import {
+  categories,
+  getCategorySlug,
+  getIndexableTags,
+  getTagSlug,
+  isTermIndexable,
+  terms,
+} from "lib/terms"
 import { timelines } from "lib/timelines"
 
 export const dynamic = "force-static"
@@ -28,7 +35,7 @@ const sitemap = (): MetadataRoute.Sitemap => [
     changeFrequency: "weekly" as const,
     priority: 0.5,
   })),
-  ...terms.map((term) => ({
+  ...terms.filter(isTermIndexable).map((term) => ({
     url: `${SITE_URL}/terms/${term.slug}/`,
     changeFrequency: "monthly" as const,
     priority: 0.8,

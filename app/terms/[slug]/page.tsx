@@ -21,6 +21,7 @@ import {
   getTagSlug,
   getTermBySlug,
   getZennArticles,
+  isTermIndexable,
   Term,
   terms,
 } from "lib/terms"
@@ -79,6 +80,7 @@ export const generateMetadata = async ({ params }: Props): Promise<Metadata> => 
     },
     category: term.category,
     twitter: { title, description },
+    ...(!isTermIndexable(term) && { robots: { follow: true, index: false } }),
   }, term.seo)
 }
 

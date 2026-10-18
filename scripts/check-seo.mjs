@@ -1,4 +1,5 @@
-// Static export (out/) を走査し、内部リンク切れ・SEOメタデータ欠落・canonical重複を検出する。
+// Static export (out/) を走査し、内部リンク切れ・SEOメタデータ欠落・canonical重複・H1数・
+// title/description重複・孤立ページ(内部被リンクなし)を検出する。
 // 使い方: pnpm build && pnpm check:seo
 import { existsSync, readdirSync, readFileSync, statSync } from "node:fs"
 import { join, relative } from "node:path"
@@ -64,6 +65,14 @@ const errors = []
 const warnings = []
 const canonicals = new Map()
 const noindexPaths = new Set()
+const titles = new Map()
+const descriptions = new Map()
+const inbound = new Map()
+
+const normalizePath = (href) => {
+  const path = decodeURIComponent(href.split(/[?#]/)[0])
+  return path.endsWith("/") || /\.[a-z0-9]+$/i.test(path) ? path : `${path}/`
+}
 
 for (const file of htmlFiles) {
   const html = readFileSync(file, "utf8")
@@ -84,6 +93,18 @@ for (const file of htmlFiles) {
   else if ((title.match(/Re Reference AI/g) ?? []).length > 1)
     report(errors, `duplicated site name in title: ${title}`)
   if (!description?.trim()) report(errors, "missing description")
+
+  const h1Count = (html.match(/<h1[\s>]/g) ?? []).length
+  if (h1Count !== 1) report(errors, `h1 count is ${h1Count}`)
+
+  if (!noindex) {
+    for (const [map, value] of [
+      [titles, title],
+      [descriptions, description],
+    ]) {
+      if (value) map.set(value, [...(map.get(value) ?? []), pagePath])
+    }
+  }
 
   if (!noindex) {
     if (!canonical) report(errors, "missing canonical")
@@ -120,6 +141,9 @@ for (const file of htmlFiles) {
       ? href.slice(SITE_URL.length) || "/"
       : href
     if (!internal.startsWith("/") || internal.startsWith("//")) continue
+    const target = normalizePath(internal)
+    if (target !== pagePath)
+      inbound.set(target, (inbound.get(target) ?? 0) + 1)
     if (!resolveInternal(internal))
       report(errors, `broken internal link: ${href}`)
     else if (
@@ -149,6 +173,22 @@ else {
     if (!seen.has(canonical) && !(pagePath === "/" && seen.has(`${SITE_URL}/`)))
       warnings.push(`sitemap.xml: indexable page not listed ${canonical}`)
   }
+}
+
+for (const [label, map] of [
+  ["title", titles],
+  ["description", descriptions],
+]) {
+  for (const [value, paths] of map) {
+    if (paths.length > 1)
+      warnings.push(`duplicate ${label} (${paths.join(", ")}): ${value}`)
+  }
+}
+
+// 他のどのページからもリンクされていないインデックス対象ページ
+for (const [, pagePath] of canonicals) {
+  if (pagePath !== "/" && !inbound.has(pagePath))
+    warnings.push(`orphan page (no internal inbound links): ${pagePath}`)
 }
 
 if (!existsSync(join(OUT_DIR, "robots.txt"))) errors.push("robots.txt: missing")

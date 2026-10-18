@@ -289,6 +289,9 @@ const categoryDescriptions = categoryDescriptionsData as Record<string, string>
 export const getCategoryDescription = (category: string): string | undefined =>
   categoryDescriptions[category]
 
+// 概要(summary)がない用語ページは内容が薄いため、本文が整うまで noindex にし sitemap から外す
+export const isTermIndexable = (term: Term): boolean => Boolean(term.summary) && !term.seo?.noindex
+
 // 用語数が少ないタグページは内容が薄いため noindex にし、sitemap・タグ一覧から外す
 export const MIN_TERMS_FOR_TAG_INDEX = 3
 

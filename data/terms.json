@@ -22301,6 +22301,7 @@
       }
     ],
     "relatedTerms": [
+      "quantization-aware-training",
       "ptq",
       "quantization",
       "int4"
@@ -28341,6 +28342,8 @@
       "疑似量子化の実装や対象レイヤーの選定に工夫が必要"
     ],
     "relatedTerms": [
+      "ptq",
+      "qat",
       "quantization"
     ],
     "references": [
@@ -33291,8 +33294,7 @@
     "slug": "deepseek-harness",
     "name": "DeepSeek Harness",
     "aliases": [
-      "DSH",
-      "dsh"
+      "DSH"
     ],
     "tagline": "DeepSeekが開発する、あらゆる機能をプラグインとして構成するオープンソースのエージェントハーネス",
     "category": "エージェント",
