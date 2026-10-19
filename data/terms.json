@@ -1,5 +1,5 @@
 [
-{
+  {
     "slug": "large-language-model",
     "name": "LLM",
     "aliases": [
@@ -2496,7 +2496,7 @@
       }
     ]
   },
-    {
+  {
     "slug": "reasoning-model",
     "name": "推論モデル",
     "aliases": [
@@ -2563,7 +2563,8 @@
       "test-time-scaling",
       "reasoning-limitations",
       "reasoning",
-      "nemotron"
+      "nemotron",
+      "glm"
     ],
     "faq": [
       {
@@ -3293,7 +3294,7 @@
       }
     ]
   },
-    {
+  {
     "slug": "mixture-of-experts",
     "name": "MoE",
     "aliases": [
@@ -3349,6 +3350,10 @@
       {
         "slug": "llama",
         "note": "Llama 4では、MoEアーキテクチャが採用されている"
+      },
+      {
+        "slug": "glm",
+        "note": "GLM-4.5以降は総パラメータに対して1トークンあたりの活性パラメータを小さく保つMoEで、GLM-4.5が355B/32B、GLM-5が744B/40B"
       }
     ],
     "relatedTerms": [
@@ -3363,7 +3368,10 @@
       "sparse-activation",
       "computational-efficiency",
       "conditional-computation",
-      "nemotron"
+      "nemotron",
+      "kimi",
+      "glm",
+      "laguna"
     ],
     "faq": [
       {
@@ -4220,7 +4228,7 @@
       }
     ]
   },
-      {
+  {
     "slug": "ai-agent",
     "name": "AIエージェント",
     "aliases": [
@@ -4389,7 +4397,8 @@
       "multi-agent",
       "tool-calling",
       "tool-using-ai",
-      "autogpt"
+      "autogpt",
+      "generative-ai"
     ],
     "faq": [
       {
@@ -5472,6 +5481,10 @@
       {
         "slug": "small-language-model",
         "note": "投機的デコーディングの下書きモデルには、多くの場合SLMのような軽量なモデルが使われる"
+      },
+      {
+        "slug": "laguna",
+        "note": "Laguna S 2.1は投機的デコーディング用のDFlash draft modelを公式に配布しており、低遅延運用に利用できる"
       }
     ],
     "relatedTerms": [
@@ -5479,7 +5492,8 @@
       "kv-cache",
       "small-language-model",
       "inference",
-      "latency-optimization"
+      "latency-optimization",
+      "laguna"
     ],
     "faq": [
       {
@@ -6131,33 +6145,52 @@
       }
     ]
   },
-    {
+  {
     "slug": "llama",
     "name": "Llama",
     "aliases": [
-      "LLaMA"
+      "LLaMA",
+      "Llama 4"
     ],
     "tagline": "Metaが開発する、研究・商用利用向けに重みを公開しているオープンウェイトの大規模言語モデルファミリー",
     "category": "モデル",
     "tags": [
       "LLM",
       "Meta",
-      "オープンウェイト"
+      "オープンウェイト",
+      "マルチモーダル"
     ],
     "plainSummary": "Metaが公開している、誰でも使えるAIモデルシリーズ。",
-    "summary": "Llama(LLaMA)とは、Metaが開発し重みを公開しているオープンウェイトの大規模言語モデルファミリー。\nクローズドウェイトのGPTやClaude、Geminiと異なり、モデルの重みを研究者・企業がダウンロードして自前の環境で実行・ファインチューニングできる点が特徴で、オープンウェイトLLMのエコシステム(ファインチューニング手法、量子化ツール、派生モデル等)の発展を大きく後押しした。\nLlama 2以降はコミュニティによる利用を前提とした比較的緩やかなライセンスで公開され、これをベースにした派生モデルやファインチューニング済みモデルが数多く公開されるオープンウェイトLLMのエコシステムの中心的存在になった。",
-    "background": "Metaは、モデルの重みを公開することで研究コミュニティ全体の技術発展を加速させ、特定ベンダーへの依存を避けたい企業のニーズにも応えるという方針のもとLlamaシリーズを開発している。",
-    "history": "2023年2月: Metaが研究者向けにLLaMA(第1世代)を公開。\n当初は申請制だったが重みが流出し広く一般に出回る。\n2023年7月: 商用利用も許可するライセンスでLlama 2を公開。\n2024年4月: Llama 3を公開。\n2024年7月: 4050億パラメータのLlama 3.1を公開。\n2025年4月: MoEアーキテクチャを採用したLlama 4を公開。",
-    "architecture": "デコーダのみのTransformerアーキテクチャを基本とし、世代を追うごとに学習データ量や学習手法が改良されている。\nLlama 4ではMoE(専門家混合)アーキテクチャが採用されている。",
+    "summary": "Llama(LLaMA)とは、Metaが開発し重みを公開しているオープンウェイトの大規模言語モデルファミリー。\nクローズドウェイトのGPTやClaude、Geminiと異なり、モデルの重みを研究者・企業がダウンロードして自前の環境で実行・ファインチューニングできる点が特徴で、オープンウェイトLLMのエコシステム(ファインチューニング手法、量子化ツール、派生モデル等)の発展を大きく後押しした。\nLlama 2以降はコミュニティによる利用を前提とした比較的緩やかなライセンスで公開され、これをベースにした派生モデルやファインチューニング済みモデルが数多く公開されるオープンウェイトLLMのエコシステムの中心的存在になった。\n2024年のLlama 3.1は405Bまで規模を拡張し128kのコンテキストに対応し、2025年4月のLlama 4は初めてMoEを採用したネイティブマルチモーダルモデルとして、10Mトークンのコンテキストを持つ。\nその後もLlama GuardやLlama Prompt Guardなど、安全用途のモデルが同じブランドで提供されている。",
+    "background": "Metaは、モデルの重みを公開することで研究コミュニティ全体の技術発展を加速させ、特定ベンダーへの依存を避けたい企業のニーズにも応えるという方針のもとLlamaシリーズを開発している。\n一方でLlama 4以降は、モデルの評価をめぐる議論を受けて、ベンチマークの再現手順と推論・学習のレシピを公開する運用に切り替えている。\n重みはHugging Faceで配布されると同時に、Meta自身のプラットフォーム経由でも利用できる。",
+    "history": "2023年2月: Metaが研究者向けにLLaMA(第1世代)を公開。\n当初は申請制だったが重みが流出し広く一般に出回った。\n2023年7月: 商用利用も許可するライセンスでLlama 2を公開。\n2024年4月: 8Bと70BのLlama 3を公開。\n2024年7月: 405BのLlama 3.1を公開し、128kのコンテキストと多言語対応を進めた。\n2024年9月: 1Bと3Bの小型版、11Bと90Bの視覚対応版Llama 3.2を公開。\n2024年12月: 70BのLlama 3.3 Instructを公開。\n2025年4月: MoEを採用しネイティブマルチモーダルとなったLlama 4(ScoutとMaverick)を公開。10Mトークンのコンテキストに対応する。\n2025年4月: セーフティ用途のLlama Guard 4とLlama Prompt Guard 2を公開。",
+    "architecture": "Llama 3まではデコーダのみのTransformerアーキテクチャを基本とし、世代を追うごとに学習データ量や学習手法が改良されている。\nLlama 3.1では128kのコンテキストと多言語への対応が進み、Llama 3.2では視覚入力を扱う変種が加わった。\nLlama 4では初めてMoE(混合エキスパート)を採用してネイティブマルチモーダルになり、画像とテキストを早期融合する。Scoutは16エキスパート、Maverickは128エキスパートで、どちらも1トークンあたり17Bが活性化する。\n10Mトークンのコンテキストに対応し、ScoutはINT4量子化で単一のH100に収まる。\n教師モデルのLlama 4 Behemoth(1トークンあたり288Bが活性化する)を使い、ScoutとMaverickの学習を進めた。",
+    "workflow": "重みはHugging Faceのmeta-llama organizationで公開されているが、Llama 4以降はアクセス申請が必要で、承認を経てダウンロードできる。\nvLLMやSGLangで推論サーバーを立ててセルフホストし、LoRAなどの手法で独自の追加学習を行うのが典型的な流れになる。\n量子化版の提供はモデルごとに異なり、GGUFを用意しているllama.cpp向けと、bitsandbytesやGPTQ、AWQ向けの版が分かれる。\n安全用途ではLlama GuardやLlama Prompt Guardを別のモデルとして搭配して使う。",
+    "codeExamples": [
+      {
+        "title": "vLLMでLlama 3.1を推論サーバーとして起動する",
+        "language": "bash",
+        "code": "vllm serve meta-llama/Meta-Llama-3.1-8B-Instruct \\\n    --tensor-parallel-size 1 \\\n    --max-model-len 131072"
+      },
+      {
+        "title": "OpenAI互換のクライアントから呼び出す",
+        "language": "python",
+        "code": "from openai import OpenAI\n\nclient = OpenAI(\n    api_key=\"EMPTY\",\n    base_url=\"http://localhost:8000/v1\",\n)\n\nresponse = client.chat.completions.create(\n    model=\"meta-llama/Meta-Llama-3.1-8B-Instruct\",\n    messages=[{\"role\": \"user\", \"content\": \"日本語で要約してください。\"}],\n)\nprint(response.choices[0].message.content)"
+      }
+    ],
     "advantages": [
       "重みが公開されており、自前の環境でのホスティング・ファインチューニング・改変が可能",
       "研究・商用問わず利用できるライセンスにより、独自のエコシステムが発展している",
-      "派生モデルや量子化版が数多く公開されており、用途・環境に応じた選択肢が豊富"
+      "派生モデルや量子化版が数多く公開されており、用途・環境に応じた選択肢が豊富",
+      "8Bから405B、Llama 4では400B超のMoEまで、同一ブランドで複数の規模を選べる",
+      "セーフティ用途のLlama GuardやLlama Prompt Guardが同じブランドで提供されている"
     ],
     "disadvantages": [
       "モデルを自前で運用する場合、GPU等のインフラを自社で用意・管理する必要がある",
       "GPTやClaude等の最新のクローズドウェイトモデルと比べ、性能面で一歩後れを取る場合がある",
-      "ライセンス条件が版によって異なり、商用利用時は利用規約の確認が必要になる"
+      "ライセンス条件が版によって異なり、商用利用時は利用規約の確認が必要になる",
+      "Llama 4以降は重みのダウンロードに申請と承認が必要で、入手までに時間がかかる",
+      "Llama 3以降は独自の評価基準をめぐる批判があり、ベンチマークの再現手順を確認してから比較する必要がある"
     ],
     "comparisons": [
       {
@@ -6170,7 +6203,11 @@
       },
       {
         "slug": "mixture-of-experts",
-        "note": "Llama 4では、MoEアーキテクチャが採用されている"
+        "note": "Llama 4では、MoEアーキテクチャが採用されている。Scoutは16エキスパート、Maverickは128エキスパートを持つ"
+      },
+      {
+        "slug": "qwen",
+        "note": "LlamaとQwenはいずれもオープンウェイトLLMだが、LlamaはMetaの単一ブランドで世代を重ね、Qwenは用途別の派生モデルを多数公開する"
       }
     ],
     "relatedTerms": [
@@ -6178,7 +6215,11 @@
       "fine-tuning",
       "mixture-of-experts",
       "mistral",
-      "nemotron"
+      "nemotron",
+      "multimodal-llm",
+      "long-context",
+      "quantization",
+      "vllm"
     ],
     "faq": [
       {
@@ -6188,6 +6229,14 @@
       {
         "question": "Llamaを使うにはどんな環境が必要？",
         "answer": "パラメータ数に応じて必要なGPUメモリが変わり、大規模なモデルは複数GPUでの分散実行が必要になる場合がある。\n量子化により必要なメモリを抑えることもできる。"
+      },
+      {
+        "question": "Llama 4の重みはすぐ入手できるか。",
+        "answer": "Llama 4以降はHugging Faceでアクセス申請が必要で、承認された後にダウンロードできる。\n申請から承認までに時間を要するので、導入計画に余裕を持たせる必要がある。"
+      },
+      {
+        "question": "Llamaの最大規模はどれくらいか。",
+        "answer": "公開されているモデルではLlama 3.1の405Bが最大で、Llama 4ではScoutとMaverickのいずれも1トークンあたり17Bが活性化する構成になる。\n教師モデルのBehemoth(1トークンあたり288Bが活性化する)は公開されていない。"
       }
     ],
     "references": [
@@ -6197,11 +6246,27 @@
         "url": "https://arxiv.org/abs/2302.13971"
       },
       {
+        "type": "Research Paper",
+        "label": "The Llama 3 Herd of Models",
+        "url": "https://arxiv.org/abs/2407.21783"
+      },
+      {
         "type": "Official Website",
         "label": "Meta Llama",
         "url": "https://www.llama.com/"
+      },
+      {
+        "type": "Blog",
+        "label": "Llama 4 Multimodal Intelligence (Meta AI Blog)",
+        "url": "https://ai.meta.com/blog/llama-4-multimodal-intelligence/"
+      },
+      {
+        "type": "Documentation",
+        "label": "meta-llama (Hugging Face)",
+        "url": "https://huggingface.co/meta-llama"
       }
-    ]
+    ],
+    "updatedAt": "2026-10-20"
   },
   {
     "slug": "mistral",
@@ -6308,6 +6373,14 @@
       {
         "slug": "rlhf",
         "note": "DeepSeek-R1の学習には、強化学習を用いた手法が採用されている"
+      },
+      {
+        "slug": "kimi",
+        "note": "DeepSeekとKimiはいずれも中国発のオープンウェイトMoEモデルで、Kimi K2は1兆/32B、DeepSeek-V3.1は671B/37Bと構成が異なる"
+      },
+      {
+        "slug": "glm",
+        "note": "DeepSeekとGLMはいずれも中国発のMITライセンスのオープンウェイトMoEモデルで、エージェント型のコーディングや推論体会到の評価軸で競合する"
       }
     ],
     "relatedTerms": [
@@ -6317,7 +6390,10 @@
       "large-language-model",
       "grpo",
       "deepseek-harness",
-      "longcat"
+      "longcat",
+      "kimi",
+      "glm",
+      "laguna"
     ],
     "faq": [
       {
@@ -6342,7 +6418,7 @@
       }
     ]
   },
-    {
+  {
     "slug": "qwen",
     "name": "Qwen",
     "aliases": [
@@ -6400,6 +6476,10 @@
       {
         "slug": "ornith",
         "note": "Ornith-1.0は、Qwen 3.5の重みをベースにエージェント型コーディング向けの強化学習を施した派生モデルファミリー"
+      },
+      {
+        "slug": "glm",
+        "note": "QwenとGLMはいずれも中国発のMITライセンスのオープンウェイトLLMで、最上位モデルはQwen3.8が2.4T、GLM-5が744Bと規模が異なる"
       }
     ],
     "relatedTerms": [
@@ -6412,7 +6492,8 @@
       "mixture-of-experts",
       "open-weight-model",
       "multimodal-llm",
-      "nemotron"
+      "nemotron",
+      "glm"
     ],
     "faq": [
       {
@@ -6624,7 +6705,7 @@
       }
     ]
   },
-    {
+  {
     "slug": "vllm",
     "name": "vLLM",
     "tagline": "PagedAttentionによりGPUメモリを効率利用する、高スループットなオープンソースLLM推論・サービングエンジン",
@@ -6687,7 +6768,8 @@
       "sglang",
       "continuous-batching",
       "llm-d",
-      "nemotron"
+      "nemotron",
+      "laguna"
     ],
     "faq": [
       {
@@ -6763,6 +6845,10 @@
       {
         "slug": "gguf",
         "note": "Ollamaで配布・実行されるモデルの多くは、GGUF形式で提供されている"
+      },
+      {
+        "slug": "laguna",
+        "note": "Laguna XS 2.1はOllamaとllama.cppから利用できる形で配布されており、ローカル実行が容易"
       }
     ],
     "relatedTerms": [
@@ -6772,7 +6858,8 @@
       "quantization",
       "gguf",
       "local-llm",
-      "ollama-cloud"
+      "ollama-cloud",
+      "laguna"
     ],
     "faq": [
       {
@@ -6922,7 +7009,8 @@
       "gpu",
       "gguf",
       "local-llm",
-      "igpu"
+      "igpu",
+      "laguna"
     ],
     "faq": [
       {
@@ -11498,6 +11586,10 @@
       {
         "slug": "gemini",
         "note": "Geminiは、テキスト・画像・音声・動画を統合的に扱えるマルチモーダルなモデルとして設計されている"
+      },
+      {
+        "slug": "generative-ai",
+        "note": "マルチモーダルはテキスト・画像・音声など複数の形式を扱えることを示す軸で、生成AIは生成するという目的に特化した総称。実際のマルチモーダルモデルは生成AIにも含まれる"
       }
     ],
     "relatedTerms": [
@@ -11510,7 +11602,8 @@
       "physical-ai",
       "video-understanding",
       "multimodal-dialogue",
-      "multimodal-fusion"
+      "multimodal-fusion",
+      "generative-ai"
     ],
     "faq": [
       {
@@ -13716,7 +13809,7 @@
       }
     ]
   },
-      {
+  {
     "slug": "computer-use",
     "name": "Computer Use",
     "aliases": [
@@ -15558,7 +15651,7 @@
       }
     ]
   },
-        {
+  {
     "slug": "grok",
     "name": "Grok",
     "aliases": [
@@ -17643,6 +17736,14 @@
       {
         "slug": "ai-ide",
         "note": "AI IDEがエディタ上での対話的な支援に重点を置くのに対し、コーディングエージェントはターミナル等でより自律的にタスクを遂行する形態が多い"
+      },
+      {
+        "slug": "kimi-code",
+        "note": "Kimi CodeはMoonshot AIが自社モデル向けに開発したオープンソースのターミナル型コーディングエージェントの1つ"
+      },
+      {
+        "slug": "laguna",
+        "note": "Lagunaはエージェント型コーディングと長時間続く作業を主眼に学習されたオープンウェイトのモデルファミリー"
       }
     ],
     "relatedTerms": [
@@ -17664,7 +17765,9 @@
       "tui",
       "code-generation",
       "opencode",
-      "pi-coding-agent"
+      "pi-coding-agent",
+      "kimi-code",
+      "laguna"
     ],
     "faq": [
       {
@@ -18469,7 +18572,8 @@
     "name": "生成AI",
     "aliases": [
       "Generative AI",
-      "ジェネレーティブAI"
+      "ジェネレーティブAI",
+      "GenAI"
     ],
     "tagline": "テキスト・画像・音声・動画・コードなどの新しいコンテンツを生成できるAIの総称",
     "category": "技術",
@@ -18478,22 +18582,30 @@
       "深層学習"
     ],
     "plainSummary": "文章や画像、音声、動画などを新しく「作り出す」タイプのAIのまとめ言葉。ChatGPTのような文章AIも、画像を描くAIもここに含まれる。",
-    "summary": "生成AIとは、テキスト・画像・音声・動画・コードなどの新しいコンテンツを生成できるAIの総称を指す。\n入力データの分類や予測を主な目的とする従来の識別系AIと対比され、LLMによる文章生成や拡散モデルによる画像生成が代表例になる。\n2022年のStable DiffusionやChatGPTの公開を境に一般へ普及し、AI活用の中心的な領域として産業・行政・教育の各分野で導入が進んでいる。",
-    "background": "深層学習の初期の成功は画像認識や音声認識といった識別タスクが中心だった。\nGANや拡散モデル、Transformerに基づくLLMの発展により生成の品質が実用水準へ達し、識別系のAIと区別する言葉として生成AIが定着した。",
+    "summary": "生成AIとは、テキスト・画像・音声・動画・コードなどの新しいコンテンツを生成できるAIの総称を指す。\n入力データの分類や予測を主な目的とする従来の識別系AIと対比され、LLMによる文章生成や拡散モデルによる画像生成が代表例になる。\n2022年のStable DiffusionやChatGPTの公開を境に一般へ普及し、AI活用の中心的な領域として産業・行政・教育の各分野で導入が進んでいる。\n分野ごとに手法が分かれており、自然言語では自己回帰型のLLM、画像や動画では拡散モデルが主に使われる。\n近年は複数のモーダルをまとめて扱うモデルや、ツールを使って自律的に作業を進めるエージェントへ用途が広がっている。",
+    "background": "深層学習の初期の成功は画像認識や音声認識といった識別タスクが中心だった。\nGANや拡散モデル、Transformerに基づくLLMの発展により生成の品質が実用水準へ達し、識別系のAIと区別する言葉として生成AIが定着した。\n生成AIという言葉は基盤モデルという開発手法の観点ではなく、意図したコンテンツを作るという用途の観点からAIを捉える表現として使われてきた。",
+    "architecture": "生成AIの構築手法は主に3つある。\n自己回帰型はLLMを代表として次のトークンを1つずつ予測し、生成したトークンを次の入力に積む方式で文章やコードを作る。\n拡散モデルは画像や動画をノイズ表現から段階的に復元する過程を学習し、Stable Diffusionなどの基盤になっている。\nGANは生成器と判定器を競い合わせせて分布を一致させる方式で、未知の条件に対する表現の学習に強みを持つ。\n近年は3種を使い分けつつ、テキストと画像を同じ枠組みで扱うマルチモーダルや、ツールを使って自律的に作業を進めるエージェントへ範囲が広がっている。",
+    "workflow": "代表的な利用の流れは、生成したい内容を指示文に落とし込み、モデルに文章や画像を出力させ、結果を人が確認する工程になる。\n業務用途ではRAGや検索で必要な資料を文脈として渡し、生成結果の出典を確かめる構成が一般的になる。\n画像生成では、抽象的な指示を出力し、構図や色などの要素を分解して指示を詰めることで品質を上げる手順が使われる。\n生成物はそのまま公開せず、事実関係や偏りを確認してから使う工程が求められる。",
     "advantages": [
       "文章・画像・音声・動画・コードといった多様な種類のコンテンツを、専用の制作スキルがなくても短時間で生成できる",
       "たたき台やアイデア出し、定型的なコンテンツ作成を自動化でき、人間は仕上げや意思決定に注力できる",
-      "1つのモデルで多様なタスク・様式を扱えるため、タスクごとに個別のモデルを開発する必要性を減らせる"
+      "1つのモデルで多様なタスク・様式を扱えるため、タスクごとに個別のモデルを開発する必要性を減らせる",
+      "同じ手法を画像・音声・動画にも応用できるため、分野を越えた再利用が可能"
     ],
     "disadvantages": [
       "事実と異なる内容をもっともらしく生成するハルシネーションが起こりうる",
       "学習データに含まれる著作権や個人情報の扱い、生成物の権利関係が法的・倫理的な論点になっている",
-      "本物と区別しにくい文章・画像・音声・動画を生成できるため、誤情報の拡散やなりすましに悪用されるリスクがある"
+      "本物と区別しにくい文章・画像・音声・動画を生成できるため、誤情報の拡散やなりすましに悪用されるリスクがある",
+      "生成物の品質が入力の指示に左右されやすく、同じ条件を再現して検証することが難しい"
     ],
     "comparisons": [
       {
         "slug": "foundation-model",
         "note": "基盤モデルが大規模事前学習という開発手法の観点からモデルを捉える言葉であるのに対し、生成AIはテキスト・画像・音声等の新しいコンテンツを生成するという機能・用途の観点からモデルを捉える言葉。両者は同じモデルを指すことも多いが視点が異なる"
+      },
+      {
+        "slug": "multimodal",
+        "note": "マルチモーダルはテキスト・画像・音声など複数の形式を扱えることを示す軸で、生成AIは生成するという目的に特化した総称。実際のマルチモーダルモデルは生成AIにも含まれる"
       }
     ],
     "relatedTerms": [
@@ -18506,7 +18618,9 @@
       "text-generation",
       "image-generation",
       "code-generation",
-      "tripo-ai"
+      "tripo-ai",
+      "latent-diffusion-model",
+      "agentic-ai"
     ],
     "faq": [
       {
@@ -18516,8 +18630,41 @@
       {
         "question": "生成AIと識別系AI(判別モデル)の違いは？",
         "answer": "識別系AIは入力データを既存のカテゴリに分類したり数値を予測したりすることを主な目的とするのに対し、生成AIは学習データにない新しいコンテンツを生み出すことを目的とする。同じ深層学習の技術基盤を利用することも多いが、扱うタスクの性質が異なる。"
+      },
+      {
+        "question": "生成AIはどのように使うのか。",
+        "answer": "生成したい内容を指示文に落とし込み、出力された結果を目視で確認する流れが基本になる。\n業務用途ではRAGで資料を文脈として渡し、出典と誤りを確かめてから利用する。"
       }
-    ]
+    ],
+    "references": [
+      {
+        "type": "Research Paper",
+        "label": "Generative Adversarial Nets (arXiv)",
+        "url": "https://arxiv.org/abs/1406.2661"
+      },
+      {
+        "type": "Research Paper",
+        "label": "Denoising Diffusion Probabilistic Models (arXiv)",
+        "url": "https://arxiv.org/abs/2006.11239"
+      },
+      {
+        "type": "Research Paper",
+        "label": "High-Resolution Image Synthesis with Latent Diffusion Models (arXiv)",
+        "url": "https://arxiv.org/abs/2112.10752"
+      },
+      {
+        "type": "Research Paper",
+        "label": "Language Models are Few-Shot Learners (arXiv)",
+        "url": "https://arxiv.org/abs/2005.14165"
+      },
+      {
+        "type": "Documentation",
+        "label": "Hugging Face Diffusers ドキュメント",
+        "url": "https://huggingface.co/docs/diffusers"
+      }
+    ],
+    "updatedAt": "2026-10-20",
+    "history": "2014年: GAN(敵対的生成ネットワーク)による生成手法が論文で提案された。\n2020年: DDPM(拡散モデル)による生成手法が提案された。\n2021年: 潜在拡散モデルによる高解像度画像生成の手法が提案された。\n2022年8月: Stable Diffusionが公開され、画像の生成AIが一般層に広まった。\n2022年11月: ChatGPTが公開され、テキスト生成AIが急速に普及した。\n2023年以降: 画像・音声・動画を組み合わせたマルチモーダルや、ツールを使って自律的に作業するエージェントが主流になり、生成AIの利用の幅が広がった。"
   },
   {
     "slug": "foundation-model",
@@ -18901,41 +19048,173 @@
     "name": "Kimi",
     "aliases": [
       "Kimi K2",
-      "Moonshot AI Kimi"
+      "Kimi K3",
+      "Moonshot AI Kimi",
+      "月之暗面"
     ],
-    "tagline": "中国のMoonshot AIが開発するLLMシリーズ。オープンウェイトの大規模MoEモデルKimi K2で注目された",
+    "tagline": "中国のMoonshot AI(北京月之暗面)が開発するLLMシリーズ。ロングコンテキストから始まるチャットサービスと、オープンウェイトのMoEモデルKimi K2以降で展開されている",
     "category": "モデル",
     "tags": [
       "LLM",
-      "オープンウェイト"
+      "オープンウェイト",
+      "マルチモーダル"
     ],
-    "plainSummary": "中国のAI企業Moonshot AIが作るAIモデル。誰でも重みを使える形で公開された高性能モデルK2で世界的に有名になった。",
-    "summary": "Kimiとは、中国のAI企業Moonshot AI（月之暗面）が開発するLLMおよびチャットサービスのシリーズを指す。\nロングコンテキスト処理を強みとして中国市場で利用者を集め、2025年に公開されたオープンウェイトの大規模MoEモデルKimi K2で国際的にも注目された。\nDeepSeekやQwenと並び、高性能なオープンウェイトモデルを公開する中国系開発元の代表例として挙げられる。",
-    "background": "中国国内では複数のLLM開発企業が競合する中、Moonshot AIはロングコンテキスト処理に強みを持つチャットサービスとして地歩を築いた。その後、大規模なMoEモデルをオープンウェイトで公開する路線を取り、DeepSeekやQwenと並んで国際的な開発者コミュニティへの浸透を図った。",
-    "history": "2023年10月にMoonshot AIがチャットサービスとして公開した。2025年7月にオープンウェイトモデルのKimi K2を公開した。",
+    "plainSummary": "中国のMoonshot AI(北京月之暗面)が作っているAIモデルシリーズ。長い文章を扱えるチャットサービスから始まり、K2やK2.5、2.8TパラメータのK3までオープンウェイトで公開されている。",
+    "summary": "Kimiとは、中国のAI企業Moonshot AI(北京月之暗面)が開発するLLMとチャットサービスのシリーズを指す。\n2023年10月にロングコンテキスト処理を強みにしたチャットサービスとして公開され、中国市場で利用者を伸ばした。\n2025年7月にはオープンウェイトのKimi K2(総パラメータ1兆、1トークンあたり32Bが活性化するMoEモデル)を公開した。MuonClipという新しい最適化器と大規模なエージェント型データの合成で学習した点が話題になった。\n2026年1月にはネイティブマルチモーダルで最大100体のサブエージェントを並列実行するAgent Swarmに対応したKimi K2.5を、同年には総パラメータ2.8T・1Mトークンのコンテキストに対応するKimi K3を公開した。\nDeepSeekやQwenと並び、高性能なオープンウェイトモデルを公開する中国系開発元の代表例として挙げられる。",
+    "background": "中国国内では複数のLLM開発企業が競合する中、Moonshot AIはロングコンテキスト処理に強みを持つチャットサービスとして地歩を築いた。\nその後、重みを公開する大規模なMoEモデルをKimiシリーズとして提供した。\n開発者は重みを自分の環境で動かせるため、国際的な開発者コミュニティへの浸透を図っている。\n2026年以降は、単独モデルの性能だけでなく、複数のエージェントを並列実行するAgent Swarmやコーディング専用のCLIなど、用途ごとの開発者向け基盤を整備している。",
+    "history": "2023年10月: Moonshot AIがチャットサービス「Kimi」を公開。ロングコンテキスト処理を軸に据えた。\n2025年7月: オープンウェイトモデル「Kimi K2」を公開。総パラメータ1兆、1トークンあたり32Bが活性化するMoEモデルで、Muon最適化器にQK-clipを加えたMuonClipを用い、15.5兆トークンで事前学習した。\n2025年9月: 追加学習済みの「Kimi K2 Instruct 0905」を公開。\n2025年11月: 推論特化モデル「Kimi K2 Thinking」を公開。\n2026年1月: ネイティブマルチモーダルモデル「Kimi K2.5」を公開。384個のエキスパートから上位8個を選ぶMoEに、MoonViT(400M)の視覚エンコーダーを組み合わせた。\n2026年4月: 「Kimi K2.6」を公開。\n2026年6月: コーディング特化モデル「Kimi K2.7 Code」を公開。K2.6を土台とする。\n2026年7月: オープンウェイトモデル「Kimi K3」を公開。総パラメータ2.8T、1トークンあたり104Bが活性化するネイティブマルチモーダルなエージェントモデルで、1Mトークンのコンテキストに対応する。",
+    "architecture": "Kimi K2はデコーダのみのTransformerにMoEを組み合わせた設計で、総パラメータ1兆に対して1トークンあたり32Bのみを活性化する。エキスパートは384個で、ゲートネットワークが上位8個を選び、常に活性化する共有エキスパート1個を併用する。\n学習ではMuon最適化器にQK-clipを加えたMuonClip最適化器を用い、15.5兆トークンで事前学習しても損失のスパイクが起きていない。ポストトレーニングでは大規模なエージェント型データの合成と、実環境や合成環境と相互作用する強化学習の段階を組み合わせ、ツール利用を習得させている。\nKimi K2.5は同じMoE構成(1兆/32B、384エキスパート、共有1個)を保ちつつ、MLAとMoonViT(400M)の視覚エンコーダーを組み込み、画像と動画を直接扱うネイティブマルチモーダルモデルとして拡張された。コンテキスト長は256kに対応する。\nKimi K3ではKimi Delta Attention(KDA)とAttention Residuals(AttnRes)という新しい注意機構を導入し、Stable LatentMoEで896個のエキスパートから16個を活性化する。層は69個のKDA層と24個のGated MLA層で構成され、1Mトークンのコンテキストに対応する。重みをMXFP4、活性値をMXFP8に量子化し、SFT段階からの量子化考慮学習で訓練されている。",
+    "workflow": "チャットはkimi.comで利用できる。APIはOpenAI互換とAnthropic互換の両方が用意されており、Kimi K3はbase_urlにhttps://api.moonshot.ai/v1 、model名kimi-k3で呼び出す。Kimi K3は常に思考モードが有効で、reasoning_effortでlow/high/max(既定はmax)を指定する。\n重みはHugging Faceのmoonshotaiアカウントで公開されており、Kimi K2はvLLMやSGLangで推論サーバーを立ててセルフホストできる。\n2.8TパラメータのKimi K3は自前のワークステーションでも動かせる。1.7bitに量子化したGGUFを使い、エキスパート重みをSSDからストリーミングする実装(Pulsar)を使うと、96GBのVRAMを持つdGPU機でも生成速度は実測0.46〜0.67 tok/sにとどまる。",
+    "codeExamples": [
+      {
+        "title": "vLLMでKimi K2の推論サーバーを起動する",
+        "language": "bash",
+        "code": "vllm serve moonshotai/Kimi-K2-Instruct \\\n    --tensor-parallel-size 8 \\\n    --trust-remote-code"
+      },
+      {
+        "title": "OpenAI互換APIでKimi K3を呼び出す",
+        "language": "python",
+        "code": "import os\n\nfrom openai import OpenAI\n\nclient = OpenAI(\n    api_key=os.environ[\"MOONSHOT_API_KEY\"],\n    base_url=\"https://api.moonshot.ai/v1\",\n)\n\nresponse = client.chat.completions.create(\n    model=\"kimi-k3\",\n    reasoning_effort=\"high\",\n    messages=[{\"role\": \"user\", \"content\": \"Kimi K3のコンテキスト長はどれくらいですか。\"}],\n)\nprint(response.choices[0].message.content)"
+      },
+      {
+        "title": "Kimi Code CLIをインストールする",
+        "language": "bash",
+        "code": "curl -fsSL https://code.kimi.com/kimi-code/install.sh | bash"
+      }
+    ],
     "advantages": [
-      "Kimi K2はオープンウェイトで公開されており、商用利用を含め自由に利用・改変・セルフホストできる",
-      "エージェント的なタスクやツール呼び出しを重視して学習しており、多段階の作業を伴う用途と相性が良い",
-      "ロングコンテキストの処理をサービス開始当初からの強みとしてきた"
+      "Kimi K2以降の重みはModified MITライセンスで公開されており、商用利用や二次配布、改変を含む派生モデルの作成が可能",
+      "Kimi K2はMuonClip最適化器と大規模なエージェント型データの合成で学習しており、Tau2-Benchで66.1、SWE-Bench Verifiedで65.8を報告している",
+      "Kimi K2.5は最大100体のサブエージェントを並列実行するAgent Swarmに対応し、複雑な調査や実装作業を並列化できる",
+      "Kimi K3は1Mトークンのコンテキストとネイティブマルチモーダルに対応し、長時間続く作業とコード生成の用途に向いている",
+      "Kimi Code CLIが公式に提供されており、ターミナルからKimiのモデルをコーディングエージェントとして利用できる"
     ],
     "disadvantages": [
-      "総パラメータ数が非常に大きいMoEモデルであるため、フル精度でのセルフホストには大規模なGPUクラスタが必要になる",
-      "欧米発の主要モデルに比べ、国外での知名度や周辺エコシステム(統合ツール等)はまだ発展途上",
-      "中国国内の規制に沿った出力制御が組み込まれており、特定の政治的話題では回答を制限されることがある"
+      "総パラメータ数が大きく、Kimi K3は2.8Tパラメータのためフル精度でのセルフホストには大規模なGPUクラスタが必要になる",
+      "Kimi K2.5のModified MITライセンスは、月間アクティブユーザー1億以上または月収30億元以上のサービスでKimi K2.5の明記を義務付けている",
+      "Kimi K3の推論は常に思考モードが有効なため、単純な応答でもトークン消費とレイテンシが増える",
+      "1.7bitといった極端な量子化では日本語の反復崩壊が起き、min_pの指定が必要になる",
+      "中国国内の規制に沿った出力制御が組み込まれている。\n特定の政治的話題については、回答の一部に制限がかかる"
     ],
     "comparisons": [
       {
         "slug": "deepseek",
-        "note": "いずれも中国発のオープンウェイトMoEモデルで、国際的な開発者コミュニティに広く採用されている点が共通する"
+        "note": "いずれも中国発のオープンウェイトMoEモデルで、Kimi K2は1兆/32B、DeepSeek-V3.1は671B/37Bと構成が異なる。いずれも国際的な開発者コミュニティへの採用が進んでいる"
+      },
+      {
+        "slug": "qwen",
+        "note": "KimiとQwenはいずれも中国発のオープンウェイトLLMで、最上位モデルはKimi K3が2.8T、Qwen3.8が2.4Tと規模が近い。KimiはネイティブマルチモーダルとAgent Swarmを、Qwenは対応言語の幅広さと用途別の派生モデルの数を特徴とする"
+      },
+      {
+        "slug": "longcat",
+        "note": "LongCat-Flash(560B/約27B)とKimi K2(1043B/32B)はいずれもオープンウェイトのMoEモデルで、1トークンあたりの活性パラメータが同程度。KimiはK2.5以降でネイティブマルチモーダルとAgent Swarmに対応し、LongCatは推論特化版や画像・動画生成版を別名称で公開している"
+      },
+      {
+        "slug": "mixture-of-experts",
+        "note": "KimiはK2シリーズで384個のエキスパートから上位8個を選び、Kimi K3では896個から16個を選ぶ。いずれもルーティングされたエキスパートに加えて共有エキスパートを併用する"
+      },
+      {
+        "slug": "glm",
+        "note": "Kimi K3が2.8T・104B、GLM-5.3が744B・40Bと、いずれも1Mトークンのコンテキストを扱う大型MoE。KimiはネイティブマルチモーダルとAgent Swarm、GLMはインデックス共有による長文のコスト削減に特徴がある"
       }
     ],
     "relatedTerms": [
+      "large-language-model",
+      "mixture-of-experts",
       "deepseek",
       "qwen",
-      "mixture-of-experts",
+      "longcat",
+      "multimodal-llm",
+      "tool-calling",
+      "agentic-ai",
       "long-context",
-      "longcat"
-    ]
+      "kimi-code",
+      "vllm",
+      "sglang",
+      "glm",
+      "laguna"
+    ],
+    "faq": [
+      {
+        "question": "Kimiのモデルは自前の環境で動かせるか。",
+        "answer": "重みはHugging Faceで公開されており、Kimi K2はvLLMやSGLangで推論サーバーを立ててセルフホストできる。総パラメータ1兆のKimi K2は複数GPUを必要とする。\n2.8TのKimi K3は1.7bitに量子化したGGUFを使い、エキスパート重みをSSDからストリーミングする実装(Pulsar)で動かす事例が紹介されている。"
+      },
+      {
+        "question": "Kimi K2とKimi K2.5の違いは。",
+        "answer": "Kimi K2はテキスト中心の基盤モデルで、384個のエキスパートから上位8個を選ぶMoEとMuonClip最適化器を使う。\nKimi K2.5はMoE構成を保ちつつMoonViTの視覚エンコーダーを組み込み、画像と動画を直接扱えるネイティブマルチモーダルになった。最大100体のサブエージェントを並列実行するAgent Swarmにも対応する。"
+      },
+      {
+        "question": "Kimiのライセンスは自由に使ってよいか。",
+        "answer": "Kimi K2とKimi K2.5はModified MITライセンスで、商用利用が可能。\nただしKimi K2.5は、月間アクティブユーザー1億以上または月収30億元以上のサービスでKimi K2.5の明記が義務付けられている。Kimi K3は同じブランド独自のKimi K3 Licenseで、コードと重みの両方がそのライセンスで公開されている。"
+      },
+      {
+        "question": "Kimi Code CLIはどんなもの。",
+        "answer": "Moonshot AIが公式に公開しているターミナル型コーディングエージェントで、MITライセンスで配布されている。\nインストール後にログインすればKimiのモデルをエージェントとして利用できる。旧来のPython実装のkimi-cliは2026年9月にアーカイブされ、後継はKimi Codeとなっている。"
+      }
+    ],
+    "references": [
+      {
+        "type": "Official Website",
+        "label": "Kimi チャット",
+        "url": "https://www.kimi.com/"
+      },
+      {
+        "type": "Official Website",
+        "label": "Moonshot AI 開発者プラットフォーム",
+        "url": "https://platform.kimi.ai/"
+      },
+      {
+        "type": "Official Website",
+        "label": "Kimi Code",
+        "url": "https://www.kimi.com/code"
+      },
+      {
+        "type": "Documentation",
+        "label": "Kimi K3 クイックスタート",
+        "url": "https://platform.kimi.ai/docs/guide/kimi-k3-quickstart"
+      },
+      {
+        "type": "GitHub",
+        "label": "MoonshotAI/Kimi-K3",
+        "url": "https://github.com/MoonshotAI/Kimi-K3"
+      },
+      {
+        "type": "GitHub",
+        "label": "MoonshotAI/Kimi-K2",
+        "url": "https://github.com/MoonshotAI/Kimi-K2"
+      },
+      {
+        "type": "Documentation",
+        "label": "moonshotai (Hugging Face)",
+        "url": "https://huggingface.co/moonshotai"
+      },
+      {
+        "type": "Research Paper",
+        "label": "Kimi K2: Open Agentic Intelligence (arXiv)",
+        "url": "https://arxiv.org/abs/2507.20534"
+      },
+      {
+        "type": "Research Paper",
+        "label": "Kimi K2.5: Visual Agentic Intelligence (arXiv)",
+        "url": "https://arxiv.org/abs/2602.02276"
+      },
+      {
+        "type": "Blog",
+        "label": "Kimi K3 技術ブログ",
+        "url": "https://www.kimi.com/blog/kimi-k3"
+      },
+      {
+        "type": "Blog",
+        "label": "Kimi K2.5のエージェントスウォーム解説 (Zenn)",
+        "url": "https://zenn.dev/cahal_inc/articles/50f4083975d641"
+      },
+      {
+        "type": "Blog",
+        "label": "2.8TパラメータのKimi K3をワークステーションで動かす (Zenn)",
+        "url": "https://zenn.dev/mamoru_f/articles/8d270259d68b71"
+      }
+    ],
+    "updatedAt": "2026-10-20"
   },
   {
     "slug": "segment-anything",
@@ -19276,7 +19555,7 @@
       }
     ]
   },
-    {
+  {
     "slug": "mamba",
     "name": "Mamba",
     "aliases": [
@@ -20801,7 +21080,8 @@
       "vllm",
       "kv-cache",
       "inference",
-      "structured-output"
+      "structured-output",
+      "laguna"
     ],
     "faq": [
       {
@@ -21312,7 +21592,7 @@
       "coding-agent"
     ]
   },
-      {
+  {
     "slug": "cursor",
     "name": "Cursor",
     "tagline": "VS Codeをフォークし、チャットや複数ファイル編集などのAI機能をエディタに統合したAI IDE",
@@ -22468,7 +22748,8 @@
       "stable-diffusion",
       "u-net",
       "autoencoder",
-      "variational-autoencoder"
+      "variational-autoencoder",
+      "generative-ai"
     ],
     "faq": [
       {
@@ -22993,6 +23274,10 @@
       {
         "slug": "opencode",
         "note": "Claude CodeがAnthropic純正モデルに限定されるのに対し、OpenCodeは複数のLLMプロバイダを切り替えられるオープンソースツールという違いがある"
+      },
+      {
+        "slug": "kimi-code",
+        "note": "Claude CodeがAnthropicの認証とClaudeモデルのみを利用するのに対し、Kimi CodeはKimi Code OAuthまたはMoonshot AIのOpen Platform APIキーを前提とする"
       }
     ],
     "relatedTerms": [
@@ -23005,7 +23290,8 @@
       "openchamber",
       "opencode",
       "orca-ide",
-      "pi-coding-agent"
+      "pi-coding-agent",
+      "kimi-code"
     ],
     "faq": [
       {
@@ -24429,7 +24715,8 @@
       "coding-agent",
       "ai-ide",
       "streaming",
-      "harness-engineering"
+      "harness-engineering",
+      "kimi-code"
     ],
     "faq": [
       {
@@ -26897,7 +27184,7 @@
       }
     ]
   },
-      {
+  {
     "slug": "chatbot",
     "name": "チャットボット",
     "aliases": [
@@ -31559,6 +31846,10 @@
       {
         "slug": "cline",
         "note": "ClineがVS Code拡張機能として提供されるのに対し、OpenCodeはターミナル上で動作するスタンドアロンのCLIツールという違いがある"
+      },
+      {
+        "slug": "kimi-code",
+        "note": "OpenCodeがクライアント/サーバー型の構成で複数クライアントから同じセッションに接続できるのに対し、Kimi Codeは単一バイナリのTUIが中心の構成"
       }
     ],
     "relatedTerms": [
@@ -31569,7 +31860,8 @@
       "mcp",
       "harness-engineering",
       "aider",
-      "pi-coding-agent"
+      "pi-coding-agent",
+      "kimi-code"
     ],
     "faq": [
       {
@@ -31592,10 +31884,16 @@
   {
     "slug": "over-engineering",
     "name": "オーバーエンジニアリング",
-    "aliases": ["Over-Engineering", "過剰設計"],
+    "aliases": [
+      "Over-Engineering",
+      "過剰設計"
+    ],
     "tagline": "現時点で必要な要件を超えて、将来の変更や拡張性を過度に見込み、必要以上に複雑な設計・実装をするアンチパターン",
     "category": "技術",
-    "tags": ["ソフトウェア設計", "アンチパターン"],
+    "tags": [
+      "ソフトウェア設計",
+      "アンチパターン"
+    ],
     "plainSummary": "「まだ使わない将来の要件」に備えすぎて、シンプルに作れるものを無駄に複雑にしてしまう設計上の失敗。",
     "summary": "オーバーエンジニアリングとは、現時点で必要な要件を超えて将来の変更や拡張性を過度に見込み、必要以上に複雑な設計・実装をするアンチパターンになる。\n抽象化レイヤーの多用、汎用化しすぎた設定機構、使われる見込みの薄い拡張ポイントの用意などが典型で、開発初期の生産性低下・可読性の悪化・保守コストの増大を招く。\n対義的な設計原則としてYAGNI（You Aren't Gonna Need It、それは必要にならない）やKISS（Keep It Simple, Stupid）が挙げられ、必要になった時点で拡張する漸進的な設計が推奨される。\nAIコーディングエージェントが大量のコードを高速生成できる時代においては、エージェントが要求されていない抽象化や汎用機構を自発的に作り込んでしまうケースも指摘されており、レビューやプロンプトでの制約付けが必要な論点として議論されている。",
     "advantages": [
@@ -31607,7 +31905,10 @@
       "使われない拡張ポイントや設定項目がテスト範囲や不具合の温床になる",
       "見込んだ将来の要件が実際には発生せず、投資が無駄になることが多い"
     ],
-    "relatedTerms": ["vibe-coding", "spec-driven-development"],
+    "relatedTerms": [
+      "vibe-coding",
+      "spec-driven-development"
+    ],
     "faq": [
       {
         "question": "オーバーエンジニアリングとYAGNIの関係は。",
@@ -31624,7 +31925,11 @@
     "name": "Orca",
     "tagline": "GPT-4が生成する詳細な推論過程を模倣学習させることで、小規模ながら高い推論能力を目指したMicrosoft Researchの言語モデル",
     "category": "モデル",
-    "tags": ["LLM", "SLM", "オープンウェイト"],
+    "tags": [
+      "LLM",
+      "SLM",
+      "オープンウェイト"
+    ],
     "plainSummary": "GPT-4の「答えだけ」でなく「考え方の過程」をまねて学習させることで、小さいモデルでも推論力を高めようとしたMicrosoftのAIモデル。",
     "summary": "OrcaとはMicrosoft Researchが開発した言語モデルで、GPT-4が生成する段階的な説明・推論過程(explanation trace)を模倣学習させる「Explanation Tuning」という手法によって、小規模なモデルでも高い推論能力を獲得することを狙った研究成果になる。\n従来の指示チューニングは、GPT系モデルの出力（最終的な回答のみ）を教師データとして模倣する手法が主流だったが、この方法では大規模モデルが内部で行っている段階的な思考過程までは学習しにくいという課題があった。Orcaは、GPT-4に「なぜその答えになるのか」を説明させたデータで学習することで、この課題への対処を試みた。\n後継のOrca 2では、タスクに応じて段階的な推論・直接回答・情報を思い出してから生成する等、異なる解法戦略を使い分ける能力を学習させる「Cautious Reasoning」という考え方が導入された。",
     "history": "2023年6月、Microsoft Researchが論文「Orca: Progressive Learning from Complex Explanation Traces of GPT-4」でOrca（LLaMA-13Bをベースとした13Bパラメータモデル）を発表。\n2023年11月には後継の論文「Orca 2: Teaching Small Language Models How to Reason」とともにOrca 2（Llama 2の7B・13Bをベースとしたモデル）が発表され、モデルの重みがHugging Face上で公開された。",
@@ -31647,7 +31952,13 @@
         "note": "Orcaは、大規模モデル（GPT-4）の出力だけでなく推論過程まで小規模モデルに学習させる、知識蒸留を発展させたアプローチと位置づけられる"
       }
     ],
-    "relatedTerms": ["phi", "knowledge-distillation", "instruction-tuning", "small-language-model", "dolphin"],
+    "relatedTerms": [
+      "phi",
+      "knowledge-distillation",
+      "instruction-tuning",
+      "small-language-model",
+      "dolphin"
+    ],
     "faq": [
       {
         "question": "OrcaとAlpacaのような指示チューニングモデルの違いは。",
@@ -31674,10 +31985,16 @@
   {
     "slug": "orca-ide",
     "name": "Orca",
-    "aliases": ["Orca IDE", "Orca ADE"],
+    "aliases": [
+      "Orca IDE",
+      "Orca ADE"
+    ],
     "tagline": "複数のコーディングエージェントを独立したgitワークツリー上で並行実行できる、Stably AIが開発するオープンソースのエージェント開発環境(ADE)",
     "category": "インフラ",
-    "tags": ["コーディングエージェント", "開発ツール"],
+    "tags": [
+      "コーディングエージェント",
+      "開発ツール"
+    ],
     "plainSummary": "Claude CodeやCodexなど複数のAIコーディングエージェントを、ブランチごとに分けた作業領域で同時に走らせて管理できる開発環境。",
     "summary": "Orcaとは、Stably AIが開発する、複数のコーディングエージェントを並行して運用するためのエージェント開発環境(ADE: Agent Development Environment)。\nClaude Code・Codex・Gemini・OpenCode・GitHub Copilot等25種類以上のCLIコーディングエージェントをあらかじめ組み込み設定で用意し、各エージェントを独立したgitワークツリー上で同時に走らせることで、複数のブランチ・タスクを衝突なく並行して進められる。\nGPUを使ったGhostty系ターミナル、組み込みのファイルエディタ、Chromiumを埋め込んだプレビュー機能(Design Mode)、SSH経由のリモートワークツリー実行等を備え、単なるターミナルラッパーにとどまらず、エージェント運用を1つの環境に統合することを目指す。\nソースコードはMITライセンスで公開されており、macOS・Windows・Linuxのデスクトップ版に加え、iOS・Androidのモバイル向けコンパニオンアプリも提供されている。",
     "advantages": [
@@ -31699,7 +32016,13 @@
         "note": "Claude CodeのようなCLIエージェント自体を提供するのではなく、それらを並行運用する上位のオーケストレーション環境としてOrcaは位置づけられる"
       }
     ],
-    "relatedTerms": ["ai-ide", "claude-code", "coding-agent", "multi-agent", "mcp"],
+    "relatedTerms": [
+      "ai-ide",
+      "claude-code",
+      "coding-agent",
+      "multi-agent",
+      "mcp"
+    ],
     "faq": [
       {
         "question": "Orcaはどんなコーディングエージェントに対応しているか。",
@@ -31733,7 +32056,10 @@
     ],
     "tagline": "前の層の全ユニットと後の層の全ユニットを結合するニューラルネットワークの層",
     "category": "アーキテクチャ",
-    "tags": ["ニューラルネットワーク", "深層学習"],
+    "tags": [
+      "ニューラルネットワーク",
+      "深層学習"
+    ],
     "plainSummary": "前の層の全部の出力を、次の層の全部のユニットにつなげる基本的な層。",
     "summary": "全結合層は、ある層の各ユニットが次の層の全ユニットと結合するニューラルネットワークの基本構成要素。各出力は入力ベクトル全体の重み付き和にバイアスを加え、活性化関数を適用して計算される。畳み込み層やプーリング層が局所的な特徴抽出を担う一方、全結合層は抽出された特徴を統合し、分類や回帰といった最終的な出力に変換する役割を担う。CNNや多くのニューラルネットワークでは、出力側の層に配置されることが多い。入力と出力のユニット数の積に比例してパラメータ数が増えるため、高次元の入力を直接扱うと計算コストとメモリ使用量が大きくなる。",
     "architecture": "全結合層は重み行列とバイアスベクトルを持ち、入力ベクトルとの行列積にバイアスを加えた後、ReLUやシグモイドなどの活性化関数を適用して出力を得る。入力ユニット数と出力ユニット数の積が、重み行列のパラメータ数になる。",
@@ -31775,7 +32101,10 @@
     "aliases": [],
     "tagline": "TypeSafe AIが2026年9月に発表した、文字列を生成せず型安全な構造化決定を並列出力する「System One Model」",
     "category": "モデル",
-    "tags": ["自動化", "強化学習"],
+    "tags": [
+      "自動化",
+      "強化学習"
+    ],
     "plainSummary": "文字列を生成せず、型安全な構造化データと較正済み確率を高速に出力する新しいタイプのAIモデル。",
     "summary": "Jevは、元OpenAI研究者のDiogo Almeida氏が創業したTypeSafe AIから2026年9月15日に発表されたモデル。同社が新たに定義する「System One Model」という新クラスの最初の公開モデルであり、通常のLLMのようにトークン列を逐次生成する代わりに、あらかじめ定義されたスキーマに沿った型安全な構造化データと、それに付随する較正済み確率を単一クエリ内で並列に出力する。トークンを逐次サンプリングしないぶん既存LLMに比べて2桁(公称40〜200倍)高速とされ、エンドツーエンドの応答時間は70〜500ミリ秒、コストも入力トークン当たり0.042ドル/100万トークンで出力トークンは無償とされる。出力がスキーマで制約されるため型エラーが原理的に発生せず、TypeSafeはハルシネーションも起きないと説明している。名称は経済学者ウィリアム・スタンレー・ジェヴォンズ(Jevons)にちなみ、モデルクラス名「System One」はダニエル・カーネマンの著書『ファスト&スロー』における速く直感的な「システム1思考」に由来する。",
     "background": "既存のLLMはチャットなど人間との対話には強い一方、ソフトウェアに組み込んで自動的に意思決定を行わせる用途では、応答が文字列であるため別途パースと検証が必要な上、応答時間が数秒から数百秒かかりコストも高く、ハルシネーションのリスクも避けられないという課題があった。TypeSafe AIは、こうした「自動化」に特化したモデルとして、構造化されたプログラム状態を入力に取り、あらかじめ定義された型の確率的な決定を出力するSystem One Modelを開発した。",
@@ -33215,7 +33544,7 @@
       "core-ml"
     ]
   },
-    {
+  {
     "slug": "open-weight-model",
     "name": "オープンウェイトモデル",
     "aliases": [
@@ -33380,7 +33709,8 @@
       "claude-code",
       "opencode",
       "tui",
-      "deepseek-harness"
+      "deepseek-harness",
+      "kimi-code"
     ],
     "references": [
       {
@@ -34524,6 +34854,414 @@
         "type": "GitHub",
         "label": "NVIDIA-NeMo/Nemotron ( cookbooksとサンプル)",
         "url": "https://github.com/NVIDIA-NeMo/Nemotron"
+      }
+    ],
+    "updatedAt": "2026-10-20"
+  },
+  {
+    "slug": "kimi-code",
+    "name": "Kimi Code",
+    "aliases": [
+      "Kimi Code CLI"
+    ],
+    "tagline": "Moonshot AIが開発する、ターミナルで動作するオープンソースのコーディングエージェント",
+    "category": "エージェント",
+    "tags": [
+      "コーディングエージェント",
+      "TUI",
+      "オープンソース"
+    ],
+    "plainSummary": "Moonshot AIが公開している、ターミナルで動くオープンソースのAIコーディングエージェント。",
+    "summary": "Kimi Codeは、中国のMoonshot AIが開発するオープンソースのターミナル型コーディングエージェント。\nコマンド名はkimiで、MITライセンスで公開されており、Node.jsを事前に入れる必要がない単一バイナリとして、インストールスクリプト1行で導入できる。\nコードの読み書き、シェルコマンドの実行、ファイル検索、Webページの取得、ツールの実行結果に応じた手順の判断といった作業を端末上で自律的に進める。\n既定のバックエンドはMoonshot AIのKimiシリーズで、認証はKimi Code OAuthかMoonshot AIのOpen Platform APIキーで行う。互換性のある他プロバイダのモデルに差し替えることもできる。\n拡張点として、MCPサーバーやスキル、データソースのマーケットプレイス、coder・explore・planのサブエージェント、ライフサイクルフック、Agent Client Protocol(ACP)によるIDE連携が提供されている。\n前身となるPython実装のkimi-cliは2026年9月にアーカイブされ、後継としてKimi Codeが案内されている。",
+    "background": "自律的にコードを変更するエージェントが普及する中、Moonshot AIは自社モデルのKimiを実作業に用いる基盤として、端末上で完結する作業環境を整えた。\n初版はPython実装のkimi-cliで、2025年10月に公開された。機能拡張が続く中で、2026年5月にはTypeScript実装のKimi Codeが後継として公開され、単一バイナリでの配布、専用のTUI、MCPとスキルのマーケットプレイスを備えた。\n旧kimi-cliは2026年9月にアーカイブされ、以降の更新はKimi Codeに集約されている。",
+    "history": "2025年10月: Moonshot AIがPython実装のCLI「kimi-cli」を公開。\n2026年5月: TypeScript実装の「Kimi Code」を公開。単一バイナリ配布、専用TUI、MCPとスキルのマーケットプレイスに対応する。\n2026年9月: 旧kimi-cliをアーカイブし、後継をKimi Codeへ一本化した。",
+    "architecture": "Kimi CodeはTypeScriptで実装された単一バイナリとして配布され、TUIはearendil-worksのpi-monoに含まれるpi-tuiコンポーネントを土台にしている。\nMCPサーバー・スキル・データソースをマーケットプレイスや任意のGitHubリポジトリから導入でき、coder・explore・planのサブエージェントを隔離されたコンテキストで起動して並列に作業させることができる。\nライフサイクルフックで、危険なツール呼び出しの許可判定や決定の記録、通知の送信などをローカルのコマンドで差し替えられる。\nAgent Client Protocol(ACP)にも対応しており、kimi acpサブコマンドを起動すると、IDE側からこのセッションを操作できる。",
+    "workflow": "インストールスクリプトで導入し、起動後の /login でKimi Code OAuthかMoonshot AIのOpen Platform APIキーを登録する。\n使用するモデルは /model コマンドで切り替える。Kimi K3を使う場合は同コマンドでkimi-k3を選ぶ。\nIDEからは kimi acp サブコマンドでACPをやり取りし、ZedやJetBrainsのAgentパネルから同じセッションを操作できる。\nスキルやMCPサーバー、データソースはマーケットプレイスまたは任意のGitHubリポジトリから導入できる。",
+    "codeExamples": [
+      {
+        "title": "インストールする",
+        "language": "bash",
+        "code": "curl -fsSL https://code.kimi.com/kimi-code/install.sh | bash"
+      },
+      {
+        "title": "ZedからACP経由で接続する設定",
+        "language": "json",
+        "code": "{\n  \"agent_servers\": {\n    \"Kimi Code CLI\": {\n      \"type\": \"custom\",\n      \"command\": \"kimi\",\n      \"args\": [\"acp\"],\n      \"env\": {}\n    }\n  }\n}"
+      },
+      {
+        "title": "セッションを起動してモデルを切り替える",
+        "language": "bash",
+        "code": "cd your-project\nkimi\n# 起動後 /model で kimi-k3 を選択する"
+      }
+    ],
+    "advantages": [
+      "MITライセンスで公開されており、商用利用や二次利用に制約がない",
+      "Node.jsを事前に入れる必要がなく、インストールスクリプト1行で単一バイナリとして導入できる",
+      "MCPサーバー・スキル・データソースのマーケットプレイスを標準で備えており、エージェントの機能を拡張しやすい",
+      "ACPに対応しており、ZedやJetBrainsなど複数のIDEから同じセッションを操作できる",
+      "サブエージェントとライフサイクルフックが標準で提供され、作業の分担や自動判定を差し込みやすい"
+    ],
+    "disadvantages": [
+      "Kimi Code OAuthまたはMoonshot AIのOpen Platform APIキーによる認証が必要で、認証を通さないとモデルを利用できない",
+      "GUIを持たないため、ターミナル操作に不慣れな利用者には学習コストがかかる",
+      "旧実装のkimi-cliは2026年9月にアーカイブされており、既存のスクリプトや手順をそのまま引き継ぐことはできない",
+      "提供元がMoonshot AIに依存しており、料金プランやモデル提供の変化に左右される"
+    ],
+    "comparisons": [
+      {
+        "slug": "coding-agent",
+        "note": "Kimi CodeはMoonshot AIが自社モデル向けに開発したオープンソースのターミナル型コーディングエージェントの1つ"
+      },
+      {
+        "slug": "opencode",
+        "note": "OpenCodeがクライアント/サーバー型の構成で複数クライアントから同じセッションに接続できるのに対し、Kimi Codeは単一バイナリのTUIが中心の構成で、MCPとスキルのマーケットプレイスを標準で備える"
+      },
+      {
+        "slug": "claude-code",
+        "note": "Claude CodeがAnthropicの認証とClaudeモデルのみを利用するのに対し、Kimi CodeはKimi Code OAuthまたはMoonshot AIのOpen Platform APIキーを前提とし、互換性のある他プロバイダへの差し替えも可能"
+      }
+    ],
+    "relatedTerms": [
+      "kimi",
+      "coding-agent",
+      "opencode",
+      "claude-code",
+      "mcp",
+      "tui",
+      "subagent",
+      "pi-coding-agent",
+      "tool-calling"
+    ],
+    "faq": [
+      {
+        "question": "Kimi Codeは無料で使えるか。",
+        "answer": "MITライセンスのオープンソースだが、モデルを利用するにはKimi Codeの有料プランへ契約するか、Moonshot AIのOpen Platform APIキーを用意する必要がある。"
+      },
+      {
+        "question": "旧来のkimi-cliは使えるのか。",
+        "answer": "Python実装のkimi-cliは2026年9月にアーカイブされ、開発が停止した。\n公式サイトでもKimi Codeへの移行が案内されており、インストール手順や設定はKimi Codeのドキュメントを参照する。"
+      },
+      {
+        "question": "どのIDEから使えるか。",
+        "answer": "Agent Client Protocol(ACP)に対応しており、ZedやJetBrains、その他のACPクライアントから kimi acp を介してセッションを操作できる。\nIDEに組み込まれた拡張がなくても、MCPサーバーやスキルのマーケットプレイスで機能を足せる。"
+      },
+      {
+        "question": "Kimi以外のモデルでも動くか。",
+        "answer": "既定ではMoonshot AIのKimiシリーズを利用するが、互換性のある他プロバイダのモデルにも差し替えられる。\nKimi K3を使う場合は /model コマンドで kimi-k3 を選ぶ。"
+      }
+    ],
+    "references": [
+      {
+        "type": "GitHub",
+        "label": "MoonshotAI/kimi-code",
+        "url": "https://github.com/MoonshotAI/kimi-code"
+      },
+      {
+        "type": "Documentation",
+        "label": "Kimi Code ドキュメント",
+        "url": "https://moonshotai.github.io/kimi-code/en/"
+      },
+      {
+        "type": "Official Website",
+        "label": "Kimi Code",
+        "url": "https://www.kimi.com/code"
+      },
+      {
+        "type": "GitHub",
+        "label": "MoonshotAI/kimi-cli (旧実装)",
+        "url": "https://github.com/MoonshotAI/kimi-cli"
+      },
+      {
+        "type": "Blog",
+        "label": "Claude Opus 4.5 vs Kimi K2.5 〜コーディング性能とコスト効率比較〜 (Zenn)",
+        "url": "https://zenn.dev/robustonian/articles/claude_vs_kimi_k25"
+      },
+      {
+        "type": "Blog",
+        "label": "Open CodeとGithub CopilotとVSCode(期間限定kimi k2.5) (Zenn)",
+        "url": "https://zenn.dev/kiva/articles/7be372e4783248"
+      }
+    ],
+    "updatedAt": "2026-10-20"
+  },
+  {
+    "slug": "glm",
+    "name": "GLM",
+    "aliases": [
+      "ChatGLM",
+      "Zhipu AI"
+    ],
+    "tagline": "Zhipu AI(智谱AI)が開発する、MITライセンスで公開される中国発のオープンウェイトLLMファミリー",
+    "category": "モデル",
+    "tags": [
+      "LLM",
+      "オープンウェイト",
+      "スパースモデル"
+    ],
+    "plainSummary": "Zhipu AI(智谱AI)が公開しているLLMシリーズ。GLM-4.5以降はMITライセンスで、コード生成やエージェント作業に強いモデルが中心になっている。",
+    "summary": "GLMとは、中国のAI企業Zhipu AI(智谱AI)が開発する大規模言語モデルのファミリーを指す。\n2023年6月にChatGLMとして対話モデルをオープンソースで公開し、2024年にはGLM-4系列を展開した。\n2025年7月のGLM-4.5は総パラメータ355B・1トークンあたり32Bが活性化するMoEモデルで、思考モードと非思考モードを切り替えられるハイブリッド推論としてMITライセンスで配布された。\n2026年2月のGLM-5は744B・40Bが活性化する規模へ拡大し、DeepSeek Sparse Attentionを採用して長文の推論コストを抑えている。\n2026年8月のGLM-5.3はGLM-5.2と同じベースモデルを使いながらポストトレーニングを刷新し、Terminal Bench 3.0やAgents' Last Examで高い結果を出した。GLM-5.3-Flashは320B・18Bで、同シリーズ初のネイティブマルチモーダルモデルになる。\n中国発のオープンウェイトモデルの代表例の1つで、QwenやDeepSeek、Kimiと並ぶ開発元として知られている。",
+    "background": "Zhipu AI(北京智谱华章科技)は、清華大学を母体として設立された中国のAI企業です。\n初期のGLMとChatGLMの公開を皮切りに、言語モデルに加えて画像生成のCogViewや動画生成のCogVideoX、視覚言語モデルのCogVLMなども公開してきた。\n2025年以降は言語モデルに軸を移し、GLM-4.5以降をMITライセンスで公開しながら、GLM-OCRやGLM-TTSのように用途別のモデルも揃えている。",
+    "history": "2023年6月: 清华大学KEGとZhipu AIがChatGLMをオープンソースで公開した。\n2024年: GLM-4を公開した。9Bと32Bの版、コード生成に強いChatGLM-4、128kのコンテキストに対応したGLM-4-9B-chat-1mを揃えた。\n2024年8月: 動画生成モデルCogVideoXを公開した。\n2025年4月: 推論特化モデルGLM-Z1を公開した。\n2025年7月: GLM-4.5(355B/32B)と軽量版のGLM-4.5-Air(106B/12B)をMITライセンスで公開した。\n2025年8月: 視覚言語モデルのGLM-4.5Vを公開した。\n2025年9月: GLM-4.6を公開した。\n2025年12月: コーディング向けのGLM-4.7、視覚言語モデルのGLM-4.6V、音声認識のGLM-ASR-Nano、音声合成のGLM-TTSを公開した。\n2026年1月: 文書画像解析のGLM-OCRと画像生成のGLM-Imageを公開した。\n2026年2月: GLM-5(744B/40B)をMITライセンスで公開した。\n2026年4月: GLM-5.1を公開した。\n2026年6月: GLM-5.2を公開した。1Mトークンのコンテキストに対応する。\n2026年8月: GLM-5.3と、ネイティブマルチモーダル版のGLM-5.3-Flash(320B/18B)を公開した。",
+    "architecture": "GLM-4.5以降はMoE(混合エキスパート)構成で、総パラメータに対して1トークンあたりに活性化するパラメータを抑えている。GLM-4.5は355Bの総パラメータに対し32B、GLM-4.5-Airは106Bに対し12Bが活性化する。\nGLM-5では744B・40Bへ規模を拡大し、DeepSeek Sparse Attention(DSA)を採用して長文のコンテキストを保ちながら推論コストを抑えた。事前学習データはGLM-4.5の23兆トークンから28.5兆トークンへ増やされている。\nGLM-5.2では1Mトークンのコンテキストに対応し、4層ごとに同じindexerを共有するIndexShareを導入して1Mコンテキストでの1トークンあたりFLOPsを2.9分の1に削減した。MTP層も改良し、投機的デコーディングの受理長を最大20%伸ばしている。\nGLM-5.3-Flashは新たに学習したベースモデルを使い、疎注意と線形注意のハイブリッド構成にManifold-Constrained Hyper-Connections(mHC)を組み合わせた。30兆トークンのマルチモーダル事前学習コーパスを用いている。\nポストトレーニングではslimeという非同期RL基盤を自前で開発し、学習のスループットを高めて反復回数を増やしている。",
+    "workflow": "APIはZ.ai API Platform(docs.z.ai)で提供され、チャットはchat.z.ai、中国国内はBigModelのプラットフォーム(bigmodel.cn)経由で利用できる。\n重みはHugging Faceのzai-org organizationで公開されており、MITライセンスで商用利用と二次配布が可能。\nローカル実行はvLLMとSGLangのcookbook(recipes)が整備されており、GLM-5.3-FlashはKTransformersやUnslothにも対応する。HuaweiのAscend NPUプラットフォームにもvLLM-AscendやxLLMで対応している。\n推論予算はreasoning_effortで調整でき、GLM-5.3とGLM-5.3-Flashはlow/high/maxの3段階、GLM-5.2はhighとmaxに対応する。",
+    "codeExamples": [
+      {
+        "title": "OpenAI互換APIでGLM-5.3を呼び出す",
+        "language": "python",
+        "code": "import os\n\nfrom openai import OpenAI\n\nclient = OpenAI(\n    api_key=os.environ[\"ZAI_API_KEY\"],\n    base_url=\"https://api.z.ai/api/paas/v4/\",\n)\n\nresponse = client.chat.completions.create(\n    model=\"glm-5.3\",\n    reasoning_effort=\"high\",\n    messages=[{\"role\": \"user\", \"content\": \"GLM-5.3の推論予算はどう設定しますか。\"}],\n)\nprint(response.choices[0].message.content)"
+      },
+      {
+        "title": "curlでchat completionsを呼ぶ",
+        "language": "bash",
+        "code": "curl https://api.z.ai/api/paas/v4/chat/completions \\\n  --header \"Authorization: Bearer $ZAI_API_KEY\" \\\n  --header \"Content-Type: application/json\" \\\n  --data '{\n    \"model\": \"glm-5.3\",\n    \"messages\": [{\"role\": \"user\", \"content\": \"Introduce GLM-5.3 in one sentence.\"}]\n  }'"
+      }
+    ],
+    "advantages": [
+      "GLM-4.5以降はMITライセンスで公開されており、商用利用や二次配布、改変を含む派生モデルの作成が可能",
+      "GLM-4.5は355B・32B、GLM-5は744B・40Bと、MoEで活性パラメータを抑えながら規模を拡大している",
+      "GLM-5.2以降は1Mトークンのコンテキストに対応し、長時間続くエージェント作業の記録を扱える",
+      "GLM-5.3はTerminal Bench 3.0で28.3、CyberGymで84.5など、コーディングとセキュリティのベンチマークで高い結果を出している",
+      "GLM-5.3-Flashは320B・18Bでネイティブマルチモーダルに対応し、同一シリーズの中で価格も抑えられる"
+    ],
+    "disadvantages": [
+      "総パラメータが大きく、GLM-5は744B、GLM-5.3-Flashでも320Bのため、セルフホストには複数GPUを要する",
+      "GLM-4.6以前とGLM-4.5以降でライセンスが変わっており、旧モデルの利用条件を確認する手間がある",
+      "日本語に関する評価は中国語圏や英語圏のベンチマークほど公開されておらず、別途の検証が要る",
+      "中国国内の規制に沿った出力制御が組み込まれており、特定の政治的話題に関する回答には制限がかかる"
+    ],
+    "comparisons": [
+      {
+        "slug": "deepseek",
+        "note": "DeepSeekとGLMはいずれも中国発のオープンウェイトMoEモデルで、MITライセンスで公開されている。DeepSeekは汎用LLMとしての評価軸、GLMはエージェント型のコーディング作業に軸足を置いている"
+      },
+      {
+        "slug": "qwen",
+        "note": "QwenとGLMはいずれも中国発のMITライセンスのオープンウェイトLLMで、最上位モデルはQwen3.8が2.4T、GLM-5が744Bと規模が異なる。Qwenが言語対応幅と用途別の派生モデルで、GLMがMoEの階層とエージェント性能で特徴を持つ"
+      },
+      {
+        "slug": "kimi",
+        "note": "Kimi K3が2.8T・104B、GLM-5.3が744B・40Bと、いずれも1Mトークンのコンテキストを扱う大型MoE。KimiはネイティブマルチモーダルとAgent Swarm、GLMはインデックス共有による長文のコスト削減に特徴がある"
+      },
+      {
+        "slug": "mixture-of-experts",
+        "note": "GLM-4.5以降は総パラメータに対して1トークンあたりの活性パラメータを小さく保つMoEで、GLM-4.5が355B/32B、GLM-5が744B/40B"
+      }
+    ],
+    "relatedTerms": [
+      "large-language-model",
+      "mixture-of-experts",
+      "deepseek",
+      "qwen",
+      "kimi",
+      "reasoning-model",
+      "tool-calling",
+      "agentic-ai",
+      "long-context",
+      "vllm",
+      "sglang",
+      "quantization"
+    ],
+    "faq": [
+      {
+        "question": "GLMのモデルを商用の目的で使うことは可能か。",
+        "answer": "GLM-4.5以降はMITライセンスで公開されており、商用利用や二次配布、改変を含む派生モデルの作成が可能。\nGLM-4.6以前など古いモデルには別のライセンスが適用されるため、利用前に確認する。"
+      },
+      {
+        "question": "GLM-5.3とGLM-5.2の違いは。",
+        "answer": "ベースモデルは同じで、GLM-5.3はポストトレーニングの刷新によって複雑なコーディングと長時間タスクの性能を伸ばしたモデル。\nGLM-5.3はTerminal Bench 3.0で28.3、DeepSWEで66.9を報告している。"
+      },
+      {
+        "question": "どのモデルを選べばよいか。",
+        "answer": "長い推論の予算が要る長時間作業ならGLM-5.2以降が候補になる。\n画像や動画も入力したい場合はGLM-5.3-Flashが対象で、総パラメータ320B・活性18Bで、GLM-5.3と比べて低いコストで動く。"
+      },
+      {
+        "question": "GLMの推論量はどのように制御するか。",
+        "answer": "リクエストのreasoning_effortで思考予算を指定する。\nGLM-5.3とGLM-5.3-Flashはlow/high/maxの3段階、GLM-5.2はhighとmaxの2段階で、既定値はmax。"
+      }
+    ],
+    "references": [
+      {
+        "type": "GitHub",
+        "label": "zai-org/GLM-5",
+        "url": "https://github.com/zai-org/GLM-5"
+      },
+      {
+        "type": "Documentation",
+        "label": "zai-org (Hugging Face)",
+        "url": "https://huggingface.co/zai-org"
+      },
+      {
+        "type": "Research Paper",
+        "label": "GLM-5 Technical Report (arXiv)",
+        "url": "https://arxiv.org/abs/2602.15763"
+      },
+      {
+        "type": "Research Paper",
+        "label": "GLM-4.5 Technical Report (arXiv)",
+        "url": "https://arxiv.org/abs/2508.06471"
+      },
+      {
+        "type": "Research Paper",
+        "label": "IndexShare (arXiv)",
+        "url": "https://arxiv.org/abs/2603.12201"
+      },
+      {
+        "type": "Documentation",
+        "label": "Z.ai API Platform ドキュメント",
+        "url": "https://docs.z.ai/"
+      },
+      {
+        "type": "Official Website",
+        "label": "Z.ai チャット",
+        "url": "https://chat.z.ai/"
+      },
+      {
+        "type": "Blog",
+        "label": "GLM-5 技術ブログ",
+        "url": "https://z.ai/blog/glm-5"
+      }
+    ],
+    "updatedAt": "2026-10-20"
+  },
+  {
+    "slug": "laguna",
+    "name": "Laguna",
+    "aliases": [
+      "poolside Laguna",
+      "Laguna S 2.1"
+    ],
+    "tagline": "poolsideが公開する、エージェント型コーディングと長時間作業向けのオープンウェイトMoEモデルファミリー",
+    "category": "モデル",
+    "tags": [
+      "LLM",
+      "オープンウェイト",
+      "スパースモデル"
+    ],
+    "plainSummary": "poolsideが公開している、オープンウェイトのコード特化モデルシリーズ。小さめのものなら36GBメモリのMacでも動かせる。",
+    "summary": "Lagunaとは、poolsideが開発するオープンウェイトの大規模言語モデルファミリーを指す。\nエージェント的なコーディングと長時間続く作業を主眼に設計され、MoEで1トークンあたりに活性化するパラメータを抑えながら、手元で動かせるサイズからサーバーで使うサイズまで幅を持つ。\n2026年4月のLaguna M.1は総パラメータ225B・1トークンあたり23Bが活性化するモデルで、70層のMoE構成を持つ。\n同年7月のLaguna S 2.1は118B・8Bが活性化する中間サイズで、1Mトークンのコンテキストと投機的デコーディング用のDFlashモデルに対応する。\n最軽量のLaguna XS 2.1は33B・3Bが活性化するため、36GBメモリのMacでも動かせる。\n重みはFP8・NVFP4・INT4・GGUFで配布され、ライセンスはモデルごとにApache 2.0とOpenMDW-1.1が併用されている。",
+    "background": "poolsideは、コード補完とコード生成にフォーカスしたAI製品を展開してきた企業です。\n2026年にエージェント型のコーディング作業向けのLagunaブランドを立ち上げ、モデルサイズをXS・S・Mの3段階に分けて公開している。\n学習では、データの自動混合(data automixing)と非同期オフポリシー型のエージェント強化学習を組み合わせる手法が紹介されている。\n重みはHugging Faceで公開しており、OpenRouterやVercel AI Gateway経由でも利用できる。",
+    "history": "2026年4月: poolsideがMoEモデルのLaguna XS.2(33B/3B)とLaguna M.1(225B/23B)を公開した。\n2026年7月: 後継のLaguna XS 2.1とLaguna S 2.1(118B/8B)を公開した。\n同じ時期: S 2.1向けに投機的デコーディング用のDFlash draft modelと、INT4・FP8・NVFP4・GGUFの量子化版も配布された。",
+    "architecture": "Lagunaはトークン単位でルーティングを選ぶtoken-choice方式にsoftplusのゲーティングを組み合わせたMoEを採用する。\nLaguna M.1は70層の構成で、冒頭の3層が密なSwiGLU層、続く67層が256エキスパートを持つ疎なMoE層になる。ルーティングはtop-16で、補助損失を用いない負荷均衡(auxiliary-loss-free load balancing)でエキスパート間の偏りを抑える。全層にグローバルアテンションを置き、64のQヘッドと8のKVヘッドを持つ。\nLaguna XS 2.1とS 2.1はスライディングウィンドウ注意(SWA)とグローバル注意を搭配した構成にする。XS 2.1は40層でSWA比率3:1、S 2.1は48層で12層のグローバル注意と36層のSWA(窓幅512)からなる。\nS 2.1は256個のルーティングエキスパートから上位10個と共有1個を活性化し、GQA(8 KVヘッド、ヘッド次元128)と1,048,576トークンのコンテキストに対応する。語彙は100,352トークン。\n思考プロセスはツール呼び出しの合間に挿入するinterleaved thinking方式で、リクエストごとにenable_thinkingでon/offできる。\n投機的デコーディング用のDFlash draft modelが別途用意されている。",
+    "workflow": "重みはHugging Faceのpoolside organizationから取得でき、BF16に加えてFP8・NVFP4・INT4・GGUFの量子化版がモデルごとに整備されている。\nvLLMやSGLang、TRT-LLMの起動例がモデルカードに用意されており、tool-call parserとreasoning parser(poolside_v1)を指定してエージェント用途のサーバーを立てる。\nLaguna XS 2.1は33B・3B activateと小さいため、Ollamaやllama.cppから36GBメモリのMacでも利用できる。\nM.1とS 2.1はOpenRouterやVercel AI Gateway経由のAPIでも利用できる。",
+    "codeExamples": [
+      {
+        "title": "vLLMでLaguna S 2.1を推論サーバーとして起動する",
+        "language": "bash",
+        "code": "vllm serve \\\n    --model poolside/Laguna-S-2.1 \\\n    --tensor-parallel-size 4 \\\n    --tool-call-parser poolside_v1 \\\n    --reasoning-parser poolside_v1 \\\n    --enable-auto-tool-choice \\\n    --served-model-name laguna \\\n    --default-chat-template-kwargs '{\"enable_thinking\": true}'"
+      },
+      {
+        "title": "SGLangでLaguna S 2.1を起動する",
+        "language": "bash",
+        "code": "python -m sglang.launch_server \\\n  --model-path poolside/Laguna-S-2.1 \\\n  --tp-size 4 \\\n  --reasoning-parser poolside_v1 \\\n  --tool-call-parser poolside_v1 \\\n  --trust-remote-code"
+      },
+      {
+        "title": "DFlashのdraft modelで投機的デコーディングを行う",
+        "language": "bash",
+        "code": "vllm serve \\\n    --model poolside/Laguna-S-2.1 \\\n    --speculative-config '{\"model\":\"poolside/Laguna-S-2.1-DFlash\",\"num_speculative_tokens\":7,\"method\":\"dflash\"}'"
+      }
+    ],
+    "advantages": [
+      "Apache 2.0とOpenMDW-1.1という緩やかなライセンスで公開されており、商用利用や二次配布、改変が可能",
+      "XS 2.1は33B・3B activateと小さく、36GBメモリのMacでも動かせる",
+      "S 2.1は1Mトークンのコンテキストに対応し、長時間の作業記録を扱える",
+      "投機的デコーディング用のDFlash draft modelが公式に用意されており、低遅延運用に使える",
+      "Terminal-Bench 2.1で70.2%、SWE-bench Multilingualで78.5%など、コーディングのベンチマークで高い結果を出している"
+    ],
+    "disadvantages": [
+      "M.1は225B、S 2.1は118Bと総パラメータが大きいため、実機へ動かすには量子化が必要で、前準備が要る",
+      "ライセンスがモデルごとに異なる(Apache 2.0とOpenMDW-1.1)ため、利用前に条件を確認する",
+      "テキスト入出力専用のモデルであり、画像や音声の入力を扱うには別モデルとの組み合わせが必要",
+      "量子化版の形式がモデルごとに異なり、XS 2.1はFP8・NVFP4・INT4、S 2.1はさらにGGUFが提供されるなど、選ぶ重みの形式が統一されていない"
+    ],
+    "comparisons": [
+      {
+        "slug": "mixture-of-experts",
+        "note": "Lagunaは256個のエキスパートから上位を選ぶMoEで、M.1はtop-16、S 2.1はtop-10のルーティングを行う"
+      },
+      {
+        "slug": "coding-agent",
+        "note": "Lagunaはエージェント型コーディングと長時間続く作業を主眼に学習されたオープンウェイトのモデルファミリー"
+      },
+      {
+        "slug": "speculative-decoding",
+        "note": "Laguna S 2.1は投機的デコーディング用のDFlash draft modelを公式に配布しており、低遅延運用に利用できる"
+      },
+      {
+        "slug": "kimi",
+        "note": "Kimi K3(2.8T/104B)とLaguna S 2.1(118B/8B)はいずれもオープンウェイトのMoEで、エージェント的なコーディング用途で競合する。Kimiはネイティブマルチモーダル、LagunaはSWAとグローバル注意の組み合わせで特徴を出す"
+      },
+      {
+        "slug": "ollama",
+        "note": "Laguna XS 2.1はOllamaとllama.cppから利用できる形で配布されており、ローカル実行が容易"
+      }
+    ],
+    "relatedTerms": [
+      "large-language-model",
+      "mixture-of-experts",
+      "coding-agent",
+      "tool-calling",
+      "speculative-decoding",
+      "ollama",
+      "llama-cpp",
+      "vllm",
+      "sglang",
+      "quantization",
+      "long-context",
+      "kimi"
+    ],
+    "faq": [
+      {
+        "question": "Lagunaはどの用途向けか。",
+        "answer": "エージェント型コーディングと長時間続く作業が主眼で、Terminal-Bench 2.1で70.2%、SWE-bench Multilingualで78.5%など、コーディングのベンチマークで結果が報告されている。"
+      },
+      {
+        "question": "どのモデルを選べばよいか。",
+        "answer": "手元で動かせる最小構成はXS 2.1(33B/3B)で、36GBメモリのMacに対応する。\nサーバーを常時動かすならS 2.1(118B/8B)やM.1(225B/23B)が候補になる。"
+      },
+      {
+        "question": "ライセンスはどうなっているか。",
+        "answer": "M.1はApache 2.0、XS 2.1とS 2.1はOpenMDW-1.1。\nいずれも商用利用、改変、二次配布が可能で、別途の許諾は不要。"
+      },
+      {
+        "question": "量子化版は用意されているか。",
+        "answer": "FP8、NVFP4、INT4、GGUFがモデルごとに整備されている。\nローカルで動かす場合はGGUFをllama.cppやOllamaで読み込む方法が扱いやすい。"
+      }
+    ],
+    "references": [
+      {
+        "type": "Official Website",
+        "label": "poolside",
+        "url": "https://poolside.ai/"
+      },
+      {
+        "type": "Blog",
+        "label": "Laguna XS.2 and M.1: A Deeper Dive",
+        "url": "https://poolside.ai/blog/laguna-a-deeper-dive"
+      },
+      {
+        "type": "Blog",
+        "label": "Introducing Laguna S 2.1",
+        "url": "https://poolside.ai/blog/introducing-laguna-s-2-1"
+      },
+      {
+        "type": "Blog",
+        "label": "Introducing Laguna XS 2.1",
+        "url": "https://poolside.ai/blog/introducing-laguna-xs-2-1"
+      },
+      {
+        "type": "Documentation",
+        "label": "poolside/Laguna-S-2.1 (Hugging Face)",
+        "url": "https://huggingface.co/poolside/Laguna-S-2.1"
+      },
+      {
+        "type": "Documentation",
+        "label": "poolside/Laguna-XS-2.1 (Hugging Face)",
+        "url": "https://huggingface.co/poolside/Laguna-XS-2.1"
+      },
+      {
+        "type": "Research Paper",
+        "label": "Laguna M.1 and XS.2 Technical Report",
+        "url": "https://poolside.ai/assets/laguna/laguna-m1-xs2-technical-report.pdf"
       }
     ],
     "updatedAt": "2026-10-20"

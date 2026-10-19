@@ -54,7 +54,7 @@
           "qwen": "テキスト・マルチモーダル",
           "phi": "テキスト",
           "deepseek": "テキスト",
-          "kimi": "テキスト",
+          "kimi": "テキスト・マルチモーダル",
           "flux": "画像生成",
           "ornith": "テキスト・コード"
         }
@@ -68,7 +68,7 @@
           "qwen": "多言語対応と幅広いパラメータ規模のバリエーション",
           "phi": "高品質データ重視で小規模ながら高性能",
           "deepseek": "低コスト学習と強化学習による高い推論能力",
-          "kimi": "ロングコンテキストと大規模MoEモデルKimi K2",
+          "kimi": "ロングコンテキストと大規模MoEモデルKimi K2、Agent Swarmに対応したK2.5、2.8TのK3",
           "flux": "Stable Diffusion後継としての文字描画・プロンプト忠実性",
           "ornith": "自己足場構築によるエージェント型コーディング特化"
         }
@@ -82,7 +82,7 @@
           "qwen": "Apache 2.0等",
           "phi": "MIT等",
           "deepseek": "MIT等",
-          "kimi": "Modified MIT等",
+          "kimi": "Modified MIT・Kimi K3 License等",
           "flux": "Apache 2.0 / 非商用ライセンス混在",
           "ornith": "MIT"
         }
@@ -174,11 +174,32 @@
         "relatedTerms": ["kimi"]
       },
       {
+        "date": "2025-11",
+        "title": "Moonshot AI、Kimi K2 Thinkingを公開",
+        "description": "K2の推論特化版で、長い思考過程を挟んで数学やコード生成などの推論課題に対応した。",
+        "organizations": ["Moonshot AI"],
+        "relatedTerms": ["kimi"]
+      },
+      {
+        "date": "2026-01",
+        "title": "Moonshot AI、Kimi K2.5を公開",
+        "description": "ネイティブマルチモーダルモデルで、最大100体のサブエージェントを並列実行するAgent Swarmに対応した。",
+        "organizations": ["Moonshot AI"],
+        "relatedTerms": ["kimi"]
+      },
+      {
         "date": "2026-06",
         "title": "DeepReinforce、Ornith-1.0を公開",
         "description": "Qwen 3.5・Gemma 4をベースに、自己足場構築の学習手法でエージェント型コーディングに特化させたモデルファミリー。",
         "organizations": ["DeepReinforce"],
         "relatedTerms": ["ornith"]
+      },
+      {
+        "date": "2026-07",
+        "title": "Moonshot AI、Kimi K3を公開",
+        "description": "総パラメータ2.8Tのネイティブマルチモーダルなエージェントモデルで、1Mトークンのコンテキストに対応する。",
+        "organizations": ["Moonshot AI"],
+        "relatedTerms": ["kimi"]
       }
     ],
     "relatedTerms": ["foundation-model", "fine-tuning", "quantization", "mixture-of-experts"],
