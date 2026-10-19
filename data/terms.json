@@ -34012,5 +34012,37 @@
         "url": "https://www.kr-asia.com/vasts-tripo-ai-brings-generative-ai-to-3d-modeling"
       }
     ]
+  },
+  {
+    "slug": "kilo-code",
+    "name": "Kilo Code",
+    "aliases": [
+      "Kilo",
+      "kilocode",
+      "Kilo Code"
+    ],
+    "tagline": "エージェント型のオールインワン開発プラットフォーム。IDE・VS Code・JetBrains・CLI などから利用できるコーディングエージェント",
+    "category": "エージェント",
+    "tags": [
+      "コーディングエージェント",
+      "エージェント",
+      "開発ツール"
+    ],
+    "summary": "Kilo Code は、Kilo Code, Inc. によって開発されたオールインワンのエージェント型エンジニアリングプラットフォーム。コーディングエージェントとして、VS Code、JetBrains、CLI、IDE などの開発環境から利用でき、コード生成・リファクタリング・デバッグ・コードレビューなどの開発タスクを AI エージェントが自律的に実行する。モデルフリーな設計を採り、複数の LLM プロバイダーからモデルを選択して利用できる点が特徴。",
+    "relatedTerms": [
+      "ai-agent"
+    ],
+    "references": [
+      {
+        "type": "GitHub",
+        "label": "Kilo-Org/kilocode",
+        "url": "https://github.com/Kilo-Org/kilocode"
+      },
+      {
+        "type": "Official Website",
+        "label": "Kilo Code",
+        "url": "https://kilo.ai"
+      }
+    ]
   }
 ]
