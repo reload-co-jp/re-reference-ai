@@ -1,5 +1,5 @@
 [
-  {
+{
     "slug": "large-language-model",
     "name": "LLM",
     "aliases": [
@@ -2496,7 +2496,7 @@
       }
     ]
   },
-  {
+    {
     "slug": "reasoning-model",
     "name": "推論モデル",
     "aliases": [
@@ -2562,7 +2562,8 @@
       "tree-of-thought",
       "test-time-scaling",
       "reasoning-limitations",
-      "reasoning"
+      "reasoning",
+      "nemotron"
     ],
     "faq": [
       {
@@ -3292,7 +3293,7 @@
       }
     ]
   },
-  {
+    {
     "slug": "mixture-of-experts",
     "name": "MoE",
     "aliases": [
@@ -3361,7 +3362,8 @@
       "router",
       "sparse-activation",
       "computational-efficiency",
-      "conditional-computation"
+      "conditional-computation",
+      "nemotron"
     ],
     "faq": [
       {
@@ -4218,7 +4220,7 @@
       }
     ]
   },
-  {
+      {
     "slug": "ai-agent",
     "name": "AIエージェント",
     "aliases": [
@@ -4314,7 +4316,9 @@
       "sandboxing",
       "code-interpreter",
       "browser-use",
-      "chatbot"
+      "chatbot",
+      "grok-bot",
+      "nemotron"
     ],
     "faq": [
       {
@@ -6127,7 +6131,7 @@
       }
     ]
   },
-  {
+    {
     "slug": "llama",
     "name": "Llama",
     "aliases": [
@@ -6173,7 +6177,8 @@
       "large-language-model",
       "fine-tuning",
       "mixture-of-experts",
-      "mistral"
+      "mistral",
+      "nemotron"
     ],
     "faq": [
       {
@@ -6311,7 +6316,8 @@
       "rlhf",
       "large-language-model",
       "grpo",
-      "deepseek-harness"
+      "deepseek-harness",
+      "longcat"
     ],
     "faq": [
       {
@@ -6336,7 +6342,7 @@
       }
     ]
   },
-  {
+    {
     "slug": "qwen",
     "name": "Qwen",
     "aliases": [
@@ -6350,17 +6356,19 @@
       "多言語"
     ],
     "plainSummary": "中国のAlibabaが作っている、多言語対応に強いAIモデルシリーズ。",
-    "summary": "Qwen(通義千問)とは、中国のAlibaba Cloudが開発する大規模言語モデルのファミリー。\n中国語・英語をはじめとする多言語対応と、テキストだけでなくコード生成・数学・マルチモーダル処理等に特化した派生モデルを多数展開している点が特徴。\n多くのモデルの重みが公開されており、オープンウェイトLLMの中でも幅広いパラメータ規模・用途のモデルを提供するファミリーとして利用されている。\nQwenシリーズはパラメータ数の異なる多数のバリエーションを展開しており、スマートフォン上で動く小型モデルから大規模なMoEモデルまで、用途に応じた選択肢の幅広さも特徴の1つ。\nAlibaba Cloudのクラウドサービスとの連携も進んでおり、企業向けのAIソリューション基盤としてもQwenシリーズが組み込まれている。",
-    "background": "Alibaba Cloudは、自社のクラウドサービスや各種アプリケーションで利用するAI基盤の強化に加え、オープンウェイトモデルの公開を通じて開発者コミュニティでの採用拡大を図る目的でQwenシリーズを開発している。",
-    "history": "2023年8月: Alibaba CloudがQwen(通義千問)を公開。\n2024年: 性能を改良したQwen2、Qwen2.5を相次いで公開。\n2025年: Qwen3を公開。",
-    "architecture": "デコーダのみのTransformerアーキテクチャを基本とし、モデルサイズや用途(汎用・コード特化・数学特化・マルチモーダル対応等)に応じた複数のバリエーションが展開されている。",
+    "summary": "Qwen(通義千問)とは、中国のAlibaba Cloudが開発する大規模言語モデルのファミリー。\n2025年4月のQwen3では密モデルとMoEモデルの双方が用意され、1つのモデルの中で思考モードと非思考モードを切り替える設計が採用された。\n100以上の言語・方言に対応し、コード生成や数学、外部ツールの利用を伴うエージェント的な処理で強い性能を示す。\nその後は用途別の派生モデルが次々と公開されている。コーディング専用のQwen3-Coder(最大480B-A35B)、視覚言語モデルのQwen3-VL、マルチモーダルモデルのQwen3-Omni、画像を生成するQwen-Imageがその例となる。\n2025年9月のQwen3-Nextでは線形注意(Gated DeltaNet)とGated Attentionを組み合わせるハイブリッド構成が採用され、262,144トークンのネイティブcontextとYarnによる100万トークンまでの拡張に対応する。\n2026年2月のQwen3.5ではマルチモーダルトークンを初期段階で融合する視覚言語基盤を採用し、対応言語・方言を201に拡張した。\n2026年8月のQwen3.8では総2.4兆パラメータ(1トークンあたり95Bが活性化)のモデルを公開し、Qwen-Max相当のモデルを初めてオープンウェイトで提供した。\n重みは多くのモデルがApache 2.0で公開されており、Alibaba CloudのModel Studioを通じたAPI利用も並行して提供される。",
+    "background": "Alibaba Cloudは、自社のクラウドサービスや各種アプリケーションで利用するAI基盤の強化に加え、オープンウェイトモデルの公開を通じて開発者コミュニティでの採用拡大を図る目的でQwenシリーズを開発している。\n公開済みの重みはHugging Faceで配布されると同時に、Alibaba CloudのModel StudioからAPI経由でも同じ系列のモデルを利用できる。",
+    "history": "2023年8月: Alibaba CloudがQwen(通義千問)を公開した。\n2024年: Qwen2、Qwen2.5を相次いで公開した。\n2025年3月: 論理推論に特化したQwQ-32Bを公開した。\n2025年4月: Qwen3を公開した。密モデルとMoEモデルが揃い、同一モデル内での思考モードと非思考モードの切替に対応した。\n2025年7月: エージェント型コーディング向けのQwen3-Coder(480B-A35Bなど)を公開した。\n2025年9月: ハイブリッドAttentionを採用したQwen3-Next-80B-A3B、視覚言語モデルのQwen3-VL、マルチモーダルモデルのQwen3-Omniを公開した。\n2026年1月: 音声認識のQwen3-ASRと音声合成のQwen3-TTSを公開した。\n2026年2月: 視覚言語を統合したQwen3.5系列(35B-A3Bなど)を公開し、対応言語を201に拡張した。\n2026年8月: 総2.4兆パラメータのQwen3.8-2.4T-A95Bを公開した。Qwen-Max相当のモデルを初めてオープンウェイトで提供した。",
+    "architecture": "Qwen3まではデコーダのみのTransformerにGQAとMoEを組み合わせる構成が中心で、Qwen3-235B-A22Bは94層・エキスパート128個を備え、1トークンあたり22Bを活性化する。\nQwen3-Next以降は線形注意のGated DeltaNetとGated Attentionを交互に配置するハイブリッド構成が標準となり、ネイティブのコンテキスト長は262,144トークン、Yarnによる拡張で最大1,010,000トークンに対応する。\nQwen3.5ではマルチモーダルトークンを初期段階で融合する視覚言語基盤を採用している。\nQwen3.8-2.4T-A95Bは92層・エキスパート512個で構成し、ルーティングされた10個と共有1個を活性化する。",
     "advantages": [
-      "中国語を含む多言語対応に強みを持つ",
-      "幅広いパラメータ規模・用途特化モデルが公開されており、要件に応じて選択しやすい",
-      "多くのモデルの重みが公開されており、自前の環境でのホスティングや派生モデルの開発がしやすい"
+      "同一ファミリーで0.6Bから2.4兆パラメータまで規模を自由に選択できる",
+      "1つのモデルの中で思考モードと非思考モードを切り替えられる",
+      "Apache 2.0で公開されているモデルが多く、商用利用の条件を確認しやすい",
+      "コード生成、視覚言語、マルチモーダル、画像生成、音声まで用途別の派生モデルが揃っている",
+      "中国以外の地域でも広く使われており、周辺ツールや展開事例据统计されている"
     ],
     "disadvantages": [
-      "モデルによってライセンス条件が異なり、利用前の確認が必要",
+      "モデルごとにライセンスが異なる(Qwen2.5の一部とQwen3.8-2.4T-A95Bは独自のライセンスが指定されている)",
       "英語中心のベンチマークでは、他の主要モデルとの性能比較が分野によって分かれる",
       "中国国外での利用にあたり、データの取り扱いやセキュリティポリシーの観点から導入を制限する組織もある"
     ],
@@ -6374,6 +6382,22 @@
         "note": "QwenとLlamaは、いずれもオープンウェイトの方針で複数のモデルサイズを公開している"
       },
       {
+        "slug": "mixture-of-experts",
+        "note": "Qwen3-235B-A22BやQwen3.8-2.4T-A95Bは、1トークンあたりに活性化するパラメータを全体の一部に限定したMoEアーキテクチャを採用している"
+      },
+      {
+        "slug": "deepseek",
+        "note": "QwenとDeepSeekはいずれも中国発のオープンウェイトMoEモデルだが、DeepSeekは強化学習による推論能力の獲得に重点を置く一方、Qwenは同一モデルでの思考切替と用途別の派生モデル展開に特徴がある"
+      },
+      {
+        "slug": "kimi",
+        "note": "QwenとKimiはいずれも中国発のオープンウェイトLLMで、どちらも大規模MoEモデルを展開している。Qwen3-235B-A22Bは1トークンあたり22B、Kimi K2は32Bが活性化される。"
+      },
+      {
+        "slug": "longcat",
+        "note": "QwenとLongCatはいずれも中国発のオープンウェイトLLMだが、Qwenが用途別の派生モデルを多数公開するのに対し、LongCatは推論特化版、オムニ版、画像・動画生成版と方式の異なるモデルを別名称で公開している"
+      },
+      {
         "slug": "ornith",
         "note": "Ornith-1.0は、Qwen 3.5の重みをベースにエージェント型コーディング向けの強化学習を施した派生モデルファミリー"
       }
@@ -6382,7 +6406,13 @@
       "large-language-model",
       "llama",
       "deepseek",
-      "ornith"
+      "kimi",
+      "ornith",
+      "longcat",
+      "mixture-of-experts",
+      "open-weight-model",
+      "multimodal-llm",
+      "nemotron"
     ],
     "faq": [
       {
@@ -6390,8 +6420,16 @@
         "answer": "中国語に強みを持つが、英語を含む多言語のデータで学習されており、英語のタスクにも対応している。"
       },
       {
+        "question": "Qwen3の思考モードと非思考モードの違いは。",
+        "answer": "Qwen3は同じモデルのまま、チャットテンプレートの指定で思考モードと非思考モードを切り替えられる。\n数学やコード生成のように推論が重い課題では思考モードを、単純な対話や大量の実時間応答では非思考モードを使う使い分けが想定されている。"
+      },
+      {
         "question": "Qwenにはどんな派生モデルがある？",
-        "answer": "コード生成に特化したQwen-Coder、数学に特化したQwen-Math等、用途ごとにファインチューニングされた派生モデルが複数公開されている。"
+        "answer": "コード生成に特化したQwen3-Coder、視覚言語モデルのQwen3-VL、マルチモーダルモデルのQwen3-Omni、画像を生成するQwen-Image、音声認識のQwen3-ASRと音声合成のQwen3-TTSなど、用途ごとに別のモデルが公開されている。"
+      },
+      {
+        "question": "Qwenのコンテキスト長はどれくらいか。",
+        "answer": "Qwen3-Next以降はネイティブで262,144トークンに対応し、Yarnによる拡張で最大1,010,000トークンまで扱える。\nQwen3-Coder-480B-A35Bもネイティブ256K、Yarnによる拡張で1Mに対応する。"
       }
     ],
     "references": [
@@ -6404,6 +6442,26 @@
         "type": "Official Website",
         "label": "Alibaba Cloud Qwen",
         "url": "https://qwenlm.github.io/"
+      },
+      {
+        "type": "Blog",
+        "label": "Qwen 公式ブログ",
+        "url": "https://qwen.ai/blog"
+      },
+      {
+        "type": "Documentation",
+        "label": "Qwen (Hugging Face)",
+        "url": "https://huggingface.co/Qwen"
+      },
+      {
+        "type": "Official Website",
+        "label": "Alibaba Cloud Model Studio",
+        "url": "https://modelstudio.alibabacloud.com/"
+      },
+      {
+        "type": "Research Paper",
+        "label": "Qwen3 Technical Report",
+        "url": "https://arxiv.org/abs/2505.09388"
       }
     ]
   },
@@ -6566,7 +6624,7 @@
       }
     ]
   },
-  {
+    {
     "slug": "vllm",
     "name": "vLLM",
     "tagline": "PagedAttentionによりGPUメモリを効率利用する、高スループットなオープンソースLLM推論・サービングエンジン",
@@ -6628,7 +6686,8 @@
       "ray",
       "sglang",
       "continuous-batching",
-      "llm-d"
+      "llm-d",
+      "nemotron"
     ],
     "faq": [
       {
@@ -13657,7 +13716,7 @@
       }
     ]
   },
-  {
+      {
     "slug": "computer-use",
     "name": "Computer Use",
     "aliases": [
@@ -13711,7 +13770,8 @@
       "human-in-the-loop",
       "claude",
       "browser-use",
-      "vision-language-model"
+      "vision-language-model",
+      "grok-bot"
     ],
     "faq": [
       {
@@ -15498,43 +15558,54 @@
       }
     ]
   },
-  {
+        {
     "slug": "grok",
     "name": "Grok",
-    "aliases": [],
+    "aliases": [
+      "Grok 4.7",
+      "Grok 4"
+    ],
     "tagline": "イーロン・マスク率いるxAIが開発する、X(旧Twitter)との統合を特徴とする大規模言語モデルファミリー",
     "category": "モデル",
     "tags": [
       "LLM",
-      "マルチモーダル"
+      "マルチモーダル",
+      "クローズドウェイト"
     ],
-    "plainSummary": "イーロン・マスクのxAIが作るAIモデル。X(旧Twitter)の投稿をリアルタイムに参照できる点が特徴。",
-    "summary": "Grokは、イーロン・マスクの設立したxAIが開発する大規模言語モデルファミリー。\nX(旧Twitter)上のリアルタイムな投稿データへのアクセスを活かし、最新の出来事に関する話題にも対応できる点を特徴とする。\n他の主要な商用LLMと同様にチャット形式の対話・コード生成・画像生成などに対応するほか、Xのプラットフォーム上に統合され、ユーザーの投稿やトレンドを踏まえた応答を生成できるよう設計されている。\nやや砕けた口調やユーモアを交えた応答スタイルを打ち出す点が、他の主要モデルとの差別化要素として語られることが多い。\nバージョンを重ねるごとに推論能力やマルチモーダル対応が強化されており、xAIは大規模GPUクラスタを自社構築して学習基盤に投資している。",
-    "background": "既存の商用LLMの多くは学習データの収集時点までの知識に基づいて応答するため、リアルタイム性の高い話題への対応に制約があった。\nGrokは、X社の持つリアルタイムな投稿データを学習・検索に活用できる立場を生かし、最新の話題に強いLLMという差別化を狙って開発された。",
-    "history": "2023年: xAIが設立され、Grokの最初のバージョンを発表。\n2024年: Grok-1のモデル重みが一部オープンソースとして公開される。\n2024-2025年: Grok-2、Grok-3、Grok-4と改良が続き、推論能力とマルチモーダル対応が強化される。",
-    "architecture": "公開されているGrok-1は、デコーダのみのTransformerをベースにしたMixture-of-Experts(MoE)アーキテクチャを採用しており、合計3140億パラメータのうち、1トークンあたり8個のエキスパートから2個が活性化される構成になっている。\n後継のGrok-2以降は詳細なアーキテクチャこそ非公開だが、Xプラットフォーム上のリアルタイムな投稿データを検索・参照する機能を組み込んだ形で提供されている。",
-    "workflow": "ユーザーがXのアプリやWeb、あるいはxAIのAPI経由でGrokに質問を送ると、質問がリアルタイムの話題に関連する場合はX上の関連する投稿やトレンドが参照情報として取得され、その内容を踏まえた応答が生成される。\n通常のLLMと同様、テキスト生成やコード生成、画像生成などのタスクにもプロンプトを通じて対応する。",
+    "plainSummary": "イーロン・マスクのxAIが作るAIモデル。X(旧Twitter)やWebの検索ツールで、リアルタイムの話題を調べられる点が特徴。",
+    "summary": "Grokとは、イーロン・マスクの設立したxAIが開発する大規模言語モデルファミリー。\nテキスト生成に加え、画像生成・画像編集・動画生成・音声合成・音声認識・音声対話まで対応しており、2026年9月公開のgrok-4.7がフラッグシップにあたる。\ngrok-4.7は50万トークンのコンテキストを持ち、テキストと画像を受け取りテキストを出力する。知識のカットオフは2026年5月となっている。\nリアルタイムな情報はAPI側のWeb検索・X検索ツールを有効にすることで得られる。ツールを使わない場合、モデルは学習データに含まれる範囲の情報しか扱えない。\n用途別のモデルも整備されており、推論特化のgrok-4.20-0309-reasoning、100万トークンのコンテキストを持つgrok-4.3、コーディング専用のgrok-build-0.1、複数エージェントのgrok-4.20-multi-agent-0309がその例となる。\nオープンウェイトで公開されているのはGrok-1(2024年3月、Apache 2.0)とGrok 2(2025年8月、Grok 2 Community License)のみで、Grok 3以降は重みが非公開となっている。",
+    "background": "xAIは、学習時点の知見に基づく応答では時事的な話題へ対応しにくい点を問題視し、リアルタイムな投稿データを扱うXのプラットフォームとの連携で差別化を図った。\nただし現行のAPIでは、リアルタイム情報の取得はWeb検索・X検索のツールを有効にすることで得られる。ツールを使わない場合、モデルは学習データに含まれる範囲の情報しか扱えない。\n公式ドキュメントは「SpaceXSI(xAI)」の名で提供されており、APIのエンドポイントはhttps://api.x.ai で提供される。",
+    "history": "2023年11月: xAIが最初のGrokモデル(Grok-1)を発表した。\n2024年3月: Grok-1の重みをApache 2.0でオープンウェイト公開した。\n2024年11月: xAI APIの公開ベータを開始し、grok-2-1212とgrok-2-vision-1212を公開した。\n2025年3月: 画像生成モデルをAPIで提供開始。5月にLive SearchをAPIで有効化した。\n2025年4月: Grok 3モデルをAPIで提供開始。\n2025年7月: Grok 4をAPIおよびgrok.comで提供開始。\n2025年8月: Grok 2の重みをGrok 2 Community Licenseでオープンウェイト公開した。\n2025年11月: Grok 4.1 FastをEnterprise APIで提供開始。\n2026年3月: Grok 4.20とGrok 4.20 Multi-agentを公開し、音声合成もAPIで提供開始。\n2026年5月: コーディングエージェントのGrok Buildとgrok-build-0.1を公開した。\n2026年7月: Grok 4.5を公開した。\n2026年8月: Grok 4.6とGrok Botを公開した。\n2026年9月: Grok 4.7を公開した。50万トークンのコンテキストに対応し、推論の強度をlowからxhighまで指定できる。\n2026年10月: 音声対話モデルのGrok Voice 3.0を提供開始。",
+    "architecture": "重みが公開されているGrok-1は、デコーダのみのTransformerにMoEを組み合わせた設計で、314Bパラメータ・64層・48個のクエリヘッドと8個のキー/バリューヘッドからなる。8個のエキスパートのうち2個を1トークンごとに活性化する構成で、語彙はSentencePieceの131,072トークン、最大シーケンス長は8,192トークンに留まる。\nGrok 2も64層・隠れサイズ8,192の構成で、エキスパート8個のうち2個を活性化する残差MoEを採用しており、131,072トークンのコンテキストに対応する。公開されている重みはFP8のTP=8向けチェックポイント(約500GB)で、社区ライセンスのもとで配布されている。\nGrok 3以降のアーキテクチャは非公開で、API経由で提供される機能(コンテキスト長、推論の強度、ツール)のみが仕様として公開されている。",
+    "workflow": "利用者はgrok.comのチャットサービス、またはxAI APIを通じてGrokを利用する。APIではResponses APIとOpenAI互換のChat Completionsのどちらでもリクエストを投げられる。\nWeb検索・X検索・コード実行・関数呼び出しの各ツールを有効にすると、モデルの外部で情報を取得して回答へ反映できる。\ngrok-4.7は推論の強さをreasoning_effortで指定でき、Responses APIでは暗号化された推論内容を返す。",
     "codeExamples": [
       {
-        "title": "xAI APIでのGrok呼び出し（OpenAI SDK互換）",
+        "title": "xAI APIでのGrok呼び出し(OpenAI SDK互換)",
         "language": "python",
-        "code": "from openai import OpenAI\n\nclient = OpenAI(api_key=\"XAI_API_KEY\", base_url=\"https://api.x.ai/v1\")\n\nresponse = client.chat.completions.create(\n    model=\"grok-4\",\n    messages=[{\"role\": \"user\", \"content\": \"最新のニュースを教えて\"}],\n)\nprint(response.choices[0].message.content)"
+        "code": "from openai import OpenAI\n\nclient = OpenAI(api_key=\"XAI_API_KEY\", base_url=\"https://api.x.ai/v1\")\n\nresponse = client.chat.completions.create(\n    model=\"grok-4.7\",\n    messages=[{\"role\": \"user\", \"content\": \"最新のニュースを教えて\"}],\n)\nprint(response.choices[0].message.content)"
+      },
+      {
+        "title": "X検索ツールを有効にして最新の上記情報を集める",
+        "language": "python",
+        "code": "import os\nfrom openai import OpenAI\n\nclient = OpenAI(\n    api_key=os.getenv(\"XAI_API_KEY\"),\n    base_url=\"https://api.x.ai/v1\",\n)\n\nresponse = client.responses.create(\n    model=\"grok-4.7\",\n    input=[{\"role\": \"user\", \"content\": \"Xでいま何が話題になっているか教えて\"}],\n    tools=[{\"type\": \"x_search\"}],\n)\n\nprint(response)"
       }
     ],
     "advantages": [
-      "X上のリアルタイムな投稿データを踏まえ、最新の話題に関する応答を生成しやすい",
-      "Xのプラットフォームに統合されており、ユーザーが既存のアプリ内からシームレスに利用できる",
-      "大規模な計算基盤への継続投資により、モデルの改良サイクルが速い"
+      "テキスト・画像・動画・音声をAPIでまとめて提供しており、用途別のモデルが整っている",
+      "Web検索・X検索のツールにより、学習時点の後の話題も取得して回答へ反映できる",
+      "推論の強度(reasoning effort)を指定でき、Responses APIでは暗号化された推論内容も扱える",
+      "Grok-1とGrok 2の重みが公開されており、ローカルでの検証や派生研究に使える"
     ],
     "disadvantages": [
-      "他の主要な商用LLMと比べ、サードパーティのエコシステムやツール連携の実績はまだ少ない",
-      "X上のデータに強く依存する設計上、プラットフォーム外の情報源に対する強みは相対的に薄い",
-      "砕けた応答スタイルが、用途によっては企業向けの丁寧な応答を求める場面に合わないことがある"
+      "リアルタイム情報は検索ツールを有効にしたときだけ利用でき、ツールなしの応答は学習データに基づく",
+      "最新世代の重みは非公開であり、公開されているGrok 2までの世代でしかない",
+      "Grok 2の重みはFP8のTP=8向けチェックポイント(約500GB)で、8枚以上のGPUを用意する必要がある",
+      "Grok 2の重みはGrok 2 Community Licenseで提供され、商用利用の条件は別途確認する必要がある"
     ],
     "comparisons": [
       {
         "slug": "gpt",
-        "note": "GPTが幅広い用途向けの汎用モデルとして展開されるのに対し、GrokはXとの統合とリアルタイム性を強みとする"
+        "note": "GPTが幅広い用途向けの汎用モデルとして展開されるのに対し、GrokはXとの統合とリアルタイム検索ツールを軸に据える"
       },
       {
         "slug": "claude",
@@ -15549,16 +15620,24 @@
       "gpt",
       "claude",
       "gemini",
-      "multimodal"
+      "multimodal",
+      "tool-calling",
+      "multi-agent",
+      "sglang",
+      "grok-bot"
     ],
     "faq": [
       {
         "question": "GrokとほかのLLMの一番の違いは？",
-        "answer": "X(旧Twitter)上のリアルタイムな投稿データへアクセスでき、最新の出来事に関する話題に対応しやすい点が大きな特徴。プラットフォームとの統合も強みとされる。"
+        "answer": "Web検索やX検索のツールで最新の話題に対応できる点が大きい。\nツールを有効にしたAPI利用では学習後の情報も取得できるが、ツールを使わない場合は学習データに基づく回答となる。"
       },
       {
         "question": "Grokは誰でも使える？",
-        "answer": "X Premiumなどのサブスクリプションを通じて利用できるほか、xAIのAPIを通じて開発者が自社アプリへ組み込むこともできる。"
+        "answer": "Xの有料サブスクリプションやgrok.comのチャットサービスから利用できるほか、xAIのAPIを通じて開発者が自社アプリへ組み込むこともできる。"
+      },
+      {
+        "question": "Grokの重みは公開されている？",
+        "answer": "Grok-1(2024年3月、Apache 2.0)とGrok 2(2025年8月、Grok 2 Community License)の重みのみ公開されている。\nGrok 3以降はクローズドウェイトで、API経由でのみ利用できる。"
       }
     ],
     "references": [
@@ -15568,11 +15647,27 @@
         "url": "https://x.ai/"
       },
       {
+        "type": "Official Website",
+        "label": "Grok",
+        "url": "https://grok.com/"
+      },
+      {
+        "type": "Documentation",
+        "label": "xAI 開発者ドキュメント",
+        "url": "https://docs.x.ai/"
+      },
+      {
         "type": "GitHub",
         "label": "xai-org/grok-1",
         "url": "https://github.com/xai-org/grok-1"
+      },
+      {
+        "type": "Documentation",
+        "label": "xai-org (Hugging Face)",
+        "url": "https://huggingface.co/xai-org"
       }
-    ]
+    ],
+    "updatedAt": "2026-10-20"
   },
   {
     "slug": "cohere",
@@ -18838,7 +18933,8 @@
       "deepseek",
       "qwen",
       "mixture-of-experts",
-      "long-context"
+      "long-context",
+      "longcat"
     ]
   },
   {
@@ -19180,7 +19276,7 @@
       }
     ]
   },
-  {
+    {
     "slug": "mamba",
     "name": "Mamba",
     "aliases": [
@@ -19228,7 +19324,8 @@
       "state-space-model",
       "transformer",
       "self-attention",
-      "long-context"
+      "long-context",
+      "nemotron"
     ],
     "faq": [
       {
@@ -21215,7 +21312,7 @@
       "coding-agent"
     ]
   },
-  {
+      {
     "slug": "cursor",
     "name": "Cursor",
     "tagline": "VS Codeをフォークし、チャットや複数ファイル編集などのAI機能をエディタに統合したAI IDE",
@@ -21249,7 +21346,8 @@
     "relatedTerms": [
       "ai-ide",
       "coding-agent",
-      "windsurf"
+      "windsurf",
+      "grok-bot"
     ],
     "faq": [
       {
@@ -26799,7 +26897,7 @@
       }
     ]
   },
-  {
+      {
     "slug": "chatbot",
     "name": "チャットボット",
     "aliases": [
@@ -26836,7 +26934,8 @@
       "generative-ai",
       "hallucination",
       "multimodal-dialogue",
-      "virtual-assistant"
+      "virtual-assistant",
+      "grok-bot"
     ]
   },
   {
@@ -33116,7 +33215,7 @@
       "core-ml"
     ]
   },
-  {
+    {
     "slug": "open-weight-model",
     "name": "オープンウェイトモデル",
     "aliases": [
@@ -33149,7 +33248,8 @@
       "local-llm",
       "uncensored-model",
       "dolphin",
-      "nous-hermes"
+      "nous-hermes",
+      "nemotron"
     ],
     "references": [
       {
@@ -34044,5 +34144,388 @@
         "url": "https://kilo.ai"
       }
     ]
+  },
+  {
+    "slug": "longcat",
+    "name": "LongCat",
+    "aliases": [
+      "LongCat-Flash",
+      "Meituan LongCat"
+    ],
+    "tagline": "中国Meituan(美団)が公開するオープンウェイトのLLMファミリー。LongCat-Flashは560BパラメータのMoEモデルで、ツール利用を伴うエージェント的な作業に強みを持つ",
+    "category": "モデル",
+    "tags": [
+      "LLM",
+      "オープンウェイト",
+      "スパースモデル"
+    ],
+    "plainSummary": "中国Meituan(美団)が作っているオープンウェイトのAIモデルシリーズ。MoE(混合専門家)構造を使い、ツールで最後まで作業を終わらせるエージェント的な作業に強い。",
+    "summary": "LongCat(美団LongCat)とは、中国の大手生活サービス企業Meituan(美団)が開発し、Hugging FaceとGitHubで重みを公開しているLLMファミリー。\n2025年8月に最初の一式としてLongCat-Flash-Chatを公開し、総パラメータ560BのMoE(Mixture-of-Experts)モデルとして紹介された。1トークンあたり18.6B〜31.3B(平均約27B)のパラメータだけを動的に活性化し、128kのコンテキスト長に対応する。\n2025年9月には推論特化版のLongCat-Flash-Thinkingを公開し、非同期強化学習の基盤DORAと領域並列RLを用いて数学・論理・プログラミング・自動定理証明・ツール利用を重点的に強化している。\nその後は音声・画像・動画入力に対応するLongCat-Flash-Omniと、動画生成のLongCat-Videoと、画像生成のLongCat-Imageが順に追加された。\n小規模向けのLongCat-Flash-Lite(総68.5B・約3B活性化)も2026年1月に公開された。2026年7月には、総パラメータ1.6兆・1トークンあたり約48Bが活性化するLongCat-2.0も公開されている。\n重みとソースコードはMITライセンスで公開されており、SGLangとvLLMによるセルフホストにも対応している。",
+    "background": "LongCatは、中国の大手生活サービス企業Meituan(美団)が自社で設計・訓練し、公開しているLLMファミリー。最初の一式を公開した後は、推論特化版、オムニ版、画像生成版、動画生成版、自動定理証明対応版と役割の異なるモデルを連続で公開している。\n重みは当初からMITライセンスで公開されており、商用利用や二次利用に関する制限は設けられていない。LongCat-2.0では事前学習と大规模デプロイの双方を自社が整備したAI ASICのスーパーポッドで実行しており、GPU以外のアクセラレータで1.6兆パラメータ規模を訓練した事例として紹介されている。",
+    "history": "2025年8月: Meituan(美団)がオープンウェイトLLM「LongCat-Flash-Chat」をHugging FaceとGitHubで公開した。総パラメータ560B、1トークンあたり約27Bを活性化するMoEモデルで、MITライセンスで配布された。\n2025年9月: 推論特化モデル「LongCat-Flash-Thinking」を公開した。非同期強化学習の基盤DORAと領域並列RLを用いた学習手法を含む。\n2025年10月: 音声・動画に対応する「LongCat-Flash-Omni」と、動画生成モデル「LongCat-Video」を公開した。\n2025年12月: 画像生成モデル「LongCat-Image」を公開した。\n2026年1月: 「LongCat-Flash-Thinking-2601」と「LongCat-Flash-Lite」を公開した。Liteは総68.5B・約3B活性化の小型MoEモデルで、256kのコンテキスト長に対応する。\n2026年3月: 自動定理証明に対応した「LongCat-Flash-Prover」を公開した。\n2026年7月: 総パラメータ1.6兆の「LongCat-2.0」を公開した。1Mコンテキストの学習データを使用し、LongCat Sparse AttentionとN-gram Embeddingを採用する。",
+    "architecture": "LongCat-FlashはデコーダのみのTransformerにMoEを組み合わせた設計で、総パラメータ560Bに対して、ゼロ計算エキスパートを組み合わせた動的ルーティングによって1トークンあたり18.6B〜31.3B(平均約27B)のみを活性化する。活性化するパラメータ量の偏りは、PIDコントローラでエキスパートバイアスを調整して平均値に収束させている。\nMoEの規模拡大で問題になる通信オーバーヘッドに対しては、Shortcut-connected MoE(ScMoE)を採用して計算と通信のオーバーラップ区間を広げ、100TPSを超える推論速度を実現している。\n中段階の事前学習では推論・コーディング能力を強化しながらコンテキスト長を128kへ拡張し、その後の多段階ポストトレーニングでは、複数エージェントによるデータ合成を通じてツール利用の習熟を高めている。\n後続のLongCat-Flash-Lite(総68.5B・約3B活性化)はN-gram Embeddingを30B超の埋込みパラメータとして組み込み、YaRNによって256kのコンテキスト長に対応する。LongCat-2.0(総1.6兆・約48B活性化)ではLongCat Sparse Attention(LSA)とN-gram Embedding(135Bパラメータ)を採用し、1Mコンテキストの学習データで学習している。",
+    "workflow": "LongCat-Flash-Chatの重みはHugging Faceで公開されており、FP8なら1ノード(例: 8xH20-141G)、BF16なら2ノード(例: 16xH800-80G)の用意が前提となる。\nSGLangとvLLMの両方に起動用の設定例が整備されており、Tensor ParallelismとExpert Parallelismを有効にして推論サーバーを立ち上げる構成が基本となる。\nチャットテンプレートは「[Round 0] USER:{query} ASSISTANT:」という独自形式であり、ツール呼び出しは<longcat_tool_call>タグで記述する。",
+    "codeExamples": [
+      {
+        "title": "SGLangで単一ノードにFP8版を展開する",
+        "language": "bash",
+        "code": "python3 -m sglang.launch_server \\\n    --model meituan-longcat/LongCat-Flash-Chat-FP8 \\\n    --trust-remote-code \\\n    --attention-backend flashinfer \\\n    --enable-ep-moe \\\n    --tp 8"
+      },
+      {
+        "title": "vLLMで単一ノードにFP8版を展開する",
+        "language": "bash",
+        "code": "vllm serve meituan-longcat/LongCat-Flash-Chat-FP8 \\\n    --trust-remote-code \\\n    --enable-expert-parallel \\\n    --tensor-parallel-size 8"
+      },
+      {
+        "title": "チャットテンプレートの書式",
+        "language": "text",
+        "code": "SYSTEM:{system_prompt} [Round 0] USER:{query} ASSISTANT:"
+      }
+    ],
+    "advantages": [
+      "重みとソースコードがMITライセンスで公開されており、商用利用や二次配布、改変を含む派生モデルの作成が可能",
+      "総パラメータ560Bの規模を確保しながら、1トークンあたりに活性化するパラメータを平均約27Bに抑えている",
+      "ツール呼び出しを前提としたエージェント的な作業に最適化されており、τ²-BenchやTerminalBenchといったベンチマークで同等規模の他モデルと同水準の結果が報告されている",
+      "SGLangとvLLMの両方に起動設定が整備され、FP8量子化版の重みも配布されている"
+    ],
+    "disadvantages": [
+      "総パラメータ560Bを持つため、FP8のホスティングでも1ノード(例: 8xH20-141G)が必要で、BF16運用では2ノードを要する。開発環境での手元推論には負担が大きい",
+      "モデルカードでは言語ごとの性能差が既知の制約として挙げられており、日本語での応答品質は別途評価する必要がある",
+      "LongCat-2.0(総1.6兆)は自社が整備したASICスーパーポッドで訓練されており、同じ条件での再現には多大な計算資源を要する"
+    ],
+    "comparisons": [
+      {
+        "slug": "mixture-of-experts",
+        "note": "LongCat-FlashはMoEを採用したモデルで、ゼロ計算エキスパートとPIDコントローラによる動的ルーティングを組み合わせ、トークンごとに活性化するパラメータ数を18.6B〜31.3Bの範囲で変動させる"
+      },
+      {
+        "slug": "deepseek",
+        "note": "LongCatとDeepSeekはいずれも中国発のオープンウェイトMoEモデルで、1トークンあたりの活性パラメータを抑えつつ大規模化している点が共通する。LongCat-Flashは560B/約27B、DeepSeek-V3.1は671B/37Bと構成が異なる"
+      },
+      {
+        "slug": "qwen",
+        "note": "QwenとLongCatはいずれも中国発のオープンウェイトLLMだが、Qwenが用途別の派生モデルを多数展開する方針であるのに対し、LongCatは推論特化版、オムニ版、画像・動画生成版と方式の異なるモデルを別名称で公開している"
+      },
+      {
+        "slug": "kimi",
+        "note": "LongCat-Flash(560B/約27B)とKimi K2(1043B/32B)はともにオープンウェイトのMoEモデルで、1トークンあたりの活性パラメータは同程度の規模に収まっている"
+      }
+    ],
+    "relatedTerms": [
+      "large-language-model",
+      "mixture-of-experts",
+      "deepseek",
+      "qwen",
+      "kimi",
+      "tool-calling",
+      "grpo",
+      "sglang",
+      "vllm"
+    ],
+    "faq": [
+      {
+        "question": "LongCatのモデルはどの状態で使えるか。",
+        "answer": "重みとソースコードがMITライセンスで公開されており、Hugging Faceからダウンロードできる。LongCat-Flash-ChatはFP8なら1ノード(8xH20-141G程度)、BF16なら2ノード(16xH800-80G程度)が必要で、SGLangとvLLMの両方に起動用の設定例が提供されている。チャットはlongcat.aiから利用できる。"
+      },
+      {
+        "question": "LongCat-Flash-ChatとLongCat-Flash-Thinkingの違いは。",
+        "answer": "LongCat-Flash-Chatは非思考型の基盤モデルで、ツール呼び出しを伴うエージェント的な処理を軸に最適化されている。LongCat-Flash-Thinkingは推論特化のモデルで、長い思考過程を挟んで数学・論理・プログラミング・自動定理証明などの課題に対応し、非同期強化学習の基盤DORAと領域並列RLの学習手順を用いる。"
+      }
+    ],
+    "references": [
+      {
+        "type": "Official Website",
+        "label": "LongCat 公式チャット",
+        "url": "https://longcat.ai/"
+      },
+      {
+        "type": "Official Website",
+        "label": "LongCat 公式ブログ",
+        "url": "https://longcat.chat/"
+      },
+      {
+        "type": "GitHub",
+        "label": "meituan-longcat/LongCat-Flash-Chat",
+        "url": "https://github.com/meituan-longcat/LongCat-Flash-Chat"
+      },
+      {
+        "type": "Documentation",
+        "label": "meituan-longcat (Hugging Face)",
+        "url": "https://huggingface.co/meituan-longcat"
+      },
+      {
+        "type": "Research Paper",
+        "label": "LongCat-Flash Technical Report",
+        "url": "https://arxiv.org/abs/2509.01322"
+      },
+      {
+        "type": "Research Paper",
+        "label": "LongCat-Flash-Thinking Technical Report",
+        "url": "https://arxiv.org/abs/2509.18883"
+      }
+    ]
+  },
+  {
+    "slug": "grok-bot",
+    "name": "Grok Bot",
+    "aliases": [],
+    "tagline": "xAIが提供する、専用のクラウドPC上で自律的に作業するAIチームメイト。名前と役割を与え、メッセージだけで複数ステップの作業を任せられる",
+    "category": "エージェント",
+    "tags": [
+      "エージェント",
+      "自律システム",
+      "ツール連携"
+    ],
+    "plainSummary": "イーロン・マスクのxAIが作ったAIのチームメイト。専用のクラウドPC上で、メッセージで指示した作業を自分で仕上げてくれる。",
+    "summary": "Grok Botとは、xAIが2026年8月に提供を始めたAIエージェント型のサービス。\n利用者がBotに名前と役割を与えると、ブラウザ・ファイルシステム・ターミナルを備えた専用のクラウドPC上で、複数ステップの作業を担当する。\n常設の環境で動くためノートPCを閉じても処理は進み、チャットでの回答ではなく実際のツール操作として成果物が残る。\n複数Botを並行稼働させ、Bot同士でメッセージの送受信や作業の引き渡しを行える。グループチャットにも対応しており、ユーザーはBot同士の調整をせずに連携を進められる。\n作業手順を一度見せると、その手順をスキルとして保存し、時刻やイベントを条件にルーチンとして再実行できる。\nメモリやファイル、ブラウザセッション、設定はBotごとに維持され、セッションをまたいで積み上がる。\nX(旧Twitter)の投稿で@botをタグすると、投稿が作業として扱われ、メインのBotが引き受ける。\n利用枠はCursorの有料個人プランとCursor Teamsプランに含まれ、SuperGrok系のサブスクリプションをリンクすることでも使える。",
+    "background": "これまでのチャット型AIでは、応答を返すまでがやりとりの終点となるため、依頼された作業の仕上げは人手で行う必要が残っていた。\nGrok Botは、Botごとに常設のクラウドPCを用意し、ブラウザ・ファイルシステム・ターミナルを操作して作業を終える設計で、人手に残っていた部分を担う。\n提供体制はCursorの有料個人プランおよびCursor Teamsプランへの同梱、またはSuperGrok / SuperGrok Plus / SuperGrok Heavyの契約リンクで提供される。Botが操作するPCはCursorのクラウド上で動く。",
+    "history": "2026年8月: xAIがGrok Botをリリースした。Botが作業する常設のクラウドPCを用意し、Cursorの有料個人プランやCursor Teamsプランへの同梱、またはSuperGrok系の契約リンクとして提供された。",
+    "architecture": "Grok Botはモデル単体ではなく、モデルと実行環境を組み合わせたサービスとして提供される。\n中核はユーザーアカウントに1台割り当てられる常設のクラウドPCで、ブラウザ・ファイルシステム・コマンドライン・接続したアプリを取り込む。各Botは共有PC上の専用画面を使い、1つの画面では同時に1つのcomputer-useタスクだけを走らせる。\nメモリと会話はBotごとに分離される一方、ファイルやブラウザセッション、コマンドラインの資格情報はアカウント単位で共有される。画面は作業の分離であってセキュリティ境界ではない。\nパスワードや2要素認証、CAPTCHA、決済など人が介在する操作はBotがユーザーへ引き継ぎ、承認を待つ。承認は1回だけの許可、ルールを保存する恒常許可、拒否の3種で、Auto Reviewを有効にすると実行前のツール呼び出しを事前に判定する。",
+    "workflow": "利用者はデスクトップアプリまたはモバイルアプリからBotを作成し、名前・役割・働き方を指定する。以降の作業はチャットで依頼し、Botは共有クラウドPC上でブラウザやファイル、コマンドライン、接続アプリを使って処理を進める。\n成果物はチャットでの報告だけでなく、共有PC上のファイルやブラウザのログイン状態として残り、次の作業へそのまま引き継げる。\n安定して動く手順はスキルとして保存でき、時刻やイベントを条件とするルーチンとして定期実行できる。\nX(旧Twitter)で@botをタグすると、投稿がBot宛の作業として扱われる。",
+    "codeExamples": [
+      {
+        "title": "スキルの記述例(ドキュメントが推奨する構成)",
+        "language": "text",
+        "code": "スキル名: Weekly account health\n1. 使う場面: 毎週のアカウント健全性チェック\n2. 必要な入力と権限: CRMの読み取り、Slackの読み取り\n3. 作業手順: 対象アカウントを抽出し、候補を調査して担当チームへ共有する\n4. 検証方法: 抽出したリストと判定結果を突き合わせる\n5. 返すもの: 対応が必要なアカウントの一覧\n6. 承認が必要な操作: 顧客への連絡送信"
+      }
+    ],
+    "advantages": [
+      "ノートPCやアプリを閉じていてもクラウドPC側で作業が進み、バックグラウンドの処理が継続する",
+      "ブラウザ・ファイル・コマンドラインと接続アプリを使い分け、実際のツール操作で作業を完了できる",
+      "メモリやファイル、ブラウザセッションが保持され、前回の作業の状態を引き継げる",
+      "手順をスキルとして保存し、時刻やイベントを条件にルーチン化できる",
+      "複数Botが並列で動き、Bot間のメッセージと引き渡しで作業を分担できる"
+    ],
+    "disadvantages": [
+      "利用にはCursorの有料プランかSuperGrok系の契約が必要で、利用枠は週ごとにリセットされる",
+      "Botごとの画面はセキュリティ境界ではなく、同一アカウントのBotはPC上のファイルや資格情報を共有する",
+      "パスワードや2要素認証、CAPTCHA、決済など人が介在する場面では、手動での引き継ぎが発生する",
+      "自動化された作業は承認カードが約10分で期限切れになるため、応答が遅れると作業が中断する"
+    ],
+    "comparisons": [
+      {
+        "slug": "chatbot",
+        "note": "Grok Botはチャットボットと同じくメッセージで応対するが、回答ではなく共有PC上の操作で作業を終える点が異なる"
+      },
+      {
+        "slug": "ai-agent",
+        "note": "Grok BotはAIエージェントの実装例で、専用のクラウドPCという実行環境とスキル・ルーチンの仕組みを標準で備える"
+      },
+      {
+        "slug": "computer-use",
+        "note": "Grok BotはブラウザやPCを実際に操作するcomputer useを前提とした製品で、接続アプリだけでなく画面操作も自動化する"
+      },
+      {
+        "slug": "cursor",
+        "note": "Grok BotはCursorの有料プランに同梱され、Botが動くクラウドPCもCursorのクラウド上にある"
+      }
+    ],
+    "relatedTerms": [
+      "grok",
+      "ai-agent",
+      "agentic-ai",
+      "computer-use",
+      "tool-calling",
+      "multi-agent",
+      "cursor",
+      "chatbot",
+      "human-in-the-loop"
+    ],
+    "faq": [
+      {
+        "question": "Grok Botはどのように使う？",
+        "answer": "デスクトップアプリかモバイルアプリからBotを作成し、名前と役割を与える。作業はチャットで依頼し、BotがクラウドPC上で実行する。利用にはCursorの有料個人プランかCursor Teamsプランのどちらかで、SuperGrok系の契約でも利用できる。"
+      },
+      {
+        "question": "Botは自分のパソコンで動くの？",
+        "answer": "操作するのはCursorのクラウド上にある常設のPCで、ユーザーの端末ではない。ブラウザのセッションやファイルはアカウント単位の共有で、ユーザー間では分離されている。"
+      },
+      {
+        "question": "Grok BotをAPIから呼び出せる？",
+        "answer": "ドキュメント上ではBotの操作を公開APIとして扱う方法は案内されておらず、導入はデスクトップ・モバイルアプリとCursorの有料プランまたはSuperGrok契約経由が中心となる。"
+      }
+    ],
+    "references": [
+      {
+        "type": "Official Website",
+        "label": "Grok",
+        "url": "https://grok.com/"
+      },
+      {
+        "type": "Documentation",
+        "label": "Grok Bot 概要",
+        "url": "https://docs.x.ai/grok-bot/overview"
+      },
+      {
+        "type": "Documentation",
+        "label": "Grok Bot 導入手順",
+        "url": "https://docs.x.ai/grok-bot/get-started"
+      },
+      {
+        "type": "Documentation",
+        "label": "Grok Bot 承認・セキュリティ・プライバシー",
+        "url": "https://docs.x.ai/grok-bot/approvals-security-and-privacy"
+      },
+      {
+        "type": "Documentation",
+        "label": "xAI リリースノート",
+        "url": "https://docs.x.ai/developers/release-notes"
+      }
+    ]
+  },
+  {
+    "slug": "nemotron",
+    "name": "Nemotron",
+    "aliases": [
+      "NVIDIA Nemotron",
+      "ネモトロン"
+    ],
+    "tagline": "NVIDIAが重み・学習データ・学習レシピまで公開する、ハイブリッドMamba-Transformer MoEを軸にしたオープンAIモデル群",
+    "category": "モデル",
+    "tags": [
+      "LLM",
+      "オープンウェイト",
+      "NVIDIA"
+    ],
+    "plainSummary": "エヌビディアが、重みだけでなく学習データと学習レシピまで公開しているAIモデル群。MoE型のMamba-Transformerで、推論を軽くしつつ強い推論能力とエージェント能力を持たせる。",
+    "summary": "Nemotron(ネモトロン)とは、NVIDIAが「重み・学習データ・学習レシピをすべてオープンにする」と定義して公開しているAIモデルファミリー。\n公式ページでは、学習データと重みをHugging Faceで公開し、導入前に手元で評価してから本番運用へ移せること、モデルを再現する手順も技術レポートとして公開されていることを説明している。\n2024年6月のNemotron-4-340Bが初期の代表モデルとなった。Llama 3.1 8Bをエキスパートに組み合わせた総パラメータ340BのMoEモデルで、9兆トークンの事前学習のうえでSFT・DPO・RPOによるアラインメントを済ませている。\n学習時に人手でアノテーションしたデータは約2万件で、SFTと選好学習に用いたデータの98%以上は合成データで生成された。\n2024年9〜10月にはLlama 3.1を基盤にしたNemotron 51B/70BのInstruct版を出し、推論トレースを出すか出さないかをシステムプロンプトで切り替える設計を定着させた。\n2025年3月には、自己注意の代わりにMamba層を使うハイブリッド構成のNemotron-H(8B/47B/56B)を論文で発表した(arXiv:2504.03624)。\n同年8月には、NVIDIAがゼロから事前学習したNemotron-Nano-9B-v2/12B-v2を公開し、推論のOn/Offをチャットテンプレートのフラグで切り替えられる設計を実装した。\n2025年12月のNemotron 3 Nano 30B-A3Bは、25兆トークンの事前学習で仕上げたモデルとして公開された。MoE層には128エキスパートと1共有エキスパートがあり、1トークンあたり6エキスパートだけを活性化する(arXiv:2512.20848)。\n2026年3月のNemotron 3 Super 120B-A12BはLatentMoEにMTP層を加え、ITチケット自動化のような大量処理のエージェント業務向けに最適化されている。\n2026年6月には総パラメータ550B・活性55BのNemotron 3 Ultra 550B-A55Bが加わり、2026年8月以降のNemotron 3.5では低遅延版のLightning、24GBメモリに収まるBoltなど用途別の変種が用意されている。\n言語モデルだけでなく埋め込み(llama-nemotron-embed-1b-v2)やリランキング(rerank-1b-v2)、セーフティガード、Parse、内容安全といった周辺モデルも同じブランドで公開されている。",
+    "background": "NVIDIAはもともとAIアクセラレータとCUDAエコシステムを提供してきた企業であり、社内の環境で新しいアーキテクチャを素早く試せる立場にある。\nNemotronは、その検証で得た知見を再現可能な形で企業へ渡す手段として組み立てられている。\n重みだけでなく事前学習・ポストトレーニングのデータセットとレシピまで公開することで、第三者が同じ手順で再訓練したり、用途別に追加学習したりできるようにしている。\n推論コストを抑えるため、Mamba-2による定数計算の層、MoEによるスパース化、NVFP4やFP8による低精度量子化をモデル設計の中心に据えている。\n加えて推論のOn/Offを切り替える仕組みを標準で持たせ、同じ重みを速度重視の用途と精度重視の用途で使い分けられるようにしている。",
+    "history": "2024年6月: Nemotron-4-340BのBase/Instruct/Rewardを公開した。Llama 3.1 8BベースのMoEで、SFT・DPO・RPOによるアラインメントと合成データ生成パイプラインを配套した。\n2024年9〜10月: Llama 3.1 Nemotron 51B/70BのInstruct/Rewardを公開し、推論トレースのOn/Offをシステムプロンプトで切り替える方式を普及させた。\n2025年3月: Nemotron-H(8B/47B/56B)の論文を発表した(arXiv:2504.03624)。自己注意層の代わりにMamba層を使うハイブリッド構成を置き換えた形で導入した。\n2025年4月: Llama 3.1 Nemotron Ultra 253B v1を公開し、Llama系の上位モデルをNemotronブランドで提供した。\n2025年6月: Llama 3.1 Nemotron Nano VL 8B v1を公開し、視覚入力を扱えるラインを揃えた。\n2025年8月: NVIDIA-Nemotron-Nano-9B-v2/12B-v2を公開した。NVIDIAがゼロから事前学習した主力で、Mamba-2とMLP層にAttention 6層を組み合わせる。\n2025年10月: 埋め込みモデルのllama-nemotron-embed-1b-v2とリランキングモデルのllama-nemotron-rerank-1b-v2を公開し、RAGの周辺モデルもNemotronブランドで揃えた。\n2025年12月: Nemotron 3 Nano 30B-A3Bを公開した(arXiv:2512.20848)。25兆トークンの事前学習と1Mトークンのコンテキストに対応する。\n2026年3月: Nemotron 3 Super 120B-A12Bを公開した。LatentMoEとMTP層を組み合わせ、NVFP4事前学習レシピで学習している。\n2026年4月: 音声と映像の入力を扱うNemotron 3 Nano Omni 30B-A3Bを公開した。\n2026年6月: Nemotron 3 Ultra 550B-A55Bを公開した。55Bの活性パラメータで、日本語を含む10言語に対応する。\n2026年8月: Nemotron 3.5 Lightning 30B-A3Bを公開した。BF16の基準重みとNVFP4の推論向け重みを揃え、投機的デコーディングも利用する。\n2026年10月: 24GBメモリに収まるNemotron 3.5 Bolt 74B-A9Bと、マルチモーダル版のNemotron 3.5 Super VL 120B-A12B、埋め込みとリランキングの3.5版を公開した。",
+    "architecture": "Nemotron系の土台はMoE(混合エキスパート)とMamba-2の組み合わせになっている。\nNemotron-Hでは、Transformerの自己注意層の一部をMamba層に置き換え、生成トークンあたり定数の計算量と定数のメモリで処理する構成にした。\nNemotron 3 NanoはMamba-2とMoEの層が23層、Attention層が6層で、Mamba-2とMoEの層を交互に配置している。\nMoE層には128エキスパートと1共有エキスパートがあり、1トークンあたり6エキスパートだけを活性化するため、30Bのモデルながら3.5Bのパラメータで推論できる。\nNemotron 3 SuperとUltraはLatentMoEとしてMamba-2層とMoE層を交互に配置し、さらにMTP(Multi-Token Prediction)層を加えて生成を早めている。\n事前学習はNVFP4のレシピで行われ、120B-A12Bは12B、550B-A55Bは55Bが活性化する。\nNemotron 3.5 LightningはMamba-2とMoEの交互配置に投機的デコーディングを組み合わせ、30Bの総パラメータと3Bの活性パラメータで動作する。\n推論のOn/Offはチャットテンプレートのフラグで制御し、vLLMではreasoning parserを読み込んで推論トレースと最終回答を分離する。\nポストトレーニングはSFTと大規模RLで行われ、Nemotron-CCやNemotron-Post-Training-Dataset v3といった合成データに、Qwen3-235B-A22Bやgpt-oss-120b、DeepSeek-R1-0528などを教師とするトレースが混ざっている。",
+    "workflow": "用途でモデルを選ぶ(軽量な運用ならNanoやLightning、複雑なエージェント業務ならSuperやUltra)。\nHugging FaceからBF16/FP8/NVFP4/GGUFのいずれかを取得し、vLLMやSGLangでサーバーを起動する。\n推論のOn/Offをチャットテンプレートのフラグで指定する。\n推論Onの場合は応答時間を優先して、思考予算(thinking budget)で生成トークン数を制限する。\nツール利用する場合はtool-call parserを有効にして、推論トレースとツール呼び出しを分けて扱う。\n本番ではbuild.nvidia.comのNIMコンテナやAPI経由で運用する。",
+    "codeExamples": [
+      {
+        "title": "vLLMでNemotron 3 Nanoを推論サーバーとして起動する",
+        "language": "bash",
+        "code": "vllm serve nvidia/NVIDIA-Nemotron-3-Nano-30B-A3B-BF16 \\\n  --served-model-name model \\\n  --max-num-seqs 8 \\\n  --tensor-parallel-size 1 \\\n  --max-model-len 262144 \\\n  --port 8000 \\\n  --trust-remote-code \\\n  --enable-auto-tool-choice \\\n  --tool-call-parser qwen3_coder \\\n  --reasoning-parser-plugin nano_v3_reasoning_parser.py \\\n  --reasoning-parser nano_v3"
+      },
+      {
+        "title": "transformersで推論オフ(enable_thinking=False)を使う",
+        "language": "python",
+        "code": "from transformers import AutoModelForCausalLM, AutoTokenizer\n\nmodel_id = \"nvidia/NVIDIA-Nemotron-3-Nano-30B-A3B-BF16\"\ntokenizer = AutoTokenizer.from_pretrained(model_id)\nmodel = AutoModelForCausalLM.from_pretrained(\n    model_id, device_map=\"auto\", trust_remote_code=True\n)\n\nmessages = [{\"role\": \"user\", \"content\": \"2+2は?\"}]\ntokenized_chat = tokenizer.apply_chat_template(\n    messages,\n    tokenize=True,\n    enable_thinking=False,\n    add_generation_prompt=True,\n    return_tensors=\"pt\",\n).to(model.device)\n\noutputs = model.generate(\n    tokenized_chat,\n    max_new_tokens=32,\n    do_sample=False,\n    num_beams=1,\n    eos_token_id=tokenizer.eos_token_id,\n)\nprint(tokenizer.decode(outputs[0]))"
+      }
+    ],
+    "advantages": [
+      "重み・学習データ・学習レシピがセットで公開されており、第三者による再現や検証がしやすい",
+      "1トークンあたりに活性化するパラメータが小さく、Mamba-2層とMoEの組み合わせで推論コストを抑えられる",
+      "1Mトークンのコンテキストに対応し、長文の解析やエージェントの作業記録を扱える",
+      "同じモデルで推論のOn/Offを切り替えられ、応答速度と精度を使い分けられる",
+      "日本語を含む多言語に対応し、BF16/FP8/NVFP4/GGUFなど量子化済みの重みも配布されている",
+      "ツール利用やエージェント動作に向けたポストトレーニングのデータと評価手順が公開されている"
+    ],
+    "disadvantages": [
+      "世代ごとにライセンスが異なり(NVIDIA Open Model License、NVIDIA Nemotron Open Model License、OpenMDW-1.1)、利用前に条件を確認する 필요하다",
+      "モデル名に階級(Nano/Super/Ultra/Lightning/Bolt)と精度(BF16/FP8/NVFP4/GGUF)が組み合わさっており、選ぶ基準が複雑になる",
+      "重みの入手にはライセンス同意が必要で、モデルごとに手順が異なる",
+      "モデルカードに掲載された評価は英語とコード領域が中心で、多言語の指標は限られる",
+      "性能比較はNVIDIA内の測定を中心に構成されており、第三者で再現するには追加の設定が必要になる"
+    ],
+    "comparisons": [
+      {
+        "slug": "llama",
+        "note": "初期のNemotron-4-340BやLlama-NemotronはLlama 3.1 8Bを基盤にした派生モデルだったが、Nemotron-Nano-9B/12B-v2以降はNVIDIA自身がゼロから事前学習した独自モデルになる"
+      },
+      {
+        "slug": "qwen",
+        "note": "NemotronのポストトレーニングではQwen3-235B-A22BやQwen3-Next-80B-A3B-Thinkingが教師モデルとして使われており、合成データや蒸留の経路でQwenとの接点が多い"
+      },
+      {
+        "slug": "mixture-of-experts",
+        "note": "Nemotron 3ではMoE層をMamba-2層と交互に配置し、NanoはMoE層に128エキスパートと1共有エキスパートを置いて1トークンあたり6エキスパートのみを活性化する"
+      },
+      {
+        "slug": "mamba",
+        "note": "Nemotron-H以降では自己注意層の一部をMamba層に置き換え、生成トークンあたりの計算量とメモリを一定に保つハイブリッド構成が土台になっている"
+      },
+      {
+        "slug": "open-weight-model",
+        "note": "Nemotronは重みだけでなく学習データと学習レシピも公開するため、オープンウェイトモデルの枠組みをさらに一段検証可能な形にしている"
+      },
+      {
+        "slug": "vllm",
+        "note": "Nemotron 3系は専用のreasoning parserとtool-call parserを同梱しており、vLLMでの起動コマンドがモデルカードにそのまま記載されている"
+      },
+      {
+        "slug": "reasoning-model",
+        "note": "推論専用のモデルを別途用意するのではなく、チャットテンプレートのフラグで推論のOn/Offを切り替える統一モデルとして提供される"
+      }
+    ],
+    "relatedTerms": [
+      "mamba",
+      "mixture-of-experts",
+      "open-weight-model",
+      "quantization",
+      "vllm",
+      "sglang",
+      "reasoning-model",
+      "ai-agent",
+      "synthetic-data",
+      "dpo",
+      "alignment",
+      "knowledge-distillation",
+      "llama",
+      "qwen"
+    ],
+    "faq": [
+      {
+        "question": "NemotronはLlamaやQwenの派生モデルですか?",
+        "answer": "初期のNemotron-4-340BやLlama-NemotronはLlama 3.1 8Bを基盤にしていたが、Nemotron-Nano-9B-v2/12B-v2以降はNVIDIA自身がゼロから事前学習したモデルになっている。派生先として扱うか新規のモデルとして扱うかは、使う世代で変わる。"
+      },
+      {
+        "question": "推論のOn/Offはどうやって切り替えますか?",
+        "answer": "チャットテンプレートのフラグで切り替える。transformersから使う場合はapply_chat_templateへenable_thinking=Falseを渡す。vLLMで動かす場合はreasoning parserを指定し、サーバーに送ったリクエスト側のchat_template_kwargsで切り替える方法もある。"
+      },
+      {
+        "question": "商用利用はできますか?",
+        "answer": "世代ごとにライセンスが異なる。Nemotron-4-340BはNVIDIA Open Model License、Nemotron 3はNVIDIA Nemotron Open Model License、Nemotron 3.5はOpenMDW-1.1が適用される。使うモデルのライセンス条件を事前に確認する必要がある。"
+      },
+      {
+        "question": "自社のGPUで動かせますか?",
+        "answer": "BF16/FP8/NVFP4/GGUFの重みが公開されているので、vLLMやSGLangで自社環境に置いて動かせる。導入の前提として、NVIDIAのNIMコンテナとAPIもbuild.nvidia.comで提供されている。"
+      }
+    ],
+    "references": [
+      {
+        "type": "Official Website",
+        "label": "NVIDIA Nemotron AI Models (開発者ページ)",
+        "url": "https://developer.nvidia.com/nemotron"
+      },
+      {
+        "type": "Official Website",
+        "label": "Nemotron 3 Nano 30B-A3B (build.nvidia.com)",
+        "url": "https://build.nvidia.com/nvidia/nemotron-3-nano-30b-a3b"
+      },
+      {
+        "type": "Research Paper",
+        "label": "Nemotron 3 Nano: Open, Efficient Mixture-of-Experts Hybrid Mamba-Transformer Model for Agentic Reasoning (arXiv)",
+        "url": "https://arxiv.org/abs/2512.20848"
+      },
+      {
+        "type": "Research Paper",
+        "label": "Nemotron-H: A Family of Accurate and Efficient Hybrid Mamba-Transformer Models (arXiv)",
+        "url": "https://arxiv.org/abs/2504.03624"
+      },
+      {
+        "type": "Research Paper",
+        "label": "Nemotron-4 340B Technical Report (NVIDIA Research)",
+        "url": "https://research.nvidia.com/publication/2024-06_nemotron-4-340b"
+      },
+      {
+        "type": "Research Paper",
+        "label": "Nemotron 3 Super Technical Report (NVIDIA Research)",
+        "url": "https://research.nvidia.com/labs/nemotron/files/NVIDIA-Nemotron-3-Super-Technical-Report.pdf"
+      },
+      {
+        "type": "Documentation",
+        "label": "Nemotron 3 Nano 30B-A3B モデルカード (Hugging Face)",
+        "url": "https://huggingface.co/nvidia/NVIDIA-Nemotron-3-Nano-30B-A3B-BF16"
+      },
+      {
+        "type": "GitHub",
+        "label": "NVIDIA-NeMo/Nemotron ( cookbooksとサンプル)",
+        "url": "https://github.com/NVIDIA-NeMo/Nemotron"
+      }
+    ],
+    "updatedAt": "2026-10-20"
   }
 ]
