@@ -3371,7 +3371,8 @@
       "nemotron",
       "kimi",
       "glm",
-      "laguna"
+      "laguna",
+      "strata"
     ],
     "faq": [
       {
@@ -7010,7 +7011,8 @@
       "gguf",
       "local-llm",
       "igpu",
-      "laguna"
+      "laguna",
+      "strata"
     ],
     "faq": [
       {
@@ -17884,7 +17886,8 @@
       "quantization",
       "open-webui",
       "mini-pc",
-      "ollama-cloud"
+      "ollama-cloud",
+      "strata"
     ],
     "faq": [
       {
@@ -35265,5 +35268,70 @@
       }
     ],
     "updatedAt": "2026-10-20"
+  },
+  {
+    "slug": "strata",
+    "name": "Strata",
+    "tagline": "GPUとCPUで計算を分担し、VRAM・RAM・SSDを活用して、大規模なMoEモデルを一般的なPCで動かすことを狙ったオープンソースの推論エンジン",
+    "category": "インフラ",
+    "tags": [
+      "ローカルLLM",
+      "推論",
+      "MoE"
+    ],
+    "plainSummary": "本来はサーバー級のGPUが必要な大きなAIモデルを、グラフィックボード・メモリ・SSDを分担させて、家庭用のPCで動かせるようにするソフトウェア。",
+    "summary": "Strata(ストラタ)とは、Qwen3.8-Flash-Nextのような大規模なMoE(Mixture of Experts)モデルを、12〜24GB程度のVRAMを持つ一般的なPCで動かすことを目的とした、MITライセンスのオープンソース推論エンジン。\nMoEモデルは1トークンの生成に一部のエキスパートしか使わない性質を持つ。Strataはこれを利用し、よく使われるエキスパートをGPUのVRAMに、全エキスパートをシステムRAMに、n-gramテーブルをSSDに置くという形で階層的に配置する。VRAMに載っていないエキスパートはCPUがRAM上でそのまま計算し、GPUの処理と並行して進める。\nモデル内蔵のMTP(Multi-Token Prediction)層による投機的デコーディングも組み込まれており、出力を変えずに生成を高速化する。\nデスクトップアプリとターミナルアプリ(`strata launch`)が提供され、ローカルでOpenAI互換・Anthropic互換のAPIを公開するため、Claude CodeやCodex CLI等のコーディングツールから接続して利用できる。対応モデルはQwen3.8-Flash-Nextを中心に、Qwen3.6-35B-A3BやDeepSeekV4.1-Flash-1017などに広がっている。",
+    "background": "Qwen3.8-Flash-Nextのような大規模MoEモデルは、通常は数百GBのGPUメモリを持つサーバーで動かすことが想定されている。一方、個人のPCのグラフィックボードは12〜24GB程度のVRAMしか持たない。\nStrataは、MoEモデルが1トークンあたり少数のエキスパートしか使わない点に着目し、GPU・CPU・RAM・SSDというPC全体の資源に処理と重みを分散させることで、このギャップを埋めることを狙って開発された。",
+    "history": "2026年9月: Niko1221氏がGitHubでStrataを公開し、v0.1.0をリリースした。\n2026年10月時点で、NVIDIA・AMD・Intel ArcのGPUやApple Silicon、AMD Ryzen AI Max(Strix Halo)への対応が進み、DeepSeekV4.1-Flash-1017等の対応モデルも追加されている。",
+    "architecture": "- GPU(VRAM): アテンション層・ルーター・共有エキスパート・出力ヘッド・MTPのドラフト層・KVキャッシュに加え、残りのVRAMを使用頻度の高いエキスパートのキャッシュに充てる。キャッシュの中身は会話の内容に合わせて入れ替わる。\n- RAM: 全エキスパート(Qwen3.8-Flash-Nextでは24,576個)を保持する。GPUにないエキスパートはCPUがAVX-512/AVX2カーネルでRAM上のまま計算し、GPUと並行して処理する。\n- SSD: 約28.8GBのn-gramテーブルを置き、1トークンごとに数行だけを読み出す。\n- 投機的デコーディング: モデル内蔵のMTP層が最大3トークンを先読みで生成し、本体モデルが1回のパスでまとめて検証する。本体モデルが全トークンを判定するため、出力の品質は変わらない。\n- 一部にllama.cpp/ggmlのコードを利用しており、NVIDIA(CUDA)とAMD(HIP)で同じエンジンを各環境向けにコンパイルして動作する。",
+    "advantages": [
+      "VRAMに収まらない規模のMoEモデルを、一般的なゲーミングPC程度の構成で動かせる",
+      "MTPによる投機的デコーディングで、出力を変えずに生成を高速化できる",
+      "OpenAI互換・Anthropic互換のAPIを提供し、既存のコーディングツールから接続しやすい"
+    ],
+    "disadvantages": [
+      "特定のモデル向けに最適化されたエンジンであり、llama.cppやvLLMのように多様なモデルを扱う汎用エンジンではない",
+      "全エキスパートをRAMに保持するため、VRAMに加えて大容量のシステムRAMとSSDの空き容量が必要になる",
+      "公開から日が浅く、リリースごとに対応ハードウェアや仕様の変更が続いている"
+    ],
+    "comparisons": [
+      {
+        "slug": "llama-cpp",
+        "note": "llama.cppは多様なモデルに対応する汎用エンジンで、Strataはその一部(ggml)を利用しつつ特定のMoEモデル向けに最適化している"
+      },
+      {
+        "slug": "ollama",
+        "note": "OllamaがローカルLLMを手軽に扱うための汎用ツールであるのに対し、Strataは大規模MoEモデルを限られたVRAMで動かすことに特化している"
+      },
+      {
+        "slug": "vllm",
+        "note": "vLLMはサーバーでの大量リクエスト処理を想定した推論エンジンで、Strataは単一の家庭用PCでの実行を想定している"
+      }
+    ],
+    "relatedTerms": [
+      "mixture-of-experts",
+      "local-llm",
+      "llama-cpp",
+      "ollama",
+      "speculative-decoding",
+      "kv-cache",
+      "qwen",
+      "deepseek",
+      "gpu",
+      "claude-code"
+    ],
+    "references": [
+      {
+        "type": "GitHub",
+        "label": "Niko1221/Strata",
+        "url": "https://github.com/Niko1221/Strata"
+      },
+      {
+        "type": "Documentation",
+        "label": "How does Strata work?",
+        "url": "https://github.com/Niko1221/Strata/blob/main/docs/HOW_IT_WORKS.md"
+      }
+    ],
+    "updatedAt": "2026-10-29"
   }
 ]
