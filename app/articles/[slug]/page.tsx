@@ -1,10 +1,10 @@
 import { Metadata } from "next"
-import { FC } from "react"
+import { FC, Fragment } from "react"
 import Link from "next/link"
 import { notFound } from "next/navigation"
 import { ArticleCard } from "components/article/article-card"
 import { ModelComparisonTable } from "components/article/model-comparison-table"
-import { DisplayAd } from "components/analytics/display-ad"
+import { DisplayAd, InArticleAd } from "components/analytics/display-ad"
 import { Breadcrumb } from "components/elements/breadcrumb"
 import { Badge, Container, Section, SectionTitle } from "components/elements/layout"
 import { ReferenceList } from "components/elements/reference-list"
@@ -203,31 +203,37 @@ const ArticlePage: FC<Props> = async ({ params }) => {
       </Section>
 
       {/* Sections (pillar content) */}
-      {article.sections?.map((section) => {
+      {article.sections?.map((section, index, sections) => {
         const sectionTerms = (section.terms ?? [])
           .map((s) => getTermBySlug(s))
           .filter((t): t is NonNullable<typeof t> => Boolean(t))
+        // 長い記事は中間のセクションの後に記事内広告を挟む
+        const showInArticleAd =
+          sections.length >= 4 && index === Math.floor(sections.length / 2) - 1
         return (
-          <Section key={section.heading}>
-            <SectionTitle>{section.heading}</SectionTitle>
-            <p style={{ lineHeight: 1.8, whiteSpace: "pre-line" }}>
-              {linkifyTermMentions(section.body, "")}
-            </p>
-            {sectionTerms.length > 0 && (
-              <div
-                style={{
-                  display: "grid",
-                  gap: "1.25rem",
-                  gridTemplateColumns: "repeat(auto-fill, minmax(15rem, 1fr))",
-                  marginTop: "1.25rem",
-                }}
-              >
-                {sectionTerms.map((term) => (
-                  <TermCard key={term.slug} term={term} />
-                ))}
-              </div>
-            )}
-          </Section>
+          <Fragment key={section.heading}>
+            <Section>
+              <SectionTitle>{section.heading}</SectionTitle>
+              <p style={{ lineHeight: 1.8, whiteSpace: "pre-line" }}>
+                {linkifyTermMentions(section.body, "")}
+              </p>
+              {sectionTerms.length > 0 && (
+                <div
+                  style={{
+                    display: "grid",
+                    gap: "1.25rem",
+                    gridTemplateColumns: "repeat(auto-fill, minmax(15rem, 1fr))",
+                    marginTop: "1.25rem",
+                  }}
+                >
+                  {sectionTerms.map((term) => (
+                    <TermCard key={term.slug} term={term} />
+                  ))}
+                </div>
+              )}
+            </Section>
+            {showInArticleAd && <InArticleAd style={{ marginBottom: "3rem" }} />}
+          </Fragment>
         )
       })}
 
@@ -405,6 +411,8 @@ const ArticlePage: FC<Props> = async ({ params }) => {
           </div>
         </Section>
       )}
+
+      {otherArticles.length > 0 && <DisplayAd />}
     </Container>
   )
 }

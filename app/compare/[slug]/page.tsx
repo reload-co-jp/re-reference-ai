@@ -2,7 +2,7 @@ import { Metadata } from "next"
 import { FC } from "react"
 import Link from "next/link"
 import { notFound } from "next/navigation"
-import { DisplayAd } from "components/analytics/display-ad"
+import { DisplayAd, InArticleAd } from "components/analytics/display-ad"
 import { Breadcrumb } from "components/elements/breadcrumb"
 import { Badge, Container, Section, SectionTitle } from "components/elements/layout"
 import { ReferenceList } from "components/elements/reference-list"
@@ -207,6 +207,13 @@ const ComparePage: FC<Props> = async ({ params }) => {
         </Section>
       )}
 
+      {/* 要約の直後に記事内広告。後続の本文が無いと次の DisplayAd と隣接するため条件付き */}
+      {comparison.quickSummary &&
+        comparison.quickSummary.length > 0 &&
+        ((comparison.table && comparison.table.length > 0) || comparison.architecture) && (
+          <InArticleAd style={{ marginBottom: "3rem" }} />
+        )}
+
       {/* Comparison Table */}
       {comparison.table && comparison.table.length > 0 && (
         <Section>
@@ -407,6 +414,8 @@ const ComparePage: FC<Props> = async ({ params }) => {
           </div>
         </Section>
       )}
+
+      {relatedComparisons.length > 0 && <DisplayAd />}
     </Container>
   )
 }
