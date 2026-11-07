@@ -2,7 +2,7 @@ import { Metadata } from "next"
 import { FC } from "react"
 import Link from "next/link"
 import { notFound } from "next/navigation"
-import { DisplayAd } from "components/analytics/display-ad"
+import { DisplayAd, InArticleAd } from "components/analytics/display-ad"
 import { Breadcrumb } from "components/elements/breadcrumb"
 import { Badge, Container, Section, SectionTitle } from "components/elements/layout"
 import { ReferenceList } from "components/elements/reference-list"
@@ -210,6 +210,9 @@ const TimelinePage: FC<Props> = async ({ params }) => {
           </div>
         )}
       </Section>
+
+      {/* 年表が十分長い場合のみ、冒頭の説明の直後に記事内広告 */}
+      {timeline.events.length >= 5 && <InArticleAd style={{ marginBottom: "3rem" }} />}
 
       {/* Timeline */}
       <Section>

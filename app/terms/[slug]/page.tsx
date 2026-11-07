@@ -2,7 +2,7 @@ import { Metadata } from "next"
 import { FC } from "react"
 import Link from "next/link"
 import { notFound } from "next/navigation"
-import { DisplayAd } from "components/analytics/display-ad"
+import { DisplayAd, InArticleAd } from "components/analytics/display-ad"
 import { Breadcrumb } from "components/elements/breadcrumb"
 import { Badge, Container, Section, SectionTitle } from "components/elements/layout"
 import { ArticleCard } from "components/article/article-card"
@@ -188,6 +188,21 @@ const TermPage: FC<Props> = async ({ params }) => {
   const relatedComparisons = getComparisonsForTerm(term.slug)
   const jsonLdBlocks = buildJsonLd(term, relatedTerms)
   const { dateModified } = getTermDates(term)
+  // 冒頭の要約の直後に記事内広告を挟む。後続の本文が無いと次の DisplayAd と
+  // 隣接してしまうため、本文セクションがある場合のみ表示する。
+  const hasBodyAfterSummary = Boolean(
+    term.background ||
+      term.history ||
+      term.architecture ||
+      term.workflow ||
+      (term.codeExamples && term.codeExamples.length > 0),
+  )
+  const showInArticleAd = Boolean(term.plainSummary || term.summary) && hasBodyAfterSummary
+  const hasRelatedContent =
+    relatedTimelines.length > 0 ||
+    relatedComparisons.length > 0 ||
+    relatedArticles.length > 0 ||
+    zennArticles.length > 0
 
   return (
     <Container>
@@ -267,6 +282,8 @@ const TermPage: FC<Props> = async ({ params }) => {
           <p style={{ whiteSpace: "pre-line" }}>{linkifyTermMentions(term.summary, term.slug)}</p>
         </Section>
       )}
+
+      {showInArticleAd && <InArticleAd style={{ marginBottom: "3rem" }} />}
 
       {/* Background */}
       {term.background && (
@@ -514,6 +531,8 @@ const TermPage: FC<Props> = async ({ params }) => {
           </ul>
         </Section>
       )}
+
+      {hasRelatedContent && <DisplayAd />}
     </Container>
   )
 }
