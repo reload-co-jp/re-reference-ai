@@ -31,20 +31,32 @@ const scoreArticle = (term, article) => {
     if (haystack.includes(token)) return sum + 45
     return sum
   }, 0)
-  const tagScore = tags.reduce((sum, token) => sum + (title.includes(token) ? 18 : 0), 0)
-  const contextScore = /ai|llm|機械学習|深層学習|生成ai|agent|エージェント/i.test(article.title)
-    ? 12
-    : 0
+  const tagScore = tags.reduce(
+    (sum, token) => sum + (title.includes(token) ? 18 : 0),
+    0
+  )
+  const contextScore =
+    /ai|llm|機械学習|深層学習|生成ai|agent|エージェント/i.test(article.title)
+      ? 12
+      : 0
   const likeScore = Math.min(article.liked_count ?? 0, 200) / 5
   const bookmarkScore = Math.min(article.bookmarked_count ?? 0, 100) / 4
   const lengthScore = Math.min(article.body_letters_count ?? 0, 12000) / 1200
-  return nameScore + tagScore + contextScore + likeScore + bookmarkScore + lengthScore
+  return (
+    nameScore +
+    tagScore +
+    contextScore +
+    likeScore +
+    bookmarkScore +
+    lengthScore
+  )
 }
 
 const search = async (query) => {
   const url = `https://zenn.dev/api/search?source=articles&q=${encodeURIComponent(query)}`
   const response = await fetch(url, { headers: { accept: "application/json" } })
-  if (!response.ok) throw new Error(`${response.status} ${response.statusText}: ${query}`)
+  if (!response.ok)
+    throw new Error(`${response.status} ${response.statusText}: ${query}`)
   const data = await response.json()
   return data.articles ?? []
 }
@@ -80,4 +92,7 @@ for (const [index, term] of terms.entries()) {
   await sleep(180)
 }
 
-await writeFile("data/zenn-articles.json", `${JSON.stringify(result, null, 2)}\n`)
+await writeFile(
+  "data/zenn-articles.json",
+  `${JSON.stringify(result, null, 2)}\n`
+)

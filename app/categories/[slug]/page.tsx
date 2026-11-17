@@ -22,7 +22,9 @@ export const generateStaticParams = () =>
 
 type Props = { params: Promise<{ slug: string }> }
 
-export const generateMetadata = async ({ params }: Props): Promise<Metadata> => {
+export const generateMetadata = async ({
+  params,
+}: Props): Promise<Metadata> => {
   const { slug } = await params
   const category = getCategoryBySlug(slug)
 
@@ -70,14 +72,22 @@ const CategoryPage: FC<Props> = async ({ params }) => {
     "@context": "https://schema.org",
     "@type": "BreadcrumbList",
     itemListElement: [
-      { "@type": "ListItem", position: 1, name: SITE_NAME, item: `${SITE_URL}/` },
+      {
+        "@type": "ListItem",
+        position: 1,
+        name: SITE_NAME,
+        item: `${SITE_URL}/`,
+      },
       { "@type": "ListItem", position: 2, name: category, item: url },
     ],
   }
 
   const itemList = buildItemListJsonLd(
     `${category}の用語一覧`,
-    terms.map((term) => ({ name: term.name, url: `${SITE_URL}/terms/${term.slug}/` })),
+    terms.map((term) => ({
+      name: term.name,
+      url: `${SITE_URL}/terms/${term.slug}/`,
+    }))
   )
 
   return (
@@ -90,10 +100,18 @@ const CategoryPage: FC<Props> = async ({ params }) => {
         dangerouslySetInnerHTML={{ __html: toJsonLd(itemList) }}
         type="application/ld+json"
       />
-      <Breadcrumb items={[{ href: "/", name: SITE_NAME }, { name: category }]} />
+      <Breadcrumb
+        items={[{ href: "/", name: SITE_NAME }, { name: category }]}
+      />
       <Section style={{ padding: "1rem 0 3rem" }}>
         <h1 style={{ fontSize: "2.25rem", margin: 0 }}>{category}</h1>
-        <p style={{ color: "var(--color-text-muted)", fontSize: "1.1rem", marginTop: ".75rem" }}>
+        <p
+          style={{
+            color: "var(--color-text-muted)",
+            fontSize: "1.1rem",
+            marginTop: ".75rem",
+          }}
+        >
           {category}に分類される用語（{terms.length}件）
         </p>
         {categoryDescription && (

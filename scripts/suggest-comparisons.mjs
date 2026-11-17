@@ -5,13 +5,19 @@ const jsonOutput = process.argv.includes("--json")
 
 const terms = JSON.parse(await readFile("data/terms.json", "utf8"))
 const comparisons = JSON.parse(await readFile("data/comparisons.json", "utf8"))
-const zennKeywords = JSON.parse(await readFile("data/zenn-ai-keywords.json", "utf8"))
+const zennKeywords = JSON.parse(
+  await readFile("data/zenn-ai-keywords.json", "utf8")
+)
 
 const bySlug = new Map(terms.map((term) => [term.slug, term]))
 
-const existingPairs = new Set(comparisons.flatMap((c) => [`${c.left}|${c.right}`, `${c.right}|${c.left}`]))
+const existingPairs = new Set(
+  comparisons.flatMap((c) => [`${c.left}|${c.right}`, `${c.right}|${c.left}`])
+)
 
-const zennKeywordSet = new Set(zennKeywords.keywords.map((k) => k.keyword.toLowerCase()))
+const zennKeywordSet = new Set(
+  zennKeywords.keywords.map((k) => k.keyword.toLowerCase())
+)
 
 const mentionsInZenn = (term) => {
   const names = [term.name, ...(term.aliases ?? [])].map((s) => s.toLowerCase())
@@ -43,7 +49,9 @@ for (const term of terms) {
     const left = bySlug.get(leftSlug)
     const right = bySlug.get(rightSlug)
 
-    const sharedTags = (left.tags ?? []).filter((tag) => (right.tags ?? []).includes(tag))
+    const sharedTags = (left.tags ?? []).filter((tag) =>
+      (right.tags ?? []).includes(tag)
+    )
 
     let score = 0
     const breakdown = []
@@ -64,7 +72,9 @@ for (const term of terms) {
       breakdown.push(`カテゴリ${left.category}:+3`)
     }
 
-    const zennHits = [mentionsInZenn(left), mentionsInZenn(right)].filter(Boolean).length
+    const zennHits = [mentionsInZenn(left), mentionsInZenn(right)].filter(
+      Boolean
+    ).length
     if (zennHits > 0) {
       const zennScore = zennHits * 2
       score += zennScore
@@ -81,13 +91,17 @@ for (const term of terms) {
   }
 }
 
-const ranked = [...pairs.values()].sort((a, b) => b.score - a.score).slice(0, TOP_N)
+const ranked = [...pairs.values()]
+  .sort((a, b) => b.score - a.score)
+  .slice(0, TOP_N)
 
 if (jsonOutput) {
   console.log(JSON.stringify(ranked, null, 2))
 } else {
   console.log(`候補ペア: 全${pairs.size}件中、上位${ranked.length}件\n`)
   for (const p of ranked) {
-    console.log(`${p.score}\t${p.left} vs ${p.right}\t[${p.category}]\t${p.breakdown.join(" ")}`)
+    console.log(
+      `${p.score}\t${p.left} vs ${p.right}\t[${p.category}]\t${p.breakdown.join(" ")}`
+    )
   }
 }

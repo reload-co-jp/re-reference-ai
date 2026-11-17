@@ -4,7 +4,10 @@ import Link from "next/link"
 export type BreadcrumbItem = { name: string; href?: string }
 
 export const Breadcrumb: FC<{ items: BreadcrumbItem[] }> = ({ items }) => (
-  <nav aria-label="パンくずリスト" style={{ fontSize: ".8rem", marginBottom: "1.5rem" }}>
+  <nav
+    aria-label="パンくずリスト"
+    style={{ fontSize: ".8rem", marginBottom: "1.5rem" }}
+  >
     <ol
       style={{
         display: "flex",
@@ -20,7 +23,9 @@ export const Breadcrumb: FC<{ items: BreadcrumbItem[] }> = ({ items }) => (
           key={item.href ?? item.name}
           style={{ alignItems: "center", display: "flex", gap: ".375rem" }}
         >
-          {index > 0 && <span style={{ color: "var(--color-text-muted)" }}>/</span>}
+          {index > 0 && (
+            <span style={{ color: "var(--color-text-muted)" }}>/</span>
+          )}
           {item.href ? (
             <Link href={item.href} style={{ color: "var(--color-text-muted)" }}>
               {item.name}

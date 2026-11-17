@@ -51,19 +51,19 @@ scripts/
 
 用語は `lib/terms.ts` の `Term` 型に従う。必須フィールドは `slug` / `name` / `tagline` / `category` / `tags` のみで、それ以外は全て任意。任意フィールドが無い場合、該当セクションはページ上で自動的に非表示になる。
 
-| フィールド | 内容 |
-| --- | --- |
-| `slug` | URLパス（kebab-case） |
-| `name` / `aliases` | 表示名・別名（英語略称をnameに、正式名をaliasesに入れる慣例） |
-| `tagline` | 一文の要約 |
-| `category` / `tags` | 分類（`data/categories.json` の6カテゴリ）と横断ラベル |
-| `plainSummary` | 「ひとことで言うと」の平易な説明 |
-| `summary` / `background` / `history` / `architecture` / `workflow` | 本文セクション |
-| `codeExamples` | 実装サンプルコード |
-| `advantages` / `disadvantages` | 利点・欠点 |
-| `comparisons` / `relatedTerms` | 類似技術との比較・関連用語（実在するslugのみ参照可） |
-| `faq` | よくある質問 |
-| `references` | 一次情報源リンク（型は下記リファレンス種別のいずれか） |
+| フィールド                                                         | 内容                                                          |
+| ------------------------------------------------------------------ | ------------------------------------------------------------- |
+| `slug`                                                             | URLパス（kebab-case）                                         |
+| `name` / `aliases`                                                 | 表示名・別名（英語略称をnameに、正式名をaliasesに入れる慣例） |
+| `tagline`                                                          | 一文の要約                                                    |
+| `category` / `tags`                                                | 分類（`data/categories.json` の6カテゴリ）と横断ラベル        |
+| `plainSummary`                                                     | 「ひとことで言うと」の平易な説明                              |
+| `summary` / `background` / `history` / `architecture` / `workflow` | 本文セクション                                                |
+| `codeExamples`                                                     | 実装サンプルコード                                            |
+| `advantages` / `disadvantages`                                     | 利点・欠点                                                    |
+| `comparisons` / `relatedTerms`                                     | 類似技術との比較・関連用語（実在するslugのみ参照可）          |
+| `faq`                                                              | よくある質問                                                  |
+| `references`                                                       | 一次情報源リンク（型は下記リファレンス種別のいずれか）        |
 
 カテゴリは6種: **モデル / アーキテクチャ / 技術 / エージェント / インフラ / 評価**。
 

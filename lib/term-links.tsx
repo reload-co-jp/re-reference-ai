@@ -53,10 +53,15 @@ const buildCandidateIndex = (): Map<string, Candidate[]> => {
   return index
 }
 
-const isAlnum = (ch: string | undefined): boolean => ch !== undefined && /[A-Za-z0-9]/.test(ch)
+const isAlnum = (ch: string | undefined): boolean =>
+  ch !== undefined && /[A-Za-z0-9]/.test(ch)
 
 // 半角英数字のみ単語境界をチェックする(HTML中のMLのような部分一致誤爆を防ぐため)。日本語には単語境界の概念がないため対象外。
-const hasWordBoundary = (text: string, start: number, needle: string): boolean => {
+const hasWordBoundary = (
+  text: string,
+  start: number,
+  needle: string
+): boolean => {
   const startsAlnum = /[A-Za-z0-9]/.test(needle[0])
   const endsAlnum = /[A-Za-z0-9]/.test(needle[needle.length - 1])
   if (startsAlnum && isAlnum(text[start - 1])) return false
@@ -65,7 +70,10 @@ const hasWordBoundary = (text: string, start: number, needle: string): boolean =
 }
 
 // 本文中に登場する他のtermの名称・別名を検出し、該当箇所を/terms/[slug]へのリンクに変換する
-export const linkifyTermMentions = (text: string, currentSlug: string): ReactNode[] => {
+export const linkifyTermMentions = (
+  text: string,
+  currentSlug: string
+): ReactNode[] => {
   const index = buildCandidateIndex()
   const nodes: ReactNode[] = []
   let buffer = ""
@@ -87,7 +95,10 @@ export const linkifyTermMentions = (text: string, currentSlug: string): ReactNod
       // こうしないと、自分の名称の内部に他termの短い別名が部分一致してしまう
       // (例: 「コーディングエージェント」内の「エージェント」がai-agentへ誤って部分リンクされる)。
       for (const candidate of bucket) {
-        if (text.startsWith(candidate.text, i) && hasWordBoundary(text, i, candidate.text)) {
+        if (
+          text.startsWith(candidate.text, i) &&
+          hasWordBoundary(text, i, candidate.text)
+        ) {
           matched = candidate
           break
         }
@@ -103,7 +114,7 @@ export const linkifyTermMentions = (text: string, currentSlug: string): ReactNod
           style={{ color: "var(--color-accent-bright)" }}
         >
           {matched.text}
-        </Link>,
+        </Link>
       )
       i += matched.text.length
     } else if (matched) {

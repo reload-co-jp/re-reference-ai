@@ -128,17 +128,26 @@ const RootLayout = ({ children }: { children: React.ReactNode }) => {
               }}
             >
               <li>
-                <Link href="/timeline/" style={{ color: "var(--color-text-muted)" }}>
+                <Link
+                  href="/timeline/"
+                  style={{ color: "var(--color-text-muted)" }}
+                >
                   技術年表
                 </Link>
               </li>
               <li>
-                <Link href="/compare/" style={{ color: "var(--color-text-muted)" }}>
+                <Link
+                  href="/compare/"
+                  style={{ color: "var(--color-text-muted)" }}
+                >
                   技術比較
                 </Link>
               </li>
               <li>
-                <Link href="/articles/" style={{ color: "var(--color-text-muted)" }}>
+                <Link
+                  href="/articles/"
+                  style={{ color: "var(--color-text-muted)" }}
+                >
                   特集記事
                 </Link>
               </li>

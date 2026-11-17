@@ -142,8 +142,7 @@ for (const file of htmlFiles) {
       : href
     if (!internal.startsWith("/") || internal.startsWith("//")) continue
     const target = normalizePath(internal)
-    if (target !== pagePath)
-      inbound.set(target, (inbound.get(target) ?? 0) + 1)
+    if (target !== pagePath) inbound.set(target, (inbound.get(target) ?? 0) + 1)
     if (!resolveInternal(internal))
       report(errors, `broken internal link: ${href}`)
     else if (

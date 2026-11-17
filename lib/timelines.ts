@@ -47,7 +47,7 @@ export const timelineSummaries: TimelineSummaryCard[] = timelines.map(
     description,
     category,
     events,
-  }),
+  })
 )
 
 export const getTimelineBySlug = (slug: string): Timeline | undefined =>
@@ -58,7 +58,7 @@ export const getTimelinesForTerm = (termSlug: string): Timeline[] =>
     (timeline) =>
       timeline.targetTerms?.includes(termSlug) ||
       timeline.relatedTerms?.includes(termSlug) ||
-      timeline.events.some((event) => event.relatedTerms?.includes(termSlug)),
+      timeline.events.some((event) => event.relatedTerms?.includes(termSlug))
   )
 
 export const getEventYearRange = (timeline: Timeline): string => {

@@ -9,7 +9,7 @@ const runGitLog = (extraArgs: string[], filePath: string): string => {
     return execFileSync(
       "git",
       ["log", ...extraArgs, "--format=%aI", "--", filePath],
-      { cwd: process.cwd(), encoding: "utf8" },
+      { cwd: process.cwd(), encoding: "utf8" }
     ).trim()
   } catch {
     return ""
@@ -21,7 +21,10 @@ export const getFileGitDates = (filePath: string): GitDates => {
   if (cached) return cached
 
   const modified = runGitLog(["-1"], filePath)
-  const added = runGitLog(["--diff-filter=A", "--follow", "--reverse"], filePath).split("\n")[0]
+  const added = runGitLog(
+    ["--diff-filter=A", "--follow", "--reverse"],
+    filePath
+  ).split("\n")[0]
   const result: GitDates = {
     datePublished: added || modified || undefined,
     dateModified: modified || added || undefined,
@@ -42,11 +45,15 @@ export const getTermGitDates = (slug: string): GitDates => {
     termDatesCache = new Map()
     let output: string
     try {
-      output = execFileSync("git", ["blame", "--line-porcelain", "--", "data/terms.json"], {
-        cwd: process.cwd(),
-        encoding: "utf8",
-        maxBuffer: 256 * 1024 * 1024,
-      })
+      output = execFileSync(
+        "git",
+        ["blame", "--line-porcelain", "--", "data/terms.json"],
+        {
+          cwd: process.cwd(),
+          encoding: "utf8",
+          maxBuffer: 256 * 1024 * 1024,
+        }
+      )
     } catch {
       return {}
     }

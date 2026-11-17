@@ -1,6 +1,11 @@
 import { NextResponse } from "next/server"
 import { comparisons, getComparisonTermNames } from "lib/comparisons"
-import { SITE_DESCRIPTION, SITE_NAME, SITE_TAGLINE_JA, SITE_URL } from "lib/site"
+import {
+  SITE_DESCRIPTION,
+  SITE_NAME,
+  SITE_TAGLINE_JA,
+  SITE_URL,
+} from "lib/site"
 import { categories, getCategorySlug, getTermsByCategory } from "lib/terms"
 
 export const dynamic = "force-static"
@@ -8,7 +13,10 @@ export const dynamic = "force-static"
 const buildLlmsTxt = (): string => {
   const sections = categories.map((category) => {
     const items = getTermsByCategory(category)
-      .map((term) => `- [${term.name}](${SITE_URL}/terms/${term.slug}/): ${term.tagline}`)
+      .map(
+        (term) =>
+          `- [${term.name}](${SITE_URL}/terms/${term.slug}/): ${term.tagline}`
+      )
       .join("\n")
     return `## ${category}\n\n${items}`
   })
@@ -32,7 +40,8 @@ const buildLlmsTxt = (): string => {
     `- [年表](${SITE_URL}/timeline/)`,
     `- [比較](${SITE_URL}/compare/)`,
     ...categories.map(
-      (category) => `- [${category}](${SITE_URL}/categories/${getCategorySlug(category)}/)`,
+      (category) =>
+        `- [${category}](${SITE_URL}/categories/${getCategorySlug(category)}/)`
     ),
     "",
     ...sections,

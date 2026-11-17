@@ -20,9 +20,12 @@ const extractTermFields = (term) => {
     ["workflow", term.workflow],
   ]
 
-  for (const [i, v] of (term.advantages ?? []).entries()) fields.push([`advantages[${i}]`, v])
-  for (const [i, v] of (term.disadvantages ?? []).entries()) fields.push([`disadvantages[${i}]`, v])
-  for (const [i, c] of (term.comparisons ?? []).entries()) fields.push([`comparisons[${i}].note`, c.note])
+  for (const [i, v] of (term.advantages ?? []).entries())
+    fields.push([`advantages[${i}]`, v])
+  for (const [i, v] of (term.disadvantages ?? []).entries())
+    fields.push([`disadvantages[${i}]`, v])
+  for (const [i, c] of (term.comparisons ?? []).entries())
+    fields.push([`comparisons[${i}].note`, c.note])
   for (const [i, f] of (term.faq ?? []).entries()) {
     fields.push([`faq[${i}].question`, f.question])
     fields.push([`faq[${i}].answer`, f.answer])
@@ -47,9 +50,13 @@ const extractTimelineFields = (timeline) => {
 }
 
 const extractComparisonFields = (comparison) => {
-  const fields = [["summary", comparison.summary], ["migration", comparison.migration]]
+  const fields = [
+    ["summary", comparison.summary],
+    ["migration", comparison.migration],
+  ]
 
-  for (const [i, v] of (comparison.quickSummary ?? []).entries()) fields.push([`quickSummary[${i}]`, v])
+  for (const [i, v] of (comparison.quickSummary ?? []).entries())
+    fields.push([`quickSummary[${i}]`, v])
   for (const [i, r] of (comparison.table ?? []).entries()) {
     fields.push([`table[${i}].left`, r.left])
     fields.push([`table[${i}].right`, r.right])
@@ -59,8 +66,10 @@ const extractComparisonFields = (comparison) => {
     fields.push(["architecture.right", comparison.architecture.right])
   }
   if (comparison.advantages) {
-    for (const [i, v] of comparison.advantages.left.entries()) fields.push([`advantages.left[${i}]`, v])
-    for (const [i, v] of comparison.advantages.right.entries()) fields.push([`advantages.right[${i}]`, v])
+    for (const [i, v] of comparison.advantages.left.entries())
+      fields.push([`advantages.left[${i}]`, v])
+    for (const [i, v] of comparison.advantages.right.entries())
+      fields.push([`advantages.right[${i}]`, v])
   }
   if (comparison.disadvantages) {
     for (const [i, v] of comparison.disadvantages.left.entries())

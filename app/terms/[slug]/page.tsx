@@ -4,7 +4,12 @@ import Link from "next/link"
 import { notFound } from "next/navigation"
 import { DisplayAd, InArticleAd } from "components/analytics/display-ad"
 import { Breadcrumb } from "components/elements/breadcrumb"
-import { Badge, Container, Section, SectionTitle } from "components/elements/layout"
+import {
+  Badge,
+  Container,
+  Section,
+  SectionTitle,
+} from "components/elements/layout"
 import { ArticleCard } from "components/article/article-card"
 import { ComparisonCard } from "components/comparison/comparison-card"
 import { TimelineCard } from "components/timeline/timeline-card"
@@ -31,20 +36,25 @@ import { truncate } from "lib/text"
 
 export const dynamicParams = false
 
-export const generateStaticParams = () => terms.map((term) => ({ slug: term.slug }))
+export const generateStaticParams = () =>
+  terms.map((term) => ({ slug: term.slug }))
 
 type Props = { params: Promise<{ slug: string }> }
 
 const buildTitle = (term: Term) => {
-  const otherAliases = term.aliases?.filter((alias) => alias !== term.name) ?? []
+  const otherAliases =
+    term.aliases?.filter((alias) => alias !== term.name) ?? []
   const titleAlias =
-    otherAliases.find((alias) => /[ぁ-んァ-ヶ一-龠]/.test(alias)) ?? otherAliases[0]
+    otherAliases.find((alias) => /[ぁ-んァ-ヶ一-龠]/.test(alias)) ??
+    otherAliases[0]
   return titleAlias && term.name.length + titleAlias.length <= 22
     ? `${term.name}（${titleAlias}）とは`
     : `${term.name}とは`
 }
 
-export const generateMetadata = async ({ params }: Props): Promise<Metadata> => {
+export const generateMetadata = async ({
+  params,
+}: Props): Promise<Metadata> => {
   const { slug } = await params
   const term = getTermBySlug(slug)
 
@@ -52,36 +62,49 @@ export const generateMetadata = async ({ params }: Props): Promise<Metadata> => 
     return {}
   }
 
-  const otherAliases = term.aliases?.filter((alias) => alias !== term.name) ?? []
+  const otherAliases =
+    term.aliases?.filter((alias) => alias !== term.name) ?? []
   const title = buildTitle(term)
   const aliasNote =
-    otherAliases.length > 0 ? `${otherAliases.slice(0, 2).join("・")}とも呼ばれる。` : ""
+    otherAliases.length > 0
+      ? `${otherAliases.slice(0, 2).join("・")}とも呼ばれる。`
+      : ""
   const description = truncate(
     `${aliasNote}${term.plainSummary ?? term.summary ?? term.tagline}`,
-    120,
+    120
   )
   const url = `${SITE_URL}/terms/${term.slug}/`
 
-  return applySeo({
-    title,
-    description,
-    alternates: {
-      canonical: url,
-      types: { "text/markdown": `${SITE_URL}/terms/${term.slug}/markdown` },
-    },
-    keywords: [term.name, ...(term.aliases ?? []), term.category, ...term.tags, "AI用語", "AI辞典"],
-    openGraph: {
+  return applySeo(
+    {
       title,
       description,
-      type: "article",
-      url,
-      siteName: SITE_NAME,
-      locale: "ja_JP",
+      alternates: {
+        canonical: url,
+        types: { "text/markdown": `${SITE_URL}/terms/${term.slug}/markdown` },
+      },
+      keywords: [
+        term.name,
+        ...(term.aliases ?? []),
+        term.category,
+        ...term.tags,
+        "AI用語",
+        "AI辞典",
+      ],
+      openGraph: {
+        title,
+        description,
+        type: "article",
+        url,
+        siteName: SITE_NAME,
+        locale: "ja_JP",
+      },
+      category: term.category,
+      twitter: { title, description },
+      ...(!isTermIndexable(term) && { robots: { follow: true, index: false } }),
     },
-    category: term.category,
-    twitter: { title, description },
-    ...(!isTermIndexable(term) && { robots: { follow: true, index: false } }),
-  }, term.seo)
+    term.seo
+  )
 }
 
 const getTermDates = (term: Term) => {
@@ -149,8 +172,18 @@ const buildJsonLd = (term: Term, relatedTerms: Term[]) => {
     "@context": "https://schema.org",
     "@type": "BreadcrumbList",
     itemListElement: [
-      { "@type": "ListItem", position: 1, name: SITE_NAME, item: `${SITE_URL}/` },
-      { "@type": "ListItem", position: 2, name: term.category, item: categoryUrl },
+      {
+        "@type": "ListItem",
+        position: 1,
+        name: SITE_NAME,
+        item: `${SITE_URL}/`,
+      },
+      {
+        "@type": "ListItem",
+        position: 2,
+        name: term.category,
+        item: categoryUrl,
+      },
       { "@type": "ListItem", position: 3, name: term.name, item: url },
     ],
   }
@@ -192,12 +225,13 @@ const TermPage: FC<Props> = async ({ params }) => {
   // 隣接してしまうため、本文セクションがある場合のみ表示する。
   const hasBodyAfterSummary = Boolean(
     term.background ||
-      term.history ||
-      term.architecture ||
-      term.workflow ||
-      (term.codeExamples && term.codeExamples.length > 0),
+    term.history ||
+    term.architecture ||
+    term.workflow ||
+    (term.codeExamples && term.codeExamples.length > 0)
   )
-  const showInArticleAd = Boolean(term.plainSummary || term.summary) && hasBodyAfterSummary
+  const showInArticleAd =
+    Boolean(term.plainSummary || term.summary) && hasBodyAfterSummary
   const hasRelatedContent =
     relatedTimelines.length > 0 ||
     relatedComparisons.length > 0 ||
@@ -216,7 +250,10 @@ const TermPage: FC<Props> = async ({ params }) => {
       <Breadcrumb
         items={[
           { href: "/", name: SITE_NAME },
-          { href: `/categories/${getCategorySlug(term.category)}/`, name: term.category },
+          {
+            href: `/categories/${getCategorySlug(term.category)}/`,
+            name: term.category,
+          },
           { name: term.name },
         ]}
       />
@@ -249,7 +286,14 @@ const TermPage: FC<Props> = async ({ params }) => {
         >
           {term.tagline}
         </p>
-        <div style={{ display: "flex", flexWrap: "wrap", gap: ".375rem", marginTop: "1.25rem" }}>
+        <div
+          style={{
+            display: "flex",
+            flexWrap: "wrap",
+            gap: ".375rem",
+            marginTop: "1.25rem",
+          }}
+        >
           {term.tags.map((tag) => (
             <Link
               key={tag}
@@ -261,7 +305,13 @@ const TermPage: FC<Props> = async ({ params }) => {
           ))}
         </div>
         {dateModified && (
-          <p style={{ color: "var(--color-text-muted)", fontSize: ".8rem", marginTop: "1rem" }}>
+          <p
+            style={{
+              color: "var(--color-text-muted)",
+              fontSize: ".8rem",
+              marginTop: "1rem",
+            }}
+          >
             最終更新: <time dateTime={dateModified}>{dateModified}</time>
           </p>
         )}
@@ -271,7 +321,9 @@ const TermPage: FC<Props> = async ({ params }) => {
       {term.plainSummary && (
         <Section style={{ marginTop: "3rem" }}>
           <SectionTitle>ひとことで言うと</SectionTitle>
-          <p style={{ whiteSpace: "pre-line" }}>{linkifyTermMentions(term.plainSummary, term.slug)}</p>
+          <p style={{ whiteSpace: "pre-line" }}>
+            {linkifyTermMentions(term.plainSummary, term.slug)}
+          </p>
         </Section>
       )}
 
@@ -279,7 +331,9 @@ const TermPage: FC<Props> = async ({ params }) => {
       {term.summary && (
         <Section style={{ marginTop: "3rem" }}>
           <SectionTitle>概要</SectionTitle>
-          <p style={{ whiteSpace: "pre-line" }}>{linkifyTermMentions(term.summary, term.slug)}</p>
+          <p style={{ whiteSpace: "pre-line" }}>
+            {linkifyTermMentions(term.summary, term.slug)}
+          </p>
         </Section>
       )}
 
@@ -289,7 +343,9 @@ const TermPage: FC<Props> = async ({ params }) => {
       {term.background && (
         <Section>
           <SectionTitle>背景</SectionTitle>
-          <p style={{ whiteSpace: "pre-line" }}>{linkifyTermMentions(term.background, term.slug)}</p>
+          <p style={{ whiteSpace: "pre-line" }}>
+            {linkifyTermMentions(term.background, term.slug)}
+          </p>
         </Section>
       )}
 
@@ -297,7 +353,9 @@ const TermPage: FC<Props> = async ({ params }) => {
       {term.history && (
         <Section>
           <SectionTitle>歴史</SectionTitle>
-          <p style={{ whiteSpace: "pre-line" }}>{linkifyTermMentions(term.history, term.slug)}</p>
+          <p style={{ whiteSpace: "pre-line" }}>
+            {linkifyTermMentions(term.history, term.slug)}
+          </p>
         </Section>
       )}
 
@@ -305,7 +363,9 @@ const TermPage: FC<Props> = async ({ params }) => {
       {term.architecture && (
         <Section>
           <SectionTitle>アーキテクチャ</SectionTitle>
-          <p style={{ whiteSpace: "pre-line" }}>{linkifyTermMentions(term.architecture, term.slug)}</p>
+          <p style={{ whiteSpace: "pre-line" }}>
+            {linkifyTermMentions(term.architecture, term.slug)}
+          </p>
         </Section>
       )}
 
@@ -313,7 +373,9 @@ const TermPage: FC<Props> = async ({ params }) => {
       {term.workflow && (
         <Section>
           <SectionTitle>ワークフロー</SectionTitle>
-          <p style={{ whiteSpace: "pre-line" }}>{linkifyTermMentions(term.workflow, term.slug)}</p>
+          <p style={{ whiteSpace: "pre-line" }}>
+            {linkifyTermMentions(term.workflow, term.slug)}
+          </p>
         </Section>
       )}
 
@@ -388,10 +450,16 @@ const TermPage: FC<Props> = async ({ params }) => {
               if (!target) return null
               return (
                 <li key={comparison.slug} style={{ marginBottom: ".625rem" }}>
-                  <Link href={`/terms/${target.slug}/`} style={{ color: "var(--color-accent-bright)" }}>
+                  <Link
+                    href={`/terms/${target.slug}/`}
+                    style={{ color: "var(--color-accent-bright)" }}
+                  >
                     {target.name}
                   </Link>
-                  <span style={{ color: "var(--color-text-muted)" }}> — {comparison.note}</span>
+                  <span style={{ color: "var(--color-text-muted)" }}>
+                    {" "}
+                    — {comparison.note}
+                  </span>
                 </li>
               )
             })}
@@ -425,8 +493,15 @@ const TermPage: FC<Props> = async ({ params }) => {
           <SectionTitle>よくある質問</SectionTitle>
           {term.faq.map((item) => (
             <div key={item.question} style={{ marginBottom: "1.25rem" }}>
-              <p style={{ fontWeight: 600, marginBottom: ".375rem" }}>{item.question}</p>
-              <p style={{ color: "var(--color-text-muted)", whiteSpace: "pre-line" }}>
+              <p style={{ fontWeight: 600, marginBottom: ".375rem" }}>
+                {item.question}
+              </p>
+              <p
+                style={{
+                  color: "var(--color-text-muted)",
+                  whiteSpace: "pre-line",
+                }}
+              >
                 {linkifyTermMentions(item.answer, term.slug)}
               </p>
             </div>
@@ -443,7 +518,9 @@ const TermPage: FC<Props> = async ({ params }) => {
           <ul style={{ paddingLeft: "1.25rem" }}>
             {term.references.map((reference) => (
               <li key={reference.url} style={{ marginBottom: ".5rem" }}>
-                <Badge style={{ marginRight: ".625rem" }}>{reference.type}</Badge>
+                <Badge style={{ marginRight: ".625rem" }}>
+                  {reference.type}
+                </Badge>
                 <a
                   href={reference.url}
                   rel="noreferrer"

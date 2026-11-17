@@ -8,7 +8,8 @@ import { buildItemListJsonLd, toJsonLd } from "lib/json-ld"
 import { SITE_NAME, SITE_OG_IMAGE_URL, SITE_URL } from "lib/site"
 
 const TITLE = "特集記事(Articles)"
-const DESCRIPTION = "オープンウェイトLLM一覧等、複数のAI・機械学習モデル/技術をまとめて紹介する特集記事の一覧。"
+const DESCRIPTION =
+  "オープンウェイトLLM一覧等、複数のAI・機械学習モデル/技術をまとめて紹介する特集記事の一覧。"
 
 export const metadata: Metadata = {
   title: TITLE,
@@ -24,7 +25,11 @@ export const metadata: Metadata = {
     siteName: SITE_NAME,
     locale: "ja_JP",
   },
-  twitter: { title: TITLE, description: DESCRIPTION, images: [SITE_OG_IMAGE_URL] },
+  twitter: {
+    title: TITLE,
+    description: DESCRIPTION,
+    images: [SITE_OG_IMAGE_URL],
+  },
 }
 
 const breadcrumbList = {
@@ -32,7 +37,12 @@ const breadcrumbList = {
   "@type": "BreadcrumbList",
   itemListElement: [
     { "@type": "ListItem", position: 1, name: SITE_NAME, item: `${SITE_URL}/` },
-    { "@type": "ListItem", position: 2, name: TITLE, item: `${SITE_URL}/articles/` },
+    {
+      "@type": "ListItem",
+      position: 2,
+      name: TITLE,
+      item: `${SITE_URL}/articles/`,
+    },
   ],
 }
 
@@ -41,7 +51,7 @@ const itemList = buildItemListJsonLd(
   articleSummaries.map((article) => ({
     name: article.title,
     url: `${SITE_URL}/articles/${article.slug}/`,
-  })),
+  }))
 )
 
 const ArticleIndexPage: FC = () => (
@@ -57,7 +67,13 @@ const ArticleIndexPage: FC = () => (
     <Breadcrumb items={[{ href: "/", name: SITE_NAME }, { name: TITLE }]} />
     <Section style={{ padding: "1rem 0 3rem" }}>
       <h1 style={{ fontSize: "2.25rem", margin: 0 }}>{TITLE}</h1>
-      <p style={{ color: "var(--color-text-muted)", fontSize: "1.1rem", marginTop: ".75rem" }}>
+      <p
+        style={{
+          color: "var(--color-text-muted)",
+          fontSize: "1.1rem",
+          marginTop: ".75rem",
+        }}
+      >
         {DESCRIPTION}
       </p>
     </Section>

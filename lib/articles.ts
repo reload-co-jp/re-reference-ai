@@ -47,7 +47,7 @@ export const articleSummaries: ArticleSummaryCard[] = articles.map(
     description,
     category,
     modelSlugs,
-  }),
+  })
 )
 
 export const getArticleBySlug = (slug: string): Article | undefined =>
@@ -64,7 +64,7 @@ export const getArticleTermSlugs = (article: Article): string[] =>
       ...article.modelSlugs,
       ...(article.relatedTerms ?? []),
       ...(article.sections ?? []).flatMap((section) => section.terms ?? []),
-    ]),
+    ])
   )
 
 export const getArticlesForTerm = (termSlug: string): Article[] =>

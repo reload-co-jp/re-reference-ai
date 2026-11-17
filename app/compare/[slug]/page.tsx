@@ -4,7 +4,12 @@ import Link from "next/link"
 import { notFound } from "next/navigation"
 import { DisplayAd, InArticleAd } from "components/analytics/display-ad"
 import { Breadcrumb } from "components/elements/breadcrumb"
-import { Badge, Container, Section, SectionTitle } from "components/elements/layout"
+import {
+  Badge,
+  Container,
+  Section,
+  SectionTitle,
+} from "components/elements/layout"
 import { ReferenceList } from "components/elements/reference-list"
 import { ComparisonCard } from "components/comparison/comparison-card"
 import { ComparisonTable } from "components/comparison/comparison-table"
@@ -31,7 +36,9 @@ export const generateStaticParams = () =>
 
 type Props = { params: Promise<{ slug: string }> }
 
-export const generateMetadata = async ({ params }: Props): Promise<Metadata> => {
+export const generateMetadata = async ({
+  params,
+}: Props): Promise<Metadata> => {
   const { slug } = await params
   const comparison = getComparisonBySlug(slug)
 
@@ -39,39 +46,47 @@ export const generateMetadata = async ({ params }: Props): Promise<Metadata> => 
     return {}
   }
 
-  const { left: leftName, right: rightName } = getComparisonTermNames(comparison)
+  const { left: leftName, right: rightName } =
+    getComparisonTermNames(comparison)
   const title = `${leftName}と${rightName}の違い`
   const description = truncate(comparison.summary, 120)
   const url = `${SITE_URL}/compare/${comparison.slug}/`
 
-  return applySeo({
-    title,
-    description,
-    alternates: { canonical: url },
-    keywords: [
-      leftName,
-      rightName,
-      `${leftName} vs ${rightName}`,
-      `${leftName} 比較`,
-      `${rightName} 比較`,
-      `${leftName} ${rightName} 違い`,
-      "Difference between",
-      "Which is better",
-    ],
-    openGraph: {
+  return applySeo(
+    {
       title,
       description,
-      type: "article",
-      url,
-      images: [SITE_OG_IMAGE_URL],
-      siteName: SITE_NAME,
-      locale: "ja_JP",
+      alternates: { canonical: url },
+      keywords: [
+        leftName,
+        rightName,
+        `${leftName} vs ${rightName}`,
+        `${leftName} 比較`,
+        `${rightName} 比較`,
+        `${leftName} ${rightName} 違い`,
+        "Difference between",
+        "Which is better",
+      ],
+      openGraph: {
+        title,
+        description,
+        type: "article",
+        url,
+        images: [SITE_OG_IMAGE_URL],
+        siteName: SITE_NAME,
+        locale: "ja_JP",
+      },
+      twitter: { title, description, images: [SITE_OG_IMAGE_URL] },
     },
-    twitter: { title, description, images: [SITE_OG_IMAGE_URL] },
-  }, comparison.seo)
+    comparison.seo
+  )
 }
 
-const buildJsonLd = (comparison: Comparison, leftName: string, rightName: string) => {
+const buildJsonLd = (
+  comparison: Comparison,
+  leftName: string,
+  rightName: string
+) => {
   const url = `${SITE_URL}/compare/${comparison.slug}/`
   const leftTerm = getTermBySlug(comparison.left)
   const rightTerm = getTermBySlug(comparison.right)
@@ -109,9 +124,24 @@ const buildJsonLd = (comparison: Comparison, leftName: string, rightName: string
     "@context": "https://schema.org",
     "@type": "BreadcrumbList",
     itemListElement: [
-      { "@type": "ListItem", position: 1, name: SITE_NAME, item: `${SITE_URL}/` },
-      { "@type": "ListItem", position: 2, name: "技術比較", item: `${SITE_URL}/compare/` },
-      { "@type": "ListItem", position: 3, name: `${leftName} vs ${rightName}`, item: url },
+      {
+        "@type": "ListItem",
+        position: 1,
+        name: SITE_NAME,
+        item: `${SITE_URL}/`,
+      },
+      {
+        "@type": "ListItem",
+        position: 2,
+        name: "技術比較",
+        item: `${SITE_URL}/compare/`,
+      },
+      {
+        "@type": "ListItem",
+        position: 3,
+        name: `${leftName} vs ${rightName}`,
+        item: url,
+      },
     ],
   }
 
@@ -137,7 +167,8 @@ const ComparePage: FC<Props> = async ({ params }) => {
     notFound()
   }
 
-  const { left: leftName, right: rightName } = getComparisonTermNames(comparison)
+  const { left: leftName, right: rightName } =
+    getComparisonTermNames(comparison)
   const jsonLdBlocks = buildJsonLd(comparison, leftName, rightName)
 
   const relatedComparisons = [
@@ -145,7 +176,8 @@ const ComparePage: FC<Props> = async ({ params }) => {
     ...getComparisonsForTerm(comparison.right),
   ].filter(
     (other, index, all) =>
-      other.slug !== comparison.slug && all.findIndex((c) => c.slug === other.slug) === index,
+      other.slug !== comparison.slug &&
+      all.findIndex((c) => c.slug === other.slug) === index
   )
 
   return (
@@ -172,7 +204,9 @@ const ComparePage: FC<Props> = async ({ params }) => {
         }}
       >
         <h1 style={{ fontSize: "2.25rem", margin: 0 }}>
-          {leftName} <span style={{ color: "var(--color-text-muted)" }}>vs</span> {rightName}
+          {leftName}{" "}
+          <span style={{ color: "var(--color-text-muted)" }}>vs</span>{" "}
+          {rightName}
         </h1>
         <p
           style={{
@@ -183,11 +217,24 @@ const ComparePage: FC<Props> = async ({ params }) => {
         >
           {linkifyTermMentions(comparison.summary, "")}
         </p>
-        <div style={{ display: "flex", flexWrap: "wrap", gap: ".375rem", marginTop: "1.25rem" }}>
-          <Link href={`/terms/${comparison.left}/`} style={{ color: "inherit", textDecoration: "none" }}>
+        <div
+          style={{
+            display: "flex",
+            flexWrap: "wrap",
+            gap: ".375rem",
+            marginTop: "1.25rem",
+          }}
+        >
+          <Link
+            href={`/terms/${comparison.left}/`}
+            style={{ color: "inherit", textDecoration: "none" }}
+          >
             <Badge>{leftName}</Badge>
           </Link>
-          <Link href={`/terms/${comparison.right}/`} style={{ color: "inherit", textDecoration: "none" }}>
+          <Link
+            href={`/terms/${comparison.right}/`}
+            style={{ color: "inherit", textDecoration: "none" }}
+          >
             <Badge>{rightName}</Badge>
           </Link>
         </div>
@@ -210,7 +257,8 @@ const ComparePage: FC<Props> = async ({ params }) => {
       {/* 要約の直後に記事内広告。後続の本文が無いと次の DisplayAd と隣接するため条件付き */}
       {comparison.quickSummary &&
         comparison.quickSummary.length > 0 &&
-        ((comparison.table && comparison.table.length > 0) || comparison.architecture) && (
+        ((comparison.table && comparison.table.length > 0) ||
+          comparison.architecture) && (
           <InArticleAd style={{ marginBottom: "3rem" }} />
         )}
 
@@ -218,7 +266,11 @@ const ComparePage: FC<Props> = async ({ params }) => {
       {comparison.table && comparison.table.length > 0 && (
         <Section>
           <SectionTitle>Comparison Table</SectionTitle>
-          <ComparisonTable rows={comparison.table} leftLabel={leftName} rightLabel={rightName} />
+          <ComparisonTable
+            rows={comparison.table}
+            leftLabel={leftName}
+            rightLabel={rightName}
+          />
         </Section>
       )}
 
@@ -234,16 +286,32 @@ const ComparePage: FC<Props> = async ({ params }) => {
             }}
           >
             <div>
-              <p style={{ color: "var(--color-accent-bright)", fontSize: ".85rem", fontWeight: 600 }}>
+              <p
+                style={{
+                  color: "var(--color-accent-bright)",
+                  fontSize: ".85rem",
+                  fontWeight: 600,
+                }}
+              >
                 {leftName}
               </p>
-              <p style={{ margin: 0 }}>{linkifyTermMentions(comparison.architecture.left, "")}</p>
+              <p style={{ margin: 0 }}>
+                {linkifyTermMentions(comparison.architecture.left, "")}
+              </p>
             </div>
             <div>
-              <p style={{ color: "var(--color-accent-bright)", fontSize: ".85rem", fontWeight: 600 }}>
+              <p
+                style={{
+                  color: "var(--color-accent-bright)",
+                  fontSize: ".85rem",
+                  fontWeight: 600,
+                }}
+              >
                 {rightName}
               </p>
-              <p style={{ margin: 0 }}>{linkifyTermMentions(comparison.architecture.right, "")}</p>
+              <p style={{ margin: 0 }}>
+                {linkifyTermMentions(comparison.architecture.right, "")}
+              </p>
             </div>
           </div>
         </Section>
@@ -253,7 +321,11 @@ const ComparePage: FC<Props> = async ({ params }) => {
       {comparison.features && comparison.features.length > 0 && (
         <Section>
           <SectionTitle>Feature Comparison</SectionTitle>
-          <FeatureTable features={comparison.features} leftLabel={leftName} rightLabel={rightName} />
+          <FeatureTable
+            features={comparison.features}
+            leftLabel={leftName}
+            rightLabel={rightName}
+          />
         </Section>
       )}
 
@@ -271,7 +343,13 @@ const ComparePage: FC<Props> = async ({ params }) => {
             }}
           >
             <div>
-              <p style={{ color: "var(--color-accent-bright)", fontSize: ".85rem", fontWeight: 600 }}>
+              <p
+                style={{
+                  color: "var(--color-accent-bright)",
+                  fontSize: ".85rem",
+                  fontWeight: 600,
+                }}
+              >
                 {leftName}
               </p>
               <ul style={{ paddingLeft: "1.25rem" }}>
@@ -283,7 +361,13 @@ const ComparePage: FC<Props> = async ({ params }) => {
               </ul>
             </div>
             <div>
-              <p style={{ color: "var(--color-accent-bright)", fontSize: ".85rem", fontWeight: 600 }}>
+              <p
+                style={{
+                  color: "var(--color-accent-bright)",
+                  fontSize: ".85rem",
+                  fontWeight: 600,
+                }}
+              >
                 {rightName}
               </p>
               <ul style={{ paddingLeft: "1.25rem" }}>
@@ -310,7 +394,13 @@ const ComparePage: FC<Props> = async ({ params }) => {
             }}
           >
             <div>
-              <p style={{ color: "var(--color-accent-bright)", fontSize: ".85rem", fontWeight: 600 }}>
+              <p
+                style={{
+                  color: "var(--color-accent-bright)",
+                  fontSize: ".85rem",
+                  fontWeight: 600,
+                }}
+              >
                 {leftName}
               </p>
               <ul style={{ paddingLeft: "1.25rem" }}>
@@ -322,7 +412,13 @@ const ComparePage: FC<Props> = async ({ params }) => {
               </ul>
             </div>
             <div>
-              <p style={{ color: "var(--color-accent-bright)", fontSize: ".85rem", fontWeight: 600 }}>
+              <p
+                style={{
+                  color: "var(--color-accent-bright)",
+                  fontSize: ".85rem",
+                  fontWeight: 600,
+                }}
+              >
                 {rightName}
               </p>
               <ul style={{ paddingLeft: "1.25rem" }}>
@@ -349,16 +445,32 @@ const ComparePage: FC<Props> = async ({ params }) => {
             }}
           >
             <div>
-              <p style={{ color: "var(--color-accent-bright)", fontSize: ".85rem", fontWeight: 600 }}>
+              <p
+                style={{
+                  color: "var(--color-accent-bright)",
+                  fontSize: ".85rem",
+                  fontWeight: 600,
+                }}
+              >
                 {leftName}
               </p>
-              <p style={{ margin: 0 }}>{linkifyTermMentions(comparison.bestUseCases.left, "")}</p>
+              <p style={{ margin: 0 }}>
+                {linkifyTermMentions(comparison.bestUseCases.left, "")}
+              </p>
             </div>
             <div>
-              <p style={{ color: "var(--color-accent-bright)", fontSize: ".85rem", fontWeight: 600 }}>
+              <p
+                style={{
+                  color: "var(--color-accent-bright)",
+                  fontSize: ".85rem",
+                  fontWeight: 600,
+                }}
+              >
                 {rightName}
               </p>
-              <p style={{ margin: 0 }}>{linkifyTermMentions(comparison.bestUseCases.right, "")}</p>
+              <p style={{ margin: 0 }}>
+                {linkifyTermMentions(comparison.bestUseCases.right, "")}
+              </p>
             </div>
           </div>
         </Section>
@@ -368,7 +480,9 @@ const ComparePage: FC<Props> = async ({ params }) => {
       {comparison.migration && (
         <Section>
           <SectionTitle>Migration</SectionTitle>
-          <p style={{ whiteSpace: "pre-line" }}>{linkifyTermMentions(comparison.migration, "")}</p>
+          <p style={{ whiteSpace: "pre-line" }}>
+            {linkifyTermMentions(comparison.migration, "")}
+          </p>
         </Section>
       )}
 
@@ -378,8 +492,15 @@ const ComparePage: FC<Props> = async ({ params }) => {
           <SectionTitle>FAQ</SectionTitle>
           {comparison.faq.map((item) => (
             <div key={item.question} style={{ marginBottom: "1.25rem" }}>
-              <p style={{ fontWeight: 600, marginBottom: ".375rem" }}>{item.question}</p>
-              <p style={{ color: "var(--color-text-muted)", whiteSpace: "pre-line" }}>
+              <p style={{ fontWeight: 600, marginBottom: ".375rem" }}>
+                {item.question}
+              </p>
+              <p
+                style={{
+                  color: "var(--color-text-muted)",
+                  whiteSpace: "pre-line",
+                }}
+              >
                 {linkifyTermMentions(item.answer, "")}
               </p>
             </div>

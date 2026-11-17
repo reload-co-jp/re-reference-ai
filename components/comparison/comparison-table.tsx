@@ -7,7 +7,9 @@ export const ComparisonTable: FC<{
   rightLabel: string
 }> = ({ rows, leftLabel, rightLabel }) => (
   <div style={{ overflowX: "auto" }}>
-    <table style={{ borderCollapse: "collapse", minWidth: "32rem", width: "100%" }}>
+    <table
+      style={{ borderCollapse: "collapse", minWidth: "32rem", width: "100%" }}
+    >
       <thead>
         <tr>
           {["Item", leftLabel, rightLabel].map((heading) => (

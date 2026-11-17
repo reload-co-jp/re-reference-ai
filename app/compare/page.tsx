@@ -8,7 +8,8 @@ import { buildItemListJsonLd, toJsonLd } from "lib/json-ld"
 import { SITE_NAME, SITE_OG_IMAGE_URL, SITE_URL } from "lib/site"
 
 const TITLE = "技術比較(Comparison)"
-const DESCRIPTION = "GPT vs Claude、MCP vs Function Calling等、類似するAI技術同士の違いを比較できる技術比較の一覧。"
+const DESCRIPTION =
+  "GPT vs Claude、MCP vs Function Calling等、類似するAI技術同士の違いを比較できる技術比較の一覧。"
 
 export const metadata: Metadata = {
   title: TITLE,
@@ -24,7 +25,11 @@ export const metadata: Metadata = {
     siteName: SITE_NAME,
     locale: "ja_JP",
   },
-  twitter: { title: TITLE, description: DESCRIPTION, images: [SITE_OG_IMAGE_URL] },
+  twitter: {
+    title: TITLE,
+    description: DESCRIPTION,
+    images: [SITE_OG_IMAGE_URL],
+  },
 }
 
 const breadcrumbList = {
@@ -32,7 +37,12 @@ const breadcrumbList = {
   "@type": "BreadcrumbList",
   itemListElement: [
     { "@type": "ListItem", position: 1, name: SITE_NAME, item: `${SITE_URL}/` },
-    { "@type": "ListItem", position: 2, name: TITLE, item: `${SITE_URL}/compare/` },
+    {
+      "@type": "ListItem",
+      position: 2,
+      name: TITLE,
+      item: `${SITE_URL}/compare/`,
+    },
   ],
 }
 
@@ -40,8 +50,11 @@ const itemList = buildItemListJsonLd(
   TITLE,
   comparisonSummaries.map((comparison) => {
     const { left, right } = getComparisonTermNames(comparison)
-    return { name: `${left} vs ${right}`, url: `${SITE_URL}/compare/${comparison.slug}/` }
-  }),
+    return {
+      name: `${left} vs ${right}`,
+      url: `${SITE_URL}/compare/${comparison.slug}/`,
+    }
+  })
 )
 
 const CompareIndexPage: FC = () => (
@@ -57,7 +70,13 @@ const CompareIndexPage: FC = () => (
     <Breadcrumb items={[{ href: "/", name: SITE_NAME }, { name: TITLE }]} />
     <Section style={{ padding: "1rem 0 3rem" }}>
       <h1 style={{ fontSize: "2.25rem", margin: 0 }}>{TITLE}</h1>
-      <p style={{ color: "var(--color-text-muted)", fontSize: "1.1rem", marginTop: ".75rem" }}>
+      <p
+        style={{
+          color: "var(--color-text-muted)",
+          fontSize: "1.1rem",
+          marginTop: ".75rem",
+        }}
+      >
         {DESCRIPTION}
       </p>
     </Section>

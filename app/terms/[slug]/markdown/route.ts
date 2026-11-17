@@ -5,7 +5,8 @@ import { getTermBySlug, terms } from "lib/terms"
 export const dynamic = "force-static"
 export const dynamicParams = false
 
-export const generateStaticParams = () => terms.map((term) => ({ slug: term.slug }))
+export const generateStaticParams = () =>
+  terms.map((term) => ({ slug: term.slug }))
 
 type Props = { params: Promise<{ slug: string }> }
 

@@ -1,9 +1,11 @@
 import { SITE_URL } from "lib/site"
 import { getTermBySlug, Term } from "lib/terms"
 
-const heading = (title: string, level = 2): string => `${"#".repeat(level)} ${title}\n`
+const heading = (title: string, level = 2): string =>
+  `${"#".repeat(level)} ${title}\n`
 
-const list = (items: string[]): string => items.map((item) => `- ${item}`).join("\n")
+const list = (items: string[]): string =>
+  items.map((item) => `- ${item}`).join("\n")
 
 export const termToMarkdown = (term: Term): string => {
   const url = `${SITE_URL}/terms/${term.slug}/`
@@ -14,7 +16,9 @@ export const termToMarkdown = (term: Term): string => {
     sections.push(`別名: ${term.aliases.join(" / ")}\n`)
   }
   sections.push(`> ${term.tagline}\n`)
-  sections.push(`カテゴリ: ${term.category}\nタグ: ${term.tags.join(", ")}\nURL: ${url}\n`)
+  sections.push(
+    `カテゴリ: ${term.category}\nタグ: ${term.tags.join(", ")}\nURL: ${url}\n`
+  )
 
   if (term.plainSummary) {
     sections.push(`${heading("ひとことで言うと")}\n${term.plainSummary}\n`)
@@ -36,7 +40,10 @@ export const termToMarkdown = (term: Term): string => {
   }
   if (term.codeExamples && term.codeExamples.length > 0) {
     const examples = term.codeExamples
-      .map((example) => `${example.title}\n\n\`\`\`${example.language}\n${example.code}\n\`\`\``)
+      .map(
+        (example) =>
+          `${example.title}\n\n\`\`\`${example.language}\n${example.code}\n\`\`\``
+      )
       .join("\n\n")
     sections.push(`${heading("コード例")}\n${examples}\n`)
   }
@@ -68,11 +75,16 @@ export const termToMarkdown = (term: Term): string => {
     }
   }
   if (term.faq && term.faq.length > 0) {
-    const items = term.faq.map((item) => `**Q. ${item.question}**\n\nA. ${item.answer}`).join("\n\n")
+    const items = term.faq
+      .map((item) => `**Q. ${item.question}**\n\nA. ${item.answer}`)
+      .join("\n\n")
     sections.push(`${heading("よくある質問")}\n${items}\n`)
   }
   if (term.references && term.references.length > 0) {
-    const items = term.references.map((reference) => `[${reference.label}](${reference.url}) (${reference.type})`)
+    const items = term.references.map(
+      (reference) =>
+        `[${reference.label}](${reference.url}) (${reference.type})`
+    )
     sections.push(`${heading("参考文献")}\n${list(items)}\n`)
   }
 

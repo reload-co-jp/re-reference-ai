@@ -6,7 +6,12 @@ import { ArticleCard } from "components/article/article-card"
 import { ModelComparisonTable } from "components/article/model-comparison-table"
 import { DisplayAd, InArticleAd } from "components/analytics/display-ad"
 import { Breadcrumb } from "components/elements/breadcrumb"
-import { Badge, Container, Section, SectionTitle } from "components/elements/layout"
+import {
+  Badge,
+  Container,
+  Section,
+  SectionTitle,
+} from "components/elements/layout"
 import { ReferenceList } from "components/elements/reference-list"
 import { TermCard } from "components/term/term-card"
 import { TimelineView } from "components/timeline/timeline-view"
@@ -29,11 +34,14 @@ import { truncate } from "lib/text"
 
 export const dynamicParams = false
 
-export const generateStaticParams = () => articles.map((article) => ({ slug: article.slug }))
+export const generateStaticParams = () =>
+  articles.map((article) => ({ slug: article.slug }))
 
 type Props = { params: Promise<{ slug: string }> }
 
-export const generateMetadata = async ({ params }: Props): Promise<Metadata> => {
+export const generateMetadata = async ({
+  params,
+}: Props): Promise<Metadata> => {
   const { slug } = await params
   const article = getArticleBySlug(slug)
 
@@ -45,29 +53,32 @@ export const generateMetadata = async ({ params }: Props): Promise<Metadata> => 
   const description = truncate(article.description, 120)
   const url = `${SITE_URL}/articles/${article.slug}/`
 
-  return applySeo({
-    title,
-    description,
-    alternates: { canonical: url },
-    keywords: [
-      article.title,
-      ...getArticleModels(article).map((model) => model.name),
-      article.category,
-      "比較",
-      "年表",
-    ],
-    openGraph: {
+  return applySeo(
+    {
       title,
       description,
-      type: "article",
-      url,
-      images: [SITE_OG_IMAGE_URL],
-      siteName: SITE_NAME,
-      locale: "ja_JP",
+      alternates: { canonical: url },
+      keywords: [
+        article.title,
+        ...getArticleModels(article).map((model) => model.name),
+        article.category,
+        "比較",
+        "年表",
+      ],
+      openGraph: {
+        title,
+        description,
+        type: "article",
+        url,
+        images: [SITE_OG_IMAGE_URL],
+        siteName: SITE_NAME,
+        locale: "ja_JP",
+      },
+      category: article.category,
+      twitter: { title, description, images: [SITE_OG_IMAGE_URL] },
     },
-    category: article.category,
-    twitter: { title, description, images: [SITE_OG_IMAGE_URL] },
-  }, article.seo)
+    article.seo
+  )
 }
 
 const buildJsonLd = (article: Article) => {
@@ -107,8 +118,18 @@ const buildJsonLd = (article: Article) => {
     "@context": "https://schema.org",
     "@type": "BreadcrumbList",
     itemListElement: [
-      { "@type": "ListItem", position: 1, name: SITE_NAME, item: `${SITE_URL}/` },
-      { "@type": "ListItem", position: 2, name: "特集記事(Articles)", item: `${SITE_URL}/articles/` },
+      {
+        "@type": "ListItem",
+        position: 1,
+        name: SITE_NAME,
+        item: `${SITE_URL}/`,
+      },
+      {
+        "@type": "ListItem",
+        position: 2,
+        name: "特集記事(Articles)",
+        item: `${SITE_URL}/articles/`,
+      },
       { "@type": "ListItem", position: 3, name: article.title, item: url },
     ],
   }
@@ -159,7 +180,9 @@ const ArticlePage: FC<Props> = async ({ params }) => {
 
   const articleTermSlugs = new Set(getArticleTermSlugs(article))
   const relatedComparisons = comparisons.filter(
-    (comparison) => articleTermSlugs.has(comparison.left) && articleTermSlugs.has(comparison.right),
+    (comparison) =>
+      articleTermSlugs.has(comparison.left) &&
+      articleTermSlugs.has(comparison.right)
   )
   const otherArticles = articles.filter((a) => a.slug !== article.slug)
   const jsonLdBlocks = buildJsonLd(article)
@@ -222,7 +245,8 @@ const ArticlePage: FC<Props> = async ({ params }) => {
                   style={{
                     display: "grid",
                     gap: "1.25rem",
-                    gridTemplateColumns: "repeat(auto-fill, minmax(15rem, 1fr))",
+                    gridTemplateColumns:
+                      "repeat(auto-fill, minmax(15rem, 1fr))",
                     marginTop: "1.25rem",
                   }}
                 >
@@ -232,7 +256,9 @@ const ArticlePage: FC<Props> = async ({ params }) => {
                 </div>
               )}
             </Section>
-            {showInArticleAd && <InArticleAd style={{ marginBottom: "3rem" }} />}
+            {showInArticleAd && (
+              <InArticleAd style={{ marginBottom: "3rem" }} />
+            )}
           </Fragment>
         )
       })}
@@ -241,71 +267,80 @@ const ArticlePage: FC<Props> = async ({ params }) => {
 
       {/* Models */}
       {models.length > 0 && (
-      <Section>
-        <SectionTitle>モデル一覧</SectionTitle>
-        <ol
-          style={{
-            border: "1px solid var(--color-border)",
-            borderRadius: ".25rem",
-            listStyle: "none",
-            margin: 0,
-            overflow: "hidden",
-            padding: 0,
-          }}
-        >
-          {models.map((model, index) => {
-            const developer = developerByModelSlug[model.slug]
-            return (
-              <li
-                key={model.slug}
-                style={{
-                  borderBottom:
-                    index < models.length - 1 ? "1px solid var(--color-border)" : "none",
-                }}
-              >
-                <Link
-                  href={`/terms/${model.slug}/`}
+        <Section>
+          <SectionTitle>モデル一覧</SectionTitle>
+          <ol
+            style={{
+              border: "1px solid var(--color-border)",
+              borderRadius: ".25rem",
+              listStyle: "none",
+              margin: 0,
+              overflow: "hidden",
+              padding: 0,
+            }}
+          >
+            {models.map((model, index) => {
+              const developer = developerByModelSlug[model.slug]
+              return (
+                <li
+                  key={model.slug}
                   style={{
-                    alignItems: "baseline",
-                    color: "inherit",
-                    display: "flex",
-                    flexWrap: "wrap",
-                    gap: ".25rem 1rem",
-                    padding: "1rem 1.25rem",
-                    textDecoration: "none",
+                    borderBottom:
+                      index < models.length - 1
+                        ? "1px solid var(--color-border)"
+                        : "none",
                   }}
                 >
-                  <span
+                  <Link
+                    href={`/terms/${model.slug}/`}
                     style={{
-                      color: "var(--color-text-muted)",
-                      flexShrink: 0,
-                      fontSize: ".8rem",
-                      width: "1.5rem",
+                      alignItems: "baseline",
+                      color: "inherit",
+                      display: "flex",
+                      flexWrap: "wrap",
+                      gap: ".25rem 1rem",
+                      padding: "1rem 1.25rem",
+                      textDecoration: "none",
                     }}
                   >
-                    {index + 1}
-                  </span>
-                  <span style={{ flexShrink: 0, fontSize: "1.05rem", fontWeight: 600, width: "9rem" }}>
-                    {model.name}
-                  </span>
-                  {developer && (
-                    <Badge style={{ flexShrink: 0 }}>{developer}</Badge>
-                  )}
-                  <span
-                    style={{
-                      color: "var(--color-text-muted)",
-                      flex: "1 1 20rem",
-                      fontSize: ".85rem",
-                    }}
-                  >
-                    {model.tagline}
-                  </span>
-                </Link>
-              </li>
-            )
-          })}
-        </ol>
-      </Section>
+                    <span
+                      style={{
+                        color: "var(--color-text-muted)",
+                        flexShrink: 0,
+                        fontSize: ".8rem",
+                        width: "1.5rem",
+                      }}
+                    >
+                      {index + 1}
+                    </span>
+                    <span
+                      style={{
+                        flexShrink: 0,
+                        fontSize: "1.05rem",
+                        fontWeight: 600,
+                        width: "9rem",
+                      }}
+                    >
+                      {model.name}
+                    </span>
+                    {developer && (
+                      <Badge style={{ flexShrink: 0 }}>{developer}</Badge>
+                    )}
+                    <span
+                      style={{
+                        color: "var(--color-text-muted)",
+                        flex: "1 1 20rem",
+                        fontSize: ".85rem",
+                      }}
+                    >
+                      {model.tagline}
+                    </span>
+                  </Link>
+                </li>
+              )
+            })}
+          </ol>
+        </Section>
       )}
 
       {/* Comparison */}
@@ -335,7 +370,9 @@ const ArticlePage: FC<Props> = async ({ params }) => {
                 href={`/terms/${term.slug}/`}
                 style={{ color: "inherit", textDecoration: "none" }}
               >
-                <Badge style={{ fontSize: ".85rem", padding: ".4rem .9rem" }}>{term.name}</Badge>
+                <Badge style={{ fontSize: ".85rem", padding: ".4rem .9rem" }}>
+                  {term.name}
+                </Badge>
               </Link>
             ))}
           </div>
@@ -366,8 +403,15 @@ const ArticlePage: FC<Props> = async ({ params }) => {
           <SectionTitle>よくある質問</SectionTitle>
           {article.faq.map((item) => (
             <div key={item.question} style={{ marginBottom: "1.25rem" }}>
-              <p style={{ fontWeight: 600, marginBottom: ".375rem" }}>{item.question}</p>
-              <p style={{ color: "var(--color-text-muted)", whiteSpace: "pre-line" }}>
+              <p style={{ fontWeight: 600, marginBottom: ".375rem" }}>
+                {item.question}
+              </p>
+              <p
+                style={{
+                  color: "var(--color-text-muted)",
+                  whiteSpace: "pre-line",
+                }}
+              >
                 {linkifyTermMentions(item.answer, "")}
               </p>
             </div>

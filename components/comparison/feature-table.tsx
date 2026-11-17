@@ -4,7 +4,13 @@ import { ComparisonFeature } from "lib/comparisons"
 const renderCell = (value: boolean | string) => {
   if (typeof value === "boolean") {
     return (
-      <span style={{ color: value ? "var(--color-accent-bright)" : "var(--color-text-muted)" }}>
+      <span
+        style={{
+          color: value
+            ? "var(--color-accent-bright)"
+            : "var(--color-text-muted)",
+        }}
+      >
         {value ? "○" : "—"}
       </span>
     )
@@ -18,7 +24,9 @@ export const FeatureTable: FC<{
   rightLabel: string
 }> = ({ features, leftLabel, rightLabel }) => (
   <div style={{ overflowX: "auto" }}>
-    <table style={{ borderCollapse: "collapse", minWidth: "28rem", width: "100%" }}>
+    <table
+      style={{ borderCollapse: "collapse", minWidth: "28rem", width: "100%" }}
+    >
       <thead>
         <tr>
           {["Feature", leftLabel, rightLabel].map((heading) => (
@@ -51,10 +59,20 @@ export const FeatureTable: FC<{
             >
               {feature.feature}
             </td>
-            <td style={{ borderBottom: "1px solid var(--color-border)", padding: ".625rem .75rem" }}>
+            <td
+              style={{
+                borderBottom: "1px solid var(--color-border)",
+                padding: ".625rem .75rem",
+              }}
+            >
               {renderCell(feature.left)}
             </td>
-            <td style={{ borderBottom: "1px solid var(--color-border)", padding: ".625rem .75rem" }}>
+            <td
+              style={{
+                borderBottom: "1px solid var(--color-border)",
+                padding: ".625rem .75rem",
+              }}
+            >
               {renderCell(feature.right)}
             </td>
           </tr>

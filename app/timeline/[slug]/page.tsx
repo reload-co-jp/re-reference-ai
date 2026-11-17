@@ -4,7 +4,12 @@ import Link from "next/link"
 import { notFound } from "next/navigation"
 import { DisplayAd, InArticleAd } from "components/analytics/display-ad"
 import { Breadcrumb } from "components/elements/breadcrumb"
-import { Badge, Container, Section, SectionTitle } from "components/elements/layout"
+import {
+  Badge,
+  Container,
+  Section,
+  SectionTitle,
+} from "components/elements/layout"
 import { ReferenceList } from "components/elements/reference-list"
 import { VersionBadge } from "components/elements/version-badge"
 import { TimelineView } from "components/timeline/timeline-view"
@@ -19,11 +24,14 @@ import { truncate } from "lib/text"
 
 export const dynamicParams = false
 
-export const generateStaticParams = () => timelines.map((timeline) => ({ slug: timeline.slug }))
+export const generateStaticParams = () =>
+  timelines.map((timeline) => ({ slug: timeline.slug }))
 
 type Props = { params: Promise<{ slug: string }> }
 
-export const generateMetadata = async ({ params }: Props): Promise<Metadata> => {
+export const generateMetadata = async ({
+  params,
+}: Props): Promise<Metadata> => {
   const { slug } = await params
   const timeline = getTimelineBySlug(slug)
 
@@ -40,38 +48,41 @@ export const generateMetadata = async ({ params }: Props): Promise<Metadata> => 
       .map((s) => getTermBySlug(s)?.name)
       .filter((n): n is string => Boolean(n))[0] ?? timeline.category
 
-  return applySeo({
-    title,
-    description,
-    alternates: { canonical: url },
-    keywords: [
-      timeline.title,
-      `${primaryName} 歴史`,
-      `${primaryName} 年表`,
-      `${primaryName} Timeline`,
-      `${primaryName} Evolution`,
-      `${primaryName} Release History`,
-      `${primaryName} Version History`,
-      timeline.category,
-    ],
-    openGraph: {
+  return applySeo(
+    {
       title,
       description,
-      type: "article",
-      url,
-      images: [SITE_OG_IMAGE_URL],
-      siteName: SITE_NAME,
-      locale: "ja_JP",
+      alternates: { canonical: url },
+      keywords: [
+        timeline.title,
+        `${primaryName} 歴史`,
+        `${primaryName} 年表`,
+        `${primaryName} Timeline`,
+        `${primaryName} Evolution`,
+        `${primaryName} Release History`,
+        `${primaryName} Version History`,
+        timeline.category,
+      ],
+      openGraph: {
+        title,
+        description,
+        type: "article",
+        url,
+        images: [SITE_OG_IMAGE_URL],
+        siteName: SITE_NAME,
+        locale: "ja_JP",
+      },
+      category: timeline.category,
+      twitter: { title, description, images: [SITE_OG_IMAGE_URL] },
     },
-    category: timeline.category,
-    twitter: { title, description, images: [SITE_OG_IMAGE_URL] },
-  }, timeline.seo)
+    timeline.seo
+  )
 }
 
 const buildJsonLd = (timeline: Timeline) => {
   const url = `${SITE_URL}/timeline/${timeline.slug}/`
   const mentionSlugs = Array.from(
-    new Set([...(timeline.targetTerms ?? []), ...(timeline.relatedTerms ?? [])]),
+    new Set([...(timeline.targetTerms ?? []), ...(timeline.relatedTerms ?? [])])
   )
   const mentions = mentionSlugs
     .map((slug) => getTermBySlug(slug))
@@ -110,8 +121,18 @@ const buildJsonLd = (timeline: Timeline) => {
     "@context": "https://schema.org",
     "@type": "BreadcrumbList",
     itemListElement: [
-      { "@type": "ListItem", position: 1, name: SITE_NAME, item: `${SITE_URL}/` },
-      { "@type": "ListItem", position: 2, name: "技術年表", item: `${SITE_URL}/timeline/` },
+      {
+        "@type": "ListItem",
+        position: 1,
+        name: SITE_NAME,
+        item: `${SITE_URL}/`,
+      },
+      {
+        "@type": "ListItem",
+        position: 2,
+        name: "技術年表",
+        item: `${SITE_URL}/timeline/`,
+      },
       { "@type": "ListItem", position: 3, name: timeline.title, item: url },
     ],
   }
@@ -197,7 +218,14 @@ const TimelinePage: FC<Props> = async ({ params }) => {
           {linkifyTermMentions(timeline.description, "")}
         </p>
         {targetTerms.length > 0 && (
-          <div style={{ display: "flex", flexWrap: "wrap", gap: ".375rem", marginTop: "1.25rem" }}>
+          <div
+            style={{
+              display: "flex",
+              flexWrap: "wrap",
+              gap: ".375rem",
+              marginTop: "1.25rem",
+            }}
+          >
             {targetTerms.map((term) => (
               <Link
                 key={term.slug}
@@ -212,7 +240,9 @@ const TimelinePage: FC<Props> = async ({ params }) => {
       </Section>
 
       {/* 年表が十分長い場合のみ、冒頭の説明の直後に記事内広告 */}
-      {timeline.events.length >= 5 && <InArticleAd style={{ marginBottom: "3rem" }} />}
+      {timeline.events.length >= 5 && (
+        <InArticleAd style={{ marginBottom: "3rem" }} />
+      )}
 
       {/* Timeline */}
       <Section>
@@ -248,7 +278,9 @@ const TimelinePage: FC<Props> = async ({ params }) => {
                 href={`/terms/${term.slug}/`}
                 style={{ color: "inherit", textDecoration: "none" }}
               >
-                <Badge style={{ fontSize: ".85rem", padding: ".4rem .9rem" }}>{term.name}</Badge>
+                <Badge style={{ fontSize: ".85rem", padding: ".4rem .9rem" }}>
+                  {term.name}
+                </Badge>
               </Link>
             ))}
           </div>
@@ -261,8 +293,15 @@ const TimelinePage: FC<Props> = async ({ params }) => {
           <SectionTitle>よくある質問</SectionTitle>
           {timeline.faq.map((item) => (
             <div key={item.question} style={{ marginBottom: "1.25rem" }}>
-              <p style={{ fontWeight: 600, marginBottom: ".375rem" }}>{item.question}</p>
-              <p style={{ color: "var(--color-text-muted)", whiteSpace: "pre-line" }}>
+              <p style={{ fontWeight: 600, marginBottom: ".375rem" }}>
+                {item.question}
+              </p>
+              <p
+                style={{
+                  color: "var(--color-text-muted)",
+                  whiteSpace: "pre-line",
+                }}
+              >
                 {linkifyTermMentions(item.answer, "")}
               </p>
             </div>

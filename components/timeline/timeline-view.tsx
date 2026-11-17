@@ -12,7 +12,9 @@ type Props = {
   termNames: Record<string, string>
 }
 
-const groupByYear = (events: TimelineViewEvent[]): [string, TimelineViewEvent[]][] => {
+const groupByYear = (
+  events: TimelineViewEvent[]
+): [string, TimelineViewEvent[]][] => {
   const groups = new Map<string, TimelineViewEvent[]>()
   for (const event of events) {
     const year = event.date.slice(0, 4)
@@ -31,7 +33,12 @@ const eventKey = (year: string, index: number): string => `${year}-${index}`
 export const TimelineView: FC<Props> = ({ events, termNames }) => {
   const groups = groupByYear(events)
   const [openKeys, setOpenKeys] = useState<Set<string>>(
-    () => new Set(groups.flatMap(([year, yearEvents]) => yearEvents.map((_, i) => eventKey(year, i)))),
+    () =>
+      new Set(
+        groups.flatMap(([year, yearEvents]) =>
+          yearEvents.map((_, i) => eventKey(year, i))
+        )
+      )
   )
 
   const toggle = (key: string) => {
@@ -47,7 +54,12 @@ export const TimelineView: FC<Props> = ({ events, termNames }) => {
   }
 
   return (
-    <div style={{ borderLeft: "2px solid var(--color-border)", paddingLeft: "1.5rem" }}>
+    <div
+      style={{
+        borderLeft: "2px solid var(--color-border)",
+        paddingLeft: "1.5rem",
+      }}
+    >
       {groups.map(([year, yearEvents]) => (
         <div key={year} style={{ marginBottom: "2rem" }}>
           <p
@@ -65,7 +77,10 @@ export const TimelineView: FC<Props> = ({ events, termNames }) => {
             const key = eventKey(year, i)
             const open = openKeys.has(key)
             return (
-              <div key={key} style={{ marginBottom: "1rem", position: "relative" }}>
+              <div
+                key={key}
+                style={{ marginBottom: "1rem", position: "relative" }}
+              >
                 <span
                   style={{
                     background: "var(--color-accent)",
@@ -107,7 +122,9 @@ export const TimelineView: FC<Props> = ({ events, termNames }) => {
                 </button>
                 {open && (
                   <Card style={{ marginTop: ".625rem" }}>
-                    <p style={{ margin: 0, whiteSpace: "pre-line" }}>{event.descriptionNode}</p>
+                    <p style={{ margin: 0, whiteSpace: "pre-line" }}>
+                      {event.descriptionNode}
+                    </p>
                     {event.organizations && event.organizations.length > 0 && (
                       <div
                         style={{
@@ -143,9 +160,14 @@ export const TimelineView: FC<Props> = ({ events, termNames }) => {
                       </div>
                     )}
                     {event.references && event.references.length > 0 && (
-                      <ul style={{ marginTop: ".75rem", paddingLeft: "1.25rem" }}>
+                      <ul
+                        style={{ marginTop: ".75rem", paddingLeft: "1.25rem" }}
+                      >
                         {event.references.map((reference) => (
-                          <li key={reference.url} style={{ marginBottom: ".25rem" }}>
+                          <li
+                            key={reference.url}
+                            style={{ marginBottom: ".25rem" }}
+                          >
                             <a
                               href={reference.url}
                               rel="noreferrer"

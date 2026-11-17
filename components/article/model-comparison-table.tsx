@@ -7,7 +7,9 @@ export const ModelComparisonTable: FC<{
   models: Term[]
 }> = ({ rows, models }) => (
   <div style={{ overflowX: "auto" }}>
-    <table style={{ borderCollapse: "collapse", minWidth: "48rem", width: "100%" }}>
+    <table
+      style={{ borderCollapse: "collapse", minWidth: "48rem", width: "100%" }}
+    >
       <thead>
         <tr>
           <th

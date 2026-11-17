@@ -4,7 +4,9 @@ import { Badge, Card } from "components/elements/layout"
 import { ComparisonSummaryCard } from "lib/comparisons"
 import { getTermBySlug } from "lib/terms"
 
-export const ComparisonCard: FC<{ comparison: ComparisonSummaryCard }> = ({ comparison }) => {
+export const ComparisonCard: FC<{ comparison: ComparisonSummaryCard }> = ({
+  comparison,
+}) => {
   const leftName = getTermBySlug(comparison.left)?.name ?? comparison.left
   const rightName = getTermBySlug(comparison.right)?.name ?? comparison.right
 
@@ -15,7 +17,9 @@ export const ComparisonCard: FC<{ comparison: ComparisonSummaryCard }> = ({ comp
     >
       <Card style={{ height: "100%" }}>
         <h3 style={{ fontSize: "1.05rem", margin: 0 }}>
-          {leftName} <span style={{ color: "var(--color-text-muted)" }}>vs</span> {rightName}
+          {leftName}{" "}
+          <span style={{ color: "var(--color-text-muted)" }}>vs</span>{" "}
+          {rightName}
         </h3>
         <p
           style={{

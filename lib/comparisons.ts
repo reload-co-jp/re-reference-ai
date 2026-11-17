@@ -36,22 +36,29 @@ import comparisonsData from "data/comparisons.json"
 
 export const comparisons = comparisonsData as Comparison[]
 
-export type ComparisonSummaryCard = Pick<Comparison, "slug" | "left" | "right" | "summary">
+export type ComparisonSummaryCard = Pick<
+  Comparison,
+  "slug" | "left" | "right" | "summary"
+>
 
 export const comparisonSummaries: ComparisonSummaryCard[] = comparisons.map(
-  ({ slug, left, right, summary }) => ({ slug, left, right, summary }),
+  ({ slug, left, right, summary }) => ({ slug, left, right, summary })
 )
 
-export const buildComparisonSlug = (left: string, right: string): string => `${left}-vs-${right}`
+export const buildComparisonSlug = (left: string, right: string): string =>
+  `${left}-vs-${right}`
 
 export const getComparisonBySlug = (slug: string): Comparison | undefined =>
   comparisons.find((comparison) => comparison.slug === slug)
 
 export const getComparisonsForTerm = (termSlug: string): Comparison[] =>
-  comparisons.filter((comparison) => comparison.left === termSlug || comparison.right === termSlug)
+  comparisons.filter(
+    (comparison) =>
+      comparison.left === termSlug || comparison.right === termSlug
+  )
 
 export const getComparisonTermNames = (
-  comparison: Comparison,
+  comparison: Comparison
 ): { left: string; right: string } => ({
   left: getTermBySlug(comparison.left)?.name ?? comparison.left,
   right: getTermBySlug(comparison.right)?.name ?? comparison.right,

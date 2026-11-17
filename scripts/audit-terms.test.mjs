@@ -7,22 +7,48 @@ const base = {
   summary: "あ".repeat(250),
   category: "技術",
   tags: ["評価"],
-  references: [{ type: "Documentation", label: "Doc", url: "https://example.com" }],
+  references: [
+    { type: "Documentation", label: "Doc", url: "https://example.com" },
+  ],
 }
 
-const rules = (issues, slug) => issues.filter((i) => i.slug === slug).map((i) => i.rule)
+const rules = (issues, slug) =>
+  issues.filter((i) => i.slug === slug).map((i) => i.rule)
 
 test("正常な用語は問題なし", () => {
-  const issues = auditTerms({ terms: [{ ...base, slug: "a", name: "A" }], tagDescriptions: { 評価: "x" } })
+  const issues = auditTerms({
+    terms: [{ ...base, slug: "a", name: "A" }],
+    tagDescriptions: { 評価: "x" },
+  })
   assert.deepEqual(issues, [])
 })
 
 test("各種問題を検出する", () => {
   const issues = auditTerms({
     terms: [
-      { ...base, slug: "a", name: "A", aliases: ["A", "x", "X"], relatedTerms: ["missing"], references: [] },
-      { ...base, slug: "b", name: "B", aliases: ["x"], summary: undefined, tagline: base.tagline },
-      { ...base, slug: "c", name: "C", summary: "現在の最新版は" + "い".repeat(200) + "最強", tags: ["孤立"] },
+      {
+        ...base,
+        slug: "a",
+        name: "A",
+        aliases: ["A", "x", "X"],
+        relatedTerms: ["missing"],
+        references: [],
+      },
+      {
+        ...base,
+        slug: "b",
+        name: "B",
+        aliases: ["x"],
+        summary: undefined,
+        tagline: base.tagline,
+      },
+      {
+        ...base,
+        slug: "c",
+        name: "C",
+        summary: "現在の最新版は" + "い".repeat(200) + "最強",
+        tags: ["孤立"],
+      },
     ],
     tagDescriptions: { 評価: "x" },
     timelines: [{ slug: "t", events: [{ title: "e", relatedTerms: ["zzz"] }] }],
@@ -43,7 +69,14 @@ test("各種問題を検出する", () => {
 
 test("否定の「必ずしも」は断定表現として扱わない", () => {
   const issues = auditTerms({
-    terms: [{ ...base, slug: "a", name: "A", summary: "必ずしも正しいとは限らない。" + "う".repeat(200) }],
+    terms: [
+      {
+        ...base,
+        slug: "a",
+        name: "A",
+        summary: "必ずしも正しいとは限らない。" + "う".repeat(200),
+      },
+    ],
     tagDescriptions: { 評価: "x" },
   })
   assert.deepEqual(rules(issues, "a"), [])

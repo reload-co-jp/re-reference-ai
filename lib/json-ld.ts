@@ -16,7 +16,7 @@ export const buildOrganizationJsonLd = () => ({
 
 export const buildItemListJsonLd = (
   name: string,
-  items: { name: string; url: string }[],
+  items: { name: string; url: string }[]
 ) => ({
   "@context": "https://schema.org",
   "@type": "ItemList",

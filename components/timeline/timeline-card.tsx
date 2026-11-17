@@ -3,7 +3,9 @@ import Link from "next/link"
 import { Badge, Card } from "components/elements/layout"
 import { getEventYearRange, TimelineSummaryCard } from "lib/timelines"
 
-export const TimelineCard: FC<{ timeline: TimelineSummaryCard }> = ({ timeline }) => (
+export const TimelineCard: FC<{ timeline: TimelineSummaryCard }> = ({
+  timeline,
+}) => (
   <Link
     href={`/timeline/${timeline.slug}/`}
     style={{ color: "inherit", textDecoration: "none" }}

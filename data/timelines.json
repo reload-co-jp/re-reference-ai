@@ -381,7 +381,15 @@
         "relatedTerms": ["deepseek", "reasoning-model"]
       }
     ],
-    "relatedTerms": ["gpt", "claude", "gemini", "llama", "deepseek", "transformer", "bert"],
+    "relatedTerms": [
+      "gpt",
+      "claude",
+      "gemini",
+      "llama",
+      "deepseek",
+      "transformer",
+      "bert"
+    ],
     "references": []
   },
   {
@@ -461,7 +469,14 @@
         "relatedTerms": ["mcp"]
       }
     ],
-    "relatedTerms": ["tool-calling", "a2a", "fastmcp", "ai-agent", "claude", "gpt"],
+    "relatedTerms": [
+      "tool-calling",
+      "a2a",
+      "fastmcp",
+      "ai-agent",
+      "claude",
+      "gpt"
+    ],
     "references": [
       {
         "type": "Official Website",
@@ -598,7 +613,13 @@
       { "version": "Claude 4(Opus/Sonnet)", "date": "2025-05-22" },
       { "version": "Claude Sonnet 5", "date": "2026-06-30" }
     ],
-    "relatedTerms": ["mcp", "coding-agent", "computer-use", "vision-language-model", "gpt"],
+    "relatedTerms": [
+      "mcp",
+      "coding-agent",
+      "computer-use",
+      "vision-language-model",
+      "gpt"
+    ],
     "references": [
       {
         "type": "Research Paper",

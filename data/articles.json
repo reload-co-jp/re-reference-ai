@@ -202,7 +202,12 @@
         "relatedTerms": ["kimi"]
       }
     ],
-    "relatedTerms": ["foundation-model", "fine-tuning", "quantization", "mixture-of-experts"],
+    "relatedTerms": [
+      "foundation-model",
+      "fine-tuning",
+      "quantization",
+      "mixture-of-experts"
+    ],
     "faq": [
       {
         "question": "オープンウェイトとオープンソースの違いは?",
@@ -347,7 +352,13 @@
         "relatedTerms": ["codex"]
       }
     ],
-    "relatedTerms": ["ai-ide", "coding-agent", "subagent", "tool-calling", "harness-engineering"],
+    "relatedTerms": [
+      "ai-ide",
+      "coding-agent",
+      "subagent",
+      "tool-calling",
+      "harness-engineering"
+    ],
     "faq": [
       {
         "question": "AIコーディングエージェントとAI IDEの違いは?",
@@ -470,7 +481,13 @@
         "relatedTerms": ["google-adk"]
       }
     ],
-    "relatedTerms": ["multi-agent", "ai-agent", "orchestrator", "a2a", "agent-memory"],
+    "relatedTerms": [
+      "multi-agent",
+      "ai-agent",
+      "orchestrator",
+      "a2a",
+      "agent-memory"
+    ],
     "faq": [
       {
         "question": "LangGraphとCrewAI、どちらを選べばよい?",
@@ -488,7 +505,14 @@
     "description": "Pinecone・Weaviate・Milvus・Qdrant・Chroma・pgvector等、RAGやAIエージェントの記憶機構を支える主要なベクトルデータベースを一覧で紹介。提供形態・特徴比較・公開年表まとめ。",
     "category": "インフラ",
     "intro": "ベクトルデータベースとは、テキストや画像から生成された埋め込みベクトルを保存し、意味的な類似度に基づく近似最近傍探索を高速に行うためのデータベースを指す。RAGアプリケーションの検索基盤やAIエージェントの長期記憶として利用されることが多い。インフラ管理不要のフルマネージドサービスとして提供されるPinecone、ハイブリッド検索を特徴とするWeaviate、大規模分散処理に対応するMilvus、Rust実装で高速なQdrant、軽量で組み込みやすいChroma、既存のPostgreSQLを拡張するpgvectorなど、提供形態や設計思想の異なる複数の選択肢が存在する。",
-    "modelSlugs": ["pinecone", "weaviate", "milvus", "qdrant", "chroma", "pgvector"],
+    "modelSlugs": [
+      "pinecone",
+      "weaviate",
+      "milvus",
+      "qdrant",
+      "chroma",
+      "pgvector"
+    ],
     "comparisonRows": [
       {
         "item": "開発元",
@@ -557,7 +581,13 @@
         "relatedTerms": ["pgvector"]
       }
     ],
-    "relatedTerms": ["vector-database", "embedding", "retrieval-augmented-generation", "hnsw", "agent-memory"],
+    "relatedTerms": [
+      "vector-database",
+      "embedding",
+      "retrieval-augmented-generation",
+      "hnsw",
+      "agent-memory"
+    ],
     "faq": [
       {
         "question": "ベクトルデータベースと通常のデータベースの違いは?",
@@ -711,11 +741,7 @@
       {
         "heading": "文書の分割(チャンキング)",
         "body": "検索対象の文書は、そのままでは長すぎて埋め込みやプロンプトに収まらないため、チャンクと呼ばれる単位に分割する。チャンクが大きすぎると無関係な内容が混ざって検索精度が下がり、小さすぎると文脈が失われる。固定長での分割のほか、見出しや段落の区切りに沿った分割、前後のチャンクを重ねるオーバーラップなどの工夫がある。",
-        "terms": [
-          "chunking",
-          "chunk",
-          "context-window"
-        ]
+        "terms": ["chunking", "chunk", "context-window"]
       },
       {
         "heading": "Embeddingと埋め込みモデル",
@@ -745,52 +771,32 @@
       {
         "heading": "検索(セマンティック検索・ハイブリッド検索)",
         "body": "埋め込みベクトルの類似度で検索するセマンティック検索は、言い換えや表記ゆれに強い一方、製品型番や固有名詞のような完全一致が重要な検索を苦手とする。そこで、BM25などのキーワード検索と組み合わせるハイブリッド検索が広く使われる。両者の結果の統合には、順位に基づいてスコアを合算するRRFがよく用いられる。",
-        "terms": [
-          "semantic-search",
-          "bm25",
-          "tf-idf",
-          "hybrid-search",
-          "rrf"
-        ]
+        "terms": ["semantic-search", "bm25", "tf-idf", "hybrid-search", "rrf"]
       },
       {
         "heading": "リランキング",
         "body": "初期検索は速度を優先するため、上位に並ぶ候補が必ずしも質問に最も適しているとは限らない。リランカーは、初期検索で得た候補群を質問と組み合わせてより高精度なモデルで再評価し、並べ替える2段階目のコンポーネントである。LLMに渡すチャンクの質を高め、回答精度の改善につながる。",
-        "terms": [
-          "reranker"
-        ]
+        "terms": ["reranker"]
       },
       {
         "heading": "GraphRAG",
         "body": "通常のRAGは質問に近いチャンクを個別に取り出すため、文書全体を横断した要約や、複数の事実をまたぐ推論を苦手とする。GraphRAGは、文書群からエンティティと関係を抽出してナレッジグラフを構築し、グラフ構造を介して検索・生成を行うことで、この弱点を補う。",
-        "terms": [
-          "graphrag",
-          "knowledge-graph"
-        ]
+        "terms": ["graphrag", "knowledge-graph"]
       },
       {
         "heading": "Agentic RAG",
         "body": "Agentic RAGは、検索と生成を1回で終わらせず、AIエージェントが検索クエリの立案、結果の検証、追加検索を自律的に繰り返す設計パターンである。複雑な質問を分解して段階的に調べる用途に向き、Deep Researchのような調査エージェントにも同様の考え方が使われている。",
-        "terms": [
-          "agentic-rag",
-          "deep-research"
-        ]
+        "terms": ["agentic-rag", "deep-research"]
       },
       {
         "heading": "RAGとファインチューニング",
         "body": "RAGが外部知識を推論時に与えるのに対し、ファインチューニングはモデル自体を追加学習して振る舞いや知識を変える。頻繁に更新される情報や出典の提示が必要な用途ではRAG、出力形式や口調の固定、特定ドメインへの適応ではファインチューニングが向く。両者を組み合わせ、検索結果を活用する能力自体を学習させるRAFTという手法もある。",
-        "terms": [
-          "fine-tuning",
-          "retrieval-augmented-fine-tuning"
-        ]
+        "terms": ["fine-tuning", "retrieval-augmented-fine-tuning"]
       },
       {
         "heading": "RAGフレームワーク",
         "body": "RAGパイプラインは自前で実装することもできるが、文書の読み込み、分割、埋め込み、検索、プロンプト構築までを部品として提供するフレームワークを使うと構築が容易になる。",
-        "terms": [
-          "langchain",
-          "haystack"
-        ]
+        "terms": ["langchain", "haystack"]
       }
     ],
     "relatedTerms": [

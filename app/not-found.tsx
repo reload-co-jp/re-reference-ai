@@ -12,7 +12,9 @@ export const metadata: Metadata = {
 const NotFound: FC = () => (
   <Container>
     <Section style={{ padding: "4rem 0 2rem" }}>
-      <h1 style={{ fontSize: "2rem", marginBottom: "1rem" }}>ページが見つかりません</h1>
+      <h1 style={{ fontSize: "2rem", marginBottom: "1rem" }}>
+        ページが見つかりません
+      </h1>
       <p style={{ color: "var(--color-text-muted)" }}>
         URLが変更されたか、削除された可能性があります。
         <Link href="/" style={{ color: "var(--color-accent-bright)" }}>
@@ -23,7 +25,15 @@ const NotFound: FC = () => (
     </Section>
     <Section>
       <SectionTitle>カテゴリから探す</SectionTitle>
-      <ul style={{ display: "flex", flexWrap: "wrap", gap: "1rem", listStyle: "none", padding: 0 }}>
+      <ul
+        style={{
+          display: "flex",
+          flexWrap: "wrap",
+          gap: "1rem",
+          listStyle: "none",
+          padding: 0,
+        }}
+      >
         {categories.map((category) => (
           <li key={category}>
             <Link

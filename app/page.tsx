@@ -1,11 +1,23 @@
 import { Metadata } from "next"
 import { FC } from "react"
 import Link from "next/link"
-import { Card, Container, Section, SectionTitle } from "components/elements/layout"
+import {
+  Card,
+  Container,
+  Section,
+  SectionTitle,
+} from "components/elements/layout"
 import { TermExplorer } from "components/term/term-explorer"
 import { getTermGitDates } from "lib/git-dates"
 import { buildItemListJsonLd, toJsonLd } from "lib/json-ld"
-import { SITE_DESCRIPTION, SITE_KEYWORDS, SITE_NAME, SITE_OG_IMAGE_URL, SITE_TAGLINE_JA, SITE_URL } from "lib/site"
+import {
+  SITE_DESCRIPTION,
+  SITE_KEYWORDS,
+  SITE_NAME,
+  SITE_OG_IMAGE_URL,
+  SITE_TAGLINE_JA,
+  SITE_URL,
+} from "lib/site"
 import {
   categories,
   getCategoryDescription,
@@ -44,7 +56,7 @@ const categoryItemList = buildItemListJsonLd(
   categories.map((category) => ({
     name: category,
     url: `${SITE_URL}/categories/${getCategorySlug(category)}/`,
-  })),
+  }))
 )
 
 // 編集部が選んだ導線。存在しないslugは表示しない
@@ -87,14 +99,24 @@ const datedTerms = terms
   .filter((entry) => entry.datePublished && entry.dateModified)
 
 const newTerms = [...datedTerms]
-  .sort((a, b) => b.datePublished!.localeCompare(a.datePublished!) || b.index - a.index)
+  .sort(
+    (a, b) =>
+      b.datePublished!.localeCompare(a.datePublished!) || b.index - a.index
+  )
   .slice(0, LIST_LIMIT)
 
 const newSlugs = new Set(newTerms.map(({ term }) => term.slug))
 
 const updatedTerms = datedTerms
-  .filter((entry) => entry.dateModified! > entry.datePublished! && !newSlugs.has(entry.term.slug))
-  .sort((a, b) => b.dateModified!.localeCompare(a.dateModified!) || b.index - a.index)
+  .filter(
+    (entry) =>
+      entry.dateModified! > entry.datePublished! &&
+      !newSlugs.has(entry.term.slug)
+  )
+  .sort(
+    (a, b) =>
+      b.dateModified!.localeCompare(a.dateModified!) || b.index - a.index
+  )
   .slice(0, LIST_LIMIT)
 
 const gridStyle = {
@@ -103,25 +125,43 @@ const gridStyle = {
   gridTemplateColumns: "repeat(auto-fit, minmax(min(18rem, 100%), 1fr))",
 } as const
 
-const TermLinkList: FC<{ items: { term: Term; date?: string }[] }> = ({ items }) => (
+const TermLinkList: FC<{ items: { term: Term; date?: string }[] }> = ({
+  items,
+}) => (
   <ul style={{ listStyle: "none", margin: 0, padding: 0 }}>
     {items.map(({ term, date }) => (
       <li
         key={term.slug}
-        style={{ borderBottom: "1px solid var(--color-border)", padding: ".625rem 0" }}
+        style={{
+          borderBottom: "1px solid var(--color-border)",
+          padding: ".625rem 0",
+        }}
       >
-        <Link href={`/terms/${term.slug}/`} style={{ color: "var(--color-accent-bright)", fontWeight: 600 }}>
+        <Link
+          href={`/terms/${term.slug}/`}
+          style={{ color: "var(--color-accent-bright)", fontWeight: 600 }}
+        >
           {term.name}
         </Link>
         {date && (
           <time
             dateTime={date}
-            style={{ color: "var(--color-text-muted)", fontSize: ".75rem", marginLeft: ".5rem" }}
+            style={{
+              color: "var(--color-text-muted)",
+              fontSize: ".75rem",
+              marginLeft: ".5rem",
+            }}
           >
             {date}
           </time>
         )}
-        <p style={{ color: "var(--color-text-muted)", fontSize: ".85rem", margin: ".25rem 0 0" }}>
+        <p
+          style={{
+            color: "var(--color-text-muted)",
+            fontSize: ".85rem",
+            margin: ".25rem 0 0",
+          }}
+        >
           {term.tagline}
         </p>
       </li>
@@ -153,7 +193,9 @@ const Page: FC = () => {
         >
           The AI Technical Reference
         </p>
-        <h1 style={{ fontSize: "2.5rem", marginBottom: "1rem" }}>Re Reference AI</h1>
+        <h1 style={{ fontSize: "2.5rem", marginBottom: "1rem" }}>
+          Re Reference AI
+        </h1>
         <p
           style={{
             color: "var(--color-text-muted)",
@@ -162,7 +204,8 @@ const Page: FC = () => {
             maxWidth: "36rem",
           }}
         >
-          {SITE_DESCRIPTION}。{terms.length}語の定義・仕組み・比較・一次情報源を、AIを学び始めた人から実装に携わるエンジニアまで向けにまとめています。
+          {SITE_DESCRIPTION}。{terms.length}
+          語の定義・仕組み・比較・一次情報源を、AIを学び始めた人から実装に携わるエンジニアまで向けにまとめています。
         </p>
       </Section>
 
@@ -170,14 +213,25 @@ const Page: FC = () => {
         <Section>
           <div style={gridStyle}>
             <Card>
-              <SectionTitle style={{ fontSize: "1.1rem" }}>はじめて学ぶ人へ — 基礎用語</SectionTitle>
-              <TermLinkList items={pickTerms(BEGINNER_SLUGS).map((term) => ({ term }))} />
+              <SectionTitle style={{ fontSize: "1.1rem" }}>
+                はじめて学ぶ人へ — 基礎用語
+              </SectionTitle>
+              <TermLinkList
+                items={pickTerms(BEGINNER_SLUGS).map((term) => ({ term }))}
+              />
             </Card>
             <Card>
-              <SectionTitle style={{ fontSize: "1.1rem" }}>実装する人へ — 開発・運用の用語</SectionTitle>
-              <TermLinkList items={pickTerms(PRACTITIONER_SLUGS).map((term) => ({ term }))} />
+              <SectionTitle style={{ fontSize: "1.1rem" }}>
+                実装する人へ — 開発・運用の用語
+              </SectionTitle>
+              <TermLinkList
+                items={pickTerms(PRACTITIONER_SLUGS).map((term) => ({ term }))}
+              />
               <p style={{ fontSize: ".85rem", marginTop: "1rem" }}>
-                <Link href="/compare/" style={{ color: "var(--color-accent-bright)" }}>
+                <Link
+                  href="/compare/"
+                  style={{ color: "var(--color-accent-bright)" }}
+                >
                   技術比較
                 </Link>
                 で選定時の違いも確認できます。
@@ -192,13 +246,23 @@ const Page: FC = () => {
               {newTerms.length > 0 && (
                 <div>
                   <SectionTitle>新着用語</SectionTitle>
-                  <TermLinkList items={newTerms.map(({ term, datePublished }) => ({ term, date: datePublished }))} />
+                  <TermLinkList
+                    items={newTerms.map(({ term, datePublished }) => ({
+                      term,
+                      date: datePublished,
+                    }))}
+                  />
                 </div>
               )}
               {updatedTerms.length > 0 && (
                 <div>
                   <SectionTitle>最近更新された用語</SectionTitle>
-                  <TermLinkList items={updatedTerms.map(({ term, dateModified }) => ({ term, date: dateModified }))} />
+                  <TermLinkList
+                    items={updatedTerms.map(({ term, dateModified }) => ({
+                      term,
+                      date: dateModified,
+                    }))}
+                  />
                 </div>
               )}
             </div>
@@ -220,13 +284,25 @@ const Page: FC = () => {
                   <Card className="term-card" style={{ height: "100%" }}>
                     <h3 style={{ fontSize: "1.05rem", margin: 0 }}>
                       {category}
-                      <span style={{ color: "var(--color-text-muted)", fontSize: ".8rem", fontWeight: "normal" }}>
+                      <span
+                        style={{
+                          color: "var(--color-text-muted)",
+                          fontSize: ".8rem",
+                          fontWeight: "normal",
+                        }}
+                      >
                         {" "}
                         {getTermsByCategory(category).length}語
                       </span>
                     </h3>
                     {description && (
-                      <p style={{ color: "var(--color-text-muted)", fontSize: ".85rem", margin: ".5rem 0 0" }}>
+                      <p
+                        style={{
+                          color: "var(--color-text-muted)",
+                          fontSize: ".85rem",
+                          margin: ".5rem 0 0",
+                        }}
+                      >
                         {truncate(description, 60)}
                       </p>
                     )}

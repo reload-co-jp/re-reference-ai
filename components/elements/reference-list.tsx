@@ -2,7 +2,9 @@ import { FC } from "react"
 import { Badge } from "components/elements/layout"
 import { Reference } from "lib/terms"
 
-export const ReferenceList: FC<{ references: Reference[] }> = ({ references }) => (
+export const ReferenceList: FC<{ references: Reference[] }> = ({
+  references,
+}) => (
   <ul style={{ paddingLeft: "1.25rem" }}>
     {references.map((reference) => (
       <li key={reference.url} style={{ marginBottom: ".5rem" }}>

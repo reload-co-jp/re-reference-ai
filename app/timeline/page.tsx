@@ -8,13 +8,22 @@ import { SITE_NAME, SITE_OG_IMAGE_URL, SITE_URL } from "lib/site"
 import { timelineSummaries } from "lib/timelines"
 
 const TITLE = "技術年表(Timeline)"
-const DESCRIPTION = "LLM・GPT・Transformer・MCP・Claude等、AI技術の歴史を時系列で理解できる技術年表の一覧。"
+const DESCRIPTION =
+  "LLM・GPT・Transformer・MCP・Claude等、AI技術の歴史を時系列で理解できる技術年表の一覧。"
 
 export const metadata: Metadata = {
   title: TITLE,
   description: DESCRIPTION,
   alternates: { canonical: `${SITE_URL}/timeline/` },
-  keywords: ["年表", "歴史", "Timeline", "Evolution", "Release History", "AI", "LLM"],
+  keywords: [
+    "年表",
+    "歴史",
+    "Timeline",
+    "Evolution",
+    "Release History",
+    "AI",
+    "LLM",
+  ],
   openGraph: {
     title: TITLE,
     description: DESCRIPTION,
@@ -24,7 +33,11 @@ export const metadata: Metadata = {
     siteName: SITE_NAME,
     locale: "ja_JP",
   },
-  twitter: { title: TITLE, description: DESCRIPTION, images: [SITE_OG_IMAGE_URL] },
+  twitter: {
+    title: TITLE,
+    description: DESCRIPTION,
+    images: [SITE_OG_IMAGE_URL],
+  },
 }
 
 const breadcrumbList = {
@@ -32,7 +45,12 @@ const breadcrumbList = {
   "@type": "BreadcrumbList",
   itemListElement: [
     { "@type": "ListItem", position: 1, name: SITE_NAME, item: `${SITE_URL}/` },
-    { "@type": "ListItem", position: 2, name: TITLE, item: `${SITE_URL}/timeline/` },
+    {
+      "@type": "ListItem",
+      position: 2,
+      name: TITLE,
+      item: `${SITE_URL}/timeline/`,
+    },
   ],
 }
 
@@ -41,7 +59,7 @@ const itemList = buildItemListJsonLd(
   timelineSummaries.map((timeline) => ({
     name: timeline.title,
     url: `${SITE_URL}/timeline/${timeline.slug}/`,
-  })),
+  }))
 )
 
 const TimelineIndexPage: FC = () => (
@@ -57,7 +75,13 @@ const TimelineIndexPage: FC = () => (
     <Breadcrumb items={[{ href: "/", name: SITE_NAME }, { name: TITLE }]} />
     <Section style={{ padding: "1rem 0 3rem" }}>
       <h1 style={{ fontSize: "2.25rem", margin: 0 }}>{TITLE}</h1>
-      <p style={{ color: "var(--color-text-muted)", fontSize: "1.1rem", marginTop: ".75rem" }}>
+      <p
+        style={{
+          color: "var(--color-text-muted)",
+          fontSize: "1.1rem",
+          marginTop: ".75rem",
+        }}
+      >
         {DESCRIPTION}
       </p>
     </Section>

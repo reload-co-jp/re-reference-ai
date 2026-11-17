@@ -14,7 +14,11 @@ const SUGGESTION_LIMIT = 8
 
 // 全角/半角・大文字小文字の表記揺れを吸収し、空白/ハイフン/中黒は単語区切りとして空白1つに揃える
 const normalize = (text: string): string =>
-  text.normalize("NFKC").toLowerCase().replace(/[\s\-_・/]+/g, " ").trim()
+  text
+    .normalize("NFKC")
+    .toLowerCase()
+    .replace(/[\s\-_・/]+/g, " ")
+    .trim()
 
 // 0: 不一致 / 値が大きいほど上位。用語名・別名の完全一致 > 前方一致 > 部分一致 > 要約・タグ
 const scoreTerm = (term: TermSummaryCard, query: string): number => {
@@ -22,7 +26,11 @@ const scoreTerm = (term: TermSummaryCard, query: string): number => {
   if (names.some((name) => name === query)) return 4
   if (names.some((name) => name.startsWith(query))) return 3
   if (names.some((name) => name.includes(query))) return 2
-  return normalize([term.tagline, term.category, ...term.tags].join(" ")).includes(query) ? 1 : 0
+  return normalize(
+    [term.tagline, term.category, ...term.tags].join(" ")
+  ).includes(query)
+    ? 1
+    : 0
 }
 
 const readUrlState = () => {
@@ -48,7 +56,11 @@ export const TermExplorer: FC<{
     const state = readUrlState()
     // eslint-disable-next-line react-hooks/set-state-in-effect
     setQuery(state.query)
-    setSelectedCategory(state.category && categories.includes(state.category) ? state.category : null)
+    setSelectedCategory(
+      state.category && categories.includes(state.category)
+        ? state.category
+        : null
+    )
   }, [categories])
 
   useEffect(() => {
@@ -56,7 +68,11 @@ export const TermExplorer: FC<{
     if (query.trim()) params.set("q", query.trim())
     if (selectedCategory) params.set("category", selectedCategory)
     const search = params.toString()
-    window.history.replaceState(null, "", search ? `?${search}` : window.location.pathname)
+    window.history.replaceState(
+      null,
+      "",
+      search ? `?${search}` : window.location.pathname
+    )
   }, [query, selectedCategory])
 
   const normalizedQuery = normalize(query)
@@ -68,11 +84,13 @@ export const TermExplorer: FC<{
     }))
     .filter(
       ({ term, score }) =>
-        score > 0 && (!selectedCategory || term.category === selectedCategory),
+        score > 0 && (!selectedCategory || term.category === selectedCategory)
     )
     .sort((a, b) => b.score - a.score || a.index - b.index)
     .map(({ term }) => term)
-  const suggestions = normalizedQuery ? filteredTerms.slice(0, SUGGESTION_LIMIT) : []
+  const suggestions = normalizedQuery
+    ? filteredTerms.slice(0, SUGGESTION_LIMIT)
+    : []
   const showSuggestions = isSuggestionOpen && suggestions.length > 0
   const isFiltering = Boolean(selectedCategory || normalizedQuery)
 
@@ -99,11 +117,18 @@ export const TermExplorer: FC<{
             else setIsSuggestionOpen(false)
           }}
           role="search"
-          style={{ display: "flex", gap: ".75rem", marginBottom: "2rem", position: "relative" }}
+          style={{
+            display: "flex",
+            gap: ".75rem",
+            marginBottom: "2rem",
+            position: "relative",
+          }}
         >
           <input
             aria-activedescendant={
-              showSuggestions && activeIndex >= 0 ? `${listboxId}-${activeIndex}` : undefined
+              showSuggestions && activeIndex >= 0
+                ? `${listboxId}-${activeIndex}`
+                : undefined
             }
             aria-autocomplete="list"
             aria-controls={listboxId}
@@ -121,7 +146,9 @@ export const TermExplorer: FC<{
                 setActiveIndex((index) => (index + 1) % suggestions.length)
               } else if (e.key === "ArrowUp" && suggestions.length > 0) {
                 e.preventDefault()
-                setActiveIndex((index) => (index <= 0 ? suggestions.length - 1 : index - 1))
+                setActiveIndex((index) =>
+                  index <= 0 ? suggestions.length - 1 : index - 1
+                )
               } else if (e.key === "Escape") {
                 setIsSuggestionOpen(false)
                 setActiveIndex(-1)
@@ -193,7 +220,12 @@ export const TermExplorer: FC<{
                 >
                   <span style={{ fontWeight: 600 }}>{term.name}</span>
                   {term.aliases && term.aliases.length > 0 && (
-                    <span style={{ color: "var(--color-text-muted)", fontSize: ".8rem" }}>
+                    <span
+                      style={{
+                        color: "var(--color-text-muted)",
+                        fontSize: ".8rem",
+                      }}
+                    >
                       {" "}
                       {term.aliases.slice(0, 2).join(" / ")}
                     </span>
@@ -238,8 +270,12 @@ export const TermExplorer: FC<{
               >
                 <Badge
                   style={{
-                    background: isSelected ? "var(--color-accent)" : "var(--color-accent-dim)",
-                    color: isSelected ? "#0a0f0c" : "var(--color-accent-bright)",
+                    background: isSelected
+                      ? "var(--color-accent)"
+                      : "var(--color-accent-dim)",
+                    color: isSelected
+                      ? "#0a0f0c"
+                      : "var(--color-accent-bright)",
                     fontSize: ".85rem",
                     padding: ".4rem .9rem",
                   }}
@@ -266,7 +302,9 @@ export const TermExplorer: FC<{
             }}
           >
             {isFiltering &&
-              [selectedCategory, normalizedQuery && `"${query.trim()}"`].filter(Boolean).join(" / ")}
+              [selectedCategory, normalizedQuery && `"${query.trim()}"`]
+                .filter(Boolean)
+                .join(" / ")}
             （{filteredTerms.length}件）
           </span>
         </SectionTitle>
@@ -276,13 +314,16 @@ export const TermExplorer: FC<{
               style={{
                 display: "grid",
                 gap: "1.25rem",
-                gridTemplateColumns: "repeat(auto-fill, minmax(min(20rem, 100%), 1fr))",
+                gridTemplateColumns:
+                  "repeat(auto-fill, minmax(min(20rem, 100%), 1fr))",
               }}
             >
               {filteredTerms.slice(0, visibleCount).map((term, i) => (
                 <Fragment key={term.slug}>
                   <TermCard term={term} />
-                  {(i + 1) % AD_INTERVAL === 0 && <InArticleAd style={{ gridColumn: "1 / -1" }} />}
+                  {(i + 1) % AD_INTERVAL === 0 && (
+                    <InArticleAd style={{ gridColumn: "1 / -1" }} />
+                  )}
                 </Fragment>
               ))}
             </div>
@@ -331,7 +372,10 @@ export const TermExplorer: FC<{
                 </li>
               )}
               <li>
-                <Link href="/tags/" style={{ color: "var(--color-accent-bright)" }}>
+                <Link
+                  href="/tags/"
+                  style={{ color: "var(--color-accent-bright)" }}
+                >
                   タグ一覧
                 </Link>
                 から探す

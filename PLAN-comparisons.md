@@ -51,11 +51,13 @@ references?:   { type, label, url }[]
 4. **出力**: スコア降順で `slug ペア / カテゴリ / スコア内訳` を標準出力（上位 30 件程度）。`--json` フラグで JSON 出力
 
 受け入れ条件:
+
 - `node scripts/suggest-comparisons.mjs` が動き、既存 5 記事のペアが出力に含まれない
 - `llama vs qwen`, `bm25 vs semantic-search`, `fine-tuning vs lora` のような「兄弟概念」ペアが上位に来る
 - `attention vs transformer` のような包含ペアが上位 10 件に入らない
 
 **実装済み（`scripts/suggest-comparisons.mjs`）・検証結果:**
+
 - `attention vs transformer` は 207/371 位 → 上位10件外の条件は満たす
 - `bm25 vs semantic-search`（268位）・`fine-tuning vs lora`（339位）は上位に来ない。原因はタグ語彙の不一致（例: lora のタグ「ファインチューニング」が fine-tuning 自身のタグに含まれないため共有タグスコアが0になる）。ペナルティ調整で無理に押し上げると他の良ペアを壊すため未対応
 - `llama vs qwen` はそもそも候補に入らない（qwen→llama の片方向リンクのみで、relatedTerms 相互条件を満たさない。terms.json 側のデータ欠落）
@@ -72,6 +74,7 @@ references?:   { type, label, url }[]
 - `slug` は `"<left>-vs-<right>"`。left/right の順序は既存記事の慣例（メジャー・先発が left）に従う
 
 受け入れ条件:
+
 - スキル手順に検証ステップが含まれる: JSON 妥当性、left/right が terms.json に存在、slug 重複なし、`pnpm build` 成功
 
 ### Phase 3: 内部リンク確認・強化 ✅完了

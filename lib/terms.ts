@@ -84,7 +84,7 @@ export const termSummaries: TermSummaryCard[] = terms.map(
     tagline,
     category,
     tags,
-  }),
+  })
 )
 
 const zennArticlesBySlug = zennArticlesData as Record<string, ZennArticle[]>
@@ -134,7 +134,10 @@ const getTermText = (term: Term): string =>
 
 // 関連度: 同一タグ(1件ごと+3) > 明示的な関連用語・比較対象(双方向, +3) > 本文中での言及(+2) > 同一カテゴリ(+1)
 // 同一カテゴリのみの用語は関連が薄いため除外する
-export const getRankedRelatedTerms = (term: Term, limit = RELATED_TERM_LIMIT): Term[] => {
+export const getRankedRelatedTerms = (
+  term: Term,
+  limit = RELATED_TERM_LIMIT
+): Term[] => {
   const explicit = new Set([
     ...(term.relatedTerms ?? []),
     ...(term.comparisons ?? []).map((comparison) => comparison.slug),
@@ -143,15 +146,19 @@ export const getRankedRelatedTerms = (term: Term, limit = RELATED_TERM_LIMIT): T
   return terms
     .filter((candidate) => candidate.slug !== term.slug)
     .map((candidate, index) => {
-      const sharedTags = candidate.tags.filter((tag) => term.tags.includes(tag)).length
+      const sharedTags = candidate.tags.filter((tag) =>
+        term.tags.includes(tag)
+      ).length
       const mentioned = [candidate.name, ...(candidate.aliases ?? [])].some(
-        (name) => name.length >= 3 && text.includes(name),
+        (name) => name.length >= 3 && text.includes(name)
       )
       const score =
         sharedTags * 3 +
         (explicit.has(candidate.slug) ||
         candidate.relatedTerms?.includes(term.slug) ||
-        candidate.comparisons?.some((comparison) => comparison.slug === term.slug)
+        candidate.comparisons?.some(
+          (comparison) => comparison.slug === term.slug
+        )
           ? 3
           : 0) +
         (mentioned ? 2 : 0) +
@@ -290,7 +297,8 @@ export const getCategoryDescription = (category: string): string | undefined =>
   categoryDescriptions[category]
 
 // 概要(summary)がない用語ページは内容が薄いため、本文が整うまで noindex にし sitemap から外す
-export const isTermIndexable = (term: Term): boolean => Boolean(term.summary) && !term.seo?.noindex
+export const isTermIndexable = (term: Term): boolean =>
+  Boolean(term.summary) && !term.seo?.noindex
 
 // 用語数が少ないタグページは内容が薄いため noindex にし、sitemap・タグ一覧から外す
 export const MIN_TERMS_FOR_TAG_INDEX = 3
@@ -298,7 +306,8 @@ export const MIN_TERMS_FOR_TAG_INDEX = 3
 export const isTagIndexable = (tag: string): boolean =>
   getTermsByTag(tag).length >= MIN_TERMS_FOR_TAG_INDEX
 
-export const getIndexableTags = (): string[] => getAllTags().filter(isTagIndexable)
+export const getIndexableTags = (): string[] =>
+  getAllTags().filter(isTagIndexable)
 
 // タグ名と一致する用語(例: タグ「RAG」→ 用語RAG)があれば、そのタグの中心用語として扱う
 export const getTermForTag = (tag: string): Term | undefined =>
@@ -309,7 +318,7 @@ export const getCoOccurringTags = (tag: string, limit = 12): string[] => {
   getTermsByTag(tag).forEach((term) =>
     term.tags.forEach((other) => {
       if (other !== tag) counts.set(other, (counts.get(other) ?? 0) + 1)
-    }),
+    })
   )
   return Array.from(counts.entries())
     .filter(([other]) => isTagIndexable(other))
