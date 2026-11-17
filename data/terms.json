@@ -373,7 +373,8 @@
       "retrieval-augmented-fine-tuning",
       "question-answering",
       "grounding",
-      "llamaindex"
+      "llamaindex",
+      "hyde"
     ],
     "faq": [
       {
@@ -473,7 +474,8 @@
       "retrieval-augmented-fine-tuning",
       "pretraining",
       "role-prompting",
-      "targeted-fine-tuning"
+      "targeted-fine-tuning",
+      "supervised-fine-tuning"
     ],
     "faq": [
       {
@@ -2019,7 +2021,8 @@
       "word2vec",
       "cosine-similarity",
       "dense-vector",
-      "feature-space"
+      "feature-space",
+      "hyde"
     ],
     "faq": [
       {
@@ -2824,7 +2827,8 @@
       "rlaif",
       "rlcd",
       "ppo",
-      "feedback-optimization"
+      "feedback-optimization",
+      "supervised-fine-tuning"
     ],
     "faq": [
       {
@@ -3254,7 +3258,8 @@
       "flash-attention",
       "multi-head-latent-attention",
       "inference-optimization",
-      "latency-optimization"
+      "latency-optimization",
+      "paged-attention"
     ],
     "faq": [
       {
@@ -6303,7 +6308,8 @@
       "continuous-batching",
       "llm-d",
       "nemotron",
-      "laguna"
+      "laguna",
+      "paged-attention"
     ],
     "faq": [
       {
@@ -10978,7 +10984,8 @@
       "machine-learning",
       "deep-learning",
       "transfer-learning",
-      "catastrophic-forgetting"
+      "catastrophic-forgetting",
+      "regularization"
     ],
     "faq": [
       {
@@ -11040,7 +11047,8 @@
       "neural-network",
       "deep-learning",
       "ensemble-learning",
-      "batch-normalization"
+      "batch-normalization",
+      "regularization"
     ],
     "faq": [
       {
@@ -12349,7 +12357,8 @@
       "few-shot",
       "self-instruct",
       "zero-shot",
-      "pretraining"
+      "pretraining",
+      "supervised-fine-tuning"
     ],
     "faq": [
       {
@@ -13470,7 +13479,13 @@
         "note": "vLLMなどの推論エンジンは、FlashAttentionのようなカーネル最適化を内部で組み合わせて高速な推論を実現する"
       }
     ],
-    "relatedTerms": ["self-attention", "transformer", "kv-cache", "vllm"],
+    "relatedTerms": [
+      "self-attention",
+      "transformer",
+      "kv-cache",
+      "vllm",
+      "paged-attention"
+    ],
     "faq": [
       {
         "question": "FlashAttentionは精度に影響する？",
@@ -18733,7 +18748,8 @@
       "rlhf",
       "dpo",
       "rlvr",
-      "fine-tuning"
+      "fine-tuning",
+      "supervised-fine-tuning"
     ],
     "faq": [
       {
@@ -31240,5 +31256,195 @@
       }
     ],
     "updatedAt": "2026-10-29"
+  },
+  {
+    "slug": "supervised-fine-tuning",
+    "name": "SFT",
+    "aliases": ["教師ありファインチューニング", "Supervised Fine-Tuning"],
+    "tagline": "入力と望ましい出力のペアを使い、事前学習済みモデルを教師あり学習で追加学習する手法",
+    "category": "技術",
+    "tags": ["学習", "LLM"],
+    "plainSummary": "お手本となる質問と回答の例をたくさん見せて、AIに望ましい答え方を覚えさせる学習方法。",
+    "summary": "SFTは、事前学習済みの言語モデルに対し、プロンプトとそれに対する望ましい応答のペアからなるデータセットを用いて追加学習を行う手法。\n学習の目的関数は事前学習と同じ次トークン予測のクロスエントロピー損失だが、通常は応答部分のトークンだけを損失計算の対象にし、プロンプト部分はマスクする。\nLLMの事後学習では最初の段階として行われることが多く、モデルは指示に従う振る舞いや対話形式、出力フォーマットを身につける。その後、RLHFやDPOなどの選好学習を組み合わせて、応答の質や安全性をさらに調整するのが一般的な流れとなっている。\n全パラメータを更新するフルファインチューニングのほか、LoRAなどのPEFT手法と組み合わせて計算コストを抑える形でも広く使われる。",
+    "background": "事前学習のみを行ったモデルは、続きの文章を予測できても、ユーザーの指示に沿って回答する振る舞いは身についていない。\nSFTは、人手や他モデルで作成した指示と応答の例を直接学習させることで、この振る舞いを比較的少ないデータで獲得させるために用いられる。",
+    "workflow": "1. 指示(プロンプト)と望ましい応答のペアを集め、チャットテンプレートなどの形式に整える。\n2. 事前学習済みモデルに入力し、応答部分のトークンについて次トークン予測の損失を計算する。\n3. 損失を逆伝播してパラメータ(またはLoRAなどの追加パラメータ)を更新する。\n4. 評価用データで指示追従性能や過学習の有無を確認する。",
+    "advantages": [
+      "教師あり学習の枠組みのまま実装でき、報酬モデルや強化学習の仕組みが不要",
+      "数千〜数万件程度の高品質なデータでも、指示追従や出力形式を大きく改善できる",
+      "LoRAなどと組み合わせることで、限られたGPU資源でも実施できる"
+    ],
+    "disadvantages": [
+      "学習データの品質や偏りがそのままモデルの振る舞いに反映される",
+      "お手本の模倣にとどまるため、データにない望ましさの比較(どちらの回答が良いか)は学習しにくい",
+      "特定タスクに偏ったデータで学習すると、破滅的忘却により汎用的な能力の低下を招くことがある"
+    ],
+    "comparisons": [
+      {
+        "slug": "rlhf",
+        "note": "SFTはお手本の応答を模倣させるのに対し、RLHFは人間の選好に基づく報酬で応答を最適化する"
+      },
+      {
+        "slug": "instruction-tuning",
+        "note": "インストラクションチューニングは指示形式のデータを使ったSFTの一形態として位置づけられる"
+      },
+      {
+        "slug": "dpo",
+        "note": "DPOは選好ペアを使って直接方策を最適化する手法で、SFTの後段で使われることが多い"
+      }
+    ],
+    "relatedTerms": [
+      "fine-tuning",
+      "post-training",
+      "instruction-tuning",
+      "rlhf",
+      "dpo",
+      "lora",
+      "peft",
+      "supervised-learning",
+      "catastrophic-forgetting"
+    ],
+    "faq": [
+      {
+        "question": "ファインチューニングとSFTは同じ意味？",
+        "answer": "LLMの文脈ではほぼ同じ意味で使われることが多い。厳密にはファインチューニングは追加学習全般を指し、SFTはそのうち正解ラベル付きデータを使う教師あり学習の形式を指す。"
+      }
+    ]
+  },
+  {
+    "slug": "paged-attention",
+    "name": "PagedAttention",
+    "aliases": ["ページドアテンション"],
+    "tagline": "KVキャッシュを固定サイズのブロック単位で管理し、LLM推論時のメモリの無駄を減らすアテンションアルゴリズム",
+    "category": "技術",
+    "tags": ["推論", "最適化"],
+    "plainSummary": "AIが文章を生成するときに使う作業用メモリを細かく区切って管理し、無駄なく多くの処理を同時にこなせるようにする工夫。",
+    "summary": "PagedAttentionは、LLM推論時のKVキャッシュをOSの仮想メモリにおけるページングと同様の考え方で管理するアテンションアルゴリズム。\n従来の推論エンジンでは、リクエストごとに最大系列長分の連続したメモリ領域をKVキャッシュとして事前確保していたため、実際には使われない領域や断片化によるメモリの無駄が大きかった。\nPagedAttentionでは、KVキャッシュを一定数のトークン分ずつの固定サイズのブロックに分割し、論理的なブロックと物理的なGPUメモリ上のブロックの対応をブロックテーブルで管理する。これにより、ブロックを必要になった時点で割り当てられ、メモリ上で連続している必要もなくなる。\nまた、並列サンプリングやビームサーチのように共通のプロンプトを持つ複数の系列で物理ブロックを共有し、書き込みが発生した時点でコピーするCopy-on-Writeも可能になる。\nvLLMの中核技術として発表され、同時に処理できるリクエスト数を増やすことでスループットの向上に寄与している。",
+    "history": "2023年: カリフォルニア大学バークレー校のKwonらが論文「Efficient Memory Management for Large Language Model Serving with PagedAttention」(SOSP 2023)で提案し、あわせて推論エンジンvLLMを公開。",
+    "advantages": [
+      "KVキャッシュのメモリ断片化や過剰な事前確保を減らし、GPUメモリを効率よく使える",
+      "同時に処理できるリクエスト数が増え、推論スループットが向上する",
+      "共通プレフィックスを持つ系列間でKVキャッシュを共有できる"
+    ],
+    "disadvantages": [
+      "ブロックテーブルを介した非連続なメモリアクセスが必要になり、専用のアテンションカーネルが必要",
+      "ブロックサイズの設定によっては、最後のブロック内に未使用領域が残る"
+    ],
+    "comparisons": [
+      {
+        "slug": "flash-attention",
+        "note": "FlashAttentionはアテンション計算自体のメモリアクセスを最適化する手法で、PagedAttentionはKVキャッシュの格納方法を最適化する手法"
+      },
+      {
+        "slug": "continuous-batching",
+        "note": "Continuous Batchingはリクエストのスケジューリング手法で、PagedAttentionによるメモリ管理と組み合わせて使われる"
+      }
+    ],
+    "relatedTerms": [
+      "kv-cache",
+      "vllm",
+      "attention",
+      "inference",
+      "continuous-batching",
+      "flash-attention",
+      "inference-optimization"
+    ],
+    "references": [
+      {
+        "type": "Research Paper",
+        "label": "Efficient Memory Management for Large Language Model Serving with PagedAttention",
+        "url": "https://arxiv.org/abs/2309.06180"
+      }
+    ]
+  },
+  {
+    "slug": "hyde",
+    "name": "HyDE",
+    "aliases": ["Hypothetical Document Embeddings", "仮想文書埋め込み"],
+    "tagline": "LLMに質問への仮の回答文書を生成させ、その埋め込みで検索するRAGのクエリ拡張手法",
+    "category": "技術",
+    "tags": ["RAG", "検索"],
+    "plainSummary": "質問をそのまま検索するのではなく、AIにいったん「ありそうな答え」を書かせ、それに似た文書を探す検索の工夫。",
+    "summary": "HyDEは、ユーザーの質問から直接埋め込みベクトルを作るのではなく、まずLLMで質問への回答となる仮の文書(仮想文書)を生成し、その文書を埋め込みモデルでベクトル化して類似文書を検索する手法。\n質問文は短く、検索対象の文書とは文体や語彙も異なりやすいため、質問と文書の埋め込みは近くならない場合がある。HyDEでは仮想文書の形式が検索対象の文書と似るため、ベクトル空間上で関連文書に近づきやすくなる。\n仮想文書には事実誤りが含まれることもあるが、検索に使うのはその埋め込みだけで、最終的な回答は実際に検索された文書に基づいて生成する。\n関連性ラベル付きのデータで検索モデルを学習しなくても検索精度を改善できる点が特徴で、RAGにおけるクエリ変換の手法の1つとして使われる。",
+    "history": "2022年: Gaoらが論文「Precise Zero-Shot Dense Retrieval without Relevance Labels」でHyDEを提案。",
+    "workflow": "1. ユーザーの質問をLLMに渡し、質問に答える仮想文書を生成させる。\n2. 仮想文書を埋め込みモデルでベクトル化する。\n3. そのベクトルでベクトルデータベースを検索し、類似する実文書を取得する。\n4. 取得した実文書をコンテキストとしてLLMに渡し、最終的な回答を生成する。",
+    "advantages": [
+      "検索モデルの追加学習なしで、質問と文書の表現の差を埋められる",
+      "既存のRAGパイプラインに、検索前の生成ステップを追加するだけで導入できる"
+    ],
+    "disadvantages": [
+      "検索のたびにLLMによる生成が入るため、レイテンシとコストが増える",
+      "LLMの知らない分野や社内固有の情報では、仮想文書が的外れになり検索精度の低下を招くことがある"
+    ],
+    "comparisons": [
+      {
+        "slug": "hybrid-search",
+        "note": "ハイブリッド検索はキーワード検索とベクトル検索を組み合わせる手法で、HyDEはクエリ側を変換する手法のため併用できる"
+      },
+      {
+        "slug": "reranker",
+        "note": "リランカーは検索後の結果を並べ替える手法で、HyDEは検索前のクエリを改善する手法"
+      }
+    ],
+    "relatedTerms": [
+      "retrieval-augmented-generation",
+      "embedding",
+      "embedding-model",
+      "semantic-search",
+      "vector-database",
+      "hybrid-search",
+      "reranker"
+    ],
+    "references": [
+      {
+        "type": "Research Paper",
+        "label": "Precise Zero-Shot Dense Retrieval without Relevance Labels",
+        "url": "https://arxiv.org/abs/2212.10496"
+      }
+    ]
+  },
+  {
+    "slug": "regularization",
+    "name": "正則化",
+    "aliases": ["Regularization"],
+    "tagline": "モデルの複雑さに制約を加えて過学習を抑え、未知のデータへの汎化性能を高める手法の総称",
+    "category": "技術",
+    "tags": ["正則化", "機械学習"],
+    "plainSummary": "AIが学習データを丸暗記しすぎないように、学習にわざと制約をかけて、新しいデータにも対応できるようにする工夫。",
+    "summary": "正則化は、機械学習モデルが訓練データに過度に適合する過学習を防ぎ、未知のデータに対する汎化性能を高めるための手法の総称。\n代表的なものとして、損失関数にパラメータの大きさに応じたペナルティ項を加える方法がある。重みの絶対値の和を加えるL1正則化(Lasso)は不要な重みを0にしやすく、重みの二乗和を加えるL2正則化(Ridge)は重み全体を小さく抑える。ニューラルネットワークではL2正則化に相当する重み減衰(Weight Decay)が広く使われる。\nペナルティ項以外にも、学習時にニューロンをランダムに無効化するドロップアウト、検証データの性能が悪化した時点で学習を止める早期終了、訓練データを水増しするデータ拡張なども、広い意味での正則化として扱われる。\nペナルティの強さはハイパーパラメータとして調整が必要で、強すぎるとモデルが単純になりすぎて学習不足になる。",
+    "advantages": [
+      "過学習を抑え、未知のデータに対する予測性能を改善できる",
+      "L1正則化では不要な特徴量の重みが0になり、特徴量選択の効果も得られる",
+      "多くの手法が既存の学習手順に少しの変更を加えるだけで適用できる"
+    ],
+    "disadvantages": [
+      "正則化の強さを表すハイパーパラメータの調整が必要",
+      "強くかけすぎると、モデルが訓練データの傾向すら捉えられない学習不足になる"
+    ],
+    "comparisons": [
+      {
+        "slug": "dropout",
+        "note": "ドロップアウトはニューラルネットワーク向けの正則化手法の1つ"
+      },
+      {
+        "slug": "data-augmentation",
+        "note": "データ拡張は訓練データ側を増やすことで、正則化と同様に過学習を抑える効果を持つ"
+      }
+    ],
+    "relatedTerms": [
+      "overfitting",
+      "dropout",
+      "generalization",
+      "loss-function",
+      "data-augmentation",
+      "hyperparameter-optimization",
+      "machine-learning"
+    ],
+    "codeExamples": [
+      {
+        "title": "PyTorchでの重み減衰(L2正則化)",
+        "language": "python",
+        "code": "import torch\n\noptimizer = torch.optim.AdamW(model.parameters(), lr=1e-3, weight_decay=0.01)"
+      }
+    ]
   }
 ]
