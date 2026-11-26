@@ -163,6 +163,34 @@ const RootLayout = ({ children }: { children: React.ReactNode }) => {
         >
           {children}
         </main>
+        <aside
+          style={{
+            background: "var(--color-bg)",
+            display: "flex",
+            justifyContent: "center",
+            padding: "1rem",
+          }}
+        >
+          <a
+            href="https://px.a8.net/svt/ejp?a8mat=4BGUDW+4KBOII+5W12+626XT"
+            rel="nofollow"
+          >
+            <img
+              alt=""
+              height={250}
+              src="https://www25.a8.net/svt/bgt?aid=261126356276&wid=002&eno=01&mid=s00000027479001018000&mc=1"
+              style={{ border: 0, height: "auto", maxWidth: "100%" }}
+              width={300}
+            />
+          </a>
+          <img
+            alt=""
+            height={1}
+            src="https://www19.a8.net/0.gif?a8mat=4BGUDW+4KBOII+5W12+626XT"
+            style={{ border: 0 }}
+            width={1}
+          />
+        </aside>
         <footer
           style={{
             alignItems: "center",
