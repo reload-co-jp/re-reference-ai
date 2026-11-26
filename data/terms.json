@@ -8953,7 +8953,8 @@
       "agent-memory",
       "harness-engineering",
       "context-engineering",
-      "graph-engineering"
+      "graph-engineering",
+      "ralph-loop"
     ],
     "comparisons": [
       {
@@ -31477,6 +31478,61 @@
         "type": "Official Website",
         "label": "GMKtec",
         "url": "https://www.gmktec.com/"
+      }
+    ]
+  },
+  {
+    "slug": "ralph-loop",
+    "name": "Ralphループ",
+    "aliases": ["Ralph Loop", "Ralph Wiggum Loop", "Ralph Wiggumテクニック"],
+    "tagline": "同じプロンプトをコーディングエージェントへ無限ループで繰り返し渡し、タスク完了まで自律的に作業を続けさせる手法",
+    "category": "エージェント",
+    "tags": ["コーディングエージェント", "自動化"],
+    "plainSummary": "AIに同じ指示を何度も自動で渡し続け、作業が終わるまで粘り強く繰り返させるやり方。",
+    "summary": "Ralphループとは、同じプロンプトをコーディングエージェントへ繰り返し渡し続けるシンプルなループによって、エージェントにタスクを完了まで進めさせる手法。\n最も単純な形は `while :; do cat PROMPT.md | claude ; done` のようなシェルのwhileループで、エージェントの1回の実行が終わるたびに同じプロンプトで次の実行を開始する。\n各反復でエージェントはファイルシステム上のコード・テスト結果・進捗メモ・gitの履歴を読み直して作業を再開するため、状態はコンテキストではなくリポジトリ側に蓄積される。\n1回の実行で正しい結果を得ることを前提とせず、失敗を含む試行を何度も重ねて収束させる考え方であり、名称はアニメ「ザ・シンプソンズ」の登場人物Ralph Wiggumに由来する。\nテストやビルドなどで成果を機械的に検証でき、完了条件を明確に定義できるタスクに向くとされる。",
+    "history": "2025年、開発者のGeoffrey Huntleyが自身のブログ記事で「Ralph Wiggum」テクニックとして紹介したのが初出とされる。その後、Claude Code向けにループを実行するプラグインが公開されるなど、コーディングエージェントの利用者の間で広まった。",
+    "workflow": "プロンプトファイル(目標・仕様・完了条件)を用意 → ループでエージェントを起動 → エージェントがリポジトリの状態を読み、作業・テストを実行して結果をファイルやgitへ残す → 実行が終わると同じプロンプトで再起動 → 完了条件を満たすか、反復回数の上限に達したら終了。",
+    "advantages": [
+      "仕組みがシェルのループ程度と単純で、特別なフレームワークなしに導入できる",
+      "反復ごとにコンテキストが初期化されるため、長時間の作業でもコンテキストの肥大化による品質低下を避けやすい",
+      "人間が都度プロンプトを入力しなくても、長時間にわたって作業を進められる"
+    ],
+    "disadvantages": [
+      "完了条件や検証手段が曖昧だと、ループが終わらない・誤った修正を積み重ねるといった問題が起きやすい",
+      "反復回数に比例してAPI利用料やトークン消費が増える",
+      "無人で長時間ファイル操作やコマンドを実行するため、サンドボックス化や権限の制限が求められる"
+    ],
+    "relatedTerms": [
+      "loop-engineering",
+      "coding-agent",
+      "claude-code",
+      "autonomous-agent",
+      "harness-engineering",
+      "context-engineering",
+      "sandboxing",
+      "spec-driven-development"
+    ],
+    "comparisons": [
+      {
+        "slug": "loop-engineering",
+        "note": "ループエンジニアリングがエージェントに試行・検証・修正を繰り返させる仕組みの設計全般を指すのに対し、Ralphループは同じプロンプトを単純なループで渡し続ける具体的な実装パターンの1つ"
+      }
+    ],
+    "faq": [
+      {
+        "question": "ループはどうやって止める？",
+        "answer": "完了を示す特定の文字列の出力やテストの成功などを完了条件として判定するほか、反復回数の上限を設けて終了させる運用が一般的。"
+      },
+      {
+        "question": "反復のたびに前回の作業内容を忘れないのか？",
+        "answer": "各反復のコンテキストは引き継がれないが、エージェントはリポジトリ上のコード・進捗メモ・gitの履歴を読み直して作業を再開するため、進捗はファイルシステムを通じて引き継がれる。"
+      }
+    ],
+    "references": [
+      {
+        "type": "Blog",
+        "label": "Ralph Wiggum as a \"software engineer\" - Geoffrey Huntley",
+        "url": "https://ghuntley.com/ralph/"
       }
     ]
   }
