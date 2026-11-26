@@ -29999,7 +29999,8 @@
       "npu",
       "gpu",
       "single-board-computer",
-      "igpu"
+      "igpu",
+      "gmktec"
     ]
   },
   {
@@ -31444,6 +31445,38 @@
         "title": "PyTorchでの重み減衰(L2正則化)",
         "language": "python",
         "code": "import torch\n\noptimizer = torch.optim.AdamW(model.parameters(), lr=1e-3, weight_decay=0.01)"
+      }
+    ]
+  },
+  {
+    "slug": "gmktec",
+    "name": "GMKtec",
+    "tagline": "中国・深圳を拠点に、NucBoxシリーズなどの小型PCを製造・販売するミニPCメーカー",
+    "category": "インフラ",
+    "tags": ["ハードウェア", "ローカルLLM"],
+    "plainSummary": "手のひらサイズの小型パソコンを作っている中国のメーカー。手ごろな価格の事務用モデルから、AIを手元で動かせる高性能モデルまで扱っている。",
+    "summary": "GMKtecは、中国・深圳に拠点を置くミニPCメーカー。「NucBox」シリーズを中心に、IntelやAMDのノートPC向けプロセッサーを搭載した小型PCを展開し、Amazonなどの通販サイトで販売している。\n低価格なIntel N100搭載機から、AMD Ryzenの上位プロセッサーを載せた高性能機まで製品の幅が広い。AI用途では、NPUを内蔵したRyzen AI 9 HX 370を搭載する「EVO-X1」や、Ryzen AI Max+ 395と最大128GBのユニファイドメモリを搭載する「EVO-X2」があり、CPU内蔵GPUに大きなメモリを割り当てられるため、ローカルLLMの実行環境として使われる。",
+    "advantages": [
+      "同等のプロセッサーを載せた大手メーカー製品と比べ、価格を抑えたモデルが多い",
+      "EVO-X2のようにユニファイドメモリを大容量で積んだモデルでは、単体GPUを用意せずに大きめのLLMを動かせる"
+    ],
+    "disadvantages": [
+      "大手PCメーカーと比べると、国内でのサポート窓口や保守体制は限られる",
+      "小型筐体のため、高負荷が続くと冷却ファンの騒音や発熱による性能低下が起きやすい"
+    ],
+    "relatedTerms": [
+      "mini-pc",
+      "local-llm",
+      "npu",
+      "igpu",
+      "ollama",
+      "llama-cpp"
+    ],
+    "references": [
+      {
+        "type": "Official Website",
+        "label": "GMKtec",
+        "url": "https://www.gmktec.com/"
       }
     ]
   }
